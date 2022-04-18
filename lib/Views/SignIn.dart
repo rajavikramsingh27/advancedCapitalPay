@@ -1,0 +1,196 @@
+import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+import '../Styles/ImageStyle.dart';
+import '../Styles/TextStyles.dart';
+import '../Views/OTPScreen.dart';
+import '../Components/BackgroundImage.dart';
+import '../Components/AppBarStyle.dart';
+import '../Components/TextFieldCustom.dart';
+
+class SignIn extends StatelessWidget {
+  const SignIn({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        BackgroundImage(),
+        Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: AppBarStyle(
+            trailingButton: IconButton(
+              icon: Image.asset(
+                ImageStyle.chat,
+                height: 30,
+              ),
+              onPressed: () {},
+            ),
+          ),
+          body: SingleChildScrollView(
+            padding: EdgeInsets.only(
+              left: 30,
+              right: 30,
+              top: 90,
+              bottom: 30,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Sign in',
+                    style: TextStyles.textStyles_24.apply(
+                      color: ColorStyle.primaryWhite,
+                      fontWeightDelta: 1,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 22),
+                Text(
+                  'E-Mail',
+                  style: TextStyles.textStyles_16.apply(
+                    color: ColorStyle.primaryWhite,
+                  ),
+                ),
+                TextFieldCustomPrefix(),
+                SizedBox(height: 26),
+                Text(
+                  'Password',
+                  style: TextStyles.textStyles_16.apply(
+                    color: ColorStyle.primaryWhite,
+                  ),
+                ),
+                TextFieldPasswordCustom(),
+                SizedBox(height: 22),
+                InkWell(
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        ImageStyle.questionMark,
+                        height: 22,
+                      ),
+                      SizedBox(width: 10),
+                      Expanded(
+                        child: AutoSizeText(
+                          'Forgot your Username or Password ?',
+                          style: TextStyles.autoSizeText.apply(
+                            color: ColorStyle.primaryWhite,
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  onTap: () {
+
+                  },
+                ),
+                SizedBox(height: 44),
+                Center(
+                  child: GradientButton(
+                    text: 'Sign in',
+                    onTap: () {
+                      Get.to(OTPScreen());
+                    },
+                  ),
+                ),
+                SizedBox(height: 22),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  child: Row(
+                    children: [
+                      Expanded(
+                          child: Container(
+                        height: 0.6,
+                        color: ColorStyle.primaryWhite,
+                        margin: EdgeInsets.only(right: 6),
+                      )),
+                      Text(
+                        'Or sign in with',
+                        style: TextStyles.textStyles_10.apply(
+                          color: ColorStyle.primaryWhite,
+                        ),
+                      ),
+                      Expanded(
+                          child: Container(
+                        height: 0.6,
+                        margin: EdgeInsets.only(left: 6),
+                        color: ColorStyle.primaryWhite,
+                      )),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 22),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      InkWell(
+                        child: Image.asset(
+                          ImageStyle.google,
+                          width: 80,
+                          height: 60,
+                        ),
+                        onTap: () {},
+                      ),
+                      SizedBox(width: 20),
+                      InkWell(
+                        child: Image.asset(
+                          ImageStyle.facebook,
+                          width: 80,
+                          height: 60,
+                        ),
+                        onTap: () {},
+                      ),
+                      SizedBox(width: 20),
+                      InkWell(
+                        child: Image.asset(
+                          ImageStyle.twitter,
+                          width: 80,
+                          height: 60,
+                        ),
+                        onTap: () {},
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 32),
+                InkWell(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Don’t have an account? ",
+                        style: TextStyles.textStyles_12.apply(
+                          color: ColorStyle.primaryWhite,
+                        ),
+                      ),
+                      Text(
+                        "Sign up here",
+                        style: TextStyles.textStyles_12.apply(
+                          color: ColorStyle.blueSKY,
+                        ),
+                      ),
+                      Icon(
+                        Icons.navigate_next,
+                        color: ColorStyle.primaryWhite,
+                        size: 30,
+                      )
+                    ],
+                  ),
+                  onTap: () {},
+                ),
+              ],
+            ),
+          ),
+        )
+      ],
+    );
+  }
+}
