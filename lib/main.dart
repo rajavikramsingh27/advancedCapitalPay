@@ -29,5 +29,5 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false, home: PersonalApplication1());
   }
-//  updaring
+
 }
