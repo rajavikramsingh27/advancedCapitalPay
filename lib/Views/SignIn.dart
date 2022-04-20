@@ -9,6 +9,8 @@ import '../Views/OTPScreen.dart';
 import '../Components/BackgroundImage.dart';
 import '../Components/AppBarStyle.dart';
 import '../Components/TextFieldCustom.dart';
+import '../Components/BioMatricAuth.dart';
+
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -95,6 +97,7 @@ class SignIn extends StatelessWidget {
                   child: GradientButton(
                     text: 'Sign in',
                     onTap: () {
+                      // BioMatricAuth.authenticateWithBiometrics();
                       Get.to(OTPScreen());
                     },
                   ),

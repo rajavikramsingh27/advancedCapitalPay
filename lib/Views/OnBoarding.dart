@@ -10,6 +10,7 @@ import '../Components/ButtonCustom.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/TextStyles.dart';
 import '../Views/SignIn.dart';
+import '../Components/BioMatricAuth.dart';
 
 
 class OnBoarding extends StatefulWidget {
@@ -24,6 +25,16 @@ class _OnBoardingState extends State<OnBoarding> {
   int indexPage = 0;
 
   int totalPages = 4;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    Future.delayed(Duration(milliseconds: 600), () {
+      BioMatricAuth.authenticateWithBiometrics();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

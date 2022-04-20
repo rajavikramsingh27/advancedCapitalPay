@@ -25,9 +25,22 @@ class ImageStyle {
   static const String bg_BioMatric = "$baseImage/bg_BioMatric.png";
   static const String face_scan = "$baseImage/face_scan.png";
   static const String dropDown = "$baseImage/dropDown.png";
+
+  static const String bg_BioMatric_user = "$baseImage/bg_BioMatric_user.png";
+
+  static const String bioMatricID = "$baseImage/bioMatricID.png";
+  static const String touchID = "$baseImage/touchID.png";
+  static const String bg_1 = "$baseImage/bg_1.png";
+  static const String bg_FaceID = "$baseImage/bg_FaceID.png";
+  static const String faceIDBG = "$baseImage/faceIDBG.png";
+  static const String faceID_Icon = "$baseImage/faceID_Icon.png";
+  static const String bg_TouchID = "$baseImage/bg_TouchID.png";
+
+  static const String card_1 = "$baseImage/card_1.png";
+  static const String card_2 = "$baseImage/card_2.png";
+  static const String card_3 = "$baseImage/card_3.png";
+  static const String bg_Button = "$baseImage/bg_Button.png";
+  static const String delivered = "$baseImage/delivered.png";
   static const String application = "$baseImage/Application.png";
- static const String bg_1 = "$baseImage/bg_1.png";
   static const String Flag = "$baseImage/Flag.png";
-
-
 }
