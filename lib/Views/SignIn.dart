@@ -97,8 +97,8 @@ class SignIn extends StatelessWidget {
                   child: GradientButton(
                     text: 'Sign in',
                     onTap: () {
-                      BioMatricAuth.authenticateWithBiometrics();
-                      // Get.to(OTPScreen());
+                      // BioMatricAuth.authenticateWithBiometrics();
+                      Get.to(OTPScreen());
                     },
                   ),
                 ),
