@@ -9,7 +9,7 @@ import '../Components/BackgroundImage.dart';
 import '../Components/AppBarStyle.dart';
 import '../Components/TextFieldCustom.dart';
 import '../Controllers/OTPScreenController.dart';
-import '../Views/BioMatricEnable.dart';
+import '../Views/BioMatric_Permission.dart';
 import '../Components/ButtonCustom.dart';
 import '../Views/VerifyQuestion.dart';
 
@@ -249,7 +249,7 @@ class OTPScreen extends StatelessWidget {
                   child: GradientButton(
                     text: 'Sign in',
                     onTap: () {
-                      Get.to(BioMatricEnable());
+                      Get.to(BioMatric_Permission());
                     },
                   ),
                 ),

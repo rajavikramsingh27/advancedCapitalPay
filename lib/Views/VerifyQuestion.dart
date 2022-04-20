@@ -10,7 +10,7 @@ import '../Styles/TextStyles.dart';
 import '../Components/BackgroundImage.dart';
 import '../Components/AppBarStyle.dart';
 import '../Components/ButtonCustom.dart';
-import '../Views/BioMatricEnable.dart';
+import '../Views/BioMatric_Permission.dart';
 import '../Controllers/VerifyQuestionController.dart';
 import '../Components/TextFieldCustom.dart';
 import '../Components/DropdownButtonCustom.dart';
@@ -25,7 +25,7 @@ class VerifyQuestion extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: MediaQuery.of(Get!.context!).size.width,
+          width: MediaQuery.of(Get.context!).size.width,
           alignment: Alignment.centerLeft,
           padding: EffectStyle.padding(10, 10, 6, 10),
           decoration: BoxDecoration(
@@ -242,7 +242,7 @@ class VerifyQuestion extends StatelessWidget {
                           child: GradientButton(
                             text: 'Sign in',
                             onTap: () {
-                              Get.to(BioMatricEnable());
+                              Get.to(BioMatric_Permission());
                             },
                           ),
                         ),

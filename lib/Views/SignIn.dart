@@ -9,6 +9,7 @@ import '../Views/OTPScreen.dart';
 import '../Components/BackgroundImage.dart';
 import '../Components/AppBarStyle.dart';
 import '../Components/TextFieldCustom.dart';
+import '../Views/ForgotPassword.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -57,7 +58,13 @@ class SignIn extends StatelessWidget {
                     color: ColorStyle.primaryWhite,
                   ),
                 ),
-                TextFieldCustomPrefix(),
+                TextFieldCustomPrefix(
+                  prefix: Image.asset(ImageStyle.user),
+                  textStyle: TextStyles.textStyles_16.apply(
+                    color: ColorStyle.primaryWhite,
+                  ),
+                  colorFill: ColorStyle.hex("#236CA2").withOpacity(0.5),
+                ),
                 SizedBox(height: 26),
                 Text(
                   'Password',
@@ -65,7 +72,17 @@ class SignIn extends StatelessWidget {
                     color: ColorStyle.primaryWhite,
                   ),
                 ),
-                TextFieldPasswordCustom(),
+                TextFieldPasswordCustom(
+                  prefix: Image.asset(ImageStyle.lock),
+                  hintTextStyle: TextStyles.textStyles_16.apply(
+                    color: ColorStyle.grey,
+                  ),
+                  textStyle: TextStyles.textStyles_16.apply(
+                    color: ColorStyle.primaryWhite,
+                  ),
+                  colorFill: ColorStyle.hex("#236CA2").withOpacity(0.5),
+                  colorSuffix: ColorStyle.primaryWhite,
+                ),
                 SizedBox(height: 22),
                 InkWell(
                   child: Row(
@@ -87,7 +104,7 @@ class SignIn extends StatelessWidget {
                     ],
                   ),
                   onTap: () {
-
+                    Get.to(ForgotPassword());
                   },
                 ),
                 SizedBox(height: 44),
@@ -95,6 +112,7 @@ class SignIn extends StatelessWidget {
                   child: GradientButton(
                     text: 'Sign in',
                     onTap: () {
+                      // BioMatricAuth.authenticateWithBiometrics();
                       Get.to(OTPScreen());
                     },
                   ),

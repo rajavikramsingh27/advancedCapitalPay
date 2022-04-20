@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-
-import '../Styles/ColorStyle.dart';
+import 'package:flutter/services.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import '../Styles/ImageStyle.dart';
+import '../Styles/ColorStyle.dart';
 import '../Styles/TextStyles.dart';
-import '../Components/BackgroundImage.dart';
 
 class AppBarStyle extends StatelessWidget implements PreferredSizeWidget {
   final Function()? onTap;
   final Widget? leadingButton;
   final Widget? trailingButton;
 
-  AppBarStyle({Key? key,
+  AppBarStyle({
+    Key? key,
     this.onTap,
     this.leadingButton,
     this.trailingButton,
@@ -35,8 +36,73 @@ class AppBarStyle extends StatelessWidget implements PreferredSizeWidget {
         height: 52,
       ),
       actions: [
-        if (trailingButton != null)
-          trailingButton!,
+        if (trailingButton != null) trailingButton!,
+        SizedBox(
+          width: 10,
+        )
+      ],
+    );
+  }
+}
+
+class AppBarStyleStatusBar extends StatelessWidget
+    implements PreferredSizeWidget {
+  double heightAppBar = 0;
+
+  @override
+  Size get preferredSize => new Size.fromHeight(heightAppBar);
+
+  @override
+  Widget build(BuildContext context) {
+    return PreferredSize(
+        preferredSize: Size(MediaQuery.of(context).size.width, heightAppBar),
+        child: AppBar(
+          systemOverlayStyle: SystemUiOverlayStyle.dark,
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+        ));
+  }
+}
+
+class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
+  final Function()? onTap;
+  final Widget? leadingButton;
+  final Widget? trailingButton;
+  final String? title;
+
+  AppBarStyleTitle({
+    Key? key,
+    this.onTap,
+    this.leadingButton,
+    this.trailingButton,
+    this.title
+  }) : super(key: key);
+
+  double heightAppBar = 50;
+
+  @override
+  Size get preferredSize => new Size.fromHeight(heightAppBar);
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      elevation: 0,
+      toolbarHeight: heightAppBar,
+      backgroundColor: Colors.transparent,
+      // leadingWidth: 0,
+      leading: (leadingButton == null) ? Container() : leadingButton,
+      centerTitle: true,
+      title: AutoSizeText(
+        title!,
+        maxLines: 1,
+        style: TextStyles.textStyles_16.apply(
+          color: ColorStyle.primaryWhite,
+          fontWeightDelta: 1,
+          fontSizeDelta: 2
+        ),
+      ),
+      actions: [
+        if (trailingButton != null) trailingButton!,
         SizedBox(
           width: 10,
         )
