@@ -25,7 +25,7 @@ class VerifyQuestion extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: MediaQuery.of(Get!.context!).size.width,
+          width: MediaQuery.of(Get.context!).size.width,
           alignment: Alignment.centerLeft,
           padding: EffectStyle.padding(10, 10, 6, 10),
           decoration: BoxDecoration(

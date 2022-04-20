@@ -1,3 +1,4 @@
+import 'package:advanced_capital_pay/Views/PersonalApplication1.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -113,7 +114,7 @@ class BioMatricEnable extends StatelessWidget {
                     Expanded(child: GradientButton(
                       text: 'Yes Please',
                       onTap: () {
-
+                        Get.to(PersonalApplication1());
                       },
                     )),
                   ],
