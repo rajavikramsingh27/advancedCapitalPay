@@ -28,6 +28,14 @@ class ImageStyle {
   static const String application = "$baseImage/Application.png";
  static const String bg_1 = "$baseImage/bg_1.png";
   static const String Flag = "$baseImage/Flag.png";
+  static const String tiard = "$baseImage/tiard.png";
+  static const String Ellipse2 = "$baseImage/Ellipse2.png";
+  static const String ethereum = "$baseImage/ethereum.png";
+  static const String coin = "$baseImage/coin.png";
+  static const String stock = "$baseImage/stock.png";
+  static const String transfer3 = "$baseImage/transfer3.png";
+  static const String agp = "$baseImage/agp.png";
+
 
 
 }

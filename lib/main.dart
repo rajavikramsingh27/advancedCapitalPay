@@ -1,3 +1,5 @@
+import 'package:advanced_capital_pay/Views/ApplicationForm.dart';
+import 'package:advanced_capital_pay/Views/MainDashboard.dart';
 import 'package:advanced_capital_pay/Views/PersonalApplication1.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        debugShowCheckedModeBanner: false, home: PersonalApplication1());
+        debugShowCheckedModeBanner: false, home: MainDashboard());
   }
 
 }
