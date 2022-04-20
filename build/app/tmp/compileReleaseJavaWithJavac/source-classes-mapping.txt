@@ -1,4 +1,0 @@
-io/flutter/plugins/GeneratedPluginRegistrant.java
- io.flutter.plugins.GeneratedPluginRegistrant
-com/advancedcapitalpay/advancedcapitalpay1/BuildConfig.java
- com.advancedcapitalpay.advancedcapitalpay1.BuildConfig
