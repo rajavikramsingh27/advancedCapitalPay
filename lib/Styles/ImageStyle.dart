@@ -27,7 +27,9 @@ class ImageStyle {
   static const String dropDown = "$baseImage/dropDown.png";
   static const String application = "$baseImage/Application.png";
  static const String bg_1 = "$baseImage/bg_1.png";
-  static const String Flag = "$baseImage/Flag.png";
+ static const String Flag = "$baseImage/Flag.png";
+ static const String caretdown = "$baseImage/caretdown.png";
+  static const String vector = "$baseImage/Vector.png";
 
 
 }

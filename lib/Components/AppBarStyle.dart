@@ -65,3 +65,36 @@ class AppBarStyleStatusBar extends StatelessWidget
         ));
   }
 }
+class AppBarStyleAuth extends StatelessWidget implements PreferredSizeWidget {
+  final Function()? onTap;
+  final String? title;
+
+  const AppBarStyleAuth({Key? key, this.onTap, this.title = ""}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+
+        elevation: 0.2,
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Text(
+          title!,
+          style: TextStyles.textStyles_20.apply(
+              color: ColorStyle.secondryBlack
+          ),
+        ),
+        leading: BackButton(
+          color: Colors.black,
+        ),
+    shape: Border(
+    bottom: BorderSide(
+    color: Colors.black12,
+    width: 1
+    )
+    ));
+  }
+
+  @override
+  Size get preferredSize => new Size.fromHeight(50);
+}
