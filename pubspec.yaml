@@ -38,6 +38,7 @@ dependencies:
   flutter_swiper_plus:
   auto_size_text:
   smooth_page_indicator:
+  local_auth:
 
 dev_dependencies:
   flutter_test:

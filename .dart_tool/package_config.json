@@ -68,6 +68,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_plugin_android_lifecycle",
+      "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_swiper_plus",
       "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_swiper_plus-2.0.4",
       "packageUri": "lib/",
@@ -86,10 +92,40 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "intl",
+      "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "lints",
       "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/lints-1.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "local_auth",
+      "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/local_auth-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "local_auth_android",
+      "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/local_auth_android-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "local_auth_ios",
+      "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/local_auth_ios-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "local_auth_platform_interface",
+      "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/local_auth_platform_interface-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
     },
     {
       "name": "matcher",
@@ -112,6 +148,12 @@
     {
       "name": "path",
       "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -182,7 +224,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-04-14T18:00:51.476392Z",
+  "generated": "2022-04-19T12:00:41.414631Z",
   "generator": "pub",
   "generatorVersion": "2.17.0-182.1.beta"
 }
