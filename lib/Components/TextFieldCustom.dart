@@ -14,6 +14,7 @@ class TextFieldCustom extends StatelessWidget {
   final Color? colorText;
   final Color? colorHint;
   final TextStyle? textStyle;
+  final double? radiusBorder;
 
   TextFieldCustom({
     Key? key,
@@ -25,7 +26,8 @@ class TextFieldCustom extends StatelessWidget {
     this.colorBoder = Colors.black,
     this.colorHint = Colors.grey,
     this.colorText = Colors.black,
-    this.textStyle
+    this.textStyle,
+    this.radiusBorder = 8.0,
   }) : super(key: key);
 
   @override
@@ -33,36 +35,24 @@ class TextFieldCustom extends StatelessWidget {
     return TextFormField(
       controller: controller,
       keyboardType: keyboardType,
-      style: textStyle?.apply(
-          color: colorText
-      ),
+      style: textStyle?.apply(color: colorText),
       decoration: InputDecoration(
-          contentPadding: EdgeInsets.only(
-            left: 16,
-            right: 16,
-            top: 6,
-            bottom: 6,
-          ),
-          filled: true,
-          fillColor: colorFill,
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.0),
-            borderSide: BorderSide(
-              color: colorBoder!,
-              width: 1
-            )
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.0),
-              borderSide: BorderSide(
-                  color: colorBoder!,
-                  width: 1
-              )
-          ),
-          hintText: hintText,
-          hintStyle: textStyle?.apply(
-            color: colorHint
-          ),
+        contentPadding: EdgeInsets.only(
+          left: 16,
+          right: 16,
+          top: 6,
+          bottom: 6,
+        ),
+        filled: true,
+        fillColor: colorFill,
+        enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(radiusBorder!),
+            borderSide: BorderSide(color: colorBoder!, width: 1)),
+        focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(radiusBorder!),
+            borderSide: BorderSide(color: colorBoder!, width: 1)),
+        hintText: hintText,
+        hintStyle: textStyle?.apply(color: colorHint),
       ),
     );
   }
@@ -74,6 +64,11 @@ class TextFieldCustomPrefix extends StatelessWidget {
   final String? hintText;
   final String? title;
   final TextInputType? keyboardType;
+  final Color? colorFill;
+  final Color? colorBoder;
+  final TextStyle? textStyle;
+  final double? radiusBorder;
+  final Widget? prefix;
 
   TextFieldCustomPrefix({
     Key? key,
@@ -82,6 +77,11 @@ class TextFieldCustomPrefix extends StatelessWidget {
     this.hintText,
     this.keyboardType = TextInputType.text,
     this.obscureText = false,
+    this.colorFill,
+    this.colorBoder = Colors.red,
+    this.textStyle,
+    this.radiusBorder = 8,
+    this.prefix,
   }) : super(key: key);
 
   @override
@@ -90,7 +90,7 @@ class TextFieldCustomPrefix extends StatelessWidget {
       controller: controller,
       keyboardType: keyboardType,
       obscureText: obscureText!,
-      style: TextStyles.textStyles_16.apply(color: ColorStyle.secondryBlack),
+      style: textStyle,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.only(
             left: 16,
@@ -99,26 +99,32 @@ class TextFieldCustomPrefix extends StatelessWidget {
             bottom: 6,
           ),
           filled: true,
-          fillColor: ColorStyle.hex("#236CA2").withOpacity(0.5),
+          fillColor: colorFill,
+          // ColorStyle.hex("#236CA2").withOpacity(0.5),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.0),
+            borderRadius: BorderRadius.circular(radiusBorder!),
+            borderSide: BorderSide(color: colorBoder!, width: 1),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.0),
+            borderRadius: BorderRadius.circular(radiusBorder!),
+            borderSide: BorderSide(color: colorBoder!, width: 1),
           ),
           hintText: hintText,
           hintStyle:
-              TextStyles.textStyles_16.apply(color: ColorStyle.grayColor),
+              TextStyles.textStyles_16.apply(color: ColorStyle.grey),
           prefixIcon: Container(
-            height: 30,
-            padding: EdgeInsets.only(
-              top: 8,
-              bottom: 8,
-            ),
-            child: Image.asset(
-              ImageStyle.user,
-            ),
-          )),
+              height: 30,
+              padding: EdgeInsets.only(
+                top: 8,
+                bottom: 8,
+              ),
+              child: prefix
+
+              // Image.asset(
+              //   ImageStyle.user,
+              //   color: Colors.red,
+              // ),
+              )),
     );
   }
 }
@@ -126,13 +132,29 @@ class TextFieldCustomPrefix extends StatelessWidget {
 class TextFieldPasswordCustom extends StatefulWidget {
   final TextEditingController? controller;
   final String? hintText;
+  final String? title;
   final TextInputType? keyboardType;
+  final Color? colorFill;
+  final Color? colorBoder;
+  final TextStyle? hintTextStyle;
+  final TextStyle? textStyle;
+  final double? radiusBorder;
+  final Widget? prefix;
+  final Color? colorSuffix;
 
   TextFieldPasswordCustom({
     Key? key,
-    this.keyboardType = TextInputType.text,
     this.controller,
+    this.title,
     this.hintText,
+    this.keyboardType = TextInputType.text,
+    this.colorFill,
+    this.colorBoder = Colors.red,
+    this.textStyle,
+    this.hintTextStyle,
+    this.radiusBorder = 8,
+    this.prefix,
+    this.colorSuffix = Colors.white,
   }) : super(key: key);
 
   bool obscureText = true;
@@ -149,7 +171,9 @@ class _TextFieldPasswordCustomState extends State<TextFieldPasswordCustom> {
       controller: widget.controller,
       keyboardType: widget.keyboardType,
       obscureText: widget.obscureText,
-      style: TextStyles.textStyles_16.apply(color: ColorStyle.secondryBlack),
+      style: widget.textStyle,
+
+      // TextStyles.textStyles_16.apply(color: ColorStyle.secondryBlack),
       decoration: InputDecoration(
           contentPadding: EdgeInsets.only(
             left: 16,
@@ -158,33 +182,31 @@ class _TextFieldPasswordCustomState extends State<TextFieldPasswordCustom> {
             bottom: 6,
           ),
           filled: true,
-          fillColor: ColorStyle.hex("#236CA2").withOpacity(0.5),
+          fillColor: widget.colorFill,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.0),
+            borderRadius: BorderRadius.circular(widget.radiusBorder!),
+            borderSide: BorderSide(color: widget.colorBoder!, width: 1),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.0),
+            borderRadius: BorderRadius.circular(widget.radiusBorder!),
+            borderSide: BorderSide(color: widget.colorBoder!, width: 1),
           ),
           hintText: widget.hintText,
-          hintStyle:
-              TextStyles.textStyles_16.apply(color: ColorStyle.grayColor),
+          hintStyle: widget.hintTextStyle,
           prefixIcon: Container(
-            height: 30,
-            padding: EdgeInsets.only(
-              top: 8,
-              bottom: 8,
-            ),
-            child: Image.asset(
-              ImageStyle.lock,
-            ),
-          ),
+              height: 30,
+              padding: EdgeInsets.only(
+                top: 8,
+                bottom: 8,
+              ),
+              child: widget.prefix,),
           suffixIcon: InkWell(
             child: Icon(
               widget.obscureText
                   ? Icons.visibility_outlined
                   : Icons.visibility_off_outlined,
               size: 24,
-              color: ColorStyle.primaryWhite,
+              color: widget.colorSuffix,
             ),
             onTap: () {
               widget.obscureText = !widget.obscureText;
@@ -226,11 +248,11 @@ class TextFieldOTP extends StatelessWidget {
         contentPadding: EdgeInsets.all(0),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(width: 1,color: ColorStyle.primaryWhite),
+          borderSide: BorderSide(width: 1, color: ColorStyle.primaryWhite),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(width: 1,color: ColorStyle.primaryWhite),
+          borderSide: BorderSide(width: 1, color: ColorStyle.primaryWhite),
         ),
         counter: Offstage(),
         border: InputBorder.none,

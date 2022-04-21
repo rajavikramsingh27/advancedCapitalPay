@@ -25,7 +25,7 @@ class MainDashboard extends StatelessWidget {
           fit: BoxFit.cover,
         ),
         Scaffold(
-          appBar: AppBarStyle1(),
+          appBar: AppBarStyle(),
           backgroundColor: Colors.transparent,
           body: GetBuilder(
             init: MainDashboardController(),
@@ -286,7 +286,8 @@ class MainDashboard extends StatelessWidget {
                                   child: ElevatedButtonCustom(
                                     text: 'Transactions',
                                     colorBG: Colors.transparent,
-                                    colorText: ColorStyle.blueSKY,
+                                    textStyle: TextStyles.textStyles_16
+                                        .apply(color: ColorStyle.blueSKY, fontWeightDelta: 1),
                                     onTap: () {
                                       controller.listType.value = 1;
                                     },
@@ -296,7 +297,8 @@ class MainDashboard extends StatelessWidget {
                                   child: ElevatedButtonCustom(
                                     text: 'Transactions',
                                     colorBG: Colors.transparent,
-                                    colorText: ColorStyle.blueSKY,
+                                    textStyle: TextStyles.textStyles_16
+                                        .apply(color: ColorStyle.blueSKY, fontWeightDelta: 1),
                                     onTap: () {
                                       controller.listType.value = 2;
                                     },
@@ -306,7 +308,8 @@ class MainDashboard extends StatelessWidget {
                                   child: ElevatedButtonCustom(
                                     text: 'Transactions',
                                     colorBG: Colors.transparent,
-                                    colorText: ColorStyle.blueSKY,
+                                    textStyle: TextStyles.textStyles_16
+                                        .apply(color: ColorStyle.blueSKY, fontWeightDelta: 1),
                                     onTap: () {
                                       controller.listType.value = 3;
                                     },
