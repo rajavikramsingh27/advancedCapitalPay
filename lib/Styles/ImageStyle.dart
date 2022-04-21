@@ -35,6 +35,9 @@ class ImageStyle {
   static const String stock = "$baseImage/stock.png";
   static const String transfer3 = "$baseImage/transfer3.png";
   static const String agp = "$baseImage/agp.png";
+  static const String statement = "$baseImage/statement.png";
+  static const String notice = "$baseImage/notice.png";
+
 
 
 

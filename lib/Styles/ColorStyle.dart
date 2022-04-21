@@ -5,7 +5,7 @@ class ColorStyle {
   static final Color secondryBlack = Colors.black;
   static final Color blueSKY = hex("#1478FF");
   static final Color blueLight = hex("#A0E4F9");
-  static final Color grey = hex("#696969	");
+  static final Color grey = hex("#808080	");
   static final Color grayColor = Colors.white.withOpacity(0.5);
 
   static Color hex(String hexString) {
