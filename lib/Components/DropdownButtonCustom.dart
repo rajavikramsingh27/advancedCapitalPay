@@ -10,12 +10,16 @@ class DropdownButtonCustom extends StatelessWidget {
   final Function(String?)? onChanged;
   final List<String>? listValue;
   final String? selectedValue;
+final Color? colorBorder;
+final EdgeInsets? padding;
 
   const DropdownButtonCustom({
     Key? key,
     this.onChanged,
     this.listValue,
     this.selectedValue,
+    this.colorBorder = Colors.red,
+    this.padding,
   }) : super(key: key);
 
   @override
@@ -28,13 +32,14 @@ class DropdownButtonCustom extends StatelessWidget {
         height: 16,
       ),
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.only(left: 10, right: 10, top: 0, bottom: 0),
+        // contentPadding: EdgeInsets.only(left: 10, right: 10, top: 0, bottom: 0),
+        contentPadding: padding,
         enabledBorder: OutlineInputBorder(
             borderRadius: EffectStyle.radiusCustom(4),
-            borderSide: BorderSide(color: ColorStyle.blueLight, width: 1)),
+            borderSide: BorderSide(color: colorBorder!, width: 1)),
         border: OutlineInputBorder(
             borderRadius: EffectStyle.radiusCustom(4),
-            borderSide: BorderSide(color: ColorStyle.blueLight, width: 1)),
+            borderSide: BorderSide(color: colorBorder!, width: 1)),
       ),
       onChanged: onChanged!,
       items: listValue!

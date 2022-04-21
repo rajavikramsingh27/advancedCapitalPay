@@ -42,6 +42,7 @@ class ImageStyle {
   static const String bg_Button = "$baseImage/bg_Button.png";
   static const String delivered = "$baseImage/delivered.png";
   static const String application = "$baseImage/Application.png";
+
   static const String Flag = "$baseImage/Flag.png";
   static const String back_circle = "$baseImage/back_circle.png";
   static const String forgot_identification =
@@ -51,6 +52,8 @@ class ImageStyle {
   static const String thumb_circle_icon = "$baseImage/thumb_circle_icon.png";
   static const String touchScan = "$baseImage/touchScan.png";
 
+ static const String caretdown = "$baseImage/caretdown.png";
+  static const String vector = "$baseImage/Vector.png";
 
   static const String user_1 = "$baseImage/user_1.png";
   static const String passwordSet = "$baseImage/passwordSet.png";
