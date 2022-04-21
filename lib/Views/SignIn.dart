@@ -10,6 +10,8 @@ import '../Components/BackgroundImage.dart';
 import '../Components/AppBarStyle.dart';
 import '../Components/TextFieldCustom.dart';
 import '../Views/ForgotPassword.dart';
+import '../Views/PersonalApplication1.dart';
+
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -202,7 +204,9 @@ class SignIn extends StatelessWidget {
                       )
                     ],
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(PersonalApplication1());
+                  },
                 ),
               ],
             ),

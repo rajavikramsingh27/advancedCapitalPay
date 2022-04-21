@@ -68,13 +68,15 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
   final Widget? leadingButton;
   final Widget? trailingButton;
   final String? title;
+  final Color? colorTitle;
 
   AppBarStyleTitle({
     Key? key,
     this.onTap,
     this.leadingButton,
     this.trailingButton,
-    this.title
+    this.title,
+    this.colorTitle = Colors.white,
   }) : super(key: key);
 
   double heightAppBar = 50;
@@ -95,7 +97,7 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
     title!,
     maxLines: 1,
     style: TextStyles.textStyles_16.apply(
-    color: ColorStyle.primaryWhite,
+    color: colorTitle,
     fontWeightDelta: 1,
     fontSizeDelta: 2
     ),
