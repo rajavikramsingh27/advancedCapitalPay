@@ -78,4 +78,40 @@ class ImageStyle {
   static const String icon_material_error = "$baseImage/Icon_material_error.png";
   static const String mobileBlueBG = "$baseImage/mobileBlueBG.png";
   static const String setPasswordSuccessfully = "$baseImage/setPasswordSuccessfully.png";
+  static const String user6 = "$baseImage/user6.png";
+  static const String theme = "$baseImage/theme.png";
+  static const String envelope = "$baseImage/envelope.png";
+  static const String bell = "$baseImage/bell.png";
+  static const String browser = "$baseImage/browser.png";
+  static const String creditcards = "$baseImage/creditcards.png";
+  static const String internet = "$baseImage/internet.png";
+  static const String pay = "$baseImage/pay.png";
+  static const String pricing = "$baseImage/pricing.png";
+  static const String bill = "$baseImage/bill.png";
+  static const String key = "$baseImage/key.png";
+  static const String creditcard5 = "$baseImage/creditcard5.png";
+  static const String shield = "$baseImage/shield.png";
+  static const String sale = "$baseImage/sale.png";
+  static const String customersupport = "$baseImage/customersupport.png";
+  static const String request = "$baseImage/request.png";
+  static const String faq = "$baseImage/faq.png";
+  static const String payment3 = "$baseImage/payment3.png";
+  static const String creditcard6 = "$baseImage/creditcard6.png";
+  static const String cryptocurrencies = "$baseImage/cryptocurrencies.png";
+  static const String Group2221 = "$baseImage/Group2221.png";
+  static const String creditcard = "$baseImage/creditcard.png";
+  static const String Group2201 = "$baseImage/Group2201.png";
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

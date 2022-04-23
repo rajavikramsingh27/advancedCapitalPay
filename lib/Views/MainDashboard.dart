@@ -271,22 +271,19 @@ class MainDashboard extends StatelessWidget {
                         height: 12,
                       ),
                       Container(
-                        padding: EdgeInsets.only(left: 10, right: 10),
+
                         color: ColorStyle.primaryWhite,
                         child: Column(
                           children: [
-                            SizedBox(
-                              height: 10,
-                            ),
                             Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
+                              // mainAxisAlignment:
+                              // MainAxisAlignment.spaceBetween,
                               children: [
                                 Expanded(
                                   child: ElevatedButtonCustom(
                                     text: 'Transactions',
                                     colorBG: Colors.transparent,
-                                    textStyle: TextStyles.textStyles_16
+                                    textStyle: TextStyles.textStyles_12
                                         .apply(color: ColorStyle.blueSKY, fontWeightDelta: 1),
                                     onTap: () {
                                       controller.listType.value = 1;
@@ -295,9 +292,9 @@ class MainDashboard extends StatelessWidget {
                                 ),
                                 Expanded(
                                   child: ElevatedButtonCustom(
-                                    text: 'Transactions',
+                                    text: 'Statements',
                                     colorBG: Colors.transparent,
-                                    textStyle: TextStyles.textStyles_16
+                                    textStyle: TextStyles.textStyles_12
                                         .apply(color: ColorStyle.blueSKY, fontWeightDelta: 1),
                                     onTap: () {
                                       controller.listType.value = 2;
@@ -306,9 +303,9 @@ class MainDashboard extends StatelessWidget {
                                 ),
                                 Expanded(
                                   child: ElevatedButtonCustom(
-                                    text: 'Transactions',
+                                    text: 'Notices',
                                     colorBG: Colors.transparent,
-                                    textStyle: TextStyles.textStyles_16
+                                    textStyle: TextStyles.textStyles_12
                                         .apply(color: ColorStyle.blueSKY, fontWeightDelta: 1),
                                     onTap: () {
                                       controller.listType.value = 3;
@@ -316,9 +313,6 @@ class MainDashboard extends StatelessWidget {
                                   ),
                                 ),
                               ],
-                            ),
-                            SizedBox(
-                              height: 10,
                             ),
                             Container(
                               width: double.infinity,
@@ -366,244 +360,252 @@ class MainDashboard extends StatelessWidget {
                             SizedBox(
                               height: 5,
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Today',
-                                  style: TextStyles.textStyles_12.apply(
-                                    color: ColorStyle.secondryBlack,
-                                    fontWeightDelta: 1,
-                                  ),
-                                ),
-                                Text(
-                                  '17 April 2021',
-                                  style: TextStyles.textStyles_12.apply(
-                                    color: ColorStyle.secondryBlack,
-                                    fontWeightDelta: 1,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
                             Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            ListView.builder(
-                                padding: EdgeInsets.only(top: 20),
-                                shrinkWrap: true,
-                                itemCount: 5,
-                                // scrollDirection: Axis.horizontal,
-                                physics: BouncingScrollPhysics(),
-                                itemBuilder:
-                                    (BuildContext context, int index) {
-                                  if (controller.listType.value == 1) {
-                                    return Container(
-                                      padding: EdgeInsets.only(
-                                          left: 12, right: 12),
-                                      alignment: Alignment.center,
-                                      // color: Colors.red,
-                                      height: 57,
-                                      width: 343,
-
-                                      margin: EdgeInsets.all(6),
-                                      // color: Colors.red,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Image.asset(
-                                            ImageStyle.agp,
-                                            height: 30,
-                                            width: 30,
-                                          ),
-                                          SizedBox(
-                                            width: 15,
-                                          ),
-                                          Column(
-                                            crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                            mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                            children: [
-                                              Text(
-                                                'Costa Coffee',
-                                                // controller.listApplyLeave[index],
-                                                style: TextStyles
-                                                    .textStyles_12
-                                                    .apply(
-                                                    color: ColorStyle
-                                                        .secondryBlack),
-                                              ),
-                                              Text(
-                                                'Food & Drink',
-                                                // controller.listApplyLeave[index],
-                                                style: TextStyles.textStyles_8
-                                                    .apply(
-                                                    color: ColorStyle
-                                                        .secondryBlack),
-                                              ),
-                                            ],
-                                          ),
-                                          SizedBox(
-                                            width: 40,
-                                          ),
-                                          Container(
-                                            alignment: Alignment.center,
+                              padding: EdgeInsets.only(left: 4, right: 4),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Today',
+                                        style: TextStyles.textStyles_12.apply(
+                                          color: ColorStyle.secondryBlack,
+                                          fontWeightDelta: 1,
+                                        ),
+                                      ),
+                                      Text(
+                                        '17 April 2021',
+                                        style: TextStyles.textStyles_12.apply(
+                                          color: ColorStyle.secondryBlack,
+                                          fontWeightDelta: 1,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Container(
+                                    width: double.infinity,
+                                    height: 1,
+                                    color: Colors.black26,
+                                  ),
+                                  ListView.builder(
+                                      padding: EdgeInsets.only(top: 20),
+                                      shrinkWrap: true,
+                                      itemCount: 5,
+                                      // scrollDirection: Axis.horizontal,
+                                      physics: BouncingScrollPhysics(),
+                                      itemBuilder:
+                                          (BuildContext context, int index) {
+                                        if (controller.listType.value == 1) {
+                                          return Container(
                                             padding: EdgeInsets.only(
-                                                left: 14, right: 14),
-                                            child: Text(
-                                              '- \$8.10',
-                                              style: TextStyles.textStyles_16
-                                                  .apply(
-                                                  color: ColorStyle
-                                                      .secondryBlack),
+                                                left: 12, right: 12),
+                                            alignment: Alignment.center,
+                                            // color: Colors.red,
+                                            height: 57,
+                                            width: 343,
+
+                                            margin: EdgeInsets.all(6),
+                                            // color: Colors.red,
+                                            child: Row(
+                                              mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Image.asset(
+                                                  ImageStyle.agp,
+                                                  height: 30,
+                                                  width: 30,
+                                                ),
+                                                SizedBox(
+                                                  width: 15,
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                                  mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Costa Coffee',
+                                                      // controller.listApplyLeave[index],
+                                                      style: TextStyles
+                                                          .textStyles_12
+                                                          .apply(
+                                                          color: ColorStyle
+                                                              .secondryBlack),
+                                                    ),
+                                                    Text(
+                                                      'Food & Drink',
+                                                      // controller.listApplyLeave[index],
+                                                      style: TextStyles.textStyles_8
+                                                          .apply(
+                                                          color: ColorStyle
+                                                              .secondryBlack),
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  width: 40,
+                                                ),
+                                                Container(
+                                                  alignment: Alignment.center,
+                                                  padding: EdgeInsets.only(
+                                                      left: 14, right: 14),
+                                                  child: Text(
+                                                    '- \$8.10',
+                                                    style: TextStyles.textStyles_16
+                                                        .apply(
+                                                        color: ColorStyle
+                                                            .secondryBlack),
+                                                  ),
+                                                  // width: 70,
+                                                  // height: 40,
+                                                ),
+                                                Icon(
+                                                  Icons.arrow_forward_ios_rounded,
+                                                  size: 20,
+                                                  color: Colors.black45,
+                                                )
+                                              ],
                                             ),
-                                            // width: 70,
-                                            // height: 40,
-                                          ),
-                                          Icon(
-                                            Icons.arrow_forward_ios_rounded,
-                                            size: 20,
-                                            color: Colors.black45,
-                                          )
-                                        ],
-                                      ),
 
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                          BorderRadius.circular(5),
-                                          color: Colors.lightBlueAccent
-                                              .withOpacity(0.1)),
-                                    );
-                                  } else if (controller.listType.value == 2) {
-                                    return Container(
-                                      padding: EdgeInsets.only(
-                                          left: 12, right: 12),
-                                      alignment: Alignment.center,
-                                      // color: Colors.red,
-                                      height: 57,
-                                      width: 343,
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                BorderRadius.circular(5),
+                                                color: Colors.lightBlueAccent
+                                                    .withOpacity(0.1)),
+                                          );
+                                        } else if (controller.listType.value == 2) {
+                                          return Container(
+                                            padding: EdgeInsets.only(
+                                                left: 12, right: 12),
+                                            alignment: Alignment.center,
+                                            // color: Colors.red,
+                                            height: 57,
+                                            width: 343,
 
-                                      margin: EdgeInsets.all(6),
-                                      // color: Colors.red,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Image.asset(
-                                            ImageStyle.statement,
-                                            height: 30,
-                                            width: 30,
-                                          ),
-                                          Column(
-                                            crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                            mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                            children: [
-                                              Text(
-                                                'November 2020',
-                                                // controller.listApplyLeave[index],
-                                                style: TextStyles
-                                                    .textStyles_12
-                                                    .apply(
-                                                    color: ColorStyle
-                                                        .secondryBlack),
-                                              ),
-                                              Text(
-                                                '08 November 2020',
-                                                // controller.listApplyLeave[index],
-                                                style: TextStyles.textStyles_8
-                                                    .apply(
-                                                    color: ColorStyle
-                                                        .secondryBlack),
-                                              ),
-                                            ],
-                                          ),
-                                          SizedBox(
-                                            width: 40,
-                                          ),
-                                          Icon(
-                                            Icons.arrow_forward_ios_rounded,
-                                            size: 20,
-                                            color: Colors.black45,
-                                          )
-                                        ],
-                                      ),
+                                            margin: EdgeInsets.all(6),
+                                            // color: Colors.red,
+                                            child: Row(
+                                              mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Image.asset(
+                                                  ImageStyle.statement,
+                                                  height: 30,
+                                                  width: 30,
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                                  mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'November 2020',
+                                                      // controller.listApplyLeave[index],
+                                                      style: TextStyles
+                                                          .textStyles_12
+                                                          .apply(
+                                                          color: ColorStyle
+                                                              .secondryBlack),
+                                                    ),
+                                                    Text(
+                                                      '08 November 2020',
+                                                      // controller.listApplyLeave[index],
+                                                      style: TextStyles.textStyles_8
+                                                          .apply(
+                                                          color: ColorStyle
+                                                              .secondryBlack),
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  width: 40,
+                                                ),
+                                                Icon(
+                                                  Icons.arrow_forward_ios_rounded,
+                                                  size: 20,
+                                                  color: Colors.black45,
+                                                )
+                                              ],
+                                            ),
 
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                          BorderRadius.circular(5),
-                                          color: Colors.lightBlueAccent
-                                              .withOpacity(0.1)),
-                                    );
-                                  } else if (controller.listType.value == 3) {
-                                    return Container(
-                                      padding: EdgeInsets.only(
-                                          left: 12, right: 12),
-                                      alignment: Alignment.center,
-                                      // color: Colors.red,
-                                      height: 57,
-                                      width: 343,
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                BorderRadius.circular(5),
+                                                color: Colors.lightBlueAccent
+                                                    .withOpacity(0.1)),
+                                          );
+                                        } else if (controller.listType.value == 3) {
+                                          return Container(
+                                            padding: EdgeInsets.only(
+                                                left: 12, right: 12),
+                                            alignment: Alignment.center,
+                                            // color: Colors.red,
+                                            height: 57,
+                                            width: 343,
 
-                                      margin: EdgeInsets.all(6),
-                                      // color: Colors.red,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Image.asset(
-                                            ImageStyle.notice,
-                                            height: 30,
-                                            width: 30,
-                                          ),
-                                          Column(
-                                            crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                            mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                            children: [
-                                              Text(
-                                                'Plus+ Current account (6435)    01 MAR 2022',
-                                                // controller.listApplyLeave[index],
-                                                style: TextStyles
-                                                    .textStyles_12
-                                                    .apply(
-                                                    color: ColorStyle
-                                                        .secondryBlack),
-                                              ),
-                                              Text(
-                                                'Important changes in our fees and limits effective from 1st June 2022',
-                                                // controller.listApplyLeave[index],
-                                                style: TextStyles.textStyles_6
-                                                    .apply(
-                                                    color: ColorStyle
-                                                        .secondryBlack),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
+                                            margin: EdgeInsets.all(6),
+                                            // color: Colors.red,
+                                            child: Row(
+                                              mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Image.asset(
+                                                  ImageStyle.notice,
+                                                  height: 30,
+                                                  width: 30,
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                                  mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Plus+ Current account (6435)    01 MAR 2022',
+                                                      // controller.listApplyLeave[index],
+                                                      style: TextStyles
+                                                          .textStyles_12
+                                                          .apply(
+                                                          color: ColorStyle
+                                                              .secondryBlack),
+                                                    ),
+                                                    Text(
+                                                      'Important changes in our fees and limits effective from 1st June 2022',
+                                                      // controller.listApplyLeave[index],
+                                                      style: TextStyles.textStyles_6
+                                                          .apply(
+                                                          color: ColorStyle
+                                                              .secondryBlack),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
 
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                          BorderRadius.circular(5),
-                                          color: Colors.lightBlueAccent
-                                              .withOpacity(0.1)),
-                                    );
-                                  } else  {
-                                    return Container(
-                                      color: Colors.red,
-                                      height: 100,
-                                      width: MediaQuery.of(context).size.width,
-                                    );
-                                  }
-                                }),
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                BorderRadius.circular(5),
+                                                color: Colors.lightBlueAccent
+                                                    .withOpacity(0.1)),
+                                          );
+                                        } else  {
+                                          return Container(
+                                            color: Colors.red,
+                                            height: 100,
+                                            width: MediaQuery.of(context).size.width,
+                                          );
+                                        }
+                                      }),
+                                ],
+                              ),
+                            ),
+
                           ],
                         ),
                       ),

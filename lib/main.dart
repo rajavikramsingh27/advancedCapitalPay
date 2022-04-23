@@ -1,3 +1,5 @@
+import 'package:advanced_capital_pay/Views/AppSettings.dart';
+import 'package:advanced_capital_pay/Views/ApplePay.dart';
 import 'package:advanced_capital_pay/Views/ApplicationForm.dart';
 import 'package:advanced_capital_pay/Views/MainDashboard.dart';
 import 'package:advanced_capital_pay/Views/PersonalApplication1.dart';
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        debugShowCheckedModeBanner: false, home: MainDashboard());
+        debugShowCheckedModeBanner: false, home: ApplePay());
   }
 
 }
