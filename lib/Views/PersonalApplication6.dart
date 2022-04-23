@@ -1,11 +1,13 @@
 import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../Components/AppBarStyle.dart';
 import '../Components/DropdownButtonCustom.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/EffectStyle.dart';
 import '../Styles/TextStyles.dart';
+import 'PersonalApplication7.dart';
 
 class PersonalApplication6 extends StatelessWidget {
   const PersonalApplication6({Key? key}) : super(key: key);
@@ -389,7 +391,7 @@ class PersonalApplication6 extends StatelessWidget {
                   textStyle: TextStyles.textStyles_16
                       .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                   onTap: () {
-                    // Get.to(PersonalApplication2());
+                    Get.to(PersonalApplication7());
                   },
                 ),),
               ],

@@ -1,4 +1,6 @@
 import 'package:advanced_capital_pay/Views/PersonalApplication1.dart';
+import 'package:advanced_capital_pay/Views/PersonalApplication6.dart';
+import 'package:advanced_capital_pay/Views/PersonalApplication7.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
@@ -29,9 +31,9 @@ class MyApp extends StatelessWidget {
 // This widget is the root of your application.
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return GetMaterialApp(
-        debugShowCheckedModeBanner: false, home: SplashScreen());
+        debugShowCheckedModeBanner: false, home: PersonalApplication6());
   }
 
 }

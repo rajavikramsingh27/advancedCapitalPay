@@ -95,7 +95,7 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
     title!,
     maxLines: 1,
     style: TextStyles.textStyles_16.apply(
-    color: ColorStyle.primaryWhite,
+    color: ColorStyle.secondryBlack,
     fontWeightDelta: 1,
     fontSizeDelta: 2
     ),
