@@ -1,4 +1,0 @@
-#Fri Apr 22 21:40:11 IST 2022
-base.0=D\:\\Projects\\Flutter\\advancedCapitalPay\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
