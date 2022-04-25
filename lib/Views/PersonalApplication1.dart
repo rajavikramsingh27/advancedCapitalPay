@@ -533,6 +533,7 @@ class PersonalApplication1 extends StatelessWidget {
 
                                 ],
                               ),
+
                               SizedBox(
                                 height: 12,
                               ),

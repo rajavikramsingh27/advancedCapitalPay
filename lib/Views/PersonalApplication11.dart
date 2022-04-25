@@ -1,3 +1,4 @@
+import 'package:advanced_capital_pay/Views/PersonalApplication13.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -421,7 +422,7 @@ class PersonalApplication11 extends StatelessWidget {
                                     textStyle: TextStyles.textStyles_16
                                         .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                                     onTap: () {
-                                      Get.to(PersonalApplication11());
+                                      Get.to(PersonalApplication13());
                                     },
                                   ),),
                                 ],

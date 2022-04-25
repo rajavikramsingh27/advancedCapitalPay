@@ -33,6 +33,7 @@ class PersonalApplication6 extends StatelessWidget {
                 fontWeightDelta: 1,
               ),
             ),
+
             SizedBox(
               height: 18,
             ),
@@ -127,6 +128,8 @@ class PersonalApplication6 extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
+
+
 
             Text(
               'Your Name',
