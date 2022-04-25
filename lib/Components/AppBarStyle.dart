@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+
 import '../Styles/ImageStyle.dart';
-import '../Styles/ColorStyle.dart';
 import '../Styles/TextStyles.dart';
 
 class AppBarStyle extends StatelessWidget implements PreferredSizeWidget {
@@ -45,7 +45,8 @@ class AppBarStyle extends StatelessWidget implements PreferredSizeWidget {
   }
 }
 
-class AppBarStyleStatusBar extends StatelessWidget implements PreferredSizeWidget {
+class AppBarStyleStatusBar extends StatelessWidget
+    implements PreferredSizeWidget {
   double heightAppBar = 0;
 
   @override
@@ -87,31 +88,24 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-    elevation: 0,
-    toolbarHeight: heightAppBar,
-    backgroundColor: Colors.transparent,
-    // leadingWidth: 0,
-    leading: (leadingButton == null) ? Container() : leadingButton,
-    centerTitle: true,
-    title: AutoSizeText(
-    title!,
-    maxLines: 1,
-    style: TextStyles.textStyles_16.apply(
-    color: colorTitle,
-    fontWeightDelta: 1,
-    fontSizeDelta: 2
-    ),
-    ),
-    actions: [
-    if (trailingButton != null) trailingButton!,
-    SizedBox(
-    width: 10,
-    )
-    ],
+      elevation: 0,
+      toolbarHeight: heightAppBar,
+      backgroundColor: Colors.transparent,
+      // leadingWidth: 0,
+      leading: (leadingButton == null) ? Container() : leadingButton,
+      centerTitle: true,
+      title: AutoSizeText(
+        title!,
+        maxLines: 1,
+        style: TextStyles.textStyles_16
+            .apply(color: colorTitle, fontWeightDelta: 1, fontSizeDelta: 2),
+      ),
+      actions: [
+        if (trailingButton != null) trailingButton!,
+        SizedBox(
+          width: 10,
+        )
+      ],
     );
   }
-
 }
-
-
-

@@ -1,11 +1,9 @@
-import 'package:advanced_capital_pay/Views/PersonalApplication1.dart';
+
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 
 import '../Views/SplashScreen.dart';
 
-// Hello
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,23 +15,6 @@ void main() {
     DeviceOrientation.portraitUp,
   ]);
 
-  // Hello
-  // Hello
-  runApp(const MyApp());
+  runApp(const SplashScreen());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
-  // This widget is the root of your application.
-  // This widget is the root of your application.
-// This widget is the root of your application.
-
-  @override
-  Widget build(BuildContext context) {
-    return GetMaterialApp(
-        debugShowCheckedModeBanner: false, home: SplashScreen());
-  }
-
-}
