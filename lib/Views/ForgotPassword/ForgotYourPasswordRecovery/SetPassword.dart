@@ -47,10 +47,16 @@ class SetPassword extends StatelessWidget {
         ),
         TextFieldPasswordCustom(
           hintText: hint,
-          prefix: Image.asset(
-            ImageStyle.lock,
-            color: ColorStyle.darkestBlue,
-          ),
+          prefix: Container(
+              padding: EdgeInsets.only(
+                top: 6,
+                bottom: 6,
+              ),
+              height: 30,
+              child: Image.asset(
+                ImageStyle.lock,
+                color: ColorStyle.darkestBlue,
+              )),
           colorSuffix: ColorStyle.darkestBlue.withOpacity(0.4),
           colorFill: ColorStyle.primaryWhite,
           colorBoder: ColorStyle.secondryBlack,
@@ -176,7 +182,7 @@ class SetPassword extends StatelessWidget {
                   value: 0.9,
                 ),
                 SizedBox(
-                  height: 10 ,
+                  height: 10,
                 ),
                 ListView.separated(
                     shrinkWrap: true,
@@ -204,13 +210,14 @@ class SetPassword extends StatelessWidget {
                             width: 6,
                           ),
                           Expanded(
-                              child: Text(
-                                controller.arrPasswordStrngh[index],
-                                style: TextStyles.textStyles_14.apply(
-                                  color: ColorStyle.secondryBlack,
-                                  fontWeightDelta: 0,
-                                ),
-                              ),),
+                            child: Text(
+                              controller.arrPasswordStrngh[index],
+                              style: TextStyles.textStyles_14.apply(
+                                color: ColorStyle.secondryBlack,
+                                fontWeightDelta: 0,
+                              ),
+                            ),
+                          ),
                         ],
                       );
                     }),

@@ -1,10 +1,7 @@
-
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:flutter/services.dart';
-
 import '../Views/SplashScreen.dart';
-
-// Hello
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,6 +13,17 @@ void main() {
     DeviceOrientation.portraitUp,
   ]);
 
-  runApp(const SplashScreen());
+  runApp( MyApp());
 }
 
+class MyApp extends StatelessWidget {
+  MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: SplashScreen()
+    );
+  }
+}

@@ -1,6 +1,5 @@
-import '../Styles/SizeStyle.dart';
+
 import 'package:flutter/material.dart';
-import '../Utils/Constants.dart';
 import '../Styles/TextStyles.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/ColorStyle.dart';

@@ -10,7 +10,7 @@ import '../Components/BackgroundImage.dart';
 import '../Components/AppBarStyle.dart';
 import '../Components/TextFieldCustom.dart';
 import 'ForgotPassword/ForgotPassword.dart';
-import '../Views/PersonalApplication1.dart';
+import 'SignUp/PersonalApplication1.dart';
 
 
 class SignIn extends StatelessWidget {
@@ -75,7 +75,13 @@ class SignIn extends StatelessWidget {
                   ),
                 ),
                 TextFieldPasswordCustom(
-                  prefix: Image.asset(ImageStyle.lock),
+                  prefix: Container(
+                    padding: EdgeInsets.only(
+                      top: 6,
+                      bottom: 6,
+                    ),
+                      height: 30,
+                      child: Image.asset(ImageStyle.lock)),
                   hintTextStyle: TextStyles.textStyles_16.apply(
                     color: ColorStyle.grey,
                   ),
