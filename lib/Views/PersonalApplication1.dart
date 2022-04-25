@@ -97,8 +97,7 @@ class PersonalApplication1 extends StatelessWidget {
                           alignment: Alignment.center,
                           width: 102,
                           height: 43,
-                          decoration:
-                              BoxDecoration(color: ColorStyle.blueSKY),
+                          decoration: BoxDecoration(color: ColorStyle.blueSKY),
                         ),
                         SizedBox(
                           height: 12,
@@ -110,7 +109,7 @@ class PersonalApplication1 extends StatelessWidget {
                             children: [
                               Text(
                                 'Welcome to Advance Capital'
-                                    'On-boarding Application Form',
+                                'On-boarding Application Form',
                                 style: TextStyles.textStyles_16.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
@@ -121,13 +120,13 @@ class PersonalApplication1 extends StatelessWidget {
                               ),
                               Text(
                                 'Please complete the sections below '
-                                    'for the client profile Information, '
-                                    'we can only accept answers provided '
-                                    'in English. If you required any '
-                                    'assistance throughout the application '
-                                    'process simply click the Live Help Button '
-                                    'where one of our Customer Support Representatives '
-                                    'will be happy to assist you with any queries',
+                                'for the client profile Information, '
+                                'we can only accept answers provided '
+                                'in English. If you required any '
+                                'assistance throughout the application '
+                                'process simply click the Live Help Button '
+                                'where one of our Customer Support Representatives '
+                                'will be happy to assist you with any queries',
                                 style: TextStyles.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
@@ -148,9 +147,13 @@ class PersonalApplication1 extends StatelessWidget {
                               ),
                               DropdownButtonCustom(
                                 colorBorder: Colors.grey,
-                                onChanged: (text) {},
+                                iconWidget: Image.asset(
+                                  ImageStyle.dropDown,
+                                  height: 16,
+                                ),
                                 listValue: ['Mr.', 'Miss', 'Mrs'],
                                 selectedValue: "Mr.",
+                                onChanged: (text) {},
                               ),
                               SizedBox(
                                 height: 12,
@@ -222,12 +225,12 @@ class PersonalApplication1 extends StatelessWidget {
                                 height: 12,
                               ),
                               Text(
-            'Place of Birth',
-            style: TextStyles.textStyles_14.apply(
-            color: ColorStyle.secondryBlack,
-              fontWeightDelta: 1,
-            ),
-        ),
+                                'Place of Birth',
+                                style: TextStyles.textStyles_14.apply(
+                                  color: ColorStyle.secondryBlack,
+                                  fontWeightDelta: 1,
+                                ),
+                              ),
                               SizedBox(
                                 height: 12,
                               ),
@@ -284,11 +287,37 @@ class PersonalApplication1 extends StatelessWidget {
                                 onChanged: (text) {},
                                 listValue: [
                                   'Date',
-                                  '01', '02', '03' ,'04', '05', '06' ,'07', '08', '09' ,'10', '11', '12', '13', '14', '15',
-                                      '16', '17', '18', '19', '20', '21', '22', '23', '24' ,'25', '26', '27', '28', '29', '30' ,'31',
-
-
-
+                                  '01',
+                                  '02',
+                                  '03',
+                                  '04',
+                                  '05',
+                                  '06',
+                                  '07',
+                                  '08',
+                                  '09',
+                                  '10',
+                                  '11',
+                                  '12',
+                                  '13',
+                                  '14',
+                                  '15',
+                                  '16',
+                                  '17',
+                                  '18',
+                                  '19',
+                                  '20',
+                                  '21',
+                                  '22',
+                                  '23',
+                                  '24',
+                                  '25',
+                                  '26',
+                                  '27',
+                                  '28',
+                                  '29',
+                                  '30',
+                                  '31',
                                 ],
                                 selectedValue: "Date",
                               ),
@@ -300,11 +329,18 @@ class PersonalApplication1 extends StatelessWidget {
                                 onChanged: (text) {},
                                 listValue: [
                                   'Month',
-                                  'January', 'Fabruary', 'March' ,'April', 'May', 'June' ,'July', 'August', 'September' ,'October', 'November', 'December',
-
-
-
-
+                                  'January',
+                                  'Fabruary',
+                                  'March',
+                                  'April',
+                                  'May',
+                                  'June',
+                                  'July',
+                                  'August',
+                                  'September',
+                                  'October',
+                                  'November',
+                                  'December',
                                 ],
                                 selectedValue: "Month",
                               ),
@@ -316,12 +352,39 @@ class PersonalApplication1 extends StatelessWidget {
                                 onChanged: (text) {},
                                 listValue: [
                                   'Year',
-                                  '1991', '1992', '1993' ,'1994', '1995', '1996' ,'1997', '1998', '1999' ,'2000', '2001', '2002', '2003', '2004', '2005',
-                                  '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014' ,'2015', '2016', '2017', '2018', '2019', '2020' ,'2021',
-                                  '2022', '2023'
-
-
-
+                                  '1991',
+                                  '1992',
+                                  '1993',
+                                  '1994',
+                                  '1995',
+                                  '1996',
+                                  '1997',
+                                  '1998',
+                                  '1999',
+                                  '2000',
+                                  '2001',
+                                  '2002',
+                                  '2003',
+                                  '2004',
+                                  '2005',
+                                  '2006',
+                                  '2007',
+                                  '2008',
+                                  '2009',
+                                  '2010',
+                                  '2011',
+                                  '2012',
+                                  '2013',
+                                  '2014',
+                                  '2015',
+                                  '2016',
+                                  '2017',
+                                  '2018',
+                                  '2019',
+                                  '2020',
+                                  '2021',
+                                  '2022',
+                                  '2023'
                                 ],
                                 selectedValue: "Year",
                               ),
@@ -393,7 +456,6 @@ class PersonalApplication1 extends StatelessWidget {
                                   '+91',
                                   '+19',
                                   '+20',
-
                                 ],
                                 selectedValue: "+91",
                               ),
@@ -402,37 +464,34 @@ class PersonalApplication1 extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  Expanded(child: TextField(
-                                    // obscureText: true,
-                                    decoration: InputDecoration(
-                                      border: OutlineInputBorder(),
-                                      labelText: 'please enter your personal email',
-                                      labelStyle: TextStyles.textStyles_14.apply(
-                                        color: Colors.grey,
-                                        fontWeightDelta: 1,
+                                  Expanded(
+                                    child: TextField(
+                                      // obscureText: true,
+                                      decoration: InputDecoration(
+                                        border: OutlineInputBorder(),
+                                        labelText:
+                                            'please enter your personal email',
+                                        labelStyle:
+                                            TextStyles.textStyles_14.apply(
+                                          color: Colors.grey,
+                                          fontWeightDelta: 1,
+                                        ),
                                       ),
                                     ),
-                                  ),),
+                                  ),
                                   SizedBox(
                                     width: 12,
                                   ),
-                                 Container(
-                                   height: 25,
-                                   width: 25,
-                                   child:  Icon(
-                                       Icons.question_mark,
-                                       size: 18,
-                                       color: Colors.grey
-                                   ),
-                                   decoration: BoxDecoration(
-                                     borderRadius: BorderRadius.circular(20),
-                                     border: Border.all(
-                                       width: 1,
-                                       color: Colors.grey
-                                     )
-                                   ),
-                                 )
-
+                                  Container(
+                                    height: 25,
+                                    width: 25,
+                                    child: Icon(Icons.question_mark,
+                                        size: 18, color: Colors.grey),
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        border: Border.all(
+                                            width: 1, color: Colors.grey)),
+                                  )
                                 ],
                               ),
                               SizedBox(
@@ -440,12 +499,9 @@ class PersonalApplication1 extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-
-                                  Icon(
-                                      Icons.add,
+                                  Icon(Icons.add,
                                       // size: 18,
-                                      color: ColorStyle.blueSKY
-                                  ),
+                                      color: ColorStyle.blueSKY),
                                   SizedBox(
                                     width: 12,
                                   ),
@@ -456,8 +512,6 @@ class PersonalApplication1 extends StatelessWidget {
                                       fontWeightDelta: 1,
                                     ),
                                   ),
-
-
                                 ],
                               ),
                               SizedBox(
@@ -475,37 +529,34 @@ class PersonalApplication1 extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  Expanded(child: TextField(
-                                    // obscureText: true,
-                                    decoration: InputDecoration(
-                                      border: OutlineInputBorder(),
-                                      labelText: 'please enter your personal email',
-                                      labelStyle: TextStyles.textStyles_14.apply(
-                                        color: Colors.grey,
-                                        fontWeightDelta: 1,
+                                  Expanded(
+                                    child: TextField(
+                                      // obscureText: true,
+                                      decoration: InputDecoration(
+                                        border: OutlineInputBorder(),
+                                        labelText:
+                                            'please enter your personal email',
+                                        labelStyle:
+                                            TextStyles.textStyles_14.apply(
+                                          color: Colors.grey,
+                                          fontWeightDelta: 1,
+                                        ),
                                       ),
                                     ),
-                                  ),),
+                                  ),
                                   SizedBox(
                                     width: 12,
                                   ),
                                   Container(
                                     height: 25,
                                     width: 25,
-                                    child:  Icon(
-                                        Icons.question_mark,
-                                        size: 18,
-                                        color: Colors.grey
-                                    ),
+                                    child: Icon(Icons.question_mark,
+                                        size: 18, color: Colors.grey),
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(20),
                                         border: Border.all(
-                                            width: 1,
-                                            color: Colors.grey
-                                        )
-                                    ),
+                                            width: 1, color: Colors.grey)),
                                   )
-
                                 ],
                               ),
                               SizedBox(
@@ -513,12 +564,9 @@ class PersonalApplication1 extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-
-                                  Icon(
-                                      Icons.add,
+                                  Icon(Icons.add,
                                       // size: 18,
-                                      color: ColorStyle.blueSKY
-                                  ),
+                                      color: ColorStyle.blueSKY),
                                   SizedBox(
                                     width: 12,
                                   ),
@@ -529,8 +577,6 @@ class PersonalApplication1 extends StatelessWidget {
                                       fontWeightDelta: 1,
                                     ),
                                   ),
-
-
                                 ],
                               ),
                               SizedBox(
@@ -551,8 +597,6 @@ class PersonalApplication1 extends StatelessWidget {
                                 onChanged: (text) {},
                                 listValue: [
                                   'Referral',
-
-
                                 ],
                                 selectedValue: "Referral",
                               ),
@@ -562,10 +606,9 @@ class PersonalApplication1 extends StatelessWidget {
                               TextField(
                                 // obscureText: true,
                                 decoration: InputDecoration(
-
                                   border: OutlineInputBorder(
-                                      borderSide: new BorderSide(color: Colors.black12)
-                                  ),
+                                      borderSide: new BorderSide(
+                                          color: Colors.black12)),
                                   labelText: 'Please specify your anwer',
                                   labelStyle: TextStyles.textStyles_14.apply(
                                     color: Colors.grey,
@@ -582,40 +625,40 @@ class PersonalApplication1 extends StatelessWidget {
                                     child: ElevatedButtonCustom(
                                       text: 'Back to site',
                                       colorBG: ColorStyle.blueSKY,
-                                      textStyle: TextStyles.textStyles_16
-                                          .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
-                                      onTap: () {
-
-                                      },
+                                      textStyle: TextStyles.textStyles_16.apply(
+                                          color: ColorStyle.primaryWhite,
+                                          fontWeightDelta: 1),
+                                      onTap: () {},
                                     ),
                                   ),
                                   SizedBox(
                                     width: 20,
                                   ),
-                                  Expanded(child: ElevatedButtonCustom(
-                                    text: 'Continue',
-                                    colorBG: ColorStyle.blueSKY,
-                                    textStyle: TextStyles.textStyles_16
-                                        .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
-                                    onTap: () {
-                                             Get.to(PersonalApplication2());
-                                    },
-                                  ),),
+                                  Expanded(
+                                    child: ElevatedButtonCustom(
+                                      text: 'Continue',
+                                      colorBG: ColorStyle.blueSKY,
+                                      textStyle: TextStyles.textStyles_16.apply(
+                                          color: ColorStyle.primaryWhite,
+                                          fontWeightDelta: 1),
+                                      onTap: () {
+                                        Get.to(PersonalApplication2());
+                                      },
+                                    ),
+                                  ),
                                 ],
                               ),
                               SizedBox(
                                 height: 12,
                               ),
-
                             ],
-
                           ),
                         ),
                       ],
                     ),
                     decoration: BoxDecoration(
                         border:
-                            Border.all(width: 2, color: ColorStyle.blueSKY)),
+                            Border.all(width: 1, color: ColorStyle.blueSKY)),
                   ),
                 ],
               ),

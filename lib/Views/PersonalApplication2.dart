@@ -158,6 +158,10 @@ class PersonalApplication2 extends StatelessWidget {
                                 height: 12,
                               ),
                               DropdownButtonCustom(
+                                iconWidget: Image.asset(
+                                  ImageStyle.dropDown,
+                                  height: 16,
+                                ),
                                 colorBorder: Colors.grey,
                                 onChanged: (text) {},
                                 listValue: [
@@ -474,6 +478,10 @@ class PersonalApplication2 extends StatelessWidget {
                                 height: 8,
                               ),
                               DropdownButtonCustom(
+                                iconWidget: Image.asset(
+                                  ImageStyle.dropDown,
+                                  height: 16,
+                                ),
                                 colorBorder: Colors.grey,
                                 onChanged: (text) {},
                                 listValue: [
@@ -533,7 +541,7 @@ class PersonalApplication2 extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                         border:
-                        Border.all(width: 2, color: ColorStyle.blueSKY)),
+                        Border.all(width: 1, color: ColorStyle.blueSKY)),
                   ),
                 ],
               ),

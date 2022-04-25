@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 
 import '../Components/AppBarStyle.dart';
 import '../Components/ButtonCustom.dart';
-import '../Components/DropdownButtonCustom.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/EffectStyle.dart';
 import '../Styles/ImageStyle.dart';
@@ -135,10 +134,11 @@ class PersonalApplication5 extends StatelessWidget {
                               ),
 
                               Container(
-                                padding: EffectStyle.padding(19, 16, 0, 0),
+                                padding: EffectStyle.padding(19, 16, 10, 10),
+                                width: MediaQuery.of(context).size.width,
                                 child: Text(
                                   'Yes I confirm it will be me',
-                                  style: TextStyles.textStyles_24.apply(
+                                  style: TextStyles.textStyles_20.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -146,7 +146,7 @@ class PersonalApplication5 extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8),
                                     border:
-                                    Border.all(width: 2, color: ColorStyle.blueSKY)),
+                                    Border.all(width: 1, color: ColorStyle.blueSKY)),
                               ),
                               SizedBox(
                                 height: 12,
@@ -191,7 +191,7 @@ class PersonalApplication5 extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8),
                                     border:
-                                    Border.all(width: 2, color: ColorStyle.blueSKY)),
+                                    Border.all(width: 1, color: ColorStyle.blueSKY)),
 
                               ),
                               SizedBox(
@@ -252,7 +252,7 @@ class PersonalApplication5 extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                         border:
-                        Border.all(width: 2, color: ColorStyle.blueSKY)),
+                        Border.all(width: 1, color: ColorStyle.blueSKY)),
                   ),
                 ],
               ),

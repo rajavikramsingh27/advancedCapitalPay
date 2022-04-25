@@ -12,6 +12,9 @@ class AccountDetailsRecoveryController extends GetxController {
   RxList<bool> arrSelectOption = [false].obs;
   RxList<bool> arrSelectOptionIcons = [false].obs;
 
+  RxBool isUserIdentification = false.obs;
+  RxBool isIdentifiy = false.obs;
+
   reset() {
     arrSelectOption.clear();
     arrSelectOptionIcons.clear();

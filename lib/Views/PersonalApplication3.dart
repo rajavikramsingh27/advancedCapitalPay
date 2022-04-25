@@ -455,6 +455,10 @@ class PersonalApplication3 extends StatelessWidget {
                                       height: 18,
                                     ),
                                     DropdownButtonCustom(
+                                      iconWidget: Image.asset(
+                                        ImageStyle.dropDown,
+                                        height: 16,
+                                      ),
                                       colorBorder: Colors.grey,
                                       onChanged: (text) {},
                                       listValue: [
@@ -472,7 +476,7 @@ class PersonalApplication3 extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8),
                                     border:
-                                    Border.all(width: 2, color: ColorStyle.blueLight)),
+                                    Border.all(width: 1, color: ColorStyle.blueLight)),
                               ),
                               SizedBox(
                                 height: 12,
@@ -522,7 +526,7 @@ class PersonalApplication3 extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(8),
                                     border:
-                                    Border.all(width: 2, color: Colors.grey)),
+                                    Border.all(width: 1, color: Colors.grey)),
                                 
                               ),
                               SizedBox(
@@ -619,7 +623,7 @@ class PersonalApplication3 extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                         border:
-                        Border.all(width: 2, color: ColorStyle.blueSKY)),
+                        Border.all(width: 1, color: ColorStyle.blueSKY)),
                   ),
                 ],
               ),

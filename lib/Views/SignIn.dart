@@ -9,7 +9,7 @@ import '../Views/OTPScreen.dart';
 import '../Components/BackgroundImage.dart';
 import '../Components/AppBarStyle.dart';
 import '../Components/TextFieldCustom.dart';
-import '../Views/ForgotPassword.dart';
+import 'ForgotPassword/ForgotPassword.dart';
 import '../Views/PersonalApplication1.dart';
 
 

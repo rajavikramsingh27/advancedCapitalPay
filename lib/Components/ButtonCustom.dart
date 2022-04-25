@@ -44,6 +44,7 @@ class ElevatedButtonCustom extends StatelessWidget {
       ),
       child: Text(
         text!,
+        textAlign: TextAlign.center,
         style: textStyle!,
       ),
       onPressed: onTap,
