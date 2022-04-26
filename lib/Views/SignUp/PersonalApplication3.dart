@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../Components/AppBarStyle.dart';
-import '../../Components/ButtonCustom.dart';
 import '../../Components/DropdownButtonCustom.dart';
 import '../../Styles/ColorStyle.dart';
 import '../../Styles/EffectStyle.dart';
@@ -11,6 +10,9 @@ import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../SignUp/EffectStyleSignUp.dart';
 import '../SignUp/ComponentsSignUp.dart';
+import '../SignUp/BusinessApplication1.dart';
+
+
 
 class PersonalApplication3 extends StatelessWidget {
   const PersonalApplication3({Key? key}) : super(key: key);
@@ -306,49 +308,54 @@ class PersonalApplication3 extends StatelessWidget {
                                 SizedBox(
                                   height: 12,
                                 ),
-                                Container(
-                                  padding: EffectStyle.padding(16, 16, 0, 0),
-                                  child: Column(
-                                    children: [
-                                      SizedBox(
-                                        height: 40,
-                                      ),
-                                      Container(
-                                        alignment: Alignment.center,
-                                        child: Image.asset(
-                                          ImageStyle.vector,
-                                          height: 60,
+                                InkWell(
+                                  child: Container(
+                                    padding: EffectStyle.padding(16, 16, 0, 0),
+                                    child: Column(
+                                      children: [
+                                        SizedBox(
+                                          height: 40,
                                         ),
-                                      ),
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      Text(
-                                        'Business',
-                                        style: TextStyles.textStyles_20.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
+                                        Container(
+                                          alignment: Alignment.center,
+                                          child: Image.asset(
+                                            ImageStyle.vector,
+                                            height: 60,
+                                          ),
                                         ),
-                                      ),
-                                      SizedBox(
-                                        height: 4,
-                                      ),
-                                      Text(
-                                        'I am a business(Limited, Pte, Ltd, LLC, AG Trust, Corporated, Partnership, sole Trader or other)',
-                                        style: TextStyles.textStyles_14.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
+                                        SizedBox(
+                                          height: 20,
                                         ),
-                                      ),
-                                      SizedBox(
-                                        height: 14,
-                                      ),
-                                    ],
+                                        Text(
+                                          'Business',
+                                          style: TextStyles.textStyles_20.apply(
+                                            color: ColorStyle.secondryBlack,
+                                            fontWeightDelta: 1,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 4,
+                                        ),
+                                        Text(
+                                          'I am a business(Limited, Pte, Ltd, LLC, AG Trust, Corporated, Partnership, sole Trader or other)',
+                                          style: TextStyles.textStyles_14.apply(
+                                            color: ColorStyle.secondryBlack,
+                                            fontWeightDelta: 1,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 14,
+                                        ),
+                                      ],
+                                    ),
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(8),
+                                        border: Border.all(
+                                            width: 1, color: Colors.grey)),
                                   ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8),
-                                      border: Border.all(
-                                          width: 1, color: Colors.grey)),
+                                  onTap: () {
+                                    Get.to(BusinessApplication1());
+                                  },
                                 ),
                                 SizedBox(
                                   height: 12,

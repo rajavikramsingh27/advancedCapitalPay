@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../Components/AppBarStyle.dart';
+import '../../Components/CountryPicker.dart';
 import '../../Components/DropdownButtonCustom.dart';
 import '../../Styles/ColorStyle.dart';
 import '../../Styles/EffectStyle.dart';
@@ -315,16 +316,7 @@ class PersonalApplication6 {
                     SizedBox(
                       height: 12,
                     ),
-                    DropdownButtonCustom(
-                      colorBorder: Colors.grey,
-                      onChanged: (text) {},
-                      listValue: [
-                        'Nationlity',
-                        'India',
-                        'Amarica',
-                      ],
-                      selectedValue: "Nationlity",
-                    ),
+                    CountryPicker(),
                     SizedBox(
                       height: 28,
                     ),

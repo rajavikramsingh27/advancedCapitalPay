@@ -11,7 +11,7 @@ import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../SignUp/EffectStyleSignUp.dart';
 import '../SignUp/ComponentsSignUp.dart';
-
+import '../../Components/CountryPicker.dart';
 
 
 class PersonalApplication2 extends StatelessWidget {
@@ -119,21 +119,9 @@ class PersonalApplication2 extends StatelessWidget {
                               SizedBox(
                                 height: 12,
                               ),
-                              DropdownButtonCustom(
-                                iconWidget: Image.asset(
-                                  ImageStyle.dropDown,
-                                  height: 16,
-                                ),
-                                colorBorder: Colors.grey,
-                                onChanged: (text) {},
-                                listValue: [
-                                  'Country',
-                                  'India',
-                                  'Amarica',
-                                  'Dubey'
-                                ],
-                                selectedValue: "Country",
-                              ),
+
+                              CountryPicker(),
+
                               SizedBox(
                                 height: 12,
                               ),
@@ -427,21 +415,7 @@ class PersonalApplication2 extends StatelessWidget {
                               SizedBox(
                                 height: 8,
                               ),
-                              DropdownButtonCustom(
-                                iconWidget: Image.asset(
-                                  ImageStyle.dropDown,
-                                  height: 16,
-                                ),
-                                colorBorder: Colors.grey,
-                                onChanged: (text) {},
-                                listValue: [
-                                  'Country',
-                                  'India',
-                                  'Amarica',
-                                  'Dubey'
-                                ],
-                                selectedValue: "Country",
-                              ),
+                              CountryPicker(),
                               ComponentsSignUp.backContinue('Back to site', () {
 
                               }, 'Continue', () {

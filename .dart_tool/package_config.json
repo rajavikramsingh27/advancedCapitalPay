@@ -44,6 +44,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "country_picker",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/country_picker-2.0.14",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.4",
       "packageUri": "lib/",
@@ -236,7 +242,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-04-26T05:41:58.634466Z",
+  "generated": "2022-04-26T10:55:53.583817Z",
   "generator": "pub",
   "generatorVersion": "2.16.1"
 }

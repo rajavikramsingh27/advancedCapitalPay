@@ -4,7 +4,7 @@ import 'package:advanced_capital_pay/Views/SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
-import 'package:advanced_capital_pay/Views/SignUp/PersonalApplication7.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,14 +26,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SavingGoal2()
+        home: SplashScreen()
         // home: SplashScreen()
     );
   }
 }
-
-
-
-// hello
-// hello
-// hello
