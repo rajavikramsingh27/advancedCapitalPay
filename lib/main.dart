@@ -1,3 +1,5 @@
+import 'package:advanced_capital_pay/Views/SavingGoal.dart';
+import 'package:advanced_capital_pay/Views/SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
@@ -22,9 +24,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        debugShowCheckedModeBanner: false, home: PersonalApplication7());
+        debugShowCheckedModeBanner: false,
+        // home: SavingGoal()
+        home: SplashScreen()
+    );
   }
 }
 
 
+
+// hello
+// hello
 // hello

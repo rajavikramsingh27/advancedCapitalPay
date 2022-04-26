@@ -363,6 +363,104 @@ class PersonalApplication7 extends StatelessWidget {
                                     'Signed Letter from Real Estate Agent (If Applicable)'
                                   ],
                                 ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Generic Source of Wealth',
+                                  arrList: [
+                                    'Purchase and Sale of Goods/Services',
+                                    'One of more recent payslips',
+                                    'Copy of Recent Accounts (Self-Employed)',
+                                    'Confirmation from Employer of Income',
+                                    'Bank Statement outlining receipt of most recent salary payment from named employer',
+
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Sale of Company',
+                                  arrList: [
+                                    'Copies of Media Coverage as Supporting documentation (if available)',
+                                    'Copy of the Contract of Sale and Sight of Investment',
+                                    'Signed from Solicitor',
+                                    'Signed from Solicitor',
+
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Inheritance:',
+                                  arrList: [
+                                    'Letter from solicitor or letter from Trustees of Estate',
+                                    'Grant of probate with a copy of the will which must including the value of the Named Estate',
+
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Geared Loan:',
+                                  arrList: [
+                                    'Recent Loan Statement',
+                                    'Loan Agreement',
+
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Compensation Payment',
+                                  arrList: [
+                                    'Letter from Solicitor',
+                                    'Letter / Court order from compensation body',
+
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Policy Claim or Maturing Investments',
+                                  arrList: [
+                                    'Chargeable Event Certificate',
+                                    'Letter from previous Investment company in relation to the notification of the proceeds claim',
+
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Sale of Shares or other investment',
+                                  arrList: [
+                                    'Signed letter outlining funds from a regulated accountant',
+                                    'Confirmation from the relevant investment company',
+                                    'Bank Statement showing receipt of funds by named investment company',
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Individuals Own Policy/Company Pays Premium',
+                                  arrList: [
+                                    'Hardcopy of the latest annual report',
+                                    'Copy of trading details or annual report from the companies website',
+                                     'Copy of the companies certificate of incorporation or equivalent',
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Lottery, betting, casino win',
+                                  arrList: [
+                                    'Letter from relevant organization (Betting Shops, Casino, Lottery Headquarters)',
+                                    'Media coverage as supporting documents (if applicable)',
+                                    'Bank statement showing funds deposited by company',
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Receiving of a gift',
+                                  arrList: [
+                                    'Letter from Donor confirming details of gift',
+
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Other Monies',
+                                  arrList: [
+                                    'Appropriate Supporting Documentation',
+                                    'Signed Letter detailing funds from regulated accountant',
+                                  ],
+                                ),
+
+
+
+
+
+
+
                                 ComponentsSignUp.backContinue(
                                     'Back', () {}, 'Submit', () {
                                   Get.to(PersonalApplication8());
