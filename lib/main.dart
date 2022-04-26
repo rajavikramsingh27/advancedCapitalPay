@@ -1,10 +1,8 @@
-import 'package:advanced_capital_pay/Views/SavingGoal.dart';
-import 'package:advanced_capital_pay/Views/SavingGoal2.dart';
-import 'package:advanced_capital_pay/Views/SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
-
+import '../Views/SplashScreen.dart';
+import 'package:advanced_capital_pay/Views/SplashScreen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +25,6 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         home: SplashScreen()
-        // home: SplashScreen()
     );
   }
 }

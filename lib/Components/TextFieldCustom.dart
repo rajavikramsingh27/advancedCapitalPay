@@ -109,7 +109,7 @@ class TextFieldCustomPrefix extends StatelessWidget {
           ),
           hintText: hintText,
           hintStyle:
-              TextStyles.textStyles_16.apply(color: ColorStyle.grayColor),
+              TextStyles.textStyles_16.apply(color: ColorStyle.grey),
           prefixIcon: Container(
               height: 30,
               padding: EdgeInsets.only(

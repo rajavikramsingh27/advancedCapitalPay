@@ -46,8 +46,7 @@ class AppBarStyle extends StatelessWidget implements PreferredSizeWidget {
   }
 }
 
-class AppBarStyleStatusBar extends StatelessWidget
-    implements PreferredSizeWidget {
+class AppBarStyleStatusBar extends StatelessWidget implements PreferredSizeWidget {
   double heightAppBar = 0;
 
   @override
@@ -170,10 +169,87 @@ class AppBarStyleCustom extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         if (trailingButton != null) trailingButton!,
-       Icon(Icons.settings,color: ColorStyle.primaryWhite,size: 30,),
+        Icon(Icons.settings,color: ColorStyle.primaryWhite,size: 30,),
 
       ],
     );
   }
 }
+
+class AppBarStyle1 extends StatelessWidget implements PreferredSizeWidget {
+  final Function()? onTap;
+
+  const AppBarStyle1({Key? key, this.onTap})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PreferredSize(
+      preferredSize: Size.fromHeight(45.0),
+      child: AppBar(
+        elevation: 0,
+        centerTitle: false,
+        title: Column(
+          children: [
+            Text(
+              'Your Cards',
+              style: TextStyles.textStyles_20.apply(
+                color: ColorStyle.primaryWhite,
+                fontWeightDelta: 1,
+              ),
+            ),
+            Text(
+              '1 physical card, 1 virtual card',
+              style: TextStyles.textStyles_10.apply(
+                color: ColorStyle.primaryWhite,
+                fontWeightDelta: 1,
+              ),
+              // style: TextStyles.textSize_12.apply(
+              //   color: ColorStyle.secondryBlack,
+              //   fontSizeFactor: 0.8,
+              // ),
+              // style: TextStyle(
+              //   color: ColorStyle.titleColor,
+              //   fontSize: 18,
+              //   fontFamily: 'GEDinarOne',
+              //
+              // ),
+            ),
+
+          ],
+        ),
+        backgroundColor: Colors.transparent,
+        leadingWidth: 100,
+        leading:  Row(
+          children: [
+          ],
+        ),
+        actions: [
+          InkWell(
+              child: Icon(
+                Icons.message_outlined,
+                color: ColorStyle.primaryWhite,
+                size: 30,
+              ),
+              onTap: onTap
+          ),
+          InkWell(
+              child: Icon(
+                Icons.settings,
+                color: ColorStyle.primaryWhite,
+                size: 30,
+              ),
+              onTap: onTap
+          ),
+
+        ],
+      ),
+    );
+  }
+
+  @override
+  Size get preferredSize => new Size.fromHeight(50);
+}
+
+
 

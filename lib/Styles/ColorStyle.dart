@@ -20,3 +20,4 @@ class ColorStyle {
     return Color(int.parse(buffer.toString(), radix: 16));
   }
 }
+
