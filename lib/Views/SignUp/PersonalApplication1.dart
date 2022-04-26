@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../Components/AppBarStyle.dart';
-import '../../Components/ButtonCustom.dart';
 import '../../Styles/ColorStyle.dart';
 import '../../Styles/ImageStyle.dart';
 import '../../Styles/EffectStyle.dart';
 import '../../Components/DropdownButtonCustom.dart';
 import '../SignUp/EffectStyleSignUp.dart';
 import '../SignUp/ComponentsSignUp.dart';
+import '../../Components/CountryPicker.dart';
 
 
 class PersonalApplication1 extends StatelessWidget {
@@ -170,17 +170,9 @@ class PersonalApplication1 extends StatelessWidget {
                               SizedBox(
                                 height: 12,
                               ),
-                              DropdownButtonCustom(
-                                colorBorder: Colors.grey,
-                                onChanged: (text) {},
-                                listValue: [
-                                  'Country of Birth',
-                                  'India',
-                                  'Amarica',
-                                  'Dubey'
-                                ],
-                                selectedValue: "Country of Birth",
-                              ),
+
+                              CountryPicker(),
+
                               SizedBox(
                                 height: 12,
                               ),
@@ -196,7 +188,9 @@ class PersonalApplication1 extends StatelessWidget {
                               ),
                               DropdownButtonCustom(
                                 colorBorder: Colors.grey,
-                                onChanged: (text) {},
+                                onChanged: (text) {
+
+                                },
                                 listValue: [
                                   'Place of Birth',
                                   'Jhunjhunun',
@@ -409,16 +403,9 @@ class PersonalApplication1 extends StatelessWidget {
                               SizedBox(
                                 height: 12,
                               ),
-                              DropdownButtonCustom(
-                                colorBorder: Colors.grey,
-                                onChanged: (text) {},
-                                listValue: [
-                                  '+91',
-                                  '+19',
-                                  '+20',
-                                ],
-                                selectedValue: "+91",
-                              ),
+
+                              TelePhoneNumberCode(),
+
                               SizedBox(
                                 height: 16,
                               ),
