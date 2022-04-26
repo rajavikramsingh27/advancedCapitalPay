@@ -7,6 +7,9 @@ import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../SignUp/ComponentsSignUp.dart';
 import '../SignUp/EffectStyleSignUp.dart';
+import '../SignUp/PersonalApplication6.dart';
+
+
 
 class BusinessApplication2 extends StatelessWidget {
   const BusinessApplication2({Key? key}) : super(key: key);
@@ -93,7 +96,7 @@ class BusinessApplication2 extends StatelessWidget {
                                   children: [
                                     Icon(
                                       Icons.cancel_outlined,
-                                      size: 23,
+                                      size: 22,
                                       color: ColorStyle.grey,
                                     ),
                                     SizedBox(
@@ -115,7 +118,7 @@ class BusinessApplication2 extends StatelessWidget {
                                   children: [
                                     Icon(
                                       Icons.cancel_outlined,
-                                      size: 23,
+                                      size: 22,
                                       color: ColorStyle.grey,
                                     ),
                                     SizedBox(
@@ -156,67 +159,73 @@ class BusinessApplication2 extends StatelessWidget {
                                 //   height: 1,
                                 //   color: ColorStyle.grey,
                                 // ),
-                                Container(
-                                    alignment: Alignment.topCenter,
-                                    padding: EffectStyle.padding(20, 20, 14, 0),
-                                    child: Column(
-                                      children: [
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Icon(
-                                              Icons.add_circle_outline_sharp,
-                                              size: 28,
-                                              color:
-                                                  ColorStyle.darkestBlueSignUp,
-                                            ),
-                                            SizedBox(
-                                              width: 10,
-                                            ),
-                                            Text(
-                                              'Add an additional',
-                                              style: TextStyles.textStyles_16
-                                                  .apply(
-                                                color: ColorStyle
-                                                    .darkestBlueSignUp,
+
+                                InkWell(
+                                  child: Container(
+                                      alignment: Alignment.topCenter,
+                                      padding: EffectStyle.padding(20, 20, 14, 0),
+                                      child: Column(
+                                        children: [
+                                          Row(
+                                            mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                            children: [
+                                              Icon(
+                                                Icons.add_circle_outline_sharp,
+                                                size: 28,
+                                                color:
+                                                ColorStyle.darkestBlueSignUp,
                                               ),
-                                            ),
-                                          ],
-                                        ),
-                                        Column(
-                                          children: [
-                                            Text(
-                                              'Director, Shareholder',
-                                              style: TextStyles.textStyles_16
-                                                  .apply(
-                                                color: ColorStyle
-                                                    .darkestBlueSignUp,
+                                              SizedBox(
+                                                width: 10,
                                               ),
-                                            ),
-                                            Text(
-                                              'Authorized Signature to',
-                                              style: TextStyles.textStyles_16
-                                                  .apply(
-                                                color: ColorStyle
-                                                    .darkestBlueSignUp,
+                                              Text(
+                                                'Add an additional',
+                                                style: TextStyles.textStyles_16
+                                                    .apply(
+                                                  color: ColorStyle
+                                                      .darkestBlueSignUp,
+                                                ),
                                               ),
-                                            ),
-                                            Text(
-                                              'the Account',
-                                              style: TextStyles.textStyles_16
-                                                  .apply(
-                                                color: ColorStyle
-                                                    .darkestBlueSignUp,
+                                            ],
+                                          ),
+                                          Column(
+                                            children: [
+                                              Text(
+                                                'Director, Shareholder',
+                                                style: TextStyles.textStyles_16
+                                                    .apply(
+                                                  color: ColorStyle
+                                                      .darkestBlueSignUp,
+                                                ),
                                               ),
-                                            ),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                    height: 150,
-                                    decoration: EffectStyleSignUp.decoration(
-                                        Colors.transparent, 2)),
+                                              Text(
+                                                'Authorized Signature to',
+                                                style: TextStyles.textStyles_16
+                                                    .apply(
+                                                  color: ColorStyle
+                                                      .darkestBlueSignUp,
+                                                ),
+                                              ),
+                                              Text(
+                                                'the Account',
+                                                style: TextStyles.textStyles_16
+                                                    .apply(
+                                                  color: ColorStyle
+                                                      .darkestBlueSignUp,
+                                                ),
+                                              ),
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                      height: 150,
+                                      decoration: EffectStyleSignUp.decoration(
+                                          Colors.transparent, 2)),
+                                  onTap: () {
+                                    PersonalApplication6.personalApplication6();
+                                  },
+                                ),
 
                                 SizedBox(
                                   height: 40,

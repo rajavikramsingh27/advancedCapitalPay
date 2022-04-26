@@ -106,7 +106,7 @@ class PersonalApplication12 extends StatelessWidget {
                                           color: ColorStyle.primaryWhite,
                                           fontWeightDelta: 1),
                                       onTap: () {
-                                        Get.to(BusinessApplication1());
+                                        // Get.to(BusinessApplication1());
                                       },
                                     ),
                                     SizedBox(
