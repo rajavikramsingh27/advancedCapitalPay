@@ -1,3 +1,4 @@
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -109,3 +110,70 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 }
+
+class AppBarStyleCustom extends StatelessWidget implements PreferredSizeWidget {
+  final Function()? onTap;
+  final Widget? leadingButton;
+  final Widget? trailingButton;
+  final Widget? settingButton;
+
+  AppBarStyleCustom({
+    Key? key,
+    this.onTap,
+    this.leadingButton,
+    this.trailingButton,
+    this.settingButton,
+  }) : super(key: key);
+
+  double heightAppBar = 70;
+
+  @override
+  Size get preferredSize => new Size.fromHeight(heightAppBar);
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+
+      elevation: 0,
+      toolbarHeight: heightAppBar,
+      backgroundColor: Colors.transparent,
+      // leadingWidth: 0,
+
+      leading: (leadingButton == null) ? Container() : Image.asset(
+        ImageStyle.ellipse2,
+        height: 52,
+      ),
+      // centerTitle: true,
+      title: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'MR HARRISON SMITH',
+            style: TextStyles.textStyles_14.apply(
+              color: ColorStyle.primaryWhite,
+            ),
+          ),
+          Text(
+            'Plus Personal Customer',
+            style: TextStyles.textStyles_14.apply(
+              color: ColorStyle.primaryWhite,
+            ),
+          ),
+          Text(
+            'Last Successful login: 02 Feb 2021.   13: 53: 41',
+            style: TextStyles.textStyles_10.apply(
+              color: ColorStyle.primaryWhite,
+              // fontWeightDelta: 1,
+            ),
+          ),
+        ],
+      ),
+      actions: [
+        if (trailingButton != null) trailingButton!,
+       Icon(Icons.settings,color: ColorStyle.primaryWhite,size: 30,),
+
+      ],
+    );
+  }
+}
+

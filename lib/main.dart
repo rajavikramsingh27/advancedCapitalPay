@@ -1,3 +1,4 @@
+import 'package:advanced_capital_pay/Views/SavingGoal.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SplashScreen()
+        home: SavingGoal()
     );
   }
 }

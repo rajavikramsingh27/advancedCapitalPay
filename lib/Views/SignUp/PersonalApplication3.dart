@@ -324,7 +324,7 @@ class PersonalApplication3 extends StatelessWidget {
                                         height: 20,
                                       ),
                                       Text(
-                                        'Bussiness',
+                                        'Business',
                                         style: TextStyles.textStyles_20.apply(
                                           color: ColorStyle.secondryBlack,
                                           fontWeightDelta: 1,
@@ -334,7 +334,7 @@ class PersonalApplication3 extends StatelessWidget {
                                         height: 4,
                                       ),
                                       Text(
-                                        'I am a bussiness(Limited, Pte, Ltd, LLC, AG Trust, Corporated, Partnership, sole Trader or other)',
+                                        'I am a business(Limited, Pte, Ltd, LLC, AG Trust, Corporated, Partnership, sole Trader or other)',
                                         style: TextStyles.textStyles_14.apply(
                                           color: ColorStyle.secondryBlack,
                                           fontWeightDelta: 1,
