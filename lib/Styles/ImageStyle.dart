@@ -71,4 +71,14 @@ class ImageStyle {
   static const String settings = "$baseImage/settings.png";
   static const String bg_Image = "$baseImage/Bg_Image.png";
   static const String finance = "$baseImage/finance.png";
+  static const String Component402 = "$baseImage/Component402.png";
+  static const String Component401 = "$baseImage/Component401.png";
+  static const String wallet4 = "$baseImage/wallet-4.png";
+  static const String withdraw2 = "$baseImage/withdraw-2.png";
+  static const String menudotsvertical = "$baseImage/menu-dots-vertical.png";
+  static const String coin2 = "$baseImage/coin-2.png";
+  static const String payment4 = "$baseImage/payment-4.png";
+  static const String kFC_logo = "$baseImage/KFC_logo.png";
+  static const String starbuckslogopngtransparent = "$baseImage/starbucks-logo-png-transparent.png";
+  static const String new_spinneys_logo = "$baseImage/New_spinneys_logo.png";
 }
