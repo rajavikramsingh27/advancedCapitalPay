@@ -129,4 +129,16 @@ class ImageStyle {
   static const String searchsymbol = "$baseImage/searchsymbol.png";
   static const String coins = "$baseImage/coins.png";
   static const String Component11 = "$baseImage/Component11.png";
+
+  static const String interrogation_Tabbar = "$baseImage/interrogation_Tabbar.png";
+  static const String credit_card_Tabbar = "$baseImage/credit_card_Tabbar.png";
+  static const String middle_Image = "$baseImage/middle_Image.png";
+  static const String menu_dots_Tabbar = "$baseImage/menu_dots_Tabbar.png";
+  static const String cryptocurrency_Tabbar = "$baseImage/cryptocurrency_Tabbar.png";
+
+  static const String search_lightBlue = "$baseImage/search_lightBlue.png";
+  static const String account_circle_lightBlue = "$baseImage/account_circle_lightBlue.png";
+  static const String invite_lightBlue = "$baseImage/invite_lightBlue.png";
+  static const String savings_lightBlue = "$baseImage/savings_lightBlue.png";
+  static const String chat_lightBlue = "$baseImage/chat_lightBlue.png";
 }

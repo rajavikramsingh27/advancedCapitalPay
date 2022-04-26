@@ -10,6 +10,7 @@ class ColorStyle {
   static final Color darkBlue = hex("#01F6FF");
   static final Color darkestBlue = hex("#082561");
   static final Color darkestBlueSignUp = hex("#1976C1");
+  static final Color bottomNavBG = hex("#010730");
   static final Color grey = Colors.grey;
   static final Color grayColor = Colors.white.withOpacity(0.5);
 

@@ -16,6 +16,9 @@ import '../Components/ButtonCustom.dart';
 import '../Views/VerifyQuestion.dart';
 import '../Styles/ColorStyle.dart';
 import '../Views/SignIn.dart';
+import '../Views/TabbarScreen.dart';
+
+
 
 class ChooseYourCard extends StatelessWidget {
   ChooseYourCard({Key? key}) : super(key: key);
@@ -153,7 +156,9 @@ class ChooseYourCard extends StatelessWidget {
                                   width: MediaQuery.of(context).size.width,
                                   imageName: ImageStyle.bg_Button,
                                   icon: Icons.arrow_forward_ios_outlined,
-                                  onTap: () {},
+                                  onTap: () {
+                                    Get.to(TabbarScreen());
+                                  },
                                 )
                               ],
                             ),

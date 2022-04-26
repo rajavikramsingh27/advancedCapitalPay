@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 import '../Views/SplashScreen.dart';
+import '../Views/TabbarScreen.dart';
 import 'package:advanced_capital_pay/Views/SplashScreen.dart';
 
 void main() {
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         home: SplashScreen()
+        // home: TabbarScreen()
     );
   }
 }
