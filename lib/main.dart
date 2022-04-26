@@ -1,8 +1,9 @@
 import 'package:advanced_capital_pay/Views/SavingGoal.dart';
+import 'package:advanced_capital_pay/Views/SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
-import '../Views/SplashScreen.dart';
+import 'package:advanced_capital_pay/Views/SignUp/PersonalApplication7.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,7 +15,7 @@ void main() {
     DeviceOrientation.portraitUp,
   ]);
 
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -24,7 +25,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SavingGoal()
+        // home: SavingGoal()
+        home: SplashScreen()
     );
   }
 }
+
+
+
+// hello
+// hello
+// hello

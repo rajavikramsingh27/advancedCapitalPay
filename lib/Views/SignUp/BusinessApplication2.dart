@@ -93,7 +93,7 @@ class BusinessApplication2 extends StatelessWidget {
                                   children: [
                                     Icon(
                                       Icons.cancel_outlined,
-                                      size: 28,
+                                      size: 23,
                                       color: ColorStyle.grey,
                                     ),
                                     SizedBox(
@@ -115,7 +115,7 @@ class BusinessApplication2 extends StatelessWidget {
                                   children: [
                                     Icon(
                                       Icons.cancel_outlined,
-                                      size: 28,
+                                      size: 23,
                                       color: ColorStyle.grey,
                                     ),
                                     SizedBox(

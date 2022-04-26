@@ -1,3 +1,4 @@
+import '../../Components/ListViewGuidlinesTerms.dart';
 import '../SignUp/PersonalApplication12.dart';
 import 'package:flutter/material.dart';
 
@@ -93,219 +94,31 @@ class PersonalApplication11 extends StatelessWidget {
                               SizedBox(
                                 height: 20,
                               ),
-                              Row(
-                                crossAxisAlignment:
-                                CrossAxisAlignment.start,
-                                children: [
-                                  ComponentsSignUp.check(),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        ' We have the full authority to submit this',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        ' application and to on-board as a client with ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        ' AdvanceCapitalPay and enter into the   ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        ' associated terms and conditions. ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                    ],
-                                  )
+                              ListViewGuidlinesTerms(
+                                title: '',
+                                arrList: [
+                                 'We have the full authority to submit this application and to on-board as a client with AdvanceCapitalPay and enter into the associated terms and conditions.'
                                 ],
                               ),
-                              SizedBox(
-                                height: 12,
-                              ),
-                              Row(
-                                crossAxisAlignment:
-                                CrossAxisAlignment.start,
-                                children: [
-                                  ComponentsSignUp.check(),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        ' We have provide all information and ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        ' documentation in this application to the  ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        ' best of my/our knowledge and confirm ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        ' that it is true and  complete ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                    ],
-                                  )
+                              ListViewGuidlinesTerms(
+                                title: '',
+                                arrList: [
+                                  'We have provide all information and documentation in this application to the best of my/our knowledge and confirm that it is true and complete.'
                                 ],
                               ),
-                              SizedBox(
-                                height: 12,
-                              ),
-                              Row(
-                                crossAxisAlignment:
-                                CrossAxisAlignment.start,
-                                children: [
-                                  ComponentsSignUp.check(),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        ' We have read, understood and fully ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        ' agreed to be bound at all times by  ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        ' applicable Terms and  Conditions, Privacy  ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        ' Policy, Acceptable Use Policy Electronic ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        'Disclosures and consents as published  ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        ' within my AdvanceCapitalPay Account ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        'and on the  AdvanceCapitalPay Website',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        ' https://www.advancecapitalpay.com  ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                    ],
-                                  )
+                              ListViewGuidlinesTerms(
+                                title: '',
+                                arrList: [
+                                  'We have read, understood and fully agreed to be bound at all times by applicable Terms and Conditions, Privacy Policy, Acceptable Use Policy Electronic Disclosures and consents as published within my AdvanceCapitalPay Account and on the AdvanceCapitalPay Website https://www.advancecapitalpay.com '
                                 ],
                               ),
-                              SizedBox(
-                                height: 12,
-                              ),
-                              Row(
-                                crossAxisAlignment:
-                                CrossAxisAlignment.start,
-                                children: [
-                                  ComponentsSignUp.check(),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        ' We have provide all information and ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        ' documentation in this application to the  ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        ' best of my/our knowledge and confirm ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        ' that it is true and  complete ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                    ],
-                                  )
+                              ListViewGuidlinesTerms(
+                                title: '',
+                                arrList: [
+                                  'We declare that the detailed Origin of Wealth and Funds is complete true. I/We agree to provide any further information or documentation evidence upon request for any aspects outlined within or out of this application process.'
                                 ],
                               ),
+
                               SizedBox(height: 30,),
                               Container(
                                 decoration: EffectStyleSignUp.decoration(),

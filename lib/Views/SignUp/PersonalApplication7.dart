@@ -1,3 +1,5 @@
+import 'package:advanced_capital_pay/Components/ListViewGuidlinesTerms.dart';
+
 import '../SignUp/PersonalApplication8.dart';
 import 'package:flutter/material.dart';
 
@@ -13,8 +15,6 @@ import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../SignUp/EffectStyleSignUp.dart';
 import '../SignUp/ComponentsSignUp.dart';
-
-
 
 class PersonalApplication7 extends StatelessWidget {
   const PersonalApplication7({Key? key}) : super(key: key);
@@ -51,491 +51,426 @@ class PersonalApplication7 extends StatelessWidget {
                     height: 16,
                   ),
                   Container(
-                    // padding: EdgeInsets.only(left: 20, right: 20),
-                    alignment: Alignment.centerLeft,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Container(
-                          child: Text(
-                            'ACFVC8JTJ',
-                            style: TextStyles.textStyles_14.apply(
-                              color: ColorStyle.primaryWhite,
-                              fontWeightDelta: 1,
-                            ),
-                          ),
-                          alignment: Alignment.center,
-                          width: 102,
-                          height: 43,
-                            decoration: EffectStyleSignUp.decoration(ColorStyle.darkestBlueSignUp)
-                        ),
-                        SizedBox(
-                          height: 12,
-                        ),
-                        Container(
-                          padding: EffectStyle.padding(16, 16, 0, 0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              ComponentsSignUp.title(
-                                'Origin of Wealth/Funds',
-                              ),
-                              SizedBox(
-                                height: 12,
-                              ),
-                              Text(
-                                'Clients are required to provide us with detailed information where funds and wealth has come from',
+                      // padding: EdgeInsets.only(left: 20, right: 20),
+                      alignment: Alignment.centerLeft,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Container(
+                              child: Text(
+                                'ACFVC8JTJ',
                                 style: TextStyles.textStyles_14.apply(
-                                  color: ColorStyle.secondryBlack,
+                                  color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 1,
                                 ),
                               ),
-                              SizedBox(
-                                height: 12,
-                              ),
-                              Text(
-                                'Please select multiple options below if applicable which best describes where you funds and wealth come from.',
-                                style: TextStyles.textStyles_14.apply(
-                                  color: ColorStyle.secondryBlack,
-                                  fontWeightDelta: 2,
+                              alignment: Alignment.center,
+                              width: 102,
+                              height: 43,
+                              decoration: EffectStyleSignUp.decoration(
+                                  ColorStyle.darkestBlueSignUp)),
+                          SizedBox(
+                            height: 12,
+                          ),
+                          Container(
+                            padding: EffectStyle.padding(16, 16, 0, 0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                ComponentsSignUp.title(
+                                  'Origin of Wealth/Funds',
                                 ),
-                              ),
-                              SizedBox(
-                                height: 12,
-                              ),
-                              GridView.builder(
-                                  itemCount:
-                                      controller.chooseOriginofWealth.length,
-                                  shrinkWrap: true,
-                                  physics: NeverScrollableScrollPhysics(),
-                                  gridDelegate:
-                                      SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 2,
-                                    crossAxisSpacing: 10,
-                                    mainAxisSpacing: 10,
-                                    mainAxisExtent: 80,
+                                SizedBox(
+                                  height: 12,
+                                ),
+                                Text(
+                                  'Clients are required to provide us with detailed information where funds and wealth has come from',
+                                  style: TextStyles.textStyles_14.apply(
+                                    color: ColorStyle.secondryBlack,
+                                    fontWeightDelta: 1,
                                   ),
-                                  itemBuilder:
-                                      (BuildContext context, int index) {
-                                    return Container(
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          ComponentsSignUp.check(),
-                                          SizedBox(
-                                            height: 8,
-                                          ),
-                                          Container(
-                                            child: Text(
-                                              controller
-                                                  .chooseOriginofWealth[index],
-                                              style: TextStyles.textStyles_12
-                                                  .apply(
-                                                color: ColorStyle.secondryBlack,
+                                ),
+                                SizedBox(
+                                  height: 12,
+                                ),
+                                Text(
+                                  'Please select multiple options below if applicable which best describes where you funds and wealth come from.',
+                                  style: TextStyles.textStyles_14.apply(
+                                    color: ColorStyle.secondryBlack,
+                                    fontWeightDelta: 2,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 12,
+                                ),
+                                GridView.builder(
+                                    itemCount:
+                                        controller.chooseOriginofWealth.length,
+                                    shrinkWrap: true,
+                                    physics: NeverScrollableScrollPhysics(),
+                                    gridDelegate:
+                                        SliverGridDelegateWithFixedCrossAxisCount(
+                                      crossAxisCount: 2,
+                                      crossAxisSpacing: 10,
+                                      mainAxisSpacing: 10,
+                                      mainAxisExtent: 80,
+                                    ),
+                                    itemBuilder:
+                                        (BuildContext context, int index) {
+                                      return Container(
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              ComponentsSignUp.check(),
+                                              SizedBox(
+                                                height: 8,
                                               ),
-                                              textAlign: TextAlign.center,
+                                              Container(
+                                                child: Text(
+                                                  controller
+                                                          .chooseOriginofWealth[
+                                                      index],
+                                                  style: TextStyles
+                                                      .textStyles_12
+                                                      .apply(
+                                                    color: ColorStyle
+                                                        .secondryBlack,
+                                                  ),
+                                                  textAlign: TextAlign.center,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  EffectStyle.radiusCustom(10),
+                                              border: Border.all(
+                                                  width: 1,
+                                                  color: ColorStyle.grey)));
+                                    }),
+                                SizedBox(
+                                  height: 18,
+                                ),
+                                Text(
+                                  'Origin of Funds/Wealth Explanation :',
+                                  style: TextStyles.textStyles_16.apply(
+                                    color: ColorStyle.secondryBlack,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                    child: TextField(
+                                      decoration: InputDecoration(
+                                        border: InputBorder.none,
+                                        // labelText: 'Enter Name',
+                                        // hintText: 'Enter Your Name'
+                                      ),
+                                    ),
+                                    height: 150,
+                                    decoration: EffectStyleSignUp.decoration(
+                                        Colors.transparent, 4)),
+                                SizedBox(
+                                  height: 18,
+                                ),
+                                Text(
+                                  'Upload Bank Statement',
+                                  style: TextStyles.textStyles_16.apply(
+                                    color: ColorStyle.secondryBlack,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                  alignment: Alignment.topCenter,
+                                  padding: EffectStyle.padding(20, 20, 14, 0),
+                                  child: Container(
+                                    height: 50,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          child: Icon(
+                                            Icons.add,
+                                            size: 18,
+                                            color: ColorStyle.darkestBlueSignUp,
+                                          ),
+                                          height: 25,
+                                          width: 25,
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                            border: Border.all(
+                                              width: 1.8,
+                                              color:
+                                                  ColorStyle.darkestBlueSignUp,
                                             ),
                                           ),
-                                        ],
-                                      ),
-                                        decoration: BoxDecoration(
-                                            borderRadius: EffectStyle.radiusCustom(10),
-                                            border:
-                                            Border.all(width: 1, color: ColorStyle.grey)
-                                        )
-                                    );
-                                  }),
-                              SizedBox(
-                                height: 18,
-                              ),
-                              Text(
-                                'Origin of Funds/Wealth Explanation :',
-                                style: TextStyles.textStyles_16.apply(
-                                  color: ColorStyle.secondryBlack,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-                                child: TextField(
-                                  decoration: InputDecoration(
-                                    border: InputBorder.none,
-                                    // labelText: 'Enter Name',
-                                    // hintText: 'Enter Your Name'
-                                  ),
-                                ),
-                                height: 150,
-                                  decoration: EffectStyleSignUp.decoration(Colors.transparent, 4)
-                              ),
-                              SizedBox(
-                                height: 18,
-                              ),
-                              Text(
-                                'Upload Bank Statement',
-                                style: TextStyles.textStyles_16.apply(
-                                  color: ColorStyle.secondryBlack,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-                                alignment: Alignment.topCenter,
-                                padding: EffectStyle.padding(20, 20, 14, 0),
-                                child: Container(
-                                  height: 50,
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        child: Icon(
-                                          Icons.add,
-                                          size: 18,
-                                          color: ColorStyle.darkestBlueSignUp,
                                         ),
-                                        height: 25,
-                                        width: 25,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                          BorderRadius.circular(20),
-                                          border: Border.all(
-                                            width: 1.8,
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          'Select Files',
+                                          style: TextStyles.textStyles_16.apply(
                                             color: ColorStyle.darkestBlueSignUp,
                                           ),
                                         ),
-                                      ),
-                                      SizedBox(
-                                        width: 10,
-                                      ),
-                                      Text(
-                                        'Select Files',
-                                        style: TextStyles.textStyles_16.apply(
-                                          color: ColorStyle.darkestBlueSignUp,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  decoration: EffectStyleSignUp.decoration(ColorStyle.primaryWhite, 4),
-                                  // decoration: BoxDecoration(
-                                  //     color: ColorStyle.primaryWhite,
-                                  //     border: Border.all(
-                                  //       width: 1.8,
-                                  //       color: ColorStyle.blueSKY,
-                                  //     ),
-                                  //     borderRadius: BorderRadius.circular(4)),
-                                ),
-                                height: 150,
-                                decoration: EffectStyleSignUp.decoration(ColorStyle.hex('#F2FCFE'), 4),
-                              ),
-                              SizedBox(
-                                height: 22,
-                              ),
-                              Text(
-                                'Uploade Documents',
-                                style: TextStyles.textStyles_16.apply(
-                                  color: ColorStyle.secondryBlack,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-    // decoration: EffectStyleSignUp.decoration(Colors.transparent, 10)
-                                decoration: BoxDecoration(
-                                    border: Border.all(
-                                      width: 0.3,
-                                      color: ColorStyle.secondryBlack,
+                                      ],
                                     ),
-                                    borderRadius: BorderRadius.circular(4)
-    ),
-                              ),
-                              SizedBox(
-                                height: 22,
-                              ),
-                              Text(
-                                'Additional Documentation',
-                                style: TextStyles.textStyles_16.apply(
-                                  color: ColorStyle.secondryBlack,
+                                    decoration: EffectStyleSignUp.decoration(
+                                        ColorStyle.primaryWhite, 4),
+                                    // decoration: BoxDecoration(
+                                    //     color: ColorStyle.primaryWhite,
+                                    //     border: Border.all(
+                                    //       width: 1.8,
+                                    //       color: ColorStyle.blueSKY,
+                                    //     ),
+                                    //     borderRadius: BorderRadius.circular(4)),
+                                  ),
+                                  height: 150,
+                                  decoration: EffectStyleSignUp.decoration(
+                                      ColorStyle.hex('#F2FCFE'), 4),
                                 ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-                                alignment: Alignment.topCenter,
-                                padding: EffectStyle.padding(20, 20, 14, 0),
-                                child: Container(
-                                  height: 50,
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        child: Icon(
-                                          Icons.add,
-                                          size: 18,
-                                          color: ColorStyle.darkestBlueSignUp,
+                                SizedBox(
+                                  height: 22,
+                                ),
+                                Text(
+                                  'Uploade Documents',
+                                  style: TextStyles.textStyles_16.apply(
+                                    color: ColorStyle.secondryBlack,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                  // decoration: EffectStyleSignUp.decoration(Colors.transparent, 10)
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 0.3,
+                                        color: ColorStyle.secondryBlack,
+                                      ),
+                                      borderRadius: BorderRadius.circular(4)),
+                                ),
+                                SizedBox(
+                                  height: 22,
+                                ),
+                                Text(
+                                  'Additional Documentation',
+                                  style: TextStyles.textStyles_16.apply(
+                                    color: ColorStyle.secondryBlack,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                  alignment: Alignment.topCenter,
+                                  padding: EffectStyle.padding(20, 20, 14, 0),
+                                  child: Container(
+                                    height: 50,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          child: Icon(
+                                            Icons.add,
+                                            size: 18,
+                                            color: ColorStyle.darkestBlueSignUp,
+                                          ),
+                                          height: 25,
+                                          width: 25,
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                            border: Border.all(
+                                              width: 1.8,
+                                              color:
+                                                  ColorStyle.darkestBlueSignUp,
+                                            ),
+                                          ),
                                         ),
-                                        height: 25,
-                                        width: 25,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                          BorderRadius.circular(20),
-                                          border: Border.all(
-                                            width: 1.8,
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          'Select Files',
+                                          style: TextStyles.textStyles_16.apply(
                                             color: ColorStyle.darkestBlueSignUp,
                                           ),
                                         ),
-                                      ),
-                                      SizedBox(
-                                        width: 10,
-                                      ),
-                                      Text(
-                                        'Select Files',
-                                        style: TextStyles.textStyles_16.apply(
-                                          color: ColorStyle.darkestBlueSignUp,
-                                        ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
+                                    decoration: EffectStyleSignUp.decoration(
+                                        ColorStyle.primaryWhite, 4),
+                                    // decoration: BoxDecoration(
+                                    //     color: ColorStyle.primaryWhite,
+                                    //     border: Border.all(
+                                    //       width: 1.8,
+                                    //       color: ColorStyle.blueSKY,
+                                    //     ),
+                                    //     borderRadius: BorderRadius.circular(4)),
                                   ),
-                                  decoration: EffectStyleSignUp.decoration(ColorStyle.primaryWhite, 4),
-                                  // decoration: BoxDecoration(
-                                  //     color: ColorStyle.primaryWhite,
-                                  //     border: Border.all(
-                                  //       width: 1.8,
-                                  //       color: ColorStyle.blueSKY,
-                                  //     ),
-                                  //     borderRadius: BorderRadius.circular(4)),
+                                  height: 150,
+                                  decoration: EffectStyleSignUp.decoration(
+                                      ColorStyle.hex('#F2FCFE'), 4),
                                 ),
-                                height: 150,
-                                decoration: EffectStyleSignUp.decoration(ColorStyle.hex('#F2FCFE'), 4),
-                              ),
-                              SizedBox(
-                                height: 22,
-                              ),
-                              Text(
-                                'Uploade Documents',
-                                style: TextStyles.textStyles_16.apply(
-                                  color: ColorStyle.secondryBlack,
+                                SizedBox(
+                                  height: 22,
                                 ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-                                decoration: BoxDecoration(
-                                    border: Border.all(
-                                      width: 0.3,
-                                      color: ColorStyle.secondryBlack,
-                                    ),
-                                    borderRadius: BorderRadius.circular(4)),
-                              ),
-                              SizedBox(
-                                height: 22,
-                              ),
-                              Text(
-                                'Advance Capital SOF/SOW Accepted Guidelines',
-                                style: TextStyles.textStyles_16.apply(
-                                  color: ColorStyle.secondryBlack,
+                                Text(
+                                  'Uploade Documents',
+                                  style: TextStyles.textStyles_16.apply(
+                                    color: ColorStyle.secondryBlack,
+                                  ),
                                 ),
-                              ),
-                              SizedBox(
-                                height: 4,
-                              ),
-                              Row(
-                                children: [
-                                  ComponentsSignUp.check(),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      SizedBox(
-                                        height: 10,
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 0.3,
+                                        color: ColorStyle.secondryBlack,
                                       ),
-                                      Text(
-                                        'Details required through On-Boarding ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        ' Application Process',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              ),
-                              SizedBox(
-                                height: 4,
-                              ),
-                              Row(
-                                crossAxisAlignment:
-                                CrossAxisAlignment.start,
-                                children: [
-                                  ComponentsSignUp.check(),
-                                  SizedBox(
-                                    width: 10,
+                                      borderRadius: BorderRadius.circular(4)),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'Advance Capital SOF/SOW Accepted Guidelines',
+                                  style: TextStyles.textStyles_16.apply(
+                                    color: ColorStyle.secondryBlack,
                                   ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Original KYC Documentation required',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        'with Offical English Versions',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        '(Certified Translations)',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              ),
-                              SizedBox(
-                                height: 4,
-                              ),
-                              Row(
-                                children: [
-                                  ComponentsSignUp.check(),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    'Facial Verification',
-                                    style: TextStyles.textStyles_12.apply(
-                                      color: ColorStyle.secondryBlack,
-                                      fontWeightDelta: 1,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              Row(
-                                children: [
-                                  ComponentsSignUp.check(),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    'Detailed Source of Wealth',
-                                    style: TextStyles.textStyles_12.apply(
-                                      color: ColorStyle.secondryBlack,
-                                      fontWeightDelta: 1,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              Row(
-                                children: [
-                                  ComponentsSignUp.check(),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    'Source of Funds',
-                                    style: TextStyles.textStyles_12.apply(
-                                      color: ColorStyle.secondryBlack,
-                                      fontWeightDelta: 1,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              Row(
-                                children: [
-                                  ComponentsSignUp.check(),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    'Purpose of Account Opening',
-                                    style: TextStyles.textStyles_12.apply(
-                                      color: ColorStyle.secondryBlack,
-                                      fontWeightDelta: 1,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              Row(
-                                children: [
-                                  ComponentsSignUp.check(),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    'English Signature',
-                                    style: TextStyles.textStyles_12.apply(
-                                      color: ColorStyle.secondryBlack,
-                                      fontWeightDelta: 1,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              Row(
-                                children: [
-                                  ComponentsSignUp.check(),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    'Additional Details',
-                                    style: TextStyles.textStyles_12.apply(
-                                      color: ColorStyle.secondryBlack,
-                                      fontWeightDelta: 1,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              ComponentsSignUp.backContinue('Back', () {
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Sale of a property',
+                                  arrList: [
+                                    'Sales Contract',
+                                    'Signed Letter from Solicitor',
+                                    'Signed Letter from Real Estate Agent (If Applicable)'
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Generic Source of Wealth',
+                                  arrList: [
+                                    'Purchase and Sale of Goods/Services',
+                                    'One of more recent payslips',
+                                    'Copy of Recent Accounts (Self-Employed)',
+                                    'Confirmation from Employer of Income',
+                                    'Bank Statement outlining receipt of most recent salary payment from named employer',
 
-                              }, 'Submit', () {
-                                Get.to(PersonalApplication8());
-                              })
-                            ],
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Sale of Company',
+                                  arrList: [
+                                    'Copies of Media Coverage as Supporting documentation (if available)',
+                                    'Copy of the Contract of Sale and Sight of Investment',
+                                    'Signed from Solicitor',
+                                    'Signed from Solicitor',
+
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Inheritance:',
+                                  arrList: [
+                                    'Letter from solicitor or letter from Trustees of Estate',
+                                    'Grant of probate with a copy of the will which must including the value of the Named Estate',
+
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Geared Loan:',
+                                  arrList: [
+                                    'Recent Loan Statement',
+                                    'Loan Agreement',
+
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Compensation Payment',
+                                  arrList: [
+                                    'Letter from Solicitor',
+                                    'Letter / Court order from compensation body',
+
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Policy Claim or Maturing Investments',
+                                  arrList: [
+                                    'Chargeable Event Certificate',
+                                    'Letter from previous Investment company in relation to the notification of the proceeds claim',
+
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Sale of Shares or other investment',
+                                  arrList: [
+                                    'Signed letter outlining funds from a regulated accountant',
+                                    'Confirmation from the relevant investment company',
+                                    'Bank Statement showing receipt of funds by named investment company',
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Individuals Own Policy/Company Pays Premium',
+                                  arrList: [
+                                    'Hardcopy of the latest annual report',
+                                    'Copy of trading details or annual report from the companies website',
+                                     'Copy of the companies certificate of incorporation or equivalent',
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Lottery, betting, casino win',
+                                  arrList: [
+                                    'Letter from relevant organization (Betting Shops, Casino, Lottery Headquarters)',
+                                    'Media coverage as supporting documents (if applicable)',
+                                    'Bank statement showing funds deposited by company',
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Receiving of a gift',
+                                  arrList: [
+                                    'Letter from Donor confirming details of gift',
+
+                                  ],
+                                ),
+                                ListViewGuidlinesTerms(
+                                  title: 'Other Monies',
+                                  arrList: [
+                                    'Appropriate Supporting Documentation',
+                                    'Signed Letter detailing funds from regulated accountant',
+                                  ],
+                                ),
+
+
+
+
+
+
+
+                                ComponentsSignUp.backContinue(
+                                    'Back', () {}, 'Submit', () {
+                                  Get.to(PersonalApplication8());
+                                })
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                      decoration: EffectStyleSignUp.decoration()
-                  ),
+                        ],
+                      ),
+                      decoration: EffectStyleSignUp.decoration()),
                   ComponentsSignUp.bottomUI(),
                 ],
               ),
