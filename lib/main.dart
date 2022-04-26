@@ -1,4 +1,5 @@
 import 'package:advanced_capital_pay/Views/SavingGoal.dart';
+import 'package:advanced_capital_pay/Views/SavingGoal2.dart';
 import 'package:advanced_capital_pay/Views/SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,8 +26,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        // home: SavingGoal()
-        home: SplashScreen()
+        home: SavingGoal2()
+        // home: SplashScreen()
     );
   }
 }
