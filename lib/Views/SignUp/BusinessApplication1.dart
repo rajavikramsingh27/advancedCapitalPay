@@ -459,7 +459,7 @@ class BusinessApplication1 extends StatelessWidget {
                                       width: 12,
                                     ),
                                     Text(
-                                      'Add an additional Bussiness Email Address',
+                                      'Add an additional Business Email Address',
                                       style: TextStyles.textStyles_12.apply(
                                         color: ColorStyle.darkestBlueSignUp,
                                         fontWeightDelta: 1,
