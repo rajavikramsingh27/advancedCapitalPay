@@ -101,6 +101,15 @@ class ImageStyle {
   static const String Group2221 = "$baseImage/Group2221.png";
   static const String creditcard = "$baseImage/creditcard.png";
   static const String Group2201 = "$baseImage/Group2201.png";
+  static const String Group1925 = "$baseImage/Group1925.png";
+  static const String rotateright = "$baseImage/rotateright.png";
+  static const String padlock = "$baseImage/padlock.png";
+  static const String creditcar = "$baseImage/creditcar.png";
+  static const String Group2227 = "$baseImage/Group2227.png";
+  static const String Edit = "$baseImage/Edit.png";
+  static const String searchsymbol = "$baseImage/searchsymbol.png";
+  static const String coins = "$baseImage/coins.png";
+  static const String Component11 = "$baseImage/Component11.png";
 
 
 
