@@ -67,4 +67,8 @@ class ImageStyle {
   static const String icon_material_error = "$baseImage/Icon_material_error.png";
   static const String mobileBlueBG = "$baseImage/mobileBlueBG.png";
   static const String setPasswordSuccessfully = "$baseImage/setPasswordSuccessfully.png";
+  static const String ellipse2 = "$baseImage/Ellipse2.png";
+  static const String settings = "$baseImage/settings.png";
+  static const String bg_Image = "$baseImage/Bg_Image.png";
+  static const String finance = "$baseImage/finance.png";
 }

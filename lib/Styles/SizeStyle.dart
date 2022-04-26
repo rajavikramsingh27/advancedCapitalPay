@@ -12,6 +12,7 @@ class SizeStyle {
   static final double size_22 = 22;
   static final double size_24 = 24;
   static final double size_32 = 32;
+  static final double size_46 = 46;
 
   static final double buttonHeightSubmit = 44;
   static final double buttonHeightOption = 30;
