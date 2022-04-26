@@ -1,4 +1,3 @@
-
 import 'package:advanced_capital_pay/Controllers/YourCardController.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -13,20 +12,14 @@ import '../Styles/EffectStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
 
-
 class YourCard extends StatelessWidget {
   const YourCard({Key? key}) : super(key: key);
 
-
-
   @override
   Widget build(BuildContext context) {
-
     SwiperController _controller = SwiperController();
 
-
     final controller = Get.put(YourCardController());
-
 
     return Stack(
       children: [
@@ -46,7 +39,7 @@ class YourCard extends StatelessWidget {
             },
             builder: (authController) {
               return Obx(
-                    () => SingleChildScrollView(
+                () => SingleChildScrollView(
                   // padding: EffectStyle.padding(16, 16, 0, 0),
                   child: Column(
                     children: [
@@ -125,63 +118,61 @@ class YourCard extends StatelessWidget {
                                       itemCount: 5,
                                       // scrollDirection: Axis.horizontal,
                                       physics: BouncingScrollPhysics(),
-                                      itemBuilder: (BuildContext context, int index) {
-                                          return  Container(
-                                            padding: EdgeInsets.only(
-                                                left: 12, right: 12),
-                                            alignment: Alignment.center,
-                                            // color: Colors.red,
-                                            height: 57,
-                                            width: 343,
-                                            margin: EdgeInsets.all(6),
-                                            // color: Colors.red,
-                                            child: Row(
-                                              mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                              children: [
-                                                Container(
-                                                  child: Row(
-                                                    children: [
-                                                      Image.asset(
-                                                        ImageStyle.agp,
-                                                        height: 30,
-                                                        width: 30,
-                                                      ),
-                                                      SizedBox(
-                                                        width: 16,
-                                                      ),
-                                                      Text(
-                                                        'Contactless Payment',
-                                                        // controller.listApplyLeave[index],
-                                                        style: TextStyles.textStyles_12
-                                                            .apply(
-                                                            color: ColorStyle
-                                                                .secondryBlack),
-                                                      ),
-                                                    ],
-                                                  ),
+                                      itemBuilder:
+                                          (BuildContext context, int index) {
+                                        return Container(
+                                          padding: EdgeInsets.only(
+                                              left: 12, right: 12),
+                                          alignment: Alignment.center,
+                                          // color: Colors.red,
+                                          height: 57,
+                                          width: 343,
+                                          margin: EdgeInsets.all(6),
+                                          // color: Colors.red,
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Container(
+                                                child: Row(
+                                                  children: [
+                                                    Image.asset(
+                                                      ImageStyle.agp,
+                                                      height: 30,
+                                                      width: 30,
+                                                    ),
+                                                    SizedBox(
+                                                      width: 16,
+                                                    ),
+                                                    Text(
+                                                      'Contactless Payment',
+                                                      // controller.listApplyLeave[index],
+                                                      style: TextStyles
+                                                          .textStyles_12
+                                                          .apply(
+                                                              color: ColorStyle
+                                                                  .secondryBlack),
+                                                    ),
+                                                  ],
                                                 ),
-                                                Icon(
-                                                  Icons.arrow_forward_ios_rounded,
-                                                  size: 20,
-                                                  color: Colors.black45,
-                                                )
-                                              ],
-                                            ),
-                                            decoration: BoxDecoration(
-                                                borderRadius:
-                                                BorderRadius.circular(5),
-                                                color: Colors.lightBlueAccent
-                                                    .withOpacity(0.1)),
-                                          );
-                                        }
-
-                                      ),
-
+                                              ),
+                                              Icon(
+                                                Icons.arrow_forward_ios_rounded,
+                                                size: 20,
+                                                color: Colors.black45,
+                                              )
+                                            ],
+                                          ),
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(5),
+                                              color: Colors.lightBlueAccent
+                                                  .withOpacity(0.1)),
+                                        );
+                                      }),
                                 ],
                               ),
                             ),
-
                           ],
                         ),
                       ),

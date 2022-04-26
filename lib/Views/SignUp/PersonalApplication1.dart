@@ -417,7 +417,7 @@ class PersonalApplication1 extends StatelessWidget {
                                       decoration: InputDecoration(
                                         border: OutlineInputBorder(),
                                         labelText:
-                                            'please enter your personal email',
+                                            'please enter your phone number without country code',
                                         labelStyle:
                                             TextStyles.textStyles_14.apply(
                                           color: Colors.grey,
