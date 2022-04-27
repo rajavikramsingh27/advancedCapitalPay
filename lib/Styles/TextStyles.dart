@@ -12,6 +12,7 @@ class TextStyles {
         fontWeight: FontWeight.normal,
       );
 
+
   static TextStyle get textStyles_22 => TextStyle(
     fontSize: SizeStyle.size_22,
     fontFamily: kFontFamily,
@@ -23,6 +24,12 @@ class TextStyles {
         fontFamily: kFontFamily,
         fontWeight: FontWeight.normal,
       );
+
+  static TextStyle get textStyles_18 => TextStyle(
+    fontSize: SizeStyle.size_18,
+    fontFamily: kFontFamily,
+    fontWeight: FontWeight.normal,
+  );
 
   static TextStyle get textStyles_32 => TextStyle(
         fontSize: SizeStyle.size_32,
@@ -56,6 +63,18 @@ class TextStyles {
 
   static TextStyle get textStyles_10 => TextStyle(
     fontSize: SizeStyle.size_10,
+    fontFamily: kFontFamily,
+    fontWeight: FontWeight.normal,
+  );
+
+  static TextStyle get textStyles_8 => TextStyle(
+    fontSize: SizeStyle.size_8,
+    fontFamily: kFontFamily,
+    fontWeight: FontWeight.normal,
+  );
+
+  static TextStyle get textStyles_6 => TextStyle(
+    fontSize: SizeStyle.size_6,
     fontFamily: kFontFamily,
     fontWeight: FontWeight.normal,
   );

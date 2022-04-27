@@ -13,6 +13,7 @@ class TextFieldCustom extends StatelessWidget {
   final Color? colorHint;
   final TextStyle? textStyle;
   final double? radiusBorder;
+  final int? maxLines;
 
   TextFieldCustom({
     Key? key,
@@ -26,6 +27,7 @@ class TextFieldCustom extends StatelessWidget {
     this.colorText = Colors.black,
     this.textStyle,
     this.radiusBorder = 8.0,
+    this.maxLines = 1,
   }) : super(key: key);
 
   @override
@@ -34,6 +36,7 @@ class TextFieldCustom extends StatelessWidget {
       controller: controller,
       keyboardType: keyboardType,
       style: textStyle?.apply(color: colorText),
+      maxLines: maxLines,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.only(
           left: 16,
@@ -109,7 +112,7 @@ class TextFieldCustomPrefix extends StatelessWidget {
           ),
           hintText: hintText,
           hintStyle:
-              TextStyles.textStyles_16.apply(color: ColorStyle.grayColor),
+              TextStyles.textStyles_16.apply(color: ColorStyle.grey),
           prefixIcon: Container(
               height: 30,
               padding: EdgeInsets.only(
