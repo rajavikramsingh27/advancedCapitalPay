@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../Components/AppBarStyle.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
+import '../Components/PopUp.dart';
+
 
 class TravelDetails extends StatelessWidget {
   const TravelDetails({Key? key}) : super(key: key);
@@ -33,7 +36,9 @@ class TravelDetails extends StatelessWidget {
                   ImageStyle.chat,
                   height: 30,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  filter();
+                },
               ),
             ),
             backgroundColor: Colors.transparent,
@@ -449,3 +454,61 @@ class TravelDetails extends StatelessWidget {
     );
   }
 }
+
+
+// filter() {
+//
+//
+//   return Get.dialog(
+//       Material(
+//           color: Colors.transparent,
+//           child:Column(
+//             mainAxisAlignment: MainAxisAlignment.center,
+//             children: [
+//               Container(
+//                 margin: EdgeInsets.only(left: 18, right: 18),
+//                 height: 432,
+//                 width: MediaQuery.of(Get.context!).size.width,
+//                 decoration: BoxDecoration(
+//                   color: ColorStyle.darkestBlueSignUp,
+//                   borderRadius: BorderRadius.circular(10),
+//                 ),
+//                 child: Column(
+//                   crossAxisAlignment: CrossAxisAlignment.start,
+//                   children: [
+//                     SizedBox(
+//                       height: 15,
+//                     ),
+//                     Row(
+//                       mainAxisAlignment: MainAxisAlignment.end,
+//                       children: [
+//                         InkWell(
+//                           child: Container(
+//                             margin: EdgeInsets.only(right: 20),
+//                             width: 31,
+//                             height: 31,
+//                             child: Icon(Icons.clear),
+//                             decoration: BoxDecoration(
+//                                 color: ColorStyle.primaryWhite,
+//                                 borderRadius: BorderRadius.circular(10),
+//                                 boxShadow: [
+//                                   new BoxShadow(
+//                                     color: Colors.black12..withOpacity(0.16),
+//                                     blurRadius: 50.0,
+//                                   ),
+//                                 ]),
+//                           ),
+//                           onTap: () {
+//                             Get.back();
+//                           },
+//                         )
+//                       ],
+//                     ),
+//
+//                   ],
+//                 ),
+//               ),
+//             ],
+//           )
+//       ));
+// }
