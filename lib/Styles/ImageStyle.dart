@@ -141,4 +141,22 @@ class ImageStyle {
   static const String invite_lightBlue = "$baseImage/invite_lightBlue.png";
   static const String savings_lightBlue = "$baseImage/savings_lightBlue.png";
   static const String chat_lightBlue = "$baseImage/chat_lightBlue.png";
+  static const String apple = "$baseImage/apple.png";
+  static const String unlock = "$baseImage/unlock.png";
+
+  static const String cashlesspayment = "$baseImage/cashlesspayment.png";
+  static const String moneywithdrawal = "$baseImage/moneywithdrawal.png";
+  static const String atm = "$baseImage/atm.png";
+
+  static const String changePIN = "$baseImage/changePIN.png";
+  static const String warning = "$baseImage/warning.png";
+  static const String creditca = "$baseImage/creditca.png";
+  static const String information = "$baseImage/information.png";
+  static const String bgImageATM = "$baseImage/bgImageATM.png";
+  static const String blurImageATM = "$baseImage/blurImageATM.png";
+
+  static const String minusRadius = "$baseImage/minusRadius.png";
+  static const String plusRadius = "$baseImage/plusRadius.png";
+  static const String search_interface_symbol = "$baseImage/search_interface_symbol.png";
+
 }

@@ -3,7 +3,19 @@ import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 import '../Views/SplashScreen.dart';
 import '../Views/TabbarScreen.dart';
-import 'package:advanced_capital_pay/Views/SplashScreen.dart';
+import '../Views/MainDashboard.dart';
+
+import 'package:flutter/material.dart';
+import 'package:get/utils.dart';
+import 'package:get/get.dart';
+import 'package:flutter/cupertino.dart';
+
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+import 'package:advanced_capital_pay/Views/FindATMLocator/FindATMLocatorMoreOption.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,10 +37,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SplashScreen()
-        // home: TabbarScreen()
+        // home: SplashScreen()
+        home: TabbarScreen()
+      // home: MainDashboard(),
+      // home: MapSample(),
+      // home: FindATMLocatorMoreOption(),
     );
   }
 }
 
-// merging...
+
+

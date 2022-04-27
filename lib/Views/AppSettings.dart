@@ -1,10 +1,17 @@
-import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../Components/AppBarStyle.dart';
+import '../Components/ButtonCustom.dart';
+import '../Controllers/MessagePageController.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/EffectStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
+import '../Components/SearchBarCustom.dart';
+import '../Components/ListViewIconTitleSubtitle.dart';
+
 
 
 class AppSettings extends StatelessWidget {
@@ -21,1221 +28,163 @@ class AppSettings extends StatelessWidget {
           fit: BoxFit.cover,
         ),
         Scaffold(
-          appBar: AppBarStyle(),
+          appBar: AppBarStyle(
+            leadingButton: IconButton(
+              icon: Image.asset(
+                ImageStyle.back_circle,
+                height: 30,
+              ),
+              onPressed: () {
+                Get.back();
+              },
+            ),
+          ),
           backgroundColor: Colors.transparent,
           body: SingleChildScrollView(
-            // padding: EffectStyle.padding(16, 16, 0, 0),
+            padding: EffectStyle.padding(16, 16, 0, 0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  padding: EffectStyle.padding(16, 16, 0, 0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'App Settings',
-                        style: TextStyles.textStyles_16.apply(
-                          color: ColorStyle.primaryWhite,
-                          fontWeightDelta: 1,
-                        ),
+                AppBarStyleLeadingTitleTrailing(
+                  leadingImage: ImageStyle.ellipse2,
+                  nameUser: 'HARRISON SMITH',
+                  descriptionUser: 'Your Personal Settings',
+                  trailingAction: [
+                    IconButton(
+                      icon: Image.asset(
+                        ImageStyle.chat,
+                        height: 26,
                       ),
-                      SizedBox(
-                        height: 15,
+                      onPressed: () {
+                        // Get.to(MessagePage());
+                      },
+                    ),
+                    IconButton(
+                      icon: Image.asset(
+                        ImageStyle.user_logout,
+                        height: 26,
                       ),
-                      Container(
-                        padding: EdgeInsets.only(left: 10,right: 10,top: 10),
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.user6,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'My Profile',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.theme,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Appearance',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.envelope,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Messages',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.bell,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Notifications',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.browser,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Favourite Account',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        'AED 319485739302',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_10
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                      SizedBox(
-                                        width: 8,
-                                      ),
-                                      Icon(
-                                        Icons.arrow_forward_ios_rounded,
-                                        size: 16,
-                                        color: ColorStyle.secondryBlack,
-                                      )
-                                    ],
-                                  ),
-                                ),
-
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.creditcards,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Favourite Card',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        'Virtual Debit ***777',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_10
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                      SizedBox(
-                                        width: 8,
-                                      ),
-                                      Icon(
-                                        Icons.arrow_forward_ios_rounded,
-                                        size: 16,
-                                        color: ColorStyle.secondryBlack,
-                                      )
-                                    ],
-                                  ),
-                                ),
-
-                              ],
-                            ),
-
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.internet,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Preferred language',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-                              ],
-                            ),
-                          ],
-                        ),
-                        width: double.infinity,
-                        height: 370,
-                        decoration: BoxDecoration(
-                            color: ColorStyle.primaryWhite,
-                            borderRadius: BorderRadius.circular(10)),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-
-                      Text(
-                        'Feature Settings',
-                        style: TextStyles.textStyles_16.apply(
-                          color: ColorStyle.primaryWhite,
-                          fontWeightDelta: 1,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(left: 10,right: 10,top: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              ImageStyle.pay,
-                              height: 30,
-                              width: 30,
-                            ),
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-                                      Image.asset(
-                                        ImageStyle.user6,
-                                        height: 30,
-                                        width: 30,
-                                        color: Colors.white,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Apple Pay',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.pricing,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Manage Subscriptions',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.bell,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Manage Currency Alerts',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.bill,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Statement Frequency',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-                              ],
-                            ),
-
-                            SizedBox(
-                              height: 10,
-                            ),
-
-
-                          ],
-                        ),
-                        width: double.infinity,
-                        height:250,
-                        decoration: BoxDecoration(
-                            color: ColorStyle.primaryWhite,
-                            borderRadius: BorderRadius.circular(10)),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                        width: double.infinity,
-                        height: 1,
-                        color: Colors.black26,
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-
-                      Text(
-                        'Account Settings',
-                        style: TextStyles.textStyles_16.apply(
-                          color: ColorStyle.primaryWhite,
-                          fontWeightDelta: 1,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(left: 10,right: 10,top: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.key,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Change Mobile PIN',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.creditcard5,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Card Security',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.shield,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Update Security Questions',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.sale,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Statement Frequency',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-                              ],
-                            ),
-
-                            SizedBox(
-                              height: 10,
-                            ),
-
-
-                          ],
-                        ),
-                        width: double.infinity,
-                        height:210,
-                        decoration: BoxDecoration(
-                            color: ColorStyle.primaryWhite,
-                            borderRadius: BorderRadius.circular(10)),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                        width: double.infinity,
-                        height: 1,
-                        color: Colors.black26,
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-
-                      Text(
-                        'Help Center',
-                        style: TextStyles.textStyles_16.apply(
-                          color: ColorStyle.primaryWhite,
-                          fontWeightDelta: 1,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(left: 10,right: 10,top: 10),
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.customersupport,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        '24/7 Live Customer Support',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.request,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Submit a Request',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.faq,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Frequently Asked Questions',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.user6,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Managing My Account',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.creditcard6,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Virtual and Physical Cards',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_12
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                ),
-
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.payment3,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        'Making and Receiving Internationl Payments ',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_10
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-                            Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child:
-                                  Row(
-                                    children: [
-
-                                      Image.asset(
-                                        ImageStyle.cryptocurrencies,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      // Text(
-                                      //   'Making and Receiving Internationl Payments ',
-                                      //   // controller.listApplyLeave[index],
-                                      //   style: TextStyles
-                                      //       .textStyles_10
-                                      //       .apply(
-                                      //       color: ColorStyle
-                                      //           .secondryBlack),
-                                      // ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16,
-                                  color: ColorStyle.secondryBlack,
-                                )
-
-                              ],
-                            ),
-                          ],
-                        ),
-                        width: double.infinity,
-                        height: 370,
-                        decoration: BoxDecoration(
-                            color: ColorStyle.primaryWhite,
-                            borderRadius: BorderRadius.circular(10)),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-
-
-                    ],
-                  ),
+                      onPressed: () {},
+                    ),
+                    SizedBox(
+                      width: 6,
+                    ),
+                  ],
                 ),
+                ListViewIconTitleSubtitle(
+                  title: "App Settings",
+                  arrListIcons: [
+                    ImageStyle.user6,
+                    ImageStyle.theme,
+                    ImageStyle.envelope,
 
+                    ImageStyle.bell,
+                    ImageStyle.browser,
+                    ImageStyle.creditcards,
+
+                    ImageStyle.internet,
+                  ],
+                  arrListTitles: [
+                    'My Profile',
+                    'Appearance',
+                    'Messages',
+
+                    'Notifications',
+                    'Favorite Account',
+                    'Favorite Card',
+
+                    'Preferred language',
+                  ],
+                  arrListSubtitles: [
+                    '',
+                    '',
+                    '',
+
+                    '',
+                    'AED 319485739302',
+                    'Virtual Debit ***777',
+
+                    '',
+                  ],
+                ),
+                ListViewIconTitleSubtitle(
+                  title: "Feature Settings",
+                  arrListIcons: [
+                    ImageStyle.apple,
+                    ImageStyle.pricing,
+                    ImageStyle.bell,
+                    ImageStyle.bill,
+                  ],
+                  arrListTitles: [
+                    'Apple Pay',
+                    'Manage Subscription',
+                    'Manage Currency Alerts',
+                    'Statement Frequency',
+                  ],
+                  arrListSubtitles: [
+                    '',
+                    '',
+                    '',
+                    '',
+                  ],
+                ),
+                ListViewIconTitleSubtitle(
+                  title: "Account Settings",
+                  arrListIcons: [
+                    ImageStyle.key,
+                    ImageStyle.creditcard5,
+                    ImageStyle.shield,
+
+                    ImageStyle.sale,
+                  ],
+                  arrListTitles: [
+                    'Change Mobile PIN',
+                    'Card Security',
+                    'Update Security Questions',
+
+                    'Transaction Limits',
+                  ],
+                  arrListSubtitles: [
+                    '',
+                    '',
+                    '',
+                    '',
+                  ],
+                ),
+                ListViewIconTitleSubtitle(
+                  title: "Help Center",
+                  arrListIcons: [
+                    ImageStyle.customersupport,
+                    ImageStyle.request,
+                    ImageStyle.faq,
+
+                    ImageStyle.user6,
+                    ImageStyle.creditcard6,
+                    ImageStyle.payment3,
+
+                    ImageStyle.cryptocurrencies,
+                  ],
+                  arrListTitles: [
+                    '24/7 Live Customer Support',
+                    'Submit a Request',
+                    'Frequently Asked Questions',
+
+                    'Managing My Accuont',
+                    'Virtual and Physical Cards',
+                    'Making and Recieving International Payments',
+                    ''
+                  ],
+                  arrListSubtitles: [
+                    '',
+                    '',
+                    '',
+
+                    '',
+                    '',
+                    '',
+                    '',
+                  ],
+                ),
               ],
             ),
           ),

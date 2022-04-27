@@ -1,9 +1,15 @@
+import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Components/TextFieldCustom.dart';
 import 'package:flutter/material.dart';
 
 import '../Components/AppBarStyle.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
+import 'package:get/get.dart';
+import '../Views/NewBeneficiary.dart';
+import 'package:get/get.dart';
+
 
 class TravelDestination extends StatelessWidget {
   const TravelDestination({Key? key}) : super(key: key);
@@ -26,7 +32,9 @@ class TravelDestination extends StatelessWidget {
                   ImageStyle.back_circle,
                   height: 30,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Get.back();
+                },
               ),
               trailingButton: IconButton(
                 icon: Image.asset(
@@ -37,8 +45,8 @@ class TravelDestination extends StatelessWidget {
               ),
             ),
             backgroundColor: Colors.transparent,
-            body:SingleChildScrollView(
-              child:  Column(
+            body: SingleChildScrollView(
+              child: Column(
                 children: [
                   Image.asset(
                     ImageStyle.Group2201,
@@ -49,63 +57,54 @@ class TravelDestination extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          padding: EdgeInsets.only(left: 20,right: 20,top: 10),
+                          padding:
+                              EdgeInsets.only(left: 20, right: 20, top: 10),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 'Where are you going?',
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
-                                    .textStyles_14
-                                    .apply(
-                                  fontWeightDelta: 2,
-                                    color: ColorStyle
-                                        .secondryBlack),
+                                style: TextStyles.textStyles_16.apply(
+                                    fontWeightDelta: 2,
+                                    color: ColorStyle.secondryBlack),
                               ),
                               SizedBox(
-                                height: 11,
+                                height: 16,
                               ),
-                              Container(
-                                alignment: Alignment.center,
-                                // width: 148,
-                                height: 50,
-                                child:      TextFormField(
-                                  decoration: InputDecoration(
-                                    border: InputBorder.none,
-                                    hintText: 'Search for a country',
-
-                                    // labelText: 'label',
-                                    prefixIcon: Icon(
-                                      Icons.search,
-                                      color: ColorStyle.secondryBlack,
-                                    ),
-                                    // contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-                                  ),
-                                ),
-                                decoration: BoxDecoration(
-                                  // color: ColorStyle.blueLight,
-                                  borderRadius: BorderRadius.circular(50),
-                                  border: Border.all(
-                                      color: ColorStyle.blueSKY
-                                  ),
+                              TextFieldCustomPrefix(
+                                hintText: 'Search for a country',
+                                textStyle: TextStyles.textStyles_14.apply(
+                                    fontWeightDelta: 2,
+                                    color: ColorStyle.secondryBlack),
+                                colorFill: ColorStyle.primaryWhite,
+                                radiusBorder: 40,
+                                prefix: Icon(
+                                  Icons.search,
+                                  color: ColorStyle.grey,
+                                  size: 30,
                                 ),
                               ),
-
                               SizedBox(
-                                height: 11,
+                                height: 10,
                               ),
                               Text(
-                             'Tell us what your planned destinations are, '
-                              'including any stopovers. We\'ll make '
-                            'sure your account is working and secure.',
+                                'You have not selected any countries',
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
-                                    .textStyles_12
-                                    .apply(
-
-                                    color: ColorStyle
-                                        .secondryBlack),
+                                style: TextStyles.textStyles_12
+                                    .apply(color: Colors.red,
+                                    fontWeightDelta: 1),
+                              ),
+                              SizedBox(
+                                height: 16,
+                              ),
+                              Text(
+                                'Tell us what your planned destinations are, '
+                                'including any stopovers. We\'ll make '
+                                'sure your account is working and secure.',
+                                // controller.listApplyLeave[index],
+                                style: TextStyles.textStyles_12
+                                    .apply(color: ColorStyle.secondryBlack),
                               ),
                               SizedBox(
                                 height: 11,
@@ -113,92 +112,60 @@ class TravelDestination extends StatelessWidget {
                               Text(
                                 'Selected Desintation',
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
-                                    .textStyles_14
-                                    .apply(
-                                    color: ColorStyle
-                                        .secondryBlack),
+                                style: TextStyles.textStyles_14
+                                    .apply(color: ColorStyle.secondryBlack,
+                                fontWeightDelta: 1),
                               ),
                               SizedBox(
-                                height: 20,
+                                height: 16,
                               ),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     'Germany',
                                     // controller.listApplyLeave[index],
-                                    style: TextStyles
-                                        .textStyles_14
-                                        .apply(
-                                        color: ColorStyle
-                                            .secondryBlack),
+                                    style: TextStyles.textStyles_14
+                                        .apply(color: ColorStyle.secondryBlack,
+                                    fontWeightDelta: 1
+                                    ),
                                   ),
-                                  Icon(
-                                    Icons.cancel_outlined
-                                  )
-
-
+                                  Icon(Icons.cancel_outlined)
                                 ],
                               ),
                               SizedBox(
                                 height: 24,
                               ),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Container(
-                                    alignment: Alignment.center,
-                                    width: 148,
-                                    height: 37,
-                                    child:    Text(
-                                      'Cancel',
-                                      // controller.listApplyLeave[index],
-                                      style: TextStyles
-                                          .textStyles_12
-                                          .apply(
-                                          color: ColorStyle
-                                              .blueSKY),
-                                    ),
-                                    decoration: BoxDecoration(
-                                        // color: ColorStyle.blueLight,
-                                        borderRadius: BorderRadius.circular(50),
-                                      border: Border.all(
-                                        color: ColorStyle.blueSKY
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    alignment: Alignment.center,
-                                    width: 148,
-                                    height: 36,
-                                    child:  Text(
-                                      'Continue',
-                                      // controller.listApplyLeave[index],
-                                      style: TextStyles
-                                          .textStyles_12
-                                          .apply(
-                                          color: ColorStyle
-                                              .primaryWhite),
-                                    ),
-                                    decoration: BoxDecoration(
-                                        color: ColorStyle.blueSKY,
-                                        borderRadius: BorderRadius.circular(50)
-                                    ),
-                                  ),
+                                  Expanded(child: ElevatedButtonCustom(
+                                    text: 'Cancel',
+                                    textStyle: TextStyles.textStyles_14
+                                        .apply(color: ColorStyle.blueSKY),
+                                    colorBG: ColorStyle.primaryWhite,
+                                    colorBorder: ColorStyle.blueSKY,
+                                    radiusBorder: 40,
+                                    onTap: () {
 
-
+                                    },
+                                  )),
+                                  SizedBox(width: 16,),
+                                  Expanded(child: ElevatedButtonCustom(
+                                    text: 'Continue',
+                                    textStyle: TextStyles.textStyles_14
+                                        .apply(color: ColorStyle.primaryWhite),
+                                    colorBG: ColorStyle.darkestBlueSignUp,
+                                    colorBorder: ColorStyle.darkestBlueSignUp,
+                                    radiusBorder: 40,
+                                    onTap: () {
+                                      Get.to(NewBeneficiary());
+                                    },
+                                  )),
                                 ],
                               ),
-
-
-
-
-
-
-
-
-
                             ],
                           ),
                           width: double.infinity,
@@ -206,18 +173,14 @@ class TravelDestination extends StatelessWidget {
                           decoration: BoxDecoration(
                             color: ColorStyle.primaryWhite,
                             // borderRadius: BorderRadius.circular(10)
-
                           ),
                         ),
-
                       ],
                     ),
                   ),
-
                 ],
               ),
-            )
-        ),
+            )),
       ],
     );
   }

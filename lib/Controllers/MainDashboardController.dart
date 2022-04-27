@@ -6,6 +6,8 @@ class MainDashboardController extends GetxController {
 
   RxInt indexPage = 0.obs;
 
+  RxInt listCount = 6.obs;
+
   RxList<String> arrCardsImage = [
     ImageStyle.card_1,
     ImageStyle.card_2,

@@ -6,6 +6,8 @@ import 'package:auto_size_text/auto_size_text.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
 
+
+
 class AppBarStyle extends StatelessWidget implements PreferredSizeWidget {
   final Function()? onTap;
   final Widget? leadingButton;
@@ -70,6 +72,7 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
   final Widget? trailingButton;
   final String? title;
   final Color? colorTitle;
+  final Color? backgroundColor;
 
   AppBarStyleTitle({
     Key? key,
@@ -78,6 +81,7 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
     this.trailingButton,
     this.title,
     this.colorTitle = Colors.white,
+    this.backgroundColor = Colors.transparent,
   }) : super(key: key);
 
   double heightAppBar = 50;
@@ -90,7 +94,7 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       elevation: 0,
       toolbarHeight: heightAppBar,
-      backgroundColor: Colors.transparent,
+      backgroundColor: backgroundColor,
       // leadingWidth: 0,
       leading: (leadingButton == null) ? Container() : leadingButton,
       centerTitle: true,
@@ -110,21 +114,31 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
   }
 }
 
-class AppBarStyleCustom extends StatelessWidget implements PreferredSizeWidget {
-  final Function()? onTap;
-  final Widget? leadingButton;
-  final Widget? trailingButton;
-  final Widget? settingButton;
+class AppBarStyleLeadingTitleTrailing extends StatelessWidget implements PreferredSizeWidget {
+  final Function()? onTapLeading;
+  final String? leadingImage;
+  final List<Widget>? trailingAction;
+  final double? leadingWidth;
+  final String? nameUser;
+  final TextStyle? nameStyle;
+  final String? descriptionUser;
+  final TextStyle? descriptionStyle;
+  final String? timeLastLogin;
 
-  AppBarStyleCustom({
+  AppBarStyleLeadingTitleTrailing({
     Key? key,
-    this.onTap,
-    this.leadingButton,
-    this.trailingButton,
-    this.settingButton,
+    this.onTapLeading,
+    this.leadingImage = '',
+    this.trailingAction,
+    this.leadingWidth = 70,
+    this.nameUser='',
+    this.descriptionUser='',
+    this.timeLastLogin='',
+    this.nameStyle,
+    this.descriptionStyle,
   }) : super(key: key);
 
-  double heightAppBar = 70;
+  double heightAppBar = 80;
 
   @override
   Size get preferredSize => new Size.fromHeight(heightAppBar);
@@ -132,46 +146,48 @@ class AppBarStyleCustom extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-
       elevation: 0,
       toolbarHeight: heightAppBar,
       backgroundColor: Colors.transparent,
-      // leadingWidth: 0,
-
-      leading: (leadingButton == null) ? Container() : Image.asset(
-        ImageStyle.ellipse2,
-        height: 52,
+      leadingWidth: leadingWidth,
+      leading: InkWell(
+        child: Container(
+          padding: EdgeInsets.only(left: 10),
+          child: Image.asset(
+            ImageStyle.ellipse2,
+            height: 50,
+          ),
+        ),
+        onTap: onTapLeading,
       ),
       // centerTitle: true,
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'MR HARRISON SMITH',
-            style: TextStyles.textStyles_14.apply(
-              color: ColorStyle.primaryWhite,
-            ),
+            nameUser!,
+            style: nameStyle,
+            // style: TextStyles.textStyles_14.apply(
+            //   color: ColorStyle.primaryWhite,
+            // ),
           ),
           Text(
-            'Plus Personal Customer',
-            style: TextStyles.textStyles_14.apply(
-              color: ColorStyle.primaryWhite,
-            ),
+            descriptionUser!,
+            style: descriptionStyle,
+            // style: TextStyles.textStyles_14.apply(
+            //   color: ColorStyle.primaryWhite,
+            // ),
           ),
           Text(
-            'Last Successful login: 02 Feb 2021.   13: 53: 41',
-            style: TextStyles.textStyles_10.apply(
+            timeLastLogin!,
+            style: TextStyles.textStyles_8.apply(
               color: ColorStyle.primaryWhite,
               // fontWeightDelta: 1,
             ),
           ),
         ],
       ),
-      actions: [
-        if (trailingButton != null) trailingButton!,
-        Icon(Icons.settings,color: ColorStyle.primaryWhite,size: 30,),
-
-      ],
+      actions: trailingAction,
     );
   }
 }

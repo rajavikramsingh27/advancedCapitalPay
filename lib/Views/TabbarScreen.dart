@@ -7,25 +7,10 @@ import '../Styles/TextStyles.dart';
 import '../Controllers/TabbarScreenController.dart';
 import '../Views/MainDashboard.dart';
 import '../Views/MoreScreen.dart';
+import '../Views/YourCard.dart';
 
 class TabbarScreen extends StatelessWidget {
   final controller = Get.put(TabbarScreenController());
-
-  final tabs = [
-    MainDashboard(),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.yellow,
-    ),
-    Container(
-      color: Colors.blue,
-    ),
-    Container(
-      color: Colors.orange,
-    ),
-  ];
 
   double iconSize = 26;
 
@@ -33,7 +18,9 @@ class TabbarScreen extends StatelessWidget {
     return Text(
       text,
       style: TextStyles.textStyles_12.apply(
-        color: (controller.selectedIndex.value == index) ? Colors.blueAccent : ColorStyle.primaryWhite,
+        color: (controller.selectedIndex.value == index)
+            ? Colors.blueAccent
+            : ColorStyle.primaryWhite,
         // fontWeightDelta: 1,
       ),
     );
@@ -56,48 +43,33 @@ class TabbarScreen extends StatelessWidget {
                   body: Stack(
                     children: [
                       if (controller.selectedIndex.value == 0)
-                      Positioned(
-                        top: 0,
-                        bottom: 0,
-                        left: 0,
-                        right: 0,
-                        child: MainDashboard()
-                      ),
-                      // if (controller.selectedIndex.value == 1)
-                      // Positioned(
-                      //     top: 0,
-                      //     bottom: 0,
-                      //     left: 0,
-                      //     right: 0,
-                      //     child: MoreScreen.moreScreen()
-                      // ),
+                        Positioned(
+                            top: 0,
+                            bottom: 65,
+                            left: 0,
+                            right: 0,
+                            child: MainDashboard()),
                       if (controller.selectedIndex.value == 2)
-                      Positioned(
-                          top: 0,
-                          bottom: 0,
-                          left: 0,
-                          right: 0,
-                          child: MainDashboard()
-                      ),
+                        Positioned(
+                            top: 0,
+                            bottom: 65,
+                            left: 0,
+                            right: 0,
+                            child: MainDashboard()),
                       if (controller.selectedIndex.value == 3)
-                      Positioned(
-                          top: 0,
-                          bottom: 0,
-                          left: 0,
-                          right: 0,
-                          child: MainDashboard()
-                      ),
+                        Positioned(
+                            top: 0,
+                            bottom: 65,
+                            left: 0,
+                            right: 0,
+                            child: YourCard()),
                       if (controller.selectedIndex.value == 4)
-                      Positioned(
-                          top: 0,
-                          bottom: 0,
-                          left: 0,
-                          right: 0,
-                          child: MainDashboard()
-                      ),
-
-
-
+                        Positioned(
+                            top: 0,
+                            bottom: 65,
+                            left: 0,
+                            right: 0,
+                            child: MainDashboard()),
                       Positioned(
                           bottom: 0,
                           child: SafeArea(
@@ -115,7 +87,11 @@ class TabbarScreen extends StatelessWidget {
                                         Image.asset(
                                           ImageStyle.cryptocurrency_Tabbar,
                                           height: iconSize,
-                                          color: (controller.selectedIndex.value == 0) ? Colors.blueAccent : ColorStyle.primaryWhite,
+                                          color:
+                                              (controller.selectedIndex.value ==
+                                                      0)
+                                                  ? Colors.blueAccent
+                                                  : ColorStyle.primaryWhite,
                                         ),
                                         textLabel('Crypto', 0)
                                       ],
@@ -130,9 +106,13 @@ class TabbarScreen extends StatelessWidget {
                                         Image.asset(
                                           ImageStyle.menu_dots_Tabbar,
                                           height: iconSize,
-                                          color: (controller.selectedIndex.value == 1) ? Colors.blueAccent : ColorStyle.primaryWhite,
+                                          color:
+                                              (controller.selectedIndex.value ==
+                                                      1)
+                                                  ? Colors.blueAccent
+                                                  : ColorStyle.primaryWhite,
                                         ),
-                                        textLabel('More' ,1)
+                                        textLabel('More', 1)
                                       ],
                                     ),
                                     onTap: () {
@@ -146,7 +126,11 @@ class TabbarScreen extends StatelessWidget {
                                         Image.asset(
                                           ImageStyle.credit_card_Tabbar,
                                           height: iconSize,
-                                          color: (controller.selectedIndex.value == 3) ? Colors.blueAccent : ColorStyle.primaryWhite,
+                                          color:
+                                              (controller.selectedIndex.value ==
+                                                      3)
+                                                  ? Colors.blueAccent
+                                                  : ColorStyle.primaryWhite,
                                         ),
                                         textLabel('Cards', 3)
                                       ],
@@ -161,7 +145,11 @@ class TabbarScreen extends StatelessWidget {
                                         Image.asset(
                                           ImageStyle.interrogation_Tabbar,
                                           height: iconSize,
-                                          color: (controller.selectedIndex.value == 4) ? Colors.blueAccent : ColorStyle.primaryWhite,
+                                          color:
+                                              (controller.selectedIndex.value ==
+                                                      4)
+                                                  ? Colors.blueAccent
+                                                  : ColorStyle.primaryWhite,
                                         ),
                                         textLabel('Help', 4)
                                       ],
