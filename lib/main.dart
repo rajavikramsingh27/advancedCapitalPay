@@ -26,8 +26,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: WhileOverseas()
-        // home: TabbarScreen()
+        // home: WhileOverseas()
+        home: TabbarScreen()
     );
   }
 }
