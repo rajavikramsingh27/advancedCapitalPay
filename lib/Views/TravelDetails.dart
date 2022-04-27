@@ -10,7 +10,7 @@ import '../Styles/TextStyles.dart';
 import 'package:get/get.dart';
 import '../Components/SwitchButtonCustom.dart';
 import '../Controllers/TravelDetailsController.dart';
-
+import '../Components/PopUp.dart';
 
 
 class TravelDetails extends StatelessWidget {
@@ -218,6 +218,8 @@ class TravelDetails extends StatelessWidget {
                         SizedBox(
                           height: 30,
                         ),
+
+
                         Text(
                           'Overseas I Plan To',
                           // controller.listApplyLeave[index],
@@ -331,6 +333,7 @@ class TravelDetails extends StatelessWidget {
                               radiusBorder: 40,
                               onTap: () {
                                 // Get.to(NewBeneficiary());
+                                TravelPopUp.travelPopUp();
                               },
                             )),
                           ],

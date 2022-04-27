@@ -38,276 +38,267 @@ class NewBeneficiary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset(
-          ImageStyle.tiard,
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          fit: BoxFit.cover,
-        ),
-        Scaffold(
-            appBar: AppBarStyleTitle(
-              title: 'New Beneficiary',
-              leadingButton: IconButton(
-                icon: Image.asset(
-                  ImageStyle.back_circle,
-                  height: 30,
-                ),
-                onPressed: () {
-                  Get.back();
-                },
-              ),
-              trailingButton: IconButton(
-                icon: Image.asset(
-                  ImageStyle.chat,
-                  height: 30,
-                ),
-                onPressed: () {},
-              ),
+    return Scaffold(
+        appBar: AppBarStyleTitle(
+          title: 'New Beneficiary',
+          backgroundColor: ColorStyle.darkestBlue,
+          leadingButton: IconButton(
+            icon: Image.asset(
+              ImageStyle.back_circle,
+              height: 30,
             ),
-            backgroundColor: Colors.transparent,
-            body: GetBuilder(
-              init: NewBeneficiaryController(),
-              initState: (state) {
+            onPressed: () {
+              Get.back();
+            },
+          ),
+          trailingButton: IconButton(
+            icon: Image.asset(
+              ImageStyle.chat,
+              height: 30,
+            ),
+            onPressed: () {},
+          ),
+        ),
+        backgroundColor: ColorStyle.primaryWhite,
+        body: GetBuilder(
+          init: NewBeneficiaryController(),
+          initState: (state) {
 
-              },
-              builder: (authController) {
-                return Obx(()=>SingleChildScrollView(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+          },
+          builder: (authController) {
+            return Obx(()=>SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Stack(
                     children: [
-                      Stack(
-                        children: [
-                          Image.asset(
-                            ImageStyle.Group2201,
-                            width: MediaQuery.of(context).size.width,
-                            height: 250,
-                            fit: BoxFit.cover,
-                          ),
-                          Positioned(
-                              bottom: 0,
-                              left: 0,
-                              right: 0,
-                              child: Container(
-                                color: ColorStyle.secondryBlack.withOpacity(0.7),
-                                padding: EffectStyle.padding(16, 16, 6, 6),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Text(
-                                          "20",
-                                          style: TextStyles.textStyles_32.apply(
-                                              color: ColorStyle.primaryWhite,
-                                              fontWeightDelta: 1),
-                                        ),
-                                        SizedBox(
-                                          width: 4,
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              "November",
-                                              // controller.listApplyLeave[index],
-                                              style: TextStyles.textStyles_10.apply(
-                                                  color: ColorStyle.primaryWhite,
-                                                  fontWeightDelta: 1),
-                                            ),
-                                            Text(
-                                              "Departing",
-                                              // controller.listApplyLeave[index],
-                                              style: TextStyles.textStyles_10.apply(
-                                                  color: ColorStyle.primaryWhite,
-                                                  fontWeightDelta: 1),
-                                            ),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Text(
-                                          "15",
-                                          style: TextStyles.textStyles_32.apply(
-                                              color: ColorStyle.primaryWhite,
-                                              fontWeightDelta: 1),
-                                        ),
-                                        SizedBox(
-                                          width: 4,
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                          CrossAxisAlignment.end,
-                                          children: [
-                                            Text(
-                                              "December",
-                                              // controller.listApplyLeave[index],
-                                              style: TextStyles.textStyles_10.apply(
-                                                  color: ColorStyle.primaryWhite,
-                                                  fontWeightDelta: 1),
-                                            ),
-                                            Text(
-                                              "Arriving",
-                                              // controller.listApplyLeave[index],
-                                              style: TextStyles.textStyles_10.apply(
-                                                  color: ColorStyle.primaryWhite,
-                                                  fontWeightDelta: 1),
-                                            ),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              )),
-                        ],
+                      Image.asset(
+                        ImageStyle.Group2201,
+                        width: MediaQuery.of(context).size.width,
+                        height: 250,
+                        fit: BoxFit.cover,
                       ),
-                      Container(
-                        padding: EdgeInsets.only(left: 20, right: 20, top: 20),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Seychelles',
-                              // controller.listApplyLeave[index],
-                              style: TextStyles.textStyles_14.apply(
-                                  fontWeightDelta: 2,
-                                  color: ColorStyle.secondryBlack),
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              'When will you be away?',
-                              // controller.listApplyLeave[index],
-                              style: TextStyles.textStyles_12
-                                  .apply(color: ColorStyle.secondryBlack),
-                            ),
-                            SizedBox(
-                              height: 13,
-                            ),
-                            Text(
-                              'Departure Date',
-                              // controller.listApplyLeave[index],
-                              style: TextStyles.textStyles_12.apply(
-                                  fontWeightDelta: 1,
-                                  color: ColorStyle.secondryBlack),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            InkWell(
-                              child: Row(
-                                children: [
-                                  Icon(
-                                    Icons.calendar_month,
-                                    size: 30,
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  Text(
-                                    controller.departureDate.value,
-                                    // controller.listApplyLeave[index],
-                                    style: TextStyles.textStyles_14
-                                        .apply(color: ColorStyle.secondryBlack),
-                                  ),
-                                ],
-                              ),
-                              onTap: () async {
-                                controller.departureDate.value = await PickerCustom.datePicker();
-                              },
-                            ),
-                            SizedBox(
-                              height: 25,
-                            ),
-                            Text(
-                              'Return Date',
-                              // controller.listApplyLeave[index],
-                              style: TextStyles.textStyles_12.apply(
-                                  fontWeightDelta: 1,
-                                  color: ColorStyle.secondryBlack),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            InkWell(
-                              child: Row(
-                                children: [
-                                  Icon(
-                                    Icons.calendar_month,
-                                    size: 30,
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  Text(
-                                    controller.returnDate.value,
-                                    // controller.listApplyLeave[index],
-                                    style: TextStyles.textStyles_14
-                                        .apply(color: ColorStyle.secondryBlack),
-                                  ),
-                                ],
-                              ),
-                              onTap: () async {
-                                controller.returnDate.value = await PickerCustom.datePicker();
-                              },
-                            ),
-                            SizedBox(
-                              height: 24,
-                            ),
-                            Row(
+                      Positioned(
+                          bottom: 0,
+                          left: 0,
+                          right: 0,
+                          child: Container(
+                            color: ColorStyle.secondryBlack.withOpacity(0.7),
+                            padding: EffectStyle.padding(16, 16, 6, 6),
+                            child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Expanded(
-                                    child: ElevatedButtonCustom(
-                                      text: 'Cancel',
-                                      textStyle: TextStyles.textStyles_14
-                                          .apply(color: ColorStyle.blueSKY),
-                                      colorBG: ColorStyle.primaryWhite,
-                                      colorBorder: ColorStyle.blueSKY,
-                                      radiusBorder: 40,
-                                      onTap: () {},
-                                    )),
-                                SizedBox(
-                                  width: 16,
+                                Row(
+                                  children: [
+                                    Text(
+                                      "20",
+                                      style: TextStyles.textStyles_32.apply(
+                                          color: ColorStyle.primaryWhite,
+                                          fontWeightDelta: 1),
+                                    ),
+                                    SizedBox(
+                                      width: 4,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "November",
+                                          // controller.listApplyLeave[index],
+                                          style: TextStyles.textStyles_10.apply(
+                                              color: ColorStyle.primaryWhite,
+                                              fontWeightDelta: 1),
+                                        ),
+                                        Text(
+                                          "Departing",
+                                          // controller.listApplyLeave[index],
+                                          style: TextStyles.textStyles_10.apply(
+                                              color: ColorStyle.primaryWhite,
+                                              fontWeightDelta: 1),
+                                        ),
+                                      ],
+                                    )
+                                  ],
                                 ),
-                                Expanded(
-                                    child: ElevatedButtonCustom(
-                                      text: 'Continue',
-                                      textStyle: TextStyles.textStyles_14
-                                          .apply(color: ColorStyle.primaryWhite),
-                                      colorBG: ColorStyle.darkestBlueSignUp,
-                                      colorBorder: ColorStyle.darkestBlueSignUp,
-                                      radiusBorder: 40,
-                                      onTap: () {
-                                        Get.to(TravelDetails());
-                                      },
-                                    )),
+                                Row(
+                                  children: [
+                                    Text(
+                                      "15",
+                                      style: TextStyles.textStyles_32.apply(
+                                          color: ColorStyle.primaryWhite,
+                                          fontWeightDelta: 1),
+                                    ),
+                                    SizedBox(
+                                      width: 4,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.end,
+                                      children: [
+                                        Text(
+                                          "December",
+                                          // controller.listApplyLeave[index],
+                                          style: TextStyles.textStyles_10.apply(
+                                              color: ColorStyle.primaryWhite,
+                                              fontWeightDelta: 1),
+                                        ),
+                                        Text(
+                                          "Arriving",
+                                          // controller.listApplyLeave[index],
+                                          style: TextStyles.textStyles_10.apply(
+                                              color: ColorStyle.primaryWhite,
+                                              fontWeightDelta: 1),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                ),
                               ],
                             ),
-                            SizedBox(
-                              height: 24,
-                            ),
-                          ],
-                        ),
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: ColorStyle.primaryWhite,
-                          // borderRadius: BorderRadius.circular(10)
-                        ),
-                      ),
+                          )),
                     ],
                   ),
-                ));
-              },
-            )
-        ),
-      ],
+                  Container(
+                    padding: EdgeInsets.only(left: 20, right: 20, top: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Seychelles',
+                          // controller.listApplyLeave[index],
+                          style: TextStyles.textStyles_14.apply(
+                              fontWeightDelta: 2,
+                              color: ColorStyle.secondryBlack),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'When will you be away?',
+                          // controller.listApplyLeave[index],
+                          style: TextStyles.textStyles_12
+                              .apply(color: ColorStyle.secondryBlack),
+                        ),
+                        SizedBox(
+                          height: 13,
+                        ),
+                        Text(
+                          'Departure Date',
+                          // controller.listApplyLeave[index],
+                          style: TextStyles.textStyles_12.apply(
+                              fontWeightDelta: 1,
+                              color: ColorStyle.secondryBlack),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        InkWell(
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.calendar_month,
+                                size: 30,
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                controller.departureDate.value,
+                                // controller.listApplyLeave[index],
+                                style: TextStyles.textStyles_14
+                                    .apply(color: ColorStyle.secondryBlack),
+                              ),
+                            ],
+                          ),
+                          onTap: () async {
+                            controller.departureDate.value = await PickerCustom.datePicker();
+                          },
+                        ),
+                        SizedBox(
+                          height: 25,
+                        ),
+                        Text(
+                          'Return Date',
+                          // controller.listApplyLeave[index],
+                          style: TextStyles.textStyles_12.apply(
+                              fontWeightDelta: 1,
+                              color: ColorStyle.secondryBlack),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        InkWell(
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.calendar_month,
+                                size: 30,
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                controller.returnDate.value,
+                                // controller.listApplyLeave[index],
+                                style: TextStyles.textStyles_14
+                                    .apply(color: ColorStyle.secondryBlack),
+                              ),
+                            ],
+                          ),
+                          onTap: () async {
+                            controller.returnDate.value = await PickerCustom.datePicker();
+                          },
+                        ),
+                        SizedBox(
+                          height: 24,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Expanded(
+                                child: ElevatedButtonCustom(
+                                  text: 'Cancel',
+                                  textStyle: TextStyles.textStyles_14
+                                      .apply(color: ColorStyle.blueSKY),
+                                  colorBG: ColorStyle.primaryWhite,
+                                  colorBorder: ColorStyle.blueSKY,
+                                  radiusBorder: 40,
+                                  onTap: () {},
+                                )),
+                            SizedBox(
+                              width: 16,
+                            ),
+                            Expanded(
+                                child: ElevatedButtonCustom(
+                                  text: 'Continue',
+                                  textStyle: TextStyles.textStyles_14
+                                      .apply(color: ColorStyle.primaryWhite),
+                                  colorBG: ColorStyle.darkestBlueSignUp,
+                                  colorBorder: ColorStyle.darkestBlueSignUp,
+                                  radiusBorder: 40,
+                                  onTap: () {
+                                    Get.to(TravelDetails());
+                                  },
+                                )),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 24,
+                        ),
+                      ],
+                    ),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: ColorStyle.primaryWhite,
+                      // borderRadius: BorderRadius.circular(10)
+                    ),
+                  ),
+                ],
+              ),
+            ));
+          },
+        )
     );
   }
 }
