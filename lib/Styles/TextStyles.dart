@@ -12,6 +12,7 @@ class TextStyles {
         fontWeight: FontWeight.normal,
       );
 
+
   static TextStyle get textStyles_22 => TextStyle(
     fontSize: SizeStyle.size_22,
     fontFamily: kFontFamily,

@@ -141,6 +141,7 @@ class ImageStyle {
   static const String invite_lightBlue = "$baseImage/invite_lightBlue.png";
   static const String savings_lightBlue = "$baseImage/savings_lightBlue.png";
   static const String chat_lightBlue = "$baseImage/chat_lightBlue.png";
+
   static const String apple = "$baseImage/apple.png";
   static const String unlock = "$baseImage/unlock.png";
 
@@ -159,4 +160,6 @@ class ImageStyle {
   static const String plusRadius = "$baseImage/plusRadius.png";
   static const String search_interface_symbol = "$baseImage/search_interface_symbol.png";
 
+  static const String adddestination = "$baseImage/adddestination.png";
+  static const String creditard = "$baseImage/creditard.png";
 }
