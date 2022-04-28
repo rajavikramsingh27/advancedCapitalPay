@@ -9,12 +9,19 @@ import '../Styles/EffectStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
 import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
+import '../Views/MessagePage.dart';
+import '../Views/AppSettings.dart';
+import '../Components/SearchBarCustom.dart';
+import '../Views/TransactionDetails.dart';
+import '../Views/SavingGoal.dart';
+import '../Views/AccountDetails.dart';
 
 class MainDashboard extends StatelessWidget {
   MainDashboard({Key? key}) : super(key: key);
 
-  SwiperController _controller = SwiperController();
   final controller = Get.put(MainDashboardController());
+
+  SwiperController _controller = SwiperController();
 
   swiperView() {
     return Container(
@@ -41,14 +48,19 @@ class MainDashboard extends StatelessWidget {
         // ),
         controller: _controller,
         itemBuilder: (BuildContext context, int index) {
-          return Container(
-            padding: EdgeInsets.only(left: 40, right: 40),
-            child: Image.asset(
-              controller.arrCardsImage[index],
-              // fit: BoxFit.contain,
-              width: MediaQuery.of(context).size.width,
-              height: 250,
+          return InkWell(
+            child: Container(
+              padding: EdgeInsets.only(left: 40, right: 40),
+              child: Image.asset(
+                controller.arrCardsImage[index],
+                // fit: BoxFit.contain,
+                width: MediaQuery.of(context).size.width,
+                height: 250,
+              ),
             ),
+            onTap: () {
+              Get.to(SavingGoal());
+            },
           );
         },
         onIndexChanged: (index) {
@@ -69,7 +81,38 @@ class MainDashboard extends StatelessWidget {
           fit: BoxFit.cover,
         ),
         Scaffold(
-          appBar: AppBarStyle(),
+          appBar: AppBarStyleLeadingTitleTrailing(
+            leadingImage: ImageStyle.ellipse2,
+            nameUser: 'MR HARRISON SMITH',
+            descriptionUser: 'Plus Personal Customer',
+            timeLastLogin: 'Last Successful login: 02 Feb 2021. 13: 53: 41',
+            nameStyle: TextStyles.textStyles_14
+                .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 2),
+            descriptionStyle: TextStyles.textStyles_12
+                .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
+            trailingAction: [
+              IconButton(
+                icon: Image.asset(
+                  ImageStyle.chat,
+                  height: 26,
+                ),
+                onPressed: () {
+                  // Get.to(MessagePage());
+                },
+              ),
+              IconButton(
+                icon: Image.asset(
+                  ImageStyle.user_logout,
+                  height: 26,
+                ),
+                onPressed: () {},
+              ),
+              SizedBox(
+                width: 6,
+              ),
+            ],
+          ),
+          // AppBarStyle(),
           backgroundColor: Colors.transparent,
           body: GetBuilder(
             init: MainDashboardController(),
@@ -232,34 +275,39 @@ class MainDashboard extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(15),
                                   ),
                                 ),
-                                Container(
-                                  width: 91,
-                                  height: 66,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Image.asset(ImageStyle.transfer3,
-                                          color: ColorStyle.darkestBlueSignUp,
-                                          // width: MediaQuery.of(context).size.width,
-                                          height: 25
-                                          // fit: BoxFit.cover,
-                                          ),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Text(
-                                        'Account Details',
-                                        style: TextStyles.textStyles_8.apply(
-                                          color: ColorStyle.darkestBlueSignUp,
-                                          fontWeightDelta: 1,
+                                InkWell(
+                                  child: Container(
+                                    width: 91,
+                                    height: 66,
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Image.asset(ImageStyle.transfer3,
+                                            color: ColorStyle.darkestBlueSignUp,
+                                            // width: MediaQuery.of(context).size.width,
+                                            height: 25
+                                            // fit: BoxFit.cover,
+                                            ),
+                                        SizedBox(
+                                          height: 5,
                                         ),
-                                      ),
-                                    ],
+                                        Text(
+                                          'Account Details',
+                                          style: TextStyles.textStyles_8.apply(
+                                            color: ColorStyle.darkestBlueSignUp,
+                                            fontWeightDelta: 1,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: ColorStyle.primaryWhite,
+                                      borderRadius: BorderRadius.circular(15),
+                                    ),
                                   ),
-                                  decoration: BoxDecoration(
-                                    color: ColorStyle.primaryWhite,
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
+                                  onTap: () {
+                                    Get.to(AccountDetails());
+                                  },
                                 ),
                                 Container(
                                   width: 91,
@@ -315,6 +363,8 @@ class MainDashboard extends StatelessWidget {
                                         fontWeightDelta: 1),
                                     onTap: () {
                                       controller.listType.value = 1;
+                                      controller.listCount.value +=1;
+                                      controller.listCount.value -=1;
                                     },
                                   ),
                                 ),
@@ -327,6 +377,8 @@ class MainDashboard extends StatelessWidget {
                                         fontWeightDelta: 1),
                                     onTap: () {
                                       controller.listType.value = 2;
+                                      controller.listCount.value +=1;
+                                      controller.listCount.value -=1;
                                     },
                                   ),
                                 ),
@@ -339,6 +391,8 @@ class MainDashboard extends StatelessWidget {
                                         fontWeightDelta: 1),
                                     onTap: () {
                                       controller.listType.value = 3;
+                                      controller.listCount.value +=1;
+                                      controller.listCount.value -=1;
                                     },
                                   ),
                                 ),
@@ -352,41 +406,7 @@ class MainDashboard extends StatelessWidget {
                             SizedBox(
                               height: 10,
                             ),
-                            Container(
-                              width: double.infinity,
-                              height: 50,
-                              margin: EdgeInsets.only(left: 16, right: 16),
-                              padding: EdgeInsets.only(left: 6, right: 6),
-                              child: Row(
-                                children: [
-                                  Icon(
-                                    Icons.search,
-                                    color: ColorStyle.grayColor,
-                                    size: 34,
-                                  ),
-                                  Expanded(
-                                      child: TextField(
-                                    style: TextStyles.textStyles_16.apply(
-                                      color: ColorStyle.secondryBlack,
-                                      fontWeightDelta: 0,
-                                    ),
-                                    decoration: InputDecoration(
-                                      hintText: "Search",
-                                      hintStyle: TextStyles.textStyles_16.apply(
-                                        color: ColorStyle.grey,
-                                        fontWeightDelta: 0,
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                    ),
-                                    onChanged: (value) {},
-                                  ))
-                                ],
-                              ),
-                              decoration: BoxDecoration(
-                                  color: Colors.black26,
-                                  borderRadius: BorderRadius.circular(8)),
-                            ),
+                            SearchBarCustom(),
                             SizedBox(
                               height: 10,
                             ),
@@ -431,99 +451,111 @@ class MainDashboard extends StatelessWidget {
                                     color: Colors.black26,
                                   ),
                                   ListView.builder(
-                                      padding: EdgeInsets.only(top: 20),
+                                      padding:
+                                          EdgeInsets.only(top: 16, bottom: 16),
                                       shrinkWrap: true,
-                                      itemCount: 5,
+                                      itemCount: controller.listCount.value,
                                       physics: NeverScrollableScrollPhysics(),
                                       itemBuilder:
-                                          (BuildContext context, int index) {
+                                          (context, index) {
+
                                         if (controller.listType.value == 1) {
-                                          return Container(
-                                            padding: EdgeInsets.only(
-                                              left: 12,
-                                              right: 12,
-                                            ),
-                                            alignment: Alignment.center,
-                                            height: 60,
-                                            width: MediaQuery.of(context)
-                                                .size
-                                                .width,
-                                            margin: EdgeInsets.all(6),
-                                            // color: Colors.red,
-                                            child: Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                              children: [
-                                                Row(
-                                                  children: [
-                                                    Image.asset(
-                                                      ImageStyle.agp,
-                                                      height: 42,
-                                                      width: 42,
-                                                    ),
-                                                    SizedBox(
-                                                      width: 16,
-                                                    ),
-                                                    Column(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment.start,
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment.center,
-                                                      children: [
-                                                        Text(
-                                                          'Costa Coffee',
-                                                          // controller.listApplyLeave[index],
-                                                          style: TextStyles
-                                                              .textStyles_12
-                                                              .apply(
-                                                                  color: ColorStyle
-                                                                      .secondryBlack),
-                                                        ),
-                                                        Text(
-                                                          'Food & Drink',
-                                                          // controller.listApplyLeave[index],
-                                                          style: TextStyles
-                                                              .textStyles_8
-                                                              .apply(
-                                                                  color: ColorStyle
-                                                                      .secondryBlack),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ],
-                                                ),
-                                                Row(
-                                                  children: [
-                                                    Container(
-                                                      alignment: Alignment.center,
-                                                      padding: EdgeInsets.only(
-                                                          left: 14, right: 14),
-                                                      child: Text(
-                                                        '- \$8.10',
-                                                        style: TextStyles
-                                                            .textStyles_16
-                                                            .apply(
+                                          return InkWell(
+                                            child: Container(
+                                              padding: EdgeInsets.only(
+                                                left: 12,
+                                                right: 12,
+                                              ),
+                                              alignment: Alignment.center,
+                                              height: 60,
+                                              width: MediaQuery.of(context)
+                                                  .size
+                                                  .width,
+                                              margin: EdgeInsets.all(6),
+                                              // color: Colors.red,
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                MainAxisAlignment
+                                                    .spaceBetween,
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      Image.asset(
+                                                        ImageStyle.agp,
+                                                        height: 42,
+                                                        width: 42,
+                                                      ),
+                                                      SizedBox(
+                                                        width: 16,
+                                                      ),
+                                                      Column(
+                                                        crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                        mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                        children: [
+                                                          Text(
+                                                            'Costa Coffee',
+                                                            // controller.listApplyLeave[index],
+                                                            style: TextStyles
+                                                                .textStyles_12
+                                                                .apply(
                                                                 color: ColorStyle
                                                                     .secondryBlack),
+                                                          ),
+                                                          Text(
+                                                            'Food & Drink',
+                                                            // controller.listApplyLeave[index],
+                                                            style: TextStyles
+                                                                .textStyles_8
+                                                                .apply(
+                                                                color: ColorStyle
+                                                                    .secondryBlack),
+                                                          ),
+                                                        ],
                                                       ),
-                                                      // width: 70,
-                                                      // height: 40,
-                                                    ),
-                                                    Icon(
-                                                      Icons
-                                                          .arrow_forward_ios_rounded,
-                                                      size: 20,
-                                                      color: Colors.black45,
-                                                    ),
-                                                  ],
-                                                ),
-                                              ],
-                                            ),
+                                                    ],
+                                                  ),
+                                                  Row(
+                                                    children: [
+                                                      Container(
+                                                        alignment:
+                                                        Alignment.center,
+                                                        padding: EdgeInsets.only(
+                                                            left: 14, right: 14),
+                                                        child: Text(
+                                                          '- \$8.10',
+                                                          style: TextStyles
+                                                              .textStyles_16
+                                                              .apply(
+                                                              color: ColorStyle
+                                                                  .secondryBlack),
+                                                        ),
+                                                        // width: 70,
+                                                        // height: 40,
+                                                      ),
+                                                      Icon(
+                                                        Icons
+                                                            .arrow_forward_ios_rounded,
+                                                        size: 20,
+                                                        color: Colors.black45,
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ],
+                                              ),
 
-                                            decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(5),
-                                                color: Colors.lightBlueAccent
-                                                    .withOpacity(0.1)),
+                                              decoration: BoxDecoration(
+                                                  borderRadius:
+                                                  BorderRadius.circular(5),
+                                                  color: Colors.lightBlueAccent
+                                                      .withOpacity(0.1)),
+                                            ),
+                                            onTap: () {
+                                              Get.to(TransactionDetails());
+                                            },
                                           );
                                         } else if (controller.listType.value ==
                                             2) {
@@ -533,10 +565,14 @@ class MainDashboard extends StatelessWidget {
                                             alignment: Alignment.center,
                                             // color: Colors.red,
                                             height: 60,
-                                            width: MediaQuery.of(context).size.width,
+                                            width: MediaQuery.of(context)
+                                                .size
+                                                .width,
                                             margin: EdgeInsets.all(6),
                                             child: Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
                                               children: [
                                                 Row(
                                                   children: [
@@ -545,12 +581,16 @@ class MainDashboard extends StatelessWidget {
                                                       height: 30,
                                                       width: 30,
                                                     ),
-                                                    SizedBox(width: 16,),
+                                                    SizedBox(
+                                                      width: 16,
+                                                    ),
                                                     Column(
                                                       crossAxisAlignment:
-                                                          CrossAxisAlignment.start,
+                                                          CrossAxisAlignment
+                                                              .start,
                                                       mainAxisAlignment:
-                                                          MainAxisAlignment.center,
+                                                          MainAxisAlignment
+                                                              .center,
                                                       children: [
                                                         Text(
                                                           'November 2020',
@@ -574,7 +614,6 @@ class MainDashboard extends StatelessWidget {
                                                     ),
                                                   ],
                                                 ),
-
                                                 Icon(
                                                   Icons
                                                       .arrow_forward_ios_rounded,
@@ -594,44 +633,64 @@ class MainDashboard extends StatelessWidget {
                                             3) {
                                           return Container(
                                             padding: EdgeInsets.only(
-                                                left: 12, right: 12),
+                                                left: 12,
+                                                right: 12,
+                                                bottom: 12,
+                                                top: 12),
                                             alignment: Alignment.center,
                                             // color: Colors.red,
-                                            height: 60,
-                                            width: MediaQuery.of(context).size.width,
+                                            // height: 60,
+                                            width: MediaQuery.of(context)
+                                                .size
+                                                .width,
                                             margin: EdgeInsets.all(6),
                                             child: Row(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 Image.asset(
                                                   ImageStyle.notice,
                                                   height: 30,
                                                   width: 30,
                                                 ),
-                                                SizedBox(width: 16,),
+                                                SizedBox(
+                                                  width: 16,
+                                                ),
                                                 Expanded(
                                                   child: Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment.start,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.center,
+                                                    // crossAxisAlignment:
+                                                    //     CrossAxisAlignment.start,
+                                                    // mainAxisAlignment:
+                                                    //     MainAxisAlignment.center,
                                                     children: [
                                                       Row(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
                                                         mainAxisAlignment:
-                                                        MainAxisAlignment.spaceBetween,
+                                                            MainAxisAlignment
+                                                                .spaceBetween,
                                                         children: [
-                                                          Expanded(child: Text(
+                                                          Expanded(
+                                                              child: Text(
                                                             'Plus+ Current account (6435)',
-                                                            style: TextStyles.textStyles_12.apply(
-                                                                color: ColorStyle.secondryBlack,
-                                                                fontWeightDelta: 1
-                                                            ),
+                                                            style: TextStyles
+                                                                .textStyles_12
+                                                                .apply(
+                                                                    color: ColorStyle
+                                                                        .secondryBlack,
+                                                                    fontWeightDelta:
+                                                                        1),
                                                           )),
                                                           Text(
                                                             '01 MAR 2022',
-                                                            style: TextStyles.textStyles_12.apply(
-                                                                color: ColorStyle.secondryBlack,
-                                                              fontWeightDelta: 2
-                                                            ),
+                                                            style: TextStyles
+                                                                .textStyles_12
+                                                                .apply(
+                                                                    color: ColorStyle
+                                                                        .secondryBlack,
+                                                                    fontWeightDelta:
+                                                                        2),
                                                           ),
                                                         ],
                                                       ),
@@ -649,7 +708,6 @@ class MainDashboard extends StatelessWidget {
                                                 ),
                                               ],
                                             ),
-
                                             decoration: BoxDecoration(
                                                 borderRadius:
                                                     BorderRadius.circular(5),

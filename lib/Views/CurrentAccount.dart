@@ -7,7 +7,7 @@ import '../Components/BackgroundImage.dart';
 import '../Components/ButtonCustom.dart';
 import '../Components/TextFieldCustom.dart';
 import '../Controllers/CurrentAccountController.dart';
-import '../Controllers/PreferredLanguageSelectionController.dart';
+import '../Controllers/PreferredLanguageController.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
@@ -47,37 +47,6 @@ class CurrentAccount extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(height: 10,),
-                            Container(
-                              padding: EdgeInsets.only(left: 16,right: 16),
-                              child: AppBarStyleCustom1(
-                                leadingButton: IconButton(
-                                  icon: Image.asset(
-                                    ImageStyle.ellipse2,
-                                    height: 30,
-                                  ),
-                                  onPressed: () {},
-                                ),
-                                trailingButton: IconButton(
-                                  icon: Image.asset(
-                                    ImageStyle.chat,
-                                    height: 30,
-                                  ),
-                                  onPressed: () {},
-                                ),
-                                userLogOutButton: IconButton(
-                                  icon: Image.asset(
-                                    ImageStyle.user_logout,
-                                    height: 30,
-                                  ),
-                                  onPressed: () {},
-                                ),
-                              ),
-                              color: ColorStyle.blueSKY.withOpacity(.2),
-
-
-                            ),
-                            SizedBox(height: 10,),
                             Container(
                               padding: EdgeInsets.only(left: 20,),
                               child: Text(

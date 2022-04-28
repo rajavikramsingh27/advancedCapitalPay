@@ -18,202 +18,181 @@ class NewBeneficiary1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        BackgroundImageBeneficiary(),
+        // BackgroundImageBeneficiary(),
         Scaffold(
-          appBar:     AppBarStyleCustomBenifi(
-
-        leadingButton: BackButton(
-
-        onPressed: () {},
-        ),
-        trailingButton: IconButton(
-        icon: Image.asset(
-        ImageStyle.chat,
-        height: 30,
-        ),
-        onPressed: () {},
-        ),
-
-        ),
             backgroundColor: Colors.transparent,
-
-            body:     SingleChildScrollView(
-              padding: EdgeInsets.only(left: 14,right: 14),
+            body: SingleChildScrollView(
+              padding: EdgeInsets.only(left: 14, right: 14),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 20,),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Text(
                     'New Beneficiary Summary',
                     style: TextStyles.textStyles_20.apply(
-                      color: ColorStyle.primaryWhite,
-                      fontWeightDelta: 2
-                    ),
+                        color: ColorStyle.primaryWhite, fontWeightDelta: 2),
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Container(
-
                     // width: 373,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(height: 20,),
-                         Row(
-                    children: [
-                      // Image.asset(ImageStyle.icon_material_error),
-                      Icon(Icons.error,size: 50,color: ColorStyle.blueSKY,),
-                      SizedBox(width: 10,),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-
-                          Text(
-                            'Protect against Fraud, Don’t fall victim ',
-
-
-                            style: TextStyles.textStyles_14.apply(
-                                color: ColorStyle.secondryBlack,
-                                fontWeightDelta: 2
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          children: [
+                            // Image.asset(ImageStyle.icon_material_error),
+                            Icon(
+                              Icons.error,
+                              size: 50,
+                              color: ColorStyle.blueSKY,
                             ),
-                          ),
-                          Text(
-
-                                'Criminalswill pretend to be people in, ',
-
-                            style: TextStyles.textStyles_14.apply(
-                                color: ColorStyle.secondryBlack,
-                                fontWeightDelta: 2
+                            SizedBox(
+                              width: 10,
                             ),
-                          ),
-                          Text(
-
-                                'will pretend to be people in which you',
-
-                            style: TextStyles.textStyles_14.apply(
-                                color: ColorStyle.secondryBlack,
-                                fontWeightDelta: 2
-                            ),
-                          ),
-                          Text(
-
-                            'trust companies, government and legal',
-
-                            style: TextStyles.textStyles_14.apply(
-                                color: ColorStyle.secondryBlack,
-                                fontWeightDelta: 2
-                            ),
-                          ),
-                          Text(
-
-                            'figures',
-
-                            style: TextStyles.textStyles_14.apply(
-                                color: ColorStyle.secondryBlack,
-                                fontWeightDelta: 2
-                            ),
-                          ),
-                          Text(
-
-                            'see more ',
-
-                            style: TextStyles.textStyles_14.apply(
-                                color: ColorStyle.blueSKY,
-                                fontWeightDelta: 2
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                        SizedBox(height: 40,),
-                      Container(padding: EdgeInsets.only(left: 62,right: 20),child:   Text(
-                        'AdvanceCapitalPay will never ask'
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Protect against Fraud, Don’t fall victim ',
+                                  style: TextStyles.textStyles_14.apply(
+                                      color: ColorStyle.secondryBlack,
+                                      fontWeightDelta: 2),
+                                ),
+                                Text(
+                                  'Criminalswill pretend to be people in, ',
+                                  style: TextStyles.textStyles_14.apply(
+                                      color: ColorStyle.secondryBlack,
+                                      fontWeightDelta: 2),
+                                ),
+                                Text(
+                                  'will pretend to be people in which you',
+                                  style: TextStyles.textStyles_14.apply(
+                                      color: ColorStyle.secondryBlack,
+                                      fontWeightDelta: 2),
+                                ),
+                                Text(
+                                  'trust companies, government and legal',
+                                  style: TextStyles.textStyles_14.apply(
+                                      color: ColorStyle.secondryBlack,
+                                      fontWeightDelta: 2),
+                                ),
+                                Text(
+                                  'figures',
+                                  style: TextStyles.textStyles_14.apply(
+                                      color: ColorStyle.secondryBlack,
+                                      fontWeightDelta: 2),
+                                ),
+                                Text(
+                                  'see more ',
+                                  style: TextStyles.textStyles_14.apply(
+                                      color: ColorStyle.blueSKY,
+                                      fontWeightDelta: 2),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 40,
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 62, right: 20),
+                          child: Text(
+                            'AdvanceCapitalPay will never ask'
                             ' you to transfer any funds, criminals '
                             'will pressure you. For more information '
                             'visit our Fraud and Security Centre',
-
-
-                        style: TextStyles.textStyles_14.apply(
-                            color: ColorStyle.secondryBlack,
-                            fontWeightDelta: 2
+                            style: TextStyles.textStyles_14.apply(
+                                color: ColorStyle.secondryBlack,
+                                fontWeightDelta: 2),
+                          ),
                         ),
-                      ),),
-                        SizedBox(height: 20,),
-
-
-
-
-
-
-
-
-
+                        SizedBox(
+                          height: 20,
+                        ),
                       ],
                     ),
                     decoration: BoxDecoration(
                         color: ColorStyle.primaryWhite,
-                        borderRadius: BorderRadius.circular(16)
-                    ),
+                        borderRadius: BorderRadius.circular(16)),
                   ),
-                  SizedBox(height: 20,),
-
-                InkWell(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Beneficiary Details',
-                        style: TextStyles.textStyles_20.apply(
-                            color: ColorStyle.primaryWhite,
-                            fontWeightDelta: 2
+                  SizedBox(
+                    height: 20,
+                  ),
+                  InkWell(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Beneficiary Details',
+                          style: TextStyles.textStyles_20.apply(
+                              color: ColorStyle.primaryWhite,
+                              fontWeightDelta: 2),
                         ),
-                      ),
-                    InkWell(
-                      child:   Container(
-                        child: Row(
-                          children: [
-                            SizedBox(width: 4,),
-                            Icon(Icons.edit,  color: ColorStyle.blueSKY,size: 20,),
-                            SizedBox(width: 4,),
-                            Text(
-                              'Edit',
-                              style: TextStyles.textStyles_14.apply(
+                        InkWell(
+                          child: Container(
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  width: 4,
+                                ),
+                                Icon(
+                                  Icons.edit,
                                   color: ColorStyle.blueSKY,
-                                  fontWeightDelta: 2
-                              ),
+                                  size: 20,
+                                ),
+                                SizedBox(
+                                  width: 4,
+                                ),
+                                Text(
+                                  'Edit',
+                                  style: TextStyles.textStyles_14.apply(
+                                      color: ColorStyle.blueSKY,
+                                      fontWeightDelta: 2),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        height: 30,
-                        width: 60,
-                        decoration: BoxDecoration(
-                            color: ColorStyle.primaryWhite,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                      ),
-                      onTap: (){},
-                    )
-                    ],
+                            height: 30,
+                            width: 60,
+                            decoration: BoxDecoration(
+                                color: ColorStyle.primaryWhite,
+                                borderRadius: BorderRadius.circular(10)),
+                          ),
+                          onTap: () {},
+                        )
+                      ],
+                    ),
+                    onTap: () {},
                   ),
-                  onTap: (){},
-                ),
-                  SizedBox(height: 20,),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Container(
-                    padding: EdgeInsets.only(left: 20,right: 20),
-                          // height: 300,
+                    padding: EdgeInsets.only(left: 20, right: 20),
+                    // height: 300,
                     // width: 373,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Beneficiary Type',
                           style: TextStyles.textStyles_14.apply(
-                            color: ColorStyle.secondryBlack,
-                            fontWeightDelta: 2
-                          ),
+                              color: ColorStyle.secondryBlack,
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         TextFieldCustom(
                           hintText: 'Local Beneficiary',
                           // prefix: Image.asset(ImageStyle.user),
@@ -222,48 +201,64 @@ class NewBeneficiary1 extends StatelessWidget {
                           ),
                           // colorFill: ColorStyle..withOpacity(0.5),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Select Country',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         CountryPicker(),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Full Beneficiary Name',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Row(
                           children: [
-                            Expanded(child: TextFieldCustom(
-                              // prefix: Image.asset(ImageStyle.user),
-                              hintText: 'Anthony DC',
-                              textStyle: TextStyles.textStyles_16.apply(
-                                color: ColorStyle.primaryWhite,
+                            Expanded(
+                              child: TextFieldCustom(
+                                // prefix: Image.asset(ImageStyle.user),
+                                hintText: 'Anthony DC',
+                                textStyle: TextStyles.textStyles_16.apply(
+                                  color: ColorStyle.primaryWhite,
+                                ),
+                                // colorFill: ColorStyle..withOpacity(0.5),
                               ),
-                              // colorFill: ColorStyle..withOpacity(0.5),
-                            ),),
-                            SizedBox(width: 10,),
-                            Image.asset(ImageStyle.Rectangle2094,height: 70,),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Image.asset(
+                              ImageStyle.Rectangle2094,
+                              height: 70,
+                            ),
                           ],
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Beneficiary Account Type',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         TextFieldCustom(
                           // prefix: Image.asset(ImageStyle.user),
                           hintText: 'Personal Account',
@@ -272,15 +267,18 @@ class NewBeneficiary1 extends StatelessWidget {
                           ),
                           // colorFill: ColorStyle..withOpacity(0.5),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Beneficiary Account Type',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         TextFieldCustom(
                           // prefix: Image.asset(ImageStyle.user),
                           hintText: 'Ant',
@@ -289,15 +287,18 @@ class NewBeneficiary1 extends StatelessWidget {
                           ),
                           // colorFill: ColorStyle..withOpacity(0.5),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Beneficiary Address Line 1',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         TextFieldCustom(
                           // prefix: Image.asset(ImageStyle.user),
                           hintText: '26-30 York Way, Kings Cross',
@@ -306,15 +307,18 @@ class NewBeneficiary1 extends StatelessWidget {
                           ),
                           // colorFill: ColorStyle..withOpacity(0.5),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Beneficiary Address Line 2',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         TextFieldCustom(
                           // prefix: Image.asset(ImageStyle.user),
                           hintText: '26-30 York Way, Kings Cross',
@@ -323,15 +327,18 @@ class NewBeneficiary1 extends StatelessWidget {
                           ),
                           // colorFill: ColorStyle..withOpacity(0.5),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'City',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         TextFieldCustom(
                           // prefix: Image.asset(ImageStyle.user),
                           hintText: 'New York',
@@ -340,71 +347,78 @@ class NewBeneficiary1 extends StatelessWidget {
                           ),
                           // colorFill: ColorStyle..withOpacity(0.5),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Postal/ZIP Code',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         TextFieldCustom(
                           // prefix: Image.asset(ImageStyle.user),
                           hintText: 'N1 9AA',
                           textStyle: TextStyles.textStyles_16.apply(
                             color: ColorStyle.primaryWhite,
-
                           ),
                           // colorFill: ColorStyle..withOpacity(0.5),
                         ),
-                        SizedBox(height: 20,),
-
-
+                        SizedBox(
+                          height: 20,
+                        ),
                       ],
                     ),
                     decoration: BoxDecoration(
                         color: ColorStyle.primaryWhite,
-                        borderRadius: BorderRadius.circular(10)
-                    ),
+                        borderRadius: BorderRadius.circular(10)),
                   ),
-                  SizedBox(height: 20,),
-
+                  SizedBox(
+                    height: 20,
+                  ),
                   Text(
                     'Beneficiary Contact Details',
                     style: TextStyles.textStyles_20.apply(
-                        color: ColorStyle.primaryWhite,
-                        fontWeightDelta: 2
-                    ),
+                        color: ColorStyle.primaryWhite, fontWeightDelta: 2),
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Container(
-                    padding: EdgeInsets.only(left: 20,right: 20),
+                    padding: EdgeInsets.only(left: 20, right: 20),
                     // height: 300,
                     // width: 373,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Country',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         CountryPicker(),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Account Number',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         TextFieldCustom(
                           // prefix: Image.asset(ImageStyle.user),
                           hintText: '00117384934',
@@ -413,74 +427,84 @@ class NewBeneficiary1 extends StatelessWidget {
                           ),
                           // colorFill: ColorStyle..withOpacity(0.5),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Email Address',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         TextFieldCustom(
                           // prefix: Image.asset(ImageStyle.user),
                           hintText: 'Anthony@gmail.com',
                           textStyle: TextStyles.textStyles_16.apply(
                             color: ColorStyle.primaryWhite,
-
                           ),
                           // colorFill: ColorStyle..withOpacity(0.5),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Beneficiary Documentation',
                           style: TextStyles.textStyles_16.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Text(
-                        'Upload any relevant documentation relating to the beneficiary such as Identification Documents, Company Details, Invoices and more.',
+                          'Upload any relevant documentation relating to the beneficiary such as Identification Documents, Company Details, Invoices and more.',
                           style: TextStyles.textStyles_12.apply(
-                              color: ColorStyle.secondryBlack,
+                            color: ColorStyle.secondryBlack,
                           ),
                         ),
-                        SizedBox(height: 20,),
-
-
+                        SizedBox(
+                          height: 20,
+                        ),
                       ],
                     ),
                     decoration: BoxDecoration(
                         color: ColorStyle.primaryWhite,
-                        borderRadius: BorderRadius.circular(10)
-                    ),
+                        borderRadius: BorderRadius.circular(10)),
                   ),
-                  SizedBox(height: 20,),
-
+                  SizedBox(
+                    height: 20,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         'Beneficiary Bank Details',
                         style: TextStyles.textStyles_20.apply(
-                            color: ColorStyle.primaryWhite,
-                            fontWeightDelta: 2
-                        ),
+                            color: ColorStyle.primaryWhite, fontWeightDelta: 2),
                       ),
                       InkWell(
-                        child:   Container(
+                        child: Container(
                           child: Row(
                             children: [
-                              SizedBox(width: 4,),
-                              Icon(Icons.edit,  color: ColorStyle.blueSKY,size: 20,),
-                              SizedBox(width: 4,),
+                              SizedBox(
+                                width: 4,
+                              ),
+                              Icon(
+                                Icons.edit,
+                                color: ColorStyle.blueSKY,
+                                size: 20,
+                              ),
+                              SizedBox(
+                                width: 4,
+                              ),
                               Text(
                                 'Edit',
                                 style: TextStyles.textStyles_14.apply(
                                     color: ColorStyle.blueSKY,
-                                    fontWeightDelta: 2
-                                ),
+                                    fontWeightDelta: 2),
                               ),
                             ],
                           ),
@@ -488,41 +512,47 @@ class NewBeneficiary1 extends StatelessWidget {
                           width: 60,
                           decoration: BoxDecoration(
                               color: ColorStyle.primaryWhite,
-                              borderRadius: BorderRadius.circular(10)
-                          ),
+                              borderRadius: BorderRadius.circular(10)),
                         ),
-                        onTap: (){},
+                        onTap: () {},
                       )
                     ],
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Container(
-                    padding: EdgeInsets.only(left: 20,right: 20),
+                    padding: EdgeInsets.only(left: 20, right: 20),
                     // height: 300,
                     // width: 373,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Country',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         CountryPicker(),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Account Number',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         TextFieldCustom(
                           // prefix: Image.asset(ImageStyle.user),
                           hintText: '00117384934',
@@ -531,305 +561,232 @@ class NewBeneficiary1 extends StatelessWidget {
                           ),
                           // colorFill: ColorStyle..withOpacity(0.5),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Sort Code',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Row(
                           children: [
                             Container(
-
                               decoration: BoxDecoration(
-
-                                borderRadius: BorderRadius.circular(30),
-                                border: Border.all(
-                                  width: 1,
-                                  color: ColorStyle.secondryBlack
-                                )
-                              ),
+                                  borderRadius: BorderRadius.circular(30),
+                                  border: Border.all(
+                                      width: 1,
+                                      color: ColorStyle.secondryBlack)),
                               alignment: Alignment.center,
                               child: Text(
                                 '43',
                                 style: TextStyles.textStyles_16.apply(
                                     color: ColorStyle.secondryBlack,
-                                    fontWeightDelta: 2
-                                ),
+                                    fontWeightDelta: 2),
                               ),
                               height: 42,
                               width: 85,
                             ),
                             Container(
-
                               decoration: BoxDecoration(
-
                                   borderRadius: BorderRadius.circular(30),
                                   border: Border.all(
                                       width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
-
+                                      color: ColorStyle.secondryBlack)),
                               height: 2,
-
                             ),
-                            SizedBox(width: 2,),
-                            Container(
-
-                              decoration: BoxDecoration(
-
-                                  borderRadius: BorderRadius.circular(30),
-                                  border: Border.all(
-                                      width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
-
-                              height: 2,
-
+                            SizedBox(
+                              width: 2,
                             ),
-                            SizedBox(width: 2,),
                             Container(
-
                               decoration: BoxDecoration(
-
                                   borderRadius: BorderRadius.circular(30),
                                   border: Border.all(
                                       width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
-
+                                      color: ColorStyle.secondryBlack)),
                               height: 2,
-
+                            ),
+                            SizedBox(
+                              width: 2,
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30),
+                                  border: Border.all(
+                                      width: 1,
+                                      color: ColorStyle.secondryBlack)),
+                              height: 2,
                             ),
                             SizedBox(width: 2),
                             Container(
-
                               decoration: BoxDecoration(
-
                                   borderRadius: BorderRadius.circular(30),
                                   border: Border.all(
                                       width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
-
+                                      color: ColorStyle.secondryBlack)),
                               height: 2,
-
                             ),
-                            SizedBox(width: 2,),
+                            SizedBox(
+                              width: 2,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
-
                                   borderRadius: BorderRadius.circular(30),
                                   border: Border.all(
                                       width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
-
+                                      color: ColorStyle.secondryBlack)),
                               height: 2,
-
                             ),
-                            SizedBox(width: 2,),
+                            SizedBox(
+                              width: 2,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
-
                                   borderRadius: BorderRadius.circular(30),
                                   border: Border.all(
                                       width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
-
+                                      color: ColorStyle.secondryBlack)),
                               height: 2,
-
                             ),
-                            SizedBox(width: 2,),
+                            SizedBox(
+                              width: 2,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
-
                                   borderRadius: BorderRadius.circular(30),
                                   border: Border.all(
                                       width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
-
+                                      color: ColorStyle.secondryBlack)),
                               height: 2,
-
                             ),
-
-                            SizedBox(width: 2,),
+                            SizedBox(
+                              width: 2,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
-
                                   borderRadius: BorderRadius.circular(30),
                                   border: Border.all(
                                       width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
+                                      color: ColorStyle.secondryBlack)),
                               alignment: Alignment.center,
                               child: Text(
                                 '56',
                                 style: TextStyles.textStyles_16.apply(
                                     color: ColorStyle.secondryBlack,
-                                    fontWeightDelta: 2
-                                ),
+                                    fontWeightDelta: 2),
                               ),
                               height: 42,
                               width: 85,
                             ),
                             Container(
-
                               decoration: BoxDecoration(
-
                                   borderRadius: BorderRadius.circular(30),
                                   border: Border.all(
                                       width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
-
+                                      color: ColorStyle.secondryBlack)),
                               height: 2,
-
                             ),
-
-                            SizedBox(width: 2,),
+                            SizedBox(
+                              width: 2,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
-
                                   borderRadius: BorderRadius.circular(30),
                                   border: Border.all(
                                       width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
-
+                                      color: ColorStyle.secondryBlack)),
                               height: 2,
-
                             ),
                             SizedBox(width: 2),
                             Container(
-
                               decoration: BoxDecoration(
-
                                   borderRadius: BorderRadius.circular(30),
                                   border: Border.all(
                                       width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
-
+                                      color: ColorStyle.secondryBlack)),
                               height: 2,
-
                             ),
-                            SizedBox(width: 2,),
+                            SizedBox(
+                              width: 2,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
-
                                   borderRadius: BorderRadius.circular(30),
                                   border: Border.all(
                                       width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
-
+                                      color: ColorStyle.secondryBlack)),
                               height: 2,
-
                             ),
-                            SizedBox(width: 2,),
+                            SizedBox(
+                              width: 2,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
-
                                   borderRadius: BorderRadius.circular(30),
                                   border: Border.all(
                                       width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
-
+                                      color: ColorStyle.secondryBlack)),
                               height: 2,
-
                             ),
-                            SizedBox(width: 2,),
+                            SizedBox(
+                              width: 2,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
-
                                   borderRadius: BorderRadius.circular(30),
                                   border: Border.all(
                                       width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
-
+                                      color: ColorStyle.secondryBlack)),
                               height: 2,
-
                             ),
-                            SizedBox(width: 2,),
+                            SizedBox(
+                              width: 2,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
-
                                   borderRadius: BorderRadius.circular(30),
                                   border: Border.all(
                                       width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
-
+                                      color: ColorStyle.secondryBlack)),
                               height: 2,
-
                             ),
-                            SizedBox(width: 2,),
+                            SizedBox(
+                              width: 2,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
-
                                   borderRadius: BorderRadius.circular(30),
                                   border: Border.all(
                                       width: 1,
-                                      color: ColorStyle.secondryBlack
-                                  )
-                              ),
+                                      color: ColorStyle.secondryBlack)),
                               alignment: Alignment.center,
                               child: Text(
                                 '76',
                                 style: TextStyles.textStyles_16.apply(
                                     color: ColorStyle.secondryBlack,
-                                    fontWeightDelta: 2
-                                ),
+                                    fontWeightDelta: 2),
                               ),
                               height: 42,
                               width: 85,
                             ),
-
-
                           ],
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Bank Address',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         TextFieldCustom(
                           // prefix: Image.asset(ImageStyle.user),
                           hintText: 'Canada Square Canary Wharf',
@@ -838,15 +795,18 @@ class NewBeneficiary1 extends StatelessWidget {
                           ),
                           // colorFill: ColorStyle..withOpacity(0.5),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Branch Name/Code',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         TextFieldCustom(
                           // prefix: Image.asset(ImageStyle.user),
                           hintText: 'Canada Square Canary Wharf',
@@ -855,15 +815,18 @@ class NewBeneficiary1 extends StatelessWidget {
                           ),
                           // colorFill: ColorStyle..withOpacity(0.5),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'City',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         TextFieldCustom(
                           // prefix: Image.asset(ImageStyle.user),
                           hintText: 'Canada Square Canary Wharf',
@@ -872,51 +835,50 @@ class NewBeneficiary1 extends StatelessWidget {
                           ),
                           // colorFill: ColorStyle..withOpacity(0.5),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
                           'Payment Reference',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(
-                       'This reference will automatically show when making a payment to the beneficiary but can be changed at any time.',
+                          'This reference will automatically show when making a payment to the beneficiary but can be changed at any time.',
                           style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         TextFieldCustom(
                           // prefix: Image.asset(ImageStyle.user),
                           hintText: 'Concert Tickets',
                           textStyle: TextStyles.textStyles_16.apply(
                             color: ColorStyle.primaryWhite,
-
                           ),
                           // colorFill: ColorStyle..withOpacity(0.5),
                         ),
-                        SizedBox(height: 20,),
-
-
+                        SizedBox(
+                          height: 20,
+                        ),
                       ],
                     ),
                     decoration: BoxDecoration(
                         color: ColorStyle.primaryWhite,
-                        borderRadius: BorderRadius.circular(10)
-                    ),
+                        borderRadius: BorderRadius.circular(10)),
                   ),
-                  SizedBox(height: 20,),
-
-
+                  SizedBox(
+                    height: 20,
+                  ),
                 ],
               ),
-            )
-
-
-        )
+            ))
       ],
     );
   }

@@ -8,6 +8,8 @@ import '../Controllers/CurrentAccountController.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
+import 'Settings/BalanceSheetCellComponenets.dart';
+import '../Views/Settings/YourFavoriteAccount.dart';
 
 class AccountDetails extends StatelessWidget {
   const AccountDetails({Key? key}) : super(key: key);
@@ -21,16 +23,15 @@ class AccountDetails extends StatelessWidget {
         Scaffold(
             backgroundColor: Colors.transparent,
             appBar: AppBarStyle(
-              leadingButton: BackButton(
-
+              leadingButton: IconButton(
+                icon: Image.asset(
+                  ImageStyle.back_circle,
+                  height: 30,
+                ),
+                onPressed: () {
+                  Get.back();
+                },
               ),
-              // trailingButton: IconButton(
-              //   icon: Image.asset(
-              //     ImageStyle.chat,
-              //     height: 30,
-              //   ),
-              //   onPressed: () {},
-              // ),
             ),
             body: GetBuilder<AccountDetailsConroller>(
                 init: AccountDetailsConroller(),
@@ -39,263 +40,183 @@ class AccountDetails extends StatelessWidget {
                   // print(controller.listSelected.value);
                 },
                 builder: (authController) {
-                  return Obx(() =>
-                      SingleChildScrollView(
+                  return Obx(() => SingleChildScrollView(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(height: 10,),
-                            Container(
-                              padding: EdgeInsets.only(left: 16,right: 16),
-                              child: AppBarStyleCustom1(
-                                leadingButton: IconButton(
-                                  icon: Image.asset(
-                                    ImageStyle.ellipse2,
-                                    height: 30,
-                                  ),
-                                  onPressed: () {},
-                                ),
-                                trailingButton: IconButton(
+                            AppBarStyleLeadingTitleTrailing(
+                              leadingImage: ImageStyle.ellipse2,
+                              nameUser: 'HARRISON SMITH',
+                              descriptionUser: 'Your Personal Settings',
+                              nameStyle: TextStyles.textStyles_18.apply(
+                                  color: ColorStyle.primaryWhite,
+                                  fontWeightDelta: 1),
+                              descriptionStyle: TextStyles.textStyles_12
+                                  .apply(color: ColorStyle.primaryWhite),
+                              trailingAction: [
+                                IconButton(
                                   icon: Image.asset(
                                     ImageStyle.chat,
-                                    height: 30,
+                                    height: 26,
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    // Get.to(MessagePage());
+                                  },
                                 ),
-                                userLogOutButton: IconButton(
+                                IconButton(
                                   icon: Image.asset(
                                     ImageStyle.user_logout,
-                                    height: 30,
+                                    height: 26,
                                   ),
                                   onPressed: () {},
                                 ),
-                              ),
-                              color: ColorStyle.blueSKY.withOpacity(.2),
-
-
+                                SizedBox(
+                                  width: 6,
+                                ),
+                              ],
                             ),
-                            SizedBox(height: 22,),
                             Container(
-                              padding: EdgeInsets.only(left: 20,),
+                              padding: EdgeInsets.only(
+                                left: 20,
+                              ),
                               child: Text(
                                 'Your Account Details',
-                                style: TextStyles.textStyles_20.apply(
+                                style: TextStyles.textStyles_18.apply(
                                     color: ColorStyle.primaryWhite,
-                                    fontWeightDelta: 1
-                                ),
+                                    fontWeightDelta: 1),
                               ),
                             ),
-
-                            SizedBox(height: 18,),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Container(
-                              padding: EdgeInsets.only(left: 20,),
+                              padding: EdgeInsets.only(
+                                left: 20,
+                              ),
                               child: Text(
                                 'Select Account to view details',
                                 style: TextStyles.textStyles_16.apply(
                                     color: ColorStyle.primaryWhite,
-                                    fontWeightDelta: 1
-                                ),
+                                    fontWeightDelta: 0),
                               ),
                             ),
-                            SizedBox(height: 8,),
-                            Container(
-                              // padding: EdgeInsets.only(left: 10,right: 10),
-                              // color: ColorStyle.secondryBlack,
-                              // height: 233,
-                              child:   ListView.builder(
-                                  padding: EdgeInsets.only(left: 20,right: 20,top: 10,bottom: 20),
-                                  shrinkWrap: true,
-                                  itemCount: controller.images.length,
-                                  // itemCount: 1,
-                                  // scrollDirection: Axis.horizontal,
-                                  physics: BouncingScrollPhysics(),
-                                  itemBuilder: (BuildContext context, int index) {
-                                    return Container(
-                                      padding: EdgeInsets.only(left: 10,right: 10),
-                                      margin: EdgeInsets.only(bottom: 8),
-                                      // width: 329,
-                                      height: 80,
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                            child: Row(
-
-                                              children: [
-                                                Image.asset(
-                                                  controller.images[index],
-                                                  height: 38,
-                                                ),
-                                                SizedBox(width: 10,),
-                                                Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: [
-                                                    SizedBox(height: 20,),
-                                                    Text(
-                                                      // 'KFC',
-                                                      controller.chooseSaving[index],
-                                                      style: TextStyles.textStyles_14.apply(
-                                                          color: ColorStyle.secondryBlack,
-                                                          fontWeightDelta: 2
-                                                      ),
-                                                    ),
-                                                    SizedBox(height: 2,),
-                                                    Text(
-                                                      // 'Spare change',
-                                                      controller.chooseSaving1[index],
-                                                      style: TextStyles.textStyles_12.apply(
-                                                        color: ColorStyle.secondryBlack,
-                                                        // fontWeightDelta: 2
-                                                      ),
-                                                    ),
-
-
-                                                  ],
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          // SizedBox(width: 100,),
-                                          Column(
-                                            crossAxisAlignment: CrossAxisAlignment.end,
-                                            children: [
-                                              SizedBox(height: 20,),
-                                              Text(
-                                                // '     + S 1.90',
-                                                controller.chooseSaving2[index],
-                                                style: TextStyles.textStyles_12.apply(
-                                                  color: ColorStyle.secondryBlack,
-                                                  // fontWeightDelta: 2
-                                                ),
-                                              ),
-                                              SizedBox(height: 2,),
-                                              Text(
-                                                // '          22:31',
-                                                controller.chooseSaving3[index],
-                                                style: TextStyles.textStyles_14.apply(
-                                                    color: ColorStyle.secondryBlack,
-                                                    fontWeightDelta: 2
-                                                ),
-                                              ),
-
-
-                                            ],
-                                          )
-
-
-                                        ],
-                                      ),
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(ImageStyle.bg_back),
-                                          fit: BoxFit.cover,
-                                        ),
-                                        color: ColorStyle.primaryWhite,
-                                        borderRadius:
-                                        BorderRadius.circular(4),
-                                      ),
-                                    );
-
-
-
-                                  }),
+                            SizedBox(
+                              height: 6,
                             ),
-                            SizedBox(height: 10,),
                             Container(
-                              padding: EdgeInsets.only(left: 20,),
+                              padding: EdgeInsets.only(left: 20, right: 20),
+                              child: InkWell(
+                                child: BalanceSheetCellComponenets(),
+                                onTap: () {
+                                  Get.to(YourFavoriteAccount(
+                                    title: 'Select Account to view details',
+                                  ));
+                                },
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(
+                                left: 20,
+                              ),
                               child: Text(
                                 'Your Account Details',
-                                style: TextStyles.textStyles_20.apply(
+                                style: TextStyles.textStyles_18.apply(
                                     color: ColorStyle.primaryWhite,
-                                    fontWeightDelta: 1
-                                ),
+                                    fontWeightDelta: 1),
                               ),
                             ),
-                            SizedBox(height: 22,),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Container(
-                              margin: EdgeInsets.only(left: 20,right: 20,bottom: 20),
+                              margin: EdgeInsets.only(
+                                  left: 20, right: 20, bottom: 20),
 
                               // height: 233,
-                              child:   ListView.builder(
-                                  padding: EdgeInsets.only(left: 10,right: 10,top: 10,bottom: 20),
+                              child: ListView.builder(
+                                  padding: EdgeInsets.only(
+                                      left: 16, right: 16, top: 16, bottom: 16),
                                   shrinkWrap: true,
-                                  itemCount: controller.chooseAccountDetails.length,
-                                  // itemCount: 1,
-                                  // scrollDirection: Axis.horizontal,
-                                  physics: BouncingScrollPhysics(),
-                                  itemBuilder: (BuildContext context, int index) {
+                                  physics: NeverScrollableScrollPhysics(),
+                                  itemCount:
+                                      controller.chooseAccountDetails.length,
+                                  itemBuilder:
+                                      (BuildContext context, int index) {
                                     return Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
-                                        SizedBox(height: 8,),
+                                        SizedBox(
+                                          height: 8,
+                                        ),
                                         Text(
-                                          controller.chooseAccountDetails[index],
+                                          controller
+                                              .chooseAccountDetails[index],
                                           style: TextStyles.textStyles_16.apply(
                                               color: ColorStyle.secondryBlack,
                                               fontWeightDelta: 2),
                                         ),
-                                        SizedBox(height: 8,),
+                                        SizedBox(
+                                          height: 8,
+                                        ),
                                         Container(
-                                          // padding: EdgeInsets.only(left: 10,right: 10),
 
                                           margin: EdgeInsets.only(bottom: 8),
-                                          // width: 329,
-                                          height: 60,
+                                          height: 54,
                                           decoration: BoxDecoration(
-
                                               borderRadius:
-                                              BorderRadius.circular(30),
+                                                  BorderRadius.circular(30),
                                               border: Border.all(
                                                 width: 1,
                                                 color: ColorStyle.secondryBlack,
-                                              )
-                                          ),
-                                          child:Row(
+                                              )),
+                                          child: Row(
                                             children: [
-                                              SizedBox(width: 14,),
-                                              Expanded(child: TextField(
-
-                                                // obscureText: true,
-                                                decoration: InputDecoration(
-                                                  border: InputBorder.none,
-                                                  // border: OutlineInputBorder(),
-                                                  hintText: '03228464533',
-                                                  labelStyle: TextStyles.textStyles_14.apply(
-                                                    color: Colors.grey,
-                                                    fontWeightDelta: 1,
+                                              SizedBox(
+                                                width: 14,
+                                              ),
+                                              Expanded(
+                                                child: TextField(
+                                                  // obscureText: true,
+                                                  decoration: InputDecoration(
+                                                    border: InputBorder.none,
+                                                    // border: OutlineInputBorder(),
+                                                    hintText: '03228464533',
+                                                    labelStyle: TextStyles
+                                                        .textStyles_14
+                                                        .apply(
+                                                      color: Colors.grey,
+                                                      fontWeightDelta: 1,
+                                                    ),
                                                   ),
                                                 ),
-                                              ),),
+                                              ),
                                               // SizedBox(width: 10,),
-                                              Image.asset(ImageStyle.Iconawesomecopy, height: 24,),
-                                              SizedBox(width: 14,),
+                                              Image.asset(
+                                                ImageStyle.Iconawesomecopy,
+                                                height: 24,
+                                              ),
+                                              SizedBox(
+                                                width: 14,
+                                              ),
                                             ],
-                                          ) ,
+                                          ),
                                         )
                                       ],
                                     );
-
-
-
                                   }),
                               decoration: BoxDecoration(
-                                  color: ColorStyle.primaryWhite,
-                                  borderRadius:
-                                  BorderRadius.circular(8),
-
+                                color: ColorStyle.primaryWhite,
+                                borderRadius: BorderRadius.circular(8),
                               ),
                             )
                           ],
                         ),
-                      )
-
-
-                  );
-                })
-
-
-
-        )
+                      ));
+                }))
       ],
     );
   }

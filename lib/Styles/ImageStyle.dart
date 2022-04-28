@@ -85,7 +85,7 @@ class ImageStyle {
   static const String settings = "$baseImage/settings.png";
   static const String bg_Image = "$baseImage/Bg_Image.png";
   static const String finance = "$baseImage/finance.png";
-  static const String Component402 = "$baseImage/Component402.png";
+  static const String watchBG = "$baseImage/watchBG.png";
   static const String Component401 = "$baseImage/Component401.png";
   static const String wallet4 = "$baseImage/wallet-4.png";
   static const String withdraw2 = "$baseImage/withdraw-2.png";
@@ -130,17 +130,49 @@ class ImageStyle {
   static const String coins = "$baseImage/coins.png";
   static const String Component11 = "$baseImage/Component11.png";
 
-  static const String interrogation_Tabbar = "$baseImage/interrogation_Tabbar.png";
+  static const String interrogation_Tabbar =
+      "$baseImage/interrogation_Tabbar.png";
   static const String credit_card_Tabbar = "$baseImage/credit_card_Tabbar.png";
   static const String middle_Image = "$baseImage/middle_Image.png";
   static const String menu_dots_Tabbar = "$baseImage/menu_dots_Tabbar.png";
-  static const String cryptocurrency_Tabbar = "$baseImage/cryptocurrency_Tabbar.png";
+  static const String cryptocurrency_Tabbar =
+      "$baseImage/cryptocurrency_Tabbar.png";
 
   static const String search_lightBlue = "$baseImage/search_lightBlue.png";
-  static const String account_circle_lightBlue = "$baseImage/account_circle_lightBlue.png";
+  static const String account_circle_lightBlue =
+      "$baseImage/account_circle_lightBlue.png";
   static const String invite_lightBlue = "$baseImage/invite_lightBlue.png";
   static const String savings_lightBlue = "$baseImage/savings_lightBlue.png";
   static const String chat_lightBlue = "$baseImage/chat_lightBlue.png";
+
+  static const String apple = "$baseImage/apple.png";
+  static const String unlock = "$baseImage/unlock.png";
+
+  static const String cashlesspayment = "$baseImage/cashlesspayment.png";
+  static const String moneywithdrawal = "$baseImage/moneywithdrawal.png";
+  static const String atm = "$baseImage/atm.png";
+
+  static const String changePIN = "$baseImage/changePIN.png";
+  static const String warning = "$baseImage/warning.png";
+  static const String creditca = "$baseImage/creditca.png";
+  static const String information = "$baseImage/information.png";
+  static const String bgImageATM = "$baseImage/bgImageATM.png";
+  static const String blurImageATM = "$baseImage/blurImageATM.png";
+
+  static const String minusRadius = "$baseImage/minusRadius.png";
+  static const String plusRadius = "$baseImage/plusRadius.png";
+  static const String search_interface_symbol =
+      "$baseImage/search_interface_symbol.png";
+
+  static const String adddestination = "$baseImage/adddestination.png";
+  static const String creditard = "$baseImage/creditard.png";
+  static const String cutlery = "$baseImage/cutlery.png";
+
+  static const String bgDailyAccountBalance =
+      "$baseImage/bgDailyAccountBalance.png";
+  static const String cardDailyAccountBalance =
+      "$baseImage/cardDailyAccountBalance.png";
+
   static const String English = "$baseImage/English.png";
   static const String Deutsch = "$baseImage/Deutsch.png";
   static const String Turkce = "$baseImage/Turkce.png";
@@ -154,7 +186,8 @@ class ImageStyle {
   static const String Card = "$baseImage/Card.png";
   static const String bg_back = "$baseImage/bg_back.png";
   static const String Iconawesomecopy = "$baseImage/Iconawesomecopy.png";
-  static const String tiardschulzb8dA3eY5VrYunsplash = "$baseImage/tiard-schulz-b8dA3eY5VrY-unsplash.png";
+  static const String tiardschulzb8dA3eY5VrYunsplash =
+      "$baseImage/tiard-schulz-b8dA3eY5VrY-unsplash.png";
   static const String bg_tride = "$baseImage/bg_tride.png";
   static const String Path1145 = "$baseImage/Path1145.png";
   static const String Rectangle1604 = "$baseImage/Rectangle1604.png";
@@ -164,6 +197,4 @@ class ImageStyle {
   static const String Unknown = "$baseImage/Unknown.png";
   static const String Path1148 = "$baseImage/Path1148.png";
   static const String Rectangle2094 = "$baseImage/Rectangle2094.png";
-
 }
-// Icon_material_error

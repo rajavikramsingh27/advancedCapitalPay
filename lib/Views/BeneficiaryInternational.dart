@@ -23,10 +23,9 @@ class BeneficiaryInternational extends StatelessWidget {
     final controller = Get.put(BeneficiaryInternationalController());
     return Stack(
       children: [
-        BackgroundImageBeneficiary(),
+        // BackgroundImageBeneficiary(),
         Scaffold(
           backgroundColor: Colors.transparent,
-
           body:GetBuilder<BeneficiaryInternationalController>(
         init: BeneficiaryInternationalController(),
         initState: (state) {
@@ -43,21 +42,7 @@ class BeneficiaryInternational extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        AppBarStyleCustomBeni(
-                          leadingButton: BackButton(
 
-                            onPressed: () {},
-                          ),
-                          trailingButton: IconButton(
-                            icon: Image.asset(
-                              ImageStyle.chat,
-                              height: 30,
-                            ),
-                            onPressed: () {},
-                          ),
-
-                        ),
-                        SizedBox(height: 10,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
