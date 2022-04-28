@@ -64,8 +64,32 @@ class SavingGoal extends StatelessWidget {
                 padding: EdgeInsets.only(
                     left: 12,
                     right: 12
+
+
                 ),
-                child: AppBarStyleLeadingTitleTrailing(),
+                child: AppBarStyleCustom(
+                  leadingButton: IconButton(
+                    icon: Image.asset(
+                      ImageStyle.ellipse2,
+                      height: 30,
+                    ),
+                    onPressed: () {},
+                  ),
+                  trailingButton: IconButton(
+                    icon: Image.asset(
+                      ImageStyle.chat,
+                      height: 30,
+                    ),
+                    onPressed: () {},
+                  ),
+                  settingButton: IconButton(
+                    icon: Image.asset(
+                      ImageStyle.settings,
+                      height: 30,
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
               ),
               SizedBox(height: 10,),
               Container(

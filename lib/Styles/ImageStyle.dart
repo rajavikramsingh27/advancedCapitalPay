@@ -141,25 +141,18 @@ class ImageStyle {
   static const String invite_lightBlue = "$baseImage/invite_lightBlue.png";
   static const String savings_lightBlue = "$baseImage/savings_lightBlue.png";
   static const String chat_lightBlue = "$baseImage/chat_lightBlue.png";
-
-  static const String apple = "$baseImage/apple.png";
-  static const String unlock = "$baseImage/unlock.png";
-
-  static const String cashlesspayment = "$baseImage/cashlesspayment.png";
-  static const String moneywithdrawal = "$baseImage/moneywithdrawal.png";
-  static const String atm = "$baseImage/atm.png";
-
-  static const String changePIN = "$baseImage/changePIN.png";
-  static const String warning = "$baseImage/warning.png";
-  static const String creditca = "$baseImage/creditca.png";
-  static const String information = "$baseImage/information.png";
-  static const String bgImageATM = "$baseImage/bgImageATM.png";
-  static const String blurImageATM = "$baseImage/blurImageATM.png";
-
-  static const String minusRadius = "$baseImage/minusRadius.png";
-  static const String plusRadius = "$baseImage/plusRadius.png";
-  static const String search_interface_symbol = "$baseImage/search_interface_symbol.png";
-
-  static const String adddestination = "$baseImage/adddestination.png";
-  static const String creditard = "$baseImage/creditard.png";
+  static const String English = "$baseImage/English.png";
+  static const String Deutsch = "$baseImage/Deutsch.png";
+  static const String Turkce = "$baseImage/Turkce.png";
+  static const String Easti = "$baseImage/Easti.png";
+  static const String Esponol = "$baseImage/Esponol.png";
+  static const String Francais = "$baseImage/Francais.png";
+  static const String Italiano = "$baseImage/Italiano.png";
+  static const String Lietuviu = "$baseImage/Lietuviu.png";
+  static const String Polski = "$baseImage/Polski.png";
+  static const String Romanion = "$baseImage/Romanion.png";
+  static const String Card = "$baseImage/Card.png";
+  static const String bg_back = "$baseImage/bg_back.png";
+  static const String Iconawesomecopy = "$baseImage/Iconawesomecopy.png";
 }
+
