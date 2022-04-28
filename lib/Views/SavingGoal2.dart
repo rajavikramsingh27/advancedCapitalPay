@@ -148,13 +148,7 @@ class SavingGoal2 extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox(height: 5,),
-                                Text(
-                                  'Add Funds',
-                                  style: TextStyles.textStyles_12.apply(
-                                      color: ColorStyle.ligthBlue,
-                                      fontWeightDelta: 2
-                                  ),
-                                ),
+
                               ],
                             ),
                             Column(

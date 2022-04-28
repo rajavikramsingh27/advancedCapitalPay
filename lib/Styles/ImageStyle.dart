@@ -154,5 +154,16 @@ class ImageStyle {
   static const String Card = "$baseImage/Card.png";
   static const String bg_back = "$baseImage/bg_back.png";
   static const String Iconawesomecopy = "$baseImage/Iconawesomecopy.png";
-}
+  static const String tiardschulzb8dA3eY5VrYunsplash = "$baseImage/tiard-schulz-b8dA3eY5VrY-unsplash.png";
+  static const String bg_tride = "$baseImage/bg_tride.png";
+  static const String Path1145 = "$baseImage/Path1145.png";
+  static const String Rectangle1604 = "$baseImage/Rectangle1604.png";
+  static const String user9 = "$baseImage/user9.png";
+  static const String career = "$baseImage/career.png";
+  static const String me = "$baseImage/me.png";
+  static const String Unknown = "$baseImage/Unknown.png";
+  static const String Path1148 = "$baseImage/Path1148.png";
+  static const String Rectangle2094 = "$baseImage/Rectangle2094.png";
 
+}
+// Icon_material_error
