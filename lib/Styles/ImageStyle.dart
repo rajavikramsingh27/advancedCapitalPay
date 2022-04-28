@@ -162,4 +162,5 @@ class ImageStyle {
 
   static const String adddestination = "$baseImage/adddestination.png";
   static const String creditard = "$baseImage/creditard.png";
+  static const String cutlery = "$baseImage/cutlery.png";
 }

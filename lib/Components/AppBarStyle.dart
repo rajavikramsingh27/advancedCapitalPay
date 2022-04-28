@@ -124,6 +124,7 @@ class AppBarStyleLeadingTitleTrailing extends StatelessWidget implements Preferr
   final String? descriptionUser;
   final TextStyle? descriptionStyle;
   final String? timeLastLogin;
+  final Color? backgroundColor;
 
   AppBarStyleLeadingTitleTrailing({
     Key? key,
@@ -136,6 +137,7 @@ class AppBarStyleLeadingTitleTrailing extends StatelessWidget implements Preferr
     this.timeLastLogin='',
     this.nameStyle,
     this.descriptionStyle,
+    this.backgroundColor = Colors.transparent,
   }) : super(key: key);
 
   double heightAppBar = 80;
@@ -148,7 +150,7 @@ class AppBarStyleLeadingTitleTrailing extends StatelessWidget implements Preferr
     return AppBar(
       elevation: 0,
       toolbarHeight: heightAppBar,
-      backgroundColor: Colors.transparent,
+      backgroundColor: backgroundColor,
       leadingWidth: leadingWidth,
       leading: InkWell(
         child: Container(

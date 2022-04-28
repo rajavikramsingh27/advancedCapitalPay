@@ -211,7 +211,7 @@ class SignIn extends StatelessWidget {
                     ],
                   ),
                   onTap: () {
-                    // Get.to(PersonalApplication1());
+                    Get.to(PersonalApplication1());
                   },
                 ),
               ],

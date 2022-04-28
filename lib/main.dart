@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import '../Views/SplashScreen.dart';
 import '../Views/TabbarScreen.dart';
 import '../Views/MainDashboard.dart';
+import '../Views/TransactionDetails.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/utils.dart';
@@ -38,7 +39,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SplashScreen()
+        // home: SplashScreen(),
+      home: TransactionDetails(),
     );
   }
 }

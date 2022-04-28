@@ -12,7 +12,7 @@ import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
 import '../Views/MessagePage.dart';
 import '../Views/AppSettings.dart';
 import '../Components/SearchBarCustom.dart';
-
+import '../Views/TransactionDetails.dart';
 
 
 class MainDashboard extends StatelessWidget {
@@ -447,97 +447,102 @@ class MainDashboard extends StatelessWidget {
                                           (context, index) {
 
                                         if (controller.listType.value == 1) {
-                                          return Container(
-                                            padding: EdgeInsets.only(
-                                              left: 12,
-                                              right: 12,
-                                            ),
-                                            alignment: Alignment.center,
-                                            height: 60,
-                                            width: MediaQuery.of(context)
-                                                .size
-                                                .width,
-                                            margin: EdgeInsets.all(6),
-                                            // color: Colors.red,
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                Row(
-                                                  children: [
-                                                    Image.asset(
-                                                      ImageStyle.agp,
-                                                      height: 42,
-                                                      width: 42,
-                                                    ),
-                                                    SizedBox(
-                                                      width: 16,
-                                                    ),
-                                                    Column(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .center,
-                                                      children: [
-                                                        Text(
-                                                          'Costa Coffee',
-                                                          // controller.listApplyLeave[index],
-                                                          style: TextStyles
-                                                              .textStyles_12
-                                                              .apply(
-                                                                  color: ColorStyle
-                                                                      .secondryBlack),
-                                                        ),
-                                                        Text(
-                                                          'Food & Drink',
-                                                          // controller.listApplyLeave[index],
-                                                          style: TextStyles
-                                                              .textStyles_8
-                                                              .apply(
-                                                                  color: ColorStyle
-                                                                      .secondryBlack),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ],
-                                                ),
-                                                Row(
-                                                  children: [
-                                                    Container(
-                                                      alignment:
-                                                          Alignment.center,
-                                                      padding: EdgeInsets.only(
-                                                          left: 14, right: 14),
-                                                      child: Text(
-                                                        '- \$8.10',
-                                                        style: TextStyles
-                                                            .textStyles_16
-                                                            .apply(
+                                          return InkWell(
+                                            child: Container(
+                                              padding: EdgeInsets.only(
+                                                left: 12,
+                                                right: 12,
+                                              ),
+                                              alignment: Alignment.center,
+                                              height: 60,
+                                              width: MediaQuery.of(context)
+                                                  .size
+                                                  .width,
+                                              margin: EdgeInsets.all(6),
+                                              // color: Colors.red,
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                MainAxisAlignment
+                                                    .spaceBetween,
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      Image.asset(
+                                                        ImageStyle.agp,
+                                                        height: 42,
+                                                        width: 42,
+                                                      ),
+                                                      SizedBox(
+                                                        width: 16,
+                                                      ),
+                                                      Column(
+                                                        crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                        mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                        children: [
+                                                          Text(
+                                                            'Costa Coffee',
+                                                            // controller.listApplyLeave[index],
+                                                            style: TextStyles
+                                                                .textStyles_12
+                                                                .apply(
                                                                 color: ColorStyle
                                                                     .secondryBlack),
+                                                          ),
+                                                          Text(
+                                                            'Food & Drink',
+                                                            // controller.listApplyLeave[index],
+                                                            style: TextStyles
+                                                                .textStyles_8
+                                                                .apply(
+                                                                color: ColorStyle
+                                                                    .secondryBlack),
+                                                          ),
+                                                        ],
                                                       ),
-                                                      // width: 70,
-                                                      // height: 40,
-                                                    ),
-                                                    Icon(
-                                                      Icons
-                                                          .arrow_forward_ios_rounded,
-                                                      size: 20,
-                                                      color: Colors.black45,
-                                                    ),
-                                                  ],
-                                                ),
-                                              ],
-                                            ),
+                                                    ],
+                                                  ),
+                                                  Row(
+                                                    children: [
+                                                      Container(
+                                                        alignment:
+                                                        Alignment.center,
+                                                        padding: EdgeInsets.only(
+                                                            left: 14, right: 14),
+                                                        child: Text(
+                                                          '- \$8.10',
+                                                          style: TextStyles
+                                                              .textStyles_16
+                                                              .apply(
+                                                              color: ColorStyle
+                                                                  .secondryBlack),
+                                                        ),
+                                                        // width: 70,
+                                                        // height: 40,
+                                                      ),
+                                                      Icon(
+                                                        Icons
+                                                            .arrow_forward_ios_rounded,
+                                                        size: 20,
+                                                        color: Colors.black45,
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ],
+                                              ),
 
-                                            decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(5),
-                                                color: Colors.lightBlueAccent
-                                                    .withOpacity(0.1)),
+                                              decoration: BoxDecoration(
+                                                  borderRadius:
+                                                  BorderRadius.circular(5),
+                                                  color: Colors.lightBlueAccent
+                                                      .withOpacity(0.1)),
+                                            ),
+                                            onTap: () {
+                                              Get.to(TransactionDetails());
+                                            },
                                           );
                                         } else if (controller.listType.value ==
                                             2) {
