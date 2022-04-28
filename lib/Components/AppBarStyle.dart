@@ -236,7 +236,99 @@ class AppBarStyleCustom1 extends StatelessWidget implements PreferredSizeWidget 
     );
   }
 }
+class AppBarStyleCustomBeni extends StatelessWidget implements PreferredSizeWidget {
+  final Function()? onTap;
+  final Widget? leadingButton;
+  final Widget? trailingButton;
+  final Widget? settingButton;
 
+  AppBarStyleCustomBeni({
+    Key? key,
+    this.onTap,
+    this.leadingButton,
+    this.trailingButton,
+    this.settingButton,
+  }) : super(key: key);
+
+  double heightAppBar = 70;
+
+  @override
+  Size get preferredSize => new Size.fromHeight(heightAppBar);
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+
+      elevation: 0,
+      toolbarHeight: heightAppBar,
+      backgroundColor: Colors.transparent,
+      // leadingWidth: 0,
+
+      leading: (leadingButton == null) ? Container() :leadingButton,
+      centerTitle: true,
+      title: Text(
+        'Beneficiary',
+        style: TextStyles.textStyles_20.apply(
+          color: ColorStyle.primaryWhite,
+        ),
+      ),
+      actions: [
+
+        if (trailingButton != null) trailingButton!,
+
+
+
+      ],
+    );
+  }
+}
+class AppBarStyleCustomBenifi extends StatelessWidget implements PreferredSizeWidget {
+  final Function()? onTap;
+  final Widget? leadingButton;
+  final Widget? trailingButton;
+  final Widget? settingButton;
+
+  AppBarStyleCustomBenifi({
+    Key? key,
+    this.onTap,
+    this.leadingButton,
+    this.trailingButton,
+    this.settingButton,
+  }) : super(key: key);
+
+  double heightAppBar = 70;
+
+  @override
+  Size get preferredSize => new Size.fromHeight(heightAppBar);
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+
+      elevation: 0,
+      toolbarHeight: heightAppBar,
+      backgroundColor: Colors.transparent,
+      // leadingWidth: 0,
+
+      leading: (leadingButton == null) ? Container() :leadingButton,
+      centerTitle: true,
+      title: Text(
+        'From Account',
+        style: TextStyles.textStyles_20.apply(
+          color: ColorStyle.primaryWhite,
+          fontWeightDelta: 2
+        ),
+      ),
+      actions: [
+
+        if (trailingButton != null) trailingButton!,
+
+
+
+      ],
+    );
+  }
+}
 
 class AppBarStyle1 extends StatelessWidget implements PreferredSizeWidget {
   final Function()? onTap;
