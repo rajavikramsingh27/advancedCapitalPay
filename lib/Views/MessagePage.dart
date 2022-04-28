@@ -9,14 +9,14 @@ import '../Styles/ColorStyle.dart';
 import '../Styles/EffectStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
-import '../Components/SearchBarCustom.dart';
-import '../Components/ListViewWithSections.dart';
+
 
 class MessagePage extends StatelessWidget {
   const MessagePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
     final controller = Get.put(MessagePageController());
 
     return Stack(
@@ -28,17 +28,7 @@ class MessagePage extends StatelessWidget {
           fit: BoxFit.cover,
         ),
         Scaffold(
-          appBar: AppBarStyle(
-            leadingButton: IconButton(
-              icon: Image.asset(
-                ImageStyle.back_circle,
-                height: 30,
-              ),
-              onPressed: () {
-                Get.back();
-              },
-            ),
-          ),
+          appBar: AppBarStyle(),
           backgroundColor: Colors.transparent,
           body: GetBuilder(
             init: MessagePageController(),
@@ -47,61 +37,233 @@ class MessagePage extends StatelessWidget {
             },
             builder: (authController) {
               return Obx(
-                () => SingleChildScrollView(
-                  // padding: EdgeInsets.only(bottom: 16),
+                    () => SingleChildScrollView(
+                  // padding: EffectStyle.padding(16, 16, 0, 0),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      AppBarStyleLeadingTitleTrailing(
-                        leadingImage: ImageStyle.ellipse2,
-                        nameUser: 'HARRISON SMITH',
-                        descriptionUser: 'Your Personal Settings',
-                        trailingAction: [
-                          IconButton(
-                            icon: Image.asset(
-                              ImageStyle.chat,
-                              height: 26,
-                            ),
-                            onPressed: () {
-                              Get.to(MessagePage());
-                            },
-                          ),
-                          IconButton(
-                            icon: Image.asset(
-                              ImageStyle.user_logout,
-                              height: 26,
-                            ),
-                            onPressed: () {},
-                          ),
-                          SizedBox(
-                            width: 6,
-                          ),
-                        ],
-                      ),
                       Container(
-                        padding: EdgeInsets.only(left: 16, right: 16),
+                        padding: EffectStyle.padding(16, 16, 0, 0),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Welcome to Your Inbox',
-                              style: TextStyles.textStyles_20.apply(
-                                  color: ColorStyle.primaryWhite,
-                                  fontWeightDelta: 1),
+                              controller.listType.value.toString(),
+                              style: TextStyles.textStyles_12.apply(
+                                color: ColorStyle.primaryWhite,
+                                fontWeightDelta: 1,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Container(
+                              width: double.infinity,
+                              height: 150,
+                              decoration: BoxDecoration(
+                                  color: ColorStyle.blueSKY,
+                                  borderRadius: BorderRadius.circular(10)),
+                            ),
+                            SizedBox(
+                              height: 20,
                             ),
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
-                                  'Online and paper preferences: ',
-                                  style: TextStyles.textStyles_14.apply(
-                                      color: ColorStyle.primaryWhite,
-                                      fontWeightDelta: 0),
+                                Container(
+                                  width: 91,
+                                  height: 50,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(
+                                        height: 7,
+                                      ),
+                                      Text(
+                                        'Funds',
+                                        style: TextStyles.textStyles_12.apply(
+                                          color: ColorStyle.primaryWhite,
+                                          fontWeightDelta: 1,
+                                        ),
+                                      ),
+                                      Text(
+                                        '\$2,713.23',
+                                        style: TextStyles.textStyles_12.apply(
+                                          color: ColorStyle.primaryWhite,
+                                          fontWeightDelta: 1,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: ColorStyle.blueSKY,
+                                    borderRadius: BorderRadius.circular(5),
+                                  ),
                                 ),
-                                Text(
-                                  'Paperless',
-                                  style: TextStyles.textStyles_14.apply(
-                                      color: ColorStyle.ligthBlue,
-                                      fontWeightDelta: 0),
+                                Container(
+                                  padding: EdgeInsets.only(left: 5, right: 5),
+                                  width: 122,
+                                  height: 30,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Image.asset(ImageStyle.ethereum,
+                                          // width: MediaQuery.of(context).size.width,
+                                          height: 20
+                                        // fit: BoxFit.cover,
+                                      ),
+                                      Container(
+                                        alignment: Alignment.center,
+                                        width: 30,
+                                        height: 30,
+                                        child: Text(
+                                          '\$',
+                                          style: TextStyles.textStyles_20.apply(
+                                            color: ColorStyle.secondryBlack,
+                                            fontWeightDelta: 1,
+                                          ),
+                                        ),
+                                        decoration: BoxDecoration(
+                                          color: ColorStyle.primaryWhite,
+                                          borderRadius:
+                                          BorderRadius.circular(300),
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.currency_bitcoin,
+                                        size: 20,
+                                        color: ColorStyle.primaryWhite,
+                                      ),
+                                    ],
+                                  ),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: ColorStyle.primaryWhite),
+                                    // color: ColorStyle.blueSKY,
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                ),
+                                Container(
+                                  width: 91,
+                                  height: 50,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(
+                                        height: 7,
+                                      ),
+                                      Text(
+                                        'Balance',
+                                        style: TextStyles.textStyles_12.apply(
+                                          color: ColorStyle.primaryWhite,
+                                          fontWeightDelta: 1,
+                                        ),
+                                      ),
+                                      Text(
+                                        '\$2,713.23',
+                                        style: TextStyles.textStyles_12.apply(
+                                          color: ColorStyle.primaryWhite,
+                                          fontWeightDelta: 1,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: ColorStyle.blueSKY,
+                                    borderRadius: BorderRadius.circular(5),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 15,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  width: 91,
+                                  height: 66,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(ImageStyle.transfer3,
+                                          color: ColorStyle.blueSKY,
+                                          // width: MediaQuery.of(context).size.width,
+                                          height: 25
+                                        // fit: BoxFit.cover,
+                                      ),
+                                      SizedBox(
+                                        height: 5,
+                                      ),
+                                      Text(
+                                        'Reorder',
+                                        style: TextStyles.textStyles_8.apply(
+                                          color: ColorStyle.blueSKY,
+                                          fontWeightDelta: 1,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: ColorStyle.primaryWhite,
+                                    borderRadius: BorderRadius.circular(15),
+                                  ),
+                                ),
+                                Container(
+                                  width: 91,
+                                  height: 66,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(ImageStyle.transfer3,
+                                          color: ColorStyle.blueSKY,
+                                          // width: MediaQuery.of(context).size.width,
+                                          height: 25
+                                        // fit: BoxFit.cover,
+                                      ),
+                                      SizedBox(
+                                        height: 5,
+                                      ),
+                                      Text(
+                                        'Account Details',
+                                        style: TextStyles.textStyles_8.apply(
+                                          color: ColorStyle.blueSKY,
+                                          fontWeightDelta: 1,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: ColorStyle.primaryWhite,
+                                    borderRadius: BorderRadius.circular(15),
+                                  ),
+                                ),
+                                Container(
+                                  width: 91,
+                                  height: 66,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(ImageStyle.stock,
+                                          color: ColorStyle.blueSKY,
+                                          // width: MediaQuery.of(context).size.width,
+                                          height: 25
+                                        // fit: BoxFit.cover,
+                                      ),
+                                      SizedBox(
+                                        height: 5,
+                                      ),
+                                      Text(
+                                        'Exchange',
+                                        style: TextStyles.textStyles_8.apply(
+                                          color: ColorStyle.blueSKY,
+                                          fontWeightDelta: 1,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: ColorStyle.primaryWhite,
+                                    borderRadius: BorderRadius.circular(15),
+                                  ),
                                 ),
                               ],
                             ),
@@ -109,7 +271,7 @@ class MessagePage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 12,
                       ),
                       Container(
                         color: ColorStyle.primaryWhite,
@@ -123,142 +285,135 @@ class MessagePage extends StatelessWidget {
                               height: 1,
                               color: Colors.black26,
                             ),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: ElevatedButtonCustom(
+                                    text: 'Inbox (51)',
+                                    colorBG: Colors.transparent,
+                                    textStyle: TextStyles.textStyles_12
+                                        .apply(color: ColorStyle.blueSKY, fontWeightDelta: 1),
+                                    onTap: () {
+                                      controller.listType.value = 1;
+                                    },
+                                  ),
+                                ),
+                                Expanded(
+                                  child: ElevatedButtonCustom(
+                                    text: 'Archive',
+                                    colorBG: Colors.transparent,
+                                    textStyle: TextStyles.textStyles_12
+                                        .apply(color: ColorStyle.blueSKY, fontWeightDelta: 1),
+                                    onTap: () {
+                                      controller.listType.value = 2;
+                                    },
+                                  ),
+                                ),
+                              ],
+                            ),
                             Container(
-                              height: 40,
+                              width: double.infinity,
+                              height: 1,
+                              color: Colors.black26,
+                            ),
+                            SizedBox(
+                              height: 4,
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(left: 10, right: 10),
                               child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Expanded(
-                                    child: ElevatedButtonCustom(
-                                      text: 'Inbox (51)',
-                                      radiusBorder: 0,
-                                      colorBG: controller.isInbox.value
-                                          ? ColorStyle.darkestBlueSignUp
-                                          : Colors.transparent,
-                                      textStyle: TextStyles.textStyles_14.apply(
-                                          color: controller.isInbox.value
-                                              ? ColorStyle.primaryWhite
-                                              : ColorStyle.darkestBlueSignUp,
-                                          fontWeightDelta: 1),
-                                      onTap: () {
-                                        controller.listType.value = 1;
-                                        controller.isInbox.value = true;
-                                      },
+                                  Container(
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                            height: 22,
+                                            width: 22,
+                                            alignment: Alignment.centerLeft,
+                                            child: ElevatedButton(
+                                              style: ElevatedButton.styleFrom(
+                                                  primary: Colors.transparent,
+                                                  elevation: 0,
+                                                  padding: EdgeInsets.all(0)),
+                                              child: Icon(
+                                                controller.agree.value ?
+                                                Icons.check_box : Icons.check_box_outline_blank_outlined,
+                                                color: ColorStyle.blueSKY,
+                                              ),
+
+
+
+                                              onPressed: () {
+                                                controller.agree.value =
+                                                !controller.agree.value;
+
+                                                // setState(() {});
+                                              },
+                                            )),
+                                        SizedBox(
+                                          width: 6,
+                                        ),
+                                        Text(
+                                          'Select all',
+                                          style: TextStyles.textStyles_12.apply(
+                                            color: ColorStyle.blueSKY,
+                                            fontWeightDelta: 1,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                  Expanded(
-                                    child: ElevatedButtonCustom(
-                                      text: 'Archive',
-                                      radiusBorder: 0,
-                                      colorBG: !controller.isInbox.value
-                                          ? ColorStyle.darkestBlueSignUp
-                                          : Colors.transparent,
-                                      textStyle: TextStyles.textStyles_14.apply(
-                                          color: !controller.isInbox.value
-                                              ? ColorStyle.primaryWhite
-                                              : ColorStyle.darkestBlueSignUp,
-                                          fontWeightDelta: 1),
-                                      onTap: () {
-                                        controller.listType.value = 2;
-                                        controller.isInbox.value = false;
-                                      },
+                                  Text(
+                                    'Unread  |  Read  |  Archive',
+                                    style: TextStyles.textStyles_12.apply(
+                                      color: ColorStyle.blueSKY,
+                                      fontWeightDelta: 1,
                                     ),
                                   ),
                                 ],
                               ),
                             ),
+                            SizedBox(
+                              height: 4,
+                            ),
                             Container(
                               width: double.infinity,
                               height: 1,
                               color: Colors.black26,
                             ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    SizedBox(
-                                      width: 16,
-                                    ),
-                                    Container(
-                                        height: 22,
-                                        width: 22,
-                                        alignment: Alignment.centerLeft,
-                                        child: ElevatedButton(
-                                          style: ElevatedButton.styleFrom(
-                                              primary: Colors.transparent,
-                                              elevation: 0,
-                                              padding: EdgeInsets.all(0)),
-                                          child: Icon(
-                                            controller.agree.value
-                                                ? Icons.check_box
-                                                : Icons
-                                                    .check_box_outline_blank_outlined,
-                                            size: 26,
-                                            color: ColorStyle.darkestBlueSignUp,
-                                          ),
-                                          onPressed: () {
-                                            controller.agree.value =
-                                                !controller.agree.value;
 
-                                            // setState(() {});
-                                          },
-                                        )),
-                                    SizedBox(
-                                      width: 6,
-                                    ),
-                                    Text(
-                                      'Select all',
-                                      style: TextStyles.textStyles_12.apply(
-                                        color: ColorStyle.darkestBlueSignUp,
-                                        fontWeightDelta: 2,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    InkWell(
-                                      child: Text(
-                                        'Unread',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.darkestBlueSignUp,
-                                          fontWeightDelta: 2,
+
+
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              width: double.infinity,
+                              height: 31,
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.search,
+                                    color: ColorStyle.grayColor,
+                                  ),
+                                  Expanded(
+                                      child: TextField(
+                                        onChanged: (value) {},
+                                        decoration: InputDecoration(
+                                          hintText: "Search",
+                                          hintStyle: TextStyle(
+                                            color: ColorStyle.grayColor,
+                                          ),
+                                          enabledBorder: InputBorder.none,
+                                          focusedBorder: InputBorder.none,
                                         ),
-                                      ),
-                                      onTap: () {},
-                                    ),
-                                    InkWell(
-                                      child: Text(
-                                        ' |  Read  | ',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.darkestBlueSignUp,
-                                          fontWeightDelta: 2,
-                                        ),
-                                      ),
-                                      onTap: () {},
-                                    ),
-                                    InkWell(
-                                      child: Text(
-                                        'Archive',
-                                        style: TextStyles.textStyles_12.apply(
-                                          color: ColorStyle.darkestBlueSignUp,
-                                          fontWeightDelta: 2,
-                                        ),
-                                      ),
-                                      onTap: () {},
-                                    ),
-                                    SizedBox(
-                                      width: 16,
-                                    ),
-                                  ],
-                                ),
-                              ],
+                                      ))
+                                ],
+                              ),
+                              decoration: BoxDecoration(
+                                  color: Colors.black26,
+                                  borderRadius: BorderRadius.circular(8)),
                             ),
                             SizedBox(
                               height: 10,
@@ -269,431 +424,157 @@ class MessagePage extends StatelessWidget {
                               color: Colors.black26,
                             ),
                             SizedBox(
-                              height: 10,
-                            ),
-                            SearchBarCustom(),
-                            SizedBox(
-                              height: 6,
+                              height: 5,
                             ),
                             Container(
-                              width: double.infinity,
-                              height: 1,
-                              color: Colors.black26,
-                            ),
-                            SizedBox(
-                              height: 6,
-                            ),
-                            ListViewWithSections(
-                              title: 'Important Messages - March 2022',
-                              arrList: ['',],
-                              widget: (controller.listType.value == 1) ? Container(
-                                padding: EdgeInsets.only(
-                                  left: 12,
-                                  right: 12,
-                                  top: 12,
-                                  bottom: 12,
-                                ),
-                                alignment: Alignment.center,
-                                width: MediaQuery.of(context).size.width,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
-                                    color: ColorStyle.hex('#F5F4F4')),
-                                child: Row(
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Image.asset(
-                                      ImageStyle.Group1925,
-                                      height: 30,
-                                      width: 30,
+                              padding: EdgeInsets.only(left: 4, right: 4),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Important Messages - March 2022',
+                                    style: TextStyles.textStyles_12.apply(
+                                      color: ColorStyle.secondryBlack,
+                                      fontWeightDelta: 1,
                                     ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Expanded(
-                                      child: Column(
-                                        crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                            children: [
-                                              Expanded(
-                                                child: Text(
-                                                  'Plus+ Current account (6435)',
-                                                  // controller.listApplyLeave[index],
-                                                  style: TextStyles.textStyles_12.apply(
-                                                      color: ColorStyle.secondryBlack,
-                                                      fontWeightDelta: 2
-                                                  ),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Container(
+                                    width: double.infinity,
+                                    height: 1,
+                                    color: Colors.black26,
+                                  ),
+                                  ListView.builder(
+                                      padding: EdgeInsets.only(top: 6),
+                                      shrinkWrap: true,
+                                      itemCount: 5,
+                                      // scrollDirection: Axis.horizontal,
+                                      physics: BouncingScrollPhysics(),
+                                      itemBuilder:
+                                          (BuildContext context, int index) {
+                                        if (controller.listType.value == 1) {
+                                          return Container(
+                                            padding: EdgeInsets.only(
+                                                left: 12, right: 12),
+                                            alignment: Alignment.center,
+                                            // color: Colors.red,
+                                            height: 57,
+                                            width: 343,
+
+                                            margin: EdgeInsets.all(6),
+                                            // color: Colors.red,
+                                            child: Row(
+                                              mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Image.asset(
+                                                  ImageStyle.Group1925,
+                                                  height: 30,
+                                                  width: 30,
                                                 ),
-                                              ),
-                                              Text(
-                                                '01 MAR 2022',
-                                                // controller.listApplyLeave[index],
-                                                style: TextStyles.textStyles_12.apply(
-                                                    color: ColorStyle.secondryBlack,
-                                                    fontWeightDelta: 2
+                                                Column(
+                                                  crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                                  mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Plus+ Current account (6435)    01 MAR 2022',
+                                                      // controller.listApplyLeave[index],
+                                                      style: TextStyles
+                                                          .textStyles_12
+                                                          .apply(
+                                                          color: ColorStyle
+                                                              .secondryBlack),
+                                                    ),
+                                                    Text(
+                                                      'Important changes in our fees and limits effective from 1st June 2022',
+                                                      // controller.listApplyLeave[index],
+                                                      style: TextStyles.textStyles_6
+                                                          .apply(
+                                                          color: ColorStyle
+                                                              .secondryBlack),
+                                                    ),
+                                                  ],
                                                 ),
-                                              ),
-                                            ],
-                                          ),
-                                          Text(
-                                            'Important changes in our fees and limits effective from 1st June 2022',
-                                            // controller.listApplyLeave[index],
-                                            style: TextStyles.textStyles_8.apply(
-                                                color: ColorStyle.secondryBlack),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ) : Container(
-                                padding: EdgeInsets.only(
-                                  left: 12,
-                                  right: 12,
-                                  top: 12,
-                                  bottom: 12,
-                                ),
-                                alignment: Alignment.center,
-                                width: MediaQuery.of(context).size.width,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
-                                    color: ColorStyle.hex('#F5F4F4')),
-                                child: Row(
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Image.asset(
-                                      ImageStyle.notice,
-                                      height: 30,
-                                      width: 30,
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Expanded(
-                                      child: Column(
-                                        crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                            children: [
-                                              Expanded(
-                                                child: Text(
-                                                  'Plus+ Current account (6435)',
-                                                  // controller.listApplyLeave[index],
-                                                  style: TextStyles.textStyles_12.apply(
-                                                      color: ColorStyle.secondryBlack,
-                                                      fontWeightDelta: 2
-                                                  ),
+                                              ],
+                                            ),
+
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                BorderRadius.circular(5),
+                                                color: Colors.lightBlueAccent
+                                                    .withOpacity(0.1)),
+                                          );
+                                        }
+                                        else if (controller.listType.value == 2) {
+                                          return Container(
+                                            padding: EdgeInsets.only(
+                                                left: 12, right: 12),
+                                            alignment: Alignment.center,
+                                            // color: Colors.red,
+                                            height: 57,
+                                            width: 343,
+
+                                            margin: EdgeInsets.all(6),
+                                            // color: Colors.red,
+                                            child: Row(
+                                              mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Image.asset(
+                                                  ImageStyle.notice,
+                                                  height: 30,
+                                                  width: 30,
                                                 ),
-                                              ),
-                                              Text(
-                                                '01 MAR 2022',
-                                                // controller.listApplyLeave[index],
-                                                style: TextStyles.textStyles_12.apply(
-                                                    color: ColorStyle.secondryBlack,
-                                                    fontWeightDelta: 2
+                                                Column(
+                                                  crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                                  mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Plus+ Current account (6435)    01 MAR 2022',
+                                                      // controller.listApplyLeave[index],
+                                                      style: TextStyles
+                                                          .textStyles_12
+                                                          .apply(
+                                                          color: ColorStyle
+                                                              .secondryBlack),
+                                                    ),
+                                                    Text(
+                                                      'Important changes in our fees and limits effective from 1st June 2022',
+                                                      // controller.listApplyLeave[index],
+                                                      style: TextStyles.textStyles_6
+                                                          .apply(
+                                                          color: ColorStyle
+                                                              .secondryBlack),
+                                                    ),
+                                                  ],
                                                 ),
-                                              ),
-                                            ],
-                                          ),
-                                          Text(
-                                            'Important changes in our fees and limits effective from 1st June 2022',
-                                            // controller.listApplyLeave[index],
-                                            style: TextStyles.textStyles_8.apply(
-                                                color: ColorStyle.secondryBlack),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
+                                              ],
+                                            ),
+
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                BorderRadius.circular(5),
+                                                color: Colors.lightBlueAccent
+                                                    .withOpacity(0.1)),
+                                          );
+                                        } else  {
+                                          return Container(
+                                            color: Colors.red,
+                                            height: 100,
+                                            width: MediaQuery.of(context).size.width,
+                                          );
+                                        }
+                                      }),
+                                ],
                               ),
                             ),
-                            ListViewWithSections(
-                              title: 'Important Messages - March 2022',
-                              arrList: ['','',],
-                              widget: (controller.listType.value == 1) ? Container(
-                                padding: EdgeInsets.only(
-                                  left: 12,
-                                  right: 12,
-                                  top: 12,
-                                  bottom: 12,
-                                ),
-                                alignment: Alignment.center,
-                                width: MediaQuery.of(context).size.width,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
-                                    color: ColorStyle.hex('#F5F4F4')),
-                                child: Row(
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Image.asset(
-                                      ImageStyle.Group1925,
-                                      height: 30,
-                                      width: 30,
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Expanded(
-                                      child: Column(
-                                        crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                            children: [
-                                              Expanded(
-                                                child: Text(
-                                                  'Plus+ Current account (6435)',
-                                                  // controller.listApplyLeave[index],
-                                                  style: TextStyles.textStyles_12.apply(
-                                                      color: ColorStyle.secondryBlack,
-                                                      fontWeightDelta: 2
-                                                  ),
-                                                ),
-                                              ),
-                                              Text(
-                                                '01 MAR 2022',
-                                                // controller.listApplyLeave[index],
-                                                style: TextStyles.textStyles_12.apply(
-                                                    color: ColorStyle.secondryBlack,
-                                                    fontWeightDelta: 2
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Text(
-                                            'Important changes in our fees and limits effective from 1st June 2022',
-                                            // controller.listApplyLeave[index],
-                                            style: TextStyles.textStyles_8.apply(
-                                                color: ColorStyle.secondryBlack),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ) : Container(
-                                padding: EdgeInsets.only(
-                                  left: 12,
-                                  right: 12,
-                                  top: 12,
-                                  bottom: 12,
-                                ),
-                                alignment: Alignment.center,
-                                width: MediaQuery.of(context).size.width,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
-                                    color: ColorStyle.hex('#F5F4F4')),
-                                child: Row(
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Image.asset(
-                                      ImageStyle.notice,
-                                      height: 30,
-                                      width: 30,
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Expanded(
-                                      child: Column(
-                                        crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                            children: [
-                                              Expanded(
-                                                child: Text(
-                                                  'Plus+ Current account (6435)',
-                                                  // controller.listApplyLeave[index],
-                                                  style: TextStyles.textStyles_12.apply(
-                                                      color: ColorStyle.secondryBlack,
-                                                      fontWeightDelta: 2
-                                                  ),
-                                                ),
-                                              ),
-                                              Text(
-                                                '01 MAR 2022',
-                                                // controller.listApplyLeave[index],
-                                                style: TextStyles.textStyles_12.apply(
-                                                    color: ColorStyle.secondryBlack,
-                                                    fontWeightDelta: 2
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Text(
-                                            'Important changes in our fees and limits effective from 1st June 2022',
-                                            // controller.listApplyLeave[index],
-                                            style: TextStyles.textStyles_8.apply(
-                                                color: ColorStyle.secondryBlack),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            ListViewWithSections(
-                              title: 'Important Messages - March 2022',
-                              arrList: ['','','',],
-                              widget: (controller.listType.value == 1) ? Container(
-                                padding: EdgeInsets.only(
-                                  left: 12,
-                                  right: 12,
-                                  top: 12,
-                                  bottom: 12,
-                                ),
-                                alignment: Alignment.center,
-                                width: MediaQuery.of(context).size.width,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
-                                    color: ColorStyle.hex('#F5F4F4')),
-                                child: Row(
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Image.asset(
-                                      ImageStyle.Group1925,
-                                      height: 30,
-                                      width: 30,
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Expanded(
-                                      child: Column(
-                                        crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                            children: [
-                                              Expanded(
-                                                child: Text(
-                                                  'Plus+ Current account (6435)',
-                                                  // controller.listApplyLeave[index],
-                                                  style: TextStyles.textStyles_12.apply(
-                                                      color: ColorStyle.secondryBlack,
-                                                      fontWeightDelta: 2
-                                                  ),
-                                                ),
-                                              ),
-                                              Text(
-                                                '01 MAR 2022',
-                                                // controller.listApplyLeave[index],
-                                                style: TextStyles.textStyles_12.apply(
-                                                    color: ColorStyle.secondryBlack,
-                                                    fontWeightDelta: 2
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Text(
-                                            'Important changes in our fees and limits effective from 1st June 2022',
-                                            // controller.listApplyLeave[index],
-                                            style: TextStyles.textStyles_8.apply(
-                                                color: ColorStyle.secondryBlack),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ) : Container(
-                                padding: EdgeInsets.only(
-                                  left: 12,
-                                  right: 12,
-                                  top: 12,
-                                  bottom: 12,
-                                ),
-                                alignment: Alignment.center,
-                                width: MediaQuery.of(context).size.width,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
-                                    color: ColorStyle.hex('#F5F4F4')),
-                                child: Row(
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Image.asset(
-                                      ImageStyle.notice,
-                                      height: 30,
-                                      width: 30,
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Expanded(
-                                      child: Column(
-                                        crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                            children: [
-                                              Expanded(
-                                                child: Text(
-                                                  'Plus+ Current account (6435)',
-                                                  // controller.listApplyLeave[index],
-                                                  style: TextStyles.textStyles_12.apply(
-                                                      color: ColorStyle.secondryBlack,
-                                                      fontWeightDelta: 2
-                                                  ),
-                                                ),
-                                              ),
-                                              Text(
-                                                '01 MAR 2022',
-                                                // controller.listApplyLeave[index],
-                                                style: TextStyles.textStyles_12.apply(
-                                                    color: ColorStyle.secondryBlack,
-                                                    fontWeightDelta: 2
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Text(
-                                            'Important changes in our fees and limits effective from 1st June 2022',
-                                            // controller.listApplyLeave[index],
-                                            style: TextStyles.textStyles_8.apply(
-                                                color: ColorStyle.secondryBlack),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
+
                           ],
                         ),
                       ),

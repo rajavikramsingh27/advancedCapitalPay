@@ -218,7 +218,7 @@ class PersonalApplication1 extends StatelessWidget {
                                 listValue: [
                                   'CitizenShip',
                                   'Jhunjhunun',
-                                  'Jaipure',
+                                  'Jaipur',
                                   'Delhi'
                                 ],
                                 selectedValue: "CitizenShip",

@@ -6,8 +6,6 @@ import 'package:auto_size_text/auto_size_text.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
 
-
-
 class AppBarStyle extends StatelessWidget implements PreferredSizeWidget {
   final Function()? onTap;
   final Widget? leadingButton;
@@ -72,7 +70,6 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
   final Widget? trailingButton;
   final String? title;
   final Color? colorTitle;
-  final Color? backgroundColor;
 
   AppBarStyleTitle({
     Key? key,
@@ -81,7 +78,6 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
     this.trailingButton,
     this.title,
     this.colorTitle = Colors.white,
-    this.backgroundColor = Colors.transparent,
   }) : super(key: key);
 
   double heightAppBar = 50;
@@ -94,7 +90,7 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       elevation: 0,
       toolbarHeight: heightAppBar,
-      backgroundColor: backgroundColor,
+      backgroundColor: Colors.transparent,
       // leadingWidth: 0,
       leading: (leadingButton == null) ? Container() : leadingButton,
       centerTitle: true,
@@ -114,31 +110,21 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
   }
 }
 
-class AppBarStyleLeadingTitleTrailing extends StatelessWidget implements PreferredSizeWidget {
-  final Function()? onTapLeading;
-  final String? leadingImage;
-  final List<Widget>? trailingAction;
-  final double? leadingWidth;
-  final String? nameUser;
-  final TextStyle? nameStyle;
-  final String? descriptionUser;
-  final TextStyle? descriptionStyle;
-  final String? timeLastLogin;
+class AppBarStyleCustom extends StatelessWidget implements PreferredSizeWidget {
+  final Function()? onTap;
+  final Widget? leadingButton;
+  final Widget? trailingButton;
+  final Widget? settingButton;
 
-  AppBarStyleLeadingTitleTrailing({
+  AppBarStyleCustom({
     Key? key,
-    this.onTapLeading,
-    this.leadingImage = '',
-    this.trailingAction,
-    this.leadingWidth = 70,
-    this.nameUser='',
-    this.descriptionUser='',
-    this.timeLastLogin='',
-    this.nameStyle,
-    this.descriptionStyle,
+    this.onTap,
+    this.leadingButton,
+    this.trailingButton,
+    this.settingButton,
   }) : super(key: key);
 
-  double heightAppBar = 80;
+  double heightAppBar = 70;
 
   @override
   Size get preferredSize => new Size.fromHeight(heightAppBar);
@@ -146,51 +132,111 @@ class AppBarStyleLeadingTitleTrailing extends StatelessWidget implements Preferr
   @override
   Widget build(BuildContext context) {
     return AppBar(
+
       elevation: 0,
       toolbarHeight: heightAppBar,
       backgroundColor: Colors.transparent,
-      leadingWidth: leadingWidth,
-      leading: InkWell(
-        child: Container(
-          padding: EdgeInsets.only(left: 10),
-          child: Image.asset(
-            ImageStyle.ellipse2,
-            height: 50,
-          ),
-        ),
-        onTap: onTapLeading,
+      // leadingWidth: 0,
+
+      leading: (leadingButton == null) ? Container() : Image.asset(
+        ImageStyle.ellipse2,
+        height: 52,
       ),
       // centerTitle: true,
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            nameUser!,
-            style: nameStyle,
-            // style: TextStyles.textStyles_14.apply(
-            //   color: ColorStyle.primaryWhite,
-            // ),
+            'MR HARRISON SMITH',
+            style: TextStyles.textStyles_14.apply(
+              color: ColorStyle.primaryWhite,
+            ),
           ),
           Text(
-            descriptionUser!,
-            style: descriptionStyle,
-            // style: TextStyles.textStyles_14.apply(
-            //   color: ColorStyle.primaryWhite,
-            // ),
+            'Plus Personal Customer',
+            style: TextStyles.textStyles_14.apply(
+              color: ColorStyle.primaryWhite,
+            ),
           ),
           Text(
-            timeLastLogin!,
-            style: TextStyles.textStyles_8.apply(
+            'Last Successful login: 02 Feb 2021.   13: 53: 41',
+            style: TextStyles.textStyles_10.apply(
               color: ColorStyle.primaryWhite,
               // fontWeightDelta: 1,
             ),
           ),
         ],
       ),
-      actions: trailingAction,
+      actions: [
+        if (trailingButton != null) trailingButton!,
+        Icon(Icons.settings,color: ColorStyle.primaryWhite,size: 30,),
+
+      ],
     );
   }
 }
+class AppBarStyleCustom1 extends StatelessWidget implements PreferredSizeWidget {
+  final Function()? onTap;
+  final Widget? leadingButton;
+  final Widget? trailingButton;
+  final Widget? userLogOutButton;
+
+  AppBarStyleCustom1({
+    Key? key,
+    this.onTap,
+    this.leadingButton,
+    this.trailingButton,
+    this.userLogOutButton,
+  }) : super(key: key);
+
+  double heightAppBar = 70;
+
+  @override
+  Size get preferredSize => new Size.fromHeight(heightAppBar);
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+
+      elevation: 0,
+      toolbarHeight: heightAppBar,
+      backgroundColor: Colors.transparent,
+      // leadingWidth: 0,
+
+      leading: (leadingButton == null) ? Container() : Image.asset(
+        ImageStyle.ellipse2,
+        height: 52,
+      ),
+      // centerTitle: true,
+      title: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'HARRISON SMITH',
+            style: TextStyles.textStyles_16.apply(
+              color: ColorStyle.primaryWhite,
+              fontWeightDelta: 1
+            ),
+          ),
+          Text(
+            'Your Personal Settings',
+            style: TextStyles.textStyles_10.apply(
+              color: ColorStyle.primaryWhite,
+            ),
+          ),
+
+        ],
+      ),
+      actions: [
+        if (trailingButton != null) trailingButton!,
+        if (userLogOutButton != null) userLogOutButton!,
+
+
+      ],
+    );
+  }
+}
+
 
 class AppBarStyle1 extends StatelessWidget implements PreferredSizeWidget {
   final Function()? onTap;

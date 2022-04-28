@@ -49,7 +49,7 @@ class SavingGoal2 extends StatelessWidget {
       body: GetBuilder<SavingGoal2Controller>(
           init: SavingGoal2Controller(),
           initState: (state) {
-            controller.reset();
+            // controller.reset();
             // print(controller.listSelected.value);
           },
           builder: (authController) {
@@ -248,86 +248,68 @@ class SavingGoal2 extends StatelessWidget {
                                     fontWeightDelta: 2
                                 ),
                               ),
-                              SizedBox(height: 10,),
-                              Row(
+                              Container(
+                                // padding: EdgeInsets.only(left: 10,right: 10),
+                                // color: ColorStyle.secondryBlack,
+                                height: 160,
+                                child:   ListView.builder(
+                                    // padding: EdgeInsets.only(left: 10,right: 10,top: 20),
+                                    shrinkWrap: true,
+                                    itemCount: controller.images1.length,
+                                    // itemCount: 1,
+                                    // scrollDirection: Axis.horizontal,
+                                    physics: BouncingScrollPhysics(),
+                                    itemBuilder: (BuildContext context, int index) {
+                                      return  Row(
 
-                                children: [
-                                  Container(
-                                    child: Image.asset(
-                                      ImageStyle.coin2,
-                                      // height: 10,
-                                    ),
-                                    height: 64,
-                                    width: 64,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(40),
+                                        children: [
+                                          Container(
+                                            child: Image.asset(
+                                              controller.images1[index],
+                                              // height: 10,
+                                            ),
+                                            height: 64,
+                                            width: 64,
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(40),
 
-                                    ),
-                                  ),
-                                  SizedBox(width: 12,),
-                                  Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        ' Spare change',
-                                        style: TextStyles.textStyles_14.apply(
-                                            color: ColorStyle.grey,
-                                            fontWeightDelta: 2
-                                        ),
-                                      ),
-                                      Text(
-                                        'Round-Up ',
-                                        style: TextStyles.textStyles_14.apply(
-                                            color: ColorStyle.secondryBlack,
-                                            fontWeightDelta: 2
-                                        ),
-                                      ),
-                                    ],
-                                  )
+                                            ),
+                                          ),
+                                          SizedBox(width: 12,),
+                                          Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                // ' Spare change',
+                                                controller.chooseSaving[index],
+                                                style: TextStyles.textStyles_14.apply(
+                                                    color: ColorStyle.grey,
+                                                    fontWeightDelta: 2
+                                                ),
+                                              ),
+                                              Text(
+                                                // 'Round-Up ',
+                                                controller.chooseSaving1[index],
+                                                style: TextStyles.textStyles_14.apply(
+                                                    color: ColorStyle.secondryBlack,
+                                                    fontWeightDelta: 2
+                                                ),
+                                              ),
+                                            ],
+                                          ),
 
-                                ],
+
+
+                                        ],
+                                      );
+
+
+
+                                    }),
                               ),
-                              SizedBox(height: 12,),
-                              Row(
 
-                                children: [
-                                  Container(
 
-                                    child: Image.asset(
-                                      ImageStyle.payment4,
-                                      // height: 10,
-                                    ),
-                                    height: 64,
-                                    width: 64,
 
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(40),
-
-                                    ),
-                                  ),
-                                  SizedBox(width: 12,),
-                                  Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Recurring payment',
-                                        style: TextStyles.textStyles_14.apply(
-                                            color: ColorStyle.grey,
-                                            fontWeightDelta: 2
-                                        ),
-                                      ),
-                                      Text(
-                                        '10.00 / 9th day of the month',
-                                        style: TextStyles.textStyles_14.apply(
-                                            color: ColorStyle.secondryBlack,
-                                            fontWeightDelta: 2
-                                        ),
-                                      ),
-                                    ],
-                                  )
-
-                                ],
-                              ),
                             ],
                           )
                       ),
@@ -352,7 +334,7 @@ class SavingGoal2 extends StatelessWidget {
                         // color: ColorStyle.secondryBlack,
                         height: 233,
                         child:   ListView.builder(
-                            padding: EdgeInsets.only(left: 10,right: 10,top: 20),
+                            padding: EdgeInsets.only(left: 20,right: 20,top: 20),
                             shrinkWrap: true,
                             itemCount: controller.images.length,
                             // itemCount: 1,
@@ -365,44 +347,52 @@ class SavingGoal2 extends StatelessWidget {
                                 // width: 329,
                                 height: 80,
                                 child: Row(
-
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Image.asset(
-                                      controller.images[index],
-                                      height: 38,
-                                    ),
-                                    SizedBox(width: 18,),
+                                   Container(
+                                     child: Row(
+
+                                       children: [
+                                         Image.asset(
+                                           controller.images[index],
+                                           height: 38,
+                                         ),
+                                         SizedBox(width: 10,),
+                                         Column(
+                                           crossAxisAlignment: CrossAxisAlignment.start,
+                                           children: [
+                                             SizedBox(height: 20,),
+                                             Text(
+                                               // 'KFC',
+                                               controller.chooseActivity[index],
+                                               style: TextStyles.textStyles_14.apply(
+                                                   color: ColorStyle.secondryBlack,
+                                                   fontWeightDelta: 2
+                                               ),
+                                             ),
+                                             SizedBox(height: 2,),
+                                             Text(
+                                               'Spare change',
+                                               style: TextStyles.textStyles_14.apply(
+                                                   color: ColorStyle.grey,
+                                                   fontWeightDelta: 2
+                                               ),
+                                             ),
+
+
+                                           ],
+                                         ),
+                                       ],
+                                     ),
+                                   ),
+                                    // SizedBox(width: 100,),
                                     Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.end,
                                       children: [
                                         SizedBox(height: 20,),
                                         Text(
-                                          'KFC',
-                                          // controller.chooseActivitySelected[index],
-                                          style: TextStyles.textStyles_14.apply(
-                                              color: ColorStyle.secondryBlack,
-                                              fontWeightDelta: 2
-                                          ),
-                                        ),
-                                        SizedBox(height: 2,),
-                                        Text(
-                                          'Spare change',
-                                          style: TextStyles.textStyles_14.apply(
-                                              color: ColorStyle.grey,
-                                              fontWeightDelta: 2
-                                          ),
-                                        ),
-
-
-                                      ],
-                                    ),
-                                    SizedBox(width: 100,),
-                                    Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        SizedBox(height: 20,),
-                                        Text(
-                                          '     + S 1.90',
+                                          // '     + S 1.90',
+                                          controller.chooseDoller[index],
                                           style: TextStyles.textStyles_14.apply(
                                               color: ColorStyle.green,
                                               fontWeightDelta: 2
@@ -410,7 +400,8 @@ class SavingGoal2 extends StatelessWidget {
                                         ),
                                         SizedBox(height: 2,),
                                         Text(
-                                          '          22:31',
+                                          // '          22:31',
+                                          controller.chooseTime[index],
                                           style: TextStyles.textStyles_14.apply(
                                               color: ColorStyle.grey,
                                               fontWeightDelta: 2
