@@ -11,8 +11,10 @@ import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
 import '../Components/SearchBarCustom.dart';
 import '../Components/ListViewIconTitleSubtitle.dart';
-
-
+import '../Views/Settings/NotificationSettings.dart';
+import '../Views/Settings/PreferredLanguage.dart';
+import '../Views/Settings/YourFavoriteAccount.dart';
+import '../Views/Profile/EditProfile.dart';
 
 class AppSettings extends StatelessWidget {
   const AppSettings({Key? key}) : super(key: key);
@@ -49,6 +51,10 @@ class AppSettings extends StatelessWidget {
                   leadingImage: ImageStyle.ellipse2,
                   nameUser: 'HARRISON SMITH',
                   descriptionUser: 'Your Personal Settings',
+                  nameStyle: TextStyles.textStyles_18
+                      .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
+                  descriptionStyle: TextStyles.textStyles_12
+                      .apply(color: ColorStyle.primaryWhite),
                   trailingAction: [
                     IconButton(
                       icon: Image.asset(
@@ -106,6 +112,20 @@ class AppSettings extends StatelessWidget {
 
                     '',
                   ],
+
+                  onTapIndex: (index) {
+                    if (index == 0) {
+                      Get.to(EditProfile());
+                    } else if (index == 3) {
+                      Get.to(NotificationSettings());
+                    } else if (index == 4) {
+                      Get.to(YourFavoriteAccount(
+                        title: 'Your Favorite Account',
+                      ));
+                    } else if (index == 6) {
+                      Get.to(PreferredLanguage());
+                    }
+                  },
                 ),
                 ListViewIconTitleSubtitle(
                   title: "Feature Settings",

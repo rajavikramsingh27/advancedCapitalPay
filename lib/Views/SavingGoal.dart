@@ -1,18 +1,18 @@
-import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
 import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
-import 'package:auto_size_text/auto_size_text.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter/material.dart';
 import '../Controllers/SavingGoalController.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
-import '../Views/OTPScreen.dart';
 import '../Components/BackgroundImage.dart';
 import '../Components/AppBarStyle.dart';
-import '../Components/TextFieldCustom.dart';
-import 'ForgotPassword/ForgotPassword.dart';
-import 'SignUp/PersonalApplication1.dart';
+import 'package:get/utils.dart';
+import '../Styles/ColorStyle.dart';
+import '../Views/MessagePage.dart';
+import '../Views/AppSettings.dart';
+import '../Views/SavingGoal2.dart';
+
 
 
 class SavingGoal extends StatelessWidget {
@@ -23,266 +23,372 @@ class SavingGoal extends StatelessWidget {
     final controller = Get.put(SavingGoalController());
     return Stack(
       children: [
-        BackgroundImage(),
         Scaffold(
-          backgroundColor: Colors.transparent,
-          // appBar: AppBarStyleCustom(
-          //   leadingButton: IconButton(
-          //     icon: Image.asset(
-          //       ImageStyle.ellipse2,
-          //       height: 30,
-          //     ),
-          //     onPressed: () {},
-          //   ),
-          //   trailingButton: IconButton(
-          //     icon: Image.asset(
-          //       ImageStyle.chat,
-          //       height: 30,
-          //     ),
-          //     onPressed: () {},
-          //   ),
-          //   settingButton: IconButton(
-          //     icon: Image.asset(
-          //       ImageStyle.settings,
-          //       height: 30,
-          //     ),
-          //     onPressed: () {},
-          //   ),
-          // ),
-
-          body: GetBuilder<SavingGoalController>(
-    init: SavingGoalController(),
-    initState: (state) {
-    controller.reset();
-    // print(controller.listSelected.value);
-    },
-    builder: (authController) {
-      return Obx(() =>
-          Column(
-            children: [
-              Container(
-                padding: EdgeInsets.only(
-                    left: 12,
-                    right: 12
+            backgroundColor: ColorStyle.primaryWhite,
+            appBar: AppBarStyleLeadingTitleTrailing(
+              backgroundColor: ColorStyle.darkestBlue,
+              leadingImage: ImageStyle.ellipse2,
+              nameStyle: TextStyles.textStyles_14
+                  .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 2),
+              descriptionStyle: TextStyles.textStyles_12
+                  .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
+              nameUser: 'MR HARRISON SMITH',
+              descriptionUser: 'Plus Personal Customer',
+              timeLastLogin:
+                  'Last Successful login: ' + '02 Feb 2021' + '  ' + '13:53:41',
+              trailingAction: [
+                IconButton(
+                  icon: Image.asset(
+                    ImageStyle.chat,
+                    height: 26,
+                  ),
+                  onPressed: () {
+                    Get.to(MessagePage());
+                  },
                 ),
-                child: AppBarStyleLeadingTitleTrailing(),
-              ),
-              SizedBox(height: 10,),
-              Container(
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height-111,
-                child: Column(
-                  children: [
-                    SizedBox(height: 20,),
-                    Container(
-                      alignment: Alignment.center,
-                      child: Text(
-                        'Total saving',
-                        style: TextStyles.textStyles_20.apply(
-                            color: ColorStyle.grey,
-                            fontWeightDelta: 2
+                IconButton(
+                  icon: Image.asset(
+                    ImageStyle.settings,
+                    height: 26,
+                  ),
+                  onPressed: () {
+                    Get.to(AppSettings());
+                  },
+                ),
+                SizedBox(
+                  width: 6,
+                ),
+              ],
+            ),
+            body: GetBuilder<SavingGoalController>(
+                init: SavingGoalController(),
+                initState: (state) {
+                  controller.reset();
+                  // print(controller.listSelected.value);
+                },
+                builder: (authController) {
+                  return Obx(() => Stack(
+                    children: [
+                      Positioned(
+                        bottom: 0,
+                        child: Container(
+                          height: MediaQuery.of(context).size.height,
+                          width: MediaQuery.of(context).size.width,
+                          color: ColorStyle.darkestBlue,
                         ),
                       ),
-                    ),
-                    SizedBox(height: 10,),
-                    Container(
-                      alignment: Alignment.center,
-                      child: Text(
-                        'S 8,187.89',
-                        style: TextStyles.textStyles_46.apply(
-                            color: ColorStyle.secondryBlack,
-                            fontWeightDelta: 2
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 28,),
-                    Container(
-                      margin: EdgeInsets.only(left: 22, right: 22),
-                      height: 80,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Icon(Icons.cancel_outlined,
-                            color: ColorStyle.primaryWhite,),
-                          Row(
-
+                      SingleChildScrollView(
+                        child: Container(
+                          // height: MediaQuery.of(context).size.height,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(39),
+                              topLeft: Radius.circular(39),
+                            ),
+                            color: ColorStyle.primaryWhite,
+                            image: DecorationImage(
+                              image: AssetImage(ImageStyle.bg_Image),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          child: Column(
                             children: [
-                              SizedBox(width: 12,),
-                              Image.asset(
-                                ImageStyle.finance,
-                                height: 38,
+                              SizedBox(
+                                height: 20,
                               ),
-                              SizedBox(width: 24,),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    children: [
-                                      Text(
-                                          'You are doing',
-                                          style: TextStyles.textStyles_12
-                                              .apply(
-                                            color: ColorStyle.primaryWhite,
-                                          )
-                                      ),
-                                      Text(
-                                          ' great',
-                                          style: TextStyles.textStyles_12
-                                              .apply(
-                                              color: ColorStyle.primaryWhite,
-                                              fontWeightDelta: 3
-                                          )
-                                      ),
-                                      Text(
-                                          ' this month',
-                                          style: TextStyles.textStyles_12
-                                              .apply(
-                                            color: ColorStyle.primaryWhite,
-                                          )
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      Text(
-                                        'with',
-                                        style: TextStyles.textStyles_14.apply(
-                                          color: ColorStyle.primaryWhite,
+                              Container(
+                                alignment: Alignment.center,
+                                child: Text(
+                                  'Total saving',
+                                  style: TextStyles.textStyles_20.apply(
+                                      color: ColorStyle.grey,
+                                      fontWeightDelta: 2),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Container(
+                                alignment: Alignment.center,
+                                child: Text(
+                                  'S 8,187.89',
+                                  style: TextStyles.textStyles_46.apply(
+                                      color: ColorStyle.secondryBlack,
+                                      fontWeightDelta: 2),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 28,
+                              ),
+                              Container(
+                                margin:
+                                EdgeInsets.only(left: 16, right: 16),
+                                padding: EdgeInsets.only(
+                                    top: 10, right: 10, bottom: 16),
+                                decoration: BoxDecoration(
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: ColorStyle.blueSKY,
+                                      // spreadRadius: 10,
+                                      blurRadius: 4,
+                                      // offset: Offset(0, 7), // changes position of shadow
+                                    ),
+                                  ],
+                                  borderRadius: BorderRadius.circular(8),
+                                  color: ColorStyle.blueSKY,
+                                ),
+                                child: Column(
+                                  crossAxisAlignment:
+                                  CrossAxisAlignment.end,
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            SizedBox(
+                                              width: 12,
+                                            ),
+                                            Image.asset(
+                                              ImageStyle.finance,
+                                              height: 38,
+                                            ),
+                                            SizedBox(
+                                              width: 24,
+                                            ),
+                                            Column(
+                                              crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    Text('You are doing',
+                                                        style: TextStyles
+                                                            .textStyles_12
+                                                            .apply(
+                                                          color: ColorStyle
+                                                              .primaryWhite,
+                                                        )),
+                                                    Text(' great',
+                                                        style: TextStyles
+                                                            .textStyles_12
+                                                            .apply(
+                                                            color: ColorStyle
+                                                                .primaryWhite,
+                                                            fontWeightDelta:
+                                                            3)),
+                                                    Text(' this month',
+                                                        style: TextStyles
+                                                            .textStyles_12
+                                                            .apply(
+                                                          color: ColorStyle
+                                                              .primaryWhite,
+                                                        )),
+                                                  ],
+                                                ),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      'with',
+                                                      style: TextStyles
+                                                          .textStyles_14
+                                                          .apply(
+                                                        color: ColorStyle
+                                                            .primaryWhite,
+                                                      ),
+                                                    ),
+                                                    Text(
+                                                      ' S 730.4 ',
+                                                      style: TextStyles
+                                                          .textStyles_14
+                                                          .apply(
+                                                          color: ColorStyle
+                                                              .primaryWhite,
+                                                          fontWeightDelta:
+                                                          2),
+                                                    ),
+                                                    Text(
+                                                      ' saved',
+                                                      style: TextStyles
+                                                          .textStyles_14
+                                                          .apply(
+                                                        color: ColorStyle
+                                                            .primaryWhite,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            )
+                                          ],
                                         ),
-                                      ),
-                                      Text(
-                                        ' S 730.4 ',
-                                        style: TextStyles.textStyles_14.apply(
+                                        InkWell(
+                                          child: Icon(
+                                            Icons.cancel_outlined,
                                             color: ColorStyle.primaryWhite,
-                                            fontWeightDelta: 2
-                                        ),
-                                      ),
-                                      Text(
-                                        ' saved',
-                                        style: TextStyles.textStyles_14.apply(
-                                          color: ColorStyle.primaryWhite,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                          ),
+                                          onTap: () {
 
-                                ],
+                                          },
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 48,
+                              ),
+                              Container(
+                                padding:
+                                EdgeInsets.only(left: 22, right: 22),
+                                child: Row(
+                                  mainAxisAlignment:
+                                  MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Saving Goals',
+                                      style: TextStyles.textStyles_24.apply(
+                                          color: ColorStyle.secondryBlack,
+                                          fontWeightDelta: 3),
+                                    ),
+                                    InkWell(
+                                      child: Container(
+                                        alignment: Alignment.center,
+                                        child: Icon(
+                                          Icons.add,
+                                          color: ColorStyle.primaryWhite,
+                                          size: 30,
+                                        ),
+                                        height: 36,
+                                        width: 36,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                          BorderRadius.circular(20),
+                                          color: ColorStyle.blueSKY,
+                                        ),
+                                      ),
+                                      onTap: () {
+                                        Get.to(SavingGoal2());
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 28,
+                              ),
+                              Container(
+                                height: 233,
+                                child: ListView.separated(
+                                    shrinkWrap: true,
+                                    itemCount: controller.images.length,
+                                    scrollDirection: Axis.horizontal,
+                                    padding:
+                                    EffectStyle.padding(16, 16, 0, 0),
+                                    separatorBuilder:
+                                        (BuildContext context, int index) {
+                                      return Container(
+                                        width: 16,
+                                      );
+                                    },
+                                    itemBuilder:
+                                        (BuildContext context, int index) {
+                                      return Container(
+                                          height: 240,
+                                          width: 240,
+                                          child: Stack(
+                                            children: [
+                                              Image.asset(
+                                                controller.images[index],
+                                              ),
+                                              Positioned(
+                                                left: 10,
+                                                top: 10,
+                                                child: Column(
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'Maldives',
+                                                      style: TextStyles.textStyles_14.apply(
+                                                        color: ColorStyle.primaryWhite,
+                                                        fontWeightDelta: 1,
+                                                      ),
+                                                    ),
+                                                    Text(
+                                                      '168 days left',
+                                                      style: TextStyles.textStyles_12.apply(
+                                                        color: ColorStyle.primaryWhite.withOpacity(0.8),
+                                                        fontWeightDelta: 0,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                              Positioned(
+                                                left: 10,
+                                                bottom: 10,
+                                                right: 10,
+                                                child: Column(
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      '\$8,187.89',
+                                                      style: TextStyles.textStyles_20.apply(
+                                                        color: ColorStyle.primaryWhite,
+                                                        fontWeightDelta: 2,
+                                                      ),
+                                                    ),
+                                                    ClipRRect(
+                                                      borderRadius: EffectStyle.radiusCustom(30),
+                                                      // width: double.infinity,
+                                                      // decoration: BoxDecoration(
+                                                      //   borderRadius: EffectStyle.radiusCustom(130)
+                                                      // ),
+                                                      child: LinearProgressIndicator(
+                                                        backgroundColor: ColorStyle.primaryWhite,
+                                                        valueColor: AlwaysStoppedAnimation<Color>(ColorStyle.darkestBlueSignUp),
+                                                        value: 0.6,
+                                                      ),
+                                                    ),
+                                                    SizedBox(height: 4,),
+                                                    Text(
+                                                      'from \$ 10,916.00',
+                                                      style: TextStyles.textStyles_12.apply(
+                                                        color: ColorStyle.primaryWhite,
+                                                        fontWeightDelta: 0,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              )
+                                            ],
+                                          )
+                                      );
+                                    }),
                               )
-
-
                             ],
                           ),
-
-                        ],
+                        ),
                       ),
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: ColorStyle.blueSKY,
-                            // spreadRadius: 10,
-                            blurRadius: 4,
-                            // offset: Offset(0, 7), // changes position of shadow
-                          ),
-                        ],
-                        borderRadius: BorderRadius.circular(8),
-                        color: ColorStyle.blueSKY,
-
-
-                      ),
-
-                    ),
-                    SizedBox(height: 48,),
-                    Container(
-                      padding: EdgeInsets.only(
-                          left: 22,
-                          right: 22
-
-
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Saving Goals',
-                            style: TextStyles.textStyles_24.apply(
-                                color: ColorStyle.secondryBlack,
-                                fontWeightDelta: 3
-                            ),
-                          ),
-                          Container(
-                            alignment: Alignment.center,
-                            child: Icon(
-                              Icons.add,
-                              color: ColorStyle.primaryWhite,
-                              size: 30,
-                            ),
-                            height: 36,
-                            width: 36,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: ColorStyle.blueSKY,
-
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 28,),
-                    Container(
-                      height: 233,
-                      child:   ListView.builder(
-                          shrinkWrap: true,
-                          itemCount: controller.images.length,
-                          scrollDirection: Axis.horizontal,
-                          physics: BouncingScrollPhysics(),
-                          itemBuilder: (BuildContext context, int index) {
-                            return Row(
-                              children: [
-                                Container(width: 14,),
-                                Container(
-                                  child: Image.asset(
-                                    controller.images[index],
-                                  ),
-                                  decoration: BoxDecoration(
-                                    // color: ColorStyle.primaryColor,
-                                    borderRadius:
-                                    BorderRadius.circular(10),
-                                  ),
-                                )
-                              ],
-                            );
-
-                          }),
-                    )
-
-                  ],
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(39),
-                    topLeft: Radius.circular(39),
-                  ),
-                  color: ColorStyle.primaryWhite,
-                  image: DecorationImage(
-                    image: AssetImage(ImageStyle.bg_Image),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-
-              ),
-
-
-
-
-            ],
-          ),
-
-
-      );
-    })
-        )],
+                    ],
+                  ),);
+                })),
+      ],
     );
   }
 }
+
+
+
+//Icon(Icons.arrow_back,color: ColorStyle.primaryWhite,size: 18,),
+
+// decoration: BoxDecoration(
+// image: DecorationImage(
+// image: AssetImage(ImageStyle.card_3),
+// fit: BoxFit.cover,
+// ),
+// ),

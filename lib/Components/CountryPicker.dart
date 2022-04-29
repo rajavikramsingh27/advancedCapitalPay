@@ -5,7 +5,22 @@ import '../../Styles/EffectStyle.dart';
 import 'package:country_picker/country_picker.dart';
 
 class CountryPicker extends StatefulWidget {
-  CountryPicker({Key? key}) : super(key: key);
+
+  double radius;
+  Color colorBorder;
+  IconData iconArrow;
+  EdgeInsets padding;
+  Color colorIcon;
+  TextStyle textStyle;
+
+  CountryPicker({Key? key,
+    this.radius = 4,
+    this.colorBorder = Colors.grey,
+    this.iconArrow = Icons.arrow_drop_down_outlined,
+    this.padding = const EdgeInsets.only(left: 10, right: 10, top: 14, bottom: 14),
+    this.colorIcon = Colors.grey,
+    this.textStyle = const TextStyle()
+  }) : super(key: key);
 
   String displayNameNoCountryCode = '';
   String flagEmoji = '';
@@ -19,12 +34,12 @@ class _CountryPickerState extends State<CountryPicker> {
   Widget build(BuildContext context) {
     return InkWell(
       child: Container(
-        padding: EffectStyle.padding(10, 10, 14, 14),
+        padding: widget.padding,
         decoration: BoxDecoration(
             // color: ColorStyle.primaryWhite,
-            borderRadius: EffectStyle.radiusCustom(4),
+            borderRadius: EffectStyle.radiusCustom(widget.radius),
             border: Border.all(
-              color: ColorStyle.grey,
+              color: widget.colorBorder,
               width: 1,
             )),
         child: Row(
@@ -40,26 +55,28 @@ class _CountryPickerState extends State<CountryPicker> {
                       fontWeightDelta: 0,
                     ),
                   ),
-                  // Icon(Icons.flag, size: 26,),
                   SizedBox(
                     width: 4,
                   ),
                   Expanded(
                     child: Text(
                       widget.displayNameNoCountryCode,
-                      style: TextStyles.textStyles_14.apply(
-                        color: ColorStyle.secondryBlack,
-                        fontWeightDelta: 0,
-                      ),
+                      style: widget.textStyle,
+
+
+                      // TextStyles.textStyles_14.apply(
+                      //   color: ColorStyle.secondryBlack,
+                      //   fontWeightDelta: 0,
+                      // ),
                     ),
                   ),
                 ],
               ),
             ),
             Icon(
-              Icons.arrow_drop_down_outlined,
+              widget.iconArrow,
               size: 26,
-              color: Colors.grey,
+              color: widget.colorIcon,
             ),
           ],
         ),
@@ -73,13 +90,8 @@ class _CountryPickerState extends State<CountryPicker> {
           showPhoneCode: true,
           showWorldWide: false,
           onSelect: (Country country) {
-            print('Select country: ${country.displayName}');
-            print('Select country: ${country.displayNameNoCountryCode}');
-            print('Select country: ${country.flagEmoji}');
-
             setState(() {
-              widget.displayNameNoCountryCode =
-                  country.displayNameNoCountryCode;
+              widget.displayNameNoCountryCode = country.displayNameNoCountryCode.split('(')[0];
               widget.flagEmoji = country.flagEmoji;
             });
           },
@@ -108,14 +120,27 @@ class _CountryPickerState extends State<CountryPicker> {
   }
 }
 
-
-
 class TelePhoneNumberCode extends StatefulWidget {
-  TelePhoneNumberCode({Key? key}) : super(key: key);
+  double radius;
+  Color colorBorder;
+  IconData? iconArrow;
+  EdgeInsets padding;
+  Color colorIcon;
+  TextStyle textStyle;
 
-  String displayNameNoCountryCode = '';
-  String flagEmoji = '';
-  String phoneCode = '';
+  TelePhoneNumberCode({Key? key,
+    this.radius = 4,
+    this.colorBorder = Colors.grey,
+    this.iconArrow,
+  // this.iconArrow = Icons.arrow_drop_down_outlined,
+    this.padding = const EdgeInsets.only(left: 10, right: 10, top: 14, bottom: 14),
+    this.colorIcon = Colors.grey,
+    this.textStyle = const TextStyle()
+  }) : super(key: key);
+
+  String flagEmoji = '🇬🇧';
+  String countryCode = 'UK';
+  String phoneCode = '44';
 
 
 
@@ -128,12 +153,11 @@ class _TelePhoneNumberCodeState extends State<TelePhoneNumberCode> {
   Widget build(BuildContext context) {
     return InkWell(
       child: Container(
-        padding: EffectStyle.padding(10, 10, 14, 14),
+        padding: widget.padding,
         decoration: BoxDecoration(
-          // color: ColorStyle.primaryWhite,
-            borderRadius: EffectStyle.radiusCustom(4),
+            borderRadius: EffectStyle.radiusCustom(widget.radius),
             border: Border.all(
-              color: ColorStyle.grey,
+              color: widget.colorBorder,
               width: 1,
             )),
         child: Row(
@@ -155,30 +179,33 @@ class _TelePhoneNumberCodeState extends State<TelePhoneNumberCode> {
                   ),
                   Text(
                     "+"+widget.phoneCode,
-                    style: TextStyles.textStyles_14.apply(
-                      color: ColorStyle.secondryBlack,
-                      fontWeightDelta: 0,
-                    ),
+                    style: (widget.phoneCode == '44')
+                    ? TextStyles.textStyles_15.apply(
+                      color: ColorStyle.grey,
+                      fontWeightDelta: 2,
+                    ) : widget.textStyle,
                   ),
-                  SizedBox(
-                    width: 4,
-                  ),
+                  // SizedBox(
+                  //   width: 4,
+                  // ),
                   Expanded(
                     child: Text(
-                      widget.displayNameNoCountryCode,
-                      style: TextStyles.textStyles_14.apply(
-                        color: ColorStyle.secondryBlack,
-                        fontWeightDelta: 0,
-                      ),
+                      widget.countryCode,
+                      style: (widget.phoneCode == '44')
+                          ? TextStyles.textStyles_15.apply(
+                        color: ColorStyle.grey,
+                        fontWeightDelta: 2,
+                      ) : widget.textStyle,
                     ),
                   ),
                 ],
               ),
             ),
-            Icon(
-              Icons.arrow_drop_down_outlined,
+            if (widget.iconArrow != null)
+              Icon(
+              widget.iconArrow,
               size: 26,
-              color: Colors.grey,
+              color: widget.colorIcon,
             ),
           ],
         ),
@@ -196,10 +223,11 @@ class _TelePhoneNumberCodeState extends State<TelePhoneNumberCode> {
             print('Select country: ${country.displayNameNoCountryCode}');
             print('Select country: ${country.flagEmoji}');
             print('Select country: ${country.phoneCode}');
+            print('Select country: ${country.countryCode}');
 
             setState(() {
-              widget.displayNameNoCountryCode =
-                  country.displayNameNoCountryCode;
+              widget.countryCode =
+                  country.countryCode;
               widget.flagEmoji = country.flagEmoji;
               widget.phoneCode = country.phoneCode;
             });

@@ -15,7 +15,7 @@ import 'package:intl/intl.dart';
 
 
 class PickerCustom {
-   static datePicker() async {
+   static datePicker(String dateFormat) async {
     DateTime selectedDate = DateTime.now();
 
     final DateTime? picked = await showDatePicker(
@@ -25,7 +25,7 @@ class PickerCustom {
         lastDate: DateTime(2500));
     if (picked != null && picked != selectedDate) {
       selectedDate = picked;
-      final DateFormat format = DateFormat('MMM dd, yyyy');
+      final DateFormat format = DateFormat(dateFormat);
       return format.format(picked);
     }
   }

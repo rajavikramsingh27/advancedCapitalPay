@@ -32,9 +32,13 @@ class BioMatric_Permission extends StatelessWidget {
         return Obx(() => Stack(
               children: [
                 BackgroundImage(
+                  // imageName: controller.isFaceID.value
+                  //     ? ImageStyle.bg_BioMatric
+                  //     : ImageStyle.bg_TouchID,
+
                   imageName: controller.isFaceID.value
-                      ? ImageStyle.bg_BioMatric
-                      : ImageStyle.bg_TouchID,
+                      ? ImageStyle.bg_FaceID_1
+                      : ImageStyle.bg_TouchID_1,
                 ),
                 Scaffold(
                   backgroundColor: Colors.transparent,
@@ -64,39 +68,39 @@ class BioMatric_Permission extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                            alignment: Alignment.center,
-                            width: MediaQuery.of(context).size.width,
-                            child: Stack(
-                              children: [
-                                Center(
-                                  child: Image.asset(
-                                    controller.isFaceID.value ?
-                                    ImageStyle.thumb_square_icon : ImageStyle.thumb_circle_icon,
-                                    width: 230,
-                                    height: 230,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Center(
-                                  child: Container(
-                                    width: 230,
-                                    height: 230,
-                                    alignment: Alignment.center,
-                                    child: Image.asset(
-                                      controller.isFaceID.value ?
-                                      ImageStyle.face_scan : ImageStyle.touchScan,
-                                      width: controller.isFaceID.value ? 120 : 100,
-                                      height: controller.isFaceID.value ? 120 : 100,
-                                      fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            )
-                        ),
+                        // Container(
+                        //     alignment: Alignment.center,
+                        //     width: MediaQuery.of(context).size.width,
+                        //     child: Stack(
+                        //       children: [
+                        //         Center(
+                        //           child: Image.asset(
+                        //             controller.isFaceID.value ?
+                        //             ImageStyle.thumb_square_icon : ImageStyle.thumb_circle_icon,
+                        //             width: 230,
+                        //             height: 230,
+                        //             fit: BoxFit.cover,
+                        //           ),
+                        //         ),
+                        //         Center(
+                        //           child: Container(
+                        //             width: 230,
+                        //             height: 230,
+                        //             alignment: Alignment.center,
+                        //             child: Image.asset(
+                        //               controller.isFaceID.value ?
+                        //               ImageStyle.face_scan : ImageStyle.touchScan,
+                        //               width: controller.isFaceID.value ? 120 : 100,
+                        //               height: controller.isFaceID.value ? 120 : 100,
+                        //               fit: BoxFit.fill,
+                        //             ),
+                        //           ),
+                        //         ),
+                        //       ],
+                        //     )
+                        // ),
                         SizedBox(
-                          height: 30,
+                          height: 300,
                         ),
                         Text(
                           controller.isFaceID.value

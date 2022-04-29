@@ -17,11 +17,11 @@ class TabbarScreen extends StatelessWidget {
   textLabel(String text, int index) {
     return Text(
       text,
-      style: TextStyles.textStyles_12.apply(
+      style: TextStyles.textStyles_10.apply(
         color: (controller.selectedIndex.value == index)
             ? Colors.blueAccent
             : ColorStyle.primaryWhite,
-        // fontWeightDelta: 1,
+        fontWeightDelta: 2,
       ),
     );
   }
@@ -75,7 +75,7 @@ class TabbarScreen extends StatelessWidget {
                           child: SafeArea(
                             child: Container(
                               width: MediaQuery.of(context).size.width,
-                              color: ColorStyle.darkestBlue,
+                              color: ColorStyle.hex('#010730'),
                               padding: EffectStyle.padding(16, 16, 10, 10),
                               child: Row(
                                 mainAxisAlignment:

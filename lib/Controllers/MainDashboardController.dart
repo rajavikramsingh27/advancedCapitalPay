@@ -11,6 +11,7 @@ class MainDashboardController extends GetxController {
   RxList<String> arrCardsImage = [
     ImageStyle.card_1,
     ImageStyle.card_2,
+    ImageStyle.cardSavingGoals,
   ].obs;
 
   RxList<String> arrTitles =

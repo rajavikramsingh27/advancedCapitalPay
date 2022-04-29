@@ -13,7 +13,8 @@ import '../Views/MessagePage.dart';
 import '../Views/AppSettings.dart';
 import '../Components/SearchBarCustom.dart';
 import '../Views/TransactionDetails.dart';
-
+import '../Views/SavingGoal.dart';
+import '../Views/AccountDetails.dart';
 
 class MainDashboard extends StatelessWidget {
   MainDashboard({Key? key}) : super(key: key);
@@ -24,14 +25,15 @@ class MainDashboard extends StatelessWidget {
 
   swiperView() {
     return Container(
-      height: 230,
+      height: 250,
       child: Swiper(
+        viewportFraction: 0.85,
         autoplay: false,
         loop: false,
         itemCount: controller.arrCardsImage.length,
         scrollDirection: Axis.horizontal,
         pagination: SwiperPagination(
-          margin: EdgeInsets.only(top: 100),
+          margin: EdgeInsets.only(top: 120),
           builder: new DotSwiperPaginationBuilder(
             color: ColorStyle.grayColor,
             activeColor: ColorStyle.primaryWhite,
@@ -46,15 +48,24 @@ class MainDashboard extends StatelessWidget {
         //   iconNext: Icons.arrow_forward_ios,
         // ),
         controller: _controller,
+
         itemBuilder: (BuildContext context, int index) {
-          return Container(
-            padding: EdgeInsets.only(left: 40, right: 40),
-            child: Image.asset(
-              controller.arrCardsImage[index],
-              // fit: BoxFit.contain,
-              width: MediaQuery.of(context).size.width,
-              height: 250,
+          return InkWell(
+            child: Container(
+              padding: EdgeInsets.only(
+                left: 10,
+                right: 10,
+              ),
+              child: Image.asset(
+                controller.arrCardsImage[index],
+                // fit: BoxFit.contain,
+                width: MediaQuery.of(context).size.width-200,
+                height: 240,
+              ),
             ),
+            onTap: () {
+              Get.to(SavingGoal());
+            },
           );
         },
         onIndexChanged: (index) {
@@ -79,7 +90,11 @@ class MainDashboard extends StatelessWidget {
             leadingImage: ImageStyle.ellipse2,
             nameUser: 'MR HARRISON SMITH',
             descriptionUser: 'Plus Personal Customer',
-            timeLastLogin: 'Last Successful login: '+'02 Feb 2021'+'  '+'13:53:41',
+            timeLastLogin: 'Last Successful login: 02 Feb 2021. 13: 53: 41',
+            nameStyle: TextStyles.textStyles_14
+                .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 2),
+            descriptionStyle: TextStyles.textStyles_12
+                .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
             trailingAction: [
               IconButton(
                 icon: Image.asset(
@@ -87,17 +102,15 @@ class MainDashboard extends StatelessWidget {
                   height: 26,
                 ),
                 onPressed: () {
-                  Get.to(MessagePage());
+                  // Get.to(MessagePage());
                 },
               ),
               IconButton(
                 icon: Image.asset(
-                  ImageStyle.settings,
+                  ImageStyle.user_logout,
                   height: 26,
                 ),
-                onPressed: () {
-                  Get.to(AppSettings());
-                },
+                onPressed: () {},
               ),
               SizedBox(
                 width: 6,
@@ -113,15 +126,15 @@ class MainDashboard extends StatelessWidget {
             },
             builder: (authController) {
               return Obx(
-                () => SingleChildScrollView(
+                    () => SingleChildScrollView(
                   // padding: EffectStyle.padding(16, 16, 0, 0),
                   child: Column(
                     children: [
+                      swiperView(),
                       Container(
                         padding: EffectStyle.padding(16, 16, 0, 0),
                         child: Column(
                           children: [
-                            swiperView(),
                             SizedBox(
                               height: 20,
                             ),
@@ -134,7 +147,7 @@ class MainDashboard extends StatelessWidget {
                                     margin: EdgeInsets.only(right: 26),
                                     child: Column(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.center,
+                                      MainAxisAlignment.center,
                                       children: [
                                         Text(
                                           'Funds',
@@ -164,7 +177,7 @@ class MainDashboard extends StatelessWidget {
                                   height: 30,
                                   child: Row(
                                     mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                     children: [
                                       Image.asset(ImageStyle.ethereum,
                                           height: 20),
@@ -183,7 +196,7 @@ class MainDashboard extends StatelessWidget {
                                         decoration: BoxDecoration(
                                           color: ColorStyle.primaryWhite,
                                           borderRadius:
-                                              BorderRadius.circular(30),
+                                          BorderRadius.circular(30),
                                         ),
                                       ),
                                       Icon(
@@ -206,7 +219,7 @@ class MainDashboard extends StatelessWidget {
                                     margin: EdgeInsets.only(left: 26),
                                     child: Column(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.center,
+                                      MainAxisAlignment.center,
                                       children: [
                                         Text(
                                           'Balance',
@@ -238,91 +251,102 @@ class MainDashboard extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Container(
-                                  width: 91,
-                                  height: 66,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Image.asset(ImageStyle.transfer3,
-                                          color: ColorStyle.darkestBlueSignUp,
-                                          // width: MediaQuery.of(context).size.width,
-                                          height: 25
+                                Expanded(
+                                  child: Container(
+                                    height: 66,
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Image.asset(ImageStyle.transfer3,
+                                            color: ColorStyle.hex('#134EAE'),
+                                            // width: MediaQuery.of(context).size.width,
+                                            height: 25
                                           // fit: BoxFit.cover,
-                                          ),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Text(
-                                        'Transfer',
-                                        style: TextStyles.textStyles_8.apply(
-                                          color: ColorStyle.darkestBlueSignUp,
-                                          fontWeightDelta: 1,
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                  decoration: BoxDecoration(
-                                    color: ColorStyle.primaryWhite,
-                                    borderRadius: BorderRadius.circular(15),
+                                        SizedBox(
+                                          height: 5,
+                                        ),
+                                        Text(
+                                          'Transfer',
+                                          style: TextStyles.textStyles_10.apply(
+                                            color: ColorStyle.hex('#134EAE'),
+                                            fontWeightDelta: 1,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: ColorStyle.primaryWhite,
+                                      borderRadius: BorderRadius.circular(15),
+                                    ),
                                   ),
                                 ),
-                                Container(
-                                  width: 91,
-                                  height: 66,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Image.asset(ImageStyle.transfer3,
-                                          color: ColorStyle.darkestBlueSignUp,
-                                          // width: MediaQuery.of(context).size.width,
-                                          height: 25
-                                          // fit: BoxFit.cover,
+                                SizedBox(
+                                  width: 26,
+                                ),
+                                Expanded(
+                                  child: InkWell(
+                                    child: Container(
+                                      height: 66,
+                                      child: Column(
+                                        mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset(ImageStyle.coin,
+                                            color: ColorStyle.hex('#134EAE'),
+                                            height: 30,
                                           ),
-                                      SizedBox(
-                                        height: 5,
+                                          SizedBox(
+                                            height: 2.5,
+                                          ),
+                                          Text(
+                                            'Account Details',
+                                            style: TextStyles.textStyles_10.apply(
+                                              color: ColorStyle.hex('#134EAE'),
+                                              fontWeightDelta: 1,
+                                            ),
+                                          ),
+                                        ],
                                       ),
-                                      Text(
-                                        'Account Details',
-                                        style: TextStyles.textStyles_8.apply(
-                                          color: ColorStyle.darkestBlueSignUp,
-                                          fontWeightDelta: 1,
-                                        ),
+                                      decoration: BoxDecoration(
+                                        color: ColorStyle.primaryWhite,
+                                        borderRadius: BorderRadius.circular(15),
                                       ),
-                                    ],
-                                  ),
-                                  decoration: BoxDecoration(
-                                    color: ColorStyle.primaryWhite,
-                                    borderRadius: BorderRadius.circular(15),
+                                    ),
+                                    onTap: () {
+                                      Get.to(AccountDetails());
+                                    },
                                   ),
                                 ),
-                                Container(
-                                  width: 91,
-                                  height: 66,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Image.asset(ImageStyle.stock,
-                                          color: ColorStyle.darkestBlueSignUp,
-                                          // width: MediaQuery.of(context).size.width,
-                                          height: 25
-                                          // fit: BoxFit.cover,
-                                          ),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Text(
-                                        'Exchange',
-                                        style: TextStyles.textStyles_8.apply(
-                                          color: ColorStyle.darkestBlueSignUp,
-                                          fontWeightDelta: 1,
+                                SizedBox(
+                                  width: 26,
+                                ),
+                                Expanded(
+                                  child: Container(
+                                    height: 66,
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Image.asset(ImageStyle.stock,
+                                            color: ColorStyle.hex('#134EAE'),
+                                            height: 25
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                  decoration: BoxDecoration(
-                                    color: ColorStyle.primaryWhite,
-                                    borderRadius: BorderRadius.circular(15),
+                                        SizedBox(
+                                          height: 5,
+                                        ),
+                                        Text(
+                                          'Exchange',
+                                          style: TextStyles.textStyles_10.apply(
+                                            color: ColorStyle.hex('#134EAE'),
+                                            fontWeightDelta: 1,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: ColorStyle.primaryWhite,
+                                      borderRadius: BorderRadius.circular(15),
+                                    ),
                                   ),
                                 ),
                               ],
@@ -338,49 +362,75 @@ class MainDashboard extends StatelessWidget {
                         child: Column(
                           children: [
                             Row(
-                              // mainAxisAlignment:
-                              // MainAxisAlignment.spaceBetween,
                               children: [
                                 Expanded(
-                                  child: ElevatedButtonCustom(
-                                    text: 'Transactions',
-                                    colorBG: Colors.transparent,
-                                    textStyle: TextStyles.textStyles_12.apply(
-                                        color: ColorStyle.darkestBlueSignUp,
-                                        fontWeightDelta: 1),
-                                    onTap: () {
-                                      controller.listType.value = 1;
-                                      controller.listCount.value +=1;
-                                      controller.listCount.value -=1;
-                                    },
+                                  child: Container(
+                                    child: ElevatedButtonCustom(
+                                      text: 'Transactions',
+                                      colorBG: Colors.transparent,
+                                      textStyle: TextStyles.textStyles_12.apply(
+                                        color: ColorStyle.hex('#13409F'),
+                                        fontWeightDelta: 2,
+                                      ),
+                                      onTap: () {
+                                        controller.listType.value = 1;
+                                        controller.listCount.value += 1;
+                                        controller.listCount.value -= 1;
+                                      },
+                                    ),
+                                    decoration: (controller.listType.value == 1)
+                                        ? BoxDecoration(
+                                        image: DecorationImage(
+                                            image: AssetImage(ImageStyle
+                                                .transactionShadow),
+                                            fit: BoxFit.fill))
+                                        : BoxDecoration(),
                                   ),
                                 ),
                                 Expanded(
-                                  child: ElevatedButtonCustom(
-                                    text: 'Statements',
-                                    colorBG: Colors.transparent,
-                                    textStyle: TextStyles.textStyles_12.apply(
-                                        color: ColorStyle.darkestBlueSignUp,
-                                        fontWeightDelta: 1),
-                                    onTap: () {
-                                      controller.listType.value = 2;
-                                      controller.listCount.value +=1;
-                                      controller.listCount.value -=1;
-                                    },
+                                  child: Container(
+                                    child: ElevatedButtonCustom(
+                                      text: 'Statements',
+                                      colorBG: Colors.transparent,
+                                      textStyle: TextStyles.textStyles_12.apply(
+                                        color: ColorStyle.hex('#13409F'),
+                                        fontWeightDelta: 2,),
+                                      onTap: () {
+                                        controller.listType.value = 2;
+                                        controller.listCount.value += 1;
+                                        controller.listCount.value -= 1;
+                                      },
+                                    ),
+                                    decoration: (controller.listType.value == 2)
+                                        ? BoxDecoration(
+                                        image: DecorationImage(
+                                            image: AssetImage(ImageStyle
+                                                .transactionShadow),
+                                            fit: BoxFit.fill))
+                                        : BoxDecoration(),
                                   ),
                                 ),
                                 Expanded(
-                                  child: ElevatedButtonCustom(
-                                    text: 'Notices',
-                                    colorBG: Colors.transparent,
-                                    textStyle: TextStyles.textStyles_12.apply(
-                                        color: ColorStyle.darkestBlueSignUp,
-                                        fontWeightDelta: 1),
-                                    onTap: () {
-                                      controller.listType.value = 3;
-                                      controller.listCount.value +=1;
-                                      controller.listCount.value -=1;
-                                    },
+                                  child: Container(
+                                    child: ElevatedButtonCustom(
+                                      text: 'Notices',
+                                      colorBG: Colors.transparent,
+                                      textStyle: TextStyles.textStyles_12.apply(
+                                        color: ColorStyle.hex('#13409F'),
+                                        fontWeightDelta: 2,),
+                                      onTap: () {
+                                        controller.listType.value = 3;
+                                        controller.listCount.value += 1;
+                                        controller.listCount.value -= 1;
+                                      },
+                                    ),
+                                    decoration: (controller.listType.value == 3)
+                                        ? BoxDecoration(
+                                        image: DecorationImage(
+                                            image: AssetImage(ImageStyle
+                                                .transactionShadow),
+                                            fit: BoxFit.fill))
+                                        : BoxDecoration(),
                                   ),
                                 ),
                               ],
@@ -403,7 +453,7 @@ class MainDashboard extends StatelessWidget {
                               color: Colors.black26,
                             ),
                             SizedBox(
-                              height: 5,
+                              height: 10,
                             ),
                             Container(
                               padding: EdgeInsets.only(left: 16, right: 16),
@@ -411,20 +461,20 @@ class MainDashboard extends StatelessWidget {
                                 children: [
                                   Row(
                                     mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
                                         'Today',
                                         style: TextStyles.textStyles_12.apply(
                                           color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
+                                          fontWeightDelta: 3,
                                         ),
                                       ),
                                       Text(
                                         '17 April 2021',
                                         style: TextStyles.textStyles_12.apply(
                                           color: ColorStyle.secondryBlack,
-                                          fontWeightDelta: 1,
+                                          fontWeightDelta: 3,
                                         ),
                                       ),
                                     ],
@@ -437,15 +487,18 @@ class MainDashboard extends StatelessWidget {
                                     height: 1,
                                     color: Colors.black26,
                                   ),
-                                  ListView.builder(
+                                  ListView.separated(
                                       padding:
-                                          EdgeInsets.only(top: 16, bottom: 16),
+                                      EdgeInsets.only(top: 16, bottom: 16),
                                       shrinkWrap: true,
                                       itemCount: controller.listCount.value,
                                       physics: NeverScrollableScrollPhysics(),
-                                      itemBuilder:
-                                          (context, index) {
-
+                                      separatorBuilder: (context, index) {
+                                        return SizedBox(
+                                          height: 6,
+                                        );
+                                      },
+                                      itemBuilder: (context, index) {
                                         if (controller.listType.value == 1) {
                                           return InkWell(
                                             child: Container(
@@ -458,8 +511,6 @@ class MainDashboard extends StatelessWidget {
                                               width: MediaQuery.of(context)
                                                   .size
                                                   .width,
-                                              margin: EdgeInsets.all(6),
-                                              // color: Colors.red,
                                               child: Row(
                                                 mainAxisAlignment:
                                                 MainAxisAlignment
@@ -490,7 +541,9 @@ class MainDashboard extends StatelessWidget {
                                                                 .textStyles_12
                                                                 .apply(
                                                                 color: ColorStyle
-                                                                    .secondryBlack),
+                                                                    .secondryBlack,
+                                                                fontWeightDelta:
+                                                                1),
                                                           ),
                                                           Text(
                                                             'Food & Drink',
@@ -499,7 +552,9 @@ class MainDashboard extends StatelessWidget {
                                                                 .textStyles_8
                                                                 .apply(
                                                                 color: ColorStyle
-                                                                    .secondryBlack),
+                                                                    .secondryBlack,
+                                                                fontWeightDelta:
+                                                                1),
                                                           ),
                                                         ],
                                                       ),
@@ -507,21 +562,15 @@ class MainDashboard extends StatelessWidget {
                                                   ),
                                                   Row(
                                                     children: [
-                                                      Container(
-                                                        alignment:
-                                                        Alignment.center,
-                                                        padding: EdgeInsets.only(
-                                                            left: 14, right: 14),
-                                                        child: Text(
-                                                          '- \$8.10',
-                                                          style: TextStyles
-                                                              .textStyles_16
-                                                              .apply(
-                                                              color: ColorStyle
-                                                                  .secondryBlack),
-                                                        ),
-                                                        // width: 70,
-                                                        // height: 40,
+                                                      Text(
+                                                        '- \$8.10',
+                                                        style: TextStyles
+                                                            .textStyles_16
+                                                            .apply(
+                                                            color: ColorStyle
+                                                                .secondryBlack,
+                                                            fontWeightDelta:
+                                                            2),
                                                       ),
                                                       Icon(
                                                         Icons
@@ -533,12 +582,11 @@ class MainDashboard extends StatelessWidget {
                                                   ),
                                                 ],
                                               ),
-
                                               decoration: BoxDecoration(
                                                   borderRadius:
-                                                  BorderRadius.circular(5),
-                                                  color: Colors.lightBlueAccent
-                                                      .withOpacity(0.1)),
+                                                  BorderRadius.circular(6),
+                                                  color: ColorStyle.hex(
+                                                      '#F5F4F4')),
                                             ),
                                             onTap: () {
                                               Get.to(TransactionDetails());
@@ -555,11 +603,10 @@ class MainDashboard extends StatelessWidget {
                                             width: MediaQuery.of(context)
                                                 .size
                                                 .width,
-                                            margin: EdgeInsets.all(6),
                                             child: Row(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
+                                              MainAxisAlignment
+                                                  .spaceBetween,
                                               children: [
                                                 Row(
                                                   children: [
@@ -573,11 +620,11 @@ class MainDashboard extends StatelessWidget {
                                                     ),
                                                     Column(
                                                       crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
+                                                      CrossAxisAlignment
+                                                          .start,
                                                       mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .center,
+                                                      MainAxisAlignment
+                                                          .center,
                                                       children: [
                                                         Text(
                                                           'November 2020',
@@ -585,8 +632,8 @@ class MainDashboard extends StatelessWidget {
                                                           style: TextStyles
                                                               .textStyles_12
                                                               .apply(
-                                                                  color: ColorStyle
-                                                                      .secondryBlack),
+                                                              color: ColorStyle
+                                                                  .secondryBlack),
                                                         ),
                                                         Text(
                                                           '08 November 2020',
@@ -594,8 +641,8 @@ class MainDashboard extends StatelessWidget {
                                                           style: TextStyles
                                                               .textStyles_8
                                                               .apply(
-                                                                  color: ColorStyle
-                                                                      .secondryBlack),
+                                                              color: ColorStyle
+                                                                  .secondryBlack),
                                                         ),
                                                       ],
                                                     ),
@@ -612,9 +659,9 @@ class MainDashboard extends StatelessWidget {
 
                                             decoration: BoxDecoration(
                                                 borderRadius:
-                                                    BorderRadius.circular(5),
-                                                color: Colors.lightBlueAccent
-                                                    .withOpacity(0.1)),
+                                                BorderRadius.circular(5),
+                                                color:
+                                                ColorStyle.hex('#F5F4F4')),
                                           );
                                         } else if (controller.listType.value ==
                                             3) {
@@ -630,10 +677,9 @@ class MainDashboard extends StatelessWidget {
                                             width: MediaQuery.of(context)
                                                 .size
                                                 .width,
-                                            margin: EdgeInsets.all(6),
                                             child: Row(
                                               crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                              CrossAxisAlignment.start,
                                               children: [
                                                 Image.asset(
                                                   ImageStyle.notice,
@@ -652,32 +698,32 @@ class MainDashboard extends StatelessWidget {
                                                     children: [
                                                       Row(
                                                         crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .start,
+                                                        CrossAxisAlignment
+                                                            .start,
                                                         mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
                                                         children: [
                                                           Expanded(
                                                               child: Text(
-                                                            'Plus+ Current account (6435)',
-                                                            style: TextStyles
-                                                                .textStyles_12
-                                                                .apply(
+                                                                'Plus+ Current account (6435)',
+                                                                style: TextStyles
+                                                                    .textStyles_12
+                                                                    .apply(
                                                                     color: ColorStyle
                                                                         .secondryBlack,
                                                                     fontWeightDelta:
-                                                                        1),
-                                                          )),
+                                                                    1),
+                                                              )),
                                                           Text(
                                                             '01 MAR 2022',
                                                             style: TextStyles
                                                                 .textStyles_12
                                                                 .apply(
-                                                                    color: ColorStyle
-                                                                        .secondryBlack,
-                                                                    fontWeightDelta:
-                                                                        2),
+                                                                color: ColorStyle
+                                                                    .secondryBlack,
+                                                                fontWeightDelta:
+                                                                2),
                                                           ),
                                                         ],
                                                       ),
@@ -687,8 +733,8 @@ class MainDashboard extends StatelessWidget {
                                                         style: TextStyles
                                                             .textStyles_8
                                                             .apply(
-                                                                color: ColorStyle
-                                                                    .secondryBlack),
+                                                            color: ColorStyle
+                                                                .secondryBlack),
                                                       ),
                                                     ],
                                                   ),
@@ -697,9 +743,9 @@ class MainDashboard extends StatelessWidget {
                                             ),
                                             decoration: BoxDecoration(
                                                 borderRadius:
-                                                    BorderRadius.circular(5),
-                                                color: Colors.lightBlueAccent
-                                                    .withOpacity(0.1)),
+                                                BorderRadius.circular(5),
+                                                color:
+                                                ColorStyle.hex('#F5F4F4')),
                                           );
                                         } else {
                                           return Container(

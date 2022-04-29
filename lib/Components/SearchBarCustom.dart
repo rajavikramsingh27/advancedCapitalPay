@@ -9,7 +9,7 @@ class SearchBarCustom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 46,
+      height: 34,
       margin: EdgeInsets.only(left: 16, right: 16),
       padding: EdgeInsets.only(left: 6, right: 6),
       child: Row(
@@ -17,7 +17,7 @@ class SearchBarCustom extends StatelessWidget {
           Icon(
             Icons.search,
             color: ColorStyle.grayColor,
-            size: 34,
+            size: 30,
           ),
           Expanded(
               child: TextField(
@@ -26,7 +26,7 @@ class SearchBarCustom extends StatelessWidget {
               fontWeightDelta: 0,
             ),
             decoration: InputDecoration(
-              contentPadding: EdgeInsets.zero,
+              contentPadding: EdgeInsets.only(bottom: 10),
               hintText: "Search",
               hintStyle: TextStyles.textStyles_16.apply(
                 color: ColorStyle.grey,
