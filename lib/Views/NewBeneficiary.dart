@@ -212,7 +212,7 @@ class NewBeneficiary extends StatelessWidget {
                             ],
                           ),
                           onTap: () async {
-                            controller.departureDate.value = await PickerCustom.datePicker();
+                            controller.departureDate.value = await PickerCustom.datePicker('MMM dd, yyyy');
                           },
                         ),
                         SizedBox(
@@ -247,7 +247,7 @@ class NewBeneficiary extends StatelessWidget {
                             ],
                           ),
                           onTap: () async {
-                            controller.returnDate.value = await PickerCustom.datePicker();
+                            controller.returnDate.value = await PickerCustom.datePicker('MMM dd, yyyy');
                           },
                         ),
                         SizedBox(

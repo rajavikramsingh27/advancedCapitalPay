@@ -197,4 +197,13 @@ class ImageStyle {
   static const String Unknown = "$baseImage/Unknown.png";
   static const String Path1148 = "$baseImage/Path1148.png";
   static const String Rectangle2094 = "$baseImage/Rectangle2094.png";
+
+  static const String bg_FaceID_1 = "$baseImage/bg_FaceID_1.jpg";
+  static const String bg_TouchID_1 = "$baseImage/bg_TouchID_1.jpg";
+  static const String transactionShadow = "$baseImage/transactionShadow.png";
+  static const String cardSavingGoals = "$baseImage/cardSavingGoals.png";
+  static const String markerPerson = "$baseImage/markerPerson.png";
+  static const String jewlers = "$baseImage/jewlers.png";
+
 }
+
