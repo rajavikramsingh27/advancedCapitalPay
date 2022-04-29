@@ -14,7 +14,7 @@ import '../Components/ListViewIconTitleSubtitle.dart';
 import '../Views/Settings/NotificationSettings.dart';
 import '../Views/Settings/PreferredLanguage.dart';
 import '../Views/Settings/YourFavoriteAccount.dart';
-
+import '../Views/Profile/EditProfile.dart';
 
 class AppSettings extends StatelessWidget {
   const AppSettings({Key? key}) : super(key: key);
@@ -114,7 +114,9 @@ class AppSettings extends StatelessWidget {
                   ],
 
                   onTapIndex: (index) {
-                    if (index == 3) {
+                    if (index == 0) {
+                      Get.to(EditProfile());
+                    } else if (index == 3) {
                       Get.to(NotificationSettings());
                     } else if (index == 4) {
                       Get.to(YourFavoriteAccount(

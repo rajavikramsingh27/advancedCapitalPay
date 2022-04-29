@@ -14,6 +14,8 @@ class DropdownButtonCustom extends StatelessWidget {
   final double? radiusBorder;
   final double? height;
   final Widget? iconWidget;
+  final Text? hint;
+  final TextStyle? textStyle;
 
   const DropdownButtonCustom({
     Key? key,
@@ -21,10 +23,12 @@ class DropdownButtonCustom extends StatelessWidget {
     this.listValue,
     this.selectedValue,
     this.colorBorder = Colors.red,
-    this.padding,
+    this.padding = EdgeInsets.zero,
     this.radiusBorder = 4,
     this.height = 60,
-    this.iconWidget,
+    this.iconWidget = const Icon(Icons.keyboard_arrow_down, color: Colors.black,),
+    this.hint = const Text(""),
+    this.textStyle = const TextStyle()
   }) : super(key: key);
 
   @override
@@ -36,12 +40,7 @@ class DropdownButtonCustom extends StatelessWidget {
         value: selectedValue,
         icon: iconWidget,
         iconSize: 30,
-
-        // Image.asset(
-        //   ImageStyle.dropDown,
-        //   height: 16,
-        // ),
-
+        hint: hint,
         decoration: InputDecoration(
           contentPadding: padding,
           focusedBorder: OutlineInputBorder(
@@ -62,10 +61,7 @@ class DropdownButtonCustom extends StatelessWidget {
                       child: Text(
                         value,
                         textAlign: TextAlign.left,
-                        style: TextStyles.textStyles_14.apply(
-                          color: ColorStyle.secondryBlack,
-                          // fontWeightDelta: 0,
-                        ),
+                        style: textStyle
                       ),
                     ))
             .toList(),

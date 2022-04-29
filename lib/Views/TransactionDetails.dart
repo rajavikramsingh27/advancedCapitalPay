@@ -34,6 +34,10 @@ class TransactionDetails extends StatelessWidget {
           descriptionUser: 'Plus Personal Customer',
           timeLastLogin:
               'Last Successful login: ' + '02 Feb 2021' + '  ' + '13:53:41',
+          nameStyle: TextStyles.textStyles_14
+              .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 2),
+          descriptionStyle: TextStyles.textStyles_12
+              .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
           trailingAction: [
             IconButton(
               icon: Image.asset(

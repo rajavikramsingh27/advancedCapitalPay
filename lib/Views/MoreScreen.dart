@@ -15,7 +15,7 @@ class MoreScreen {
           color: Colors.transparent,
           child: Container(
               alignment: Alignment.bottomCenter,
-              padding: EffectStyle.padding(20, 20, 20, 20),
+              // padding: EffectStyle.padding(20, 20, 20, 20),
               decoration: BoxDecoration(borderRadius: EffectStyle.radiusCustom(14)),
               child: Scaffold(
                 backgroundColor: Colors.transparent,
@@ -36,7 +36,6 @@ class MoreScreen {
                         ),
                         SizedBox(height: 40,),
                         ListView.separated(
-                            reverse: true,
                             shrinkWrap: true,
                             itemCount: controller.arrMoreTitle.length,
                             padding: EdgeInsets.only(bottom: 100),
@@ -50,13 +49,13 @@ class MoreScreen {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Container(
-                                    width: 240,
+                                    width: 216,
                                     padding: EffectStyle.padding(16, 16, 6, 6),
                                     decoration: BoxDecoration(
                                         color: ColorStyle.primaryWhite,
                                         borderRadius: EffectStyle.radiusCustom(30),
                                         border: Border.all(
-                                          color: ColorStyle.ligthBlue,
+                                          color: ColorStyle.hex('#0066FF'),
                                           width: 1,
                                         )),
                                     child: Row(
@@ -66,12 +65,12 @@ class MoreScreen {
                                           height: 20,
                                         ),
                                         SizedBox(
-                                          width: 10,
+                                          width: 6,
                                         ),
                                         Text(
                                           controller.arrMoreTitle[index],
-                                          style: TextStyles.textStyles_16.apply(
-                                              color: ColorStyle.ligthBlue,
+                                          style: TextStyles.textStyles_14.apply(
+                                              color: ColorStyle.hex('#0066FF'),
                                               fontWeightDelta: 0),
                                         ),
                                       ],

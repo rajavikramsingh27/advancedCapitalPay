@@ -48,6 +48,12 @@ class TextStyles {
         fontWeight: FontWeight.normal,
       );
 
+  static TextStyle get textStyles_15 => TextStyle(
+    fontSize: 15,
+    fontFamily: kFontFamily,
+    fontWeight: FontWeight.normal,
+  );
+
   static TextStyle get textStyles_20 => TextStyle(
         fontSize: SizeStyle.size_20,
         fontFamily: kFontFamily,
@@ -75,6 +81,12 @@ class TextStyles {
 
   static TextStyle get textStyles_6 => TextStyle(
     fontSize: SizeStyle.size_6,
+    fontFamily: kFontFamily,
+    fontWeight: FontWeight.normal,
+  );
+
+  static TextStyle get textStyles_7 => TextStyle(
+    fontSize: 7,
     fontFamily: kFontFamily,
     fontWeight: FontWeight.normal,
   );

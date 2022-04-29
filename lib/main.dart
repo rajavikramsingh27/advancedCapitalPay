@@ -5,7 +5,9 @@ import '../Views/TabbarScreen.dart';
 import 'package:flutter/cupertino.dart';
 import '../Views/Settings/NotificationSettings.dart';
 import '../Views/AppSettings.dart';
-import 'Views/SplashScreen.dart';
+
+import '../Views/SplashScreen.dart';
+import '../Views/Profile/EditProfile.dart';
 
 
 void main() {
@@ -29,9 +31,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
-      // home: TransactionDetails(),
       // home: TabbarScreen(),
-      // home: NotificationSettings(),
       // home: AppSettings(),
     );
   }

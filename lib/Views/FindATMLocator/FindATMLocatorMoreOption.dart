@@ -21,20 +21,20 @@ class FindATMLocatorMoreOption {
         color: Colors.transparent,
         child: Scaffold(
           backgroundColor: Colors.transparent,
-          appBar: AppBar(
-            elevation: 0,
-            backgroundColor: Colors.transparent,
-            leading: SizedBox(),
-            actions: [
-              IconButton(
-                icon: Icon(Icons.cancel, size: 44, color: Colors.red,),
-                onPressed: () {
-                  Get.back();
-                },
-              ),
-              SizedBox(width: 20,),
-            ],
-          ),
+          // appBar: AppBar(
+          //   elevation: 0,
+          //   backgroundColor: Colors.transparent,
+          //   leading: SizedBox(),
+          //   actions: [
+          //     IconButton(
+          //       icon: Icon(Icons.cancel, size: 44, color: Colors.red,),
+          //       onPressed: () {
+          //         Get.back();
+          //       },
+          //     ),
+          //     SizedBox(width: 20,),
+          //   ],
+          // ),
           body: GetBuilder(
             init: FindATMLocatorController(),
             initState: (state) {},
@@ -71,7 +71,7 @@ class FindATMLocatorMoreOption {
                                 Text(
                                   '850m',
                                   style: TextStyles.textStyles_20.apply(
-                                    color: ColorStyle.ligthBlue,
+                                    color: ColorStyle.hex('#1478FF'),
                                     fontWeightDelta: 1,
                                   ),
                                 ),
@@ -84,6 +84,7 @@ class FindATMLocatorMoreOption {
                                 ),
                               ],
                             ),
+
                             SfSlider(
                               min: 0.toInt(),
                               max: 100.toInt(),
@@ -93,12 +94,14 @@ class FindATMLocatorMoreOption {
                               // showLabels: true,
                               enableTooltip: true,
                               minorTicksPerInterval: 1,
+                              activeColor: ColorStyle.hex('#1478FF'),
+                              inactiveColor: ColorStyle.hex('#707070'),
                               onChanged: (dynamic value) {
                                 controller.rangeValue.value = value;
                               },
                             ),
                             Container(
-                              height: 50,
+                              height: 40,
                               child: ListView.separated(
                                 itemCount: 6,
                                 scrollDirection: Axis.horizontal,
@@ -112,9 +115,9 @@ class FindATMLocatorMoreOption {
                                     // width: 200,
                                     alignment: Alignment.center,
                                     decoration: BoxDecoration(
-                                      color: ColorStyle.blueLight,
+                                      color: ColorStyle.hex('#CBE1FF'),
                                       borderRadius:
-                                          EffectStyle.radiusCustom(16),
+                                          EffectStyle.radiusCustom(8),
                                     ),
                                     padding: EffectStyle.padding(20, 20, 6, 6),
                                     child: Text(
@@ -153,13 +156,15 @@ class FindATMLocatorMoreOption {
                                     ),
                                     child: Text(
                                       'Cancel',
-                                      style: TextStyles.textStyles_18.apply(
+                                      style: TextStyles.textStyles_16.apply(
                                         color: ColorStyle.grey,
                                         fontWeightDelta: 1,
                                       ),
                                     ),
                                   ),
-                                  onTap: () {},
+                                  onTap: () {
+                                    Get.back();
+                                  },
                                 )),
                                 SizedBox(
                                   width: 30,
@@ -170,7 +175,7 @@ class FindATMLocatorMoreOption {
                                     height: 54,
                                     alignment: Alignment.center,
                                     decoration: BoxDecoration(
-                                      color: ColorStyle.ligthBlue,
+                                      color: ColorStyle.hex('#1478FF'),
                                       borderRadius:
                                           EffectStyle.radiusCustom(10),
                                       boxShadow: [
@@ -184,7 +189,7 @@ class FindATMLocatorMoreOption {
                                     ),
                                     child: Text(
                                       'Accept',
-                                      style: TextStyles.textStyles_18.apply(
+                                      style: TextStyles.textStyles_16.apply(
                                         color: ColorStyle.primaryWhite,
                                         fontWeightDelta: 1,
                                       ),

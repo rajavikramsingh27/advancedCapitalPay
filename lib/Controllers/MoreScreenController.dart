@@ -14,13 +14,12 @@ class MoreScreenController extends GetxController {
   // ].obs;
 
   RxList<Widget> arrMoreIcons = [
-    Icon(Icons.search, color: ColorStyle.ligthBlue,),
-    Icon(Icons.account_circle_outlined, color: ColorStyle.ligthBlue,),
-    Icon(Icons.person_add, color: ColorStyle.ligthBlue,),
-    Image.asset(ImageStyle.savings_lightBlue, color: ColorStyle.ligthBlue,),
-    Icon(Icons.chat, color: ColorStyle.ligthBlue,),
+    Icon(Icons.search, color: ColorStyle.hex('#0066FF')),
+    Icon(Icons.account_circle_outlined, color: ColorStyle.hex('#0066FF')),
+    Icon(Icons.person_add, color: ColorStyle.hex('#0066FF')),
+    Image.asset(ImageStyle.savings_lightBlue, color: ColorStyle.hex('#0066FF')),
+    Icon(Icons.chat, color: ColorStyle.hex('#0066FF')),
   ].obs;
-
 
   RxList<String> arrMoreTitle = [
     'Search',

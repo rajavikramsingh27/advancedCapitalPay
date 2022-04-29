@@ -28,6 +28,10 @@ class SavingGoal extends StatelessWidget {
             appBar: AppBarStyleLeadingTitleTrailing(
               backgroundColor: ColorStyle.darkestBlue,
               leadingImage: ImageStyle.ellipse2,
+              nameStyle: TextStyles.textStyles_14
+                  .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 2),
+              descriptionStyle: TextStyles.textStyles_12
+                  .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
               nameUser: 'MR HARRISON SMITH',
               descriptionUser: 'Plus Personal Customer',
               timeLastLogin:

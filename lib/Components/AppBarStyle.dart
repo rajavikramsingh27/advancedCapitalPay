@@ -156,7 +156,7 @@ class AppBarStyleLeadingTitleTrailing extends StatelessWidget implements Preferr
         child: Container(
           padding: EdgeInsets.only(left: 10),
           child: Image.asset(
-            ImageStyle.ellipse2,
+            leadingImage!,
             height: 50,
           ),
         ),
@@ -166,23 +166,27 @@ class AppBarStyleLeadingTitleTrailing extends StatelessWidget implements Preferr
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+
+          AutoSizeText(
             nameUser!,
             style: nameStyle,
+            maxLines: 1,
             // style: TextStyles.textStyles_14.apply(
             //   color: ColorStyle.primaryWhite,
             // ),
           ),
-          Text(
+          AutoSizeText(
             descriptionUser!,
             style: descriptionStyle,
+            maxLines: 1,
             // style: TextStyles.textStyles_14.apply(
             //   color: ColorStyle.primaryWhite,
             // ),
           ),
-          Text(
+          AutoSizeText(
             timeLastLogin!,
-            style: TextStyles.textStyles_8.apply(
+            maxLines: 1,
+            style: TextStyles.textStyles_7.apply(
               color: ColorStyle.primaryWhite,
               // fontWeightDelta: 1,
             ),
