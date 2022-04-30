@@ -143,6 +143,8 @@ class ImageStyle {
   static const String chat_lightBlue = "$baseImage/chat_lightBlue.png";
   static const String adddestination = "$baseImage/adddestination.png";
   static const String creditard = "$baseImage/creditard.png";
+  static const String Iconionic = "$baseImage/Iconionic.png";
+  static const String Card = "$baseImage/Card.png";
 
 
 

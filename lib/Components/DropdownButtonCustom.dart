@@ -73,3 +73,73 @@ class DropdownButtonCustom extends StatelessWidget {
     );
   }
 }
+
+
+class DropdownButtonTextField extends StatelessWidget {
+  final Function(String?)? onChanged;
+  final List<String>? listValue;
+  final String? selectedValue;
+  final Color? colorBorder;
+  final EdgeInsets? padding;
+  final double? radiusBorder;
+  final double? height;
+  final Widget? iconWidget;
+
+  const DropdownButtonTextField({
+    Key? key,
+    this.onChanged,
+    this.listValue,
+    this.selectedValue,
+    this.colorBorder = Colors.red,
+    this.padding = EdgeInsets.zero,
+    this.radiusBorder = 40,
+    this.height = 60,
+    this.iconWidget,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 60,
+      child: DropdownButtonFormField<String>(
+        isExpanded: true,
+        value: selectedValue,
+        icon: iconWidget,
+        iconSize: 30,
+
+        // Image.asset(
+        //   ImageStyle.dropDown,
+        //   height: 16,
+        // ),
+
+        decoration: InputDecoration(
+          contentPadding: padding,
+          focusedBorder: OutlineInputBorder(
+              borderRadius: EffectStyle.radiusCustom(radiusBorder!),
+              borderSide: BorderSide(color: colorBorder!, width: 1)),
+          enabledBorder: OutlineInputBorder(
+              borderRadius: EffectStyle.radiusCustom(radiusBorder!),
+              borderSide: BorderSide(color: colorBorder!, width: 1)),
+          border: OutlineInputBorder(
+              borderRadius: EffectStyle.radiusCustom(radiusBorder!),
+              borderSide: BorderSide(color: colorBorder!, width: 1)),
+        ),
+        onChanged: onChanged!,
+        items: listValue!
+            .map<DropdownMenuItem<String>>(
+                (String value) => DropdownMenuItem<String>(
+              value: value,
+              child: Text(
+                value,
+                textAlign: TextAlign.left,
+                style: TextStyles.textStyles_14.apply(
+                  color: ColorStyle.secondryBlack,
+                  // fontWeightDelta: 0,
+                ),
+              ),
+            ))
+            .toList(),
+      ),
+    );
+  }
+}
