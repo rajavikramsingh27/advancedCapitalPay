@@ -35,7 +35,7 @@ class SavingGoal extends StatelessWidget {
               nameUser: 'MR HARRISON SMITH',
               descriptionUser: 'Plus Personal Customer',
               timeLastLogin:
-                  'Last Successful login: ' + '02 Feb 2021' + '  ' + '13:53:41',
+              'Last Successful login: ' + '02 Feb 2021' + '  ' + '13:53:41',
               trailingAction: [
                 IconButton(
                   icon: Image.asset(
@@ -381,14 +381,3 @@ class SavingGoal extends StatelessWidget {
     );
   }
 }
-
-
-
-//Icon(Icons.arrow_back,color: ColorStyle.primaryWhite,size: 18,),
-
-// decoration: BoxDecoration(
-// image: DecorationImage(
-// image: AssetImage(ImageStyle.card_3),
-// fit: BoxFit.cover,
-// ),
-// ),
