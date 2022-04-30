@@ -30,15 +30,6 @@ class MyApp extends StatelessWidget {
       // home: TabbarScreen(),
       // home: AppSettings(),
       //   home: SuccessfulCurrencyExchange()
-
-      // home: TabbarScreen()
-      // home: TabbarScreen()
-      // home: TabbarScreen()
-      // home: TabbarScreen()
-      // home: TabbarScreen()
-      // home: TabbarScreen()
-      // home: TabbarScreen()
-      // home: TabbarScreen()
     );
   }
 }
