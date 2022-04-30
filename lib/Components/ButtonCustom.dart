@@ -255,6 +255,61 @@ class GradientButtonWithContineu extends StatelessWidget {
   }
 }
 
+class ButtonContinueCancel extends StatelessWidget {
+  const ButtonContinueCancel({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return  Row(
+      children: [
+        Expanded(
+            child:   Container(
+          alignment: Alignment.center,
+          width: 148,
+          height: 37,
+          child:    Text(
+            'Cancel',
+            // controller.listApplyLeave[index],
+            style: TextStyles
+                .textStyles_12
+                .apply(
+              fontWeightDelta: 2,
+                color: ColorStyle
+                    .blueSKY),
+          ),
+          decoration: BoxDecoration(
+            // color: ColorStyle.blueLight,
+            borderRadius: BorderRadius.circular(50),
+            border: Border.all(
+                color: ColorStyle.blueSKY
+            ),
+          ),
+        )),
+        SizedBox(width: 10,),
+        Expanded(
+            child: Container(
+          alignment: Alignment.center,
+          width: 148,
+          height: 36,
+          child:  Text(
+            'Continue',
+            // controller.listApplyLeave[index],
+            style: TextStyles
+                .textStyles_12
+                .apply(
+                fontWeightDelta: 2,
+                color: ColorStyle
+                    .primaryWhite),
+          ),
+          decoration: BoxDecoration(
+              color: ColorStyle.blueSKY,
+              borderRadius: BorderRadius.circular(50)
+          ),
+        )),
 
 
+      ],
+    );
+  }
+}
 

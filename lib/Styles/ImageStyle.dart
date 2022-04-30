@@ -145,6 +145,11 @@ class ImageStyle {
   static const String savings_lightBlue = "$baseImage/savings_lightBlue.png";
   static const String chat_lightBlue = "$baseImage/chat_lightBlue.png";
 
+  static const String adddestination = "$baseImage/adddestination.png";
+  static const String creditard = "$baseImage/creditard.png";
+  static const String Iconionic = "$baseImage/Iconionic.png";
+  static const String Card = "$baseImage/Card.png";
+
   static const String apple = "$baseImage/apple.png";
   static const String unlock = "$baseImage/unlock.png";
 
@@ -164,8 +169,6 @@ class ImageStyle {
   static const String search_interface_symbol =
       "$baseImage/search_interface_symbol.png";
 
-  static const String adddestination = "$baseImage/adddestination.png";
-  static const String creditard = "$baseImage/creditard.png";
   static const String cutlery = "$baseImage/cutlery.png";
 
   static const String bgDailyAccountBalance =
@@ -183,7 +186,6 @@ class ImageStyle {
   static const String Lietuviu = "$baseImage/Lietuviu.png";
   static const String Polski = "$baseImage/Polski.png";
   static const String Romanion = "$baseImage/Romanion.png";
-  static const String Card = "$baseImage/Card.png";
   static const String bg_back = "$baseImage/bg_back.png";
   static const String Iconawesomecopy = "$baseImage/Iconawesomecopy.png";
   static const String tiardschulzb8dA3eY5VrYunsplash =
