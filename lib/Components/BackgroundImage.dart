@@ -17,3 +17,21 @@ class BackgroundImage extends StatelessWidget {
     );
   }
 }
+
+
+class BackgroundImageBeneficiary extends StatelessWidget {
+  final String imageName;
+  const BackgroundImageBeneficiary({Key? key,
+    this.imageName = ImageStyle.bg,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset(
+      ImageStyle.tiardschulzb8dA3eY5VrYunsplash,
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
+      fit: BoxFit.cover,
+    );
+  }
+}
