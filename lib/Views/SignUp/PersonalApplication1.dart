@@ -118,6 +118,9 @@ class PersonalApplication1 extends StatelessWidget {
                               SizedBox(
                                 height: 12,
                               ),
+                              SizedBox(
+                                height: 12,
+                              ),
                               TextField(
                                 // obscureText: true,
                                 decoration: InputDecoration(
@@ -128,9 +131,6 @@ class PersonalApplication1 extends StatelessWidget {
                                     fontWeightDelta: 1,
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                height: 12,
                               ),
                               TextField(
                                 // obscureText: true,
