@@ -1,31 +1,62 @@
-import 'package:advanced_capital_pay/Components/AccountSelection.dart';
+import 'package:advanced_capital_pay/Components/InfoIconDescription.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../Components/AppBarStyle.dart';
 import '../Components/ButtonCustom.dart';
 import '../Components/PayingFromAccount.dart';
 import '../Components/PopUp.dart';
-import '../Components/RedioButtonCustom.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
-
+import 'package:get/get.dart';
 
 class AccountTransferSummary extends StatelessWidget {
   const AccountTransferSummary({Key? key}) : super(key: key);
+
+  titlePayingAccountList(String title,EdgeInsets padding) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          padding: padding,
+          child: Text(
+            title,
+            style: TextStyles
+                .textStyles_16
+                .apply(
+                fontWeightDelta: 2,
+                color: ColorStyle
+                    .primaryWhite),
+          ),
+        ),
+        SizedBox(
+          height: 16,
+        ),
+        Container(
+          height: 220,
+          child:   ListView.separated(
+              itemCount: 2,
+              scrollDirection: Axis.horizontal,
+              padding: padding,
+              separatorBuilder: (BuildContext context, int index) {
+                return SizedBox(width: 10,);
+              },
+              itemBuilder:
+                  (BuildContext context, int index) {
+                return   PayingFromAccount();
+              }),
+        ),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image.asset(
-          ImageStyle.tiard,
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          fit: BoxFit.cover,
-        ),
         Scaffold(
+            backgroundColor: ColorStyle.darkestBlue,
             appBar: AppBarStyleTitle(
               title: 'Account Transfer Summary',
               leadingButton: IconButton(
@@ -33,7 +64,9 @@ class AccountTransferSummary extends StatelessWidget {
                   ImageStyle.back_circle,
                   height: 30,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Get.back();
+                },
               ),
               trailingButton: IconButton(
                 icon: Image.asset(
@@ -45,96 +78,63 @@ class AccountTransferSummary extends StatelessWidget {
                 },
               ),
             ),
-            backgroundColor: Colors.transparent,
             body:SingleChildScrollView(
-              padding: EdgeInsets.only(left: 16,right: 16,top: 10),
+              // padding: EdgeInsets.only(left: 16,right: 16,top: 10),
               child:  Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Account Selection',
-                    // controller.listApplyLeave[index],
-                    style: TextStyles
-                        .textStyles_14
-                        .apply(
-                        fontWeightDelta: 2,
-                        color: ColorStyle
-                            .primaryWhite),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Container(
+                      padding: EdgeInsets.only(left: 16,right: 16,),
+                    child: InfoIconDescription(
+                      title: 'Account Selection',
+                      description: 'From here you can transfer money between your own accounts. You can set up a one off transfer or standing order.',
+                      textStyle: TextStyles.textStyles_14
+                          .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
+                      descriptionStyle: TextStyles.textStyles_12
+                          .apply(fontWeightDelta: 2, color: ColorStyle.secondryBlack),
+                    ),
                   ),
                   SizedBox(
-                    height: 5,
+                    height: 16,
                   ),
-                  AccountSelection(),
+                  titlePayingAccountList( 'Paying From Account',EffectStyle.padding(16, 16, 0, 0)),
                   SizedBox(
-                    height: 14,
+                    height: 16,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Paying From Account',
-                        style: TextStyles
-                            .textStyles_16
-                            .apply(
-                            fontWeightDelta: 2,
-                            color: ColorStyle
-                                .primaryWhite),
+                  titlePayingAccountList('Paying To Account', EffectStyle.padding(16, 16, 0, 0)),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Container(
+                    padding: EffectStyle.padding(16, 16, 0, 0),
+                    child: ButtonContinueCancel(
+                      radiusBorder: 40,
+
+                      textFirst:'Cancel',
+                      colorBGFirst:Colors.transparent,
+                      colorBorderFirst:ColorStyle.hex('#016ECF'),
+                      textStyleFirst: TextStyles.textStyles_14.apply(
+                        fontWeightDelta: 1,
+                        color: ColorStyle.hex('#016ECF'),
                       ),
-                      Container(
-                        padding: EdgeInsets.only(left: 5,right: 8),
-                        width: 60,
-                        height: 25,
-                        child:  Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Icon(
-                              Icons.edit,
-                              size: 16,
-                              color: ColorStyle.blueSKY,
-                            ),
-                            Text(
-                              'Edit',
-                              style: TextStyles
-                                  .textStyles_12
-                                  .apply(
-                                  fontWeightDelta: 2,
-                                  color: ColorStyle
-                                      .blueSKY),
-                            ),
+                      onTapFirst: () {
 
-                          ],
-                        ),
-
-
-                        decoration: BoxDecoration(
-                            color: ColorStyle.primaryWhite,
-                            borderRadius: BorderRadius.circular(4)
-
-                        ),
-
+                      },
+                      textSecond:'Continue',
+                      colorBGSecond: ColorStyle.hex('#016ECF'),
+                      colorBorderSecond: Colors.transparent,
+                      textStyleSecond: TextStyles.textStyles_14.apply(
+                          fontWeightDelta: 1,
+                          color: ColorStyle.primaryWhite
                       ),
+                      onTapSecond: () {
 
-                    ],
-                  ),
-                  SizedBox(
-                    height: 9,
-                  ),
-                Container(
-                  height: 220,
-                  width: MediaQuery.of(context).size.width,
-                  child:   ListView.builder(
-                      // padding: EdgeInsets.only(top: 20),
-                      shrinkWrap: true,
-                      itemCount: 2,
-                      scrollDirection: Axis.horizontal,
-                      // physics: NeverScrollableScrollPhysics(),
-                      itemBuilder:
-                          (BuildContext context, int index) {
-                        return   PayingFromAccount();
-                      }),
-                ),
-
-
+                      },
+                    ),
+                  )
                 ],
               ),
             )

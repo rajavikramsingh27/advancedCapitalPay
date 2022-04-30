@@ -74,7 +74,7 @@ class SuccessfulCurrencyExchange extends StatelessWidget {
                   SizedBox(height: 20,),
                   NewTransferCustom(),
                   SizedBox(height: 40,),
-                  GradientButtonWithContineu()
+                  GradientButtonWithContinue()
 
 
 

@@ -73,6 +73,12 @@ class TextStyles {
     fontWeight: FontWeight.normal,
   );
 
+  static TextStyle get textStyles_9 => TextStyle(
+    fontSize: 9,
+    fontFamily: kFontFamily,
+    fontWeight: FontWeight.normal,
+  );
+
   static TextStyle get textStyles_8 => TextStyle(
     fontSize: SizeStyle.size_8,
     fontFamily: kFontFamily,

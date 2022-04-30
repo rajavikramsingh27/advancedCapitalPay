@@ -15,6 +15,9 @@ import '../Components/SearchBarCustom.dart';
 import '../Views/TransactionDetails.dart';
 import '../Views/SavingGoal.dart';
 import '../Views/AccountDetails.dart';
+import '../Views/CurrencyExchangePage.dart';
+import '../Views/BeneficiaryInternational.dart';
+
 
 class MainDashboard extends StatelessWidget {
   MainDashboard({Key? key}) : super(key: key);
@@ -252,33 +255,38 @@ class MainDashboard extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Expanded(
-                                  child: Container(
-                                    height: 66,
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Image.asset(ImageStyle.transfer3,
-                                            color: ColorStyle.hex('#134EAE'),
-                                            // width: MediaQuery.of(context).size.width,
-                                            height: 25
-                                          // fit: BoxFit.cover,
-                                        ),
-                                        SizedBox(
-                                          height: 5,
-                                        ),
-                                        Text(
-                                          'Transfer',
-                                          style: TextStyles.textStyles_10.apply(
-                                            color: ColorStyle.hex('#134EAE'),
-                                            fontWeightDelta: 1,
+                                  child: InkWell(
+                                    child: Container(
+                                      height: 66,
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset(ImageStyle.transfer3,
+                                              color: ColorStyle.hex('#134EAE'),
+                                              // width: MediaQuery.of(context).size.width,
+                                              height: 25
+                                            // fit: BoxFit.cover,
                                           ),
-                                        ),
-                                      ],
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Text(
+                                            'Transfer',
+                                            style: TextStyles.textStyles_10.apply(
+                                              color: ColorStyle.hex('#134EAE'),
+                                              fontWeightDelta: 1,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: ColorStyle.primaryWhite,
+                                        borderRadius: BorderRadius.circular(15),
+                                      ),
                                     ),
-                                    decoration: BoxDecoration(
-                                      color: ColorStyle.primaryWhite,
-                                      borderRadius: BorderRadius.circular(15),
-                                    ),
+                                    onTap: () {
+                                      Get.to(BeneficiaryInternational());
+                                    },
                                   ),
                                 ),
                                 SizedBox(
@@ -322,31 +330,36 @@ class MainDashboard extends StatelessWidget {
                                   width: 26,
                                 ),
                                 Expanded(
-                                  child: Container(
-                                    height: 66,
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Image.asset(ImageStyle.stock,
-                                            color: ColorStyle.hex('#134EAE'),
-                                            height: 25
-                                        ),
-                                        SizedBox(
-                                          height: 5,
-                                        ),
-                                        Text(
-                                          'Exchange',
-                                          style: TextStyles.textStyles_10.apply(
-                                            color: ColorStyle.hex('#134EAE'),
-                                            fontWeightDelta: 1,
+                                  child: InkWell(
+                                    child: Container(
+                                      height: 66,
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset(ImageStyle.stock,
+                                              color: ColorStyle.hex('#134EAE'),
+                                              height: 25
                                           ),
-                                        ),
-                                      ],
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Text(
+                                            'Exchange',
+                                            style: TextStyles.textStyles_10.apply(
+                                              color: ColorStyle.hex('#134EAE'),
+                                              fontWeightDelta: 1,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: ColorStyle.primaryWhite,
+                                        borderRadius: BorderRadius.circular(15),
+                                      ),
                                     ),
-                                    decoration: BoxDecoration(
-                                      color: ColorStyle.primaryWhite,
-                                      borderRadius: BorderRadius.circular(15),
-                                    ),
+                                    onTap: () {
+                                      Get.to(CurrencyExchangePage());
+                                    },
                                   ),
                                 ),
                               ],

@@ -70,6 +70,10 @@ class ImageStyle {
   static const String login = "$baseImage/login.png";
   static const String browserBlue = "$baseImage/browserBlue.png";
   static const String user_1_blue = "$baseImage/user_1_blue.png";
+  static const String transferBank = "$baseImage/transferBank.png";
+  static const String transferBank_Blue = "$baseImage/transferBank_Blue.png";
+
+
   static const String password_set_blue = "$baseImage/password_set_blue.png";
   static const String login_blue = "$baseImage/login_blue.png";
   static const String dashedLine = "$baseImage/dashedLine.png";
@@ -215,6 +219,9 @@ class ImageStyle {
   static const String cardSavingGoals = "$baseImage/cardSavingGoals.png";
   static const String markerPerson = "$baseImage/markerPerson.png";
   static const String jewlers = "$baseImage/jewlers.png";
+  static const String bgPersonalAccount = "$baseImage/bgPersonalAccount.png";
+  static const String fileFolder = "$baseImage/fileFolder.png";
+
 }
 
 

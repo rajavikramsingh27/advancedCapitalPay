@@ -7,23 +7,34 @@ import 'package:country_picker/country_picker.dart';
 class CountryPicker extends StatefulWidget {
 
   double radius;
-  Color colorBorder;
-  IconData iconArrow;
+  Color? colorBorder;
+  Color? colorBG;
+  Widget? icon;
   EdgeInsets padding;
   Color colorIcon;
   TextStyle textStyle;
+  double height;
+  double fontSizeFlagEmoji;
+  String displayNameNoCountryCode;
+  String flagEmoji;
 
   CountryPicker({Key? key,
     this.radius = 4,
     this.colorBorder = Colors.grey,
-    this.iconArrow = Icons.arrow_drop_down_outlined,
+    this.colorBG = Colors.white,
+    this.icon = const Icon(
+      Icons.keyboard_arrow_down,
+      size: 26,
+      color: Colors.black,
+  ),
     this.padding = const EdgeInsets.only(left: 10, right: 10, top: 14, bottom: 14),
     this.colorIcon = Colors.grey,
-    this.textStyle = const TextStyle()
+    this.textStyle = const TextStyle(),
+    this.height = 50,
+    this.fontSizeFlagEmoji = 14,
+    this.displayNameNoCountryCode = 'United Kingdom',
+    this.flagEmoji = '🇬🇧',
   }) : super(key: key);
-
-  String displayNameNoCountryCode = '';
-  String flagEmoji = '';
 
   @override
   _CountryPickerState createState() => _CountryPickerState();
@@ -34,12 +45,13 @@ class _CountryPickerState extends State<CountryPicker> {
   Widget build(BuildContext context) {
     return InkWell(
       child: Container(
+        height: widget.height,
         padding: widget.padding,
         decoration: BoxDecoration(
-            // color: ColorStyle.primaryWhite,
+            color: widget.colorBG!,
             borderRadius: EffectStyle.radiusCustom(widget.radius),
             border: Border.all(
-              color: widget.colorBorder,
+              color: widget.colorBorder!,
               width: 1,
             )),
         child: Row(
@@ -50,9 +62,8 @@ class _CountryPickerState extends State<CountryPicker> {
                 children: [
                   Text(
                     widget.flagEmoji,
-                    style: TextStyles.textStyles_14.apply(
-                      color: ColorStyle.secondryBlack,
-                      fontWeightDelta: 0,
+                    style: TextStyle(
+                      fontSize: widget.fontSizeFlagEmoji
                     ),
                   ),
                   SizedBox(
@@ -61,23 +72,17 @@ class _CountryPickerState extends State<CountryPicker> {
                   Expanded(
                     child: Text(
                       widget.displayNameNoCountryCode,
-                      style: widget.textStyle,
-
-
-                      // TextStyles.textStyles_14.apply(
-                      //   color: ColorStyle.secondryBlack,
-                      //   fontWeightDelta: 0,
-                      // ),
+                      style: (widget.displayNameNoCountryCode == 'United Kingdom')
+                          ? TextStyles.textStyles_15.apply(
+                        color: ColorStyle.grey,
+                        fontWeightDelta: 2,
+                      ) : widget.textStyle,
                     ),
                   ),
                 ],
               ),
             ),
-            Icon(
-              widget.iconArrow,
-              size: 26,
-              color: widget.colorIcon,
-            ),
+            widget.icon!
           ],
         ),
       ),
@@ -90,6 +95,8 @@ class _CountryPickerState extends State<CountryPicker> {
           showPhoneCode: true,
           showWorldWide: false,
           onSelect: (Country country) {
+            print(country.displayNameNoCountryCode);
+            print(country.displayNameNoCountryCode);
             setState(() {
               widget.displayNameNoCountryCode = country.displayNameNoCountryCode.split('(')[0];
               widget.flagEmoji = country.flagEmoji;
@@ -120,7 +127,7 @@ class _CountryPickerState extends State<CountryPicker> {
   }
 }
 
-class TelePhoneNumberCode extends StatefulWidget {
+class CountryPickerPhoneCode extends StatefulWidget {
   double radius;
   Color colorBorder;
   IconData? iconArrow;
@@ -128,7 +135,7 @@ class TelePhoneNumberCode extends StatefulWidget {
   Color colorIcon;
   TextStyle textStyle;
 
-  TelePhoneNumberCode({Key? key,
+  CountryPickerPhoneCode({Key? key,
     this.radius = 4,
     this.colorBorder = Colors.grey,
     this.iconArrow,
@@ -145,10 +152,10 @@ class TelePhoneNumberCode extends StatefulWidget {
 
 
   @override
-  _TelePhoneNumberCodeState createState() => _TelePhoneNumberCodeState();
+  _CountryPickerPhoneCodeState createState() => _CountryPickerPhoneCodeState();
 }
 
-class _TelePhoneNumberCodeState extends State<TelePhoneNumberCode> {
+class _CountryPickerPhoneCodeState extends State<CountryPickerPhoneCode> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -257,4 +264,120 @@ class _TelePhoneNumberCodeState extends State<TelePhoneNumberCode> {
   }
 }
 
+
+class CountryPickerCountryCode extends StatefulWidget {
+  double radius;
+  Color? colorBorder;
+  Color? colorBG;
+  Widget? icon;
+  EdgeInsets padding;
+  Color colorIcon;
+  TextStyle textStyle;
+  double height;
+  double fontSizeFlagEmoji;
+  String countryCode;
+  String flagEmoji;
+
+  CountryPickerCountryCode({Key? key,
+    this.radius = 4,
+    this.colorBorder = Colors.grey,
+    this.colorBG = Colors.white,
+    this.icon = const Icon(
+      Icons.keyboard_arrow_down,
+      size: 26,
+      color: Colors.black,
+    ),
+    this.padding = const EdgeInsets.only(left: 10, right: 10, top: 14, bottom: 14),
+    this.colorIcon = Colors.grey,
+    this.textStyle = const TextStyle(),
+    this.height = 50,
+    this.fontSizeFlagEmoji = 14,
+    this.countryCode = 'United Kingdom',
+    this.flagEmoji = '🇬🇧',
+  }) : super(key: key);
+
+
+
+  @override
+  _CountryPickerCountryCodeState createState() => _CountryPickerCountryCodeState();
+}
+
+class _CountryPickerCountryCodeState extends State<CountryPickerCountryCode> {
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      child: Container(
+        height: widget.height,
+        padding: widget.padding,
+        decoration: BoxDecoration(
+            color: widget.colorBG!,
+            borderRadius: EffectStyle.radiusCustom(widget.radius),
+            border: Border.all(
+              color: widget.colorBorder!,
+              width: 1,
+            )),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(child: Text(
+              widget.flagEmoji,
+              style: TextStyle(
+                  fontSize: widget.fontSizeFlagEmoji
+              ),
+            )),
+            Expanded(
+              child: Text(
+                widget.countryCode,
+                textAlign: TextAlign.center,
+                style: (widget.countryCode == 'United Kingdom')
+                    ? TextStyles.textStyles_15.apply(
+                  color: ColorStyle.grey,
+                  fontWeightDelta: 2,
+                ) : widget.textStyle,
+              ),
+            ),
+            widget.icon!
+          ],
+        ),
+      ),
+      onTap: () {
+        showCountryPicker(
+          context: context,
+          //Optional.  Can be used to exclude(remove) one ore more country from the countries list (optional).
+          exclude: <String>['KN', 'MF'],
+          //Optional. Shows phone code before the country name.
+          showPhoneCode: true,
+          showWorldWide: false,
+          onSelect: (Country country) {
+            print(country.displayNameNoCountryCode);
+            print(country.displayNameNoCountryCode);
+            setState(() {
+              widget.countryCode = country.countryCode;
+              widget.flagEmoji = country.flagEmoji;
+            });
+          },
+
+          countryListTheme: CountryListThemeData(
+            // Optional. Sets the border radius for the bottomsheet.
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(40.0),
+              topRight: Radius.circular(40.0),
+            ),
+            // Optional. Styles the search field.
+            inputDecoration: InputDecoration(
+              labelText: 'Search',
+              hintText: 'Start typing to search',
+              prefixIcon: const Icon(Icons.search),
+              border: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: const Color(0xFF8C98A8).withOpacity(0.2),
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+}
 

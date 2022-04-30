@@ -257,8 +257,7 @@ class AppBarStyleCustom1 extends StatelessWidget
   }
 }
 
-class AppBarStyleCustomBeni extends StatelessWidget
-    implements PreferredSizeWidget {
+class AppBarStyleCustomBeni extends StatelessWidget implements PreferredSizeWidget {
   final Function()? onTap;
   final Widget? leadingButton;
   final Widget? trailingButton;

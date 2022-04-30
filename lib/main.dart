@@ -5,8 +5,8 @@ import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 import '../Views/SplashScreen.dart';
-
-
+import '../Views/TabbarScreen.dart';
+import '../Views/TransferDetails.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,29 +29,13 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
 
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
-      // home: TabbarScreen(),
+      // home: SplashScreen(),
+      home: TabbarScreen(),
       // home: AppSettings(),
       // home: TabbarScreen(),
       // home: AppSettings(),
       //   home: SuccessfulCurrencyExchange()
-
-        // home: Material(
-        //     child: AccountTransferSummary(
-        //       // firstText: 'No',
-        //       // secondText: 'Yes',
-        //       // colorFirst: ColorsDropdownButtonTextField.green,
-        //       // colorSecond: Colors.green,
-        //       //
-        //       // textStyleFirst: TextStyles.textStyles_16.apply(
-        //       //   color: Colors.green
-        //       // ),
-        //       // textStyleSecond: TextStyles.textStyles_16.apply(
-        //       //     color: Colors.green
-        //       // ),
-        //     ),
-        // )
-
+      // home: TransferDetails(),
     );
   }
 }

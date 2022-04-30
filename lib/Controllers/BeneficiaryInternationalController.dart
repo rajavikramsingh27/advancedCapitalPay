@@ -7,7 +7,11 @@ class BeneficiaryInternationalController extends GetxController {
     'Local Beneficiaries',
     'International Beneficiaries',
   ].obs;
+
+  RxBool isPersonal = true.obs;
+
   reset() {
     intAppBar.value = 0;
+    isPersonal.value = true;
   }
 }
