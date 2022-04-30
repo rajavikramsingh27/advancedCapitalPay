@@ -69,6 +69,7 @@ class SavingGoal extends StatelessWidget {
                 ),
                 child: AppBarStyleCustom(
                   leadingButton: IconButton(
+
                     icon: Image.asset(
                       ImageStyle.ellipse2,
                       height: 30,

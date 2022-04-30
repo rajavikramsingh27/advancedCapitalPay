@@ -287,6 +287,7 @@ class AppBarStyleCustomBenifi extends StatelessWidget implements PreferredSizeWi
   final Widget? leadingButton;
   final Widget? trailingButton;
   final Widget? settingButton;
+  final Widget? title;
 
   AppBarStyleCustomBenifi({
     Key? key,
@@ -294,6 +295,7 @@ class AppBarStyleCustomBenifi extends StatelessWidget implements PreferredSizeWi
     this.leadingButton,
     this.trailingButton,
     this.settingButton,
+    this.title,
   }) : super(key: key);
 
   double heightAppBar = 70;
@@ -312,13 +314,7 @@ class AppBarStyleCustomBenifi extends StatelessWidget implements PreferredSizeWi
 
       leading: (leadingButton == null) ? Container() :leadingButton,
       centerTitle: true,
-      title: Text(
-        'From Account',
-        style: TextStyles.textStyles_20.apply(
-          color: ColorStyle.primaryWhite,
-          fontWeightDelta: 2
-        ),
-      ),
+      title: title,
       actions: [
 
         if (trailingButton != null) trailingButton!,

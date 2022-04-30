@@ -27,7 +27,7 @@ class BeneficiaryInternational extends StatelessWidget {
         Scaffold(
           backgroundColor: Colors.transparent,
 
-          body:GetBuilder<BeneficiaryInternationalController>(
+          body: GetBuilder<BeneficiaryInternationalController>(
         init: BeneficiaryInternationalController(),
         initState: (state) {
         controller.reset();
@@ -44,6 +44,7 @@ class BeneficiaryInternational extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         AppBarStyleCustomBeni(
+
                           leadingButton: BackButton(
 
                             onPressed: () {},

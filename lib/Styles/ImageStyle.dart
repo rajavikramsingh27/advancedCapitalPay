@@ -164,6 +164,14 @@ class ImageStyle {
   static const String Unknown = "$baseImage/Unknown.png";
   static const String Path1148 = "$baseImage/Path1148.png";
   static const String Rectangle2094 = "$baseImage/Rectangle2094.png";
+  static const String Card3 = "$baseImage/Card3.png";
+  static const String Rectangle1957 = "$baseImage/Rectangle 1957.png";
+  static const String Rectangle1958 = "$baseImage/Rectangle 1958.png";
+  static const String Group2222 = "$baseImage/Group2222.png";
+  static const String English1 = "$baseImage/English.png";
+  static const String tetherusdtlogos = "$baseImage/tether-usdt-logos.png";
+  static const String tetherusdtlogo = "$baseImage/tether-usdt-logo.png";
+  static const String bitcoinbtclogo = "$baseImage/bitcoin-btc-logo.png";
+  static const String FlagofAustraliaconvertedsvg = "$baseImage/Flag_of_Australia_(converted).svg.png";
 
 }
-// Icon_material_error

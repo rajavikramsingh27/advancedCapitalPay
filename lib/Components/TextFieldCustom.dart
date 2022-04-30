@@ -409,3 +409,21 @@ class _TFPasswordLabelCustomState extends State<TFPasswordLabelCustom> {
     );
   }
 }
+
+class TextFieldRadius extends StatelessWidget {
+  const TextFieldRadius({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      decoration: InputDecoration(
+          hintText: 'KindaCode.com',
+          // contentPadding: const EdgeInsets.all(15),
+          border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(30))),
+      onChanged: (value) {
+        // do something
+      },
+    );
+  }
+}

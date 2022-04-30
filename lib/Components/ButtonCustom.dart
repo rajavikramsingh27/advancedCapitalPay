@@ -139,3 +139,122 @@ class GradientButtonWithArrow extends StatelessWidget {
         onTap: onTap);
   }
 }
+
+class GradientButtonWith extends StatelessWidget {
+  final double? width;
+  final double? height;
+  final String? imageName;
+  final String? text;
+  final Function()? onTap;
+  final IconData? icon;
+
+  const GradientButtonWith(
+      {Key? key,
+        this.width = 200,
+        this.height = 50,
+        this.imageName = ImageStyle.gradientSignIn,
+        this.text = "GradientButtonSkyColor",
+        this.onTap,
+        this.icon})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Expanded(child:  InkWell(
+            child: Container(
+              width: width,
+              height: height,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+
+                  borderRadius: BorderRadius.circular(40),
+                  border: Border.all(
+                      width: 2,
+                      color: ColorStyle.blueSKY
+                  )
+              ),
+              child: Text(
+                'Cancel',
+                style: TextStyles.textStyles_16.apply(
+                    color: ColorStyle.blueSKY,
+                    fontWeightDelta: 1
+                ),
+              ),
+            ),
+            onTap: onTap)),
+        SizedBox(width: 10,),
+        Expanded(child:  InkWell(
+            child: Container(
+              width: width,
+              height: height,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  color: ColorStyle.blueSKY,
+                  borderRadius: BorderRadius.circular(40),
+                  border: Border.all(
+                      width: 1,
+                      color: ColorStyle.blueSKY
+                  )
+              ),
+              child: Text(
+                'Generate OTP',
+                style: TextStyles.textStyles_16.apply(
+                    color: ColorStyle.primaryWhite,
+                    fontWeightDelta: 1
+                ),
+              ),
+            ),
+            onTap: onTap)),
+
+      ],
+    );
+  }
+}
+
+class GradientButtonWithContineu extends StatelessWidget {
+  final double? width;
+  final double? height;
+  final String? imageName;
+  final String? text;
+  final Function()? onTap;
+  final IconData? icon;
+
+  const GradientButtonWithContineu(
+      {Key? key,
+        this.width = 200,
+        this.height = 50,
+        this.imageName = ImageStyle.gradientSignIn,
+        this.text = "GradientButtonSkyColor",
+        this.onTap,
+        this.icon})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+        child: Container(
+          // width: width,
+          height: height,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+
+              borderRadius: BorderRadius.circular(40),
+              color: ColorStyle.blueSKY
+          ),
+          child: Text(
+            'Continue',
+            style: TextStyles.textStyles_16.apply(
+                color: ColorStyle.primaryWhite,
+                fontWeightDelta: 1
+            ),
+          ),
+        ),
+        onTap: onTap);
+  }
+}
+
+
+
+
