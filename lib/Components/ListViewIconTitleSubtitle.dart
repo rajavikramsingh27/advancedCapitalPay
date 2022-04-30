@@ -3,7 +3,7 @@ import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:flutter/material.dart';
 import '../../Styles/ColorStyle.dart';
 import '../../Styles/TextStyles.dart';
-import 'package:advanced_capital_pay/Views/SignUp/ComponentsSignUp.dart';
+import 'package:advanced_capital_pay/Components/ComponentsSignUp.dart';
 import '../Styles/ImageStyle.dart';
 
 class ListViewIconTitleSubtitle extends StatelessWidget {

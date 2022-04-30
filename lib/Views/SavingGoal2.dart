@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
-import 'package:advanced_capital_pay/Views/SignUp/ComponentsSignUp.dart';
+import 'package:advanced_capital_pay/Components/ComponentsSignUp.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';

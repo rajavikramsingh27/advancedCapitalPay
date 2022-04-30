@@ -7,7 +7,7 @@ import '../../Styles/EffectStyle.dart';
 import '../../Styles/TextStyles.dart';
 import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
-import '../../Views/Profile/Components.dart';
+import '../../Components/ComponentsTitleTFRounded.dart';
 
 
 class PersonalProfile extends StatelessWidget {
@@ -37,11 +37,11 @@ class PersonalProfile extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount(
                   'First Name', false, 'Harrison'),
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount(
                   'Middle Name', false, 'Harrison'),
-              Components.textFieldsAccount('Last Name', false, 'Smith'),
+              ComponentsTitleInputs.textFieldsAccount('Last Name', false, 'Smith'),
               TitleDatePicker(title: 'Date of Birth'),
             ],
           ),
@@ -65,13 +65,13 @@ class PersonalProfile extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Components.textCountryPickerTextField(
+              ComponentsTitleInputs.textCountryPickerTextField(
                   'Mobile Number', false, '145654687694654'
               ),
-              Components.textCountryPickerTextField(
+              ComponentsTitleInputs.textCountryPickerTextField(
                   'Landline Number', false, '145654687694654'
               ),
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount(
                   'E-mail Address', false, 'Harrison.Smith@gmail.com'),
             ],
           ),
@@ -129,9 +129,9 @@ class PersonalProfile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TitleDropDown(title: 'Employment Status'),
-              Components.textFieldsAccount('Current Occupation', false,
+              ComponentsTitleInputs.textFieldsAccount('Current Occupation', false,
                   'Chief Development Offiecer'),
-              Components.textFieldsAccount('Company Name', false,
+              ComponentsTitleInputs.textFieldsAccount('Company Name', false,
                   'Goldsmiths Jewellery LTD'),
             ],
           ),
@@ -188,17 +188,21 @@ class PersonalProfile extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Components.textFieldsAccount('Address Line 1', false,
+              ComponentsTitleInputs.textFieldsAccount('Address Line 1', false,
                   'Villa 12, AI Amari Tower'),
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount(
                   'Address Line 2', false, 'AI Amari Tower'),
-              Components.textFieldsAccount('City', false, 'New York'),
-              Components.textFieldsAccount('Country/State/Province', false,
+              ComponentsTitleInputs.textFieldsAccount('City', false, 'New York'),
+              ComponentsTitleInputs.textFieldsAccount('Country/State/Province', false,
                   'Villa 12, Al Amari Tower'),
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount(
                   'Postal / Zip Code', false, '15646 York'),
-              Components.titleCountryPicker(
-                  'Country/State/Province (Optional)'
+              ComponentsTitleInputs.titleCountryPicker(
+                  'Country/State/Province (Optional)', Icon(
+                Icons.keyboard_arrow_down_sharp,
+                size: 26,
+                color: ColorStyle.secondryBlack,
+              )
               )
             ],
           ),
@@ -255,17 +259,21 @@ class PersonalProfile extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Components.textFieldsAccount('Address Line 1', false,
+              ComponentsTitleInputs.textFieldsAccount('Address Line 1', false,
                   'Villa 12, AI Amari Tower'),
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount(
                   'Address Line 2', false, 'AI Amari Tower'),
-              Components.textFieldsAccount('City', false, 'New York'),
-              Components.textFieldsAccount('Country/State/Province', false,
+              ComponentsTitleInputs.textFieldsAccount('City', false, 'New York'),
+              ComponentsTitleInputs.textFieldsAccount('Country/State/Province', false,
                   'Villa 12, Al Amari Tower'),
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount(
                   'Postal / Zip Code', false, '15646 York'),
-              Components.titleCountryPicker(
-                  'Country/State/Province (Optional)'
+              ComponentsTitleInputs.titleCountryPicker(
+                  'Country/State/Province (Optional)', Icon(
+                Icons.keyboard_arrow_down_sharp,
+                size: 26,
+                color: ColorStyle.secondryBlack,
+              )
               )
             ],
           ),
@@ -323,8 +331,12 @@ class PersonalProfile extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Components.titleCountryPicker(
-                  'Tax Residencies'
+              ComponentsTitleInputs.titleCountryPicker(
+                  'Tax Residencies', Icon(
+                Icons.keyboard_arrow_down_sharp,
+                size: 26,
+                color: ColorStyle.secondryBlack,
+              )
               ),
             ],
           ),

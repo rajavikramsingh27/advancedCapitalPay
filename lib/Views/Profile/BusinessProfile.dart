@@ -5,7 +5,7 @@ import '../../Styles/EffectStyle.dart';
 import '../../Styles/TextStyles.dart';
 import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
-import '../../Views/Profile/Components.dart';
+import '../../Components/ComponentsTitleTFRounded.dart';
 
 
 
@@ -36,10 +36,14 @@ class BusinessProfile extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Components.textFieldsAccount('Business Name', false, 'Harrison'),
-              Components.titleCountryPicker('Country of Formation (Optional)'),
-              Components.textFieldsAccount('Year of Incorporation',),
-              Components.textFieldsAccount('Company Registration Number',),
+              ComponentsTitleInputs.textFieldsAccount('Business Name', false, 'Harrison'),
+              ComponentsTitleInputs.titleCountryPicker('Country of Formation (Optional)', Icon(
+                Icons.keyboard_arrow_down_sharp,
+                size: 26,
+                color: ColorStyle.secondryBlack,
+              )),
+              ComponentsTitleInputs.textFieldsAccount('Year of Incorporation',),
+              ComponentsTitleInputs.textFieldsAccount('Company Registration Number',),
             ],
           ),
         ),
@@ -62,13 +66,13 @@ class BusinessProfile extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Components.textCountryPickerTextField(
+              ComponentsTitleInputs.textCountryPickerTextField(
                   'Business Telephone Number', false, '145654687694654'),
-              Components.textCountryPickerTextField(
+              ComponentsTitleInputs.textCountryPickerTextField(
                   'Landline Number', false, '145654687694654'),
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount(
                   'Business E-mail Address', false, 'Harrison.Smith@gmail.com'),
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount(
                   'Website Address',),
             ],
           ),
@@ -126,16 +130,20 @@ class BusinessProfile extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount(
                   'Address Line 1', false, 'Villa 12, AI Amari Tower'),
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount(
                   'Address Line 2', false, 'AI Amari Tower'),
-              Components.textFieldsAccount('City', false, 'New York'),
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount('City', false, 'New York'),
+              ComponentsTitleInputs.textFieldsAccount(
                   'Country/State/Province', false, 'Villa 12, Al Amari Tower'),
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount(
                   'Postal / Zip Code', false, '15646 York'),
-              Components.titleCountryPicker('Country/State/Province (Optional)')
+              ComponentsTitleInputs.titleCountryPicker('Country/State/Province (Optional)', Icon(
+                Icons.keyboard_arrow_down_sharp,
+                size: 26,
+                color: ColorStyle.secondryBlack,
+              ))
             ],
           ),
         ),
@@ -195,16 +203,20 @@ class BusinessProfile extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount(
                   'Address Line 1', false, 'Villa 12, AI Amari Tower'),
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount(
                   'Address Line 2', false, 'AI Amari Tower'),
-              Components.textFieldsAccount('City', false, 'New York'),
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount('City', false, 'New York'),
+              ComponentsTitleInputs.textFieldsAccount(
                   'Country/State/Province', false, 'Villa 12, Al Amari Tower'),
-              Components.textFieldsAccount(
+              ComponentsTitleInputs.textFieldsAccount(
                   'Postal / Zip Code', false, '15646 York'),
-              Components.titleCountryPicker('Country/State/Province (Optional)')
+              ComponentsTitleInputs.titleCountryPicker('Country/State/Province (Optional)', Icon(
+                Icons.keyboard_arrow_down_sharp,
+                size: 26,
+                color: ColorStyle.secondryBlack,
+              ))
             ],
           ),
         ),
@@ -261,7 +273,11 @@ class BusinessProfile extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Components.titleCountryPicker('Tax Residencies'),
+              ComponentsTitleInputs.titleCountryPicker('Tax Residencies', Icon(
+                Icons.keyboard_arrow_down_sharp,
+                size: 26,
+                color: ColorStyle.secondryBlack,
+              )),
             ],
           ),
         ),

@@ -161,16 +161,26 @@ class TransferBetween extends StatelessWidget {
                               SizedBox(
                                 height: 24,
                               ),
-                              ButtonContinueCancel(
-
-                              ),
+                              // ButtonContinueCancel(
+                              //   textFirst: 'Cancel afadfsdf',
+                              //   colorBGFirst: Colors.transparent,
+                              //   colorBorderFirst: ColorStyle.hex('#016ECF'),
+                              //   textStyleFirst: TextStyles.textStyles_14.apply(
+                              //       fontWeightDelta: 1,
+                              //       color: ColorStyle.hex('#016ECF'),
+                              //   ),
+                              //
+                              //   textSecond: 'Continue',
+                              //   colorBGSecond: ColorStyle.hex('#016ECF'),
+                              //   colorBorderSecond: Colors.transparent,
+                              //   textStyleSecond: TextStyles.textStyles_14.apply(
+                              //     fontWeightDelta: 1,
+                              //     color: ColorStyle.hex('#016ECF'),
+                              //   ),
+                              // ),
                               SizedBox(
                                 height: 20,
                               ),
-
-
-
-
 
                             ],
                           ),

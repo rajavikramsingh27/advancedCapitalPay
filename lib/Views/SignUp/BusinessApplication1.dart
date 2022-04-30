@@ -9,7 +9,7 @@ import '../../Styles/ColorStyle.dart';
 import '../../Styles/EffectStyle.dart';
 import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
-import '../SignUp/ComponentsSignUp.dart';
+import '../../Components/ComponentsSignUp.dart';
 import '../SignUp/EffectStyleSignUp.dart';
 
 class BusinessApplication1 extends StatelessWidget {

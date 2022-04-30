@@ -9,7 +9,7 @@ import '../../Styles/ImageStyle.dart';
 import '../../Styles/EffectStyle.dart';
 import '../../Components/DropdownButtonCustom.dart';
 import '../SignUp/EffectStyleSignUp.dart';
-import '../SignUp/ComponentsSignUp.dart';
+import '../../Components/ComponentsSignUp.dart';
 import '../../Components/CountryPicker.dart';
 
 
@@ -404,7 +404,7 @@ class PersonalApplication1 extends StatelessWidget {
                                 height: 12,
                               ),
 
-                              TelePhoneNumberCode(),
+                              CountryPickerPhoneCode(),
 
                               SizedBox(
                                 height: 16,
