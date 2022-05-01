@@ -215,6 +215,11 @@ class ImageStyle {
   static const String cardSavingGoals = "$baseImage/cardSavingGoals.png";
   static const String markerPerson = "$baseImage/markerPerson.png";
   static const String jewlers = "$baseImage/jewlers.png";
+  static const String Rectangle2082 = "$baseImage/Rectangle2082.png";
+  static const String tirnga1 = "$baseImage/tirnga1.png";
+  static const String tirnga2 = "$baseImage/tirnga2.png";
+  static const String BankIcon = "$baseImage/BankIcon.png";
+  static const String Group2220 = "$baseImage/Group2220.png";
+  static const String card2 = "$baseImage/card_2.png";
 }
-
 
