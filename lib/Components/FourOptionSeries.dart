@@ -24,14 +24,14 @@ class FourOptionSeries extends StatefulWidget {
     this.arrIconsInActivate = const [ImageStyle.browserBlue, ImageStyle.user_1, ImageStyle.passwordSet, ImageStyle.login],
   }) : super(key: key);
 
-  List<bool> arrSelectOption = [true, false, false, false];
-  List<bool> arrSelectOptionIcons = [true, false, false, false];
-
   @override
   _FourOptionSeriesState createState() => _FourOptionSeriesState();
 }
 
 class _FourOptionSeriesState extends State<FourOptionSeries> {
+
+  List<bool> arrSelectOption = [true, false, false, false];
+  List<bool> arrSelectOptionIcons = [true, false, false, false];
 
   @override
   void initState() {
@@ -39,11 +39,17 @@ class _FourOptionSeriesState extends State<FourOptionSeries> {
     super.initState();
 
     NotificationCenter().subscribe('updateAccount', (index) {
-      widget.arrSelectOption[index] = true;
-      widget.arrSelectOptionIcons[index] = true;
+      arrSelectOption[index] = true;
+      arrSelectOptionIcons[index] = true;
 
-      setState(() {
+      print(index);
+      print(arrSelectOption);
+      print(arrSelectOptionIcons);
 
+      Future.delayed(Duration(seconds: 1), () {
+        setState(() {
+
+        });
       });
     });
 
@@ -85,7 +91,7 @@ class _FourOptionSeriesState extends State<FourOptionSeries> {
 
                     children: [
                       Image.asset(
-                        (widget.arrSelectOptionIcons[0])
+                        (arrSelectOptionIcons[0])
                             ? widget.arrIconsActivate![0]
                             : widget.arrIconsInActivate![0],
                         height: 50,
@@ -106,7 +112,7 @@ class _FourOptionSeriesState extends State<FourOptionSeries> {
                   child: Column(
                     children: [
                       Image.asset(
-                        (widget.arrSelectOptionIcons[1])
+                        (arrSelectOptionIcons[1])
                             ? widget.arrIconsActivate![1]
                             : widget.arrIconsInActivate![1],
                         height: 50,
@@ -127,7 +133,7 @@ class _FourOptionSeriesState extends State<FourOptionSeries> {
                   child: Column(
                     children: [
                       Image.asset(
-                        (widget.arrSelectOptionIcons[2])
+                        (arrSelectOptionIcons[2])
                             ? widget.arrIconsActivate![2]
                             : widget.arrIconsInActivate![2],
                         height: 50,
@@ -144,11 +150,12 @@ class _FourOptionSeriesState extends State<FourOptionSeries> {
                       ),
                     ],
                   )),
+              if (widget.arrTitles!.length > 3)
               Container(
                   child: Column(
                     children: [
                       Image.asset(
-                        (widget.arrSelectOptionIcons[3])
+                        (arrSelectOptionIcons[3])
                             ? widget.arrIconsActivate![3]
                             : widget.arrIconsInActivate![3],
                         height: 50,

@@ -4,6 +4,11 @@ import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 import '../Views/SplashScreen.dart';
 import '../Views/TabbarScreen.dart';
+import '../Views/CurrencyExchange.dart';
+import '../Views/TransferSummary.dart';
+import '../Views/Exchange.dart';
+
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,6 +29,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        debugShowCheckedModeBanner: false, home: TabbarScreen());
+        debugShowCheckedModeBanner: false,
+        home: SplashScreen(),
+        // home: Exchange(),
+        // home: TabbarScreen(),
+      // home: AccountTransferSummary(),
+      // home: Material(
+      //   child: TransferBetween(),
+      // ),
+    );
   }
 }

@@ -229,5 +229,7 @@ class ImageStyle {
   static const String BankIcon = "$baseImage/BankIcon.png";
   static const String Group2220 = "$baseImage/Group2220.png";
   static const String card2 = "$baseImage/card_2.png";
+  static const String fileUpload = "$baseImage/fileUpload.png";
+  static const String JPFFileUpload = "$baseImage/JPFFileUpload.png";
 }
 

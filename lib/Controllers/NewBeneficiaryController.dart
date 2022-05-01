@@ -8,10 +8,13 @@ class NewBeneficiaryController extends GetxController {
   RxList<bool> arrSelectOption = [false].obs;
   RxList<bool> arrSelectOptionIcons = [false].obs;
 
-  RxInt  index = 1.obs;
+  RxInt  index = 0.obs;
+  RxString titleAppBar = 'From Account'.obs;
 
   reset() {
-    index.value = 1;
+    titleAppBar.value = 'From Account';
+
+    index.value = 0;
     arrSelectOption.clear();
     arrSelectOptionIcons.clear();
 

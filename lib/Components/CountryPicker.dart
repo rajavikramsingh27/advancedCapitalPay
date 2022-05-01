@@ -73,7 +73,7 @@ class _CountryPickerState extends State<CountryPicker> {
                     child: Text(
                       widget.displayNameNoCountryCode,
                       style: (widget.displayNameNoCountryCode == 'United Kingdom')
-                          ? TextStyles.textStyles_15.apply(
+                          ? TextStyles.textStyles_14.apply(
                         color: ColorStyle.grey,
                         fontWeightDelta: 2,
                       ) : widget.textStyle,
@@ -187,7 +187,7 @@ class _CountryPickerPhoneCodeState extends State<CountryPickerPhoneCode> {
                   Text(
                     "+"+widget.phoneCode,
                     style: (widget.phoneCode == '44')
-                    ? TextStyles.textStyles_15.apply(
+                    ? TextStyles.textStyles_14.apply(
                       color: ColorStyle.grey,
                       fontWeightDelta: 2,
                     ) : widget.textStyle,
@@ -199,7 +199,7 @@ class _CountryPickerPhoneCodeState extends State<CountryPickerPhoneCode> {
                     child: Text(
                       widget.countryCode,
                       style: (widget.phoneCode == '44')
-                          ? TextStyles.textStyles_15.apply(
+                          ? TextStyles.textStyles_14.apply(
                         color: ColorStyle.grey,
                         fontWeightDelta: 2,
                       ) : widget.textStyle,
@@ -330,7 +330,7 @@ class _CountryPickerCountryCodeState extends State<CountryPickerCountryCode> {
                 widget.countryCode,
                 textAlign: TextAlign.center,
                 style: (widget.countryCode == 'United Kingdom')
-                    ? TextStyles.textStyles_15.apply(
+                    ? TextStyles.textStyles_14.apply(
                   color: ColorStyle.grey,
                   fontWeightDelta: 2,
                 ) : widget.textStyle,

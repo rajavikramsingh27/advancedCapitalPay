@@ -1,5 +1,5 @@
 import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
-import 'package:advanced_capital_pay/Components/RedioButtonCustom.dart';
+import 'package:advanced_capital_pay/Components/RadioButtonCustom.dart';
 import 'package:flutter/material.dart';
 
 import '../Components/AppBarStyle.dart';
@@ -116,7 +116,7 @@ class TransferBetween extends StatelessWidget {
                               SizedBox(
                                 height: 8,
                               ),
-                             RedioButtonCustom(),
+                             RadioButtonCustom(),
                               SizedBox(
                                 height: 26,
                               ),

@@ -23,7 +23,7 @@ class ComponentsTitleInputs {
           children: [
             Text(
               title,
-              style: TextStyles.textStyles_15.apply(
+              style: TextStyles.textStyles_14.apply(
                 color: ColorStyle.secondryBlack,
                 fontWeightDelta: 2,
               ),
@@ -31,7 +31,7 @@ class ComponentsTitleInputs {
             if (isRequired)
               Text(
                 '*',
-                style: TextStyles.textStyles_15.apply(
+                style: TextStyles.textStyles_14.apply(
                   color: Colors.red,
                   fontWeightDelta: 11,
                 ),
@@ -44,7 +44,7 @@ class ComponentsTitleInputs {
         TextFieldCustom(
           colorBoder: ColorStyle.secondryBlack,
           hintText: hintText,
-          textStyle: TextStyles.textStyles_15.apply(
+          textStyle: TextStyles.textStyles_14.apply(
             fontWeightDelta: 2,
           ),
           radiusBorder: 30,
@@ -62,7 +62,7 @@ class ComponentsTitleInputs {
         ),
         Text(
           title,
-          style: TextStyles.textStyles_15.apply(
+          style: TextStyles.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 2,
           ),
@@ -76,7 +76,7 @@ class ComponentsTitleInputs {
           colorIcon: ColorStyle.secondryBlack,
           colorBorder: ColorStyle.secondryBlack,
           padding: EffectStyle.padding(16, 16, 10, 10),
-          textStyle: TextStyles.textStyles_15.apply(
+          textStyle: TextStyles.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 2,
           ),
@@ -96,7 +96,7 @@ class ComponentsTitleInputs {
           children: [
             Text(
               title,
-              style: TextStyles.textStyles_15.apply(
+              style: TextStyles.textStyles_14.apply(
                 color: ColorStyle.secondryBlack,
                 fontWeightDelta: 2,
               ),
@@ -104,7 +104,7 @@ class ComponentsTitleInputs {
             if (isRequired)
               Text(
                 '*',
-                style: TextStyles.textStyles_15.apply(
+                style: TextStyles.textStyles_14.apply(
                   color: Colors.red,
                   fontWeightDelta: 11,
                 ),
@@ -134,7 +134,7 @@ class ComponentsTitleInputs {
             Expanded(child: TextFieldCustom(
               colorBoder: ColorStyle.secondryBlack,
               hintText: hintText,
-              textStyle: TextStyles.textStyles_15.apply(
+              textStyle: TextStyles.textStyles_14.apply(
                 fontWeightDelta: 2,
               ),
               radiusBorder: 30,
@@ -157,7 +157,7 @@ class ComponentsTitleInputs {
           children: [
             Text(
               title,
-              style: TextStyles.textStyles_15.apply(
+              style: TextStyles.textStyles_14.apply(
                 color: colorTitle,
                 fontWeightDelta: 2,
               ),
@@ -165,7 +165,7 @@ class ComponentsTitleInputs {
             if (isRequired)
               Text(
                 '*',
-                style: TextStyles.textStyles_15.apply(
+                style: TextStyles.textStyles_14.apply(
                   color: Colors.red,
                   fontWeightDelta: 11,
                 ),
@@ -178,7 +178,7 @@ class ComponentsTitleInputs {
         TextFieldCustom(
           colorBoder: colorBorder,
           hintText: hintText,
-          textStyle: TextStyles.textStyles_15.apply(
+          textStyle: TextStyles.textStyles_14.apply(
             fontWeightDelta: 2,
           ),
           radiusBorder: 30,
@@ -187,7 +187,10 @@ class ComponentsTitleInputs {
     );
   }
 
-  static titleDropDown(String title, [bool isRequired = false, String hintText = '', List<String> listContent = const []]) {
+  static titleDropDown(String title, [
+    bool isRequired = false, String hintText = '', List<String> listContent = const [],
+  Widget iconWidget = const Icon(Icons.keyboard_arrow_down_rounded, color: Colors.black, size: 26,)
+  ]) {
     return Column(
       children: [
         SizedBox(
@@ -197,7 +200,7 @@ class ComponentsTitleInputs {
           children: [
             Text(
               title,
-              style: TextStyles.textStyles_15.apply(
+              style: TextStyles.textStyles_14.apply(
                 color: ColorStyle.secondryBlack,
                 fontWeightDelta: 2,
               ),
@@ -205,7 +208,7 @@ class ComponentsTitleInputs {
             if (isRequired)
               Text(
                 '*',
-                style: TextStyles.textStyles_15.apply(
+                style: TextStyles.textStyles_16.apply(
                   color: Colors.red,
                   fontWeightDelta: 11,
                 ),
@@ -218,9 +221,10 @@ class ComponentsTitleInputs {
         DropdownButtonCustom(
           padding: EffectStyle.padding(16, 16, 0, 0),
           radiusBorder: 40,
+          iconWidget: iconWidget,
           colorBorder: ColorStyle.secondryBlack,
           listValue: listContent,
-          textStyle: TextStyles.textStyles_15.apply(
+          textStyle: TextStyles.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 2,
           ),
@@ -231,6 +235,35 @@ class ComponentsTitleInputs {
     );
   }
 
+  static separatorLine() {
+    return Container(
+      height: 1,
+      color: ColorStyle.grey,
+    );
+  }
+
+  static  separtorSpace() {
+    return SizedBox(height: 20);
+  }
+
+  static titleDesc(String title, String desc, [Color colorTitle = Colors.grey,  Color colorDesc = Colors.white]) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          title,
+          style: TextStyles.textStyles_9.apply(
+              color: colorTitle, fontWeightDelta: 1),
+        ),
+        Text(
+          desc,
+          style: TextStyles.textStyles_10.apply(
+              color: colorDesc,
+              fontWeightDelta: 2),
+        ),
+      ],
+    );
+  }
 }
 
 class TitleDropDown extends StatefulWidget {
@@ -254,7 +287,7 @@ class _TitleDropDownState extends State<TitleDropDown> {
         ),
         Text(
           widget.title!,
-          style: TextStyles.textStyles_15.apply(
+          style: TextStyles.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 2,
           ),
@@ -270,12 +303,12 @@ class _TitleDropDownState extends State<TitleDropDown> {
           ),
           hint: Text(
             'Employed',
-            style: TextStyles.textStyles_15.apply(
+            style: TextStyles.textStyles_14.apply(
               color: ColorStyle.grey,
               fontWeightDelta: 2,
             ),
           ),
-          textStyle: TextStyles.textStyles_15.apply(
+          textStyle: TextStyles.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 2,
           ),
@@ -296,8 +329,9 @@ class _TitleDropDownState extends State<TitleDropDown> {
 
 class TitleDatePicker extends StatefulWidget {
   String? title;
+  bool? isRequired;
 
-  TitleDatePicker({Key? key, this.title = 'Title ...'}) : super(key: key);
+  TitleDatePicker({Key? key, this.title = 'Title ...', this.isRequired = false}) : super(key: key);
 
   @override
   _TitleDatePickerState createState() => _TitleDatePickerState();
@@ -314,12 +348,24 @@ class _TitleDatePickerState extends State<TitleDatePicker> {
         SizedBox(
           height: 16,
         ),
-        Text(
-          widget.title!,
-          style: TextStyles.textStyles_14.apply(
-            color: ColorStyle.secondryBlack,
-            fontWeightDelta: 2,
-          ),
+        Row(
+          children: [
+            Text(
+              widget.title!,
+              style: TextStyles.textStyles_14.apply(
+                color: ColorStyle.secondryBlack,
+                fontWeightDelta: 2,
+              ),
+            ),
+            if (widget.isRequired!)
+            Text(
+              '*',
+              style: TextStyles.textStyles_16.apply(
+                color: Colors.red,
+                fontWeightDelta: 2,
+              ),
+            ),
+          ],
         ),
         SizedBox(
           height: 6,
