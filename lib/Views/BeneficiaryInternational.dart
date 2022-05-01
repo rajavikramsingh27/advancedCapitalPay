@@ -17,6 +17,8 @@ import 'ForgotPassword/ForgotPassword.dart';
 import 'SignUp/PersonalApplication1.dart';
 import '../Views/NewBeneficiarySummary.dart';
 import '../Views/AccountTransferSummary.dart';
+import '../Views/StandingOrders.dart';
+
 
 class BeneficiaryInternational extends StatelessWidget {
   const BeneficiaryInternational({Key? key}) : super(key: key);
@@ -230,14 +232,19 @@ class BeneficiaryInternational extends StatelessWidget {
                                           children: [
                                             Row(
                                               children: [
-                                                Text(
-                                                    'Check My Standing Orders',
-                                                    style: TextStyle(
-                                                      color: ColorStyle.hex('#00D6E8'),
-                                                      fontFamily: TextStyles.kFontFamily,
-                                                      fontSize: SizeStyle.size_12,
-                                                      decorationThickness: 2,
-                                                    )
+                                                InkWell(
+                                                  child: Text(
+                                                      'Check My Standing Orders',
+                                                      style: TextStyle(
+                                                        color: ColorStyle.hex('#00D6E8'),
+                                                        fontFamily: TextStyles.kFontFamily,
+                                                        fontSize: SizeStyle.size_12,
+                                                        decorationThickness: 2,
+                                                      )
+                                                  ),
+                                                  onTap: () {
+                                                    Get.to(StandingOrders());
+                                                  },
                                                 ),
                                                 SizedBox(
                                                   width: 4,

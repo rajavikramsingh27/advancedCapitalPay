@@ -9,10 +9,15 @@ class InfoIconDescription extends StatelessWidget {
   final String? description;
   final TextStyle? textStyle;
   final TextStyle? descriptionStyle;
+  final EdgeInsets padding;
 
-  const InfoIconDescription({Key? key, this.title, this.description,
+  const InfoIconDescription({
+    Key? key, this.title, this.description,
   this.textStyle = const TextStyle(color: Colors.orange),
     this.descriptionStyle = const TextStyle(color: Colors.orange),
+    this.padding = const EdgeInsets.only(
+        left: 10, right: 10, top: 10, bottom: 10
+    )
   }) : super(key: key);
 
   @override
@@ -20,56 +25,38 @@ class InfoIconDescription extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        if (title != null)
         Text(
           title!,
           style: textStyle,
-
-
-          // TextStyles
-          //     .textStyles_14
-          //     .apply(
-          //     fontWeightDelta: 2,
-          //     color: ColorStyle
-          //         .primaryWhite),
         ),
-        SizedBox(height: 10),
         Container(
-            padding: EdgeInsets.only(
-                left: 10, right: 10, top: 10, bottom: 10
-            ),
+            padding: padding,
             decoration: BoxDecoration(
               color: ColorStyle.primaryWhite,
               borderRadius: BorderRadius.circular(6),
             ),
-            child: Column(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      height: 50,
-                      child: Icon(
-                        Icons.info,
-                        size: 30,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    Expanded(
-                      child: Text(
-                        description!,
-                        // 'From here you can transfer money between your own accounts. You can set up a one off transfer or standing order.',
-                        style: descriptionStyle,
-
-                        // TextStyles.textStyles_12
-                        //     .apply(fontWeightDelta: 3, color: ColorStyle.secondryBlack),
-                      ),
-                    ),
-                  ],
+                Container(
+                  height: 50,
+                  child: Icon(
+                    Icons.info,
+                    size: 30,
+                  ),
+                ),
+                SizedBox(
+                  width: 6,
+                ),
+                Expanded(
+                  child: Text(
+                    description!,
+                    style: descriptionStyle,
+                  ),
                 ),
               ],
-            )
+            ),
         )
       ],
     );

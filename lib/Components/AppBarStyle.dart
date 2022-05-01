@@ -165,7 +165,9 @@ class AppBarStyleLeadingTitleTrailing extends StatelessWidget
       // centerTitle: true,
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          if (nameUser!.isNotEmpty)
           AutoSizeText(
             nameUser!,
             style: nameStyle,
@@ -174,6 +176,7 @@ class AppBarStyleLeadingTitleTrailing extends StatelessWidget
             //   color: ColorStyle.primaryWhite,
             // ),
           ),
+          if (descriptionUser!.isNotEmpty)
           AutoSizeText(
             descriptionUser!,
             style: descriptionStyle,
@@ -182,6 +185,7 @@ class AppBarStyleLeadingTitleTrailing extends StatelessWidget
             //   color: ColorStyle.primaryWhite,
             // ),
           ),
+          if (timeLastLogin!.isNotEmpty)
           AutoSizeText(
             timeLastLogin!,
             maxLines: 1,

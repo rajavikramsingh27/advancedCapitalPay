@@ -204,6 +204,7 @@ class GradientButtonWith extends StatelessWidget {
     );
   }
 }
+
 class GradientButtonWithBank extends StatelessWidget {
   final double? width;
   final double? height;
@@ -276,6 +277,7 @@ class GradientButtonWithBank extends StatelessWidget {
     );
   }
 }
+
 class GradientButtonWithBanks extends StatelessWidget {
   final double? width;
   final double? height;
@@ -348,6 +350,7 @@ class GradientButtonWithBanks extends StatelessWidget {
     );
   }
 }
+
 class GradientButtonWithMassage extends StatelessWidget {
   final double? width;
   final double? height;
@@ -420,9 +423,6 @@ class GradientButtonWithMassage extends StatelessWidget {
     );
   }
 }
-
-
-
 
 class GradientButtonWithContinue extends StatelessWidget {
   final double? width;

@@ -9,7 +9,7 @@ import 'package:get/get.dart';
 import '../../Styles/TextStyles.dart';
 import '../../Components/TextFieldCustom.dart';
 import '../../Controllers/AccountDetailsRecoveryController.dart';
-import '../../Views/AdditionalSecurityRequired.dart';
+import '../../Views/OTPVerification.dart';
 
 class UserIdentification extends StatelessWidget {
   UserIdentification({Key? key}) : super(key: key);
@@ -157,7 +157,7 @@ class UserIdentification extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      AdditionalSecurityRequired(),
+                      OTPVerification(),
                       SizedBox(
                         height: 36,
                       ),

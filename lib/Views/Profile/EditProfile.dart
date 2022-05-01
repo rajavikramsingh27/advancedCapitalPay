@@ -16,7 +16,7 @@ import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
 import '../../Views/Profile/PersonalProfile.dart';
 import '../../Views/Profile/BusinessProfile.dart';
-import '../../Views/AdditionalSecurityRequired.dart';
+import '../../Views/OTPVerification.dart';
 
 
 
@@ -222,7 +222,7 @@ class EditProfile extends StatelessWidget {
                           ),
                           child: Column(
                             children: [
-                              AdditionalSecurityRequired(),
+                              OTPVerification(),
                               SizedBox(
                                 height: 36,
                               ),

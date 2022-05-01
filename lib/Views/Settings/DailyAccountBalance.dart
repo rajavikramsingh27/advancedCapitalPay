@@ -1,5 +1,5 @@
 
-import 'package:advanced_capital_pay/Views/BalanceSheetComponents.dart';
+import '../../Views/Settings/BalanceSheetCellComponenets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,6 +13,41 @@ import '../../Views/Settings/DailyAccountBalance.dart';
 
 class DailyAccountBalance extends StatelessWidget {
   const DailyAccountBalance({Key? key}) : super(key: key);
+
+  standingOrders() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          padding: EffectStyle.padding(16, 16, 0, 0),
+          child: Text(
+            'Standing Orders',
+            style: TextStyles.textStyles_18
+                .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
+          ),
+        ),
+        ListView.separated(
+          itemCount: 4,
+          shrinkWrap: true,
+          physics: NeverScrollableScrollPhysics(),
+          padding: EffectStyle.padding(16, 16, 16, 16),
+          separatorBuilder: (context, index) {
+            return SizedBox(
+              height: 10,
+            );
+          },
+          itemBuilder: (context, index) {
+            return BalanceSheetCellComponenets(
+              titleOne: 'Savings Account',
+              valueOne: 'Monthly Bill',
+              titleTwo: 'Amount',
+              valueTwo: '\$140.00',
+            );
+          },
+        ),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -76,9 +111,7 @@ class DailyAccountBalance extends StatelessWidget {
                 SizedBox(
                   height: 16,
                 ),
-                BalanceSheetComponents(
-                  title: 'Daily Account Balance',
-                ),
+                standingOrders(),
               ],
             ),
           ),

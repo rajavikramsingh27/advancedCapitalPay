@@ -58,16 +58,11 @@ class CurrentAccount extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              // padding: EdgeInsets.only(left: 10,right: 10),
-                              // color: ColorStyle.secondryBlack,
-                              // height: 233,
+
                               child:   ListView.builder(
                                   padding: EdgeInsets.only(left: 20,right: 20,top: 10,bottom: 20),
                                   shrinkWrap: true,
                                   itemCount: controller.images.length,
-                                  // itemCount: 1,
-                                  // scrollDirection: Axis.horizontal,
-                                  physics: BouncingScrollPhysics(),
                                   itemBuilder: (BuildContext context, int index) {
                                     return Container(
                                       padding: EdgeInsets.only(left: 10,right: 10),
@@ -114,7 +109,6 @@ class CurrentAccount extends StatelessWidget {
                                               ],
                                             ),
                                           ),
-
                                           Column(
                                             crossAxisAlignment: CrossAxisAlignment.end,
                                             children: [
@@ -140,8 +134,6 @@ class CurrentAccount extends StatelessWidget {
 
                                             ],
                                           )
-
-
                                         ],
                                       ),
                                       decoration: BoxDecoration(

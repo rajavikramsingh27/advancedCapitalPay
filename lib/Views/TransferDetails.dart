@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../Components/AppBarStyle.dart';
 import '../Components/BackgroundImage.dart';
+import '../Components/ButtonCustom.dart';
 import '../Components/ComponentsTitleTFRounded.dart';
 import '../Components/CountryPicker.dart';
 import '../Components/DropdownButtonCustom.dart';
@@ -17,14 +18,17 @@ import 'package:dotted_border/dotted_border.dart';
 
 
 class TransferDetails extends StatelessWidget {
-  const TransferDetails({Key? key}) : super(key: key);
+  final Function()? onTapContinue;
+  const TransferDetails({Key? key, this.onTapContinue}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        NewTransferCustom(),
+        NewTransferCustom(
+          padding: EffectStyle.padding(16, 16, 0, 0),
+        ),
         Container(
             margin: EffectStyle.padding(16, 16, 16, 16),
             padding: EffectStyle.padding(0, 0, 16, 0),
@@ -135,6 +139,26 @@ class TransferDetails extends StatelessWidget {
                             ],
                           ),
                         )
+                      ),
+                      SizedBox(height: 20,),
+                      Container(
+                        child: ButtonContinueCancel(
+                          radiusBorder: 40,
+                          textFirst: 'Cancel',
+                          colorBGFirst: Colors.transparent,
+                          colorBorderFirst: ColorStyle.hex('#016ECF'),
+                          textStyleFirst: TextStyles.textStyles_14.apply(
+                            fontWeightDelta: 1,
+                            color: ColorStyle.hex('#016ECF'),
+                          ),
+                          onTapFirst: () {},
+                          textSecond: 'Continue to Summary',
+                          colorBGSecond: ColorStyle.hex('#016ECF'),
+                          colorBorderSecond: Colors.transparent,
+                          textStyleSecond: TextStyles.textStyles_14
+                              .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
+                          onTapSecond: onTapContinue,
+                        ),
                       ),
                     ],
                   ),

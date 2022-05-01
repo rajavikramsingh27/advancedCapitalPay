@@ -27,12 +27,16 @@ import '../Components/InfoIconDescription.dart';
 import '../Components/ComponentsTitleTFRounded.dart';
 import 'package:notification_center/notification_center.dart';
 import '../Views/TransferDetails.dart';
+import '../Views/TransferSummary.dart';
+import '../Views/OTPVerification.dart';
+import '../Components/InfoIconDescription.dart';
+
 
 class NewBeneficiarySummary extends StatelessWidget {
   NewBeneficiarySummary({Key? key}) : super(key: key);
 
   final controller = Get.put(NewBeneficiaryController());
-  
+
   beneficiaryDetails() {
     return Column(
       children: [
@@ -44,7 +48,7 @@ class NewBeneficiarySummary extends StatelessWidget {
           child: InfoIconDescription(
             title: 'New Beneficiary Summary',
             description:
-            'Protect against Fraud, Don’t fall victim to scams. Criminals will pretend to be people in which you trust, companies, government and legal figures See more'
+                'Protect against Fraud, Don’t fall victim to scams. Criminals will pretend to be people in which you trust, companies, government and legal figures See more'
                 '\n\nAdvanceCapitalPay will never ask you to transfer any funds, criminals will pressure you. For more information visit our Fraud and Security Centre',
             textStyle: TextStyles.textStyles_16
                 .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
@@ -485,11 +489,38 @@ class NewBeneficiarySummary extends StatelessWidget {
             ],
           ),
         ),
+        SizedBox(
+          height: 26,
+        ),
+        Container(
+          padding: EffectStyle.padding(16, 16, 0, 0),
+          child: ButtonContinueCancel(
+            radiusBorder: 40,
+            textFirst: 'Cancel',
+            colorBGFirst: Colors.transparent,
+            colorBorderFirst: ColorStyle.hex('#016ECF'),
+            textStyleFirst: TextStyles.textStyles_14.apply(
+              fontWeightDelta: 1,
+              color: ColorStyle.hex('#016ECF'),
+            ),
+            onTapFirst: () {},
+            textSecond: 'Continue',
+            colorBGSecond: ColorStyle.hex('#016ECF'),
+            colorBorderSecond: Colors.transparent,
+            textStyleSecond: TextStyles.textStyles_14
+                .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
+            onTapSecond: () {
+              controller.index.value = controller.index.value + 1;
+              NotificationCenter()
+                  .notify('updateAccount', data: controller.index.value);
+            },
+          ),
+        ),
       ],
     );
   }
 
-  titlePayingAccountList(String title,EdgeInsets padding) {
+  titlePayingAccountList(String title, EdgeInsets padding) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -501,7 +532,7 @@ class NewBeneficiarySummary extends StatelessWidget {
           child: InfoIconDescription(
             title: 'New Beneficiary Summary',
             description:
-            'Protect against Fraud, Don’t fall victim to scams. Criminals will pretend to be people in which you trust, companies, government and legal figures See more'
+                'Protect against Fraud, Don’t fall victim to scams. Criminals will pretend to be people in which you trust, companies, government and legal figures See more'
                 '\n\nAdvanceCapitalPay will never ask you to transfer any funds, criminals will pressure you. For more information visit our Fraud and Security Centre',
             textStyle: TextStyles.textStyles_16
                 .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
@@ -516,12 +547,8 @@ class NewBeneficiarySummary extends StatelessWidget {
           padding: padding,
           child: Text(
             title,
-            style: TextStyles
-                .textStyles_16
-                .apply(
-                fontWeightDelta: 2,
-                color: ColorStyle
-                    .primaryWhite),
+            style: TextStyles.textStyles_16
+                .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
           ),
         ),
         SizedBox(
@@ -529,16 +556,17 @@ class NewBeneficiarySummary extends StatelessWidget {
         ),
         Container(
           height: 220,
-          child:   ListView.separated(
+          child: ListView.separated(
               itemCount: 2,
               scrollDirection: Axis.horizontal,
               padding: padding,
               separatorBuilder: (BuildContext context, int index) {
-                return SizedBox(width: 10,);
+                return SizedBox(
+                  width: 10,
+                );
               },
-              itemBuilder:
-                  (BuildContext context, int index) {
-                return   PayingFromAccount();
+              itemBuilder: (BuildContext context, int index) {
+                return PayingFromAccount();
               }),
         ),
       ],
@@ -550,35 +578,35 @@ class NewBeneficiarySummary extends StatelessWidget {
     return Stack(
       children: [
         BackgroundImageBeneficiary(),
-        Scaffold(
-            backgroundColor: Colors.transparent,
-            appBar: AppBarStyleCustomBenifi(
-              title: Text('FromAccount'),
-              leadingButton: IconButton(
-                icon: Image.asset(
-                  ImageStyle.back_circle,
-                  width: 36,
-                  height: 30,
+        GetBuilder(
+          init: NewBeneficiaryController(),
+          initState: (state) {
+            controller.reset();
+          },
+          builder: (authController) {
+            return Obx(() => Scaffold(
+                backgroundColor: Colors.transparent,
+                appBar: AppBarStyleTitle(
+                  title: controller.titleAppBar.value,
+                  leadingButton: IconButton(
+                    icon: Image.asset(
+                      ImageStyle.back_circle,
+                      width: 36,
+                      height: 30,
+                    ),
+                    onPressed: () {
+                      Get.back();
+                    },
+                  ),
+                  trailingButton: IconButton(
+                    icon: Image.asset(
+                      ImageStyle.chat,
+                      height: 30,
+                    ),
+                    onPressed: () {},
+                  ),
                 ),
-                onPressed: () {
-                  Get.back();
-                },
-              ),
-              trailingButton: IconButton(
-                icon: Image.asset(
-                  ImageStyle.chat,
-                  height: 30,
-                ),
-                onPressed: () {},
-              ),
-            ),
-            body: GetBuilder(
-              init: NewBeneficiaryController(),
-              initState: (state) {
-                controller.reset();
-              },
-              builder: (authController) {
-                return Obx(()=> SingleChildScrollView(
+                body: SingleChildScrollView(
                   padding: EffectStyle.padding(0, 0, 0, 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -606,47 +634,121 @@ class NewBeneficiarySummary extends StatelessWidget {
                       SizedBox(
                         height: 16,
                       ),
-                      if (controller.index.value == 1)
+                      if (controller.index.value == 0)
                         beneficiaryDetails(),
-                      if (controller.index.value == 2)
+                      if (controller.index.value == 1)
                         Column(
                           children: [
-                            titlePayingAccountList( 'Account Selection',EffectStyle.padding(16, 16, 0, 0)),
+                            titlePayingAccountList('Account Selection',
+                                EffectStyle.padding(16, 16, 0, 0)),
+                            SizedBox(
+                              height: 26,
+                            ),
+                            Container(
+                              padding: EffectStyle.padding(16, 16, 0, 0),
+                              child: ButtonContinueCancel(
+                                radiusBorder: 40,
+                                textFirst: 'Cancel',
+                                colorBGFirst: Colors.transparent,
+                                colorBorderFirst: ColorStyle.hex('#016ECF'),
+                                textStyleFirst: TextStyles.textStyles_14.apply(
+                                  fontWeightDelta: 1,
+                                  color: ColorStyle.hex('#016ECF'),
+                                ),
+                                onTapFirst: () {},
+                                textSecond: 'Continue',
+                                colorBGSecond: ColorStyle.hex('#016ECF'),
+                                colorBorderSecond: Colors.transparent,
+                                textStyleSecond: TextStyles.textStyles_14.apply(
+                                    fontWeightDelta: 1,
+                                    color: ColorStyle.primaryWhite),
+                                onTapSecond: () {
+                                  controller.titleAppBar.value = 'New Transfer';
+                                  controller.index.value =
+                                      controller.index.value + 1;
+
+                                  NotificationCenter().notify('updateAccount',
+                                      data: controller.index.value);
+                                },
+                              ),
+                            ),
                           ],
                         ),
+                      if (controller.index.value == 2)
+                        TransferDetails(
+                          onTapContinue: () {
+                            controller.titleAppBar.value = 'Transfer Summary';
+
+                            controller.index.value = controller.index.value + 1;
+                            NotificationCenter().notify('updateAccount',
+                                data: controller.index.value);
+                          },
+                        ),
                       if (controller.index.value == 3)
-                      TransferDetails(),
+                        TransferSummary(
+                          margin: EffectStyle.padding(16, 16, 0, 0),
+                        ),
+                      if (controller.index.value == 3)
                       SizedBox(
                         height: 20,
                       ),
+                      if (controller.index.value == 3)
                       Container(
-                        padding: EffectStyle.padding(16, 16, 0, 0),
-                        child: ButtonContinueCancel(
-                          radiusBorder: 40,
-                          textFirst: 'Cancel',
-                          colorBGFirst: Colors.transparent,
-                          colorBorderFirst: ColorStyle.hex('#016ECF'),
-                          textStyleFirst: TextStyles.textStyles_14.apply(
-                            fontWeightDelta: 1,
-                            color: ColorStyle.hex('#016ECF'),
-                          ),
-                          onTapFirst: () {},
-                          textSecond: 'Continue',
-                          colorBGSecond: ColorStyle.hex('#016ECF'),
-                          colorBorderSecond: Colors.transparent,
-                          textStyleSecond: TextStyles.textStyles_14
-                              .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
-                          onTapSecond: () {
-                            controller.index.value = controller.index.value + 1;
-                            NotificationCenter().notify('updateAccount', data: controller.index.value);
-                          },
+                        padding: EffectStyle.padding(16, 16, 16, 20),
+                        margin: EffectStyle.padding(16, 16, 0, 0),
+                        decoration: BoxDecoration(
+                          color: ColorStyle.primaryWhite,
+                          borderRadius: EffectStyle.radiusCustom(10)
+                        ),
+                        child: Column(
+                          children: [
+                            OTPVerification(),
+                            InfoIconDescription(
+                              padding: EffectStyle.padding(0, 0, 16, 0),
+                              description: 'By continuing with the transfer you acknowledge and confirm the applicable terms and conditions including waiting time for newly added beneficiary which may apply.',
+                              descriptionStyle: TextStyles.textStyles_12
+                                  .apply(fontWeightDelta: 1, color: ColorStyle.secondryBlack),
+                            ),
+                            InfoIconDescription(
+                              padding: EffectStyle.padding(0, 0, 16, 0),
+                              description: 'Please note that international transfer will be processed on international business days (Monday-Friday)',
+                              descriptionStyle: TextStyles.textStyles_12
+                                  .apply(fontWeightDelta: 1, color: ColorStyle.secondryBlack),
+                            ),
+                            InfoIconDescription(
+                              padding: EffectStyle.padding(0, 0, 16, 0),
+                              description: 'Transfers which fall on a holiday, may be processed on the next working business day.',
+                              descriptionStyle: TextStyles.textStyles_12
+                                  .apply(fontWeightDelta: 1, color: ColorStyle.secondryBlack),
+                            ),
+                            SizedBox(height: 20),
+                            ButtonContinueCancel(
+                              radiusBorder: 40,
+                              textFirst: 'Cancel',
+                              colorBGFirst: Colors.transparent,
+                              colorBorderFirst: ColorStyle.hex('#016ECF'),
+                              textStyleFirst: TextStyles.textStyles_14.apply(
+                                fontWeightDelta: 1,
+                                color: ColorStyle.hex('#016ECF'),
+                              ),
+                              onTapFirst: () {},
+                              textSecond: 'Gernerate OTP',
+                              colorBGSecond: ColorStyle.hex('#016ECF'),
+                              colorBorderSecond: Colors.transparent,
+                              textStyleSecond: TextStyles.textStyles_14
+                                  .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
+                              onTapSecond: () {
+
+                              },
+                            )
+                          ],
                         ),
                       ),
                     ],
                   ),
-                ));
-              },
-            ))
+                )));
+          },
+        )
       ],
     );
   }
