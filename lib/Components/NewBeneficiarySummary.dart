@@ -20,7 +20,13 @@ class NewBeneficiarySummary extends StatelessWidget {
           Row(
             children: [
               // Image.asset(ImageStyle.icon_material_error),
-              Icon(Icons.error,size: 50,color: ColorStyle.blueSKY,),
+              SizedBox(width: 10,),
+              Column(
+                children: [
+                  Icon(Icons.error,size: 40,color: ColorStyle.blueSKY,),
+                  SizedBox(height: 90,),
+                ],
+              ),
               SizedBox(width: 10,),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -116,6 +122,156 @@ class NewBeneficiarySummary extends StatelessWidget {
     );
   }
 }
+class NewBeneficiarySummarys extends StatelessWidget {
+  const NewBeneficiarySummarys({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return  Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(height: 20,),
+        Row(
+          children: [
+            // Image.asset(ImageStyle.icon_material_error),
+            Column(
+              children: [
+                Icon(Icons.error,size: 40,color: ColorStyle.blueSKY,),
+                SizedBox(height: 140,),
+              ],
+            ),
+            SizedBox(width: 30,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+
+                Text(
+                  'We aim to provide a response within ',
+
+
+
+                  style: TextStyles.textStyles_12.apply(
+                      color: ColorStyle.secondryBlack,
+                      fontWeightDelta: 2
+                  ),
+                ),
+                Text(
+
+                  '24 hours if your matter is urgent ',
+
+
+
+                  style: TextStyles.textStyles_12.apply(
+                      color: ColorStyle.secondryBlack,
+                      fontWeightDelta: 2
+                  ),
+                ),
+                Text(
+
+                  'please send us a message via the ',
+
+
+
+                  style: TextStyles.textStyles_12.apply(
+                      color: ColorStyle.secondryBlack,
+                      fontWeightDelta: 2
+                  ),
+                ),
+                Text(
+
+                  'Live Support Chat. You can provide ',
+
+
+
+                  style: TextStyles.textStyles_12.apply(
+                      color: ColorStyle.secondryBlack,
+                      fontWeightDelta: 2
+                  ),
+                ),
+                Text(
+
+                  'as much detail as possible including ',
+
+
+
+                  style: TextStyles.textStyles_12.apply(
+                      color: ColorStyle.secondryBlack,
+                      fontWeightDelta: 2
+                  ),
+                ),
+                Text(
+
+                  'any screenshots or attachments which ',
+
+
+                  style: TextStyles.textStyles_12.apply(
+                      color: ColorStyle.secondryBlack,
+                      fontWeightDelta: 2
+                  ),
+                ),
+                Text(
+
+                  'you may have. Information provided ',
+
+
+
+                  style: TextStyles.textStyles_12.apply(
+                      color: ColorStyle.secondryBlack,
+                      fontWeightDelta: 2
+                  ),
+                ),
+                Text(
+
+                  'within the messages center is directly ',
+
+
+                  style: TextStyles.textStyles_12.apply(
+                      color: ColorStyle.secondryBlack,
+                      fontWeightDelta: 2
+                  ),
+                ),
+                Text(
+
+                  'sent to our Customer Support ',
+
+
+
+                  style: TextStyles.textStyles_12.apply(
+                      color: ColorStyle.secondryBlack,
+                      fontWeightDelta: 2
+                  ),
+                ),
+                Text(
+
+
+                  'Representatives.',
+
+
+                  style: TextStyles.textStyles_12.apply(
+                      color: ColorStyle.secondryBlack,
+                      fontWeightDelta: 2
+                  ),
+                ),
+              ],
+            )
+          ],
+        ),
+        SizedBox(height: 40,),
+
+
+
+
+
+
+
+
+
+
+      ],
+    );
+  }
+}
+
 
 
 
