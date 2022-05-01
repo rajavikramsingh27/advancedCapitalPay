@@ -150,6 +150,7 @@ class _FourOptionSeriesState extends State<FourOptionSeries> {
                       ),
                     ],
                   )),
+              if (widget.arrTitles!.length > 3)
               Container(
                   child: Column(
                     children: [

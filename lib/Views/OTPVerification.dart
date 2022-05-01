@@ -25,7 +25,7 @@ class OTPVerification extends StatelessWidget {
         ),
         Text(
           title,
-          style: TextStyles.textStyles_15.apply(
+          style: TextStyles.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 2,
           ),
@@ -67,7 +67,7 @@ class OTPVerification extends StatelessWidget {
         ),
         Text(
           'ACP',
-          style: TextStyles.textStyles_15.apply(
+          style: TextStyles.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 2,
           ),

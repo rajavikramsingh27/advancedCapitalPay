@@ -19,6 +19,7 @@ import '../../Styles/EffectStyle.dart';
 import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../Views/Settings/BalanceSheetCellComponenets.dart';
+import '../Views/NewStandingOrder.dart';
 
 class StandingOrders extends StatelessWidget {
   StandingOrders({Key? key}) : super(key: key);
@@ -200,7 +201,7 @@ class StandingOrders extends StatelessWidget {
                       width: MediaQuery.of(context).size.width-32,
                       radiusBorder: 50,
                       onTap: () {
-                        // Get.to(());
+                        Get.to(NewStandingOrder());
                       },
                     ),
                   ],

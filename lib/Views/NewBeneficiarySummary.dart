@@ -313,7 +313,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                         ),
                         Text(
                           'Account Number',
-                          style: TextStyles.textStyles_15.apply(
+                          style: TextStyles.textStyles_14.apply(
                             color: ColorStyle.secondryBlack,
                             fontWeightDelta: 2,
                           ),
@@ -329,12 +329,12 @@ class NewBeneficiarySummary extends StatelessWidget {
                           ),
                           hint: Text(
                             'Employed',
-                            style: TextStyles.textStyles_15.apply(
+                            style: TextStyles.textStyles_14.apply(
                               color: ColorStyle.grey,
                               fontWeightDelta: 2,
                             ),
                           ),
-                          textStyle: TextStyles.textStyles_15.apply(
+                          textStyle: TextStyles.textStyles_14.apply(
                             color: ColorStyle.secondryBlack,
                             fontWeightDelta: 2,
                           ),
@@ -475,7 +475,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                     TextFieldCustom(
                       colorBoder: ColorStyle.secondryBlack,
                       hintText: 'Concert Tickets',
-                      textStyle: TextStyles.textStyles_15.apply(
+                      textStyle: TextStyles.textStyles_14.apply(
                         fontWeightDelta: 2,
                       ),
                       radiusBorder: 30,

@@ -15,7 +15,7 @@ import '../Components/SearchBarCustom.dart';
 import '../Views/TransactionDetails.dart';
 import '../Views/SavingGoal.dart';
 import '../Views/AccountDetails.dart';
-import '../Views/CurrencyExchangePage.dart';
+import '../Views/Exchange.dart';
 import '../Views/BeneficiaryInternational.dart';
 
 
@@ -358,7 +358,7 @@ class MainDashboard extends StatelessWidget {
                                       ),
                                     ),
                                     onTap: () {
-                                      Get.to(CurrencyExchangePage());
+                                      Get.to(Exchange());
                                     },
                                   ),
                                 ),

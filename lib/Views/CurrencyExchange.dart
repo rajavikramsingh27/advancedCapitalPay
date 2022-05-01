@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../Components/AppBarStyle.dart';
 import '../Components/BackgroundImage.dart';
 import '../Components/ButtonCustom.dart';
+import '../Components/ComponentsTitleTFRounded.dart';
 import '../Components/CountryPicker.dart';
 import '../Components/DropdownButtonCustom.dart';
 import '../Components/NewTransfers.dart';
@@ -18,36 +19,6 @@ import '../Views/SummaryTransferTop.dart';
 class CurrencyExchange extends StatelessWidget {
   const CurrencyExchange({Key? key}) : super(key: key);
 
-  separatorLine() {
-    return Container(
-      height: 1,
-      color: ColorStyle.grey,
-    );
-  }
-
-  separtorSpace() {
-    return SizedBox(height: 20);
-  }
-
-  titleDesc(String title, String desc) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          title,
-          style: TextStyles.textStyles_9.apply(
-              color: ColorStyle.grey, fontWeightDelta: 1),
-        ),
-        Text(
-          desc,
-          style: TextStyles.textStyles_10.apply(
-              color: ColorStyle.primaryWhite,
-              fontWeightDelta: 2),
-        ),
-      ],
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -58,8 +29,10 @@ class CurrencyExchange extends StatelessWidget {
             appBar: AppBarStyleCustomBenifi(
               title: Text(
                 'Successful Currency Exchange',
-                style: TextStyles.textStyles_14
-                    .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 2),
+                maxLines: 2,
+                textAlign: TextAlign.center,
+                style: TextStyles.textStyles_16
+                    .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
               ),
               leadingButton: IconButton(
                 icon: Image.asset(
@@ -90,9 +63,9 @@ class CurrencyExchange extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        separtorSpace(),
+                        ComponentsTitleInputs.separtorSpace(),
                         SummaryTransferTop(),
-                        separtorSpace(),
+                        ComponentsTitleInputs.separtorSpace(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -121,7 +94,7 @@ class CurrencyExchange extends StatelessWidget {
                             ),
                           ],
                         ),
-                        separtorSpace(),
+                        ComponentsTitleInputs.separtorSpace(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -168,22 +141,22 @@ class CurrencyExchange extends StatelessWidget {
                           ],
                         ),
                         SizedBox(height: 10),
-                        separatorLine(),
-                        separtorSpace(),
-                        titleDesc(
+                        ComponentsTitleInputs.separatorLine(),
+                        ComponentsTitleInputs.separtorSpace(),
+                        ComponentsTitleInputs.titleDesc(
                           'Conversion Fee',
                           '10.00 USD'
                         ),
-                        separtorSpace(),
-                        separatorLine(),
-                        separtorSpace(),
-                        titleDesc(
+                        ComponentsTitleInputs.separtorSpace(),
+                        ComponentsTitleInputs.separatorLine(),
+                        ComponentsTitleInputs.separtorSpace(),
+                        ComponentsTitleInputs.titleDesc(
                             'Exchange Reference',
                             '20200507ACP39483MKS24'
                         ),
-                        separtorSpace(),
-                        separatorLine(),
-                        separtorSpace(),
+                        ComponentsTitleInputs.separtorSpace(),
+                        ComponentsTitleInputs.separatorLine(),
+                        ComponentsTitleInputs.separtorSpace(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

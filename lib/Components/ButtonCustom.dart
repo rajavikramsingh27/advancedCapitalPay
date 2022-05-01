@@ -476,6 +476,7 @@ class ButtonContinueCancel extends StatelessWidget {
   final Function()? onTapSecond;
 
   final double radiusBorder;
+  final double height;
 
   const ButtonContinueCancel({
     Key? key,
@@ -490,6 +491,7 @@ class ButtonContinueCancel extends StatelessWidget {
     this.radiusBorder = 40,
     this.textStyleSecond = const TextStyle(color: Colors.orange),
     this.onTapSecond,
+    this.height = 50,
   }) : super(key: key);
 
   @override
@@ -501,6 +503,7 @@ class ButtonContinueCancel extends StatelessWidget {
           colorBG: colorBGFirst,
           textStyle: textStyleFirst,
           colorBorder: colorBorderFirst,
+          height: height,
           text: textFirst,
           radiusBorder: radiusBorder,
           onTap: onTapFirst,
@@ -514,6 +517,7 @@ class ButtonContinueCancel extends StatelessWidget {
               textStyle: textStyleSecond,
               colorBorder: colorBorderSecond,
               text: textSecond,
+              height: height,
               radiusBorder: radiusBorder,
               onTap: onTapSecond,
         )),

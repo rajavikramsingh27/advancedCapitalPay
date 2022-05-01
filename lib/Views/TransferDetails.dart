@@ -42,7 +42,7 @@ class TransferDetails extends StatelessWidget {
                 Container(
                   child: Text(
                     'Transfer Details',
-                    style: TextStyles.textStyles_15.apply(
+                    style: TextStyles.textStyles_14.apply(
                       color: ColorStyle.primaryWhite,
                       fontWeightDelta: 2,
                     ),

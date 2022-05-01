@@ -16,8 +16,9 @@ import '../Components/TextFieldCustom.dart';
 import 'ForgotPassword/ForgotPassword.dart';
 import 'SignUp/PersonalApplication1.dart';
 import '../Views/NewBeneficiarySummary.dart';
-import '../Views/AccountTransferSummary.dart';
+import '../Views/TransferBetweenAccount.dart';
 import '../Views/StandingOrders.dart';
+import '../Views/PersonalAccount.dart';
 
 
 class BeneficiaryInternational extends StatelessWidget {
@@ -369,7 +370,7 @@ class BeneficiaryInternational extends StatelessWidget {
                                           ),
                                         ),
                                         onTap: () {
-                                          Get.to(AccountTransferSummary());
+                                          Get.to(TransferBetweenAccount());
                                         },
                                       )),
                                       SizedBox(width: 8,),
@@ -415,7 +416,9 @@ class BeneficiaryInternational extends StatelessWidget {
                                           ),
                                           padding: EffectStyle.padding(6, 6, 0, 0),
                                         ),
-                                        onTap: () {},
+                                        onTap: () {
+                                          Get.to(PersonalAccount());
+                                        },
                                       )),
                                       SizedBox(width: 8,),
                                       Expanded(child: InkWell(

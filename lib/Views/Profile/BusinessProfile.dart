@@ -21,7 +21,7 @@ class BusinessProfile extends StatelessWidget {
           padding: EffectStyle.padding(16, 16, 16, 16),
           child: Text(
             'Business Information',
-            style: TextStyles.textStyles_15.apply(
+            style: TextStyles.textStyles_14.apply(
               color: ColorStyle.primaryWhite,
               fontWeightDelta: 2,
             ),
@@ -51,7 +51,7 @@ class BusinessProfile extends StatelessWidget {
           padding: EffectStyle.padding(16, 16, 16, 16),
           child: Text(
             'Beneficiary Contact Details',
-            style: TextStyles.textStyles_15.apply(
+            style: TextStyles.textStyles_14.apply(
               color: ColorStyle.primaryWhite,
               fontWeightDelta: 2,
             ),
@@ -85,7 +85,7 @@ class BusinessProfile extends StatelessWidget {
             children: [
               Text(
                 'Registered Business Address',
-                style: TextStyles.textStyles_15.apply(
+                style: TextStyles.textStyles_14.apply(
                   color: ColorStyle.primaryWhite,
                   fontWeightDelta: 2,
                 ),
@@ -157,7 +157,7 @@ class BusinessProfile extends StatelessWidget {
               Expanded(
                 child: Text(
                   'Registered Correspondence Address',
-                  style: TextStyles.textStyles_15.apply(
+                  style: TextStyles.textStyles_14.apply(
                     color: ColorStyle.primaryWhite,
                     fontWeightDelta: 2,
                   ),
@@ -227,7 +227,7 @@ class BusinessProfile extends StatelessWidget {
             children: [
               Text(
                 'Additional Information',
-                style: TextStyles.textStyles_15.apply(
+                style: TextStyles.textStyles_14.apply(
                   color: ColorStyle.primaryWhite,
                   fontWeightDelta: 2,
                 ),

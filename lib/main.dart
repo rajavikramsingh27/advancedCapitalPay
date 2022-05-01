@@ -6,7 +6,9 @@ import '../Views/SplashScreen.dart';
 import '../Views/TabbarScreen.dart';
 import '../Views/CurrencyExchange.dart';
 import '../Views/TransferSummary.dart';
-import '../Views/AccountTransferSummary.dart';
+import '../Views/Exchange.dart';
+
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,11 +30,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: TabbarScreen(),
-      // home: Material(
-      //   child: TransferSummary(),
-      // ),
+        home: SplashScreen(),
+        // home: Exchange(),
+        // home: TabbarScreen(),
       // home: AccountTransferSummary(),
+      // home: Material(
+      //   child: TransferBetween(),
+      // ),
     );
   }
 }

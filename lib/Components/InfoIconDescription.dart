@@ -30,6 +30,9 @@ class InfoIconDescription extends StatelessWidget {
           title!,
           style: textStyle,
         ),
+        SizedBox(
+          height: 16,
+        ),
         Container(
             padding: padding,
             decoration: BoxDecoration(
