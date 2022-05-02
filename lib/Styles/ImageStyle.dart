@@ -229,7 +229,33 @@ class ImageStyle {
   static const String BankIcon = "$baseImage/BankIcon.png";
   static const String Group2220 = "$baseImage/Group2220.png";
   static const String card2 = "$baseImage/card_2.png";
+
   static const String fileUpload = "$baseImage/fileUpload.png";
   static const String JPFFileUpload = "$baseImage/JPFFileUpload.png";
-}
 
+  static const String applelogo = "$baseImage/apple-logo.png";
+  static const String wifit_tawer = "$baseImage/wifit_tawer.png";
+  static const String settings_sliders = "$baseImage/settings_sliders.png";
+  static const String chartss = "$baseImage/chartss.png";
+  static const String charttts = "$baseImage/charttts.png";
+  static const String chartdd = "$baseImage/chartdd.png";
+  static const String chart = "$baseImage/chart.png";
+  static const String NFT = "$baseImage/NFT.png";
+  static const String markets = "$baseImage/markets.png";
+  static const String chartErn = "$baseImage/chartErn.png";
+  static const String charts = "$baseImage/charts.png";
+  static const String ethereum2 = "$baseImage/ethereum2.png";
+  static const String Group92222 = "$baseImage/Group92222.png";
+  static const String light2 = "$baseImage/light2.png";
+  static const String solanasollogo = "$baseImage/solana-sol-logo.png";
+  static const String cardanoadalogo = "$baseImage/cardano-ada-logo.png";
+  static const String binancecoinbnblogo = "$baseImage/binance-coin-bnb-logo.png";
+  static const String fire = "$baseImage/fire.png";
+  static const String dogecoindogelogo = "$baseImage/dogecoin-doge-logo.png";
+  static const String vechainvetlogo = "$baseImage/vechain-vet-logo.png";
+  static const String ravencoinrvnlogo = "$baseImage/ravencoin-rvn-logo.png";
+  static const String balancerbal = "$baseImage/balancerbal.png";
+  static const String PlotX = "$baseImage/PlotX.png";
+  static const String elamachain = "$baseImage/Elamachain.png";
+  static const String YMTKEDALYRCAFE2BT2SVQCS6ZI = "$baseImage/YMTKEDALYRCAFE2BT2SVQCS6ZI.png";
+}

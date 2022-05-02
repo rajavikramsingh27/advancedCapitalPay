@@ -6,10 +6,6 @@ import '../Styles/ImageStyle.dart';
 class CurrentAccountController extends GetxController {
   RxList<String> images = <String>[
     ImageStyle.Card,
-
-
-
-
   ].obs;
 
   RxList<String> chooseSaving = [

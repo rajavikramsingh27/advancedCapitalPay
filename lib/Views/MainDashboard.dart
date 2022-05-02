@@ -17,6 +17,7 @@ import '../Views/SavingGoal.dart';
 import '../Views/AccountDetails.dart';
 import '../Views/Exchange.dart';
 import '../Views/BeneficiaryInternational.dart';
+import '../Components/ChatWithUs.dart';
 
 
 class MainDashboard extends StatelessWidget {
@@ -105,7 +106,7 @@ class MainDashboard extends StatelessWidget {
                   height: 26,
                 ),
                 onPressed: () {
-                  // Get.to(MessagePage());
+                  ChatWithUs.chatWithUs();
                 },
               ),
               IconButton(
@@ -120,7 +121,6 @@ class MainDashboard extends StatelessWidget {
               ),
             ],
           ),
-          // AppBarStyle(),
           backgroundColor: Colors.transparent,
           body: GetBuilder(
             init: MainDashboardController(),
@@ -130,7 +130,6 @@ class MainDashboard extends StatelessWidget {
             builder: (authController) {
               return Obx(
                     () => SingleChildScrollView(
-                  // padding: EffectStyle.padding(16, 16, 0, 0),
                   child: Column(
                     children: [
                       swiperView(),
