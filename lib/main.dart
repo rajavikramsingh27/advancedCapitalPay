@@ -1,3 +1,7 @@
+
+import 'package:advanced_capital_pay/Views/CryptoTransactionList.dart';
+import 'package:advanced_capital_pay/Views/YourCard.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
@@ -30,14 +34,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: SplashScreen(),
+
+      home: SplashScreen(),
       // home: Exchange(),
-      home: TabbarScreen(),
+      // home: TabbarScreen(),
       // home: ApplePay(),
       // home: Material(
       //   color: ColorStyle.darkestBlueSignUp,
       //   child: SearchByBankSwift(),
       // ),
+
+      // home: CryptoTransactionList(),
+      // home: TabbarScreen(),
+      // home: AppSettings(),
+      // home: TabbarScreen(),
+
       // home: AppSettings(),
       //   home: SuccessfulCurrencyExchange()
 

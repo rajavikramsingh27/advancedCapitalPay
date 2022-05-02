@@ -10,6 +10,9 @@ import '../Components/ButtonCustom.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
+import '../Views/CryptoTransactionList.dart';
+
+
 
 class CryptoDashboard extends StatelessWidget {
   const CryptoDashboard({Key? key}) : super(key: key);
@@ -306,111 +309,116 @@ class CryptoDashboard extends StatelessWidget {
                         return SizedBox(height: 10,);
                         },
                         itemBuilder: (BuildContext context, int index) {
-                          return Container(
-                            decoration: BoxDecoration(
-                              color: ColorStyle.blueLight
-                                  .withOpacity(.1),
-                              borderRadius:
-                              BorderRadius.circular(4),
-                            ),
-                            padding: EdgeInsets.only(left: 16, right: 16, top: 6, bottom: 6),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Row(
-                                  crossAxisAlignment:
-                                  CrossAxisAlignment
-                                      .center,
-                                  children: [
-                                    Image.asset(
-                                      controller.images[index],
-                                      height: 38,
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Column(
-                                      crossAxisAlignment:
-                                      CrossAxisAlignment
-                                          .start,
-                                      children: [
-                                        Text(
-                                          controller.chooseSaving[
-                                          index],
-                                          style: TextStylesSFCompactDisplay
-                                              .textStyles_14
-                                              .apply(
-                                              color: ColorStyle
-                                                  .primaryWhite,
-                                              fontWeightDelta:
-                                              1),
-                                        ),
-                                        Text(
-                                          // 'Spare change',
-                                          controller
-                                              .chooseSaving1[
-                                          index],
-                                          style: TextStylesSFCompactDisplay
-                                              .textStyles_14
-                                              .apply(
-                                              color: ColorStyle
-                                                  .primaryWhite,
-                                              fontWeightDelta:
-                                              1),
-                                        ),
-                                        Text(
-                                          // 'Spare change',
-                                          controller
-                                              .chooseSaving2[
-                                          index],
-                                          style: TextStylesSFCompactDisplay
-                                              .textStyles_12
-                                              .apply(
-                                              color: Colors.red,
-                                              fontWeightDelta:
-                                              1),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                Expanded(child: Container(
-                                  child: Image.asset(
-                                    ImageStyle.light2,
-                                    // height: 38,
+                          return InkWell(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: ColorStyle.blueLight
+                                    .withOpacity(.1),
+                                borderRadius:
+                                BorderRadius.circular(4),
+                              ),
+                              padding: EdgeInsets.only(left: 16, right: 16, top: 6, bottom: 6),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment
+                                        .center,
+                                    children: [
+                                      Image.asset(
+                                        controller.images[index],
+                                        height: 38,
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Column(
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment
+                                            .start,
+                                        children: [
+                                          Text(
+                                            controller.chooseSaving[
+                                            index],
+                                            style: TextStylesSFCompactDisplay
+                                                .textStyles_14
+                                                .apply(
+                                                color: ColorStyle
+                                                    .primaryWhite,
+                                                fontWeightDelta:
+                                                1),
+                                          ),
+                                          Text(
+                                            // 'Spare change',
+                                            controller
+                                                .chooseSaving1[
+                                            index],
+                                            style: TextStylesSFCompactDisplay
+                                                .textStyles_14
+                                                .apply(
+                                                color: ColorStyle
+                                                    .primaryWhite,
+                                                fontWeightDelta:
+                                                1),
+                                          ),
+                                          Text(
+                                            // 'Spare change',
+                                            controller
+                                                .chooseSaving2[
+                                            index],
+                                            style: TextStylesSFCompactDisplay
+                                                .textStyles_12
+                                                .apply(
+                                                color: Colors.red,
+                                                fontWeightDelta:
+                                                1),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
                                   ),
-                                  padding: EffectStyle.padding(8, 8, 0, 0),
-                                )),
-                                Column(
-                                  crossAxisAlignment:
-                                  CrossAxisAlignment.end,
-                                  children: [
-                                    Text(
-                                      controller
-                                          .chooseSaving3[index],
-                                      style: TextStylesSFCompactDisplay
-                                          .textStyles_14
-                                          .apply(
-                                          color: ColorStyle
-                                              .primaryWhite,
-                                          fontWeightDelta:
-                                          1),
+                                  Expanded(child: Container(
+                                    child: Image.asset(
+                                      ImageStyle.light2,
+                                      // height: 38,
                                     ),
-                                    Text(
-                                      controller
-                                          .chooseSaving4[index],
-                                      style: TextStylesSFCompactDisplay
-                                          .textStyles_10
-                                          .apply(
-                                          color: ColorStyle
-                                              .primaryWhite,
-                                          fontWeightDelta: 0),
-                                    ),
-                                  ],
-                                )
-                              ],
+                                    padding: EffectStyle.padding(8, 8, 0, 0),
+                                  )),
+                                  Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.end,
+                                    children: [
+                                      Text(
+                                        controller
+                                            .chooseSaving3[index],
+                                        style: TextStylesSFCompactDisplay
+                                            .textStyles_14
+                                            .apply(
+                                            color: ColorStyle
+                                                .primaryWhite,
+                                            fontWeightDelta:
+                                            1),
+                                      ),
+                                      Text(
+                                        controller
+                                            .chooseSaving4[index],
+                                        style: TextStylesSFCompactDisplay
+                                            .textStyles_10
+                                            .apply(
+                                            color: ColorStyle
+                                                .primaryWhite,
+                                            fontWeightDelta: 0),
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
                             ),
+                            onTap: () {
+                              Get.to(CryptoTransactionList());
+                            },
                           );
                         }),
 
@@ -805,15 +813,16 @@ class CryptoDashboard extends StatelessWidget {
                                         crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                         children: [
-                                          ClipRRect(
-                                            child: Image.asset(
-                                              ImageStyle
-                                                  .YMTKEDALYRCAFE2BT2SVQCS6ZI,
-                                              height: 180,
-                                              fit: BoxFit.fitHeight,
-                                            ),
-                                            borderRadius: EffectStyle.radiusCustom(8),
-                                          ),
+                                          // ClipRRect(
+                                          //   child: Image.asset(
+                                          //     ImageStyle.bgTransactionListCripto,
+                                          //     // ImageStyle
+                                          //     //     .YMTKEDALYRCAFE2BT2SVQCS6ZI,
+                                          //     height: 180,
+                                          //     fit: BoxFit.fitHeight,
+                                          //   ),
+                                          //   borderRadius: EffectStyle.radiusCustom(8),
+                                          // ),
                                           SizedBox(
                                             height: 10,
                                           ),

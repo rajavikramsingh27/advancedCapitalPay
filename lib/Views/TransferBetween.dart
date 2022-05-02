@@ -33,7 +33,7 @@ class TransferBetween extends StatelessWidget {
                 ),
                 onPressed: () {},
               ),
-              trailingButton: IconButton(
+              trailingButton: [IconButton(
                 icon: Image.asset(
                   ImageStyle.chat,
                   height: 30,
@@ -41,7 +41,7 @@ class TransferBetween extends StatelessWidget {
                 onPressed: () {
                   filter();
                 },
-              ),
+              )],
             ),
             backgroundColor: Colors.transparent,
             body:SingleChildScrollView(
