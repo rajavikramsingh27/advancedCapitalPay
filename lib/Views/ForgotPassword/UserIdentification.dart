@@ -26,7 +26,7 @@ class UserIdentification extends StatelessWidget {
           children: [
             Text(
               title,
-              style: TextStyles.textStyles_16.apply(
+              style: TextStylesPoppins.textStyles_16.apply(
                 color: ColorStyle.secondryBlack,
                 fontWeightDelta: 1,
               ),
@@ -34,7 +34,7 @@ class UserIdentification extends StatelessWidget {
             if (isRequired)
               Text(
                 '*',
-                style: TextStyles.textStyles_16.apply(
+                style: TextStylesPoppins.textStyles_16.apply(
                   color: Colors.red,
                   fontWeightDelta: 11,
                 ),
@@ -52,7 +52,7 @@ class UserIdentification extends StatelessWidget {
           ),
           colorFill: ColorStyle.primaryWhite,
           colorBoder: ColorStyle.secondryBlack,
-          textStyle: TextStyles.textStyles_14,
+          textStyle: TextStylesPoppins.textStyles_14,
           radiusBorder: 30,
         ),
       ],
@@ -68,7 +68,7 @@ class UserIdentification extends StatelessWidget {
         ),
         Text(
           title,
-          style: TextStyles.textStyles_16.apply(
+          style: TextStylesPoppins.textStyles_16.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 1,
           ),
@@ -78,7 +78,7 @@ class UserIdentification extends StatelessWidget {
         ),
         Text(
           desc,
-          style: TextStyles.textStyles_12.apply(
+          style: TextStylesPoppins.textStyles_12.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 1,
           ),
@@ -99,7 +99,7 @@ class UserIdentification extends StatelessWidget {
           ),
           Text(
             'User Identification',
-            style: TextStyles.textStyles_20.apply(
+            style: TextStylesPoppins.textStyles_20.apply(
               color: ColorStyle.primaryWhite,
               fontWeightDelta: 1,
             ),
@@ -132,7 +132,7 @@ class UserIdentification extends StatelessWidget {
                         controller.isUserIdentification.value
                             ? 'Please enter the One time passcode (OTP) which has been sent to your registered number in order to continue. '
                             : 'Please provide your User Identification/E-Mail Address associated with your account to proceed.',
-                        style: TextStyles.textStyles_12.apply(
+                        style: TextStylesPoppins.textStyles_12.apply(
                           color: ColorStyle.darkestBlue,
                           fontWeightDelta: 1,
                         ),
@@ -166,7 +166,7 @@ class UserIdentification extends StatelessWidget {
                           Expanded(
                               child: ElevatedButtonCustom(
                                 colorBG: ColorStyle.primaryWhite,
-                                textStyle: TextStyles.textStyles_14
+                                textStyle: TextStylesPoppins.textStyles_14
                                     .apply(color: ColorStyle.blueSKY, fontWeightDelta: 1),
                                 colorBorder: ColorStyle.blueSKY,
                                 text: 'Cancel',
@@ -181,7 +181,7 @@ class UserIdentification extends StatelessWidget {
                                 colorBG: ColorStyle.blueSKY,
                                 text: 'Generate OTP Code',
                                 radiusBorder: 30,
-                                textStyle: TextStyles.textStyles_14.apply(
+                                textStyle: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                                 onTap: () {
                                   controller.arrSelectOptionIcons[2] = true;

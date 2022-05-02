@@ -48,7 +48,7 @@ class ForgotPassword extends StatelessWidget {
                       SizedBox(width: 6),
                       Text(
                         title,
-                        style: TextStyles.textStyles_14.apply(
+                        style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.secondryBlack,
                           fontWeightDelta: 1,
                         ),
@@ -108,7 +108,7 @@ class ForgotPassword extends StatelessWidget {
                   padding: EffectStyle.padding(30, 0, 0, 0),
                   child: Text(
                     'Account Recovery Details',
-                    style: TextStyles.textStyles_20.apply(
+                    style: TextStylesPoppins.textStyles_20.apply(
                       color: ColorStyle.primaryWhite,
                       fontWeightDelta: 1,
                     ),
@@ -122,7 +122,7 @@ class ForgotPassword extends StatelessWidget {
                       AutoSizeText(
                         'Select from one of the options below to recovery',
                         maxLines: 2,
-                        style: TextStyles.autoSizeText.apply(
+                        style: TextStylesPoppins.autoSizeText.apply(
                           color: ColorStyle.primaryWhite,
                         ),
                       ),
@@ -142,7 +142,7 @@ class ForgotPassword extends StatelessWidget {
                       AutoSizeText(
                         'If you have already completed your registration. Please click on Login Now below.',
                         maxLines: 2,
-                        style: TextStyles.autoSizeText.apply(
+                        style: TextStylesPoppins.autoSizeText.apply(
                           color: ColorStyle.primaryWhite,
                         ),
                       ),

@@ -24,7 +24,7 @@ class SearchByBankSwift extends StatelessWidget {
           padding: EffectStyle.padding(16, 16, 16, 16),
           child: Text(
             'Beneficial Bank Details',
-            style: TextStyles.textStyles_18.apply(
+            style: TextStylesPoppins.textStyles_18.apply(
                 color: ColorStyle.primaryWhite, fontWeightDelta: 2),
           ),
         ),
@@ -52,7 +52,7 @@ class SearchByBankSwift extends StatelessWidget {
                   SizedBox(width: 10,),
                   Expanded(child: Text(
                     'Find Bank Details From a SWIFTcode',
-                    style: TextStyles.textStyles_16.apply(
+                    style: TextStylesPoppins.textStyles_16.apply(
                         color: ColorStyle.secondryBlack, fontWeightDelta: 2),
                   ),),
                 ],
@@ -60,14 +60,14 @@ class SearchByBankSwift extends StatelessWidget {
               SizedBox(height: 6,),
               Text(
                 'Enter the SWIFT/Bic code below to see and automatically fill the associated bank details.',
-                style: TextStyles.textStyles_12.apply(
+                style: TextStylesPoppins.textStyles_12.apply(
                     color: ColorStyle.secondryBlack, fontWeightDelta: 1),
               ),
               ComponentsTitleInputs.textFieldsAccount('Enter a SWIFT Code', false, 'AAAA-BB-CC123'),
               SizedBox(height: 30,),
               ElevatedButtonCustom(
                 colorBG: ColorStyle.darkestBlueSignUp,
-                textStyle: TextStyles.textStyles_15.apply(
+                textStyle: TextStylesPoppins.textStyles_15.apply(
                   fontWeightDelta: 1,
                   color: ColorStyle.primaryWhite,
                 ),

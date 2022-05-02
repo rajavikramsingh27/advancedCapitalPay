@@ -51,7 +51,7 @@ class CurrentAccount extends StatelessWidget {
                               padding: EdgeInsets.only(left: 20,),
                               child: Text(
                                 'Select Account to view details',
-                                style: TextStyles.textStyles_20.apply(
+                                style: TextStylesPoppins.textStyles_20.apply(
                                     color: ColorStyle.primaryWhite,
                                     fontWeightDelta: 2
                                 ),
@@ -88,7 +88,7 @@ class CurrentAccount extends StatelessWidget {
                                                     Text(
                                                       // 'KFC',
                                                       controller.chooseSaving[index],
-                                                      style: TextStyles.textStyles_14.apply(
+                                                      style: TextStylesPoppins.textStyles_14.apply(
                                                           color: ColorStyle.secondryBlack,
                                                           fontWeightDelta: 2
                                                       ),
@@ -97,7 +97,7 @@ class CurrentAccount extends StatelessWidget {
                                                     Text(
                                                       // 'Spare change',
                                                       controller.chooseSaving1[index],
-                                                      style: TextStyles.textStyles_12.apply(
+                                                      style: TextStylesPoppins.textStyles_12.apply(
                                                           color: ColorStyle.secondryBlack,
                                                           // fontWeightDelta: 2
                                                       ),
@@ -116,7 +116,7 @@ class CurrentAccount extends StatelessWidget {
                                               Text(
                                                 // '     + S 1.90',
                                                 controller.chooseSaving2[index],
-                                                style: TextStyles.textStyles_12.apply(
+                                                style: TextStylesPoppins.textStyles_12.apply(
                                                     color: ColorStyle.secondryBlack,
                                                     // fontWeightDelta: 2
                                                 ),
@@ -125,7 +125,7 @@ class CurrentAccount extends StatelessWidget {
                                               Text(
                                                 // '          22:31',
                                                 controller.chooseSaving3[index],
-                                                style: TextStyles.textStyles_14.apply(
+                                                style: TextStylesPoppins.textStyles_14.apply(
                                                     color: ColorStyle.secondryBlack,
                                                     fontWeightDelta: 2
                                                 ),

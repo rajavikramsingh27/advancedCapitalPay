@@ -41,21 +41,21 @@ class ApplicationForm extends StatelessWidget {
                     children: [
                       Text(
                         'Your progress',
-                        style: TextStyles.textStyles_14.apply(
+                        style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.secondryBlack,
                           fontWeightDelta: 1,
                         ),
                       ),
                       Text(
                         ' 0%',
-                        style: TextStyles.textStyles_14.apply(
+                        style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.blueLight,
                           fontWeightDelta: 1,
                         ),
                       ),
                       Text(
                         ' complete',
-                        style: TextStyles.textStyles_14.apply(
+                        style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.secondryBlack,
                           fontWeightDelta: 1,
                         ),
@@ -87,7 +87,7 @@ class ApplicationForm extends StatelessWidget {
                         Container(
                           child: Text(
                             'ACFVC8JTJ',
-                            style: TextStyles.textStyles_14.apply(
+                            style: TextStylesPoppins.textStyles_14.apply(
                               color: ColorStyle.primaryWhite,
                               fontWeightDelta: 1,
                             ),
@@ -106,7 +106,7 @@ class ApplicationForm extends StatelessWidget {
                           child: Text(
                             'Welcome to Advance Capital'
                                 'On-boarding Application Form',
-                            style: TextStyles.textStyles_16.apply(
+                            style: TextStylesPoppins.textStyles_16.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 1,
                             ),
@@ -128,7 +128,7 @@ class ApplicationForm extends StatelessWidget {
                                 'process simply click the Live Help Button '
                                 'where one of our Customer Support Representatives '
                                 'will be happy to assist you with any queries',
-                            style: TextStyles.textStyles_14.apply(
+                            style: TextStylesPoppins.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 1,
                             ),
@@ -142,7 +142,7 @@ class ApplicationForm extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           child: Text(
                             'Your Name',
-                            style: TextStyles.textStyles_14.apply(
+                            style: TextStylesPoppins.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 1,
                             ),
@@ -156,7 +156,7 @@ class ApplicationForm extends StatelessWidget {
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             labelText: 'Mr.',
-                            labelStyle: TextStyles.textStyles_14.apply(
+                            labelStyle: TextStylesPoppins.textStyles_14.apply(
                               color: Colors.grey,
                               fontWeightDelta: 1,
                             ),
@@ -170,7 +170,7 @@ class ApplicationForm extends StatelessWidget {
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             labelText: 'First Name',
-                            labelStyle: TextStyles.textStyles_14.apply(
+                            labelStyle: TextStylesPoppins.textStyles_14.apply(
                               color: Colors.grey,
                               fontWeightDelta: 1,
                             ),
@@ -184,7 +184,7 @@ class ApplicationForm extends StatelessWidget {
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             labelText: 'Middle Name',
-                            labelStyle: TextStyles.textStyles_14.apply(
+                            labelStyle: TextStylesPoppins.textStyles_14.apply(
                               color: Colors.grey,
                               fontWeightDelta: 1,
                             ),
@@ -198,7 +198,7 @@ class ApplicationForm extends StatelessWidget {
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             labelText: 'Last Name',
-                            labelStyle: TextStyles.textStyles_14.apply(
+                            labelStyle: TextStylesPoppins.textStyles_14.apply(
                               color: Colors.grey,
                               fontWeightDelta: 1,
                             ),
@@ -211,7 +211,7 @@ class ApplicationForm extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           child: Text(
                             'Country of Birth',
-                            style: TextStyles.textStyles_14.apply(
+                            style: TextStylesPoppins.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 1,
                             ),
@@ -231,7 +231,7 @@ class ApplicationForm extends StatelessWidget {
                               ),
                               Text(
                                 'Country of Birth',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),

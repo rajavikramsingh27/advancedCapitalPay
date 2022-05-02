@@ -20,7 +20,7 @@ class ListViewGuidlinesTerms extends StatelessWidget {
         Text(
           title!,
           textAlign: TextAlign.left,
-          style: TextStyles.textStyles_14.apply(
+          style: TextStylesPoppins.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 2,
           ),
@@ -47,7 +47,7 @@ class ListViewGuidlinesTerms extends StatelessWidget {
                 Expanded(
                     child: Text(
                       arrList![index],
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.secondryBlack,
                           fontWeightDelta: 0
                       ),

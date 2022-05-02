@@ -81,7 +81,7 @@ class GradientButton extends StatelessWidget {
                   image: AssetImage(imageName!), fit: BoxFit.fill)),
           child: Text(
             text!,
-            style: TextStyles.textStyles_16.apply(
+            style: TextStylesPoppins.textStyles_16.apply(
               color: ColorStyle.primaryWhite,
             ),
           ),
@@ -126,7 +126,7 @@ class GradientButtonWithArrow extends StatelessWidget {
               ),
               Text(
                 text!,
-                style: TextStyles.textStyles_16.apply(
+                style: TextStylesPoppins.textStyles_16.apply(
                   color: ColorStyle.primaryWhite,
                 ),
               ),
@@ -175,7 +175,7 @@ class GradientButtonWith extends StatelessWidget {
                       border: Border.all(width: 2, color: ColorStyle.blueSKY)),
                   child: Text(
                     'Cancel',
-                    style: TextStyles.textStyles_16
+                    style: TextStylesPoppins.textStyles_16
                         .apply(color: ColorStyle.blueSKY, fontWeightDelta: 1),
                   ),
                 ),
@@ -195,7 +195,7 @@ class GradientButtonWith extends StatelessWidget {
                       border: Border.all(width: 1, color: ColorStyle.blueSKY)),
                   child: Text(
                     'Generate OTP',
-                    style: TextStyles.textStyles_16.apply(
+                    style: TextStylesPoppins.textStyles_16.apply(
                         color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                   ),
                 ),
@@ -242,7 +242,7 @@ class GradientButtonWithBank extends StatelessWidget {
               ),
               child: Text(
                 'Back to Search',
-                style: TextStyles.textStyles_12.apply(
+                style: TextStylesPoppins.textStyles_12.apply(
                     color: ColorStyle.blueSKY,
                     fontWeightDelta: 1
                 ),
@@ -265,7 +265,7 @@ class GradientButtonWithBank extends StatelessWidget {
               ),
               child: Text(
                 'select Bank Details',
-                style: TextStyles.textStyles_12.apply(
+                style: TextStylesPoppins.textStyles_12.apply(
                     color: ColorStyle.primaryWhite,
                     fontWeightDelta: 1
                 ),
@@ -315,7 +315,7 @@ class GradientButtonWithBanks extends StatelessWidget {
               ),
               child: Text(
                 'Back to Help Center',
-                style: TextStyles.textStyles_12.apply(
+                style: TextStylesPoppins.textStyles_12.apply(
                     color: ColorStyle.blueSKY,
                     fontWeightDelta: 1
                 ),
@@ -338,7 +338,7 @@ class GradientButtonWithBanks extends StatelessWidget {
               ),
               child: Text(
                 'Submit Message',
-                style: TextStyles.textStyles_12.apply(
+                style: TextStylesPoppins.textStyles_12.apply(
                     color: ColorStyle.primaryWhite,
                     fontWeightDelta: 1
                 ),
@@ -388,7 +388,7 @@ class GradientButtonWithMassage extends StatelessWidget {
               ),
               child: Text(
                 'Cancel',
-                style: TextStyles.textStyles_12.apply(
+                style: TextStylesPoppins.textStyles_12.apply(
                     color: ColorStyle.blueSKY,
                     fontWeightDelta: 1
                 ),
@@ -411,7 +411,7 @@ class GradientButtonWithMassage extends StatelessWidget {
               ),
               child: Text(
                 'Submit Message',
-                style: TextStyles.textStyles_12.apply(
+                style: TextStylesPoppins.textStyles_12.apply(
                     color: ColorStyle.primaryWhite,
                     fontWeightDelta: 1
                 ),
@@ -454,7 +454,7 @@ class GradientButtonWithContinue extends StatelessWidget {
               color: ColorStyle.blueSKY),
           child: Text(
             'Continue',
-            style: TextStyles.textStyles_16
+            style: TextStylesPoppins.textStyles_16
                 .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
           ),
         ),

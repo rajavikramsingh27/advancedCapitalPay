@@ -9,7 +9,7 @@ import '../Styles/EffectStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
 import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
-import '../Views/MessagePage.dart';
+import '../Views/InboxMessage.dart';
 import '../Views/AppSettings.dart';
 import '../Components/SearchBarCustom.dart';
 import '../Components/GoogleMapCustom.dart';
@@ -34,9 +34,9 @@ class TransactionDetails extends StatelessWidget {
         descriptionUser: 'Plus Personal Customer',
         timeLastLogin:
         'Last Successful login: ' + '02 Feb 2021' + '  ' + '13:53:41',
-        nameStyle: TextStyles.textStyles_14
+        nameStyle: TextStylesPoppins.textStyles_14
             .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 2),
-        descriptionStyle: TextStyles.textStyles_12
+        descriptionStyle: TextStylesPoppins.textStyles_12
             .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
         trailingAction: [
           IconButton(
@@ -45,7 +45,7 @@ class TransactionDetails extends StatelessWidget {
               height: 26,
             ),
             onPressed: () {
-              Get.to(MessagePage());
+              Get.to(InboxMessage());
             },
           ),
           IconButton(
@@ -136,7 +136,7 @@ class TransactionDetails extends StatelessWidget {
                       Container(
                         child: Text(
                           '\$ 8.10',
-                          style: TextStyles.textStyles_32.apply(
+                          style: TextStylesPoppins.textStyles_32.apply(
                             color: ColorStyle.secondryBlack,
                             fontWeightDelta: 3,
                           ),
@@ -149,14 +149,14 @@ class TransactionDetails extends StatelessWidget {
                       ),
                       Text(
                         'Costa Coffee',
-                        style: TextStyles.textStyles_16.apply(
+                        style: TextStylesPoppins.textStyles_16.apply(
                           color: ColorStyle.secondryBlack,
                           fontWeightDelta: 2,
                         ),
                       ),
                       Text(
                         '14 Street, Green Community Village \nSunday, 17th April 2021, 14:31',
-                        style: TextStyles.textStyles_12.apply(
+                        style: TextStylesPoppins.textStyles_12.apply(
                           color: ColorStyle.secondryBlack,
                           fontWeightDelta: 1,
                         ),
@@ -195,13 +195,13 @@ class TransactionDetails extends StatelessWidget {
                         children: [
                           Image.asset(ImageStyle.Edit, color: ColorStyle.secondryBlack, height: 26,),
                           Expanded(child: TextField(
-                            style: TextStyles.textStyles_14.apply(
+                            style: TextStylesPoppins.textStyles_14.apply(
                                 color: ColorStyle.secondryBlack,
                                 fontWeightDelta: 1
                             ),
                             decoration: InputDecoration(
                               hintText: 'Add Note',
-                              hintStyle: TextStyles.textStyles_14.apply(
+                              hintStyle: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.grey,
                                   fontWeightDelta: 1
                               ),
@@ -213,7 +213,7 @@ class TransactionDetails extends StatelessWidget {
                       ),
                       Text(
                         'Your Coast History',
-                        style: TextStyles.textStyles_14.apply(
+                        style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.secondryBlack,
                           fontWeightDelta: 0,
                         ),
@@ -230,14 +230,14 @@ class TransactionDetails extends StatelessWidget {
                           children: [
                             Text(
                               'Number of Visits',
-                              style: TextStyles.textStyles_14.apply(
+                              style: TextStylesPoppins.textStyles_14.apply(
                                 color: ColorStyle.secondryBlack,
                                 fontWeightDelta: 1,
                               ),
                             ),
                             Text(
                               '42',
-                              style: TextStyles.textStyles_14.apply(
+                              style: TextStylesPoppins.textStyles_14.apply(
                                 color: ColorStyle.secondryBlack,
                                 fontWeightDelta: 1,
                               ),
@@ -257,14 +257,14 @@ class TransactionDetails extends StatelessWidget {
                           children: [
                             Text(
                               'Average Spend',
-                              style: TextStyles.textStyles_14.apply(
+                              style: TextStylesPoppins.textStyles_14.apply(
                                 color: ColorStyle.secondryBlack,
                                 fontWeightDelta: 1,
                               ),
                             ),
                             Text(
                               '\$ 3.89',
-                              style: TextStyles.textStyles_14.apply(
+                              style: TextStylesPoppins.textStyles_14.apply(
                                 color: ColorStyle.secondryBlack,
                                 fontWeightDelta: 1,
                               ),
@@ -284,7 +284,7 @@ class TransactionDetails extends StatelessWidget {
                           children: [
                             Text(
                               'Last Spend',
-                              style: TextStyles.textStyles_14.apply(
+                              style: TextStylesPoppins.textStyles_14.apply(
                                 color: ColorStyle.secondryBlack,
                                 fontWeightDelta: 1,
                               ),
@@ -294,14 +294,14 @@ class TransactionDetails extends StatelessWidget {
                               children: [
                                 Text(
                                   'Thursday, 11th September',
-                                  style: TextStyles.textStyles_10.apply(
+                                  style: TextStylesPoppins.textStyles_10.apply(
                                     color: ColorStyle.grey,
                                     fontWeightDelta: 1,
                                   ),
                                 ),
                                 Text(
                                   '15:34 pm',
-                                  style: TextStyles.textStyles_10.apply(
+                                  style: TextStylesPoppins.textStyles_10.apply(
                                     color: ColorStyle.grey,
                                     fontWeightDelta: 1,
                                   ),

@@ -58,7 +58,7 @@ class BankDetails extends StatelessWidget {
           padding: EffectStyle.padding(16, 16, 16, 16),
           child: Text(
             'Beneficial Bank Details',
-            style: TextStyles.textStyles_18
+            style: TextStylesPoppins.textStyles_18
                 .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 2),
           ),
         ),
@@ -99,13 +99,13 @@ class BankDetails extends StatelessWidget {
                       children: [
                         Text(
                           bankName!,
-                          style: TextStyles.textStyles_16.apply(
+                          style: TextStylesPoppins.textStyles_16.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 2),
                         ),
                         Text(
                           bankCode!,
-                          style: TextStyles.textStyles_14.apply(
+                          style: TextStylesPoppins.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 2),
                         ),
@@ -122,22 +122,22 @@ class BankDetails extends StatelessWidget {
                 children: [
                   Text(
                     arrTitles![0],
-                    style: TextStyles.textStyles_14.apply(
+                    style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.hex('#016ECF'), fontWeightDelta: 2),
                   ),
                   Text(
                     arrTitles![1],
-                    style: TextStyles.textStyles_14.apply(
+                    style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.hex('#016ECF'), fontWeightDelta: 2),
                   ),
                   Text(
                     arrTitles![2],
-                    style: TextStyles.textStyles_14.apply(
+                    style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.hex('#016ECF'), fontWeightDelta: 2),
                   ),
                   Text(
                     arrTitles![3],
-                    style: TextStyles.textStyles_14.apply(
+                    style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.hex('#016ECF'), fontWeightDelta: 2),
                   ),
                 ],
@@ -152,28 +152,28 @@ class BankDetails extends StatelessWidget {
                   Expanded(
                       child: Text(
                     arrSubTitles![0],
-                    style: TextStyles.textStyles_14.apply(
+                    style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.secondryBlack, fontWeightDelta: 2),
                   )),
                   Expanded(
                       child: Text(
                     arrSubTitles![1],
                     textAlign: TextAlign.center,
-                    style: TextStyles.textStyles_14.apply(
+                    style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.secondryBlack, fontWeightDelta: 1),
                   )),
                   Expanded(
                       child: Text(
                     arrSubTitles![2],
                     textAlign: TextAlign.center,
-                    style: TextStyles.textStyles_14.apply(
+                    style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.secondryBlack, fontWeightDelta: 1),
                   )),
                   Expanded(
                       child: Text(
                     arrSubTitles![3],
                     textAlign: TextAlign.end,
-                    style: TextStyles.textStyles_14.apply(
+                    style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.secondryBlack, fontWeightDelta: 1),
                   )),
                 ],
@@ -196,7 +196,7 @@ class BankDetails extends StatelessWidget {
                             child: Text(
                           arrBankDetailsTitles![index],
                           textAlign: TextAlign.left,
-                          style: TextStyles.textStyles_14.apply(
+                          style: TextStylesPoppins.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 2),
                         )),
@@ -204,7 +204,7 @@ class BankDetails extends StatelessWidget {
                             child: Text(
                           arrBankDetailsValue![index],
                           textAlign: TextAlign.center,
-                          style: TextStyles.textStyles_14.apply(
+                          style: TextStylesPoppins.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 1),
                         )),
@@ -220,7 +220,7 @@ class BankDetails extends StatelessWidget {
                   textFirst: 'Bank to Search',
                   colorBGFirst: Colors.transparent,
                   colorBorderFirst: ColorStyle.hex('#016ECF'),
-                  textStyleFirst: TextStyles.textStyles_12.apply(
+                  textStyleFirst: TextStylesPoppins.textStyles_12.apply(
                     fontWeightDelta: 1,
                     color: ColorStyle.hex('#016ECF'),
                   ),
@@ -228,7 +228,7 @@ class BankDetails extends StatelessWidget {
                   textSecond: 'Select Bank Details',
                   colorBGSecond: ColorStyle.hex('#016ECF'),
                   colorBorderSecond: Colors.transparent,
-                  textStyleSecond: TextStyles.textStyles_12.apply(
+                  textStyleSecond: TextStylesPoppins.textStyles_12.apply(
                       fontWeightDelta: 1, color: ColorStyle.primaryWhite),
                   onTapSecond: onTapSelectBankDetails),
               SizedBox(

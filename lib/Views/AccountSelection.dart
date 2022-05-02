@@ -25,7 +25,7 @@ class AccountSelection extends StatelessWidget {
           padding: padding,
           child: Text(
             title,
-            style: TextStyles
+            style: TextStylesPoppins
                 .textStyles_16
                 .apply(
                 fontWeightDelta: 2,
@@ -67,9 +67,9 @@ class AccountSelection extends StatelessWidget {
           child: InfoIconDescription(
             title: 'Account Selection',
             description: 'From here you can transfer money between your own accounts. You can set up a one off transfer or standing order.',
-            textStyle: TextStyles.textStyles_14
+            textStyle: TextStylesPoppins.textStyles_14
                 .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
-            descriptionStyle: TextStyles.textStyles_12
+            descriptionStyle: TextStylesPoppins.textStyles_12
                 .apply(fontWeightDelta: 2, color: ColorStyle.secondryBlack),
           ),
         ),
@@ -92,7 +92,7 @@ class AccountSelection extends StatelessWidget {
             textFirst:'Cancel',
             colorBGFirst:Colors.transparent,
             colorBorderFirst:ColorStyle.hex('#016ECF'),
-            textStyleFirst: TextStyles.textStyles_14.apply(
+            textStyleFirst: TextStylesPoppins.textStyles_14.apply(
               fontWeightDelta: 1,
               color: ColorStyle.hex('#016ECF'),
             ),
@@ -102,7 +102,7 @@ class AccountSelection extends StatelessWidget {
             textSecond:'Continue',
             colorBGSecond: ColorStyle.hex('#016ECF'),
             colorBorderSecond: Colors.transparent,
-            textStyleSecond: TextStyles.textStyles_14.apply(
+            textStyleSecond: TextStylesPoppins.textStyles_14.apply(
                 fontWeightDelta: 1,
                 color: ColorStyle.primaryWhite
             ),

@@ -60,10 +60,10 @@ class EditProfile extends StatelessWidget {
                           leadingImage: ImageStyle.jewlers,
                           nameUser: 'ICED OUT JEWLLERS LTD',
                           descriptionUser: 'Your Personal Settings',
-                          nameStyle: TextStyles.textStyles_18.apply(
+                          nameStyle: TextStylesPoppins.textStyles_18.apply(
                               color: ColorStyle.primaryWhite,
                               fontWeightDelta: 1),
-                          descriptionStyle: TextStyles.textStyles_12
+                          descriptionStyle: TextStylesPoppins.textStyles_12
                               .apply(color: ColorStyle.primaryWhite),
                           trailingAction: [
                             IconButton(
@@ -96,7 +96,7 @@ class EditProfile extends StatelessWidget {
                             children: [
                               Text(
                                 'Edit Personal Profile',
-                                style: TextStyles.textStyles_18.apply(
+                                style: TextStylesPoppins.textStyles_18.apply(
                                     color: ColorStyle.primaryWhite,
                                     fontWeightDelta: 2),
                               ),
@@ -139,7 +139,7 @@ class EditProfile extends StatelessWidget {
                                                   color:
                                                       ColorStyle.primaryWhite,
                                                   fontFamily:
-                                                      TextStyles.kFontFamily,
+                                                      TextStylesPoppins.kFontFamily,
                                                   fontSize: 12,
                                                   fontWeight: FontWeight.w600)),
                                         ],
@@ -158,7 +158,7 @@ class EditProfile extends StatelessWidget {
                               Expanded(
                                 child: ElevatedButtonCustom(
                                   text: 'Personal',
-                                  textStyle: TextStyles.textStyles_16.apply(
+                                  textStyle: TextStylesPoppins.textStyles_16.apply(
                                       color: controller.isPersonal.value
                                           ? ColorStyle.primaryWhite
                                           : ColorStyle.primaryWhite
@@ -178,7 +178,7 @@ class EditProfile extends StatelessWidget {
                               Expanded(
                                 child: ElevatedButtonCustom(
                                   text: 'Business Profile',
-                                  textStyle: TextStyles.textStyles_16.apply(
+                                  textStyle: TextStylesPoppins.textStyles_16.apply(
                                       color: !controller.isPersonal.value
                                           ? ColorStyle.primaryWhite
                                           : ColorStyle.primaryWhite
@@ -203,7 +203,7 @@ class EditProfile extends StatelessWidget {
                         Container(
                           child: Text(
                             'Additional Security Required',
-                            style: TextStyles.textStyles_16.apply(
+                            style: TextStylesPoppins.textStyles_16.apply(
                               color: ColorStyle.primaryWhite,
                               fontWeightDelta: 1,
                             ),
@@ -231,7 +231,7 @@ class EditProfile extends StatelessWidget {
                                   Expanded(
                                       child: ElevatedButtonCustom(
                                         colorBG: ColorStyle.primaryWhite,
-                                        textStyle: TextStyles.textStyles_14
+                                        textStyle: TextStylesPoppins.textStyles_14
                                             .apply(color: ColorStyle.blueSKY, fontWeightDelta: 1),
                                         colorBorder: ColorStyle.blueSKY,
                                         text: 'Cancel',
@@ -246,7 +246,7 @@ class EditProfile extends StatelessWidget {
                                         colorBG: ColorStyle.blueSKY,
                                         text: 'Generate OTP Code',
                                         radiusBorder: 30,
-                                        textStyle: TextStyles.textStyles_14.apply(
+                                        textStyle: TextStylesPoppins.textStyles_14.apply(
                                             color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                                         onTap: () {
 

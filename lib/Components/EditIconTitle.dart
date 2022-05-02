@@ -61,7 +61,7 @@ class EditIconTitle extends StatelessWidget {
                 'Edit',
                 style: TextStyle(
                     color: colorText,
-                    fontFamily: TextStyles.kFontFamily,
+                    fontFamily: TextStylesPoppins.kFontFamily,
                     fontSize: fontSize,
                     fontWeight: FontWeight.w600)),
           ],

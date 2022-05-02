@@ -70,7 +70,7 @@ class AppBarStyleCryptoDashboard extends StatelessWidget implements PreferredSiz
       toolbarHeight: heightAppBar,
       backgroundColor: Colors.transparent,
       // leadingWidth: 0,
-      leadingWidth: 80,
+      leadingWidth: 90,
       leading: (leadingButton == null) ? Container() : leadingButton,
       centerTitle: true,
       title: Image.asset(
@@ -141,7 +141,7 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
       title: AutoSizeText(
         title!,
         maxLines: 1,
-        style: TextStyles.textStyles_16
+        style: TextStylesPoppins.textStyles_16
             .apply(color: colorTitle, fontWeightDelta: 1, fontSizeDelta: 2),
       ),
       actions: [
@@ -230,7 +230,7 @@ class AppBarStyleLeadingTitleTrailing extends StatelessWidget
           AutoSizeText(
             timeLastLogin!,
             maxLines: 1,
-            style: TextStyles.textStyles_7.apply(
+            style: TextStylesPoppins.textStyles_7.apply(
               color: ColorStyle.primaryWhite,
               // fontWeightDelta: 1,
             ),
@@ -283,12 +283,12 @@ class AppBarStyleCustom1 extends StatelessWidget
         children: [
           Text(
             'HARRISON SMITH',
-            style: TextStyles.textStyles_16
+            style: TextStylesPoppins.textStyles_16
                 .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
           ),
           Text(
             'Your Personal Settings',
-            style: TextStyles.textStyles_10.apply(
+            style: TextStylesPoppins.textStyles_10.apply(
               color: ColorStyle.primaryWhite,
             ),
           ),
@@ -333,7 +333,7 @@ class AppBarStyleCustomBeni extends StatelessWidget implements PreferredSizeWidg
       centerTitle: true,
       title: Text(
         'Beneficiary',
-        style: TextStyles.textStyles_20.apply(
+        style: TextStylesPoppins.textStyles_20.apply(
           color: ColorStyle.primaryWhite,
         ),
       ),
@@ -400,14 +400,14 @@ class AppBarStyle1 extends StatelessWidget implements PreferredSizeWidget {
           children: [
             Text(
               'Your Cards',
-              style: TextStyles.textStyles_20.apply(
+              style: TextStylesPoppins.textStyles_20.apply(
                 color: ColorStyle.primaryWhite,
                 fontWeightDelta: 1,
               ),
             ),
             Text(
               '1 physical card, 1 virtual card',
-              style: TextStyles.textStyles_10.apply(
+              style: TextStylesPoppins.textStyles_10.apply(
                 color: ColorStyle.primaryWhite,
                 fontWeightDelta: 1,
               ),

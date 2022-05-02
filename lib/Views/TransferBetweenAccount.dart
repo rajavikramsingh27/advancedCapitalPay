@@ -50,7 +50,7 @@ class TransferBetweenAccount extends StatelessWidget {
           SizedBox(height: 6),
           Text(
             'Standing Order',
-            style: TextStyles.textStyles_14
+            style: TextStylesPoppins.textStyles_14
                 .apply(color: ColorStyle.secondryBlack, fontWeightDelta: 2),
           ),
           RadioButtonCustom(
@@ -59,9 +59,9 @@ class TransferBetweenAccount extends StatelessWidget {
             colorInActive: ColorStyle.grey,
             colorActive: ColorStyle.darkestBlueSignUp,
             sizeIcon: 28,
-            textStyleFirst: TextStyles.textStyles_12
+            textStyleFirst: TextStylesPoppins.textStyles_12
                 .apply(color: ColorStyle.secondryBlack, fontWeightDelta: 2),
-            textStyleSecond: TextStyles.textStyles_12
+            textStyleSecond: TextStylesPoppins.textStyles_12
                 .apply(color: ColorStyle.secondryBlack, fontWeightDelta: 2),
           ),
           TitleDatePicker(
@@ -71,7 +71,7 @@ class TransferBetweenAccount extends StatelessWidget {
           SizedBox(height: 6),
           Text(
             'This transfer can be today or scheduled at a later date.',
-            style: TextStyles.textStyles_10
+            style: TextStylesPoppins.textStyles_10
                 .apply(color: ColorStyle.secondryBlack, fontWeightDelta: 0),
           ),
           ComponentsTitleInputs.titleDropDown(
@@ -88,7 +88,7 @@ class TransferBetweenAccount extends StatelessWidget {
               textFirst: 'Cancel',
               colorBGFirst: Colors.transparent,
               colorBorderFirst: ColorStyle.hex('#016ECF'),
-              textStyleFirst: TextStyles.textStyles_14.apply(
+              textStyleFirst: TextStylesPoppins.textStyles_14.apply(
                 fontWeightDelta: 1,
                 color: ColorStyle.hex('#016ECF'),
               ),
@@ -96,7 +96,7 @@ class TransferBetweenAccount extends StatelessWidget {
               textSecond: 'Continue',
               colorBGSecond: ColorStyle.hex('#016ECF'),
               colorBorderSecond: Colors.transparent,
-              textStyleSecond: TextStyles.textStyles_14
+              textStyleSecond: TextStylesPoppins.textStyles_14
                   .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
               onTapSecond: () {
                 controller.index.value = controller.index.value + 1;
@@ -180,7 +180,7 @@ class TransferBetweenAccount extends StatelessWidget {
                           child: Text(
                             'TransferDetails',
                             // textAlign: TextAlign.left,
-                            style: TextStyles.textStyles_16.apply(
+                            style: TextStylesPoppins.textStyles_16.apply(
                               fontWeightDelta: 2,
                               color: ColorStyle.primaryWhite,
                             ),

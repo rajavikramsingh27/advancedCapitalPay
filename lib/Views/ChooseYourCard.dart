@@ -66,7 +66,7 @@ class ChooseYourCard extends StatelessWidget {
                         children: [
                           Text(
                             'Choose your card',
-                            style: TextStyles.textStyles_20.apply(
+                            style: TextStylesPoppins.textStyles_20.apply(
                               color: ColorStyle.primaryWhite,
                               fontWeightDelta: 1,
                             ),
@@ -118,7 +118,7 @@ class ChooseYourCard extends StatelessWidget {
                                 SizedBox(height: 50),
                                 Text(
                                   controller.arrTitles[controller.indexPage.value],
-                                  style: TextStyles.textStyles_20.apply(
+                                  style: TextStylesPoppins.textStyles_20.apply(
                                     color: ColorStyle.primaryWhite,
                                     fontWeightDelta: 1,
                                   ),
@@ -128,7 +128,7 @@ class ChooseYourCard extends StatelessWidget {
                                   controller.arrDescription[controller.indexPage.value],
                                   maxLines: 2,
                                   textAlign: TextAlign.center,
-                                  style: TextStyles.autoSizeText.apply(
+                                  style: TextStylesPoppins.autoSizeText.apply(
                                     color: ColorStyle.primaryWhite,
                                   ),
                                 ),
@@ -143,7 +143,7 @@ class ChooseYourCard extends StatelessWidget {
                                     SizedBox(width: 10),
                                     Text(
                                       'Delivery £4.95',
-                                      style: TextStyles.textStyles_14.apply(
+                                      style: TextStylesPoppins.textStyles_14.apply(
                                         color: ColorStyle.darkBlue,
                                         fontWeightDelta: 0,
                                       ),

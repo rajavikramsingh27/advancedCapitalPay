@@ -50,9 +50,9 @@ class NewBeneficiarySummary extends StatelessWidget {
             description:
                 'Protect against Fraud, Don’t fall victim to scams. Criminals will pretend to be people in which you trust, companies, government and legal figures See more'
                 '\n\nAdvanceCapitalPay will never ask you to transfer any funds, criminals will pressure you. For more information visit our Fraud and Security Centre',
-            textStyle: TextStyles.textStyles_16
+            textStyle: TextStylesPoppins.textStyles_16
                 .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
-            descriptionStyle: TextStyles.textStyles_12
+            descriptionStyle: TextStylesPoppins.textStyles_12
                 .apply(fontWeightDelta: 2, color: ColorStyle.secondryBlack),
           ),
         ),
@@ -70,7 +70,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                   // ComponentsSignUp.textFieldsAccount('Last Name', false, 'Smith'),
                   Text(
                     'Beneficiary Details',
-                    style: TextStyles.textStyles_18.apply(
+                    style: TextStylesPoppins.textStyles_18.apply(
                         color: ColorStyle.primaryWhite, fontWeightDelta: 2),
                   ),
                   InkWell(
@@ -185,7 +185,7 @@ class NewBeneficiarySummary extends StatelessWidget {
               ),
               Text(
                 'Beneficiary Contact Details',
-                style: TextStyles.textStyles_18
+                style: TextStylesPoppins.textStyles_18
                     .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 2),
               ),
               SizedBox(
@@ -238,12 +238,12 @@ class NewBeneficiarySummary extends StatelessWidget {
                     ),
                     Text(
                       'Beneficiary Documentation',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.secondryBlack, fontWeightDelta: 2),
                     ),
                     Text(
                       'Upload any relevant documentation relating to the beneficiary such as Identification Documents, Company Details, Invoices and more.',
-                      style: TextStyles.textStyles_12.apply(
+                      style: TextStylesPoppins.textStyles_12.apply(
                           color: ColorStyle.secondryBlack, fontWeightDelta: 1),
                     ),
                     SizedBox(
@@ -269,7 +269,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                   // ComponentsSignUp.textFieldsAccount('Last Name', false, 'Smith'),
                   Text(
                     'Beneficiary Bank Details',
-                    style: TextStyles.textStyles_18.apply(
+                    style: TextStylesPoppins.textStyles_18.apply(
                         color: ColorStyle.primaryWhite, fontWeightDelta: 2),
                   ),
                   InkWell(
@@ -313,7 +313,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                         ),
                         Text(
                           'Account Number',
-                          style: TextStyles.textStyles_14.apply(
+                          style: TextStylesPoppins.textStyles_14.apply(
                             color: ColorStyle.secondryBlack,
                             fontWeightDelta: 2,
                           ),
@@ -329,12 +329,12 @@ class NewBeneficiarySummary extends StatelessWidget {
                           ),
                           hint: Text(
                             'Employed',
-                            style: TextStyles.textStyles_14.apply(
+                            style: TextStylesPoppins.textStyles_14.apply(
                               color: ColorStyle.grey,
                               fontWeightDelta: 2,
                             ),
                           ),
-                          textStyle: TextStyles.textStyles_14.apply(
+                          textStyle: TextStylesPoppins.textStyles_14.apply(
                             color: ColorStyle.secondryBlack,
                             fontWeightDelta: 2,
                           ),
@@ -355,7 +355,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                     ),
                     Text(
                       'Sort Code',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.secondryBlack, fontWeightDelta: 2),
                     ),
                     SizedBox(
@@ -366,7 +366,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                         Container(
                           child: Text(
                             '43',
-                            style: TextStyles.textStyles_16.apply(
+                            style: TextStylesPoppins.textStyles_16.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 1,
                             ),
@@ -388,7 +388,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                         Container(
                           child: Text(
                             '56',
-                            style: TextStyles.textStyles_16.apply(
+                            style: TextStylesPoppins.textStyles_16.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 1,
                             ),
@@ -410,7 +410,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                         Container(
                           child: Text(
                             '76',
-                            style: TextStyles.textStyles_16.apply(
+                            style: TextStylesPoppins.textStyles_16.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 1,
                             ),
@@ -461,12 +461,12 @@ class NewBeneficiarySummary extends StatelessWidget {
                     ),
                     Text(
                       'Payment Reference',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.secondryBlack, fontWeightDelta: 2),
                     ),
                     Text(
                       'This reference will automatically show when making a payment to the beneficiary but can be changed at any time.',
-                      style: TextStyles.textStyles_12.apply(
+                      style: TextStylesPoppins.textStyles_12.apply(
                           color: ColorStyle.secondryBlack, fontWeightDelta: 1),
                     ),
                     SizedBox(
@@ -475,7 +475,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                     TextFieldCustom(
                       colorBoder: ColorStyle.secondryBlack,
                       hintText: 'Concert Tickets',
-                      textStyle: TextStyles.textStyles_14.apply(
+                      textStyle: TextStylesPoppins.textStyles_14.apply(
                         fontWeightDelta: 2,
                       ),
                       radiusBorder: 30,
@@ -499,7 +499,7 @@ class NewBeneficiarySummary extends StatelessWidget {
             textFirst: 'Cancel',
             colorBGFirst: Colors.transparent,
             colorBorderFirst: ColorStyle.hex('#016ECF'),
-            textStyleFirst: TextStyles.textStyles_14.apply(
+            textStyleFirst: TextStylesPoppins.textStyles_14.apply(
               fontWeightDelta: 1,
               color: ColorStyle.hex('#016ECF'),
             ),
@@ -507,7 +507,7 @@ class NewBeneficiarySummary extends StatelessWidget {
             textSecond: 'Continue',
             colorBGSecond: ColorStyle.hex('#016ECF'),
             colorBorderSecond: Colors.transparent,
-            textStyleSecond: TextStyles.textStyles_14
+            textStyleSecond: TextStylesPoppins.textStyles_14
                 .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
             onTapSecond: () {
               controller.index.value = controller.index.value + 1;
@@ -534,9 +534,9 @@ class NewBeneficiarySummary extends StatelessWidget {
             description:
                 'Protect against Fraud, Don’t fall victim to scams. Criminals will pretend to be people in which you trust, companies, government and legal figures See more'
                 '\n\nAdvanceCapitalPay will never ask you to transfer any funds, criminals will pressure you. For more information visit our Fraud and Security Centre',
-            textStyle: TextStyles.textStyles_16
+            textStyle: TextStylesPoppins.textStyles_16
                 .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
-            descriptionStyle: TextStyles.textStyles_12
+            descriptionStyle: TextStylesPoppins.textStyles_12
                 .apply(fontWeightDelta: 2, color: ColorStyle.secondryBlack),
           ),
         ),
@@ -547,7 +547,7 @@ class NewBeneficiarySummary extends StatelessWidget {
           padding: padding,
           child: Text(
             title,
-            style: TextStyles.textStyles_16
+            style: TextStylesPoppins.textStyles_16
                 .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
           ),
         ),
@@ -651,7 +651,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                                 textFirst: 'Cancel',
                                 colorBGFirst: Colors.transparent,
                                 colorBorderFirst: ColorStyle.hex('#016ECF'),
-                                textStyleFirst: TextStyles.textStyles_14.apply(
+                                textStyleFirst: TextStylesPoppins.textStyles_14.apply(
                                   fontWeightDelta: 1,
                                   color: ColorStyle.hex('#016ECF'),
                                 ),
@@ -659,7 +659,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                                 textSecond: 'Continue',
                                 colorBGSecond: ColorStyle.hex('#016ECF'),
                                 colorBorderSecond: Colors.transparent,
-                                textStyleSecond: TextStyles.textStyles_14.apply(
+                                textStyleSecond: TextStylesPoppins.textStyles_14.apply(
                                     fontWeightDelta: 1,
                                     color: ColorStyle.primaryWhite),
                                 onTapSecond: () {
@@ -706,19 +706,19 @@ class NewBeneficiarySummary extends StatelessWidget {
                             InfoIconDescription(
                               padding: EffectStyle.padding(0, 0, 16, 0),
                               description: 'By continuing with the transfer you acknowledge and confirm the applicable terms and conditions including waiting time for newly added beneficiary which may apply.',
-                              descriptionStyle: TextStyles.textStyles_12
+                              descriptionStyle: TextStylesPoppins.textStyles_12
                                   .apply(fontWeightDelta: 1, color: ColorStyle.secondryBlack),
                             ),
                             InfoIconDescription(
                               padding: EffectStyle.padding(0, 0, 16, 0),
                               description: 'Please note that international transfer will be processed on international business days (Monday-Friday)',
-                              descriptionStyle: TextStyles.textStyles_12
+                              descriptionStyle: TextStylesPoppins.textStyles_12
                                   .apply(fontWeightDelta: 1, color: ColorStyle.secondryBlack),
                             ),
                             InfoIconDescription(
                               padding: EffectStyle.padding(0, 0, 16, 0),
                               description: 'Transfers which fall on a holiday, may be processed on the next working business day.',
-                              descriptionStyle: TextStyles.textStyles_12
+                              descriptionStyle: TextStylesPoppins.textStyles_12
                                   .apply(fontWeightDelta: 1, color: ColorStyle.secondryBlack),
                             ),
                             SizedBox(height: 20),
@@ -727,7 +727,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                               textFirst: 'Cancel',
                               colorBGFirst: Colors.transparent,
                               colorBorderFirst: ColorStyle.hex('#016ECF'),
-                              textStyleFirst: TextStyles.textStyles_14.apply(
+                              textStyleFirst: TextStylesPoppins.textStyles_14.apply(
                                 fontWeightDelta: 1,
                                 color: ColorStyle.hex('#016ECF'),
                               ),
@@ -735,7 +735,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                               textSecond: 'Gernerate OTP',
                               colorBGSecond: ColorStyle.hex('#016ECF'),
                               colorBorderSecond: Colors.transparent,
-                              textStyleSecond: TextStyles.textStyles_14
+                              textStyleSecond: TextStylesPoppins.textStyles_14
                                   .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
                               onTapSecond: () {
 

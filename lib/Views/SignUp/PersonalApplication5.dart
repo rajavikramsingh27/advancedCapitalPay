@@ -55,7 +55,7 @@ class PersonalApplication5 extends StatelessWidget {
                           Container(
                               child: Text(
                                 'ACFVC8JTJ',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 1,
                                 ),
@@ -84,7 +84,7 @@ class PersonalApplication5 extends StatelessWidget {
                                   ' by authorized officials of the company who have been given '
                                   ' the responsibility to act on behalf of the company and provide '
                                   ' instructions for payments and submit any documentation to Advance Capital. ',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -98,7 +98,7 @@ class PersonalApplication5 extends StatelessWidget {
                                     width: MediaQuery.of(context).size.width,
                                     child: Text(
                                       'Yes I confirm it will be me',
-                                      style: TextStyles.textStyles_20.apply(
+                                      style: TextStylesPoppins.textStyles_20.apply(
                                         color: ColorStyle.secondryBlack,
                                         fontWeightDelta: 1,
                                       ),
@@ -117,7 +117,7 @@ class PersonalApplication5 extends StatelessWidget {
                                         ),
                                         Text(
                                           'Additional Authorized Signature to the Account',
-                                          style: TextStyles.textStyles_20.apply(
+                                          style: TextStylesPoppins.textStyles_20.apply(
                                             color: ColorStyle.secondryBlack,
                                             fontWeightDelta: 1,
                                           ),
@@ -131,7 +131,7 @@ class PersonalApplication5 extends StatelessWidget {
                                           ' documentation required to Advance Capital. By adding '
                                           ' an Authorized signature to the account, you can confirm that '
                                           ' each person has the authorized to act on behalf of the company.',
-                                          style: TextStyles.textStyles_14.apply(
+                                          style: TextStylesPoppins.textStyles_14.apply(
                                             color: ColorStyle.secondryBlack,
                                             fontWeightDelta: 1,
                                           ),
@@ -168,7 +168,7 @@ class PersonalApplication5 extends StatelessWidget {
                                             ),
                                             Text(
                                               'Company director',
-                                              style: TextStyles.textStyles_12
+                                              style: TextStylesPoppins.textStyles_12
                                                   .apply(
                                                 color: ColorStyle.secondryBlack,
                                                 fontWeightDelta: 1,
@@ -191,7 +191,7 @@ class PersonalApplication5 extends StatelessWidget {
                                             ),
                                             Text(
                                               'Shareholder (10% or more)',
-                                              style: TextStyles.textStyles_12
+                                              style: TextStylesPoppins.textStyles_12
                                                   .apply(
                                                 color: ColorStyle.secondryBlack,
                                                 fontWeightDelta: 1,
@@ -210,7 +210,7 @@ class PersonalApplication5 extends StatelessWidget {
                                             ),
                                             Text(
                                               'Authorized Signature',
-                                              style: TextStyles.textStyles_12
+                                              style: TextStylesPoppins.textStyles_12
                                                   .apply(
                                                 color: ColorStyle.secondryBlack,
                                                 fontWeightDelta: 1,
@@ -226,7 +226,7 @@ class PersonalApplication5 extends StatelessWidget {
                                     InkWell(
                                       child: Text(
                                         'View Details',
-                                        style: TextStyles.textStyles_12.apply(
+                                        style: TextStylesPoppins.textStyles_12.apply(
                                           color: ColorStyle.darkestBlueSignUp,
                                           fontWeightDelta: 2,
                                         ),

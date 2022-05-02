@@ -23,7 +23,7 @@ class SuccessfulCurrencyExchange extends StatelessWidget {
             appBar: AppBarStyleCustomBenifi(
               title: Text(
                 'Successful Currency Exchange',
-                style: TextStyles.textStyles_14
+                style: TextStylesPoppins.textStyles_14
                     .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 2),
               ),
               leadingButton: BackButton(
@@ -55,7 +55,7 @@ class SuccessfulCurrencyExchange extends StatelessWidget {
                         SizedBox(height: 20),
                         Text(
                           'USD 1.00 = 3.6725 AED ',
-                          style: TextStyles.textStyles_14.apply(
+                          style: TextStylesPoppins.textStyles_14.apply(
                               color: ColorStyle.primaryWhite,
                               fontWeightDelta: 2),
                         ),
@@ -73,14 +73,14 @@ class SuccessfulCurrencyExchange extends StatelessWidget {
                               children: [
                                 Text(
                                   'You send United States Dollar',
-                                  style: TextStyles.textStyles_8.apply(
+                                  style: TextStylesPoppins.textStyles_8.apply(
                                       color: ColorStyle.grey,
                                       fontWeightDelta: 2),
                                 ),
                                 SizedBox(height: 10),
                                 Text(
                                   '128,000',
-                                  style: TextStyles.textStyles_18.apply(
+                                  style: TextStylesPoppins.textStyles_18.apply(
                                       color: ColorStyle.primaryWhite,
                                       fontWeightDelta: 2),
                                 ),
@@ -96,7 +96,7 @@ class SuccessfulCurrencyExchange extends StatelessWidget {
                                 children: [
                                   Text(
                                     'USD ',
-                                    style: TextStyles.textStyles_14.apply(
+                                    style: TextStylesPoppins.textStyles_14.apply(
                                         color: ColorStyle.primaryWhite,
                                         fontWeightDelta: 2),
                                   ),
@@ -132,14 +132,14 @@ class SuccessfulCurrencyExchange extends StatelessWidget {
                               children: [
                                 Text(
                                   'You receive United Arab Emirates Dirham',
-                                  style: TextStyles.textStyles_8.apply(
+                                  style: TextStylesPoppins.textStyles_8.apply(
                                       color: ColorStyle.grey,
                                       fontWeightDelta: 2),
                                 ),
                                 SizedBox(height: 10),
                                 Text(
                                   '470,000',
-                                  style: TextStyles.textStyles_18.apply(
+                                  style: TextStylesPoppins.textStyles_18.apply(
                                       color: ColorStyle.primaryWhite,
                                       fontWeightDelta: 2),
                                 ),
@@ -155,7 +155,7 @@ class SuccessfulCurrencyExchange extends StatelessWidget {
                                 children: [
                                   Text(
                                     'AED ',
-                                    style: TextStyles.textStyles_14.apply(
+                                    style: TextStylesPoppins.textStyles_14.apply(
                                         color: ColorStyle.primaryWhite,
                                         fontWeightDelta: 2),
                                   ),
@@ -188,7 +188,7 @@ class SuccessfulCurrencyExchange extends StatelessWidget {
                           children: [
                             Text(
                               'Pay With',
-                              style: TextStyles.textStyles_8.apply(
+                              style: TextStylesPoppins.textStyles_8.apply(
                                   color: ColorStyle.grey, fontWeightDelta: 2),
                             ),
                             Column(
@@ -196,13 +196,13 @@ class SuccessfulCurrencyExchange extends StatelessWidget {
                               children: [
                                 Text(
                                   'Bank Account',
-                                  style: TextStyles.textStyles_8.apply(
+                                  style: TextStylesPoppins.textStyles_8.apply(
                                       color: ColorStyle.grey,
                                       fontWeightDelta: 2),
                                 ),
                                 Text(
                                   'HARRISON SMITH CURRENCT A/C USD',
-                                  style: TextStyles.textStyles_10.apply(
+                                  style: TextStylesPoppins.textStyles_10.apply(
                                       color: ColorStyle.primaryWhite,
                                       fontWeightDelta: 2),
                                 ),
@@ -216,7 +216,7 @@ class SuccessfulCurrencyExchange extends StatelessWidget {
                           children: [
                             Text(
                               'Account Details',
-                              style: TextStyles.textStyles_8.apply(
+                              style: TextStylesPoppins.textStyles_8.apply(
                                   color: ColorStyle.grey, fontWeightDelta: 2),
                             ),
                             Column(
@@ -224,13 +224,13 @@ class SuccessfulCurrencyExchange extends StatelessWidget {
                               children: [
                                 Text(
                                   'Account Type',
-                                  style: TextStyles.textStyles_8.apply(
+                                  style: TextStylesPoppins.textStyles_8.apply(
                                       color: ColorStyle.grey,
                                       fontWeightDelta: 2),
                                 ),
                                 Text(
                                   'Plus + Current A/C',
-                                  style: TextStyles.textStyles_10.apply(
+                                  style: TextStylesPoppins.textStyles_10.apply(
                                       color: ColorStyle.primaryWhite,
                                       fontWeightDelta: 2),
                                 ),
@@ -241,13 +241,13 @@ class SuccessfulCurrencyExchange extends StatelessWidget {
                               children: [
                                 Text(
                                   'Account Number',
-                                  style: TextStyles.textStyles_8.apply(
+                                  style: TextStylesPoppins.textStyles_8.apply(
                                       color: ColorStyle.grey,
                                       fontWeightDelta: 2),
                                 ),
                                 Text(
                                   '0235859304',
-                                  style: TextStyles.textStyles_10.apply(
+                                  style: TextStylesPoppins.textStyles_10.apply(
                                       color: ColorStyle.primaryWhite,
                                       fontWeightDelta: 2),
                                 ),
@@ -266,12 +266,12 @@ class SuccessfulCurrencyExchange extends StatelessWidget {
                           children: [
                             Text(
                               'Conversion Fee',
-                              style: TextStyles.textStyles_8.apply(
+                              style: TextStylesPoppins.textStyles_8.apply(
                                   color: ColorStyle.grey, fontWeightDelta: 2),
                             ),
                             Text(
                               '10.00 USD',
-                              style: TextStyles.textStyles_10.apply(
+                              style: TextStylesPoppins.textStyles_10.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 2),
                             ),
@@ -288,12 +288,12 @@ class SuccessfulCurrencyExchange extends StatelessWidget {
                           children: [
                             Text(
                               'Exchange Reference',
-                              style: TextStyles.textStyles_8.apply(
+                              style: TextStylesPoppins.textStyles_8.apply(
                                   color: ColorStyle.grey, fontWeightDelta: 2),
                             ),
                             Text(
                               '120200507ACP39483MKS24',
-                              style: TextStyles.textStyles_10.apply(
+                              style: TextStylesPoppins.textStyles_10.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 2),
                             ),
@@ -310,12 +310,12 @@ class SuccessfulCurrencyExchange extends StatelessWidget {
                           children: [
                             Text(
                               'Total Recieved',
-                              style: TextStyles.textStyles_8.apply(
+                              style: TextStylesPoppins.textStyles_8.apply(
                                   color: ColorStyle.grey, fontWeightDelta: 2),
                             ),
                             Text(
                               '470,080 AED',
-                              style: TextStyles.textStyles_10.apply(
+                              style: TextStylesPoppins.textStyles_10.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 2),
                             ),

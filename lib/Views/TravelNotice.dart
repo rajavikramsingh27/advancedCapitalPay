@@ -60,7 +60,7 @@ class TravelNotice extends StatelessWidget {
                 child: Text(
                   "Savannah's Wedding Day 25th November 2022",
                   // controller.listApplyLeave[index],
-                  style: TextStyles
+                  style: TextStylesPoppins
                       .textStyles_14
                       .apply(
                       color: ColorStyle
@@ -83,7 +83,7 @@ class TravelNotice extends StatelessWidget {
                         children: [
                           Text(
                             "20",
-                            style: TextStyles
+                            style: TextStylesPoppins
                                 .textStyles_32
                                 .apply(
                                 color: ColorStyle
@@ -98,7 +98,7 @@ class TravelNotice extends StatelessWidget {
                               Text(
                                 "November",
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_10
                                     .apply(
                                     color: ColorStyle
@@ -109,7 +109,7 @@ class TravelNotice extends StatelessWidget {
                               Text(
                                 "Departing",
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_10
                                     .apply(
                                     color: ColorStyle
@@ -125,7 +125,7 @@ class TravelNotice extends StatelessWidget {
                         children: [
                           Text(
                             "15",
-                            style: TextStyles
+                            style: TextStylesPoppins
                                 .textStyles_32
                                 .apply(
                                 color: ColorStyle
@@ -140,7 +140,7 @@ class TravelNotice extends StatelessWidget {
                               Text(
                                 "December",
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_10
                                     .apply(
                                     color: ColorStyle
@@ -151,7 +151,7 @@ class TravelNotice extends StatelessWidget {
                               Text(
                                 "Arriving",
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_10
                                     .apply(
                                     color: ColorStyle
@@ -216,7 +216,7 @@ class TravelNotice extends StatelessWidget {
                     Text(
                       'Why Notify Us Of Your Travel?',
                       // controller.listApplyLeave[index],
-                      style: TextStyles
+                      style: TextStylesPoppins
                           .textStyles_14
                           .apply(
                           color: ColorStyle
@@ -228,7 +228,7 @@ class TravelNotice extends StatelessWidget {
                     Text(
                       'So we can increase security around your account.',
                       // controller.listApplyLeave[index],
-                      style: TextStyles
+                      style: TextStylesPoppins
                           .textStyles_12
                           .apply(
                           color: ColorStyle
@@ -242,7 +242,7 @@ class TravelNotice extends StatelessWidget {
                           'to use your cards and accounts with confidence'
                           ' when overseas.',
                       // controller.listApplyLeave[index],
-                      style: TextStyles
+                      style: TextStylesPoppins
                           .textStyles_12
                           .apply(
                           color: ColorStyle
@@ -269,7 +269,7 @@ class TravelNotice extends StatelessWidget {
                               Text(
                                 'Avoids any delays for your account',
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_10
                                     .apply(
                                     color: ColorStyle
@@ -290,7 +290,7 @@ class TravelNotice extends StatelessWidget {
                               Text(
                                 'Continue to use cards as usual while overseas',
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_10
                                     .apply(
                                     color: ColorStyle
@@ -315,7 +315,7 @@ class TravelNotice extends StatelessWidget {
                                 child:   Text(
                                   'Increased security around your account whilst you\'re away',
                                   // controller.listApplyLeave[index],
-                                  style: TextStyles
+                                  style: TextStylesPoppins
                                       .textStyles_10
                                       .apply(
                                       color: ColorStyle
@@ -345,7 +345,7 @@ class TravelNotice extends StatelessWidget {
                                       'to keep us informed! We appreciate it to keep you and'
                                       'safe as possible!',
                                   // controller.listApplyLeave[index],
-                                  style: TextStyles
+                                  style: TextStylesPoppins
                                       .textStyles_10
                                       .apply(
                                       color: ColorStyle
@@ -370,7 +370,7 @@ class TravelNotice extends StatelessWidget {
                         colorBG: ColorStyle.darkestBlueSignUp,
                         radiusBorder: 40,
                         width: 140,
-                        textStyle: TextStyles.textStyles_14.apply(
+                        textStyle: TextStylesPoppins.textStyles_14.apply(
                             color: ColorStyle
                                 .primaryWhite,
                         fontWeightDelta: 1),
@@ -390,7 +390,7 @@ class TravelNotice extends StatelessWidget {
                             child: ElevatedButtonCustom(
                               text: 'Upcoming Trips',
                               colorBG: ColorStyle.hex('#0E4AF2'),
-                              textStyle: TextStyles
+                              textStyle: TextStylesPoppins
                                   .textStyles_14
                                   .apply(
                                   color: ColorStyle
@@ -407,7 +407,7 @@ class TravelNotice extends StatelessWidget {
                             child: ElevatedButtonCustom(
                               text: 'Past Trips',
                               colorBG: ColorStyle.hex('#0535B1').withOpacity(0.6),
-                              textStyle: TextStyles
+                              textStyle: TextStylesPoppins
                                   .textStyles_14
                                   .apply(
                                   color: ColorStyle

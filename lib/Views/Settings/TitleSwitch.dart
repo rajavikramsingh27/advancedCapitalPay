@@ -23,7 +23,7 @@ class _TitleSwitchState extends State<TitleSwitch> {
       children: [
         Text(
           widget.title,
-          style: TextStyles
+          style: TextStylesPoppins
               .textStyles_16
               .apply(
             color: ColorStyle

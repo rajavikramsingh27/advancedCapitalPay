@@ -23,7 +23,7 @@ class ComponentsTitleInputs {
           children: [
             Text(
               title,
-              style: TextStyles.textStyles_14.apply(
+              style: TextStylesPoppins.textStyles_14.apply(
                 color: ColorStyle.secondryBlack,
                 fontWeightDelta: 2,
               ),
@@ -31,7 +31,7 @@ class ComponentsTitleInputs {
             if (isRequired)
               Text(
                 '*',
-                style: TextStyles.textStyles_14.apply(
+                style: TextStylesPoppins.textStyles_14.apply(
                   color: Colors.red,
                   fontWeightDelta: 11,
                 ),
@@ -44,7 +44,7 @@ class ComponentsTitleInputs {
         TextFieldCustom(
           colorBoder: ColorStyle.secondryBlack,
           hintText: hintText,
-          textStyle: TextStyles.textStyles_14.apply(
+          textStyle: TextStylesPoppins.textStyles_14.apply(
             fontWeightDelta: 2,
           ),
           radiusBorder: 30,
@@ -62,7 +62,7 @@ class ComponentsTitleInputs {
         ),
         Text(
           title,
-          style: TextStyles.textStyles_14.apply(
+          style: TextStylesPoppins.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 2,
           ),
@@ -76,7 +76,7 @@ class ComponentsTitleInputs {
           colorIcon: ColorStyle.secondryBlack,
           colorBorder: ColorStyle.secondryBlack,
           padding: EffectStyle.padding(16, 16, 10, 10),
-          textStyle: TextStyles.textStyles_14.apply(
+          textStyle: TextStylesPoppins.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 2,
           ),
@@ -96,7 +96,7 @@ class ComponentsTitleInputs {
           children: [
             Text(
               title,
-              style: TextStyles.textStyles_14.apply(
+              style: TextStylesPoppins.textStyles_14.apply(
                 color: ColorStyle.secondryBlack,
                 fontWeightDelta: 2,
               ),
@@ -104,7 +104,7 @@ class ComponentsTitleInputs {
             if (isRequired)
               Text(
                 '*',
-                style: TextStyles.textStyles_14.apply(
+                style: TextStylesPoppins.textStyles_14.apply(
                   color: Colors.red,
                   fontWeightDelta: 11,
                 ),
@@ -124,7 +124,7 @@ class ComponentsTitleInputs {
                 // colorIcon: ColorStyle.secondryBlack,
                 colorBorder: ColorStyle.secondryBlack,
                 padding: EffectStyle.padding(10, 10, 10, 10),
-                textStyle: TextStyles.textStyles_14.apply(
+                textStyle: TextStylesPoppins.textStyles_14.apply(
                   color: ColorStyle.secondryBlack,
                   fontWeightDelta: 2,
                 ),
@@ -134,7 +134,7 @@ class ComponentsTitleInputs {
             Expanded(child: TextFieldCustom(
               colorBoder: ColorStyle.secondryBlack,
               hintText: hintText,
-              textStyle: TextStyles.textStyles_14.apply(
+              textStyle: TextStylesPoppins.textStyles_14.apply(
                 fontWeightDelta: 2,
               ),
               radiusBorder: 30,
@@ -157,7 +157,7 @@ class ComponentsTitleInputs {
           children: [
             Text(
               title,
-              style: TextStyles.textStyles_14.apply(
+              style: TextStylesPoppins.textStyles_14.apply(
                 color: colorTitle,
                 fontWeightDelta: 2,
               ),
@@ -165,7 +165,7 @@ class ComponentsTitleInputs {
             if (isRequired)
               Text(
                 '*',
-                style: TextStyles.textStyles_14.apply(
+                style: TextStylesPoppins.textStyles_14.apply(
                   color: Colors.red,
                   fontWeightDelta: 11,
                 ),
@@ -178,7 +178,7 @@ class ComponentsTitleInputs {
         TextFieldCustom(
           colorBoder: colorBorder,
           hintText: hintText,
-          textStyle: TextStyles.textStyles_14.apply(
+          textStyle: TextStylesPoppins.textStyles_14.apply(
             fontWeightDelta: 2,
           ),
           radiusBorder: 30,
@@ -200,7 +200,7 @@ class ComponentsTitleInputs {
           children: [
             Text(
               title,
-              style: TextStyles.textStyles_14.apply(
+              style: TextStylesPoppins.textStyles_14.apply(
                 color: ColorStyle.secondryBlack,
                 fontWeightDelta: 2,
               ),
@@ -208,7 +208,7 @@ class ComponentsTitleInputs {
             if (isRequired)
               Text(
                 '*',
-                style: TextStyles.textStyles_16.apply(
+                style: TextStylesPoppins.textStyles_16.apply(
                   color: Colors.red,
                   fontWeightDelta: 11,
                 ),
@@ -224,7 +224,7 @@ class ComponentsTitleInputs {
           iconWidget: iconWidget,
           colorBorder: ColorStyle.secondryBlack,
           listValue: listContent,
-          textStyle: TextStyles.textStyles_14.apply(
+          textStyle: TextStylesPoppins.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 2,
           ),
@@ -252,12 +252,12 @@ class ComponentsTitleInputs {
       children: [
         Text(
           title,
-          style: TextStyles.textStyles_9.apply(
+          style: TextStylesPoppins.textStyles_9.apply(
               color: colorTitle, fontWeightDelta: 1),
         ),
         Text(
           desc,
-          style: TextStyles.textStyles_10.apply(
+          style: TextStylesPoppins.textStyles_10.apply(
               color: colorDesc,
               fontWeightDelta: 2),
         ),
@@ -287,7 +287,7 @@ class _TitleDropDownState extends State<TitleDropDown> {
         ),
         Text(
           widget.title!,
-          style: TextStyles.textStyles_14.apply(
+          style: TextStylesPoppins.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 2,
           ),
@@ -303,12 +303,12 @@ class _TitleDropDownState extends State<TitleDropDown> {
           ),
           hint: Text(
             'Employed',
-            style: TextStyles.textStyles_14.apply(
+            style: TextStylesPoppins.textStyles_14.apply(
               color: ColorStyle.grey,
               fontWeightDelta: 2,
             ),
           ),
-          textStyle: TextStyles.textStyles_14.apply(
+          textStyle: TextStylesPoppins.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 2,
           ),
@@ -352,7 +352,7 @@ class _TitleDatePickerState extends State<TitleDatePicker> {
           children: [
             Text(
               widget.title!,
-              style: TextStyles.textStyles_14.apply(
+              style: TextStylesPoppins.textStyles_14.apply(
                 color: ColorStyle.secondryBlack,
                 fontWeightDelta: 2,
               ),
@@ -360,7 +360,7 @@ class _TitleDatePickerState extends State<TitleDatePicker> {
             if (widget.isRequired!)
             Text(
               '*',
-              style: TextStyles.textStyles_16.apply(
+              style: TextStylesPoppins.textStyles_16.apply(
                 color: Colors.red,
                 fontWeightDelta: 2,
               ),
@@ -385,7 +385,7 @@ class _TitleDatePickerState extends State<TitleDatePicker> {
                 )),
             child: Text(
               dateOfBirth,
-              style: TextStyles.textStyles_14.apply(
+              style: TextStylesPoppins.textStyles_14.apply(
                 color: (dateOfBirth == '24-08-1982')
                     ? ColorStyle.grey
                     : ColorStyle.secondryBlack,

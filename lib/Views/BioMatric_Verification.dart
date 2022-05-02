@@ -58,7 +58,7 @@ class BioMatric_Verification extends StatelessWidget {
                                     Text(
                                       'Hello',
                                       textAlign: TextAlign.left,
-                                      style: TextStyles.textStyles_24.apply(
+                                      style: TextStylesPoppins.textStyles_24.apply(
                                         color: ColorStyle.primaryWhite,
                                         fontWeightDelta: 1,
                                       ),
@@ -67,7 +67,7 @@ class BioMatric_Verification extends StatelessWidget {
                                     Text(
                                       'HARRISON SMIT,',
                                       textAlign: TextAlign.left,
-                                      style: TextStyles.textStyles_24.apply(
+                                      style: TextStylesPoppins.textStyles_24.apply(
                                         color: ColorStyle.primaryWhite,
                                         fontWeightDelta: 1,
                                       ),
@@ -76,7 +76,7 @@ class BioMatric_Verification extends StatelessWidget {
                                     Text(
                                       'Use Face ID to login to your account.',
                                       textAlign: TextAlign.left,
-                                      style: TextStyles.textStyles_16.apply(
+                                      style: TextStylesPoppins.textStyles_16.apply(
                                         color: ColorStyle.grayColor,
                                         fontWeightDelta: 0,
                                       ),
@@ -122,7 +122,7 @@ class BioMatric_Verification extends StatelessWidget {
                                   Text(
                                     'Successfull Login',
                                     textAlign: TextAlign.left,
-                                    style: TextStyles.textStyles_14.apply(
+                                    style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.green,
                                       fontWeightDelta: 0,
                                     ),

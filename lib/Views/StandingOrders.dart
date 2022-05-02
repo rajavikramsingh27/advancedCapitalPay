@@ -34,7 +34,7 @@ class StandingOrders extends StatelessWidget {
           padding: EffectStyle.padding(16, 16, 0, 0),
           child: Text(
             'Standing Orders',
-            style: TextStyles.textStyles_18
+            style: TextStylesPoppins.textStyles_18
                 .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
           ),
         ),
@@ -94,9 +94,9 @@ class StandingOrders extends StatelessWidget {
                       leadingImage: ImageStyle.ellipse2,
                       nameUser: 'HARRISON SMITH',
                       descriptionUser: 'Your Personal Settings',
-                      nameStyle: TextStyles.textStyles_18.apply(
+                      nameStyle: TextStylesPoppins.textStyles_18.apply(
                           color: ColorStyle.primaryWhite, fontWeightDelta: 1),
-                      descriptionStyle: TextStyles.textStyles_12
+                      descriptionStyle: TextStylesPoppins.textStyles_12
                           .apply(color: ColorStyle.primaryWhite),
                       trailingAction: [
                         IconButton(
@@ -130,7 +130,7 @@ class StandingOrders extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       child: Text(
                         'Active Standing Orders',
-                        style: TextStyles.textStyles_14.apply(
+                        style: TextStylesPoppins.textStyles_14.apply(
                             color: ColorStyle.primaryWhite,
                             fontWeightDelta: 2),
                       ),
@@ -145,7 +145,7 @@ class StandingOrders extends StatelessWidget {
                           Expanded(
                             child: ElevatedButtonCustom(
                               text: 'Sorty By Payment Date',
-                              textStyle: TextStyles.textStyles_12.apply(
+                              textStyle: TextStylesPoppins.textStyles_12.apply(
                                   color: controller.isPersonal.value
                                       ? ColorStyle.primaryWhite
                                       : ColorStyle.primaryWhite
@@ -166,7 +166,7 @@ class StandingOrders extends StatelessWidget {
                           Expanded(
                             child: ElevatedButtonCustom(
                               text: 'Sort by A to Z',
-                              textStyle: TextStyles.textStyles_12.apply(
+                              textStyle: TextStylesPoppins.textStyles_12.apply(
                                   color: !controller.isPersonal.value
                                       ? ColorStyle.primaryWhite
                                       : ColorStyle.primaryWhite
@@ -193,7 +193,7 @@ class StandingOrders extends StatelessWidget {
                     ),
                     ElevatedButtonCustom(
                       text: 'New Standing Order',
-                      textStyle: TextStyles.textStyles_14.apply(
+                      textStyle: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.primaryWhite,
                       ),
                       colorBG: ColorStyle.darkestBlueSignUp,

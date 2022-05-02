@@ -52,7 +52,7 @@ class TransferBetween extends StatelessWidget {
                   Text(
                     'Transfer Details',
                     // controller.listApplyLeave[index],
-                    style: TextStyles
+                    style: TextStylesPoppins
                         .textStyles_14
                         .apply(
                         fontWeightDelta: 2,
@@ -76,7 +76,7 @@ class TransferBetween extends StatelessWidget {
                               Text(
                                 'Account*',
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_14
                                     .apply(
                                     fontWeightDelta: 2,
@@ -106,7 +106,7 @@ class TransferBetween extends StatelessWidget {
                               Text(
                                 'Standing Order',
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_12
                                     .apply(
                                     fontWeightDelta: 3,
@@ -123,7 +123,7 @@ class TransferBetween extends StatelessWidget {
                               Text(
                                 'Transfer Date and Frequency*',
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_12
                                     .apply(
                                     fontWeightDelta: 3,
@@ -151,7 +151,7 @@ class TransferBetween extends StatelessWidget {
                               Text(
                                 'This transfer can be today or scheduled at a later date',
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_10
                                     .apply(
                                     fontWeightDelta: 1,

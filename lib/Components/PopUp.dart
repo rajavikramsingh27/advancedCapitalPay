@@ -66,7 +66,7 @@ class TravelPopUp {
                       ),
                       Text(
                         'HAVE A GREAT TRIP',
-                        style: TextStyles
+                        style: TextStylesPoppins
                             .textStyles_16
                             .apply(
                             fontWeightDelta: 2,
@@ -80,7 +80,7 @@ class TravelPopUp {
                         padding: EdgeInsets.only(left: 40, right: 40),
                       child: Text(
                           "You have successfully confirmed your travel notice. Sit back, relax and enjoy your trip.",
-                          style: TextStyles
+                          style: TextStylesPoppins
                               .textStyles_14
                               .apply(
                               fontWeightDelta: 1,
@@ -96,7 +96,7 @@ class TravelPopUp {
                         text: 'Travel Dashboard',
                         colorBG: ColorStyle.darkestBlueSignUp,
                         radiusBorder: 30,
-                        textStyle: TextStyles.textStyles_16.apply(
+                        textStyle: TextStylesPoppins.textStyles_16.apply(
                             color: ColorStyle.primaryWhite,
                             fontWeightDelta: 1),
                         onTap: () {
@@ -178,7 +178,7 @@ filter() {
                     Text(
                       'HAVE A GREAT TRIP',
                       // controller.listApplyLeave[index],
-                      style: TextStyles
+                      style: TextStylesPoppins
                           .textStyles_16
                           .apply(
                           fontWeightDelta: 2,
@@ -191,7 +191,7 @@ filter() {
                     Text(
                       'You have successfully confirmed',
                       // controller.listApplyLeave[index],
-                      style: TextStyles
+                      style: TextStylesPoppins
                           .textStyles_14
                           .apply(
                           fontWeightDelta: 1,
@@ -201,7 +201,7 @@ filter() {
                     Text(
                       'your travel notice. Sit back, relax',
                       // controller.listApplyLeave[index],
-                      style: TextStyles
+                      style: TextStylesPoppins
                           .textStyles_14
                           .apply(
                           fontWeightDelta: 1,
@@ -211,7 +211,7 @@ filter() {
                     Text(
                       'and enjoy your trip.',
                       // controller.listApplyLeave[index],
-                      style: TextStyles
+                      style: TextStylesPoppins
                           .textStyles_14
                           .apply(
                           fontWeightDelta: 1,
@@ -226,7 +226,7 @@ filter() {
                       text: 'Travel Dashboard',
                       colorBG: ColorStyle.blueSKY,
                       radiusBorder: 30,
-                      textStyle: TextStyles.textStyles_16.apply(
+                      textStyle: TextStylesPoppins.textStyles_16.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 1),
                       onTap: () {

@@ -39,7 +39,7 @@ class NewStandingOrder extends StatelessWidget {
           padding: EffectStyle.padding(16, 16, 0, 0),
           child: Text(
             'Standing Orders',
-            style: TextStyles.textStyles_18
+            style: TextStylesPoppins.textStyles_18
                 .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
           ),
         ),
@@ -105,10 +105,10 @@ class NewStandingOrder extends StatelessWidget {
                       leadingImage: ImageStyle.ellipse2,
                       nameUser: 'HARRISON SMITH',
                       descriptionUser: 'Your Personal Settings',
-                      nameStyle: TextStyles.textStyles_18.apply(
+                      nameStyle: TextStylesPoppins.textStyles_18.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 1),
-                      descriptionStyle: TextStyles.textStyles_12
+                      descriptionStyle: TextStylesPoppins.textStyles_12
                           .apply(color: ColorStyle.primaryWhite),
                       trailingAction: [
                         IconButton(
@@ -142,7 +142,7 @@ class NewStandingOrder extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       child: Text(
                         'Savings',
-                        style: TextStyles.textStyles_14.apply(
+                        style: TextStylesPoppins.textStyles_14.apply(
                             color: ColorStyle.primaryWhite,
                             fontWeightDelta: 2),
                       ),
@@ -154,7 +154,7 @@ class NewStandingOrder extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       child: Text(
                         'Standing Orders',
-                        style: TextStyles.textStyles_14.apply(
+                        style: TextStylesPoppins.textStyles_14.apply(
                             color: ColorStyle.primaryWhite,
                             fontWeightDelta: 2),
                       ),
@@ -231,7 +231,7 @@ class NewStandingOrder extends StatelessWidget {
                               colorBGFirst: Colors.transparent,
                               colorBorderFirst: Colors.red,
                               textStyleFirst:
-                              TextStyles.textStyles_12.apply(
+                              TextStylesPoppins.textStyles_12.apply(
                                 fontWeightDelta: 1,
                                 color: Colors.red,
                               ),
@@ -239,7 +239,7 @@ class NewStandingOrder extends StatelessWidget {
                               textSecond: 'Edit Standing Order',
                               colorBGSecond: ColorStyle.hex('#016ECF'),
                               colorBorderSecond: Colors.transparent,
-                              textStyleSecond: TextStyles.textStyles_10
+                              textStyleSecond: TextStylesPoppins.textStyles_10
                                   .apply(
                                   fontWeightDelta: 1,
                                   color: ColorStyle.primaryWhite),
@@ -275,19 +275,19 @@ class NewStandingOrder extends StatelessWidget {
                           InfoIconDescription(
                             padding: EffectStyle.padding(0, 0, 16, 0),
                             description: 'By continuing with the transfer you acknowledge and confirm the applicable terms and conditions including waiting time for newly added beneficiary which may apply.',
-                            descriptionStyle: TextStyles.textStyles_12
+                            descriptionStyle: TextStylesPoppins.textStyles_12
                                 .apply(fontWeightDelta: 1, color: ColorStyle.secondryBlack),
                           ),
                           InfoIconDescription(
                             padding: EffectStyle.padding(0, 0, 16, 0),
                             description: 'Please note that international transfer will be processed on international business days (Monday-Friday)',
-                            descriptionStyle: TextStyles.textStyles_12
+                            descriptionStyle: TextStylesPoppins.textStyles_12
                                 .apply(fontWeightDelta: 1, color: ColorStyle.secondryBlack),
                           ),
                           InfoIconDescription(
                             padding: EffectStyle.padding(0, 0, 16, 0),
                             description: 'Transfers which fall on a holiday, may be processed on the next working business day.',
-                            descriptionStyle: TextStyles.textStyles_12
+                            descriptionStyle: TextStylesPoppins.textStyles_12
                                 .apply(fontWeightDelta: 1, color: ColorStyle.secondryBlack),
                           ),
                           SizedBox(height: 20),
@@ -296,7 +296,7 @@ class NewStandingOrder extends StatelessWidget {
                             textFirst: 'Cancel',
                             colorBGFirst: Colors.transparent,
                             colorBorderFirst: ColorStyle.hex('#016ECF'),
-                            textStyleFirst: TextStyles.textStyles_14.apply(
+                            textStyleFirst: TextStylesPoppins.textStyles_14.apply(
                               fontWeightDelta: 1,
                               color: ColorStyle.hex('#016ECF'),
                             ),
@@ -304,7 +304,7 @@ class NewStandingOrder extends StatelessWidget {
                             textSecond: 'Gernerate OTP',
                             colorBGSecond: ColorStyle.hex('#016ECF'),
                             colorBorderSecond: Colors.transparent,
-                            textStyleSecond: TextStyles.textStyles_14
+                            textStyleSecond: TextStylesPoppins.textStyles_14
                                 .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
                             onTapSecond: () {
 

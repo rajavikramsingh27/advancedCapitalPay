@@ -30,7 +30,7 @@ class ButtonsWithDescriptionBottomUI extends StatelessWidget {
       children: [
         Text(
           description!,
-          style: TextStyles
+          style: TextStylesPoppins
               .textStyles_14
               .apply(
             color: ColorStyle
@@ -44,7 +44,7 @@ class ButtonsWithDescriptionBottomUI extends StatelessWidget {
             Expanded(
               child: ElevatedButtonCustom(
                   text: textFirst,
-                  textStyle: TextStyles.textStyles_16
+                  textStyle: TextStylesPoppins.textStyles_16
                       .apply(color: ColorStyle.darkestBlueSignUp, fontWeightDelta: 1),
                   colorBG: ColorStyle.primaryWhite,
                   colorBorder: ColorStyle.darkestBlueSignUp,
@@ -58,7 +58,7 @@ class ButtonsWithDescriptionBottomUI extends StatelessWidget {
             Expanded(
               child: ElevatedButtonCustom(
                   text: textSecond,
-                  textStyle: TextStyles.textStyles_16
+                  textStyle: TextStylesPoppins.textStyles_16
                       .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                   colorBG: ColorStyle.darkestBlueSignUp,
                   radiusBorder: 40,

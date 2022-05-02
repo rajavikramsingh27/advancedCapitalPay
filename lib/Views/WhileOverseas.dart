@@ -73,7 +73,7 @@ class WhileOverseas extends StatelessWidget {
                                   children: [
                                     Text(
                                       "20",
-                                      style: TextStyles.textStyles_32.apply(
+                                      style: TextStylesPoppins.textStyles_32.apply(
                                           color: ColorStyle.primaryWhite,
                                           fontWeightDelta: 1),
                                     ),
@@ -87,14 +87,14 @@ class WhileOverseas extends StatelessWidget {
                                         Text(
                                           "November",
                                           // controller.listApplyLeave[index],
-                                          style: TextStyles.textStyles_10.apply(
+                                          style: TextStylesPoppins.textStyles_10.apply(
                                               color: ColorStyle.primaryWhite,
                                               fontWeightDelta: 1),
                                         ),
                                         Text(
                                           "Departing",
                                           // controller.listApplyLeave[index],
-                                          style: TextStyles.textStyles_10.apply(
+                                          style: TextStylesPoppins.textStyles_10.apply(
                                               color: ColorStyle.primaryWhite,
                                               fontWeightDelta: 1),
                                         ),
@@ -106,7 +106,7 @@ class WhileOverseas extends StatelessWidget {
                                   children: [
                                     Text(
                                       "15",
-                                      style: TextStyles.textStyles_32.apply(
+                                      style: TextStylesPoppins.textStyles_32.apply(
                                           color: ColorStyle.primaryWhite,
                                           fontWeightDelta: 1),
                                     ),
@@ -120,14 +120,14 @@ class WhileOverseas extends StatelessWidget {
                                         Text(
                                           "December",
                                           // controller.listApplyLeave[index],
-                                          style: TextStyles.textStyles_10.apply(
+                                          style: TextStylesPoppins.textStyles_10.apply(
                                               color: ColorStyle.primaryWhite,
                                               fontWeightDelta: 1),
                                         ),
                                         Text(
                                           "Arriving",
                                           // controller.listApplyLeave[index],
-                                          style: TextStyles.textStyles_10.apply(
+                                          style: TextStylesPoppins.textStyles_10.apply(
                                               color: ColorStyle.primaryWhite,
                                               fontWeightDelta: 1),
                                         ),
@@ -152,7 +152,7 @@ class WhileOverseas extends StatelessWidget {
                             Text(
                               'Seychelles',
                               // controller.listApplyLeave[index],
-                              style: TextStyles
+                              style: TextStylesPoppins
                                   .textStyles_16
                                   .apply(
                                   fontWeightDelta: 2,
@@ -166,7 +166,7 @@ class WhileOverseas extends StatelessWidget {
                                   Text(
                                     'Add Destination',
                                     // controller.listApplyLeave[index],
-                                    style: TextStyles
+                                    style: TextStylesPoppins
                                         .textStyles_12
                                         .apply(
                                         fontWeightDelta: 1,
@@ -208,7 +208,7 @@ class WhileOverseas extends StatelessWidget {
                             Text(
                               'My Travel Notes',
                               // controller.listApplyLeave[index],
-                              style: TextStyles
+                              style: TextStylesPoppins
                                   .textStyles_16
                                   .apply(
                                   fontWeightDelta: 2,
@@ -222,7 +222,7 @@ class WhileOverseas extends StatelessWidget {
                                   Text(
                                     'Edit',
                                     // controller.listApplyLeave[index],
-                                    style: TextStyles
+                                    style: TextStylesPoppins
                                         .textStyles_12
                                         .apply(
                                         fontWeightDelta: 1,
@@ -261,7 +261,7 @@ class WhileOverseas extends StatelessWidget {
                         ),
                         Text(
                           'Savannah\'s Wedding in Seychelles ',
-                          style: TextStyles
+                          style: TextStylesPoppins
                               .textStyles_14
                               .apply(
                               fontWeightDelta: 0,
@@ -275,7 +275,7 @@ class WhileOverseas extends StatelessWidget {
                           'Reminder to contact Savannah\'s mum and'
                               ' thank her for sorting out the flight details.',
                           // controller.listApplyLeave[index],
-                          style: TextStyles
+                          style: TextStylesPoppins
                               .textStyles_14
                               .apply(
                               fontWeightDelta: 0,
@@ -288,7 +288,7 @@ class WhileOverseas extends StatelessWidget {
                         Text(
                           'Your Private Travel Notes',
                           // controller.listApplyLeave[index],
-                          style: TextStyles
+                          style: TextStylesPoppins
                               .textStyles_16
                               .apply(
                               fontWeightDelta: 2,
@@ -306,7 +306,7 @@ class WhileOverseas extends StatelessWidget {
                                 " Reminder to contact Savannah's mum and "
                                 "thank her for sorting out the flight details.",
                             // controller.listApplyLeave[index],
-                            style: TextStyles
+                            style: TextStylesPoppins
                                 .textStyles_12
                                 .apply(
                                 fontWeightDelta: 1,
@@ -328,7 +328,7 @@ class WhileOverseas extends StatelessWidget {
                         Text(
                           'Overseas I Plan To',
                           // controller.listApplyLeave[index],
-                          style: TextStyles.textStyles_14.apply(
+                          style: TextStylesPoppins.textStyles_14.apply(
                               fontWeightDelta: 2,
                               color: ColorStyle.secondryBlack),
                         ),
@@ -353,7 +353,7 @@ class WhileOverseas extends StatelessWidget {
                                   ),
                                   Text(
                                     'Use ATMs Frequently',
-                                    style: TextStyles.textStyles_12.apply(
+                                    style: TextStylesPoppins.textStyles_12.apply(
                                         fontWeightDelta: 1,
                                         color: ColorStyle.secondryBlack),
                                   ),
@@ -387,7 +387,7 @@ class WhileOverseas extends StatelessWidget {
                                   Text(
                                     'Make Large Purchases',
                                     // controller.listApplyLeave[index],
-                                    style: TextStyles.textStyles_12.apply(
+                                    style: TextStylesPoppins.textStyles_12.apply(
                                         fontWeightDelta: 1,
                                         color: ColorStyle.secondryBlack),
                                   ),
@@ -406,7 +406,7 @@ class WhileOverseas extends StatelessWidget {
                           'If you\'ve got an idea of how you\'ll '
                               'be using your cards, let us know, it\'ll help us keep '
                               'an eye out for suspicious activity.',
-                          style: TextStyles.textStyles_12.apply(
+                          style: TextStylesPoppins.textStyles_12.apply(
                               fontWeightDelta: 1,
                               color: ColorStyle.secondryBlack),
                         ),
@@ -419,7 +419,7 @@ class WhileOverseas extends StatelessWidget {
                           children: [
                             Expanded(child: ElevatedButtonCustom(
                               text: 'Delete',
-                              textStyle: TextStyles.textStyles_14
+                              textStyle: TextStylesPoppins.textStyles_14
                                   .apply(color: ColorStyle.blueSKY),
                               colorBG: ColorStyle.primaryWhite,
                               colorBorder: ColorStyle.blueSKY,
@@ -431,7 +431,7 @@ class WhileOverseas extends StatelessWidget {
                             SizedBox(width: 16,),
                             Expanded(child: ElevatedButtonCustom(
                               text: 'Submit',
-                              textStyle: TextStyles.textStyles_14
+                              textStyle: TextStylesPoppins.textStyles_14
                                   .apply(color: ColorStyle.primaryWhite),
                               colorBG: ColorStyle.darkestBlueSignUp,
                               colorBorder: ColorStyle.darkestBlueSignUp,

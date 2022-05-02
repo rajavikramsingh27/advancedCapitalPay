@@ -101,7 +101,7 @@ class _FourOptionSeriesState extends State<FourOptionSeries> {
                       ),
                       Text(
                         widget.arrTitles![0],
-                        style: TextStyles.textStyles_10.apply(
+                        style: TextStylesPoppins.textStyles_10.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 1,
                         ),
@@ -122,7 +122,7 @@ class _FourOptionSeriesState extends State<FourOptionSeries> {
                       ),
                       Text(
                         widget.arrTitles![1],
-                        style: TextStyles.textStyles_10.apply(
+                        style: TextStylesPoppins.textStyles_10.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 1,
                         ),
@@ -143,7 +143,7 @@ class _FourOptionSeriesState extends State<FourOptionSeries> {
                       ),
                       Text(
                         widget.arrTitles![2],
-                        style: TextStyles.textStyles_10.apply(
+                        style: TextStylesPoppins.textStyles_10.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 1,
                         ),
@@ -166,7 +166,7 @@ class _FourOptionSeriesState extends State<FourOptionSeries> {
                       Container(
                         child: Text(
                           widget.arrTitles![3],
-                          style: TextStyles.textStyles_10.apply(
+                          style: TextStylesPoppins.textStyles_10.apply(
                             color: ColorStyle.primaryWhite,
                             fontWeightDelta: 1,
                           ),

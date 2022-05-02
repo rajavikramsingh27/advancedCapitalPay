@@ -57,7 +57,7 @@ class PersonalApplication11 extends StatelessWidget {
                         Container(
                           child: Text(
                             'ACFVC8JTJ',
-                            style: TextStyles.textStyles_14.apply(
+                            style: TextStylesPoppins.textStyles_14.apply(
                               color: ColorStyle.primaryWhite,
                               fontWeightDelta: 1,
                             ),
@@ -86,7 +86,7 @@ class PersonalApplication11 extends StatelessWidget {
                                 'In submitting this Advance Capital '
                                 ' Pay ApplicationForm, I/We fully understand '
                                 ' and agree for and on behalf that.',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -130,7 +130,7 @@ class PersonalApplication11 extends StatelessWidget {
                                     SizedBox(width: 10,),
                                     Expanded(child: Text(
                                       'Click here to indicate that you have read and agree to the terms of Advance Capital Agreement',
-                                      style: TextStyles.textStyles_14.apply(
+                                      style: TextStylesPoppins.textStyles_14.apply(
                                         color: ColorStyle.secondryBlack,
                                         fontWeightDelta: 0,
                                       ),

@@ -26,7 +26,7 @@ class Exchange extends StatelessWidget {
             appBar: AppBarStyleCustomBenifi(
               title: Text(
                 'Currency Exchange',
-                style: TextStyles.textStyles_16.apply(
+                style: TextStylesPoppins.textStyles_16.apply(
                     color: ColorStyle.primaryWhite, fontWeightDelta: 1),
               ),
               leadingButton: IconButton(
@@ -57,7 +57,7 @@ class Exchange extends StatelessWidget {
                   ),
                   Text(
                     'Please confirm the exchange details below before confirming',
-                    style: TextStyles.textStyles_12.apply(
+                    style: TextStylesPoppins.textStyles_12.apply(
                         color: ColorStyle.primaryWhite, fontWeightDelta: 0),
                   ),
                   SizedBox(
@@ -71,7 +71,7 @@ class Exchange extends StatelessWidget {
                   ),
                   Text(
                     'Exchange Currency and Amount',
-                    style: TextStyles.textStyles_12.apply(
+                    style: TextStylesPoppins.textStyles_12.apply(
                         color: ColorStyle.primaryWhite, fontWeightDelta: 2),
                   ),
                   SizedBox(
@@ -87,7 +87,7 @@ class Exchange extends StatelessWidget {
                     textFirst:'Cancel',
                     colorBGFirst:Colors.transparent,
                     colorBorderFirst:ColorStyle.hex('#016ECF'),
-                    textStyleFirst: TextStyles.textStyles_14.apply(
+                    textStyleFirst: TextStylesPoppins.textStyles_14.apply(
                       fontWeightDelta: 1,
                       color: ColorStyle.hex('#016ECF'),
                     ),
@@ -97,7 +97,7 @@ class Exchange extends StatelessWidget {
                     textSecond:'Exchange Now',
                     colorBGSecond: ColorStyle.hex('#016ECF'),
                     colorBorderSecond: Colors.transparent,
-                    textStyleSecond: TextStyles.textStyles_14.apply(
+                    textStyleSecond: TextStylesPoppins.textStyles_14.apply(
                         fontWeightDelta: 1,
                         color: ColorStyle.primaryWhite
                     ),

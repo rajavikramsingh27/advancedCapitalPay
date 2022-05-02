@@ -81,21 +81,21 @@ class SavingGoal2 extends StatelessWidget {
                                       children: [
                                         Text(
                                           'Maldives',
-                                          style: TextStyles.textStyles_24.apply(
+                                          style: TextStylesPoppins.textStyles_24.apply(
                                               color: ColorStyle.primaryWhite,
                                               fontWeightDelta: 1
                                           ),
                                         ),
                                         Text(
                                           '68 days left',
-                                          style: TextStyles.textStyles_12.apply(
+                                          style: TextStylesPoppins.textStyles_12.apply(
                                               color: ColorStyle.primaryWhite,
                                               fontWeightDelta: 1
                                           ),
                                         ),
                                         Text(
                                           '\$ 8,187.89',
-                                          style: TextStyles.textStyles_24.apply(
+                                          style: TextStylesPoppins.textStyles_24.apply(
                                             color: ColorStyle.primaryWhite,
                                             fontWeightDelta: 1,
                                           ),
@@ -145,7 +145,7 @@ class SavingGoal2 extends StatelessWidget {
                                 SizedBox(height: 5,),
                                 Text(
                                   'Add Funds',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.blueSKY,
                                       fontWeightDelta: 2,
                                   ),
@@ -177,7 +177,7 @@ class SavingGoal2 extends StatelessWidget {
                                 SizedBox(height: 5,),
                                 Text(
                                   'Withdraw',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                     color: ColorStyle.blueSKY,
                                     fontWeightDelta: 2,
                                   ),
@@ -210,7 +210,7 @@ class SavingGoal2 extends StatelessWidget {
                                 SizedBox(height: 5,),
                                 Text(
                                   'More',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                     color: ColorStyle.blueSKY,
                                     fontWeightDelta: 2,
                                   ),
@@ -236,7 +236,7 @@ class SavingGoal2 extends StatelessWidget {
                               SizedBox(height: 8),
                               Text(
                                 'Saving rules',
-                                style: TextStyles.textStyles_16.apply(
+                                style: TextStylesPoppins.textStyles_16.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 2
                                 ),
@@ -263,14 +263,14 @@ class SavingGoal2 extends StatelessWidget {
                                     children: [
                                       Text(
                                         ' Spare change',
-                                        style: TextStyles.textStyles_14.apply(
+                                        style: TextStylesPoppins.textStyles_14.apply(
                                             color: ColorStyle.grey,
                                             fontWeightDelta: 2
                                         ),
                                       ),
                                       Text(
                                         'Round-Up ',
-                                        style: TextStyles.textStyles_14.apply(
+                                        style: TextStylesPoppins.textStyles_14.apply(
                                             color: ColorStyle.secondryBlack,
                                             fontWeightDelta: 2
                                         ),
@@ -304,14 +304,14 @@ class SavingGoal2 extends StatelessWidget {
                                     children: [
                                       Text(
                                         'Recurring payment',
-                                        style: TextStyles.textStyles_14.apply(
+                                        style: TextStylesPoppins.textStyles_14.apply(
                                             color: ColorStyle.grey,
                                             fontWeightDelta: 2
                                         ),
                                       ),
                                       Text(
                                         '10.00 / 9th day of the month',
-                                        style: TextStyles.textStyles_14.apply(
+                                        style: TextStylesPoppins.textStyles_14.apply(
                                             color: ColorStyle.secondryBlack,
                                             fontWeightDelta: 2
                                         ),
@@ -334,7 +334,7 @@ class SavingGoal2 extends StatelessWidget {
                        padding: EdgeInsets.only(left: 10),
                        child:  Text(
                          'Activity',
-                         style: TextStyles.textStyles_16.apply(
+                         style: TextStylesPoppins.textStyles_16.apply(
                              color: ColorStyle.secondryBlack,
                              fontWeightDelta: 2
                          ),
@@ -368,7 +368,7 @@ class SavingGoal2 extends StatelessWidget {
                                       Text(
                                         'KFC',
                                         // controller.chooseActivitySelected[index],
-                                        style: TextStyles.textStyles_14.apply(
+                                        style: TextStylesPoppins.textStyles_14.apply(
                                             color: ColorStyle.secondryBlack,
                                             fontWeightDelta: 2
                                         ),
@@ -376,7 +376,7 @@ class SavingGoal2 extends StatelessWidget {
                                       SizedBox(height: 2,),
                                       Text(
                                         'Spare change',
-                                        style: TextStyles.textStyles_14.apply(
+                                        style: TextStylesPoppins.textStyles_14.apply(
                                             color: ColorStyle.grey,
                                             fontWeightDelta: 2
                                         ),
@@ -392,7 +392,7 @@ class SavingGoal2 extends StatelessWidget {
                                       SizedBox(height: 20,),
                                       Text(
                                         '     + S 1.90',
-                                        style: TextStyles.textStyles_14.apply(
+                                        style: TextStylesPoppins.textStyles_14.apply(
                                             color: ColorStyle.green,
                                             fontWeightDelta: 2
                                         ),
@@ -400,7 +400,7 @@ class SavingGoal2 extends StatelessWidget {
                                       SizedBox(height: 2,),
                                       Text(
                                         '          22:31',
-                                        style: TextStyles.textStyles_14.apply(
+                                        style: TextStylesPoppins.textStyles_14.apply(
                                             color: ColorStyle.grey,
                                             fontWeightDelta: 2
                                         ),

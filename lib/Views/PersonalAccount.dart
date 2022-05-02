@@ -54,9 +54,9 @@ class PersonalAccount extends StatelessWidget {
             title: 'Account Selection',
             description:
                 'From this page you can add a local and International Beneficiary. You can also set your preferred sending currency Which can be changed when making a payment.',
-            textStyle: TextStyles.textStyles_16
+            textStyle: TextStylesPoppins.textStyles_16
                 .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
-            descriptionStyle: TextStyles.textStyles_12
+            descriptionStyle: TextStylesPoppins.textStyles_12
                 .apply(fontWeightDelta: 2, color: ColorStyle.secondryBlack),
           ),
         ),
@@ -67,7 +67,7 @@ class PersonalAccount extends StatelessWidget {
           padding: padding,
           child: Text(
             'Paying From',
-            style: TextStyles.textStyles_16
+            style: TextStylesPoppins.textStyles_16
                 .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
           ),
         ),
@@ -96,7 +96,7 @@ class PersonalAccount extends StatelessWidget {
           padding: padding,
           child: Text(
             'Paying Details',
-            style: TextStyles.textStyles_16
+            style: TextStylesPoppins.textStyles_16
                 .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
           ),
         ),
@@ -132,7 +132,7 @@ class PersonalAccount extends StatelessWidget {
                 textFirst: 'Cancel',
                 colorBGFirst: Colors.transparent,
                 colorBorderFirst: ColorStyle.hex('#016ECF'),
-                textStyleFirst: TextStyles.textStyles_14.apply(
+                textStyleFirst: TextStylesPoppins.textStyles_14.apply(
                   fontWeightDelta: 1,
                   color: ColorStyle.hex('#016ECF'),
                 ),
@@ -140,7 +140,7 @@ class PersonalAccount extends StatelessWidget {
                 textSecond: 'Continue',
                 colorBGSecond: ColorStyle.hex('#016ECF'),
                 colorBorderSecond: Colors.transparent,
-                textStyleSecond: TextStyles.textStyles_14
+                textStyleSecond: TextStylesPoppins.textStyles_14
                     .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
                 onTapSecond: () {
                   controller.index.value = controller.index.value + 1;
@@ -172,7 +172,7 @@ class PersonalAccount extends StatelessWidget {
           padding: padding,
           child: Text(
             'Beneficiary Details',
-            style: TextStyles.textStyles_16
+            style: TextStylesPoppins.textStyles_16
                 .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
           ),
         ),
@@ -194,9 +194,9 @@ class PersonalAccount extends StatelessWidget {
                 title: 'Account Selection',
                 description:
                     'From this page you can add a local and International Beneficiary. You can also set your preferred sending currency Which can be changed when making a payment.',
-                textStyle: TextStyles.textStyles_16
+                textStyle: TextStylesPoppins.textStyles_16
                     .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
-                descriptionStyle: TextStyles.textStyles_12
+                descriptionStyle: TextStylesPoppins.textStyles_12
                     .apply(fontWeightDelta: 2, color: ColorStyle.secondryBlack),
               ),
               Row(
@@ -241,12 +241,12 @@ class PersonalAccount extends StatelessWidget {
               ),
               Text(
                 'Beneficiary Documentation',
-                style: TextStyles.textStyles_16
+                style: TextStylesPoppins.textStyles_16
                     .apply(fontWeightDelta: 2, color: ColorStyle.secondryBlack),
               ),
               Text(
                 'Upload any relevant documentation relating to the beneficiary such as Identification Documents, Company Details, Invoices and more.',
-                style: TextStyles.textStyles_12
+                style: TextStylesPoppins.textStyles_12
                     .apply(fontWeightDelta: 1, color: ColorStyle.secondryBlack),
               ),
               SizedBox(
@@ -271,7 +271,7 @@ class PersonalAccount extends StatelessWidget {
                     ),
                     Text(
                       'Choose files here',
-                      style: TextStyles.textStyles_13.apply(
+                      style: TextStylesPoppins.textStyles_13.apply(
                           fontWeightDelta: 1, color: ColorStyle.primaryWhite),
                     ),
                   ],
@@ -314,13 +314,13 @@ class PersonalAccount extends StatelessWidget {
                                 children: [
                                   Text(
                                     'Harrison.JPG',
-                                    style: TextStyles.textStyles_14.apply(
+                                    style: TextStylesPoppins.textStyles_14.apply(
                                         fontWeightDelta: 1,
                                         color: ColorStyle.primaryWhite),
                                   ),
                                   Text(
                                     'Choose files here',
-                                    style: TextStyles.textStyles_12.apply(
+                                    style: TextStylesPoppins.textStyles_12.apply(
                                         fontWeightDelta: 0,
                                         color: ColorStyle.primaryWhite),
                                   ),
@@ -364,7 +364,7 @@ class PersonalAccount extends StatelessWidget {
                 textFirst: 'Cancel',
                 colorBGFirst: Colors.transparent,
                 colorBorderFirst: ColorStyle.hex('#016ECF'),
-                textStyleFirst: TextStyles.textStyles_14.apply(
+                textStyleFirst: TextStylesPoppins.textStyles_14.apply(
                   fontWeightDelta: 1,
                   color: ColorStyle.hex('#016ECF'),
                 ),
@@ -372,7 +372,7 @@ class PersonalAccount extends StatelessWidget {
                 textSecond: 'Continue',
                 colorBGSecond: ColorStyle.hex('#016ECF'),
                 colorBorderSecond: Colors.transparent,
-                textStyleSecond: TextStyles.textStyles_14
+                textStyleSecond: TextStylesPoppins.textStyles_14
                     .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
                 onTapSecond: () {
                   controller.index.value = controller.index.value + 1;
@@ -404,7 +404,7 @@ class PersonalAccount extends StatelessWidget {
           padding: padding,
           child: Text(
             'Beneficiary Bank Details',
-            style: TextStyles.textStyles_16
+            style: TextStylesPoppins.textStyles_16
                 .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
           ),
         ),
@@ -426,9 +426,9 @@ class PersonalAccount extends StatelessWidget {
                 title: 'Account Selection',
                 description:
                     'Protect against Fraud! Verify directly with the person or business that you wish to spend money too. You should never feel pressured into uploading any beneficiary or making any transaction.',
-                textStyle: TextStyles.textStyles_16
+                textStyle: TextStylesPoppins.textStyles_16
                     .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
-                descriptionStyle: TextStyles.textStyles_12
+                descriptionStyle: TextStylesPoppins.textStyles_12
                     .apply(fontWeightDelta: 2, color: ColorStyle.secondryBlack),
               ),
               ButtonContinueCancel(
@@ -437,7 +437,7 @@ class PersonalAccount extends StatelessWidget {
                 textFirst: 'Search by Bank Details',
                 colorBGFirst: ColorStyle.hex('#016ECF'),
                 colorBorderFirst: Colors.transparent,
-                textStyleFirst: TextStyles.textStyles_10.apply(
+                textStyleFirst: TextStylesPoppins.textStyles_10.apply(
                   fontWeightDelta: 1,
                   color: ColorStyle.primaryWhite,
                 ),
@@ -447,7 +447,7 @@ class PersonalAccount extends StatelessWidget {
                 textSecond: 'Search by Bank Swift',
                 colorBGSecond: Colors.transparent,
                 colorBorderSecond: ColorStyle.hex('#016ECF'),
-                textStyleSecond: TextStyles.textStyles_12.apply(
+                textStyleSecond: TextStylesPoppins.textStyles_12.apply(
                   fontWeightDelta: 1,
                   color: ColorStyle.hex('#016ECF'),
                 ),
@@ -477,12 +477,12 @@ class PersonalAccount extends StatelessWidget {
                 children: [
                   Text(
                     'Sort Code',
-                    style: TextStyles.textStyles_14.apply(
+                    style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.secondryBlack, fontWeightDelta: 2),
                   ),
                   Text(
                     '*',
-                    style: TextStyles.textStyles_16
+                    style: TextStylesPoppins.textStyles_16
                         .apply(color: Colors.red, fontWeightDelta: 2),
                   ),
                 ],
@@ -495,7 +495,7 @@ class PersonalAccount extends StatelessWidget {
                   Container(
                     child: Text(
                       '43',
-                      style: TextStyles.textStyles_16.apply(
+                      style: TextStylesPoppins.textStyles_16.apply(
                         color: ColorStyle.secondryBlack,
                         fontWeightDelta: 1,
                       ),
@@ -517,7 +517,7 @@ class PersonalAccount extends StatelessWidget {
                   Container(
                     child: Text(
                       '56',
-                      style: TextStyles.textStyles_16.apply(
+                      style: TextStylesPoppins.textStyles_16.apply(
                         color: ColorStyle.secondryBlack,
                         fontWeightDelta: 1,
                       ),
@@ -539,7 +539,7 @@ class PersonalAccount extends StatelessWidget {
                   Container(
                     child: Text(
                       '76',
-                      style: TextStyles.textStyles_16.apply(
+                      style: TextStylesPoppins.textStyles_16.apply(
                         color: ColorStyle.secondryBlack,
                         fontWeightDelta: 1,
                       ),
@@ -572,7 +572,7 @@ class PersonalAccount extends StatelessWidget {
                 textFirst: 'Cancel',
                 colorBGFirst: Colors.transparent,
                 colorBorderFirst: ColorStyle.hex('#016ECF'),
-                textStyleFirst: TextStyles.textStyles_14.apply(
+                textStyleFirst: TextStylesPoppins.textStyles_14.apply(
                   fontWeightDelta: 1,
                   color: ColorStyle.hex('#016ECF'),
                 ),
@@ -580,7 +580,7 @@ class PersonalAccount extends StatelessWidget {
                 textSecond: 'Continue',
                 colorBGSecond: ColorStyle.hex('#016ECF'),
                 colorBorderSecond: Colors.transparent,
-                textStyleSecond: TextStyles.textStyles_14
+                textStyleSecond: TextStylesPoppins.textStyles_14
                     .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
                 onTapSecond: () {
                   controller.index.value = controller.index.value + 1;
@@ -732,7 +732,7 @@ class PersonalAccount extends StatelessWidget {
                                 padding: EffectStyle.padding(0, 0, 16, 0),
                                 description:
                                     'By continuing with the transfer you acknowledge and confirm the applicable terms and conditions including waiting time for newly added beneficiary which may apply.',
-                                descriptionStyle: TextStyles.textStyles_12
+                                descriptionStyle: TextStylesPoppins.textStyles_12
                                     .apply(
                                         fontWeightDelta: 1,
                                         color: ColorStyle.secondryBlack),
@@ -741,7 +741,7 @@ class PersonalAccount extends StatelessWidget {
                                 padding: EffectStyle.padding(0, 0, 16, 0),
                                 description:
                                     'Please note that international transfer will be processed on international business days (Monday-Friday)',
-                                descriptionStyle: TextStyles.textStyles_12
+                                descriptionStyle: TextStylesPoppins.textStyles_12
                                     .apply(
                                         fontWeightDelta: 1,
                                         color: ColorStyle.secondryBlack),
@@ -750,7 +750,7 @@ class PersonalAccount extends StatelessWidget {
                                 padding: EffectStyle.padding(0, 0, 16, 0),
                                 description:
                                     'Transfers which fall on a holiday, may be processed on the next working business day.',
-                                descriptionStyle: TextStyles.textStyles_12
+                                descriptionStyle: TextStylesPoppins.textStyles_12
                                     .apply(
                                         fontWeightDelta: 1,
                                         color: ColorStyle.secondryBlack),
@@ -761,7 +761,7 @@ class PersonalAccount extends StatelessWidget {
                                 textFirst: 'Cancel',
                                 colorBGFirst: Colors.transparent,
                                 colorBorderFirst: ColorStyle.hex('#016ECF'),
-                                textStyleFirst: TextStyles.textStyles_14.apply(
+                                textStyleFirst: TextStylesPoppins.textStyles_14.apply(
                                   fontWeightDelta: 1,
                                   color: ColorStyle.hex('#016ECF'),
                                 ),
@@ -769,7 +769,7 @@ class PersonalAccount extends StatelessWidget {
                                 textSecond: 'Gernerate OTP',
                                 colorBGSecond: ColorStyle.hex('#016ECF'),
                                 colorBorderSecond: Colors.transparent,
-                                textStyleSecond: TextStyles.textStyles_14.apply(
+                                textStyleSecond: TextStylesPoppins.textStyles_14.apply(
                                     fontWeightDelta: 1,
                                     color: ColorStyle.primaryWhite),
                                 onTapSecond: () {},

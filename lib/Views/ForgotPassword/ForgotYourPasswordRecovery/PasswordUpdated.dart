@@ -33,7 +33,7 @@ class PasswordUpdated extends StatelessWidget {
               children: [
                 Text(
                   'Password Successfully Updated',
-                  style: TextStyles.textStyles_16.apply(
+                  style: TextStylesPoppins.textStyles_16.apply(
                     color: ColorStyle.secondryBlack,
                     fontWeightDelta: 1,
                   ),
@@ -47,7 +47,7 @@ class PasswordUpdated extends StatelessWidget {
                 ),
                 Text(
                   'Your password has been updated successfully. You can now login using your new password. If you encounter any problems please feel free to speak with one of our Customer Support Representatives.',
-                  style: TextStyles.textStyles_12
+                  style: TextStylesPoppins.textStyles_12
                       .apply(color: ColorStyle.secondryBlack, fontWeightDelta: 1),
                 ),
                 SizedBox(
@@ -58,7 +58,7 @@ class PasswordUpdated extends StatelessWidget {
                   colorBG: ColorStyle.blueSKY,
                   text: 'Login Screen',
                   radiusBorder: 30,
-                  textStyle: TextStyles.textStyles_14.apply(
+                  textStyle: TextStylesPoppins.textStyles_14.apply(
                       color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                   onTap: () {
 

@@ -27,7 +27,7 @@ class AccountDetails extends StatelessWidget {
           children: [
             Text(
               title,
-              style: TextStyles.textStyles_16.apply(
+              style: TextStylesPoppins.textStyles_16.apply(
                 color: ColorStyle.secondryBlack,
                 fontWeightDelta: 1,
               ),
@@ -35,7 +35,7 @@ class AccountDetails extends StatelessWidget {
             if (isRequired)
               Text(
                 '*',
-                style: TextStyles.textStyles_16.apply(
+                style: TextStylesPoppins.textStyles_16.apply(
                   color: Colors.red,
                   fontWeightDelta: 11,
                 ),
@@ -48,7 +48,7 @@ class AccountDetails extends StatelessWidget {
         TextFieldCustom(
           colorBoder: ColorStyle.secondryBlack,
           hintText: hintText,
-          textStyle: TextStyles.textStyles_14,
+          textStyle: TextStylesPoppins.textStyles_14,
           radiusBorder: 30,
         ),
       ],
@@ -67,7 +67,7 @@ class AccountDetails extends StatelessWidget {
           ),
           Text(
             'Account Details',
-            style: TextStyles.textStyles_20.apply(
+            style: TextStylesPoppins.textStyles_20.apply(
               color: ColorStyle.primaryWhite,
               fontWeightDelta: 1,
             ),
@@ -97,7 +97,7 @@ class AccountDetails extends StatelessWidget {
                     Expanded(
                       child: Text(
                         'Please make sure you enter the correct details associated with your account to proceed. If you are still having trouble completing this step click the chat icon in the top left of the page to speak with one of our customer service representatives.',
-                        style: TextStyles.textStyles_12.apply(
+                        style: TextStylesPoppins.textStyles_12.apply(
                           color: ColorStyle.darkestBlue,
                           fontWeightDelta: 1,
                         ),
@@ -111,7 +111,7 @@ class AccountDetails extends StatelessWidget {
 
                 Text(
                   'Accounts Type',
-                  style: TextStyles.textStyles_16.apply(
+                  style: TextStylesPoppins.textStyles_16.apply(
                     color: ColorStyle.secondryBlack,
                     fontWeightDelta: 1,
                   ),
@@ -154,7 +154,7 @@ class AccountDetails extends StatelessWidget {
                     Expanded(
                       child: Text(
                         'Please make sure you enter your Account number, Virtual/Physical Card Number or both in order to receive the authentication code via SMS to your registered mobile.',
-                        style: TextStyles.textStyles_12.apply(
+                        style: TextStylesPoppins.textStyles_12.apply(
                           color: ColorStyle.darkestBlue,
                           fontWeightDelta: 1,
                         ),
@@ -175,7 +175,7 @@ class AccountDetails extends StatelessWidget {
                     Expanded(
                         child: ElevatedButtonCustom(
                       colorBG: ColorStyle.primaryWhite,
-                      textStyle: TextStyles.textStyles_16
+                      textStyle: TextStylesPoppins.textStyles_16
                           .apply(color: ColorStyle.blueSKY, fontWeightDelta: 1),
                       colorBorder: ColorStyle.blueSKY,
                       text: 'Cancel',
@@ -188,7 +188,7 @@ class AccountDetails extends StatelessWidget {
                     Expanded(
                         child: ElevatedButtonCustom(
                       colorBG: ColorStyle.blueSKY,
-                      textStyle: TextStyles.textStyles_16.apply(
+                      textStyle: TextStylesPoppins.textStyles_16.apply(
                           color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                       text: 'Continue',
                       radiusBorder: 30,
