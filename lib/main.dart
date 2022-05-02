@@ -1,5 +1,7 @@
 
 
+import 'package:advanced_capital_pay/Views/TransactionList.dart';
+import 'package:advanced_capital_pay/Views/YourCard.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
 
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: TransactionList(),
       // home: TabbarScreen(),
       // home: AppSettings(),
       // home: TabbarScreen(),

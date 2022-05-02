@@ -215,6 +215,16 @@ class ImageStyle {
   static const String cardSavingGoals = "$baseImage/cardSavingGoals.png";
   static const String markerPerson = "$baseImage/markerPerson.png";
   static const String jewlers = "$baseImage/jewlers.png";
+  static const String BTClogo = "$baseImage/BTClogo.png";
+  static const String Iconsend = "$baseImage/Iconsend.png";
+  static const String Iconrecievemoney = "$baseImage/Iconrecievemoney.png";
+  static const String Icontrade = "$baseImage/Icontrade.png";
+  static const String chaintechnologybackground = "$baseImage/chaintechnologybackground.png";
+
+
+
+
+
 }
 
 
