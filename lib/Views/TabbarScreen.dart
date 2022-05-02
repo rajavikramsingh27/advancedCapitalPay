@@ -8,6 +8,9 @@ import '../Controllers/TabbarScreenController.dart';
 import '../Views/MainDashboard.dart';
 import '../Views/MoreScreen.dart';
 import '../Views/YourCard.dart';
+import '../Views/AdvanceCapitalPayHelpCenter.dart';
+
+
 
 class TabbarScreen extends StatelessWidget {
   final controller = Get.put(TabbarScreenController());
@@ -69,7 +72,7 @@ class TabbarScreen extends StatelessWidget {
                             bottom: 65,
                             left: 0,
                             right: 0,
-                            child: MainDashboard()),
+                            child: AdvanceCapitalPayHelpCenter()),
                       Positioned(
                           bottom: 0,
                           child: SafeArea(

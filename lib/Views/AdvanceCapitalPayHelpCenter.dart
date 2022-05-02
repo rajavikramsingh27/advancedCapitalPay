@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import '../Components/AppBarStyle.dart';
 import '../Components/BackgroundImage.dart';
 import '../Components/ButtonCustom.dart';
-import '../Components/NewBeneficiarySummary.dart';
 import '../Components/TextFieldCustom.dart';
 import '../Styles/ColorStyle.dart';
+import '../Styles/EffectStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
 import 'SignUp/EffectStyleSignUp.dart';
+import '../Components/InfoIconDescription.dart';
+import '../Components/ComponentsTitleInputs.dart';
 
 class AdvanceCapitalPayHelpCenter extends StatelessWidget {
   const AdvanceCapitalPayHelpCenter({Key? key}) : super(key: key);
@@ -20,19 +23,22 @@ class AdvanceCapitalPayHelpCenter extends StatelessWidget {
       children: [
         BackgroundImageBeneficiary(),
         Scaffold(
-            appBar:     AppBarStyleCustomBenifi(
+            appBar: AppBarStyleCustomBenifi(
               title: Text(
                 'AdvanceCapitalPay Help Center',
-                style: TextStyles.textStyles_14.apply(
-                    color: ColorStyle.primaryWhite,
-                    fontWeightDelta: 2
-                ),
+                maxLines: 2,
+                textAlign: TextAlign.center,
+                style: TextStyles.textStyles_14
+                    .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 2),
               ),
-
-
-              leadingButton: BackButton(
-
-                onPressed: () {},
+              leadingButton: IconButton(
+                icon: Image.asset(
+                  ImageStyle.back_circle,
+                  height: 30,
+                ),
+                onPressed: () {
+                  Get.back();
+                },
               ),
               trailingButton: IconButton(
                 icon: Image.asset(
@@ -41,57 +47,47 @@ class AdvanceCapitalPayHelpCenter extends StatelessWidget {
                 ),
                 onPressed: () {},
               ),
-
             ),
             backgroundColor: Colors.transparent,
-
-            body:     SingleChildScrollView(
-              padding: EdgeInsets.only(left: 12,right: 12),
+            body: SingleChildScrollView(
+              padding: EdgeInsets.only(left: 16, right: 16, bottom: 16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Container(
-                    padding: EdgeInsets.only(right: 18,left: 18),
-                    // width: 164,
-                    // height: 60,
+                    padding: EdgeInsets.only(right: 16, left: 16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-
-
-                        NewBeneficiarySummarys(),
-
-                        SizedBox(height: 20,),
-                        Text(
-                          'Subject (Optional)',
-                          style: TextStyles.textStyles_16.apply(
-                              color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                        InfoIconDescription(
+                          padding: EffectStyle.padding(0, 0, 16, 0),
+                          description: 'We aim to provide a response within 24 hours if your matter is urgent please send us a message via the Live Support Chat. You can provide as much detail as possible including any screenshots or attachments which you may have. Information provided within the messages center is directly sent to our Customer Support Representatives.',
+                          descriptionStyle: TextStyles.textStyles_12
+                              .apply(fontWeightDelta: 1, color: ColorStyle.secondryBlack),
                         ),
-                        SizedBox(height: 10,),
-                        TextFieldCustom(
-                          radiusBorder: 25,
-                          hintText: "Can't Access Account",
-                          // prefix: Image.asset(ImageStyle.user),
-                          textStyle: TextStyles.textStyles_16.apply(
-                            color: ColorStyle.primaryWhite,
-                          ),
-                          // colorFill: ColorStyle..withOpacity(0.5),
+                        ComponentsTitleInputs.textFieldsAccount('Subject (Optional)', false, "Can't Access Account"),
+                        SizedBox(
+                          height: 16,
                         ),
-                        SizedBox(height: 20,),
                         Text(
                           'Attachments (Optional)',
                           style: TextStyles.textStyles_16.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
+                              fontWeightDelta: 2),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 16,
+                        ),
                         Container(
-                          height: 50,
+                          padding: EffectStyle.padding(0, 0, 12, 12),
+                          decoration: BoxDecoration(
+                            borderRadius: EffectStyle.radiusCustom(40),
+                            border: Border.all(
+                              color: ColorStyle.darkestBlueSignUp,
+                              width: 1,
+                            )
+                          ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -104,8 +100,7 @@ class AdvanceCapitalPayHelpCenter extends StatelessWidget {
                                 height: 25,
                                 width: 25,
                                 decoration: BoxDecoration(
-                                  borderRadius:
-                                  BorderRadius.circular(20),
+                                  borderRadius: BorderRadius.circular(20),
                                   border: Border.all(
                                     width: 1.8,
                                     color: ColorStyle.darkestBlueSignUp,
@@ -117,62 +112,82 @@ class AdvanceCapitalPayHelpCenter extends StatelessWidget {
                               ),
                               Text(
                                 'Add Files or Drop Files Here',
-                                style: TextStyles.textStyles_16.apply(
+                                style: TextStyles.textStyles_14.apply(
                                   color: ColorStyle.darkestBlueSignUp,
+                                  fontWeightDelta: 1
                                 ),
                               ),
                             ],
                           ),
-                          decoration: EffectStyleSignUp.decoration(ColorStyle.primaryWhite, 25),
                         ),
-                        SizedBox(height: 10,),
-                        Container(
-                          padding: EdgeInsets.only(left: 20,top: 20),
-                          alignment: Alignment.topCenter,
-                          height: 164,
-                          child: Text(
-                            'Hello, could you please assist me '
-                           'in getting me back access to my'
-                              'account',
-                            style: TextStyles.textStyles_16.apply(
-                                color: ColorStyle.grey,
-                                fontWeightDelta: 2
+                        SizedBox(
+                          height: 16,
+                        ),
+                        TextField(
+                          maxLines: 6,
+                          style: TextStyles.textStyles_14.apply(
+                              color: ColorStyle.secondryBlack,
+                              fontWeightDelta: 1),
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderRadius: EffectStyle.radiusCustom(16),
+                              borderSide: BorderSide(color: Colors.grey, width: 0.0),
                             ),
+                            contentPadding: EdgeInsets.only(left: 16, right: 16, top: 16),
+                            hintText: 'Hello, could you please assist me in getting me back access to my account',
+                            hintStyle: TextStyles.textStyles_14.apply(
+                                color: ColorStyle.grey,
+                                fontWeightDelta: 1),
                           ),
-                          decoration: EffectStyleSignUp.decoration1(ColorStyle.primaryWhite, 25),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 16,
+                        ),
                         Text(
-                       'Please provide as much detail as possible for your query. Our Customer Representatives will get back to you as soon as possible. You will receive a notification in your inbox once a response has been made.',
+                          'Please provide as much detail as possible for your query. Our Customer Representatives will get back to you as soon as possible. You will receive a notification in your inbox once a response has been made.',
                           style: TextStyles.textStyles_12.apply(
                               color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 1
-                          ),
+                              fontWeightDelta: 1),
                         ),
-                        SizedBox(height: 20,),
-                        GradientButtonWithBanks(),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        ButtonContinueCancel(
+                          radiusBorder: 40,
+                          height: 44,
+                          textFirst:'Back to Help Center',
+                          colorBGFirst:Colors.transparent,
+                          colorBorderFirst:ColorStyle.hex('#016ECF'),
+                          textStyleFirst: TextStyles.textStyles_12.apply(
+                            fontWeightDelta: 1,
+                            color: ColorStyle.hex('#016ECF'),
+                          ),
+                          onTapFirst: () {
 
+                          },
+                          textSecond:'Submit Message',
+                          colorBGSecond: ColorStyle.hex('#016ECF'),
+                          colorBorderSecond: Colors.transparent,
+                          textStyleSecond: TextStyles.textStyles_12.apply(
+                              fontWeightDelta: 1,
+                              color: ColorStyle.primaryWhite
+                          ),
+                          onTapSecond: () {
 
+                          },
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
                       ],
                     ),
                     decoration: BoxDecoration(
-                      // color: ColorStyle.primaryWhite,
                         borderRadius: BorderRadius.circular(5),
-                        color: ColorStyle.primaryWhite
-                    ),
+                        color: ColorStyle.primaryWhite),
                   ),
-
-
-
-
-
                 ],
               ),
-            )
-
-
-        )
+            ))
       ],
     );
   }

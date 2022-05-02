@@ -105,7 +105,6 @@ class Exchange extends StatelessWidget {
                       Get.to(CurrencyExchange());
                     },
                   ),
-
                 ],
               ),
             ))
