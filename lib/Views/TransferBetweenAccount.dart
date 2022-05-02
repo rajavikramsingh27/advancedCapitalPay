@@ -133,7 +133,7 @@ class TransferBetweenAccount extends StatelessWidget {
                     Get.back();
                   },
                 ),
-                trailingButton: IconButton(
+                trailingButton: [IconButton(
                   icon: Image.asset(
                     ImageStyle.chat,
                     height: 30,
@@ -141,7 +141,7 @@ class TransferBetweenAccount extends StatelessWidget {
                   onPressed: () {
                     filter();
                   },
-                ),
+                )],
               ),
               body: SingleChildScrollView(
                   padding: EffectStyle.padding(0, 0, 0, 20),

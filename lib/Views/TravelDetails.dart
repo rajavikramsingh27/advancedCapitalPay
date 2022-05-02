@@ -33,13 +33,13 @@ class TravelDetails extends StatelessWidget {
               Get.back();
             },
           ),
-          trailingButton: IconButton(
+          trailingButton: [IconButton(
             icon: Image.asset(
               ImageStyle.chat,
               height: 30,
             ),
             onPressed: () {},
-          ),
+          )],
         ),
         backgroundColor: ColorStyle.primaryWhite,
         body: GetBuilder(

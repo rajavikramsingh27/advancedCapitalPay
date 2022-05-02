@@ -192,13 +192,13 @@ class TravelNotice extends StatelessWidget {
               Get.back();
             },
           ),
-          trailingButton: IconButton(
+          trailingButton: [IconButton(
             icon: Image.asset(
               ImageStyle.chat,
               height: 30,
             ),
             onPressed: () {},
-          ),
+          )],
         ),
         backgroundColor: Colors.white,
         body:SingleChildScrollView(

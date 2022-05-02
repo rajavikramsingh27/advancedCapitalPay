@@ -598,13 +598,13 @@ class NewBeneficiarySummary extends StatelessWidget {
                       Get.back();
                     },
                   ),
-                  trailingButton: IconButton(
+                  trailingButton: [IconButton(
                     icon: Image.asset(
                       ImageStyle.chat,
                       height: 30,
                     ),
                     onPressed: () {},
-                  ),
+                  )],
                 ),
                 body: SingleChildScrollView(
                   padding: EffectStyle.padding(0, 0, 0, 20),

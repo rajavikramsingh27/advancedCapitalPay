@@ -28,7 +28,7 @@ class BackgroundImageBeneficiary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      ImageStyle.tiardschulzb8dA3eY5VrYunsplash,
+      ImageStyle.bgGradient,
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       fit: BoxFit.cover,
