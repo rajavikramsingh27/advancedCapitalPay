@@ -1,4 +1,3 @@
-
 import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
 import 'package:advanced_capital_pay/Components/EditIconTitle.dart';
 import 'package:advanced_capital_pay/Components/InfoIconDescription.dart';
@@ -25,12 +24,15 @@ import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import '../Controllers/PersonalAccountController.dart';
 import '../Components/FourOptionSeries.dart';
 import '../Components/InfoIconDescription.dart';
-import '../Components/ComponentsTitleTFRounded.dart';
+import '../Components/ComponentsTitleInputs.dart';
 import 'package:notification_center/notification_center.dart';
 import '../Views/TransferDetails.dart';
 import '../Views/TransferSummary.dart';
 import '../Views/OTPVerification.dart';
 import '../Components/InfoIconDescription.dart';
+import '../Views/BankDetails.dart';
+import '../Views/SearchByBankDetails.dart';
+import '../Views/SearchByBankSwift.dart';
 
 class PersonalAccount extends StatelessWidget {
   PersonalAccount({Key? key}) : super(key: key);
@@ -112,48 +114,39 @@ class PersonalAccount extends StatelessWidget {
             children: [
               ComponentsTitleInputs.titleDropDown(
                   'Beneficiary Type',
-                  true, 'Local Beneficiary', [
-                'Local Beneficiary',
-                'Internation Beneficiary'
-              ]
-              ),
+                  true,
+                  'Local Beneficiary',
+                  ['Local Beneficiary', 'Internation Beneficiary']),
               ComponentsTitleInputs.titleCountryPicker(
-                  'Select Country',
-                  Icon(Icons.keyboard_arrow_down),
+                'Select Country',
+                Icon(Icons.keyboard_arrow_down),
               ),
               ComponentsTitleInputs.titleDropDown(
                   'Beneficiary Type',
-                  true, 'USD United States - Dollor', [
-                'USD United States - Dollor',
-                'United Kindom - Pounds'
-              ]
-              ),
+                  true,
+                  'USD United States - Dollor',
+                  ['USD United States - Dollor', 'United Kindom - Pounds']),
               ButtonContinueCancel(
                 radiusBorder: 40,
                 height: 40,
-                textFirst:'Cancel',
-                colorBGFirst:Colors.transparent,
-                colorBorderFirst:ColorStyle.hex('#016ECF'),
+                textFirst: 'Cancel',
+                colorBGFirst: Colors.transparent,
+                colorBorderFirst: ColorStyle.hex('#016ECF'),
                 textStyleFirst: TextStyles.textStyles_14.apply(
                   fontWeightDelta: 1,
                   color: ColorStyle.hex('#016ECF'),
                 ),
-                onTapFirst: () {
-
-                },
-                textSecond:'Continue',
+                onTapFirst: () {},
+                textSecond: 'Continue',
                 colorBGSecond: ColorStyle.hex('#016ECF'),
                 colorBorderSecond: Colors.transparent,
-                textStyleSecond: TextStyles.textStyles_14.apply(
-                    fontWeightDelta: 1,
-                    color: ColorStyle.primaryWhite
-                ),
+                textStyleSecond: TextStyles.textStyles_14
+                    .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
                 onTapSecond: () {
-                  controller.index.value =
-                      controller.index.value + 1;
+                  controller.index.value = controller.index.value + 1;
 
-                  NotificationCenter().notify('updateAccount',
-                      data: controller.index.value);
+                  NotificationCenter()
+                      .notify('updateAccount', data: controller.index.value);
                 },
               ),
               SizedBox(
@@ -162,7 +155,6 @@ class PersonalAccount extends StatelessWidget {
             ],
           ),
         ),
-
       ],
     );
   }
@@ -173,7 +165,9 @@ class PersonalAccount extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 16,),
+        SizedBox(
+          height: 16,
+        ),
         Container(
           padding: padding,
           child: Text(
@@ -182,7 +176,9 @@ class PersonalAccount extends StatelessWidget {
                 .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
           ),
         ),
-        SizedBox(height: 16,),
+        SizedBox(
+          height: 16,
+        ),
         Container(
           padding: padding,
           margin: padding,
@@ -197,7 +193,7 @@ class PersonalAccount extends StatelessWidget {
                 padding: EdgeInsets.zero,
                 title: 'Account Selection',
                 description:
-                'From this page you can add a local and International Beneficiary. You can also set your preferred sending currency Which can be changed when making a payment.',
+                    'From this page you can add a local and International Beneficiary. You can also set your preferred sending currency Which can be changed when making a payment.',
                 textStyle: TextStyles.textStyles_16
                     .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
                 descriptionStyle: TextStyles.textStyles_12
@@ -219,29 +215,25 @@ class PersonalAccount extends StatelessWidget {
                 ],
               ),
               ComponentsTitleInputs.titleDropDown(
-                  'Beneficiary Account Type',
-                  true, 'Personal Beneficiary', [
+                  'Beneficiary Account Type', true, 'Personal Beneficiary', [
                 'Personal Beneficiary',
                 'Business Beneficiary',
                 'Charity Beneficiary',
-              ]
-              ),
+              ]),
               ComponentsTitleInputs.textFieldsAccount(
                   'Beneficiary NickName', false, ''),
               ComponentsTitleInputs.textFieldsAccount(
                   'Address Line 1', true, ''),
               ComponentsTitleInputs.textFieldsAccount(
                   'Address Line 2', false, 'Anthony DC'),
-              ComponentsTitleInputs.textFieldsAccount(
-                  'City', true, ''),
+              ComponentsTitleInputs.textFieldsAccount('City', true, ''),
               ComponentsTitleInputs.textFieldsAccount(
                   'Postal/Zip Code', true, ''),
               ComponentsTitleInputs.titleCountryPicker(
                 'Select Country',
                 Icon(Icons.keyboard_arrow_down),
               ),
-              ComponentsTitleInputs.textFieldsAccount(
-                  'Phone', true, ''),
+              ComponentsTitleInputs.textFieldsAccount('Phone', true, ''),
               ComponentsTitleInputs.textFieldsAccount(
                   'E-Mail Address', true, ''),
               SizedBox(
@@ -270,14 +262,17 @@ class PersonalAccount extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(ImageStyle.fileUpload, height: 50,),
+                    Image.asset(
+                      ImageStyle.fileUpload,
+                      height: 50,
+                    ),
                     SizedBox(
                       height: 6,
                     ),
                     Text(
                       'Choose files here',
-                      style: TextStyles.textStyles_13
-                          .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
+                      style: TextStyles.textStyles_13.apply(
+                          fontWeightDelta: 1, color: ColorStyle.primaryWhite),
                     ),
                   ],
                 ),
@@ -286,98 +281,104 @@ class PersonalAccount extends StatelessWidget {
                 height: 16,
               ),
               ListView.separated(
-                shrinkWrap: true,
-                itemCount: 2,
+                  shrinkWrap: true,
+                  itemCount: 2,
                   physics: NeverScrollableScrollPhysics(),
                   separatorBuilder: (BuildContext context, int index) {
                     return SizedBox(
                       height: 10,
                     );
                   },
-                itemBuilder: (context, index) {
-                  return Container(
-                    width: MediaQuery.of(Get.context!).size.width,
-                    padding: EffectStyle.padding(16, 16, 13, 13),
-                    decoration: BoxDecoration(
-                      color: ColorStyle.hex('#016ECF'),
-                      borderRadius: EffectStyle.radiusCustom(10),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Image.asset(ImageStyle.JPFFileUpload, height: 40,),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Harrison.JPG',
-                                  style: TextStyles.textStyles_14
-                                      .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
+                  itemBuilder: (context, index) {
+                    return Container(
+                      width: MediaQuery.of(Get.context!).size.width,
+                      padding: EffectStyle.padding(16, 16, 13, 13),
+                      decoration: BoxDecoration(
+                        color: ColorStyle.hex('#016ECF'),
+                        borderRadius: EffectStyle.radiusCustom(10),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Image.asset(
+                                ImageStyle.JPFFileUpload,
+                                height: 40,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Harrison.JPG',
+                                    style: TextStyles.textStyles_14.apply(
+                                        fontWeightDelta: 1,
+                                        color: ColorStyle.primaryWhite),
+                                  ),
+                                  Text(
+                                    'Choose files here',
+                                    style: TextStyles.textStyles_12.apply(
+                                        fontWeightDelta: 0,
+                                        color: ColorStyle.primaryWhite),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              InkWell(
+                                child: Icon(
+                                  Icons.refresh,
+                                  color: ColorStyle.primaryWhite,
+                                  size: 30,
                                 ),
-                                Text(
-                                  'Choose files here',
-                                  style: TextStyles.textStyles_12
-                                      .apply(fontWeightDelta: 0, color: ColorStyle.primaryWhite),
+                                onTap: () {},
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              InkWell(
+                                child: Icon(
+                                  Icons.cancel,
+                                  color: ColorStyle.primaryWhite,
+                                  size: 30,
                                 ),
-                              ],
-                            )
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            InkWell(
-                              child: Icon(Icons.refresh, color: ColorStyle.primaryWhite, size: 30,),
-                              onTap: () {
-
-                              },
-                            ),
-                            SizedBox(width: 5,),
-                            InkWell(
-                              child: Icon(Icons.cancel, color: ColorStyle.primaryWhite, size: 30,),
-                              onTap: () {
-
-                              },
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  );
-                }),
+                                onTap: () {},
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    );
+                  }),
               SizedBox(
                 height: 20,
               ),
               ButtonContinueCancel(
                 radiusBorder: 40,
                 height: 40,
-                textFirst:'Cancel',
-                colorBGFirst:Colors.transparent,
-                colorBorderFirst:ColorStyle.hex('#016ECF'),
+                textFirst: 'Cancel',
+                colorBGFirst: Colors.transparent,
+                colorBorderFirst: ColorStyle.hex('#016ECF'),
                 textStyleFirst: TextStyles.textStyles_14.apply(
                   fontWeightDelta: 1,
                   color: ColorStyle.hex('#016ECF'),
                 ),
-                onTapFirst: () {
-
-                },
-                textSecond:'Continue',
+                onTapFirst: () {},
+                textSecond: 'Continue',
                 colorBGSecond: ColorStyle.hex('#016ECF'),
                 colorBorderSecond: Colors.transparent,
-                textStyleSecond: TextStyles.textStyles_14.apply(
-                    fontWeightDelta: 1,
-                    color: ColorStyle.primaryWhite
-                ),
+                textStyleSecond: TextStyles.textStyles_14
+                    .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
                 onTapSecond: () {
-                  controller.index.value =
-                      controller.index.value + 1;
+                  controller.index.value = controller.index.value + 1;
 
-                  NotificationCenter().notify('updateAccount',
-                      data: controller.index.value);
+                  NotificationCenter()
+                      .notify('updateAccount', data: controller.index.value);
                 },
               ),
               SizedBox(
@@ -386,7 +387,6 @@ class PersonalAccount extends StatelessWidget {
             ],
           ),
         ),
-
       ],
     );
   }
@@ -397,7 +397,9 @@ class PersonalAccount extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 16,),
+        SizedBox(
+          height: 16,
+        ),
         Container(
           padding: padding,
           child: Text(
@@ -406,7 +408,9 @@ class PersonalAccount extends StatelessWidget {
                 .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
           ),
         ),
-        SizedBox(height: 16,),
+        SizedBox(
+          height: 16,
+        ),
         Container(
           padding: padding,
           margin: padding,
@@ -420,7 +424,8 @@ class PersonalAccount extends StatelessWidget {
               InfoIconDescription(
                 padding: EdgeInsets.zero,
                 title: 'Account Selection',
-                description: 'Protect against Fraud! Verify directly with the person or business that you wish to spend money too. You should never feel pressured into uploading any beneficiary or making any transaction.',
+                description:
+                    'Protect against Fraud! Verify directly with the person or business that you wish to spend money too. You should never feel pressured into uploading any beneficiary or making any transaction.',
                 textStyle: TextStyles.textStyles_16
                     .apply(fontWeightDelta: 2, color: ColorStyle.primaryWhite),
                 descriptionStyle: TextStyles.textStyles_12
@@ -429,39 +434,40 @@ class PersonalAccount extends StatelessWidget {
               ButtonContinueCancel(
                 radiusBorder: 40,
                 height: 44,
-                textFirst:'Search by Bank Details',
-                colorBGFirst:Colors.transparent,
-                colorBorderFirst:ColorStyle.hex('#016ECF'),
+                textFirst: 'Search by Bank Details',
+                colorBGFirst: ColorStyle.hex('#016ECF'),
+                colorBorderFirst: Colors.transparent,
                 textStyleFirst: TextStyles.textStyles_10.apply(
+                  fontWeightDelta: 1,
+                  color: ColorStyle.primaryWhite,
+                ),
+                onTapFirst: () {
+                  controller.isBankSearchType.value = 1;
+                },
+                textSecond: 'Search by Bank Swift',
+                colorBGSecond: Colors.transparent,
+                colorBorderSecond: ColorStyle.hex('#016ECF'),
+                textStyleSecond: TextStyles.textStyles_12.apply(
                   fontWeightDelta: 1,
                   color: ColorStyle.hex('#016ECF'),
                 ),
-                onTapFirst: () {
-
-                },
-                textSecond:'Search by Bank Swift',
-                colorBGSecond: ColorStyle.hex('#016ECF'),
-                colorBorderSecond: Colors.transparent,
-                textStyleSecond: TextStyles.textStyles_12.apply(
-                    fontWeightDelta: 1,
-                    color: ColorStyle.primaryWhite
-                ),
                 onTapSecond: () {
-                  controller.index.value =
-                      controller.index.value + 1;
-
-                  NotificationCenter().notify('updateAccount',
-                      data: controller.index.value);
+                  controller.isBankSearchType.value = 2;
                 },
               ),
               ComponentsTitleInputs.titleDropDown(
                   'Account Type',
-                  true, 'Checking', [
-                'Checking',
-                'Saving',
-              ],
-                  Icon(Icons.check_circle, color: ColorStyle.hex('#016ECF'), size: 26,)
-              ),
+                  true,
+                  'Checking',
+                  [
+                    'Checking',
+                    'Saving',
+                  ],
+                  Icon(
+                    Icons.check_circle,
+                    color: ColorStyle.hex('#016ECF'),
+                    size: 26,
+                  )),
               ComponentsTitleInputs.textFieldsAccount(
                   'Account Number', true, ''),
               SizedBox(
@@ -476,8 +482,8 @@ class PersonalAccount extends StatelessWidget {
                   ),
                   Text(
                     '*',
-                    style: TextStyles.textStyles_16.apply(
-                        color: Colors.red, fontWeightDelta: 2),
+                    style: TextStyles.textStyles_16
+                        .apply(color: Colors.red, fontWeightDelta: 2),
                   ),
                 ],
               ),
@@ -548,14 +554,11 @@ class PersonalAccount extends StatelessWidget {
                   ),
                 ],
               ),
-              ComponentsTitleInputs.textFieldsAccount(
-                  'Bank Name', true, ''),
-              ComponentsTitleInputs.textFieldsAccount(
-                  'Bank Address', true, ''),
+              ComponentsTitleInputs.textFieldsAccount('Bank Name', true, ''),
+              ComponentsTitleInputs.textFieldsAccount('Bank Address', true, ''),
               ComponentsTitleInputs.textFieldsAccount(
                   'Branch Name/Code', true, 'Anthony DC'),
-              ComponentsTitleInputs.textFieldsAccount(
-                  'City', true, ''),
+              ComponentsTitleInputs.textFieldsAccount('City', true, ''),
               ComponentsTitleInputs.titleCountryPicker(
                 'Country',
                 Icon(Icons.keyboard_arrow_down),
@@ -566,29 +569,24 @@ class PersonalAccount extends StatelessWidget {
               ButtonContinueCancel(
                 radiusBorder: 40,
                 height: 40,
-                textFirst:'Cancel',
-                colorBGFirst:Colors.transparent,
-                colorBorderFirst:ColorStyle.hex('#016ECF'),
+                textFirst: 'Cancel',
+                colorBGFirst: Colors.transparent,
+                colorBorderFirst: ColorStyle.hex('#016ECF'),
                 textStyleFirst: TextStyles.textStyles_14.apply(
                   fontWeightDelta: 1,
                   color: ColorStyle.hex('#016ECF'),
                 ),
-                onTapFirst: () {
-
-                },
-                textSecond:'Continue',
+                onTapFirst: () {},
+                textSecond: 'Continue',
                 colorBGSecond: ColorStyle.hex('#016ECF'),
                 colorBorderSecond: Colors.transparent,
-                textStyleSecond: TextStyles.textStyles_14.apply(
-                    fontWeightDelta: 1,
-                    color: ColorStyle.primaryWhite
-                ),
+                textStyleSecond: TextStyles.textStyles_14
+                    .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
                 onTapSecond: () {
-                  controller.index.value =
-                      controller.index.value + 1;
+                  controller.index.value = controller.index.value + 1;
 
-                  NotificationCenter().notify('updateAccount',
-                      data: controller.index.value);
+                  NotificationCenter()
+                      .notify('updateAccount', data: controller.index.value);
                 },
               ),
               SizedBox(
@@ -597,7 +595,6 @@ class PersonalAccount extends StatelessWidget {
             ],
           ),
         ),
-
       ],
     );
   }
@@ -660,16 +657,63 @@ class PersonalAccount extends StatelessWidget {
                           'Summary'
                         ],
                       ),
-
                       if (controller.index.value == 0) accountSelection(),
                       if (controller.index.value == 1) beneficiaryDetails(),
-                      if (controller.index.value == 2) beneficiaryBankDetails(),
-                      if (controller.index.value == 3)
-                        accountSelection(),
-                      if (controller.index.value == 3)
-                        beneficiaryDetails(),
-                      if (controller.index.value == 3)
+                      if (controller.index.value == 2 &&
+                          (controller.isBankSearchType.value == 0))
                         beneficiaryBankDetails(),
+                      if (controller.index.value == 3) accountSelection(),
+                      if (controller.isBankSearchType.value == 1)
+                        SearchByBankDetails(
+                          onTapCancel: () {
+                            controller.isBankSearchType.value = 0;
+                          },
+                          onTapSearchForBankDetails: () {
+                            controller.bankName.value = 'ROYAL BANK OF SCOTLAN';
+                            controller.bankCode.value = 'RBOSGB2L';
+                            controller.arrTitles.value = ['RBOS', 'GB', 'London', 'XXX'];
+                            controller.arrSubTitles.value = ['Bank Code', 'Country Code', 'Location', 'Branch Code'];
+                            controller.arrBankDetailsTitles.value = ['Bank Name', 'Bank address', 'City', 'Country'];
+                            controller.arrBankDetailsValue.value = ['Royal Bank Of Scotlan', '250 Bishopgate London, EC2M4AA', 'London', 'United Kingdom'];
+
+                            controller.isBankSearchType.value = 3;
+                          },
+                        ),
+                      if (controller.isBankSearchType.value == 2)
+                        SearchByBankSwift(
+                          onTapCancel: () {
+                            controller.isBankSearchType.value = 0;
+                          },
+                          onTapSubmit: () {
+                            controller.bankName.value = 'HSBC BANK PLC';
+                            controller.bankCode.value = 'MIDLGB22123';
+                            controller.arrTitles.value = ['MIDL', 'GB', 'London', 'XXX'];
+                            controller.arrSubTitles.value = ['Bank Code', 'Country Code', 'Location', 'Branch Code'];
+                            controller.arrBankDetailsTitles.value = ['Bank Name', 'Bank address', 'City', 'Country', 'SWIFT Code'];
+                            controller.arrBankDetailsValue.value = ['Royal Bank Of Scotlan', '250 Bishopgate London, EC2M4AA', 'London', 'United Kingdom', 'MIDLGB22123'];
+
+                            controller.isBankSearchType.value = 3;
+                          },
+                        ),
+                      if (controller.isBankSearchType.value == 3)
+                        BankDetails(
+                          bankName: controller.bankName.value,
+                          bankCode: controller.bankCode.value,
+                          arrTitles: controller.arrTitles.value,
+                          arrSubTitles: controller.arrSubTitles.value,
+                          arrBankDetailsTitles: controller.arrBankDetailsTitles.value,
+                          arrBankDetailsValue: controller.arrBankDetailsValue.value,
+
+                          onTapCancel: () {
+                            controller.isBankSearchType.value = 0;
+                          },
+
+                          onTapSelectBankDetails: () {
+                            controller.isBankSearchType.value = 0;
+                          },
+                        ),
+                      if (controller.index.value == 3) beneficiaryDetails(),
+                      if (controller.index.value == 3) beneficiaryBankDetails(),
                       if (controller.index.value == 3)
                         SizedBox(
                           height: 20,
@@ -728,9 +772,7 @@ class PersonalAccount extends StatelessWidget {
                                 textStyleSecond: TextStyles.textStyles_14.apply(
                                     fontWeightDelta: 1,
                                     color: ColorStyle.primaryWhite),
-                                onTapSecond: () {
-
-                                },
+                                onTapSecond: () {},
                               )
                             ],
                           ),

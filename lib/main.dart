@@ -1,3 +1,4 @@
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
@@ -6,7 +7,7 @@ import '../Views/SplashScreen.dart';
 import '../Views/TabbarScreen.dart';
 import '../Views/CurrencyExchange.dart';
 import '../Views/TransferSummary.dart';
-import '../Views/Exchange.dart';
+import '../Views/SearchByBankSwift.dart';
 
 
 
@@ -30,12 +31,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SplashScreen(),
+        // home: SplashScreen(),
         // home: Exchange(),
-        // home: TabbarScreen(),
+        home: TabbarScreen(),
       // home: AccountTransferSummary(),
       // home: Material(
-      //   child: TransferBetween(),
+      //   color: ColorStyle.darkestBlueSignUp,
+      //   child: SearchByBankSwift(),
       // ),
     );
   }

@@ -14,7 +14,7 @@ import 'package:get/get.dart';
 import '../Controllers/TransferBetweenAccountController.dart';
 
 import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
-import '../Components/ComponentsTitleTFRounded.dart';
+import '../Components/ComponentsTitleInputs.dart';
 import '../Components/RadioButtonCustom.dart';
 import 'package:get/utils.dart';
 import '../Styles/EffectStyle.dart';

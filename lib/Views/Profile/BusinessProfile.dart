@@ -5,7 +5,7 @@ import '../../Styles/EffectStyle.dart';
 import '../../Styles/TextStyles.dart';
 import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
-import '../../Components/ComponentsTitleTFRounded.dart';
+import '../../Components/ComponentsTitleInputs.dart';
 
 
 

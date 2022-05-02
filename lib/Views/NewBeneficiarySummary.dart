@@ -24,7 +24,7 @@ import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import '../Controllers/NewBeneficiaryController.dart';
 import '../Components/FourOptionSeries.dart';
 import '../Components/InfoIconDescription.dart';
-import '../Components/ComponentsTitleTFRounded.dart';
+import '../Components/ComponentsTitleInputs.dart';
 import 'package:notification_center/notification_center.dart';
 import '../Views/TransferDetails.dart';
 import '../Views/TransferSummary.dart';

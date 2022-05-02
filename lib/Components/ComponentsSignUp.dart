@@ -166,6 +166,7 @@ class ComponentsSignUp {
     );
   }
 }
+
 class ComponentsSignUpCustom {
   static topProgress(int progress) {
     return Column(
