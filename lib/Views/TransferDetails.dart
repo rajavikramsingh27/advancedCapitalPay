@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import '../Components/AppBarStyle.dart';
 import '../Components/BackgroundImage.dart';
 import '../Components/ButtonCustom.dart';
-import '../Components/ComponentsTitleTFRounded.dart';
+import '../Components/ComponentsTitleInputs.dart';
 import '../Components/CountryPicker.dart';
 import '../Components/DropdownButtonCustom.dart';
 import '../Components/NewTransfers.dart';

@@ -1,7 +1,7 @@
 import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../Components/ComponentsTitleTFRounded.dart';
+import '../Components/ComponentsTitleInputs.dart';
 import '../Components/InfoIconDescription.dart';
 import '../Components/RadioButtonCustom.dart';
 import '../Controllers/StandingOrdersController.dart';
