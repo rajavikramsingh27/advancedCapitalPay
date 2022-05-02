@@ -30,7 +30,7 @@ showLoaderGetX() {
               ),
               Text(
                 "Loading ...",
-                style: TextStyles.textStyles_16
+                style: TextStylesPoppins.textStyles_16
               ),
             ],
           ),

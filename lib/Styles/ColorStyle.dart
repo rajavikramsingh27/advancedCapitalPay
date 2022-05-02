@@ -14,6 +14,9 @@ class ColorStyle {
   static final Color grey = Colors.grey;
   static final Color grayColor = Colors.white.withOpacity(0.5);
 
+  static final Color whiteDuskyCrypto = hex("#EBE8E8");
+  static final Color greenDuskyCrypto = hex("#81F2D3");
+
   static Color hex(String hexString) {
     final buffer = StringBuffer();
     if (hexString.length == 6 || hexString.length == 7) buffer.write('ff');

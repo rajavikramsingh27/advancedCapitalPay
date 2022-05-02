@@ -107,7 +107,7 @@ class BioMatric_Permission extends StatelessWidget {
                               ? 'Fast and Secure access with Face ID'
                               : 'Faster Login with Touch ID',
                           textAlign: TextAlign.center,
-                          style: TextStyles.textStyles_24.apply(
+                          style: TextStylesPoppins.textStyles_24.apply(
                             color: ColorStyle.primaryWhite,
                             fontWeightDelta: 1,
                           ),
@@ -120,7 +120,7 @@ class BioMatric_Permission extends StatelessWidget {
                               ? 'Login to your AdvanceCapitalPay App faster with TouchID'
                               : 'Login to your AdvanceCapitalPay App faster with TouchID',
                           textAlign: TextAlign.center,
-                          style: TextStyles.textStyles_14.apply(
+                          style: TextStylesPoppins.textStyles_14.apply(
                             color: ColorStyle.primaryWhite,
                             fontWeightDelta: 1,
                           ),
@@ -137,7 +137,7 @@ class BioMatric_Permission extends StatelessWidget {
                                   'Please be aware that access to some features may still require you to enter your registered password. '
                                   'You may disable the feature later on within the settings of your AdvanaceCapitalPay App.',
                           textAlign: TextAlign.center,
-                          style: TextStyles.textStyles_12.apply(
+                          style: TextStylesPoppins.textStyles_12.apply(
                             color: ColorStyle.primaryWhite,
                             fontWeightDelta: 0,
                           ),
@@ -151,7 +151,7 @@ class BioMatric_Permission extends StatelessWidget {
                               child: ElevatedButtonCustom(
                                 text: 'No Thanks',
                                 colorBG: ColorStyle.primaryWhite,
-                                textStyle: TextStyles.textStyles_16
+                                textStyle: TextStylesPoppins.textStyles_16
                                     .apply(color: ColorStyle.secondryBlack, fontWeightDelta: 1),
                                 onTap: () {},
                               ),

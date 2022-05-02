@@ -26,13 +26,13 @@ class PayingFromAccount extends StatelessWidget {
         children: [
           Text(
             'From',
-            style: TextStyles.textStyles_12.apply(
+            style: TextStylesPoppins.textStyles_12.apply(
                 fontWeightDelta: 2,
                 color: ColorStyle.ligthBlue),
           ),
           Text(
             'Harrison Smith Plus+ A/C   **0624USD',
-            style: TextStyles.textStyles_14.apply(
+            style: TextStylesPoppins.textStyles_14.apply(
               color: ColorStyle.secondryBlack,
               fontWeightDelta: 2,
             ),
@@ -42,13 +42,13 @@ class PayingFromAccount extends StatelessWidget {
           ),
           Text(
             'Available Balance',
-            style: TextStyles.textStyles_12.apply(
+            style: TextStylesPoppins.textStyles_12.apply(
                 fontWeightDelta: 2,
                 color: ColorStyle.ligthBlue),
           ),
           Text(
             '\$ 147,582.58',
-            style: TextStyles.textStyles_14.apply(
+            style: TextStylesPoppins.textStyles_14.apply(
               color: ColorStyle.secondryBlack,
               fontWeightDelta: 2,
             ),
@@ -63,7 +63,7 @@ class PayingFromAccount extends StatelessWidget {
                 children: [
                   Text(
                     '00117280625',
-                    style: TextStyles.textStyles_12.apply(
+                    style: TextStylesPoppins.textStyles_12.apply(
                       color: ColorStyle
                           .secondryBlack,
                       fontWeightDelta: 2,
@@ -71,7 +71,7 @@ class PayingFromAccount extends StatelessWidget {
                   ),
                   Text(
                     'Account Details',
-                    style: TextStyles.textStyles_10.apply(
+                    style: TextStylesPoppins.textStyles_10.apply(
                       color: ColorStyle
                           .ligthBlue,
                       fontWeightDelta: 2,
@@ -82,7 +82,7 @@ class PayingFromAccount extends StatelessWidget {
                   ),
                   Text(
                     'GB5909023459023485793',
-                    style: TextStyles.textStyles_12.apply(
+                    style: TextStylesPoppins.textStyles_12.apply(
                       color: ColorStyle
                           .secondryBlack,
                       fontWeightDelta: 2,
@@ -90,7 +90,7 @@ class PayingFromAccount extends StatelessWidget {
                   ),
                   Text(
                     'IBAN Number',
-                    style: TextStyles.textStyles_10.apply(
+                    style: TextStylesPoppins.textStyles_10.apply(
                       color: ColorStyle
                           .ligthBlue,
                       fontWeightDelta: 2,
@@ -108,7 +108,7 @@ class PayingFromAccount extends StatelessWidget {
                     children: [
                       Text(
                         '51-0012',
-                        style: TextStyles.textStyles_12.apply(
+                        style: TextStylesPoppins.textStyles_12.apply(
                           color: ColorStyle
                               .secondryBlack,
                           fontWeightDelta: 2,
@@ -116,7 +116,7 @@ class PayingFromAccount extends StatelessWidget {
                       ),
                       Text(
                         'Sort Code',
-                        style: TextStyles.textStyles_10.apply(
+                        style: TextStylesPoppins.textStyles_10.apply(
                           color: ColorStyle
                               .ligthBlue,
                           fontWeightDelta: 2,
@@ -127,7 +127,7 @@ class PayingFromAccount extends StatelessWidget {
                       ),
                       Text(
                         'RBOSGB2L',
-                        style: TextStyles.textStyles_12.apply(
+                        style: TextStylesPoppins.textStyles_12.apply(
                           color: ColorStyle
                               .secondryBlack,
                           fontWeightDelta: 2,
@@ -135,7 +135,7 @@ class PayingFromAccount extends StatelessWidget {
                       ),
                       Text(
                         'SWIFT Code',
-                        style: TextStyles.textStyles_10.apply(
+                        style: TextStylesPoppins.textStyles_10.apply(
                           color: ColorStyle
                               .ligthBlue,
                           fontWeightDelta: 2,

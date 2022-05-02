@@ -31,7 +31,7 @@ class CurrencyExchange extends StatelessWidget {
                 'Successful Currency Exchange',
                 maxLines: 2,
                 textAlign: TextAlign.center,
-                style: TextStyles.textStyles_16
+                style: TextStylesPoppins.textStyles_16
                     .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
               ),
               leadingButton: IconButton(
@@ -72,7 +72,7 @@ class CurrencyExchange extends StatelessWidget {
                           children: [
                             Text(
                               'Pay With',
-                              style: TextStyles.textStyles_8.apply(
+                              style: TextStylesPoppins.textStyles_8.apply(
                                   color: ColorStyle.grey, fontWeightDelta: 1),
                             ),
                             Column(
@@ -80,13 +80,13 @@ class CurrencyExchange extends StatelessWidget {
                               children: [
                                 Text(
                                   'Bank Account',
-                                  style: TextStyles.textStyles_8.apply(
+                                  style: TextStylesPoppins.textStyles_8.apply(
                                       color: ColorStyle.grey,
                                       fontWeightDelta: 1),
                                 ),
                                 Text(
                                   'HARRISON SMITH CURRENCT A/C USD',
-                                  style: TextStyles.textStyles_10.apply(
+                                  style: TextStylesPoppins.textStyles_10.apply(
                                       color: ColorStyle.primaryWhite,
                                       fontWeightDelta: 2),
                                 ),
@@ -101,7 +101,7 @@ class CurrencyExchange extends StatelessWidget {
                           children: [
                             Text(
                               'Account Details',
-                              style: TextStyles.textStyles_8.apply(
+                              style: TextStylesPoppins.textStyles_8.apply(
                                   color: ColorStyle.grey, fontWeightDelta: 1),
                             ),
                             Column(
@@ -109,13 +109,13 @@ class CurrencyExchange extends StatelessWidget {
                               children: [
                                 Text(
                                   'Account Type',
-                                  style: TextStyles.textStyles_8.apply(
+                                  style: TextStylesPoppins.textStyles_8.apply(
                                       color: ColorStyle.grey,
                                       fontWeightDelta: 1),
                                 ),
                                 Text(
                                   'Plus + Current A/C',
-                                  style: TextStyles.textStyles_10.apply(
+                                  style: TextStylesPoppins.textStyles_10.apply(
                                       color: ColorStyle.primaryWhite,
                                       fontWeightDelta: 1),
                                 ),
@@ -126,13 +126,13 @@ class CurrencyExchange extends StatelessWidget {
                               children: [
                                 Text(
                                   'Account Number',
-                                  style: TextStyles.textStyles_8.apply(
+                                  style: TextStylesPoppins.textStyles_8.apply(
                                       color: ColorStyle.grey,
                                       fontWeightDelta: 2),
                                 ),
                                 Text(
                                   '0235859304',
-                                  style: TextStyles.textStyles_10.apply(
+                                  style: TextStylesPoppins.textStyles_10.apply(
                                       color: ColorStyle.primaryWhite,
                                       fontWeightDelta: 2),
                                 ),
@@ -162,12 +162,12 @@ class CurrencyExchange extends StatelessWidget {
                           children: [
                             Text(
                               'Total Recieved',
-                              style: TextStyles.textStyles_12.apply(
+                              style: TextStylesPoppins.textStyles_12.apply(
                                   color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                             ),
                             Text(
                               '470,080 AED',
-                              style: TextStyles.textStyles_10.apply(
+                              style: TextStylesPoppins.textStyles_10.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 2),
                             ),
@@ -180,7 +180,7 @@ class CurrencyExchange extends StatelessWidget {
                           textFirst:'Return to Dashboard',
                           colorBGFirst:Colors.transparent,
                           colorBorderFirst:ColorStyle.hex('#016ECF'),
-                          textStyleFirst: TextStyles.textStyles_14.apply(
+                          textStyleFirst: TextStylesPoppins.textStyles_14.apply(
                             fontWeightDelta: 1,
                             color: ColorStyle.hex('#016ECF'),
                           ),
@@ -190,7 +190,7 @@ class CurrencyExchange extends StatelessWidget {
                           textSecond:'Share',
                           colorBGSecond: ColorStyle.hex('#016ECF'),
                           colorBorderSecond: Colors.transparent,
-                          textStyleSecond: TextStyles.textStyles_14.apply(
+                          textStyleSecond: TextStylesPoppins.textStyles_14.apply(
                               fontWeightDelta: 1,
                               color: ColorStyle.primaryWhite
                           ),

@@ -11,7 +11,7 @@ import '../Styles/ColorStyle.dart';
 import '../Styles/EffectStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
-import '../Views/MessagePage.dart';
+import '../Views/InboxMessage.dart';
 import '../Views/AppSettings.dart';
 import '../Views/FindATMLocator//FindATMLocator.dart';
 import '../Views/TravelNotice.dart';
@@ -62,7 +62,7 @@ class YourCard extends StatelessWidget {
                 ),
                 Text(
                   'Virtual Card',
-                  style: TextStyles.textStyles_14.apply(
+                  style: TextStylesPoppins.textStyles_14.apply(
                     color: ColorStyle.primaryWhite.withOpacity(0.4),
                     fontWeightDelta: 1,
                   ),
@@ -111,9 +111,9 @@ class YourCard extends StatelessWidget {
             leadingWidth: 0,
             nameUser: 'Your Cards',
             descriptionUser: 'Plus Personal Customer',
-            nameStyle: TextStyles.textStyles_20.apply(fontWeightDelta: 2),
+            nameStyle: TextStylesPoppins.textStyles_20.apply(fontWeightDelta: 2),
             descriptionStyle:
-                TextStyles.textStyles_12.apply(fontWeightDelta: 0),
+                TextStylesPoppins.textStyles_12.apply(fontWeightDelta: 0),
             trailingAction: [
               IconButton(
                 icon: Image.asset(
@@ -121,7 +121,7 @@ class YourCard extends StatelessWidget {
                   height: 26,
                 ),
                 onPressed: () {
-                  Get.to(MessagePage());
+                  Get.to(InboxMessage());
                 },
               ),
               IconButton(
@@ -179,7 +179,7 @@ class YourCard extends StatelessWidget {
                                 ),
                                 Text(
                                   'Reorder',
-                                  style: TextStyles.textStyles_10.apply(
+                                  style: TextStylesPoppins.textStyles_10.apply(
                                     color: ColorStyle.primaryWhite,
                                     fontWeightDelta: 1,
                                   ),
@@ -210,7 +210,7 @@ class YourCard extends StatelessWidget {
                                 ),
                                 Text(
                                   'Change PIN',
-                                  style: TextStyles.textStyles_10.apply(
+                                  style: TextStylesPoppins.textStyles_10.apply(
                                     color: ColorStyle.primaryWhite,
                                     fontWeightDelta: 1,
                                   ),
@@ -241,7 +241,7 @@ class YourCard extends StatelessWidget {
                                 ),
                                 Text(
                                   'Lock Card',
-                                  style: TextStyles.textStyles_10.apply(
+                                  style: TextStylesPoppins.textStyles_10.apply(
                                     color: ColorStyle.primaryWhite,
                                     fontWeightDelta: 1,
                                   ),
@@ -271,7 +271,7 @@ class YourCard extends StatelessWidget {
                         children: [
                           Text(
                             'Card Settings',
-                            style: TextStyles.textStyles_16.apply(
+                            style: TextStylesPoppins.textStyles_16.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 2,
                             ),
@@ -322,7 +322,7 @@ class YourCard extends StatelessWidget {
                                               child: Text(
                                                 controller
                                                     .arrCardSettingsTitle[index],
-                                                style: TextStyles.textStyles_14
+                                                style: TextStylesPoppins.textStyles_14
                                                     .apply(
                                                   color: ColorStyle.secondryBlack,
                                                   fontWeightDelta: 1,

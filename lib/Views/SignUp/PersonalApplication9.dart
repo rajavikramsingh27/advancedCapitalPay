@@ -57,7 +57,7 @@ class PersonalApplication9 extends StatelessWidget {
                         Container(
                           child: Text(
                             'ACFVC8JTJ',
-                            style: TextStyles.textStyles_14.apply(
+                            style: TextStylesPoppins.textStyles_14.apply(
                               color: ColorStyle.primaryWhite,
                               fontWeightDelta: 1,
                             ),
@@ -98,7 +98,7 @@ class PersonalApplication9 extends StatelessWidget {
                     'Please follow the instructions provided throughout '
                     ' the application to apply to on-board as an AdvanceCapitalClient. '
                     ' If you have previously started an application.',
-                    style: TextStyles.textStyles_14.apply(
+                    style: TextStylesPoppins.textStyles_14.apply(
                       color: ColorStyle.secondryBlack,
                     ),
                     textAlign: TextAlign.center,
@@ -109,7 +109,7 @@ class PersonalApplication9 extends StatelessWidget {
                   InkWell(
                     child: Text(
                       'Click Here.',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.darkestBlueSignUp,
                         fontWeightDelta: 2
                       ),

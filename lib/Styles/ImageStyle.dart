@@ -258,4 +258,5 @@ class ImageStyle {
   static const String PlotX = "$baseImage/PlotX.png";
   static const String elamachain = "$baseImage/Elamachain.png";
   static const String YMTKEDALYRCAFE2BT2SVQCS6ZI = "$baseImage/YMTKEDALYRCAFE2BT2SVQCS6ZI.png";
+  static const String cryptoBG1 = "$baseImage/cryptoBG1.png";
 }

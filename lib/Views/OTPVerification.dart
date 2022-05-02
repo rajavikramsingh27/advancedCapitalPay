@@ -25,7 +25,7 @@ class OTPVerification extends StatelessWidget {
         ),
         Text(
           title,
-          style: TextStyles.textStyles_14.apply(
+          style: TextStylesPoppins.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 2,
           ),
@@ -35,7 +35,7 @@ class OTPVerification extends StatelessWidget {
         ),
         Text(
           desc,
-          style: TextStyles.textStyles_12.apply(
+          style: TextStylesPoppins.textStyles_12.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 1,
           ),
@@ -67,7 +67,7 @@ class OTPVerification extends StatelessWidget {
         ),
         Text(
           'ACP',
-          style: TextStyles.textStyles_14.apply(
+          style: TextStylesPoppins.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 2,
           ),
@@ -157,14 +157,14 @@ class OTPVerification extends StatelessWidget {
           children: [
             Text(
               'Request new OTP',
-              style: TextStyles.textStyles_12.apply(
+              style: TextStylesPoppins.textStyles_12.apply(
                 color: ColorStyle.secondryBlack,
                 fontWeightDelta: 1,
               ),
             ),
             Text(
               'Request OTP via Call',
-              style: TextStyles.textStyles_12.apply(
+              style: TextStylesPoppins.textStyles_12.apply(
                 color: ColorStyle.hex('#016ECF'),
                 fontWeightDelta: 1,
               ),

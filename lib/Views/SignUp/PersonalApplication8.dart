@@ -48,7 +48,7 @@ class PersonalApplication8 extends StatelessWidget {
             ),
             Text(
               'Select Files',
-              style: TextStyles.textStyles_16.apply(
+              style: TextStylesPoppins.textStyles_16.apply(
                 color: ColorStyle.darkestBlueSignUp,
               ),
             ),
@@ -100,7 +100,7 @@ class PersonalApplication8 extends StatelessWidget {
                         Container(
                           child: Text(
                             'ACFVC8JTJ',
-                            style: TextStyles.textStyles_14.apply(
+                            style: TextStylesPoppins.textStyles_14.apply(
                               color: ColorStyle.primaryWhite,
                               fontWeightDelta: 1,
                             ),
@@ -126,7 +126,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Upload the relevant Compliance Documents Below',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -136,7 +136,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Documentation',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.darkestBlueSignUp,
                                   fontWeightDelta: 1,
                                 ),
@@ -146,7 +146,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Account Passport Holders Copy*',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -154,7 +154,7 @@ class PersonalApplication8 extends StatelessWidget {
                               SizedBox(height: 8),
                               Text(
                                 'Uploade Documents',
-                                style: TextStyles.textStyles_16.apply(
+                                style: TextStylesPoppins.textStyles_16.apply(
                                   color: ColorStyle.secondryBlack,
                                 ),
                               ),
@@ -170,7 +170,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Uploade Documents',
-                                style: TextStyles.textStyles_16.apply(
+                                style: TextStylesPoppins.textStyles_16.apply(
                                   color: ColorStyle.secondryBlack,
                                 ),
                               ),
@@ -190,7 +190,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Documentation',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.darkestBlueSignUp,
                                   fontWeightDelta: 1,
                                 ),
@@ -200,7 +200,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Account Passport Proof Of Address*',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -210,7 +210,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Uploade Documents',
-                                style: TextStyles.textStyles_16.apply(
+                                style: TextStylesPoppins.textStyles_16.apply(
                                   color: ColorStyle.secondryBlack,
                                 ),
                               ),
@@ -223,7 +223,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Uploade Documents',
-                                style: TextStyles.textStyles_16.apply(
+                                style: TextStylesPoppins.textStyles_16.apply(
                                   color: ColorStyle.secondryBlack,
                                 ),
                               ),
@@ -243,7 +243,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Documentation',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.darkestBlueSignUp,
                                   fontWeightDelta: 1,
                                 ),
@@ -253,7 +253,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'All Authorized Signatures Passport Copies',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -263,7 +263,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Uploade Documents',
-                                style: TextStyles.textStyles_16.apply(
+                                style: TextStylesPoppins.textStyles_16.apply(
                                   color: ColorStyle.secondryBlack,
                                 ),
                               ),
@@ -279,7 +279,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Uploade Documents',
-                                style: TextStyles.textStyles_16.apply(
+                                style: TextStylesPoppins.textStyles_16.apply(
                                   color: ColorStyle.secondryBlack,
                                 ),
                               ),
@@ -299,7 +299,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Documentation',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.darkestBlueSignUp,
                                   fontWeightDelta: 1,
                                 ),
@@ -309,7 +309,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'All Authorized Signatures Passport Address',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -319,7 +319,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Uploade Documents',
-                                style: TextStyles.textStyles_16.apply(
+                                style: TextStylesPoppins.textStyles_16.apply(
                                   color: ColorStyle.secondryBlack,
                                 ),
                               ),
@@ -335,7 +335,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Uploade Documents',
-                                style: TextStyles.textStyles_16.apply(
+                                style: TextStylesPoppins.textStyles_16.apply(
                                   color: ColorStyle.secondryBlack,
                                 ),
                               ),
@@ -355,7 +355,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Documentation',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.darkestBlueSignUp,
                                   fontWeightDelta: 1,
                                 ),
@@ -365,7 +365,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Supporting Documents',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -375,7 +375,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Uploade Documents',
-                                style: TextStyles.textStyles_16.apply(
+                                style: TextStylesPoppins.textStyles_16.apply(
                                   color: ColorStyle.secondryBlack,
                                 ),
                               ),
@@ -388,7 +388,7 @@ class PersonalApplication8 extends StatelessWidget {
                               ),
                               Text(
                                 'Uploade Documents',
-                                style: TextStyles.textStyles_16.apply(
+                                style: TextStylesPoppins.textStyles_16.apply(
                                   color: ColorStyle.secondryBlack,
                                 ),
                               ),

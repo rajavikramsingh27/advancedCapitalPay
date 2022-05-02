@@ -91,7 +91,7 @@ class FindATMLocator extends StatelessWidget {
                                               children: [
                                                 Text(
                                                   'Find ATM',
-                                                  style: TextStyles
+                                                  style: TextStylesPoppins
                                                       .textStyles_24
                                                       .apply(
                                                       color: ColorStyle
@@ -101,7 +101,7 @@ class FindATMLocator extends StatelessWidget {
                                                 ),
                                                 Text(
                                                   'Find the nearest ATM to your',
-                                                  style: TextStyles
+                                                  style: TextStylesPoppins
                                                       .textStyles_14
                                                       .apply(
                                                       color: ColorStyle
@@ -164,7 +164,7 @@ class FindATMLocator extends StatelessWidget {
                                           ),
                                           Text(
                                             'Related Nearby',
-                                            style: TextStyles.textStyles_20.apply(
+                                            style: TextStylesPoppins.textStyles_20.apply(
                                               color: ColorStyle.secondryBlack,
                                               // fontWeightDelta: 2
                                             ),
@@ -220,7 +220,7 @@ class FindATMLocator extends StatelessWidget {
                                                                 controller
                                                                     .arrATMNames[
                                                                 index],
-                                                                style: TextStyles
+                                                                style: TextStylesPoppins
                                                                     .textStyles_20
                                                                     .apply(
                                                                     color: ColorStyle
@@ -232,7 +232,7 @@ class FindATMLocator extends StatelessWidget {
                                                                 controller
                                                                     .arrATMLocation[
                                                                 index],
-                                                                style: TextStyles
+                                                                style: TextStylesPoppins
                                                                     .textStyles_14
                                                                     .apply(
                                                                     color: ColorStyle
@@ -245,7 +245,7 @@ class FindATMLocator extends StatelessWidget {
                                                           Text(
                                                             controller.arrATMDistance[
                                                             index],
-                                                            style: TextStyles
+                                                            style: TextStylesPoppins
                                                                 .textStyles_12
                                                                 .apply(
                                                                 color: ColorStyle

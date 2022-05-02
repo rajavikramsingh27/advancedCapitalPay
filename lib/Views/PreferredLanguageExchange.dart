@@ -67,7 +67,7 @@ class PreferredLanguageExchange extends StatelessWidget {
                                           border: InputBorder.none,
                                           hintText: 'Search',
                                           hintStyle:
-                                              TextStyles.textStyles_12.apply(
+                                              TextStylesPoppins.textStyles_12.apply(
                                             color: ColorStyle.primaryWhite
                                                 .withOpacity(.4),
                                             fontWeightDelta: 1,
@@ -90,7 +90,7 @@ class PreferredLanguageExchange extends StatelessWidget {
                             ),
                             Text(
                               'Popular',
-                              style: TextStyles.textStyles_14.apply(
+                              style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 2),
                             ),
@@ -142,7 +142,7 @@ class PreferredLanguageExchange extends StatelessWidget {
                                                   // ' Spare change',
                                                   controller
                                                       .choosePopular[index],
-                                                  style: TextStyles
+                                                  style: TextStylesPoppins
                                                       .textStyles_14
                                                       .apply(
                                                           color: ColorStyle
@@ -156,7 +156,7 @@ class PreferredLanguageExchange extends StatelessWidget {
                                                   // ' Spare change',
                                                   controller
                                                       .choosePopular[index],
-                                                  style: TextStyles
+                                                  style: TextStylesPoppins
                                                       .textStyles_14
                                                       .apply(
                                                           color:
@@ -170,7 +170,7 @@ class PreferredLanguageExchange extends StatelessWidget {
                                             child: Text(
                                               // ' Spare change',
                                               controller.choosePopular2[index],
-                                              style: TextStyles.textStyles_14
+                                              style: TextStylesPoppins.textStyles_14
                                                   .apply(
                                                       color: ColorStyle
                                                           .secondryBlack,
@@ -193,7 +193,7 @@ class PreferredLanguageExchange extends StatelessWidget {
                             ),
                             Text(
                               'Cryptocurrencies',
-                              style: TextStyles.textStyles_14.apply(
+                              style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 2),
                             ),
@@ -245,7 +245,7 @@ class PreferredLanguageExchange extends StatelessWidget {
                                                   // ' Spare change',
                                                   controller
                                                       .choosePopular3[index],
-                                                  style: TextStyles
+                                                  style: TextStylesPoppins
                                                       .textStyles_14
                                                       .apply(
                                                           color: ColorStyle
@@ -259,7 +259,7 @@ class PreferredLanguageExchange extends StatelessWidget {
                                                   // ' Spare change',
                                                   controller
                                                       .choosePopular4[index],
-                                                  style: TextStyles
+                                                  style: TextStylesPoppins
                                                       .textStyles_14
                                                       .apply(
                                                           color:
@@ -278,7 +278,7 @@ class PreferredLanguageExchange extends StatelessWidget {
                                                   // ' Spare change',
                                                   controller
                                                       .choosePopular5[index],
-                                                  style: TextStyles
+                                                  style: TextStylesPoppins
                                                       .textStyles_12
                                                       .apply(
                                                           color: ColorStyle
@@ -289,7 +289,7 @@ class PreferredLanguageExchange extends StatelessWidget {
                                                   // ' Spare change',
                                                   controller
                                                       .choosePopular6[index],
-                                                  style: TextStyles
+                                                  style: TextStylesPoppins
                                                       .textStyles_12
                                                       .apply(
                                                           color: ColorStyle
@@ -315,7 +315,7 @@ class PreferredLanguageExchange extends StatelessWidget {
                             ),
                             Text(
                               'A',
-                              style: TextStyles.textStyles_14.apply(
+                              style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 2),
                             ),
@@ -367,7 +367,7 @@ class PreferredLanguageExchange extends StatelessWidget {
                                                   // ' Spare change',
                                                   controller
                                                       .choosePopular7[index],
-                                                  style: TextStyles
+                                                  style: TextStylesPoppins
                                                       .textStyles_14
                                                       .apply(
                                                           color: ColorStyle
@@ -381,7 +381,7 @@ class PreferredLanguageExchange extends StatelessWidget {
                                                   // ' Spare change',
                                                   controller
                                                       .choosePopular8[index],
-                                                  style: TextStyles
+                                                  style: TextStylesPoppins
                                                       .textStyles_14
                                                       .apply(
                                                           color:
@@ -395,7 +395,7 @@ class PreferredLanguageExchange extends StatelessWidget {
                                             child: Text(
                                               // ' Spare change',
                                               controller.choosePopular9[index],
-                                              style: TextStyles.textStyles_12
+                                              style: TextStylesPoppins.textStyles_12
                                                   .apply(
                                                       color: ColorStyle
                                                           .secondryBlack,

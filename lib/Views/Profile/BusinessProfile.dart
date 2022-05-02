@@ -21,7 +21,7 @@ class BusinessProfile extends StatelessWidget {
           padding: EffectStyle.padding(16, 16, 16, 16),
           child: Text(
             'Business Information',
-            style: TextStyles.textStyles_14.apply(
+            style: TextStylesPoppins.textStyles_14.apply(
               color: ColorStyle.primaryWhite,
               fontWeightDelta: 2,
             ),
@@ -51,7 +51,7 @@ class BusinessProfile extends StatelessWidget {
           padding: EffectStyle.padding(16, 16, 16, 16),
           child: Text(
             'Beneficiary Contact Details',
-            style: TextStyles.textStyles_14.apply(
+            style: TextStylesPoppins.textStyles_14.apply(
               color: ColorStyle.primaryWhite,
               fontWeightDelta: 2,
             ),
@@ -85,7 +85,7 @@ class BusinessProfile extends StatelessWidget {
             children: [
               Text(
                 'Registered Business Address',
-                style: TextStyles.textStyles_14.apply(
+                style: TextStylesPoppins.textStyles_14.apply(
                   color: ColorStyle.primaryWhite,
                   fontWeightDelta: 2,
                 ),
@@ -112,7 +112,7 @@ class BusinessProfile extends StatelessWidget {
                     Text('Edit',
                         style: TextStyle(
                             color: ColorStyle.hex('#016ECF'),
-                            fontFamily: TextStyles.kFontFamily,
+                            fontFamily: TextStylesPoppins.kFontFamily,
                             fontSize: 12,
                             fontWeight: FontWeight.w600)),
                   ],
@@ -157,7 +157,7 @@ class BusinessProfile extends StatelessWidget {
               Expanded(
                 child: Text(
                   'Registered Correspondence Address',
-                  style: TextStyles.textStyles_14.apply(
+                  style: TextStylesPoppins.textStyles_14.apply(
                     color: ColorStyle.primaryWhite,
                     fontWeightDelta: 2,
                   ),
@@ -185,7 +185,7 @@ class BusinessProfile extends StatelessWidget {
                     Text('Edit',
                         style: TextStyle(
                             color: ColorStyle.hex('#016ECF'),
-                            fontFamily: TextStyles.kFontFamily,
+                            fontFamily: TextStylesPoppins.kFontFamily,
                             fontSize: 12,
                             fontWeight: FontWeight.w600)),
                   ],
@@ -227,7 +227,7 @@ class BusinessProfile extends StatelessWidget {
             children: [
               Text(
                 'Additional Information',
-                style: TextStyles.textStyles_14.apply(
+                style: TextStylesPoppins.textStyles_14.apply(
                   color: ColorStyle.primaryWhite,
                   fontWeightDelta: 2,
                 ),
@@ -254,7 +254,7 @@ class BusinessProfile extends StatelessWidget {
                     Text('Edit',
                         style: TextStyle(
                             color: ColorStyle.hex('#016ECF'),
-                            fontFamily: TextStyles.kFontFamily,
+                            fontFamily: TextStylesPoppins.kFontFamily,
                             fontSize: 12,
                             fontWeight: FontWeight.w600)),
                   ],

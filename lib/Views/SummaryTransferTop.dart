@@ -27,14 +27,14 @@ class SummaryTransferTop extends StatelessWidget {
               children: [
                 Text(
                   desc,
-                  style: TextStyles.textStyles_8.apply(
+                  style: TextStylesPoppins.textStyles_8.apply(
                       color: ColorStyle.grey,
                       fontWeightDelta: 1),
                 ),
                 SizedBox(height: 10),
                 Text(
                   price,
-                  style: TextStyles.textStyles_18.apply(
+                  style: TextStylesPoppins.textStyles_18.apply(
                       color: ColorStyle.primaryWhite,
                       fontWeightDelta: 2),
                 ),
@@ -50,7 +50,7 @@ class SummaryTransferTop extends StatelessWidget {
                 children: [
                   Text(
                     countryCode,
-                    style: TextStyles.textStyles_14.apply(
+                    style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.primaryWhite,
                         fontWeightDelta: 2),
                   ),
@@ -88,7 +88,7 @@ class SummaryTransferTop extends StatelessWidget {
       children: [
         Text(
           'USD 1.00 = 3.6725 AED ',
-          style: TextStyles.textStyles_14.apply(
+          style: TextStylesPoppins.textStyles_14.apply(
               color: ColorStyle.primaryWhite,
               fontWeightDelta: 1),
         ),

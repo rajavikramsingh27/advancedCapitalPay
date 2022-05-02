@@ -54,7 +54,7 @@ class PersonalApplication12 extends StatelessWidget {
                           Container(
                               child: Text(
                                 'ACFVC8JTJ',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 1,
                                 ),
@@ -86,7 +86,7 @@ class PersonalApplication12 extends StatelessWidget {
                                   ' application. If you would like to find out the status '
                                   ' of your application please do not hesitate to contact '
                                   ' info@AdvanceCapitalPay.com',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -102,7 +102,7 @@ class PersonalApplication12 extends StatelessWidget {
                                       colorBG: ColorStyle.darkestBlueSignUp,
                                       colorBorder: ColorStyle.grey,
                                       radiusBorder: 4,
-                                      textStyle: TextStyles.textStyles_16.apply(
+                                      textStyle: TextStylesPoppins.textStyles_16.apply(
                                           color: ColorStyle.primaryWhite,
                                           fontWeightDelta: 1),
                                       onTap: () {
@@ -123,7 +123,7 @@ class PersonalApplication12 extends StatelessWidget {
                                   ' application please feel free to contact our Compliance '
                                   ' Division who will be happy to assist you '
                                   ' Compliance@AdvanceCapitalPay.com ',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -144,7 +144,7 @@ class PersonalApplication12 extends StatelessWidget {
                     'Please follow the instructions provided throughout '
                     ' the application to apply to on-board as an AdvanceCapitalClient. '
                     ' If you have previously started an application.',
-                    style: TextStyles.textStyles_14.apply(
+                    style: TextStylesPoppins.textStyles_14.apply(
                       color: ColorStyle.secondryBlack,
                     ),
                     textAlign: TextAlign.center,
@@ -155,7 +155,7 @@ class PersonalApplication12 extends StatelessWidget {
                   InkWell(
                     child: Text(
                       'Click Here',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.darkestBlueSignUp,
                           fontWeightDelta: 2),
                       textAlign: TextAlign.center,

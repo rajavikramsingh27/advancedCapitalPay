@@ -6,7 +6,9 @@ import '../Views/SplashScreen.dart';
 import '../Views/TabbarScreen.dart';
 import '../Views/CurrencyExchange.dart';
 import '../Views/TransferSummary.dart';
-import '../Components/ChatWithUs.dart';
+import '../Views/ApplePay.dart';
+
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
       // home: SplashScreen(),
       // home: Exchange(),
       home: TabbarScreen(),
-      // home: ChatWithUs(),
+      // home: ApplePay(),
       // home: Material(
       //   color: ColorStyle.darkestBlueSignUp,
       //   child: SearchByBankSwift(),

@@ -51,7 +51,7 @@ class BalanceSheetCellComponenets extends StatelessWidget {
                 children: [
                   Text(
                     titleOne!,
-                    style: TextStyles.textStyles_14.apply(
+                    style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.secondryBlack, fontWeightDelta: 2),
                   ),
                   SizedBox(
@@ -59,7 +59,7 @@ class BalanceSheetCellComponenets extends StatelessWidget {
                   ),
                   Text(
                     valueOne!,
-                    style: TextStyles.textStyles_12.apply(
+                    style: TextStylesPoppins.textStyles_12.apply(
                         color: ColorStyle.secondryBlack, fontWeightDelta: 1),
                   ),
                 ],
@@ -72,7 +72,7 @@ class BalanceSheetCellComponenets extends StatelessWidget {
             children: [
               Text(
                 titleTwo!,
-                style: TextStyles.textStyles_14
+                style: TextStylesPoppins.textStyles_14
                     .apply(color: ColorStyle.secondryBlack, fontWeightDelta: 1),
               ),
               SizedBox(
@@ -80,7 +80,7 @@ class BalanceSheetCellComponenets extends StatelessWidget {
               ),
               Text(
                 valueTwo!,
-                style: TextStyles.textStyles_14
+                style: TextStylesPoppins.textStyles_14
                     .apply(color: ColorStyle.secondryBlack, fontWeightDelta: 4),
               ),
             ],

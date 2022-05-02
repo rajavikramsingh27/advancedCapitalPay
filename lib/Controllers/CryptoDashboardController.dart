@@ -102,13 +102,12 @@ class CryptoDashboardController extends GetxController {
   ].obs;
 
   RxList<String> chooseSaving11 = [
-    'S 0.1278',
-    'S 0.1726',
-
-    'S 0.2222',
-    'S 62.55',
-    'S 0.08164',
-    'S 0.00324',
+    '\$ 0.1278',
+    '\$ 0.1726',
+    '\$ 0.2222',
+    '\$ 62.55',
+    '\$ 0.08164',
+    '\$ 0.00324',
   ].obs;
   RxList<String> chooseSaving12 = [
     '+39.34%',

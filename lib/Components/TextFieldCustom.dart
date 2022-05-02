@@ -112,7 +112,7 @@ class TextFieldCustomPrefix extends StatelessWidget {
           ),
           hintText: hintText,
           hintStyle:
-              TextStyles.textStyles_16.apply(color: ColorStyle.grey),
+              TextStylesPoppins.textStyles_16.apply(color: ColorStyle.grey),
           prefixIcon: Container(
               height: 30,
               padding: EdgeInsets.only(
@@ -241,7 +241,7 @@ class TextFieldOTP extends StatelessWidget {
       textAlign: TextAlign.center,
       maxLength: 1,
       keyboardType: TextInputType.number,
-      style: TextStyles.textStyles_32.apply(color: ColorStyle.primaryWhite),
+      style: TextStylesPoppins.textStyles_32.apply(color: ColorStyle.primaryWhite),
       cursorColor: ColorStyle.primaryWhite,
       // cursorHeight: 40,
       decoration: InputDecoration(
@@ -305,7 +305,7 @@ class TFLabelCustom extends StatelessWidget {
         filled: true,
         fillColor: colorFill,
         labelText: labelText!,
-        labelStyle: TextStyles.textStyles_14.apply(
+        labelStyle: TextStylesPoppins.textStyles_14.apply(
           color: Colors.grey,
           fontWeightDelta: 1,
         ),
@@ -377,7 +377,7 @@ class _TFPasswordLabelCustomState extends State<TFPasswordLabelCustom> {
           filled: true,
           fillColor: widget.colorFill,
           labelText: widget.labelText!,
-          labelStyle: TextStyles.textStyles_14.apply(
+          labelStyle: TextStylesPoppins.textStyles_14.apply(
             color: Colors.grey,
             fontWeightDelta: 1,
           ),

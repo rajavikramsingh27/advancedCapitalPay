@@ -33,7 +33,7 @@ class ListViewIconTitleSubtitle extends StatelessWidget {
         Text(
           title!,
           textAlign: TextAlign.left,
-          style: TextStyles.textStyles_14.apply(
+          style: TextStylesPoppins.textStyles_14.apply(
             color: ColorStyle.primaryWhite,
             fontWeightDelta: 2,
           ),
@@ -83,7 +83,7 @@ class ListViewIconTitleSubtitle extends StatelessWidget {
                               child: Text(
                                 arrListTitles![index],
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_14
                                     .apply(
                                     color: ColorStyle
@@ -98,7 +98,7 @@ class ListViewIconTitleSubtitle extends StatelessWidget {
                           Text(
                             arrListSubtitles![index],
                             // controller.listApplyLeave[index],
-                            style: TextStyles
+                            style: TextStylesPoppins
                                 .textStyles_10
                                 .apply(
                                 color: ColorStyle

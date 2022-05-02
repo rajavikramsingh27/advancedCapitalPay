@@ -40,7 +40,7 @@ class VerifyQuestion extends StatelessWidget {
                 child: Text(
                   title,
                   textAlign: TextAlign.left,
-                  style: TextStyles.textStyles_14.apply(
+                  style: TextStylesPoppins.textStyles_14.apply(
                     color: ColorStyle.blueSKY,
                     // fontWeightDelta: 0,
                   ),
@@ -76,7 +76,7 @@ class VerifyQuestion extends StatelessWidget {
                         selectedValue,
                         textAlign: TextAlign.left,
                         maxLines: 1,
-                        style: TextStyles.textStyles_14.apply(
+                        style: TextStylesPoppins.textStyles_14.apply(
                           color: Colors.black,
                           // fontWeightDelta: 1,
                         ),
@@ -103,7 +103,7 @@ class VerifyQuestion extends StatelessWidget {
         ),
         Text(
           'You have entered the incorrect security answer.Please try again.',
-          style: TextStyles.textStyles_14.apply(
+          style: TextStylesPoppins.textStyles_14.apply(
             color: Colors.red,
             // fontWeightDelta: 1,
           ),
@@ -155,7 +155,7 @@ class VerifyQuestion extends StatelessWidget {
                         Text(
                           'Verify your Security Questions',
                           textAlign: TextAlign.left,
-                          style: TextStyles.textStyles_20.apply(
+                          style: TextStylesPoppins.textStyles_20.apply(
                             color: ColorStyle.primaryWhite,
                             fontWeightDelta: 2,
                           ),
@@ -166,7 +166,7 @@ class VerifyQuestion extends StatelessWidget {
                         Text(
                           "Instead of receiving your One Time Password (OTP) You can enter the passwords to your security questions.",
                           textAlign: TextAlign.left,
-                          style: TextStyles.textStyles_14.apply(
+                          style: TextStylesPoppins.textStyles_14.apply(
                             color: ColorStyle.primaryWhite,
                             fontWeightDelta: 0,
                           ),
@@ -182,7 +182,7 @@ class VerifyQuestion extends StatelessWidget {
                                 children: [
                                   Text(
                                     'Use SMS Verification',
-                                    style: TextStyles.textStyles_14.apply(
+                                    style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.blueSKY,
                                       fontWeightDelta: 1,
                                     ),
@@ -196,7 +196,7 @@ class VerifyQuestion extends StatelessWidget {
                             InkWell(
                               child: Text(
                                 'Contact Us',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.blueSKY,
                                   fontWeightDelta: 1,
                                 ),
@@ -230,7 +230,7 @@ class VerifyQuestion extends StatelessWidget {
                         ),
                         AutoSizeText(
                           'Forgot your security question ?',
-                          style: TextStyles.autoSizeText.apply(
+                          style: TextStylesPoppins.autoSizeText.apply(
                             color: ColorStyle.blueSKY,
                             decoration: TextDecoration.underline,
                           ),

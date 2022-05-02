@@ -37,7 +37,7 @@ class ChatWithUs  {
                         elevation: 0,
                         title: Text(
                           'Chat With Us',
-                          style: TextStyles.textStyles_15
+                          style: TextStylesPoppins.textStyles_15
                               .apply(color: ColorStyle.secondryBlack, fontWeightDelta: 2),
                         ),
                         centerTitle: true,
@@ -99,13 +99,13 @@ class ChatWithUs  {
                                   children: [
                                     Text(
                                       'Customer Service Representative',
-                                      style: TextStyles.textStyles_12.apply(
+                                      style: TextStylesPoppins.textStyles_12.apply(
                                           color: ColorStyle.secondryBlack,
                                           fontWeightDelta: 2),
                                     ),
                                     Text(
                                       'AdvanceCapitalPay Support',
-                                      style: TextStyles.textStyles_12.apply(
+                                      style: TextStylesPoppins.textStyles_12.apply(
                                           color: ColorStyle.grey, fontWeightDelta: 2),
                                     ),
                                   ],
@@ -152,7 +152,7 @@ class ChatWithUs  {
                                   alignment: Alignment.center,
                                   child: Text(
                                     'Hello, I need some help with my account.',
-                                    style: TextStyles.textStyles_12.apply(
+                                    style: TextStylesPoppins.textStyles_12.apply(
                                         color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                                   ),
                                   decoration: BoxDecoration(
@@ -171,7 +171,7 @@ class ChatWithUs  {
                               alignment: Alignment.center,
                               child: Text(
                                 'Chat started',
-                                style: TextStyles.textStyles_14
+                                style: TextStylesPoppins.textStyles_14
                                     .apply(color: ColorStyle.grey, fontWeightDelta: 1),
                               ),
                             ),
@@ -183,7 +183,7 @@ class ChatWithUs  {
                               alignment: Alignment.center,
                               child: Text(
                                 'Customer Service Representative joined the chat',
-                                style: TextStyles.textStyles_14
+                                style: TextStylesPoppins.textStyles_14
                                     .apply(color: ColorStyle.grey, fontWeightDelta: 1),
                               ),
                             ),
@@ -195,7 +195,7 @@ class ChatWithUs  {
                               alignment: Alignment.center,
                               child: Text(
                                 'Customer Service Representative',
-                                style: TextStyles.textStyles_14
+                                style: TextStylesPoppins.textStyles_14
                                     .apply(color: ColorStyle.grey, fontWeightDelta: 1),
                               ),
                             ),
@@ -227,7 +227,7 @@ class ChatWithUs  {
                                       borderRadius: BorderRadius.circular(16)),
                                   child: Text(
                                     'Hi, how can we help you today?',
-                                    style: TextStyles.textStyles_14.apply(
+                                    style: TextStylesPoppins.textStyles_14.apply(
                                         color: ColorStyle.secondryBlack.withOpacity(.5),
                                         fontWeightDelta: 1),
                                   ),

@@ -47,7 +47,7 @@ class SignIn extends StatelessWidget {
                   alignment: Alignment.center,
                   child: Text(
                     'Sign in',
-                    style: TextStyles.textStyles_24.apply(
+                    style: TextStylesPoppins.textStyles_24.apply(
                       color: ColorStyle.primaryWhite,
                       fontWeightDelta: 1,
                     ),
@@ -56,13 +56,13 @@ class SignIn extends StatelessWidget {
                 SizedBox(height: 22),
                 Text(
                   'E-Mail',
-                  style: TextStyles.textStyles_16.apply(
+                  style: TextStylesPoppins.textStyles_16.apply(
                     color: ColorStyle.primaryWhite,
                   ),
                 ),
                 TextFieldCustomPrefix(
                   prefix: Image.asset(ImageStyle.user),
-                  textStyle: TextStyles.textStyles_16.apply(
+                  textStyle: TextStylesPoppins.textStyles_16.apply(
                     color: ColorStyle.primaryWhite,
                   ),
                   colorFill: ColorStyle.hex("#236CA2").withOpacity(0.5),
@@ -70,7 +70,7 @@ class SignIn extends StatelessWidget {
                 SizedBox(height: 26),
                 Text(
                   'Password',
-                  style: TextStyles.textStyles_16.apply(
+                  style: TextStylesPoppins.textStyles_16.apply(
                     color: ColorStyle.primaryWhite,
                   ),
                 ),
@@ -82,10 +82,10 @@ class SignIn extends StatelessWidget {
                     ),
                       height: 30,
                       child: Image.asset(ImageStyle.lock)),
-                  hintTextStyle: TextStyles.textStyles_16.apply(
+                  hintTextStyle: TextStylesPoppins.textStyles_16.apply(
                     color: ColorStyle.grey,
                   ),
-                  textStyle: TextStyles.textStyles_16.apply(
+                  textStyle: TextStylesPoppins.textStyles_16.apply(
                     color: ColorStyle.primaryWhite,
                   ),
                   colorFill: ColorStyle.hex("#236CA2").withOpacity(0.5),
@@ -103,7 +103,7 @@ class SignIn extends StatelessWidget {
                       Expanded(
                         child: AutoSizeText(
                           'Forgot your Username or Password ?',
-                          style: TextStyles.autoSizeText.apply(
+                          style: TextStylesPoppins.autoSizeText.apply(
                             color: ColorStyle.primaryWhite,
                             decoration: TextDecoration.underline,
                           ),
@@ -138,7 +138,7 @@ class SignIn extends StatelessWidget {
                       )),
                       Text(
                         'Or sign in with',
-                        style: TextStyles.textStyles_10.apply(
+                        style: TextStylesPoppins.textStyles_10.apply(
                           color: ColorStyle.primaryWhite,
                         ),
                       ),
@@ -193,13 +193,13 @@ class SignIn extends StatelessWidget {
                     children: [
                       Text(
                         "Don’t have an account? ",
-                        style: TextStyles.textStyles_12.apply(
+                        style: TextStylesPoppins.textStyles_12.apply(
                           color: ColorStyle.primaryWhite,
                         ),
                       ),
                       Text(
                         "Sign up here",
-                        style: TextStyles.textStyles_12.apply(
+                        style: TextStylesPoppins.textStyles_12.apply(
                           color: ColorStyle.blueSKY,
                         ),
                       ),

@@ -55,7 +55,7 @@ class BusinessApplication2 extends StatelessWidget {
                           Container(
                               child: Text(
                                 'ACFVC8JTJ',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 1,
                                 ),
@@ -85,7 +85,7 @@ class BusinessApplication2 extends StatelessWidget {
                                   'Check and Verify the information of individuals below. '
                                   ' If the information is incorrect you '
                                   ' may edit, remove or add individuals. ',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -106,7 +106,7 @@ class BusinessApplication2 extends StatelessWidget {
                                     ),
                                     Text(
                                       'Company director',
-                                      style: TextStyles.textStyles_12.apply(
+                                      style: TextStylesPoppins.textStyles_12.apply(
                                         color: ColorStyle.secondryBlack,
                                         fontWeightDelta: 1,
                                       ),
@@ -128,7 +128,7 @@ class BusinessApplication2 extends StatelessWidget {
                                     ),
                                     Text(
                                       'Shareholder (10% or more)',
-                                      style: TextStyles.textStyles_12.apply(
+                                      style: TextStylesPoppins.textStyles_12.apply(
                                         color: ColorStyle.secondryBlack,
                                         fontWeightDelta: 1,
                                       ),
@@ -146,7 +146,7 @@ class BusinessApplication2 extends StatelessWidget {
                                     ),
                                     Text(
                                       'Authorized Signature',
-                                      style: TextStyles.textStyles_12.apply(
+                                      style: TextStylesPoppins.textStyles_12.apply(
                                         color: ColorStyle.secondryBlack,
                                         fontWeightDelta: 1,
                                       ),
@@ -183,7 +183,7 @@ class BusinessApplication2 extends StatelessWidget {
                                               ),
                                               Text(
                                                 'Add an additional',
-                                                style: TextStyles.textStyles_16
+                                                style: TextStylesPoppins.textStyles_16
                                                     .apply(
                                                   color: ColorStyle
                                                       .darkestBlueSignUp,
@@ -195,7 +195,7 @@ class BusinessApplication2 extends StatelessWidget {
                                             children: [
                                               Text(
                                                 'Director, Shareholder',
-                                                style: TextStyles.textStyles_16
+                                                style: TextStylesPoppins.textStyles_16
                                                     .apply(
                                                   color: ColorStyle
                                                       .darkestBlueSignUp,
@@ -203,7 +203,7 @@ class BusinessApplication2 extends StatelessWidget {
                                               ),
                                               Text(
                                                 'Authorized Signature to',
-                                                style: TextStyles.textStyles_16
+                                                style: TextStylesPoppins.textStyles_16
                                                     .apply(
                                                   color: ColorStyle
                                                       .darkestBlueSignUp,
@@ -211,7 +211,7 @@ class BusinessApplication2 extends StatelessWidget {
                                               ),
                                               Text(
                                                 'the Account',
-                                                style: TextStyles.textStyles_16
+                                                style: TextStylesPoppins.textStyles_16
                                                     .apply(
                                                   color: ColorStyle
                                                       .darkestBlueSignUp,
@@ -240,7 +240,7 @@ class BusinessApplication2 extends StatelessWidget {
                                         colorBG: ColorStyle.darkestBlueSignUp,
                                         radiusBorder: 2,
                                         colorBorder: ColorStyle.grey,
-                                        textStyle: TextStyles.textStyles_16
+                                        textStyle: TextStylesPoppins.textStyles_16
                                             .apply(
                                                 color: ColorStyle.primaryWhite,
                                                 fontWeightDelta: 1),
@@ -256,7 +256,7 @@ class BusinessApplication2 extends StatelessWidget {
                                         colorBG: ColorStyle.darkestBlueSignUp,
                                         radiusBorder: 2,
                                         colorBorder: ColorStyle.grey,
-                                        textStyle: TextStyles.textStyles_16
+                                        textStyle: TextStylesPoppins.textStyles_16
                                             .apply(
                                                 color: ColorStyle.primaryWhite,
                                                 fontWeightDelta: 1),

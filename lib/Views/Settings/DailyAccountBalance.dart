@@ -22,7 +22,7 @@ class DailyAccountBalance extends StatelessWidget {
           padding: EffectStyle.padding(16, 16, 0, 0),
           child: Text(
             'Standing Orders',
-            style: TextStyles.textStyles_18
+            style: TextStylesPoppins.textStyles_18
                 .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
           ),
         ),
@@ -70,9 +70,9 @@ class DailyAccountBalance extends StatelessWidget {
                   leadingImage: ImageStyle.ellipse2,
                   nameUser: 'HARRISON SMITH',
                   descriptionUser: 'Your Personal Settings',
-                  nameStyle: TextStyles.textStyles_18.apply(
+                  nameStyle: TextStylesPoppins.textStyles_18.apply(
                       color: ColorStyle.primaryWhite, fontWeightDelta: 1),
-                  descriptionStyle: TextStyles.textStyles_12
+                  descriptionStyle: TextStylesPoppins.textStyles_12
                       .apply(color: ColorStyle.primaryWhite),
                   trailingAction: [
                     IconButton(

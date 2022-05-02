@@ -36,12 +36,12 @@ class TransferSummary extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyles.textStyles_9.apply(
+          style: TextStylesPoppins.textStyles_9.apply(
               color: ColorStyle.grey, fontWeightDelta: 1),
         ),
         Text(
           desc,
-          style: TextStyles.textStyles_10.apply(
+          style: TextStylesPoppins.textStyles_10.apply(
               color: ColorStyle.primaryWhite,
               fontWeightDelta: 2),
         ),
@@ -66,7 +66,7 @@ class TransferSummary extends StatelessWidget {
               children: [
                 Text(
                   'Pay With',
-                  style: TextStyles.textStyles_8.apply(
+                  style: TextStylesPoppins.textStyles_8.apply(
                       color: ColorStyle.grey, fontWeightDelta: 1),
                 ),
                 Column(
@@ -74,13 +74,13 @@ class TransferSummary extends StatelessWidget {
                   children: [
                     Text(
                       'Bank Account',
-                      style: TextStyles.textStyles_8.apply(
+                      style: TextStylesPoppins.textStyles_8.apply(
                           color: ColorStyle.grey,
                           fontWeightDelta: 1),
                     ),
                     Text(
                       'HARRISON SMITH CURRENCT A/C USD',
-                      style: TextStyles.textStyles_10.apply(
+                      style: TextStylesPoppins.textStyles_10.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 2),
                     ),
@@ -95,7 +95,7 @@ class TransferSummary extends StatelessWidget {
               children: [
                 Text(
                   'Account Details',
-                  style: TextStyles.textStyles_8.apply(
+                  style: TextStylesPoppins.textStyles_8.apply(
                       color: ColorStyle.grey, fontWeightDelta: 1),
                 ),
                 Column(
@@ -103,13 +103,13 @@ class TransferSummary extends StatelessWidget {
                   children: [
                     Text(
                       'Account Type',
-                      style: TextStyles.textStyles_8.apply(
+                      style: TextStylesPoppins.textStyles_8.apply(
                           color: ColorStyle.grey,
                           fontWeightDelta: 1),
                     ),
                     Text(
                       'Plus + Current A/C',
-                      style: TextStyles.textStyles_10.apply(
+                      style: TextStylesPoppins.textStyles_10.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 1),
                     ),
@@ -120,13 +120,13 @@ class TransferSummary extends StatelessWidget {
                   children: [
                     Text(
                       'Account Number',
-                      style: TextStyles.textStyles_8.apply(
+                      style: TextStylesPoppins.textStyles_8.apply(
                           color: ColorStyle.grey,
                           fontWeightDelta: 2),
                     ),
                     Text(
                       '0235859304',
-                      style: TextStyles.textStyles_10.apply(
+                      style: TextStylesPoppins.textStyles_10.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 2),
                     ),
@@ -140,13 +140,13 @@ class TransferSummary extends StatelessWidget {
               children: [
                 Text(
                   'Beneficiary Name',
-                  style: TextStyles.textStyles_8.apply(
+                  style: TextStylesPoppins.textStyles_8.apply(
                       color: ColorStyle.grey, fontWeightDelta: 1),
                 ),
                 Expanded(child: Text(
                   'HARRISON SMITH CURRENCT A/C USD',
                   textAlign: TextAlign.end,
-                  style: TextStyles.textStyles_10.apply(
+                  style: TextStylesPoppins.textStyles_10.apply(
                       color: ColorStyle.primaryWhite,
                       fontWeightDelta: 2),
                 )),
@@ -159,7 +159,7 @@ class TransferSummary extends StatelessWidget {
               children: [
                 Text(
                   'Beneficiary A/C Details',
-                  style: TextStyles.textStyles_8.apply(
+                  style: TextStylesPoppins.textStyles_8.apply(
                       color: ColorStyle.grey, fontWeightDelta: 1),
                 ),
                 Column(
@@ -167,13 +167,13 @@ class TransferSummary extends StatelessWidget {
                   children: [
                     Text(
                       'Account Number',
-                      style: TextStyles.textStyles_8.apply(
+                      style: TextStylesPoppins.textStyles_8.apply(
                           color: ColorStyle.grey,
                           fontWeightDelta: 1),
                     ),
                     Text(
                       '0011738934',
-                      style: TextStyles.textStyles_10.apply(
+                      style: TextStylesPoppins.textStyles_10.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 1),
                     ),
@@ -184,13 +184,13 @@ class TransferSummary extends StatelessWidget {
                   children: [
                     Text(
                       'BSB Number',
-                      style: TextStyles.textStyles_8.apply(
+                      style: TextStylesPoppins.textStyles_8.apply(
                           color: ColorStyle.grey,
                           fontWeightDelta: 2),
                     ),
                     Text(
                       '082-976',
-                      style: TextStyles.textStyles_10.apply(
+                      style: TextStylesPoppins.textStyles_10.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 2),
                     ),
@@ -209,13 +209,13 @@ class TransferSummary extends StatelessWidget {
                   children: [
                     Text(
                       'IBAN Number',
-                      style: TextStyles.textStyles_8.apply(
+                      style: TextStylesPoppins.textStyles_8.apply(
                           color: ColorStyle.grey,
                           fontWeightDelta: 1),
                     ),
                     Text(
                       'G86RBOS1843400600431',
-                      style: TextStyles.textStyles_10.apply(
+                      style: TextStylesPoppins.textStyles_10.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 1),
                     ),
@@ -226,13 +226,13 @@ class TransferSummary extends StatelessWidget {
                   children: [
                     Text(
                       'Swift Code',
-                      style: TextStyles.textStyles_8.apply(
+                      style: TextStylesPoppins.textStyles_8.apply(
                           color: ColorStyle.grey,
                           fontWeightDelta: 2),
                     ),
                     Text(
                       'RBOSOB4L',
-                      style: TextStyles.textStyles_10.apply(
+                      style: TextStylesPoppins.textStyles_10.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 2),
                     ),
@@ -273,12 +273,12 @@ class TransferSummary extends StatelessWidget {
               children: [
                 Text(
                   'Total to Recieve',
-                  style: TextStyles.textStyles_12.apply(
+                  style: TextStylesPoppins.textStyles_12.apply(
                       color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                 ),
                 Text(
                   '470,080 AED',
-                  style: TextStyles.textStyles_10.apply(
+                  style: TextStylesPoppins.textStyles_10.apply(
                       color: ColorStyle.primaryWhite,
                       fontWeightDelta: 2),
                 ),

@@ -28,7 +28,7 @@ class AdvanceCapitalPayHelpCenter extends StatelessWidget {
                 'AdvanceCapitalPay Help Center',
                 maxLines: 2,
                 textAlign: TextAlign.center,
-                style: TextStyles.textStyles_14
+                style: TextStylesPoppins.textStyles_14
                     .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 2),
               ),
               leadingButton: IconButton(
@@ -63,7 +63,7 @@ class AdvanceCapitalPayHelpCenter extends StatelessWidget {
                         InfoIconDescription(
                           padding: EffectStyle.padding(0, 0, 16, 0),
                           description: 'We aim to provide a response within 24 hours if your matter is urgent please send us a message via the Live Support Chat. You can provide as much detail as possible including any screenshots or attachments which you may have. Information provided within the messages center is directly sent to our Customer Support Representatives.',
-                          descriptionStyle: TextStyles.textStyles_12
+                          descriptionStyle: TextStylesPoppins.textStyles_12
                               .apply(fontWeightDelta: 1, color: ColorStyle.secondryBlack),
                         ),
                         ComponentsTitleInputs.textFieldsAccount('Subject (Optional)', false, "Can't Access Account"),
@@ -72,7 +72,7 @@ class AdvanceCapitalPayHelpCenter extends StatelessWidget {
                         ),
                         Text(
                           'Attachments (Optional)',
-                          style: TextStyles.textStyles_16.apply(
+                          style: TextStylesPoppins.textStyles_16.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 2),
                         ),
@@ -112,7 +112,7 @@ class AdvanceCapitalPayHelpCenter extends StatelessWidget {
                               ),
                               Text(
                                 'Add Files or Drop Files Here',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.darkestBlueSignUp,
                                   fontWeightDelta: 1
                                 ),
@@ -125,7 +125,7 @@ class AdvanceCapitalPayHelpCenter extends StatelessWidget {
                         ),
                         TextField(
                           maxLines: 6,
-                          style: TextStyles.textStyles_14.apply(
+                          style: TextStylesPoppins.textStyles_14.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 1),
                           decoration: InputDecoration(
@@ -135,7 +135,7 @@ class AdvanceCapitalPayHelpCenter extends StatelessWidget {
                             ),
                             contentPadding: EdgeInsets.only(left: 16, right: 16, top: 16),
                             hintText: 'Hello, could you please assist me in getting me back access to my account',
-                            hintStyle: TextStyles.textStyles_14.apply(
+                            hintStyle: TextStylesPoppins.textStyles_14.apply(
                                 color: ColorStyle.grey,
                                 fontWeightDelta: 1),
                           ),
@@ -145,7 +145,7 @@ class AdvanceCapitalPayHelpCenter extends StatelessWidget {
                         ),
                         Text(
                           'Please provide as much detail as possible for your query. Our Customer Representatives will get back to you as soon as possible. You will receive a notification in your inbox once a response has been made.',
-                          style: TextStyles.textStyles_12.apply(
+                          style: TextStylesPoppins.textStyles_12.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 1),
                         ),
@@ -158,7 +158,7 @@ class AdvanceCapitalPayHelpCenter extends StatelessWidget {
                           textFirst:'Back to Help Center',
                           colorBGFirst:Colors.transparent,
                           colorBorderFirst:ColorStyle.hex('#016ECF'),
-                          textStyleFirst: TextStyles.textStyles_12.apply(
+                          textStyleFirst: TextStylesPoppins.textStyles_12.apply(
                             fontWeightDelta: 1,
                             color: ColorStyle.hex('#016ECF'),
                           ),
@@ -168,7 +168,7 @@ class AdvanceCapitalPayHelpCenter extends StatelessWidget {
                           textSecond:'Submit Message',
                           colorBGSecond: ColorStyle.hex('#016ECF'),
                           colorBorderSecond: Colors.transparent,
-                          textStyleSecond: TextStyles.textStyles_12.apply(
+                          textStyleSecond: TextStylesPoppins.textStyles_12.apply(
                               fontWeightDelta: 1,
                               color: ColorStyle.primaryWhite
                           ),

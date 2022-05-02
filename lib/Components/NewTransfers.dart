@@ -44,7 +44,7 @@ class _NewTransferCustomState extends State<NewTransferCustom> {
                       size: 36,
                       color: Colors.white,
                     ),
-                    textStyle: TextStyles.textStyles_18.apply(
+                    textStyle: TextStylesPoppins.textStyles_18.apply(
                       color: ColorStyle.primaryWhite,
                       // fontWeightDelta: 1
                     ),
@@ -69,7 +69,7 @@ class _NewTransferCustomState extends State<NewTransferCustom> {
                       Text(
                         'You convert United States Dollar ',
                         textAlign: TextAlign.end,
-                        style: TextStyles.textStyles_9.apply(
+                        style: TextStylesPoppins.textStyles_9.apply(
                           color: ColorStyle.primaryWhite,
                           // fontWeightDelta: 2
                         ),
@@ -77,7 +77,7 @@ class _NewTransferCustomState extends State<NewTransferCustom> {
                       SizedBox(height: 4,),
                       Text(
                         '128,678',
-                        style: TextStyles.textStyles_12.apply(
+                        style: TextStylesPoppins.textStyles_12.apply(
                             color: ColorStyle.primaryWhite, fontWeightDelta: 2),
                       ),
                     ],
@@ -94,7 +94,7 @@ class _NewTransferCustomState extends State<NewTransferCustom> {
                 children: [
                   Text(
                     'Show fee structure',
-                    style: TextStyles.textStyles_10.apply(
+                    style: TextStylesPoppins.textStyles_10.apply(
                         color: ColorStyle.hex('#0088FF'),
                         fontWeightDelta: 1
                     ),
@@ -131,14 +131,14 @@ class _NewTransferCustomState extends State<NewTransferCustom> {
                   children: [
                     Text(
                       'Balance After',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 1
                       ),
                     ),
                     Text(
                       '79.46 USD',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 0
                       ),
@@ -151,14 +151,14 @@ class _NewTransferCustomState extends State<NewTransferCustom> {
                   children: [
                     Text(
                       'Transaction Fee',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 1
                       ),
                     ),
                     Text(
                       '10.00 USD',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 0
                       ),
@@ -171,14 +171,14 @@ class _NewTransferCustomState extends State<NewTransferCustom> {
                   children: [
                     Text(
                       'Total Fees',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 1
                       ),
                     ),
                     Text(
                       '10.00 USD',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 0
                       ),
@@ -193,14 +193,14 @@ class _NewTransferCustomState extends State<NewTransferCustom> {
                   children: [
                     Text(
                       'Conversation Amount',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 1
                       ),
                     ),
                     Text(
                       '1.920 USD',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 0
                       ),
@@ -213,14 +213,14 @@ class _NewTransferCustomState extends State<NewTransferCustom> {
                   children: [
                     Text(
                       'Guaranteed Rate',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 1
                       ),
                     ),
                     Text(
                       '3.675.00 USD',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 0
                       ),
@@ -249,7 +249,7 @@ class _NewTransferCustomState extends State<NewTransferCustom> {
                       size: 36,
                       color: Colors.white,
                     ),
-                    textStyle: TextStyles.textStyles_18.apply(
+                    textStyle: TextStylesPoppins.textStyles_18.apply(
                       color: ColorStyle.primaryWhite,
                       // fontWeightDelta: 1
                     ),
@@ -274,7 +274,7 @@ class _NewTransferCustomState extends State<NewTransferCustom> {
                       Text(
                         'You receive United Arab Emirates Dhiram',
                         textAlign: TextAlign.end,
-                        style: TextStyles.textStyles_9.apply(
+                        style: TextStylesPoppins.textStyles_9.apply(
                           color: ColorStyle.primaryWhite,
                           // fontWeightDelta: 2
                         ),
@@ -282,7 +282,7 @@ class _NewTransferCustomState extends State<NewTransferCustom> {
                       SizedBox(height: 4,),
                       Text(
                         '128,678',
-                        style: TextStyles.textStyles_12.apply(
+                        style: TextStylesPoppins.textStyles_12.apply(
                             color: ColorStyle.primaryWhite, fontWeightDelta: 2),
                       ),
                     ],

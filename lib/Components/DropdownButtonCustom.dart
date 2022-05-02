@@ -128,7 +128,7 @@ class DropdownButtonTextField extends StatelessWidget {
               child: Text(
                 value,
                 textAlign: TextAlign.left,
-                style: TextStyles.textStyles_14.apply(
+                style: TextStylesPoppins.textStyles_14.apply(
                   color: ColorStyle.secondryBlack,
                   // fontWeightDelta: 0,
                 ),

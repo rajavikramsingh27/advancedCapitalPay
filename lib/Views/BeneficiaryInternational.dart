@@ -34,7 +34,7 @@ class BeneficiaryInternational extends StatelessWidget {
           ),
           child: Text(
             title,
-            style: TextStyles.textStyles_16.apply(
+            style: TextStylesPoppins.textStyles_16.apply(
               color: ColorStyle.primaryWhite,
               fontWeightDelta: 1,
             ),
@@ -85,7 +85,7 @@ class BeneficiaryInternational extends StatelessWidget {
                             children: [
                               Text(
                                 'ICE JEWELLERS LTD',
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_14
                                     .apply(
                                     color: ColorStyle
@@ -95,7 +95,7 @@ class BeneficiaryInternational extends StatelessWidget {
                               ),
                               Text(
                                 'Bank Name',
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_10
                                     .apply(
                                   color: ColorStyle
@@ -105,7 +105,7 @@ class BeneficiaryInternational extends StatelessWidget {
                               ),
                               Text(
                                 'THE ROYAL BANK OF SCOTLAND PLC',
-                                style: TextStyles.textStyles_10.apply(
+                                style: TextStylesPoppins.textStyles_10.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 2,
                                 ),
@@ -119,7 +119,7 @@ class BeneficiaryInternational extends StatelessWidget {
                                     children: [
                                       Text(
                                         'IBAN',
-                                        style: TextStyles.textStyles_10.apply(
+                                        style: TextStylesPoppins.textStyles_10.apply(
                                           color: ColorStyle
                                               .primaryWhite,
                                           // fontWeightDelta: 2,
@@ -127,7 +127,7 @@ class BeneficiaryInternational extends StatelessWidget {
                                       ),
                                       Text(
                                         'GB5909023459023485793',
-                                        style: TextStyles.textStyles_10.apply(
+                                        style: TextStylesPoppins.textStyles_10.apply(
                                           color: ColorStyle
                                               .primaryWhite,
                                           fontWeightDelta: 2,
@@ -140,7 +140,7 @@ class BeneficiaryInternational extends StatelessWidget {
                                     children: [
                                       Text(
                                         'SWIFT Code',
-                                        style: TextStyles.textStyles_10.apply(
+                                        style: TextStylesPoppins.textStyles_10.apply(
                                           color: ColorStyle
                                               .primaryWhite,
                                           // fontWeightDelta: 2,
@@ -148,7 +148,7 @@ class BeneficiaryInternational extends StatelessWidget {
                                       ),
                                       Text(
                                         'RBOSGB2L',
-                                        style: TextStyles.textStyles_10.apply(
+                                        style: TextStylesPoppins.textStyles_10.apply(
                                           color: ColorStyle
                                               .primaryWhite,
                                           fontWeightDelta: 2,
@@ -238,8 +238,8 @@ class BeneficiaryInternational extends StatelessWidget {
                                                       'Check My Standing Orders',
                                                       style: TextStyle(
                                                         color: ColorStyle.hex('#00D6E8'),
-                                                        fontFamily: TextStyles.kFontFamily,
-                                                        fontSize: SizeStyle.size_12,
+                                                        fontFamily: TextStylesPoppins.kFontFamily,
+                                                        fontSize: 12,
                                                         decorationThickness: 2,
                                                       )
                                                   ),
@@ -276,8 +276,8 @@ class BeneficiaryInternational extends StatelessWidget {
                                                     'Check My Transfer',
                                                     style: TextStyle(
                                                       color: ColorStyle.hex('#00D6E8'),
-                                                      fontFamily: TextStyles.kFontFamily,
-                                                      fontSize: SizeStyle.size_12,
+                                                      fontFamily: TextStylesPoppins.kFontFamily,
+                                                      fontSize: 12,
                                                       decorationThickness: 2,
                                                     )
                                                 ),
@@ -309,7 +309,7 @@ class BeneficiaryInternational extends StatelessWidget {
                                   InkWell(
                                     child: Text(
                                       'New Beneficiary',
-                                      style: TextStyles.textStyles_12.apply(
+                                      style: TextStylesPoppins.textStyles_12.apply(
                                         color: ColorStyle.primaryWhite,
                                         // fontWeightDelta: 2
                                       ),
@@ -340,7 +340,7 @@ class BeneficiaryInternational extends StatelessWidget {
                                               SizedBox(height: 6,),
                                               Text(
                                                 'Between My Accounts',
-                                                style: TextStyles.textStyles_12
+                                                style: TextStylesPoppins.textStyles_12
                                                     .apply(
                                                     color: ColorStyle
                                                         .primaryWhite
@@ -404,7 +404,7 @@ class BeneficiaryInternational extends StatelessWidget {
                                               SizedBox(height: 6,),
                                               Text(
                                                 'Personal Account',
-                                                style: TextStyles.textStyles_12
+                                                style: TextStylesPoppins.textStyles_12
                                                     .apply(
                                                     color: ColorStyle
                                                         .primaryWhite,
@@ -435,7 +435,7 @@ class BeneficiaryInternational extends StatelessWidget {
                                               SizedBox(height: 6,),
                                               Text(
                                                 'Business & Charity',
-                                                style: TextStyles.textStyles_12
+                                                style: TextStylesPoppins.textStyles_12
                                                     .apply(
                                                     color: ColorStyle
                                                         .primaryWhite
@@ -501,7 +501,7 @@ class BeneficiaryInternational extends StatelessWidget {
                                     ),
                                     child: Text(
                                       'Registered Beneficiaries',
-                                      style: TextStyles.textStyles_14.apply(
+                                      style: TextStylesPoppins.textStyles_14.apply(
                                           color: ColorStyle.primaryWhite,
                                           fontWeightDelta: 2),
                                     ),
@@ -517,7 +517,7 @@ class BeneficiaryInternational extends StatelessWidget {
                                         Expanded(
                                           child: ElevatedButtonCustom(
                                             text: 'Personal',
-                                            textStyle: TextStyles.textStyles_14.apply(
+                                            textStyle: TextStylesPoppins.textStyles_14.apply(
                                                 color: controller.isPersonal.value
                                                     ? ColorStyle.primaryWhite
                                                     : ColorStyle.primaryWhite
@@ -538,7 +538,7 @@ class BeneficiaryInternational extends StatelessWidget {
                                         Expanded(
                                           child: ElevatedButtonCustom(
                                             text: 'Business Profile',
-                                            textStyle: TextStyles.textStyles_14.apply(
+                                            textStyle: TextStylesPoppins.textStyles_14.apply(
                                                 color: !controller.isPersonal.value
                                                     ? ColorStyle.primaryWhite
                                                     : ColorStyle.primaryWhite
@@ -583,7 +583,7 @@ class BeneficiaryInternational extends StatelessWidget {
                                                 border: InputBorder.none,
                                                 hintText:
                                                 'Search Beneficiaries....',
-                                                hintStyle: TextStyles.textStyles_14.apply(
+                                                hintStyle: TextStylesPoppins.textStyles_14.apply(
                                                   color: ColorStyle.primaryWhite,
                                                   fontWeightDelta: 0,
                                                 ),

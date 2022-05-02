@@ -121,7 +121,7 @@ class AccountDetailsRecovery extends StatelessWidget {
                                     ),
                                     Text(
                                       'Enter Details',
-                                      style: TextStyles.textStyles_10.apply(
+                                      style: TextStylesPoppins.textStyles_10.apply(
                                         color: ColorStyle.primaryWhite,
                                         fontWeightDelta: 1,
                                       ),
@@ -142,7 +142,7 @@ class AccountDetailsRecovery extends StatelessWidget {
                                     ),
                                     Text(
                                       'Enter User ID',
-                                      style: TextStyles.textStyles_10.apply(
+                                      style: TextStylesPoppins.textStyles_10.apply(
                                         color: ColorStyle.primaryWhite,
                                         fontWeightDelta: 1,
                                       ),
@@ -163,7 +163,7 @@ class AccountDetailsRecovery extends StatelessWidget {
                                     ),
                                     Text(
                                       'Set Password',
-                                      style: TextStyles.textStyles_10.apply(
+                                      style: TextStylesPoppins.textStyles_10.apply(
                                         color: ColorStyle.primaryWhite,
                                         fontWeightDelta: 1,
                                       ),
@@ -185,7 +185,7 @@ class AccountDetailsRecovery extends StatelessWidget {
                                     Container(
                                       child: Text(
                                         'Login',
-                                        style: TextStyles.textStyles_10.apply(
+                                        style: TextStylesPoppins.textStyles_10.apply(
                                           color: ColorStyle.primaryWhite,
                                           fontWeightDelta: 1,
                                         ),

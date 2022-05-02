@@ -48,10 +48,10 @@ class AccountDetails extends StatelessWidget {
                               leadingImage: ImageStyle.ellipse2,
                               nameUser: 'HARRISON SMITH',
                               descriptionUser: 'Your Personal Settings',
-                              nameStyle: TextStyles.textStyles_18.apply(
+                              nameStyle: TextStylesPoppins.textStyles_18.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 1),
-                              descriptionStyle: TextStyles.textStyles_12
+                              descriptionStyle: TextStylesPoppins.textStyles_12
                                   .apply(color: ColorStyle.primaryWhite),
                               trailingAction: [
                                 IconButton(
@@ -81,7 +81,7 @@ class AccountDetails extends StatelessWidget {
                               ),
                               child: Text(
                                 'Your Account Details',
-                                style: TextStyles.textStyles_18.apply(
+                                style: TextStylesPoppins.textStyles_18.apply(
                                     color: ColorStyle.primaryWhite,
                                     fontWeightDelta: 1),
                               ),
@@ -95,7 +95,7 @@ class AccountDetails extends StatelessWidget {
                               ),
                               child: Text(
                                 'Select Account to view details',
-                                style: TextStyles.textStyles_16.apply(
+                                style: TextStylesPoppins.textStyles_16.apply(
                                     color: ColorStyle.primaryWhite,
                                     fontWeightDelta: 0),
                               ),
@@ -123,7 +123,7 @@ class AccountDetails extends StatelessWidget {
                               ),
                               child: Text(
                                 'Your Account Details',
-                                style: TextStyles.textStyles_18.apply(
+                                style: TextStylesPoppins.textStyles_18.apply(
                                     color: ColorStyle.primaryWhite,
                                     fontWeightDelta: 1),
                               ),
@@ -155,7 +155,7 @@ class AccountDetails extends StatelessWidget {
                                         Text(
                                           controller
                                               .chooseAccountDetails[index],
-                                          style: TextStyles.textStyles_16.apply(
+                                          style: TextStylesPoppins.textStyles_16.apply(
                                               color: ColorStyle.secondryBlack,
                                               fontWeightDelta: 2),
                                         ),
@@ -185,7 +185,7 @@ class AccountDetails extends StatelessWidget {
                                                     border: InputBorder.none,
                                                     // border: OutlineInputBorder(),
                                                     hintText: '03228464533',
-                                                    labelStyle: TextStyles
+                                                    labelStyle: TextStylesPoppins
                                                         .textStyles_14
                                                         .apply(
                                                       color: Colors.grey,

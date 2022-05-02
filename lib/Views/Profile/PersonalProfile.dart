@@ -22,7 +22,7 @@ class PersonalProfile extends StatelessWidget {
           padding: EffectStyle.padding(16, 16, 16, 16),
           child: Text(
             'Personal Details',
-            style: TextStyles.textStyles_14.apply(
+            style: TextStylesPoppins.textStyles_14.apply(
               color: ColorStyle.primaryWhite,
               fontWeightDelta: 2,
             ),
@@ -50,7 +50,7 @@ class PersonalProfile extends StatelessWidget {
           padding: EffectStyle.padding(16, 16, 16, 16),
           child: Text(
             'Contact Details',
-            style: TextStyles.textStyles_14.apply(
+            style: TextStylesPoppins.textStyles_14.apply(
               color: ColorStyle.primaryWhite,
               fontWeightDelta: 2,
             ),
@@ -83,7 +83,7 @@ class PersonalProfile extends StatelessWidget {
             children: [
               Text(
                 'Employment Details',
-                style: TextStyles.textStyles_14.apply(
+                style: TextStylesPoppins.textStyles_14.apply(
                   color: ColorStyle.primaryWhite,
                   fontWeightDelta: 2,
                 ),
@@ -110,7 +110,7 @@ class PersonalProfile extends StatelessWidget {
                     Text('Edit',
                         style: TextStyle(
                             color: ColorStyle.hex('#016ECF'),
-                            fontFamily: TextStyles.kFontFamily,
+                            fontFamily: TextStylesPoppins.kFontFamily,
                             fontSize: 12,
                             fontWeight: FontWeight.w600)),
                   ],
@@ -143,7 +143,7 @@ class PersonalProfile extends StatelessWidget {
             children: [
               Text(
                 'Employment Details',
-                style: TextStyles.textStyles_14.apply(
+                style: TextStylesPoppins.textStyles_14.apply(
                   color: ColorStyle.primaryWhite,
                   fontWeightDelta: 2,
                 ),
@@ -170,7 +170,7 @@ class PersonalProfile extends StatelessWidget {
                     Text('Edit',
                         style: TextStyle(
                             color: ColorStyle.hex('#016ECF'),
-                            fontFamily: TextStyles.kFontFamily,
+                            fontFamily: TextStylesPoppins.kFontFamily,
                             fontSize: 12,
                             fontWeight: FontWeight.w600)),
                   ],
@@ -214,7 +214,7 @@ class PersonalProfile extends StatelessWidget {
             children: [
               Text(
                 'Correspondence Address',
-                style: TextStyles.textStyles_14.apply(
+                style: TextStylesPoppins.textStyles_14.apply(
                   color: ColorStyle.primaryWhite,
                   fontWeightDelta: 2,
                 ),
@@ -241,7 +241,7 @@ class PersonalProfile extends StatelessWidget {
                     Text('Edit',
                         style: TextStyle(
                             color: ColorStyle.hex('#016ECF'),
-                            fontFamily: TextStyles.kFontFamily,
+                            fontFamily: TextStylesPoppins.kFontFamily,
                             fontSize: 12,
                             fontWeight: FontWeight.w600)),
                   ],
@@ -285,7 +285,7 @@ class PersonalProfile extends StatelessWidget {
             children: [
               Text(
                 'Additional Information',
-                style: TextStyles.textStyles_14.apply(
+                style: TextStylesPoppins.textStyles_14.apply(
                   color: ColorStyle.primaryWhite,
                   fontWeightDelta: 2,
                 ),
@@ -312,7 +312,7 @@ class PersonalProfile extends StatelessWidget {
                     Text('Edit',
                         style: TextStyle(
                             color: ColorStyle.hex('#016ECF'),
-                            fontFamily: TextStyles.kFontFamily,
+                            fontFamily: TextStylesPoppins.kFontFamily,
                             fontSize: 12,
                             fontWeight: FontWeight.w600)),
                   ],

@@ -42,7 +42,7 @@ class TransferDetails extends StatelessWidget {
                 Container(
                   child: Text(
                     'Transfer Details',
-                    style: TextStyles.textStyles_14.apply(
+                    style: TextStylesPoppins.textStyles_14.apply(
                       color: ColorStyle.primaryWhite,
                       fontWeightDelta: 2,
                     ),
@@ -95,7 +95,7 @@ class TransferDetails extends StatelessWidget {
                       SizedBox(height: 10),
                       Text(
                         'Transfer Documentation',
-                        style: TextStyles.textStyles_14.apply(
+                        style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.secondryBlack,
                           fontWeightDelta: 2,
                         ),
@@ -104,7 +104,7 @@ class TransferDetails extends StatelessWidget {
                         'Upload any relevant documentation relating to the'
                         'transfer such as Invoices. Purchase Orders, Bill of'
                         'Laden and more ',
-                        style: TextStyles.textStyles_14.apply(
+                        style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.secondryBlack,
                           fontWeightDelta: 0,
                         ),
@@ -131,7 +131,7 @@ class TransferDetails extends StatelessWidget {
                               SizedBox(height: 10,),
                               Text(
                                 'Choose Files Here..',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 0,
                                 ),
@@ -147,7 +147,7 @@ class TransferDetails extends StatelessWidget {
                           textFirst: 'Cancel',
                           colorBGFirst: Colors.transparent,
                           colorBorderFirst: ColorStyle.hex('#016ECF'),
-                          textStyleFirst: TextStyles.textStyles_14.apply(
+                          textStyleFirst: TextStylesPoppins.textStyles_14.apply(
                             fontWeightDelta: 1,
                             color: ColorStyle.hex('#016ECF'),
                           ),
@@ -155,7 +155,7 @@ class TransferDetails extends StatelessWidget {
                           textSecond: 'Continue to Summary',
                           colorBGSecond: ColorStyle.hex('#016ECF'),
                           colorBorderSecond: Colors.transparent,
-                          textStyleSecond: TextStyles.textStyles_14
+                          textStyleSecond: TextStylesPoppins.textStyles_14
                               .apply(fontWeightDelta: 1, color: ColorStyle.primaryWhite),
                           onTapSecond: onTapContinue,
                         ),
