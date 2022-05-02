@@ -45,6 +45,46 @@ class AppBarStyle extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 }
+class AppBarStyleCryptoDashboard extends StatelessWidget implements PreferredSizeWidget {
+  final Function()? onTap;
+  final Widget? leadingButton;
+  final Widget? trailingButton;
+
+  AppBarStyleCryptoDashboard({
+    Key? key,
+    this.onTap,
+    this.leadingButton,
+    this.trailingButton,
+  }) : super(key: key);
+
+  double heightAppBar = 70;
+
+  @override
+  Size get preferredSize => new Size.fromHeight(heightAppBar);
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      elevation: 0,
+      toolbarHeight: heightAppBar,
+      backgroundColor: Colors.transparent,
+      // leadingWidth: 0,
+      leadingWidth: 80,
+      leading: (leadingButton == null) ? Container() : leadingButton,
+      centerTitle: true,
+      title: Image.asset(
+        ImageStyle.logo_white,
+        height: 44,
+      ),
+      actions: [
+        if (trailingButton != null) trailingButton!,
+        SizedBox(
+          width: 10,
+        )
+      ],
+    );
+  }
+}
 
 class AppBarStyleStatusBar extends StatelessWidget
     implements PreferredSizeWidget {

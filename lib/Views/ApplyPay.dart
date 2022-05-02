@@ -43,9 +43,9 @@ class ApplyPay extends StatelessWidget {
             backgroundColor: Colors.transparent,
 
             body:     SingleChildScrollView(
-              padding: EdgeInsets.only(left: 12,right: 12),
+              // padding: EdgeInsets.only(left: 12,right: 12),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                // crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
 
                   Container(
@@ -53,123 +53,89 @@ class ApplyPay extends StatelessWidget {
                     // width: 164,
                     // height: 60,
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      // crossAxisAlignment: CrossAxisAlignment.start,
                       // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        SizedBox(height: 30,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          // crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Image.asset(ImageStyle.applelogo,height: 36,),
+                            SizedBox(width: 4,),
+                            Text(
 
-
-
-
+                              "Pay",
+                              style: TextStyles.textStyles_24.apply(
+                                  color: ColorStyle.secondryBlack,
+                                  fontWeightDelta: 2
+                              ),
+                            ),
+                          ],
+                        ),
                         SizedBox(height: 20,),
                         Image.asset(ImageStyle.card2),
-                        Text(
-                          "Card added to Apple Wallet",
-                          style: TextStyles.textStyles_14.apply(
-                              color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
-                        ),
+                        SizedBox(height: 120,),
+                       Container(
+                         alignment: Alignment.center,
+                         child:  Text(
+                           "Card added to Apple Wallet",
+                           style: TextStyles.textStyles_14.apply(
+                               color: ColorStyle.secondryBlack,
+                               fontWeightDelta: 2
+                           ),
+                         ),
 
-                        Text(
-                          "You can use this card with Apple Pay to pay online. In-app and in-store whenever you see the signs.",
-                          style: TextStyles.textStyles_14.apply(
-                              color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
+                       ),
+                        SizedBox(height: 8,),
+                        Container(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "You can use this card with Apple Pay to pay online. In-app and in-store whenever you see the signs.",
+                            style: TextStyles.textStyles_12.apply(
+                                color: ColorStyle.secondryBlack,
+                                fontWeightDelta: 1
+                            ),
                           ),
+
                         ),
                         SizedBox(height: 30,),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            // SizedBox(width: 26,),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
+                   mainAxisAlignment: MainAxisAlignment.center,
+                   children: [
+                     Image.asset(ImageStyle.wifit_tawer,height: 50,),
+                     Container(
+                       height: 40,
+                       width: 70,
+                       // alignment: Alignment.center,
+                       child: Row(
+                         mainAxisAlignment: MainAxisAlignment.center,
+                         children: [
+                           Image.asset(ImageStyle.applelogo,height: 20,),
+                           SizedBox(width: 4,),
+                           Text(
 
-                                Text(
-                                  "AdvanceCapitalPay Response:",
-                                  style: TextStyles.textStyles_14.apply(
-                                      color: ColorStyle.secondryBlack,
-                                      fontWeightDelta: 2
-                                  ),
-                                ),
-                                Text(
-                                  "Hi Harrison, please confirm your ID card ",
-                                  style: TextStyles.textStyles_12.apply(
-                                      color: ColorStyle.secondryBlack,
-                                      fontWeightDelta: 1
-                                  ),
+                             "Pay",
+                             style: TextStyles.textStyles_16.apply(
+                                 color: ColorStyle.secondryBlack,
+                                 fontWeightDelta: 2
+                             ),
+                           ),
+                         ],
+                       ),
+                       decoration: BoxDecoration(
 
-                                ),
-                                Text(
-                                  "number before we procced.",
-                                  style: TextStyles.textStyles_12.apply(
-                                      color: ColorStyle.secondryBlack,
-                                      fontWeightDelta: 1
-                                  ),
+                           borderRadius: BorderRadius.circular(5),
+                           border: Border.all(
+                             width: 1,
+                             color: ColorStyle.secondryBlack,
+                           )
+                       ),
 
-                                ),
-                              ],
-                            ),
-                            SizedBox(width: 10,),
-                            Image.asset(ImageStyle.Group2220
-                              ,height: 44,),
-
-                          ],
-                        ),
-                        SizedBox(height: 40,),
-                        Text(
-                          'Response',
-                          style: TextStyles.textStyles_16.apply(
-                              color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2
-                          ),
-                        ),
-                        SizedBox(height: 10,),
-                        SizedBox(height: 10,),
-                        Container(
-                          padding: EdgeInsets.only(top: 140,left: 10,right: 10,bottom: 10),
-                          alignment: Alignment.center,
-                          // height: 164,
-                          child:  Container(
-                            height: 44,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Container(
-                                  child: Icon(
-                                    Icons.add,
-                                    size: 14,
-                                    color: ColorStyle.darkestBlueSignUp,
-                                  ),
-                                  height: 22,
-                                  width: 22,
-                                  decoration: BoxDecoration(
-                                    borderRadius:
-                                    BorderRadius.circular(20),
-                                    border: Border.all(
-                                      width: 1.8,
-                                      color: ColorStyle.darkestBlueSignUp,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  'Add Files or Drop Files Here',
-                                  style: TextStyles.textStyles_12.apply(
-                                    color: ColorStyle.darkestBlueSignUp,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            decoration: EffectStyleSignUp.decoration(ColorStyle.primaryWhite, 25),
-                          ),
-                          decoration: EffectStyleSignUp.decoration1(ColorStyle.primaryWhite, 25),
-                        ),
-
-                        SizedBox(height: 30,),
+                     ),
+                   ],
+                 ),
+                        SizedBox(height: 50,),
                         GradientButtonWithMassage(),
                         SizedBox(height: 40,),
 

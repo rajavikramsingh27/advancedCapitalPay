@@ -6,6 +6,7 @@ import 'package:advanced_capital_pay/Views/AdvanceCapitalPayHelpCenter.dart';
 import 'package:advanced_capital_pay/Views/AppSettings.dart';
 import 'package:advanced_capital_pay/Views/ApplyPay.dart';
 import 'package:advanced_capital_pay/Views/BeneficiaryBankDetails.dart';
+import 'package:advanced_capital_pay/Views/CryptoDashboard.dart';
 import 'package:advanced_capital_pay/Views/CurrencyExchangePage.dart';
 import 'package:advanced_capital_pay/Views/MyMessages.dart';
 import 'package:advanced_capital_pay/Views/SignUp/PersonalApplication8.dart';
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
       // home: ApplyPay(),
       // home: TabbarScreen(),
       // home: AppSettings(),
-      home: TabbarScreen(),
+      home: CryptoDashboard(),
       // home: AppSettings(),
       //   home: SuccessfulCurrencyExchange()
 
