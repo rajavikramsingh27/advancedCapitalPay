@@ -37,9 +37,15 @@ class AppBarStyle extends StatelessWidget implements PreferredSizeWidget {
         height: 52,
       ),
       actions: [
-        if (trailingButton != null) trailingButton!,
+        if (trailingButton != null) Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            trailingButton!
+          ],
+        ),
         SizedBox(
-          width: 10,
+          width: 16,
         )
       ],
     );
