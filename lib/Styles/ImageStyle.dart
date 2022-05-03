@@ -267,5 +267,25 @@ class ImageStyle {
       "$baseImage/bgTransactionListCripto.png";
   static const String cryptoBG1 = "$baseImage/cryptoBG1.png";
   static const String bgGradientCryto = "$baseImage/bgGradientCryto.png";
+  static const String crypto123 = "$baseImage/crypto123.png";
+  static const String myFullPortfolio = "$baseImage/myFullPortfolio.png";
+  static const String group_2222 = "$baseImage/Group 2222.png";
+  static const String graphCrypto = "$baseImage/graphCrypto.png";
+  static const String qrCode = "$baseImage/qrCode.png";
 
+  static const String eth = "$baseImage/eth.png";
+  static const String shared = "$baseImage/shared.png";
+  static const String bnb = "$baseImage/bnb.png";
+  static const String ltc = "$baseImage/ltc.png";
+  static const String doge = "$baseImage/doge.png";
+  static const String bgMarkets = "$baseImage/bgMarkets.png";
+  static const String bgMarketCell = "$baseImage/bgMarketCell.png";
+  static const String bg204 = "$baseImage/bg204.png";
+  static const String bg205 = "$baseImage/bg205.png";
+  static const String bg206 = "$baseImage/bg206.png";
+  static const String bgCryptoNews = "$baseImage/bgCryptoNews.png";
+  static const String bgCryptoTrade = "$baseImage/bgCryptoTrade.png";
+  static const String bgCrptoTrade2 = "$baseImage/bgCrptoTrade2.png";
+  static const String exchangeGreen = "$baseImage/exchangeGreen.png";
+  static const String bg207 = "$baseImage/bg207.png";
 }

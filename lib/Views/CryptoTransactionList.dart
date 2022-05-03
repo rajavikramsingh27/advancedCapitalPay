@@ -3,13 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../Components/AppBarStyle.dart';
-import '../Components/DropdownButtonCustom.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/EffectStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
 import '../Components/BackgroundImage.dart';
 import '../Controllers/TransferBetweenAccountController.dart';
+
+import 'package:get/utils.dart';
+import 'dart:ui';
+import '../../../Styles/ColorStyle.dart';
+import '../../../Styles/EffectStyle.dart';
+import '../../../Styles/ImageStyle.dart';
+import '../../../Styles/TextStyles.dart';
+import '../Views/CryptoRecieve.dart';
 
 class CryptoTransactionList extends StatelessWidget {
   CryptoTransactionList({Key? key}) : super(key: key);
@@ -66,7 +73,10 @@ class CryptoTransactionList extends StatelessWidget {
                       bottom: 0,
                       left: 0,
                       right: 0,
-                      child: Image.asset(ImageStyle.bgGradient)),
+                      child: Image.asset(
+                        ImageStyle.bgGradient,
+                        fit: BoxFit.fill,
+                      )),
                   BackgroundImage(
                     imageName: ImageStyle.bgTransactionListCripto,
                   ),
@@ -204,15 +214,25 @@ class CryptoTransactionList extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Expanded(
-                                  child: iconTitleSendRecieveTrade(
-                                      'Send', ImageStyle.Iconsend),
+                                  child: InkWell(
+                                    child: iconTitleSendRecieveTrade(
+                                        'Send', ImageStyle.Iconsend),
+                                      onTap: () {
+                                      // Get.to(CryptoRecieve());
+                                      },
+                                  ),
                                 ),
                                 SizedBox(
                                   width: 16,
                                 ),
                                 Expanded(
-                                  child: iconTitleSendRecieveTrade(
-                                      'Receive', ImageStyle.Iconrecievemoney),
+                                  child: InkWell(
+                                    child: iconTitleSendRecieveTrade(
+                                        'Receive', ImageStyle.Iconrecievemoney),
+                                    onTap: () {
+                                      Get.to(CryptoRecieve());
+                                    },
+                                  ),
                                 ),
                                 SizedBox(
                                   width: 16,
@@ -223,6 +243,50 @@ class CryptoTransactionList extends StatelessWidget {
                                 ),
                               ],
                             ),
+                            SizedBox(
+                              height: 16,
+                            ),
+                            Stack(
+                              children: [
+                                Image.asset(
+                                  ImageStyle.graphCrypto,
+                                  width: MediaQuery.of(context).size.width,
+                                ),
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: BackdropFilter(
+                                    filter: ImageFilter.blur(
+                                      sigmaX: 1.0,
+                                      sigmaY: 1.0,
+                                    ),
+                                    child: Container(
+                                      width: MediaQuery.of(context).size.width,
+                                      height: 190,
+                                      decoration: BoxDecoration(
+                                          color: ColorStyle.hex('#263767').withOpacity(0.6),
+                                          borderRadius: BorderRadius.circular(10),
+                                          border: Border.all(
+                                            color: ColorStyle.hex('#C6C3B2').withOpacity(0.4),
+                                            width: 0.6
+                                          ),
+                                          gradient: LinearGradient(
+                                              begin: Alignment.centerLeft,
+                                              end: Alignment.centerRight,
+                                              colors: [
+                                                ColorStyle.hex('#263767'),
+                                                ColorStyle.hex('#010B1D'),
+                                              ])),
+                                      // color: Colors.red,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            // Container(
+                            //   child: Image.asset(ImageStyle.graphCrypto,
+                            //   width: MediaQuery.of(context).size.width,
+                            //   )
+                            // ),
                             SizedBox(
                               height: 16,
                             ),
@@ -239,11 +303,13 @@ class CryptoTransactionList extends StatelessWidget {
                                     child: Container(
                                       height: double.infinity,
                                       alignment: Alignment.center,
-                                      decoration: (controller.index.value == 0) ? BoxDecoration(
-                                        color: ColorStyle.hex('#0090FA'),
-                                        borderRadius:
-                                            EffectStyle.radiusCustom(10),
-                                      ) : BoxDecoration(),
+                                      decoration: (controller.index.value == 0)
+                                          ? BoxDecoration(
+                                              color: ColorStyle.hex('#0090FA'),
+                                              borderRadius:
+                                                  EffectStyle.radiusCustom(10),
+                                            )
+                                          : BoxDecoration(),
                                       child: Text(
                                         '1 Day',
                                         style: TextStylesSFCompactDisplay
@@ -263,11 +329,13 @@ class CryptoTransactionList extends StatelessWidget {
                                     child: Container(
                                       height: double.infinity,
                                       alignment: Alignment.center,
-                                      decoration: (controller.index.value == 1) ? BoxDecoration(
-                                        color: ColorStyle.hex('#0090FA'),
-                                        borderRadius:
-                                        EffectStyle.radiusCustom(10),
-                                      ) : BoxDecoration(),
+                                      decoration: (controller.index.value == 1)
+                                          ? BoxDecoration(
+                                              color: ColorStyle.hex('#0090FA'),
+                                              borderRadius:
+                                                  EffectStyle.radiusCustom(10),
+                                            )
+                                          : BoxDecoration(),
                                       child: Text(
                                         '1 W',
                                         style: TextStylesSFCompactDisplay
@@ -287,11 +355,13 @@ class CryptoTransactionList extends StatelessWidget {
                                     child: Container(
                                       height: double.infinity,
                                       alignment: Alignment.center,
-                                      decoration: (controller.index.value == 2) ? BoxDecoration(
-                                        color: ColorStyle.hex('#0090FA'),
-                                        borderRadius:
-                                        EffectStyle.radiusCustom(10),
-                                      ) : BoxDecoration(),
+                                      decoration: (controller.index.value == 2)
+                                          ? BoxDecoration(
+                                              color: ColorStyle.hex('#0090FA'),
+                                              borderRadius:
+                                                  EffectStyle.radiusCustom(10),
+                                            )
+                                          : BoxDecoration(),
                                       child: Text(
                                         '1 M',
                                         style: TextStylesSFCompactDisplay
@@ -311,11 +381,13 @@ class CryptoTransactionList extends StatelessWidget {
                                     child: Container(
                                       height: double.infinity,
                                       alignment: Alignment.center,
-                                      decoration: (controller.index.value == 3) ? BoxDecoration(
-                                        color: ColorStyle.hex('#0090FA'),
-                                        borderRadius:
-                                        EffectStyle.radiusCustom(10),
-                                      ) : BoxDecoration(),
+                                      decoration: (controller.index.value == 3)
+                                          ? BoxDecoration(
+                                              color: ColorStyle.hex('#0090FA'),
+                                              borderRadius:
+                                                  EffectStyle.radiusCustom(10),
+                                            )
+                                          : BoxDecoration(),
                                       child: Text(
                                         '3 M',
                                         style: TextStylesSFCompactDisplay
@@ -335,11 +407,13 @@ class CryptoTransactionList extends StatelessWidget {
                                     child: Container(
                                       height: double.infinity,
                                       alignment: Alignment.center,
-                                      decoration: (controller.index.value == 4) ? BoxDecoration(
-                                        color: ColorStyle.hex('#0090FA'),
-                                        borderRadius:
-                                        EffectStyle.radiusCustom(10),
-                                      ) : BoxDecoration(),
+                                      decoration: (controller.index.value == 4)
+                                          ? BoxDecoration(
+                                              color: ColorStyle.hex('#0090FA'),
+                                              borderRadius:
+                                                  EffectStyle.radiusCustom(10),
+                                            )
+                                          : BoxDecoration(),
                                       child: Text(
                                         '1 Y',
                                         style: TextStylesSFCompactDisplay

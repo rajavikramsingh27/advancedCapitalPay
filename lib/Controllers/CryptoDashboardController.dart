@@ -34,10 +34,10 @@ class CryptoDashboardController extends GetxController {
     'USDT (Trc20)',
   ].obs;
   RxList<String> chooseSaving1 = [
-    'S 62,637.95',
-    'S 3,109.02',
-    'S 4.28',
-    'S 377.60',
+    '\$ 62,637.95',
+    '\$ 3,109.02',
+    '\$ 4.28',
+    '\$ 377.60',
   ].obs;
   RxList<String> chooseSaving2 = [
     '-1.41%',
@@ -46,10 +46,10 @@ class CryptoDashboardController extends GetxController {
     '-1.98%',
   ].obs;
   RxList<String> chooseSaving3 = [
-    'S 20,414.07',
-    'S 12,948.62',
-    'S 408.67',
-    'S 225.39',
+    '\$ 20,414.07',
+    '\$ 12,948.62',
+    '\$ 408.67',
+    '\$ 225.39',
   ].obs;
   RxList<String> chooseSaving4 = [
     '0.492342 BTC',
@@ -71,9 +71,9 @@ class CryptoDashboardController extends GetxController {
   ].obs;
 
   RxList<String> chooseSaving7 = [
-    'S 1.43',
-    'S 5.41',
-    'S 11.73',
+    '\$ 1.43',
+    '\$ 5.41',
+    '\$ 11.73',
 
   ].obs;
   RxList<String> chooseSaving8 = [
