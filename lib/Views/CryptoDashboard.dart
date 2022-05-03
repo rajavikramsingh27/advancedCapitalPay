@@ -1057,7 +1057,7 @@ class CryptoDashboard extends StatelessWidget {
                                 ),
 
                               ],
-                            ),padding: EdgeInsets.only(left: 14,right: 14),),
+                            ),padding: EdgeInsets.only( left: 14,right: 14 ),),
                           ],
                         ),
                         decoration: BoxDecoration(
