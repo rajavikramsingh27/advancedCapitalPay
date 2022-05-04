@@ -288,4 +288,5 @@ class ImageStyle {
   static const String bgCrptoTrade2 = "$baseImage/bgCrptoTrade2.png";
   static const String exchangeGreen = "$baseImage/exchangeGreen.png";
   static const String bg207 = "$baseImage/bg207.png";
+  static const String bg15410 = "$baseImage/bg15410.png";
 }
