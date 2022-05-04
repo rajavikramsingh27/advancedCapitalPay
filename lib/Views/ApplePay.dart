@@ -1,12 +1,14 @@
-import 'package:flutter/cupertino.dart';
+import 'package:advanced_capital_pay/Views/SignUp/EffectStyleSignUp.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../Components/AppBarStyle.dart';
+import '../Components/BackgroundImage.dart';
+import '../Components/ButtonCustom.dart';
 import '../Styles/ColorStyle.dart';
-import '../Styles/EffectStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
-
 
 class ApplePay extends StatelessWidget {
   const ApplePay({Key? key}) : super(key: key);
@@ -15,315 +17,165 @@ class ApplePay extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image.asset(
-          ImageStyle.tiard,
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          fit: BoxFit.cover,
-        ),
+        BackgroundImageBeneficiary(),
         Scaffold(
-          appBar: AppBarStyleTitle(
-            title: 'Travel Notice',
-            leadingButton: IconButton(
-              icon: Image.asset(
-                ImageStyle.back_circle,
-                height: 30,
+            appBar: AppBarStyleCustomBenifi(
+              title: Text(
+                'Apply Pay',
+                style: TextStylesPoppins.textStyles_18
+                    .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 2),
               ),
-              onPressed: () {},
-            ),
-            trailingButton: IconButton(
-              icon: Image.asset(
-                ImageStyle.chat,
-                height: 30,
+              leadingButton: IconButton(
+                icon: Image.asset(
+                  ImageStyle.back_circle,
+                  height: 30,
+                ),
+                onPressed: () {
+                  Get.back();
+                },
               ),
-              onPressed: () {},
+              trailingButton: IconButton(
+                icon: Image.asset(
+                  ImageStyle.chat,
+                  height: 30,
+                ),
+                onPressed: () {},
+              ),
             ),
-          ),
-          backgroundColor: Colors.transparent,
-          body:SingleChildScrollView(
-            child:  Column(
-              children: [
-                Container(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 10,right: 10,top: 10),
-                        child: Column(
+            backgroundColor: Colors.transparent,
+            body: Container(
+              height: MediaQuery.of(context).size.height,
+              decoration: BoxDecoration(
+                color: ColorStyle.primaryWhite,
+              ),
+              child: Container(
+                padding: EdgeInsets.only(right: 16, left: 16, bottom: 16),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Image.asset(
-                              ImageStyle.Group2221,
-                              // height: 30,
-                              // width: 30,
-                            ),
-                            Text(
-                              'Why Notify Us Of Your Travel?',
-                              // controller.listApplyLeave[index],
-                              style: TextStyles
-                                  .textStyles_14
-                                  .apply(
-                                  color: ColorStyle
-                                      .secondryBlack),
+                              ImageStyle.applelogo,
+                              height: 36,
                             ),
                             SizedBox(
-                              height: 6,
+                              width: 4,
                             ),
                             Text(
-                              'So we can increase security around your account.',
-                              // controller.listApplyLeave[index],
-                              style: TextStyles
-                                  .textStyles_12
-                                  .apply(
-                                  color: ColorStyle
-                                      .blueSKY),
+                              "Pay",
+                              style: TextStylesPoppins.textStyles_24.apply(
+                                  color: ColorStyle.secondryBlack,
+                                  fontWeightDelta: 2),
                             ),
-                            SizedBox(
-                              height: 4,
-                            ),
-                            Text(
-                              'Letting us know your travel plans allows you '
-                                  'to use your cards and accounts with confidence'
-                                  ' when overseas.',
-                              // controller.listApplyLeave[index],
-                              style: TextStyles
-                                  .textStyles_12
-                                  .apply(
-                                  color: ColorStyle
-                                      .secondryBlack),
-                            ),
-                            SizedBox(
-                              height: 6,
+                          ],
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        Image.asset(ImageStyle.card2),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          "Card added to Apple Wallet",
+                          style: TextStylesPoppins.textStyles_14.apply(
+                              color: ColorStyle.secondryBlack,
+                              fontWeightDelta: 2),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "You can use this card with Apple Pay to pay online. In-app and in-store whenever you see the signs.",
+                          style: TextStylesPoppins.textStyles_12.apply(
+                              color: ColorStyle.secondryBlack,
+                              fontWeightDelta: 1),
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              ImageStyle.wifit_tawer,
+                              height: 50,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 16,right: 16),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
+                              height: 40,
+                              width: 70,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  border: Border.all(
+                                    width: 1,
+                                    color: ColorStyle.secondryBlack,
+                                  )),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Row(
-                                    children: [
-                                      Image.asset(
-                                        ImageStyle.creditcard,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 10,
-                                      ),
-                                      Text(
-                                        'Avoids any delays for your account',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_10
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      Image.asset(
-                                        ImageStyle.creditcard,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 10,
-                                      ),
-                                      Text(
-                                        'Continue to use cards as usual while overseas',
-                                        // controller.listApplyLeave[index],
-                                        style: TextStyles
-                                            .textStyles_10
-                                            .apply(
-                                            color: ColorStyle
-                                                .secondryBlack),
-                                      ),
-                                    ],
+                                  Image.asset(
+                                    ImageStyle.applelogo,
+                                    height: 20,
                                   ),
                                   SizedBox(
-                                    height:5,
+                                    width: 4,
                                   ),
-                                  Row(
-                                    children: [
-                                      Image.asset(
-                                        ImageStyle.creditcard,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 10,
-                                      ),
-                                      Container(
-                                        child:   Text(
-                                          'Increased security around your account whilst you\'re away',
-                                          // controller.listApplyLeave[index],
-                                          style: TextStyles
-                                              .textStyles_10
-                                              .apply(
-                                              color: ColorStyle
-                                                  .secondryBlack),
-                                        ),
-                                        width: 250,
-                                      ),
-
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height:10,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Image.asset(
-                                        ImageStyle.creditcard,
-                                        height: 30,
-                                        width: 30,
-                                      ),
-                                      SizedBox(
-                                        width: 10,
-                                      ),
-                                      Container(
-                                        child: Text(
-                                          'Quickly add, modify or delete any of your travel notices'
-                                              'to keep us informed! We appreciate it to keep you and'
-                                              'safe as possible!',
-                                          // controller.listApplyLeave[index],
-                                          style: TextStyles
-                                              .textStyles_10
-                                              .apply(
-                                              color: ColorStyle
-                                                  .secondryBlack),
-                                        ),
-                                        width: 250,
-                                      ),
-
-                                    ],
+                                  Text(
+                                    "Pay",
+                                    style: TextStylesPoppins.textStyles_16.apply(
+                                        color: ColorStyle.secondryBlack,
+                                        fontWeightDelta: 2),
                                   ),
                                 ],
                               ),
                             ),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            Container(
-                              alignment: Alignment.center,
-                              width: 148,
-                              height: 37,
-                              child:    Text(
-                                'Add a Trip',
-                                // controller.listApplyLeave[index],
-                                style: TextStyles
-                                    .textStyles_12
-                                    .apply(
-                                    color: ColorStyle
-                                        .primaryWhite),
-                              ),
-                              decoration: BoxDecoration(
-                                  color: ColorStyle.blueSKY,
-                                  borderRadius: BorderRadius.circular(50)
-                              ),
-                            ),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            Row(
-                              children: [
-                                Container(
-                                  alignment: Alignment.center,
-                                  width: 166,
-                                  height: 36,
-                                  child:  Text(
-                                    'Upcoming Trips',
-                                    // controller.listApplyLeave[index],
-                                    style: TextStyles
-                                        .textStyles_12
-                                        .apply(
-                                        color: ColorStyle
-                                            .primaryWhite),
-                                  ),
-                                  decoration: BoxDecoration(
-                                      color: ColorStyle.blueSKY,
-                                      borderRadius: BorderRadius.circular(5)
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 1,
-                                ),
-                                Container(
-                                  alignment: Alignment.center,
-                                  width: 166,
-                                  height: 37,
-                                  child:    Text(
-                                    'Past Trips',
-                                    // controller.listApplyLeave[index],
-                                    style: TextStyles
-                                        .textStyles_12
-                                        .apply(
-                                        color: ColorStyle
-                                            .primaryWhite),
-                                  ),
-                                  decoration: BoxDecoration(
-                                      color: ColorStyle.blueLight,
-                                      borderRadius: BorderRadius.circular(5)
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              alignment: Alignment.center,
-                              width: 148,
-                              height: 37,
-                              child:    Text(
-                                'Add a Trip',
-                                // controller.listApplyLeave[index],
-                                style: TextStyles
-                                    .textStyles_12
-                                    .apply(
-                                    color: ColorStyle
-                                        .primaryWhite),
-                              ),
-                              decoration: BoxDecoration(
-                                  color: ColorStyle.blueSKY,
-                                  borderRadius: BorderRadius.circular(50)
-                              ),
-                            ),
-
-
-
-
-
-
-
-
-
-
                           ],
                         ),
-                        width: double.infinity,
-                        height: 590,
-                        decoration: BoxDecoration(
-                          color: ColorStyle.primaryWhite,
-                          // borderRadius: BorderRadius.circular(10)
-
+                        SizedBox(
+                          height: 50,
                         ),
-                      ),
-                      Image.asset(
-          ImageStyle.Group2201,
-          // width: 30,
-        ),
+                      ],
+                    ),
 
 
-                    ],
-                  ),
+
+                    // ButtonContinueCancel(
+                    //   radiusBorder: 40,
+                    //   height: 44,
+                    //   textFirst:'Cancel',
+                    //   colorBGFirst:Colors.transparent,
+                    //   colorBorderFirst:ColorStyle.hex('#016ECF'),
+                    //   textStyleFirst: TextStyles.textStyles_14.apply(
+                    //     fontWeightDelta: 1,
+                    //     color: ColorStyle.hex('#016ECF'),
+                    //   ),
+                    //   onTapFirst: () {
+                    //
+                    //   },
+                    //   textSecond:'Exchange Now',
+                    //   colorBGSecond: ColorStyle.hex('#016ECF'),
+                    //   colorBorderSecond: Colors.transparent,
+                    //   textStyleSecond: TextStyles.textStyles_14.apply(
+                    //       fontWeightDelta: 1,
+                    //       color: ColorStyle.primaryWhite
+                    //   ),
+                    //   onTapSecond: () {
+                    //     // Get.to(CurrencyExchange());
+                    //   },
+                    // ),
+                  ],
                 ),
-
-              ],
-            ),
-          )
-        ),
+              ),
+            )
+        )
       ],
     );
   }

@@ -16,7 +16,7 @@ class TitleTextFieldDownArrow extends StatelessWidget {
       children: [
         Text(
           'Account',
-          style: TextStyles.textStyles_14.apply(
+          style: TextStylesPoppins.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 1,
           ),

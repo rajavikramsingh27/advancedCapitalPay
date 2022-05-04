@@ -70,6 +70,9 @@ class ImageStyle {
   static const String login = "$baseImage/login.png";
   static const String browserBlue = "$baseImage/browserBlue.png";
   static const String user_1_blue = "$baseImage/user_1_blue.png";
+  static const String transferBank = "$baseImage/transferBank.png";
+  static const String transferBank_Blue = "$baseImage/transferBank_Blue.png";
+
   static const String password_set_blue = "$baseImage/password_set_blue.png";
   static const String login_blue = "$baseImage/login_blue.png";
   static const String dashedLine = "$baseImage/dashedLine.png";
@@ -188,8 +191,8 @@ class ImageStyle {
   static const String Romanion = "$baseImage/Romanion.png";
   static const String bg_back = "$baseImage/bg_back.png";
   static const String Iconawesomecopy = "$baseImage/Iconawesomecopy.png";
-  static const String tiardschulzb8dA3eY5VrYunsplash =
-      "$baseImage/tiard-schulz-b8dA3eY5VrY-unsplash.png";
+  static const String bgGradient =
+      "$baseImage/bgGradient.png";
   static const String bg_tride = "$baseImage/bg_tride.png";
   static const String Path1145 = "$baseImage/Path1145.png";
   static const String Rectangle1604 = "$baseImage/Rectangle1604.png";
@@ -207,7 +210,8 @@ class ImageStyle {
   static const String tetherusdtlogos = "$baseImage/tether-usdt-logos.png";
   static const String tetherusdtlogo = "$baseImage/tether-usdt-logo.png";
   static const String bitcoinbtclogo = "$baseImage/bitcoin-btc-logo.png";
-  static const String FlagofAustraliaconvertedsvg = "$baseImage/Flag_of_Australia_(converted).svg.png";
+  static const String FlagofAustraliaconvertedsvg =
+      "$baseImage/Flag_of_Australia_(converted).svg.png";
 
   static const String bg_FaceID_1 = "$baseImage/bg_FaceID_1.jpg";
   static const String bg_TouchID_1 = "$baseImage/bg_TouchID_1.jpg";
@@ -215,12 +219,25 @@ class ImageStyle {
   static const String cardSavingGoals = "$baseImage/cardSavingGoals.png";
   static const String markerPerson = "$baseImage/markerPerson.png";
   static const String jewlers = "$baseImage/jewlers.png";
+
+  static const String BTClogo = "$baseImage/BTClogo.png";
+  static const String Iconsend = "$baseImage/Iconsend.png";
+  static const String Iconrecievemoney = "$baseImage/Iconrecievemoney.png";
+  static const String Icontrade = "$baseImage/Icontrade.png";
+
+  static const String bgPersonalAccount = "$baseImage/bgPersonalAccount.png";
+  static const String fileFolder = "$baseImage/fileFolder.png";
+
   static const String Rectangle2082 = "$baseImage/Rectangle2082.png";
   static const String tirnga1 = "$baseImage/tirnga1.png";
   static const String tirnga2 = "$baseImage/tirnga2.png";
   static const String BankIcon = "$baseImage/BankIcon.png";
   static const String Group2220 = "$baseImage/Group2220.png";
   static const String card2 = "$baseImage/card_2.png";
+
+  static const String fileUpload = "$baseImage/fileUpload.png";
+  static const String JPFFileUpload = "$baseImage/JPFFileUpload.png";
+
   static const String applelogo = "$baseImage/apple-logo.png";
   static const String wifit_tawer = "$baseImage/wifit_tawer.png";
   static const String settings_sliders = "$baseImage/settings_sliders.png";
@@ -237,7 +254,8 @@ class ImageStyle {
   static const String light2 = "$baseImage/light2.png";
   static const String solanasollogo = "$baseImage/solana-sol-logo.png";
   static const String cardanoadalogo = "$baseImage/cardano-ada-logo.png";
-  static const String binancecoinbnblogo = "$baseImage/binance-coin-bnb-logo.png";
+  static const String binancecoinbnblogo =
+      "$baseImage/binance-coin-bnb-logo.png";
   static const String fire = "$baseImage/fire.png";
   static const String dogecoindogelogo = "$baseImage/dogecoin-doge-logo.png";
   static const String vechainvetlogo = "$baseImage/vechain-vet-logo.png";
@@ -245,6 +263,20 @@ class ImageStyle {
   static const String balancerbal = "$baseImage/balancerbal.png";
   static const String PlotX = "$baseImage/PlotX.png";
   static const String elamachain = "$baseImage/Elamachain.png";
-  static const String YMTKEDALYRCAFE2BT2SVQCS6ZI = "$baseImage/YMTKEDALYRCAFE2BT2SVQCS6ZI.png";
+  static const String bgTransactionListCripto =
+      "$baseImage/bgTransactionListCripto.png";
+  static const String cryptoBG1 = "$baseImage/cryptoBG1.png";
+  static const String bgGradientCryto = "$baseImage/bgGradientCryto.png";
+  static const String emojionelagforuoutlyingislands = "$baseImage/emojione_flag-for-us-outlying-islands.png";
+  static const String Icon = "$baseImage/Icon.png";
+  static const String Vector78 = "$baseImage/Vector78.png";
+  static const String copy = "$baseImage/copy.png";
+  static const String Vector4 = "$baseImage/Vector-4.png";
+  static const String biqrcodescan = "$baseImage/bi_qr-code-scan.png";
+  static const String Vector6 = "$baseImage/Vector-6.png";
+  static const String Path122 = "$baseImage/Path122.png";
+  static const String Group221 = "$baseImage/Group221.png";
+  static const String tiardschulzb8dA3eY5VrYunsplash = "$baseImage/tiard-schulz-b8dA3eY5VrY-unsplash.png";
+  static const String Path3425 = "$baseImage/Path3425.png";
 
 }

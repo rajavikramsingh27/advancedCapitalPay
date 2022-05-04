@@ -12,7 +12,7 @@ import '../../Styles/EffectStyle.dart';
 import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../SignUp/EffectStyleSignUp.dart';
-import '../SignUp/ComponentsSignUp.dart';
+import '../../Components/ComponentsSignUp.dart';
 import '../../Controllers/SignUpController.dart';
 
 
@@ -41,7 +41,7 @@ class PersonalApplication10 extends StatelessWidget {
                 child: Text(
                   title,
                   textAlign: TextAlign.left,
-                  style: TextStyles.textStyles_16.apply(
+                  style: TextStylesPoppins.textStyles_16.apply(
                     color: ColorStyle.darkestBlueSignUp,
                     fontWeightDelta: 1,
                   ),
@@ -125,7 +125,7 @@ class PersonalApplication10 extends StatelessWidget {
                             Container(
                                 child: Text(
                                   'ACFVC8JTJ',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.primaryWhite,
                                     fontWeightDelta: 1,
                                   ),
@@ -154,7 +154,7 @@ class PersonalApplication10 extends StatelessWidget {
                                         ' which will be used to login to your AdvanceCapitalPay Account.'
                                         ' You will need to keep your security questions securely '
                                         ' safe as this will be used to Help if you forget your password.',
-                                    style: TextStyles.textStyles_14.apply(
+                                    style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 1,
                                     ),
@@ -164,7 +164,7 @@ class PersonalApplication10 extends StatelessWidget {
                                   ),
                                   Text(
                                     'Registered Login',
-                                    style: TextStyles.textStyles_14.apply(
+                                    style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2,
                                     ),
@@ -185,8 +185,8 @@ class PersonalApplication10 extends StatelessWidget {
                                     colorFill: ColorStyle.primaryWhite,
                                     colorBoder: ColorStyle.darkestBlueSignUp,
                                     textStyle:
-                                    TextStyles.textStyles_16.apply(color: ColorStyle.secondryBlack, fontWeightDelta: 0),
-                                    hintTextStyle: TextStyles.textStyles_16.apply(color: ColorStyle.grey, fontWeightDelta: 0),
+                                    TextStylesPoppins.textStyles_16.apply(color: ColorStyle.secondryBlack, fontWeightDelta: 0),
+                                    hintTextStyle: TextStylesPoppins.textStyles_16.apply(color: ColorStyle.grey, fontWeightDelta: 0),
                                     radiusBorder: 4,
                                   ),
                                   // TextField(
@@ -216,8 +216,8 @@ class PersonalApplication10 extends StatelessWidget {
                                     colorFill: ColorStyle.primaryWhite,
                                     colorBoder: ColorStyle.darkestBlueSignUp,
                                     textStyle:
-                                    TextStyles.textStyles_16.apply(color: ColorStyle.secondryBlack, fontWeightDelta: 0),
-                                    hintTextStyle: TextStyles.textStyles_16.apply(color: ColorStyle.grey, fontWeightDelta: 0),
+                                    TextStylesPoppins.textStyles_16.apply(color: ColorStyle.secondryBlack, fontWeightDelta: 0),
+                                    hintTextStyle: TextStylesPoppins.textStyles_16.apply(color: ColorStyle.grey, fontWeightDelta: 0),
                                     radiusBorder: 4,
                                   ),
                                   SizedBox(
@@ -236,8 +236,8 @@ class PersonalApplication10 extends StatelessWidget {
                                     colorFill: ColorStyle.primaryWhite,
                                     colorBoder: ColorStyle.darkestBlueSignUp,
                                     textStyle:
-                                    TextStyles.textStyles_16.apply(color: ColorStyle.secondryBlack),
-                                    hintTextStyle: TextStyles.textStyles_16.apply(color: ColorStyle.grey),
+                                    TextStylesPoppins.textStyles_16.apply(color: ColorStyle.secondryBlack),
+                                    hintTextStyle: TextStylesPoppins.textStyles_16.apply(color: ColorStyle.grey),
                                     radiusBorder: 4,
                                   ),
                                   SizedBox(
@@ -256,8 +256,8 @@ class PersonalApplication10 extends StatelessWidget {
                                     colorFill: ColorStyle.primaryWhite,
                                     colorBoder: ColorStyle.darkestBlueSignUp,
                                     textStyle:
-                                    TextStyles.textStyles_16.apply(color: ColorStyle.secondryBlack, fontWeightDelta: 0),
-                                    hintTextStyle: TextStyles.textStyles_16.apply(color: ColorStyle.grey, fontWeightDelta: 0),
+                                    TextStylesPoppins.textStyles_16.apply(color: ColorStyle.secondryBlack, fontWeightDelta: 0),
+                                    hintTextStyle: TextStylesPoppins.textStyles_16.apply(color: ColorStyle.grey, fontWeightDelta: 0),
                                     radiusBorder: 4,
                                   ),
                                   SizedBox(
@@ -265,7 +265,7 @@ class PersonalApplication10 extends StatelessWidget {
                                   ),
                                   Text(
                                     'Password Strength',
-                                    style: TextStyles.textStyles_14.apply(
+                                    style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2,
                                     ),
@@ -297,7 +297,7 @@ class PersonalApplication10 extends StatelessWidget {
                                       ),
                                       Text(
                                         'Use 6 to 64 characters.',
-                                        style: TextStyles.textStyles_14.apply(
+                                        style: TextStylesPoppins.textStyles_14.apply(
                                           color: ColorStyle.secondryBlack,
                                         ),
                                       ),
@@ -321,13 +321,13 @@ class PersonalApplication10 extends StatelessWidget {
                                           SizedBox(height: 20),
                                           Text(
                                             'Besides letters, include at least a',
-                                            style: TextStyles.textStyles_14.apply(
+                                            style: TextStylesPoppins.textStyles_14.apply(
                                               color: ColorStyle.secondryBlack,
                                             ),
                                           ),
                                           Text(
                                             ' number or  symbol (!@#^&*-+)',
-                                            style: TextStyles.textStyles_14.apply(
+                                            style: TextStylesPoppins.textStyles_14.apply(
                                               color: ColorStyle.secondryBlack,
                                             ),
                                           ),
@@ -353,7 +353,7 @@ class PersonalApplication10 extends StatelessWidget {
                                       ),
                                       Text(
                                         'Password is case sensitive.',
-                                        style: TextStyles.textStyles_14.apply(
+                                        style: TextStylesPoppins.textStyles_14.apply(
                                           color: ColorStyle.secondryBlack,
                                         ),
                                       ),
@@ -377,13 +377,13 @@ class PersonalApplication10 extends StatelessWidget {
                                           SizedBox(height: 20),
                                           Text(
                                             'Avoid using the same password',
-                                            style: TextStyles.textStyles_14.apply(
+                                            style: TextStylesPoppins.textStyles_14.apply(
                                               color: ColorStyle.secondryBlack,
                                             ),
                                           ),
                                           Text(
                                             ' for multiple sites.',
-                                            style: TextStyles.textStyles_14.apply(
+                                            style: TextStylesPoppins.textStyles_14.apply(
                                               color: ColorStyle.secondryBlack,
                                             ),
                                           ),

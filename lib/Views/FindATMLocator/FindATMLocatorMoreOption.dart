@@ -53,7 +53,7 @@ class FindATMLocatorMoreOption {
                           children: [
                             Text(
                               'Set Radius',
-                              style: TextStyles.textStyles_20.apply(
+                              style: TextStylesPoppins.textStyles_20.apply(
                                 color: ColorStyle.secondryBlack,
                                 fontWeightDelta: 1,
                               ),
@@ -70,7 +70,7 @@ class FindATMLocatorMoreOption {
                                 ),
                                 Text(
                                   '850m',
-                                  style: TextStyles.textStyles_20.apply(
+                                  style: TextStylesPoppins.textStyles_20.apply(
                                     color: ColorStyle.hex('#1478FF'),
                                     fontWeightDelta: 1,
                                   ),
@@ -122,7 +122,7 @@ class FindATMLocatorMoreOption {
                                     padding: EffectStyle.padding(20, 20, 6, 6),
                                     child: Text(
                                       '100m',
-                                      style: TextStyles.textStyles_16.apply(
+                                      style: TextStylesPoppins.textStyles_16.apply(
                                         color: ColorStyle.grey,
                                         fontWeightDelta: 1,
                                       ),
@@ -156,7 +156,7 @@ class FindATMLocatorMoreOption {
                                     ),
                                     child: Text(
                                       'Cancel',
-                                      style: TextStyles.textStyles_16.apply(
+                                      style: TextStylesPoppins.textStyles_16.apply(
                                         color: ColorStyle.grey,
                                         fontWeightDelta: 1,
                                       ),
@@ -189,7 +189,7 @@ class FindATMLocatorMoreOption {
                                     ),
                                     child: Text(
                                       'Accept',
-                                      style: TextStyles.textStyles_16.apply(
+                                      style: TextStylesPoppins.textStyles_16.apply(
                                         color: ColorStyle.primaryWhite,
                                         fontWeightDelta: 1,
                                       ),

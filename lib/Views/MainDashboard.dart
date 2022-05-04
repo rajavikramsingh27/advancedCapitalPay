@@ -9,12 +9,16 @@ import '../Styles/EffectStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
 import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
-import '../Views/MessagePage.dart';
+import '../Views/InboxMessage.dart';
 import '../Views/AppSettings.dart';
 import '../Components/SearchBarCustom.dart';
 import '../Views/TransactionDetails.dart';
 import '../Views/SavingGoal.dart';
 import '../Views/AccountDetails.dart';
+import '../Views/Exchange.dart';
+import '../Views/BeneficiaryInternational.dart';
+import '../Components/ChatWithUs.dart';
+
 
 class MainDashboard extends StatelessWidget {
   MainDashboard({Key? key}) : super(key: key);
@@ -91,9 +95,9 @@ class MainDashboard extends StatelessWidget {
             nameUser: 'MR HARRISON SMITH',
             descriptionUser: 'Plus Personal Customer',
             timeLastLogin: 'Last Successful login: 02 Feb 2021. 13: 53: 41',
-            nameStyle: TextStyles.textStyles_14
+            nameStyle: TextStylesPoppins.textStyles_14
                 .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 2),
-            descriptionStyle: TextStyles.textStyles_12
+            descriptionStyle: TextStylesPoppins.textStyles_12
                 .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
             trailingAction: [
               IconButton(
@@ -102,7 +106,7 @@ class MainDashboard extends StatelessWidget {
                   height: 26,
                 ),
                 onPressed: () {
-                  // Get.to(MessagePage());
+                  ChatWithUs.chatWithUs();
                 },
               ),
               IconButton(
@@ -117,7 +121,6 @@ class MainDashboard extends StatelessWidget {
               ),
             ],
           ),
-          // AppBarStyle(),
           backgroundColor: Colors.transparent,
           body: GetBuilder(
             init: MainDashboardController(),
@@ -127,7 +130,6 @@ class MainDashboard extends StatelessWidget {
             builder: (authController) {
               return Obx(
                     () => SingleChildScrollView(
-                  // padding: EffectStyle.padding(16, 16, 0, 0),
                   child: Column(
                     children: [
                       swiperView(),
@@ -151,14 +153,14 @@ class MainDashboard extends StatelessWidget {
                                       children: [
                                         Text(
                                           'Funds',
-                                          style: TextStyles.textStyles_12.apply(
+                                          style: TextStylesPoppins.textStyles_12.apply(
                                             color: ColorStyle.primaryWhite,
                                             fontWeightDelta: 1,
                                           ),
                                         ),
                                         Text(
                                           '\$2,713.23',
-                                          style: TextStyles.textStyles_12.apply(
+                                          style: TextStylesPoppins.textStyles_12.apply(
                                             color: ColorStyle.primaryWhite,
                                             fontWeightDelta: 1,
                                           ),
@@ -188,7 +190,7 @@ class MainDashboard extends StatelessWidget {
                                         child: Text(
                                           '\$',
                                           textAlign: TextAlign.center,
-                                          style: TextStyles.textStyles_16.apply(
+                                          style: TextStylesPoppins.textStyles_16.apply(
                                             color: ColorStyle.secondryBlack,
                                             fontWeightDelta: 1,
                                           ),
@@ -223,14 +225,14 @@ class MainDashboard extends StatelessWidget {
                                       children: [
                                         Text(
                                           'Balance',
-                                          style: TextStyles.textStyles_12.apply(
+                                          style: TextStylesPoppins.textStyles_12.apply(
                                             color: ColorStyle.primaryWhite,
                                             fontWeightDelta: 1,
                                           ),
                                         ),
                                         Text(
                                           '\$2,713.23',
-                                          style: TextStyles.textStyles_12.apply(
+                                          style: TextStylesPoppins.textStyles_12.apply(
                                             color: ColorStyle.primaryWhite,
                                             fontWeightDelta: 1,
                                           ),
@@ -252,33 +254,38 @@ class MainDashboard extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Expanded(
-                                  child: Container(
-                                    height: 66,
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Image.asset(ImageStyle.transfer3,
-                                            color: ColorStyle.hex('#134EAE'),
-                                            // width: MediaQuery.of(context).size.width,
-                                            height: 25
-                                          // fit: BoxFit.cover,
-                                        ),
-                                        SizedBox(
-                                          height: 5,
-                                        ),
-                                        Text(
-                                          'Transfer',
-                                          style: TextStyles.textStyles_10.apply(
-                                            color: ColorStyle.hex('#134EAE'),
-                                            fontWeightDelta: 1,
+                                  child: InkWell(
+                                    child: Container(
+                                      height: 66,
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset(ImageStyle.transfer3,
+                                              color: ColorStyle.hex('#134EAE'),
+                                              // width: MediaQuery.of(context).size.width,
+                                              height: 25
+                                            // fit: BoxFit.cover,
                                           ),
-                                        ),
-                                      ],
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Text(
+                                            'Transfer',
+                                            style: TextStylesPoppins.textStyles_10.apply(
+                                              color: ColorStyle.hex('#134EAE'),
+                                              fontWeightDelta: 1,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: ColorStyle.primaryWhite,
+                                        borderRadius: BorderRadius.circular(15),
+                                      ),
                                     ),
-                                    decoration: BoxDecoration(
-                                      color: ColorStyle.primaryWhite,
-                                      borderRadius: BorderRadius.circular(15),
-                                    ),
+                                    onTap: () {
+                                      Get.to(BeneficiaryInternational());
+                                    },
                                   ),
                                 ),
                                 SizedBox(
@@ -301,7 +308,7 @@ class MainDashboard extends StatelessWidget {
                                           ),
                                           Text(
                                             'Account Details',
-                                            style: TextStyles.textStyles_10.apply(
+                                            style: TextStylesPoppins.textStyles_10.apply(
                                               color: ColorStyle.hex('#134EAE'),
                                               fontWeightDelta: 1,
                                             ),
@@ -322,31 +329,36 @@ class MainDashboard extends StatelessWidget {
                                   width: 26,
                                 ),
                                 Expanded(
-                                  child: Container(
-                                    height: 66,
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Image.asset(ImageStyle.stock,
-                                            color: ColorStyle.hex('#134EAE'),
-                                            height: 25
-                                        ),
-                                        SizedBox(
-                                          height: 5,
-                                        ),
-                                        Text(
-                                          'Exchange',
-                                          style: TextStyles.textStyles_10.apply(
-                                            color: ColorStyle.hex('#134EAE'),
-                                            fontWeightDelta: 1,
+                                  child: InkWell(
+                                    child: Container(
+                                      height: 66,
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset(ImageStyle.stock,
+                                              color: ColorStyle.hex('#134EAE'),
+                                              height: 25
                                           ),
-                                        ),
-                                      ],
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Text(
+                                            'Exchange',
+                                            style: TextStylesPoppins.textStyles_10.apply(
+                                              color: ColorStyle.hex('#134EAE'),
+                                              fontWeightDelta: 1,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: ColorStyle.primaryWhite,
+                                        borderRadius: BorderRadius.circular(15),
+                                      ),
                                     ),
-                                    decoration: BoxDecoration(
-                                      color: ColorStyle.primaryWhite,
-                                      borderRadius: BorderRadius.circular(15),
-                                    ),
+                                    onTap: () {
+                                      Get.to(Exchange());
+                                    },
                                   ),
                                 ),
                               ],
@@ -368,7 +380,7 @@ class MainDashboard extends StatelessWidget {
                                     child: ElevatedButtonCustom(
                                       text: 'Transactions',
                                       colorBG: Colors.transparent,
-                                      textStyle: TextStyles.textStyles_12.apply(
+                                      textStyle: TextStylesPoppins.textStyles_12.apply(
                                         color: ColorStyle.hex('#13409F'),
                                         fontWeightDelta: 2,
                                       ),
@@ -392,7 +404,7 @@ class MainDashboard extends StatelessWidget {
                                     child: ElevatedButtonCustom(
                                       text: 'Statements',
                                       colorBG: Colors.transparent,
-                                      textStyle: TextStyles.textStyles_12.apply(
+                                      textStyle: TextStylesPoppins.textStyles_12.apply(
                                         color: ColorStyle.hex('#13409F'),
                                         fontWeightDelta: 2,),
                                       onTap: () {
@@ -415,7 +427,7 @@ class MainDashboard extends StatelessWidget {
                                     child: ElevatedButtonCustom(
                                       text: 'Notices',
                                       colorBG: Colors.transparent,
-                                      textStyle: TextStyles.textStyles_12.apply(
+                                      textStyle: TextStylesPoppins.textStyles_12.apply(
                                         color: ColorStyle.hex('#13409F'),
                                         fontWeightDelta: 2,),
                                       onTap: () {
@@ -465,14 +477,14 @@ class MainDashboard extends StatelessWidget {
                                     children: [
                                       Text(
                                         'Today',
-                                        style: TextStyles.textStyles_12.apply(
+                                        style: TextStylesPoppins.textStyles_12.apply(
                                           color: ColorStyle.secondryBlack,
                                           fontWeightDelta: 3,
                                         ),
                                       ),
                                       Text(
                                         '17 April 2021',
-                                        style: TextStyles.textStyles_12.apply(
+                                        style: TextStylesPoppins.textStyles_12.apply(
                                           color: ColorStyle.secondryBlack,
                                           fontWeightDelta: 3,
                                         ),
@@ -537,7 +549,7 @@ class MainDashboard extends StatelessWidget {
                                                           Text(
                                                             'Costa Coffee',
                                                             // controller.listApplyLeave[index],
-                                                            style: TextStyles
+                                                            style: TextStylesPoppins
                                                                 .textStyles_12
                                                                 .apply(
                                                                 color: ColorStyle
@@ -548,7 +560,7 @@ class MainDashboard extends StatelessWidget {
                                                           Text(
                                                             'Food & Drink',
                                                             // controller.listApplyLeave[index],
-                                                            style: TextStyles
+                                                            style: TextStylesPoppins
                                                                 .textStyles_8
                                                                 .apply(
                                                                 color: ColorStyle
@@ -564,7 +576,7 @@ class MainDashboard extends StatelessWidget {
                                                     children: [
                                                       Text(
                                                         '- \$8.10',
-                                                        style: TextStyles
+                                                        style: TextStylesPoppins
                                                             .textStyles_16
                                                             .apply(
                                                             color: ColorStyle
@@ -629,7 +641,7 @@ class MainDashboard extends StatelessWidget {
                                                         Text(
                                                           'November 2020',
                                                           // controller.listApplyLeave[index],
-                                                          style: TextStyles
+                                                          style: TextStylesPoppins
                                                               .textStyles_12
                                                               .apply(
                                                               color: ColorStyle
@@ -638,7 +650,7 @@ class MainDashboard extends StatelessWidget {
                                                         Text(
                                                           '08 November 2020',
                                                           // controller.listApplyLeave[index],
-                                                          style: TextStyles
+                                                          style: TextStylesPoppins
                                                               .textStyles_8
                                                               .apply(
                                                               color: ColorStyle
@@ -707,7 +719,7 @@ class MainDashboard extends StatelessWidget {
                                                           Expanded(
                                                               child: Text(
                                                                 'Plus+ Current account (6435)',
-                                                                style: TextStyles
+                                                                style: TextStylesPoppins
                                                                     .textStyles_12
                                                                     .apply(
                                                                     color: ColorStyle
@@ -717,7 +729,7 @@ class MainDashboard extends StatelessWidget {
                                                               )),
                                                           Text(
                                                             '01 MAR 2022',
-                                                            style: TextStyles
+                                                            style: TextStylesPoppins
                                                                 .textStyles_12
                                                                 .apply(
                                                                 color: ColorStyle
@@ -730,7 +742,7 @@ class MainDashboard extends StatelessWidget {
                                                       Text(
                                                         'Important changes in our fees and limits effective from 1st June 2022',
                                                         // controller.listApplyLeave[index],
-                                                        style: TextStyles
+                                                        style: TextStylesPoppins
                                                             .textStyles_8
                                                             .apply(
                                                             color: ColorStyle

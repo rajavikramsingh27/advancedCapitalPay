@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import '../Styles/ColorStyle.dart';
+
+
 
 class EffectStyle {
   static radiusCustom(double radius) {
@@ -10,14 +13,6 @@ class EffectStyle {
       borderRadius: BorderRadius.only(
         topLeft: Radius.circular(50),
       ),
-
-      // boxShadow: [
-      //   BoxShadow(
-      //     color: Colors.black.withOpacity(0.1),
-      //     blurRadius: 6,
-      //     offset: Offset(0, 0), // Shadow position
-      //   ),
-      // ],
     );
   }
   static padding(double left, double right, double top, double bottom) {
@@ -25,6 +20,17 @@ class EffectStyle {
   }
   static paddingAuthWhite() {
     return EdgeInsets.only(top: 30, bottom: 20, left: 30, right: 30);
+  }
+
+  static decorationTransferSummary() {
+    return BoxDecoration(
+        borderRadius: BorderRadius.circular(6),
+        color: ColorStyle.hex('#16429D').withOpacity(0.6)
+      // image: DecorationImage(
+      //   image: AssetImage(ImageStyle.Rectangle1958),
+      //   fit: BoxFit.cover,
+      // ),
+    );
   }
 
 }

@@ -60,13 +60,13 @@ class ForgotYourUserIdentification extends StatelessWidget {
                 Get.back();
               },
             ),
-            trailingButton: IconButton(
+            trailingButton: [IconButton(
               icon: Image.asset(
                 ImageStyle.chat,
                 height: 30,
               ),
               onPressed: () {},
-            ),
+            )],
           ),
           body: GetBuilder(
             init: AccountDetailsRecoveryController(),
@@ -120,7 +120,7 @@ class ForgotYourUserIdentification extends StatelessWidget {
                                     ),
                                     Text(
                                       'Enter Details',
-                                      style: TextStyles.textStyles_10.apply(
+                                      style: TextStylesPoppins.textStyles_10.apply(
                                         color: ColorStyle.primaryWhite,
                                         fontWeightDelta: 1,
                                       ),
@@ -141,7 +141,7 @@ class ForgotYourUserIdentification extends StatelessWidget {
                                     ),
                                     Text(
                                       'Authentication',
-                                      style: TextStyles.textStyles_10.apply(
+                                      style: TextStylesPoppins.textStyles_10.apply(
                                         color: ColorStyle.primaryWhite,
                                         fontWeightDelta: 1,
                                       ),
@@ -164,7 +164,7 @@ class ForgotYourUserIdentification extends StatelessWidget {
                                     Container(
                                       child: Text(
                                         'Login',
-                                        style: TextStyles.textStyles_10.apply(
+                                        style: TextStylesPoppins.textStyles_10.apply(
                                           color: ColorStyle.primaryWhite,
                                           fontWeightDelta: 1,
                                         ),

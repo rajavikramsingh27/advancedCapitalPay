@@ -45,6 +45,7 @@ class AppBarStyle extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 }
+
 class AppBarStyleCryptoDashboard extends StatelessWidget implements PreferredSizeWidget {
   final Function()? onTap;
   final Widget? leadingButton;
@@ -69,7 +70,7 @@ class AppBarStyleCryptoDashboard extends StatelessWidget implements PreferredSiz
       toolbarHeight: heightAppBar,
       backgroundColor: Colors.transparent,
       // leadingWidth: 0,
-      leadingWidth: 80,
+      leadingWidth: 90,
       leading: (leadingButton == null) ? Container() : leadingButton,
       centerTitle: true,
       title: Image.asset(
@@ -108,7 +109,8 @@ class AppBarStyleStatusBar extends StatelessWidget
 class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
   final Function()? onTap;
   final Widget? leadingButton;
-  final Widget? trailingButton;
+  final TextStyle styleTitle;
+  final List<Widget>? trailingButton;
   final String? title;
   final Color? colorTitle;
   final Color? backgroundColor;
@@ -117,7 +119,8 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
     Key? key,
     this.onTap,
     this.leadingButton,
-    this.trailingButton,
+    this.styleTitle = const TextStyle(),
+    this.trailingButton = const [],
     this.title,
     this.colorTitle = Colors.white,
     this.backgroundColor = Colors.transparent,
@@ -140,15 +143,17 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
       title: AutoSizeText(
         title!,
         maxLines: 1,
-        style: TextStyles.textStyles_16
-            .apply(color: colorTitle, fontWeightDelta: 1, fontSizeDelta: 2),
+        style: styleTitle,
+
+        // TextStylesPoppins.textStyles_16.apply(color: colorTitle, fontWeightDelta: 1, fontSizeDelta: 2),
       ),
-      actions: [
-        if (trailingButton != null) trailingButton!,
-        SizedBox(
-          width: 10,
-        )
-      ],
+      actions: trailingButton
+      // [
+      //   if (trailingButton != null) trailingButton!,
+      //   SizedBox(
+      //     width: 10,
+      //   )
+      // ],
     );
   }
 }
@@ -197,7 +202,8 @@ class AppBarStyleLeadingTitleTrailing extends StatelessWidget
           padding: EdgeInsets.only(left: 10),
           child: Image.asset(
             leadingImage!,
-            height: 50,
+            height: 30,
+            width: 30,
           ),
         ),
         onTap: onTapLeading,
@@ -205,7 +211,9 @@ class AppBarStyleLeadingTitleTrailing extends StatelessWidget
       // centerTitle: true,
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          if (nameUser!.isNotEmpty)
           AutoSizeText(
             nameUser!,
             style: nameStyle,
@@ -214,6 +222,7 @@ class AppBarStyleLeadingTitleTrailing extends StatelessWidget
             //   color: ColorStyle.primaryWhite,
             // ),
           ),
+          if (descriptionUser!.isNotEmpty)
           AutoSizeText(
             descriptionUser!,
             style: descriptionStyle,
@@ -222,10 +231,11 @@ class AppBarStyleLeadingTitleTrailing extends StatelessWidget
             //   color: ColorStyle.primaryWhite,
             // ),
           ),
+          if (timeLastLogin!.isNotEmpty)
           AutoSizeText(
             timeLastLogin!,
             maxLines: 1,
-            style: TextStyles.textStyles_7.apply(
+            style: TextStylesPoppins.textStyles_7.apply(
               color: ColorStyle.primaryWhite,
               // fontWeightDelta: 1,
             ),
@@ -278,12 +288,12 @@ class AppBarStyleCustom1 extends StatelessWidget
         children: [
           Text(
             'HARRISON SMITH',
-            style: TextStyles.textStyles_16
+            style: TextStylesPoppins.textStyles_16
                 .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
           ),
           Text(
             'Your Personal Settings',
-            style: TextStyles.textStyles_10.apply(
+            style: TextStylesPoppins.textStyles_10.apply(
               color: ColorStyle.primaryWhite,
             ),
           ),
@@ -297,8 +307,7 @@ class AppBarStyleCustom1 extends StatelessWidget
   }
 }
 
-class AppBarStyleCustomBeni extends StatelessWidget
-    implements PreferredSizeWidget {
+class AppBarStyleCustomBeni extends StatelessWidget implements PreferredSizeWidget {
   final Function()? onTap;
   final Widget? leadingButton;
   final Widget? trailingButton;
@@ -329,7 +338,7 @@ class AppBarStyleCustomBeni extends StatelessWidget
       centerTitle: true,
       title: Text(
         'Beneficiary',
-        style: TextStyles.textStyles_20.apply(
+        style: TextStylesPoppins.textStyles_20.apply(
           color: ColorStyle.primaryWhite,
         ),
       ),
@@ -380,71 +389,71 @@ class AppBarStyleCustomBenifi extends StatelessWidget
   }
 }
 
-class AppBarStyle1 extends StatelessWidget implements PreferredSizeWidget {
-  final Function()? onTap;
-
-  const AppBarStyle1({Key? key, this.onTap}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return PreferredSize(
-      preferredSize: Size.fromHeight(45.0),
-      child: AppBar(
-        elevation: 0,
-        centerTitle: false,
-        title: Column(
-          children: [
-            Text(
-              'Your Cards',
-              style: TextStyles.textStyles_20.apply(
-                color: ColorStyle.primaryWhite,
-                fontWeightDelta: 1,
-              ),
-            ),
-            Text(
-              '1 physical card, 1 virtual card',
-              style: TextStyles.textStyles_10.apply(
-                color: ColorStyle.primaryWhite,
-                fontWeightDelta: 1,
-              ),
-              // style: TextStyles.textSize_12.apply(
-              //   color: ColorStyle.secondryBlack,
-              //   fontSizeFactor: 0.8,
-              // ),
-              // style: TextStyle(
-              //   color: ColorStyle.titleColor,
-              //   fontSize: 18,
-              //   fontFamily: 'GEDinarOne',
-              //
-              // ),
-            ),
-          ],
-        ),
-        backgroundColor: Colors.transparent,
-        leadingWidth: 100,
-        leading: Row(
-          children: [],
-        ),
-        actions: [
-          InkWell(
-              child: Icon(
-                Icons.message_outlined,
-                color: ColorStyle.primaryWhite,
-                size: 30,
-              ),
-              onTap: onTap),
-          InkWell(
-              child: Icon(
-                Icons.settings,
-                color: ColorStyle.primaryWhite,
-                size: 30,
-              ),
-              onTap: onTap),
-        ],
-      ),
-    );
-  }
-
-  @override
-  Size get preferredSize => new Size.fromHeight(50);
-}
+// class AppBarStyle1 extends StatelessWidget implements PreferredSizeWidget {
+//   final Function()? onTap;
+//
+//   const AppBarStyle1({Key? key, this.onTap}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return PreferredSize(
+//       preferredSize: Size.fromHeight(45.0),
+//       child: AppBar(
+//         elevation: 0,
+//         centerTitle: false,
+//         title: Column(
+//           children: [
+//             Text(
+//               'Your Cards',
+//               style: TextStylesPoppins.textStyles_20.apply(
+//                 color: ColorStyle.primaryWhite,
+//                 fontWeightDelta: 1,
+//               ),
+//             ),
+//             Text(
+//               '1 physical card, 1 virtual card',
+//               style: TextStylesPoppins.textStyles_10.apply(
+//                 color: ColorStyle.primaryWhite,
+//                 fontWeightDelta: 1,
+//               ),
+//               // style: TextStyles.textSize_12.apply(
+//               //   color: ColorStyle.secondryBlack,
+//               //   fontSizeFactor: 0.8,
+//               // ),
+//               // style: TextStyle(
+//               //   color: ColorStyle.titleColor,
+//               //   fontSize: 18,
+//               //   fontFamily: 'GEDinarOne',
+//               //
+//               // ),
+//             ),
+//           ],
+//         ),
+//         backgroundColor: Colors.transparent,
+//         leadingWidth: 100,
+//         leading: Row(
+//           children: [],
+//         ),
+//         actions: [
+//           InkWell(
+//               child: Icon(
+//                 Icons.message_outlined,
+//                 color: ColorStyle.primaryWhite,
+//                 size: 30,
+//               ),
+//               onTap: onTap),
+//           InkWell(
+//               child: Icon(
+//                 Icons.settings,
+//                 color: ColorStyle.primaryWhite,
+//                 size: 30,
+//               ),
+//               onTap: onTap),
+//         ],
+//       ),
+//     );
+//   }
+//
+//   @override
+//   Size get preferredSize => new Size.fromHeight(50);
+// }

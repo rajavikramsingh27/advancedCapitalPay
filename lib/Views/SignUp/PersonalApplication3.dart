@@ -9,7 +9,7 @@ import '../../Styles/EffectStyle.dart';
 import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../SignUp/EffectStyleSignUp.dart';
-import '../SignUp/ComponentsSignUp.dart';
+import '../../Components/ComponentsSignUp.dart';
 import '../SignUp/BusinessApplication1.dart';
 
 
@@ -56,7 +56,7 @@ class PersonalApplication3 extends StatelessWidget {
                           Container(
                               child: Text(
                                 'ACFVC8JTJ',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 1,
                                 ),
@@ -82,7 +82,7 @@ class PersonalApplication3 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Please select from below which best describes  the application you wish to apply for. ',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -110,7 +110,7 @@ class PersonalApplication3 extends StatelessWidget {
                                       ),
                                       Text(
                                         'Private Individual',
-                                        style: TextStyles.textStyles_20.apply(
+                                        style: TextStylesPoppins.textStyles_20.apply(
                                           color: ColorStyle.secondryBlack,
                                           fontWeightDelta: 1,
                                         ),
@@ -120,7 +120,7 @@ class PersonalApplication3 extends StatelessWidget {
                                       ),
                                       Text(
                                         'I am private individual',
-                                        style: TextStyles.textStyles_14.apply(
+                                        style: TextStylesPoppins.textStyles_14.apply(
                                           color: ColorStyle.secondryBlack,
                                           fontWeightDelta: 1,
                                         ),
@@ -136,7 +136,7 @@ class PersonalApplication3 extends StatelessWidget {
                                           ),
                                           Expanded(child: Text(
                                             'Details required through On-Boarding Application Process',
-                                            style: TextStyles.textStyles_12
+                                            style: TextStylesPoppins.textStyles_12
                                                 .apply(
                                               color:
                                               ColorStyle.secondryBlack,
@@ -158,7 +158,7 @@ class PersonalApplication3 extends StatelessWidget {
                                           ),
                                           Expanded(child: Text(
                                             'Original KYC Documentation required with Offical English Versions (Certified Translations)',
-                                            style: TextStyles.textStyles_12
+                                            style: TextStylesPoppins.textStyles_12
                                                 .apply(
                                               color:
                                               ColorStyle.secondryBlack,
@@ -179,7 +179,7 @@ class PersonalApplication3 extends StatelessWidget {
                                           Text(
                                             'Facial Verification',
                                             style:
-                                                TextStyles.textStyles_12.apply(
+                                                TextStylesPoppins.textStyles_12.apply(
                                               color: ColorStyle.secondryBlack,
                                               fontWeightDelta: 1,
                                             ),
@@ -198,7 +198,7 @@ class PersonalApplication3 extends StatelessWidget {
                                           Text(
                                             'Detailed Source of Wealth',
                                             style:
-                                                TextStyles.textStyles_12.apply(
+                                                TextStylesPoppins.textStyles_12.apply(
                                               color: ColorStyle.secondryBlack,
                                               fontWeightDelta: 1,
                                             ),
@@ -217,7 +217,7 @@ class PersonalApplication3 extends StatelessWidget {
                                           Text(
                                             'Source of Funds',
                                             style:
-                                                TextStyles.textStyles_12.apply(
+                                                TextStylesPoppins.textStyles_12.apply(
                                               color: ColorStyle.secondryBlack,
                                               fontWeightDelta: 1,
                                             ),
@@ -236,7 +236,7 @@ class PersonalApplication3 extends StatelessWidget {
                                           Text(
                                             'Purpose of Account Opening',
                                             style:
-                                                TextStyles.textStyles_12.apply(
+                                                TextStylesPoppins.textStyles_12.apply(
                                               color: ColorStyle.secondryBlack,
                                               fontWeightDelta: 1,
                                             ),
@@ -255,7 +255,7 @@ class PersonalApplication3 extends StatelessWidget {
                                           Text(
                                             'English Signature',
                                             style:
-                                                TextStyles.textStyles_12.apply(
+                                                TextStylesPoppins.textStyles_12.apply(
                                               color: ColorStyle.secondryBlack,
                                               fontWeightDelta: 1,
                                             ),
@@ -274,7 +274,7 @@ class PersonalApplication3 extends StatelessWidget {
                                           Text(
                                             'Additional Details',
                                             style:
-                                                TextStyles.textStyles_12.apply(
+                                                TextStylesPoppins.textStyles_12.apply(
                                               color: ColorStyle.secondryBlack,
                                               fontWeightDelta: 1,
                                             ),
@@ -328,7 +328,7 @@ class PersonalApplication3 extends StatelessWidget {
                                         ),
                                         Text(
                                           'Business',
-                                          style: TextStyles.textStyles_20.apply(
+                                          style: TextStylesPoppins.textStyles_20.apply(
                                             color: ColorStyle.secondryBlack,
                                             fontWeightDelta: 1,
                                           ),
@@ -338,7 +338,7 @@ class PersonalApplication3 extends StatelessWidget {
                                         ),
                                         Text(
                                           'I am a business(Limited, Pte, Ltd, LLC, AG Trust, Corporated, Partnership, sole Trader or other)',
-                                          style: TextStyles.textStyles_14.apply(
+                                          style: TextStylesPoppins.textStyles_14.apply(
                                             color: ColorStyle.secondryBlack,
                                             fontWeightDelta: 1,
                                           ),
@@ -369,7 +369,7 @@ class PersonalApplication3 extends StatelessWidget {
                                       ),
                                       Text(
                                         'Advance Capital Resrticted Country List',
-                                        style: TextStyles.textStyles_20.apply(
+                                        style: TextStylesPoppins.textStyles_20.apply(
                                           color: ColorStyle.secondryBlack,
                                           fontWeightDelta: 1,
                                         ),
@@ -381,7 +381,7 @@ class PersonalApplication3 extends StatelessWidget {
                                         'Advance Capital follows and adheres to strict guidelines outlined by the FAFF which provides '
                                         ' restrictions for selected countries. Please be aware restricted countries outlined by the FATF'
                                         ' guidlince we are unable to open an account for or to allow transaction to occure.',
-                                        style: TextStyles.textStyles_14.apply(
+                                        style: TextStylesPoppins.textStyles_14.apply(
                                           color: ColorStyle.secondryBlack,
                                           fontWeightDelta: 1,
                                         ),

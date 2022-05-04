@@ -29,13 +29,13 @@ class TravelDestination extends StatelessWidget {
               Get.back();
             },
           ),
-          trailingButton: IconButton(
+          trailingButton: [IconButton(
             icon: Image.asset(
               ImageStyle.chat,
               height: 30,
             ),
             onPressed: () {},
-          ),
+          )],
         ),
         backgroundColor: ColorStyle.primaryWhite,
         body: SingleChildScrollView(
@@ -58,7 +58,7 @@ class TravelDestination extends StatelessWidget {
                           Text(
                             'Where are you going?',
                             // controller.listApplyLeave[index],
-                            style: TextStyles.textStyles_16.apply(
+                            style: TextStylesPoppins.textStyles_16.apply(
                                 fontWeightDelta: 2,
                                 color: ColorStyle.secondryBlack),
                           ),
@@ -67,7 +67,7 @@ class TravelDestination extends StatelessWidget {
                           ),
                           TextFieldCustomPrefix(
                             hintText: 'Search for a country',
-                            textStyle: TextStyles.textStyles_14.apply(
+                            textStyle: TextStylesPoppins.textStyles_14.apply(
                                 fontWeightDelta: 2,
                                 color: ColorStyle.secondryBlack),
                             colorFill: ColorStyle.primaryWhite,
@@ -84,7 +84,7 @@ class TravelDestination extends StatelessWidget {
                           Text(
                             'You have not selected any countries',
                             // controller.listApplyLeave[index],
-                            style: TextStyles.textStyles_12
+                            style: TextStylesPoppins.textStyles_12
                                 .apply(color: Colors.red,
                                 fontWeightDelta: 1),
                           ),
@@ -96,7 +96,7 @@ class TravelDestination extends StatelessWidget {
                                 'including any stopovers. We\'ll make '
                                 'sure your account is working and secure.',
                             // controller.listApplyLeave[index],
-                            style: TextStyles.textStyles_12
+                            style: TextStylesPoppins.textStyles_12
                                 .apply(color: ColorStyle.secondryBlack),
                           ),
                           SizedBox(
@@ -105,7 +105,7 @@ class TravelDestination extends StatelessWidget {
                           Text(
                             'Selected Desintation',
                             // controller.listApplyLeave[index],
-                            style: TextStyles.textStyles_14
+                            style: TextStylesPoppins.textStyles_14
                                 .apply(color: ColorStyle.secondryBlack,
                                 fontWeightDelta: 1),
                           ),
@@ -119,7 +119,7 @@ class TravelDestination extends StatelessWidget {
                               Text(
                                 'Germany',
                                 // controller.listApplyLeave[index],
-                                style: TextStyles.textStyles_14
+                                style: TextStylesPoppins.textStyles_14
                                     .apply(color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1
                                 ),
@@ -136,7 +136,7 @@ class TravelDestination extends StatelessWidget {
                             children: [
                               Expanded(child: ElevatedButtonCustom(
                                 text: 'Cancel',
-                                textStyle: TextStyles.textStyles_14
+                                textStyle: TextStylesPoppins.textStyles_14
                                     .apply(color: ColorStyle.blueSKY),
                                 colorBG: ColorStyle.primaryWhite,
                                 colorBorder: ColorStyle.blueSKY,
@@ -148,7 +148,7 @@ class TravelDestination extends StatelessWidget {
                               SizedBox(width: 16,),
                               Expanded(child: ElevatedButtonCustom(
                                 text: 'Continue',
-                                textStyle: TextStyles.textStyles_14
+                                textStyle: TextStylesPoppins.textStyles_14
                                     .apply(color: ColorStyle.primaryWhite),
                                 colorBG: ColorStyle.darkestBlueSignUp,
                                 colorBorder: ColorStyle.darkestBlueSignUp,

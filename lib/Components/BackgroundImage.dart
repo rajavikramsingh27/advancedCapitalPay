@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../Styles/ImageStyle.dart';
 
 class BackgroundImage extends StatelessWidget {
-  final String imageName;
+  final String? imageName;
   const BackgroundImage({Key? key,
   this.imageName = ImageStyle.bg,
   }) : super(key: key);
@@ -10,7 +10,7 @@ class BackgroundImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      imageName,
+      imageName!,
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       fit: BoxFit.cover,
@@ -28,7 +28,7 @@ class BackgroundImageBeneficiary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      ImageStyle.tiardschulzb8dA3eY5VrYunsplash,
+      ImageStyle.bgGradient,
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       fit: BoxFit.cover,

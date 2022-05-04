@@ -22,7 +22,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
             appBar:     AppBarStyleCustomBenifi(
               title: Text(
                 'ChatWithUs',
-                style: TextStyles.textStyles_20.apply(
+                style: TextStylesPoppins.textStyles_20.apply(
                     color: ColorStyle.primaryWhite,
                     fontWeightDelta: 2
                 ),
@@ -52,7 +52,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                   SizedBox(height:  20),
                   Text(
                     'Beneficiary Bank Details',
-                    style: TextStyles.textStyles_18.apply(
+                    style: TextStylesPoppins.textStyles_18.apply(
                         color: ColorStyle.primaryWhite,
                         fontWeightDelta: 2
                     ),
@@ -78,14 +78,14 @@ class BeneficiaryBankDetails extends StatelessWidget {
                             SizedBox(height: 20),
                             Text(
                               'HSBC BANK PLC',
-                              style: TextStyles.textStyles_18.apply(
+                              style: TextStylesPoppins.textStyles_18.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 2
                               ),
                             ),
                             Text(
                               'MIDLGB22123',
-                              style: TextStyles.textStyles_14.apply(
+                              style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 2
                               ),
@@ -104,7 +104,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
 
                                 Text(
                                   'MIDL',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.ligthBlue,
                                       fontWeightDelta: 2
                                   ),
@@ -112,7 +112,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   'Bank Code',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -120,7 +120,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   'Bank Name',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -128,7 +128,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   'Bank Address',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -136,7 +136,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   'City',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -144,7 +144,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   'Country',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -152,7 +152,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   'SWIFT Code',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -165,7 +165,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 12,),
                                 Text(
                                   'GB',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.ligthBlue,
                                       fontWeightDelta: 2
                                   ),
@@ -173,7 +173,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   'Country',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -181,7 +181,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   'Code',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -189,7 +189,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   '',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -197,7 +197,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   '',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -205,7 +205,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   '',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -213,7 +213,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   '',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -227,7 +227,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 30,),
                                 Text(
                                   'London',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.ligthBlue,
                                       fontWeightDelta: 2
                                   ),
@@ -235,7 +235,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   'Location',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -243,7 +243,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   'HSBC Bank PLC',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -251,7 +251,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   '8 Canada Square',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -259,7 +259,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   'London, E145HQ',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -267,7 +267,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   'London',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -275,7 +275,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   'United Kingdom',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -283,7 +283,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   'MIDLGB22123',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -296,7 +296,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 12,),
                                 Text(
                                   'XXX',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.ligthBlue,
                                       fontWeightDelta: 2
                                   ),
@@ -305,7 +305,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 Text(
                                   'Branch ',
 
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -313,7 +313,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   'Code',
-                                  style: TextStyles.textStyles_12.apply(
+                                  style: TextStylesPoppins.textStyles_12.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -321,7 +321,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   '',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -329,7 +329,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   '',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -337,7 +337,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   '',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),
@@ -345,7 +345,7 @@ class BeneficiaryBankDetails extends StatelessWidget {
                                 SizedBox(height: 8,),
                                 Text(
                                   '',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2
                                   ),

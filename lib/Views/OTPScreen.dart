@@ -54,7 +54,7 @@ class OTPScreen extends StatelessWidget {
               children: [
                 Text(
                   'Verify your mobile no.',
-                  style: TextStyles.textStyles_20.apply(
+                  style: TextStylesPoppins.textStyles_20.apply(
                     color: ColorStyle.primaryWhite,
                     fontWeightDelta: 1,
                   ),
@@ -63,14 +63,14 @@ class OTPScreen extends StatelessWidget {
                 AutoSizeText(
                   'Enter the One Time Password (OTP) send to Mobile no. 052-XXXXX-86',
                   maxLines: 2,
-                  style: TextStyles.autoSizeText.apply(
+                  style: TextStylesPoppins.autoSizeText.apply(
                     color: ColorStyle.primaryWhite,
                   ),
                 ),
                 SizedBox(height: 20),
                 Text(
                   'ACP',
-                  style: TextStyles.textStyles_14.apply(
+                  style: TextStylesPoppins.textStyles_14.apply(
                     color: ColorStyle.primaryWhite,
                     // fontWeightDelta: 10,
                   ),
@@ -189,7 +189,7 @@ class OTPScreen extends StatelessWidget {
                   height: 50,
                   child: Text(
                     'You have entered the incorrect OTP code. Please try again.',
-                    style: TextStyles.textStyles_14.apply(
+                    style: TextStylesPoppins.textStyles_14.apply(
                       color: Colors.red,
                       // fontWeightDelta: 1,
                     ),
@@ -212,7 +212,7 @@ class OTPScreen extends StatelessWidget {
                                     color: ColorStyle.blueSKY, width: 2)),
                             child: Text(
                               '50',
-                              style: TextStyles.textStyles_14.apply(
+                              style: TextStylesPoppins.textStyles_14.apply(
                                 color: ColorStyle.blueSKY,
                                 fontWeightDelta: 2,
                               ),
@@ -221,7 +221,7 @@ class OTPScreen extends StatelessWidget {
                           SizedBox(width: 8),
                           Text(
                             'Request new OTP',
-                            style: TextStyles.textStyles_14.apply(
+                            style: TextStylesPoppins.textStyles_14.apply(
                               color: ColorStyle.blueSKY,
                               fontWeightDelta: 1,
                             ),
@@ -233,7 +233,7 @@ class OTPScreen extends StatelessWidget {
                     InkWell(
                       child: Text(
                         'Use other',
-                        style: TextStyles.textStyles_14.apply(
+                        style: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.blueSKY,
                           fontWeightDelta: 1,
                         ),

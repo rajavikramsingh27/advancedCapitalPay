@@ -1,9 +1,9 @@
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:flutter/material.dart';
 
 import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
-
 
 class PayingFromAccount extends StatelessWidget {
   const PayingFromAccount({Key? key}) : super(key: key);
@@ -11,172 +11,144 @@ class PayingFromAccount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width,
-      child: Stack(
+      width: MediaQuery.of(context).size.width-40,
+      padding: EffectStyle.padding(16, 16, 16, 16),
+      decoration: BoxDecoration(
+        color: ColorStyle.primaryWhite,
+        borderRadius: EffectStyle.radiusCustom(10),
+        image: DecorationImage(
+          image: AssetImage(ImageStyle.bg_back),
+          fit: BoxFit.fitWidth
+        )
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(
-            ImageStyle.Card,
-            // width: MediaQuery.of(context).size.width,
-            // height: MediaQuery.of(context).size.height,
-            fit: BoxFit.cover,
+          Text(
+            'From',
+            style: TextStylesPoppins.textStyles_12.apply(
+                fontWeightDelta: 2,
+                color: ColorStyle.ligthBlue),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Text(
+            'Harrison Smith Plus+ A/C   **0624USD',
+            style: TextStylesPoppins.textStyles_14.apply(
+              color: ColorStyle.secondryBlack,
+              fontWeightDelta: 2,
+            ),
+          ),
+          SizedBox(
+            height: 6,
+          ),
+          Text(
+            'Available Balance',
+            style: TextStylesPoppins.textStyles_12.apply(
+                fontWeightDelta: 2,
+                color: ColorStyle.ligthBlue),
+          ),
+          Text(
+            '\$ 147,582.58',
+            style: TextStylesPoppins.textStyles_14.apply(
+              color: ColorStyle.secondryBlack,
+              fontWeightDelta: 2,
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
             children: [
-              SizedBox(
-                height: 25,
-              ),
-              Container(
-                padding: EdgeInsets.only(left: 10),
-                alignment: Alignment.centerLeft,
-                child:  Text(
-                  'Harrison Smith Plus+ A/C   **0624USD',
-                  // controller.listApplyLeave[index],
-                  style: TextStyles
-                      .textStyles_14
-                      .apply(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '00117280625',
+                    style: TextStylesPoppins.textStyles_12.apply(
+                      color: ColorStyle
+                          .secondryBlack,
                       fontWeightDelta: 2,
+                    ),
+                  ),
+                  Text(
+                    'Account Details',
+                    style: TextStylesPoppins.textStyles_10.apply(
                       color: ColorStyle
-                          .secondryBlack),
-                ),
-                height: 30,
-                width: double.infinity,
-                color: ColorStyle.primaryWhite,
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              Container(
-                padding: EdgeInsets.only(left: 10),
-                alignment: Alignment.centerLeft,
-                child:  Text(
-                  '\$ 207,582.58',
-                  // controller.listApplyLeave[index],
-                  style: TextStyles
-                      .textStyles_16
-                      .apply(
+                          .ligthBlue,
                       fontWeightDelta: 2,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    'GB5909023459023485793',
+                    style: TextStylesPoppins.textStyles_12.apply(
                       color: ColorStyle
-                          .secondryBlack),
-                ),
-                height: 30,
-                width: double.infinity,
-                color: ColorStyle.primaryWhite,
+                          .secondryBlack,
+                      fontWeightDelta: 2,
+                    ),
+                  ),
+                  Text(
+                    'IBAN Number',
+                    style: TextStylesPoppins.textStyles_10.apply(
+                      color: ColorStyle
+                          .ligthBlue,
+                      fontWeightDelta: 2,
+                    ),
+                  ),
+                ],
               ),
               SizedBox(
-                height: 4,
+                width: 10,
               ),
-              Container(
-                padding: EdgeInsets.only(left: 10),
-                alignment: Alignment.centerLeft,
-                child:  Text(
-                  '00117380624',
-                  // controller.listApplyLeave[index],
-                  style: TextStyles
-                      .textStyles_10
-                      .apply(
-                      fontWeightDelta: 1,
-                      color: ColorStyle
-                          .secondryBlack),
-                ),
-                height: 20,
-                width: 100,
-                color: ColorStyle.primaryWhite,
+              Column(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '51-0012',
+                        style: TextStylesPoppins.textStyles_12.apply(
+                          color: ColorStyle
+                              .secondryBlack,
+                          fontWeightDelta: 2,
+                        ),
+                      ),
+                      Text(
+                        'Sort Code',
+                        style: TextStylesPoppins.textStyles_10.apply(
+                          color: ColorStyle
+                              .ligthBlue,
+                          fontWeightDelta: 2,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'RBOSGB2L',
+                        style: TextStylesPoppins.textStyles_12.apply(
+                          color: ColorStyle
+                              .secondryBlack,
+                          fontWeightDelta: 2,
+                        ),
+                      ),
+                      Text(
+                        'SWIFT Code',
+                        style: TextStylesPoppins.textStyles_10.apply(
+                          color: ColorStyle
+                              .ligthBlue,
+                          fontWeightDelta: 2,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ],
           ),
         ],
       ),
     );
-
-    //   Container(
-    //   height: 220,
-    //   child:   ListView.builder(
-    //       // padding: EdgeInsets.only(top: 20),
-    //       shrinkWrap: true,
-    //       itemCount: 2,
-    //       scrollDirection: Axis.horizontal,
-    //       // physics: NeverScrollableScrollPhysics(),
-    //       itemBuilder:
-    //           (BuildContext context, int index) {
-    //         return   Stack(
-    //           children: [
-    //             Image.asset(
-    //               ImageStyle.Card,
-    //               // width: MediaQuery.of(context).size.width,
-    //               // height: MediaQuery.of(context).size.height,
-    //               fit: BoxFit.cover,
-    //             ),
-    //             Column(
-    //
-    //               crossAxisAlignment: CrossAxisAlignment.start,
-    //               children: [
-    //                 SizedBox(
-    //                   height: 22,
-    //                 ),
-    //                 Container(
-    //                   padding: EdgeInsets.only(left: 10),
-    //                   alignment: Alignment.centerLeft,
-    //                   child:  Text(
-    //                     'Harrison Smith Plus+ A/C   **0624USD',
-    //                     // controller.listApplyLeave[index],
-    //                     style: TextStyles
-    //                         .textStyles_14
-    //                         .apply(
-    //                         fontWeightDelta: 2,
-    //                         color: ColorStyle
-    //                             .secondryBlack),
-    //                   ),
-    //                   height: 30,
-    //                   width: double.infinity,
-    //                   color: ColorStyle.primaryWhite,
-    //                 ),
-    //                 SizedBox(
-    //                   height: 22,
-    //                 ),
-    //                 Container(
-    //                   padding: EdgeInsets.only(left: 10),
-    //                   alignment: Alignment.centerLeft,
-    //                   child:  Text(
-    //                     '\$ 207,582.58',
-    //                     // controller.listApplyLeave[index],
-    //                     style: TextStyles
-    //                         .textStyles_16
-    //                         .apply(
-    //                         fontWeightDelta: 2,
-    //                         color: ColorStyle
-    //                             .secondryBlack),
-    //                   ),
-    //                   height: 30,
-    //                   width: double.infinity,
-    //                   color: ColorStyle.primaryWhite,
-    //                 ),
-    //                 Container(
-    //                   padding: EdgeInsets.only(left: 10),
-    //                   alignment: Alignment.centerLeft,
-    //                   child:  Text(
-    //                     '00117380624',
-    //                     // controller.listApplyLeave[index],
-    //                     style: TextStyles
-    //                         .textStyles_10
-    //                         .apply(
-    //                         fontWeightDelta: 1,
-    //                         color: ColorStyle
-    //                             .secondryBlack),
-    //                   ),
-    //                   height: 20,
-    //                   width: 100,
-    //                   color: ColorStyle.primaryWhite,
-    //                 ),
-    //               ],
-    //             ),
-    //           ],
-    //         );
-    //       }),
-    // );
-
-
-
-
   }
 }

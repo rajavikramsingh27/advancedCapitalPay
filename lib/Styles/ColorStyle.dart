@@ -11,8 +11,22 @@ class ColorStyle {
   static final Color darkestBlue = hex("#082561");
   static final Color darkestBlueSignUp = hex("#1976C1");
   static final Color bottomNavBG = hex("#010730");
+  static final Color yellow = hex("#EFDE64");
+  static final Color greenlight = hex("#81F2D3");
+  static final Color bluedark = hex("#011557");
+  static final Color Grediat = hex("#BF55D7");
+  static final Color Grediats = hex("#56F9F6");
+
+
+
   static final Color grey = Colors.grey;
   static final Color grayColor = Colors.white.withOpacity(0.5);
+
+  static final Color whiteDuskyCrypto = hex("#EBE8E8");
+  static final Color greenDuskyCrypto = hex("#81F2D3");
+
+  static final Color yellowCrypto = hex("#EFDE64");
+  // static final Color greenDuskyCrypto = hex("#81F2D3");
 
   static Color hex(String hexString) {
     final buffer = StringBuffer();

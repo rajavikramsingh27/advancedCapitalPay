@@ -1,5 +1,4 @@
 
-import 'package:advanced_capital_pay/Views/BalanceSheetComponents.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,13 +7,47 @@ import '../../Styles/ColorStyle.dart';
 import '../../Styles/EffectStyle.dart';
 import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
-import '../../Views/Settings/DailyAccountBalance.dart';
+import '../../Views/Settings/BalanceSheetCellComponenets.dart';
 
 class YourFavoriteAccount extends StatelessWidget {
   final String? title;
 
   const YourFavoriteAccount({Key? key, required this.title}) : super(key: key);
 
+  standingOrders() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          padding: EffectStyle.padding(16, 16, 0, 0),
+          child: Text(
+            'Standing Orders',
+            style: TextStylesPoppins.textStyles_18
+                .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
+          ),
+        ),
+        ListView.separated(
+          itemCount: 4,
+          shrinkWrap: true,
+          physics: NeverScrollableScrollPhysics(),
+          padding: EffectStyle.padding(16, 16, 16, 16),
+          separatorBuilder: (context, index) {
+            return SizedBox(
+              height: 10,
+            );
+          },
+          itemBuilder: (context, index) {
+            return BalanceSheetCellComponenets(
+              titleOne: 'Savings Account',
+              valueOne: 'Monthly Bill',
+              titleTwo: 'Amount',
+              valueTwo: '\$140.00',
+            );
+          },
+        ),
+      ],
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -43,9 +76,9 @@ class YourFavoriteAccount extends StatelessWidget {
                   leadingImage: ImageStyle.ellipse2,
                   nameUser: 'HARRISON SMITH',
                   descriptionUser: 'Your Personal Settings',
-                  nameStyle: TextStyles.textStyles_18.apply(
+                  nameStyle: TextStylesPoppins.textStyles_18.apply(
                       color: ColorStyle.primaryWhite, fontWeightDelta: 1),
-                  descriptionStyle: TextStyles.textStyles_12
+                  descriptionStyle: TextStylesPoppins.textStyles_12
                       .apply(color: ColorStyle.primaryWhite),
                   trailingAction: [
                     IconButton(
@@ -69,9 +102,7 @@ class YourFavoriteAccount extends StatelessWidget {
                     ),
                   ],
                 ),
-                BalanceSheetComponents(
-                  title: title!,
-                ),
+                standingOrders(),
               ],
             ),
           ),

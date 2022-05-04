@@ -1,24 +1,24 @@
 
+import 'package:advanced_capital_pay/Views/AddContactDavid.dart';
+import 'package:advanced_capital_pay/Views/CryptoTransactionList.dart';
+import 'package:advanced_capital_pay/Views/TransactionSuccesfuls.dart';
+import 'package:advanced_capital_pay/Views/YourCard.dart';
 
-import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
-import 'package:advanced_capital_pay/Components/ChatWithUs.dart';
-import 'package:advanced_capital_pay/Views/AdvanceCapitalPayHelpCenter.dart';
-import 'package:advanced_capital_pay/Views/AppSettings.dart';
-import 'package:advanced_capital_pay/Views/ApplyPay.dart';
-import 'package:advanced_capital_pay/Views/BeneficiaryBankDetails.dart';
-import 'package:advanced_capital_pay/Views/CryptoDashboard.dart';
-import 'package:advanced_capital_pay/Views/CurrencyExchangePage.dart';
-import 'package:advanced_capital_pay/Views/MyMessages.dart';
-import 'package:advanced_capital_pay/Views/SignUp/PersonalApplication8.dart';
-import 'package:advanced_capital_pay/Views/Terms&Conditions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 import '../Views/SplashScreen.dart';
-import 'Components/AppBarStyle.dart';
-import 'Views/NewBeneficiary1.dart';
-import 'Views/TabbarScreen.dart';
+import '../Views/TabbarScreen.dart';
+import '../Views/CurrencyExchange.dart';
+import '../Views/TransferSummary.dart';
+import '../Views/ApplePay.dart';
+import 'Views/NotEnoughBalances.dart';
+import 'Views/OrdersButtonIsClicked.dart';
+import 'Views/SendBitcoins.dart';
+import 'Views/SendBitcoins1.dart';
+import 'Views/TransactionDetails1.dart';
+import 'Views/TransactionSummarys.dart';
 
 
 
@@ -41,32 +41,40 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-
       debugShowCheckedModeBanner: false,
-      // home: ApplyPay(),
+
+      home: OrdersButtonIsClicked(),
+      // home: Exchange(),
+      // home: TabbarScreen(),
+      // home: ApplePay(),
+      // home: Material(
+      //   color: ColorStyle.darkestBlueSignUp,
+      //   child: SearchByBankSwift(),
+      // ),
+
+      // home: CryptoTransactionList(),
       // home: TabbarScreen(),
       // home: AppSettings(),
-      home: CryptoDashboard(),
+      // home: TabbarScreen(),
+
       // home: AppSettings(),
       //   home: SuccessfulCurrencyExchange()
 
-
-        // home: Material(
-        //     child: AccountTransferSummary(
-        //       // firstText: 'No',
-        //       // secondText: 'Yes',
-        //       // colorFirst: ColorsDropdownButtonTextField.green,
-        //       // colorSecond: Colors.green,
-        //       //
-        //       // textStyleFirst: TextStyles.textStyles_16.apply(
-        //       //   color: Colors.green
-        //       // ),
-        //       // textStyleSecond: TextStyles.textStyles_16.apply(
-        //       //     color: Colors.green
-        //       // ),
-        //     ),
-        // )
-
+      // home: Material(
+      //     child: AccountTransferSummary(
+      //       // firstText: 'No',
+      //       // secondText: 'Yes',
+      //       // colorFirst: ColorsDropdownButtonTextField.green,
+      //       // colorSecond: Colors.green,
+      //       //
+      //       // textStyleFirst: TextStyles.textStyles_16.apply(
+      //       //   color: Colors.green
+      //       // ),
+      //       // textStyleSecond: TextStyles.textStyles_16.apply(
+      //       //     color: Colors.green
+      //       // ),
+      //     ),
+      // )
     );
   }
 }

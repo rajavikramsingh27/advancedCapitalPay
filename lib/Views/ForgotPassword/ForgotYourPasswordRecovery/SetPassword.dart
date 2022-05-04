@@ -27,7 +27,7 @@ class SetPassword extends StatelessWidget {
           children: [
             Text(
               title,
-              style: TextStyles.textStyles_16.apply(
+              style: TextStylesPoppins.textStyles_16.apply(
                 color: ColorStyle.secondryBlack,
                 fontWeightDelta: 1,
               ),
@@ -35,7 +35,7 @@ class SetPassword extends StatelessWidget {
             if (isRequired)
               Text(
                 '*',
-                style: TextStyles.textStyles_16.apply(
+                style: TextStylesPoppins.textStyles_16.apply(
                   color: Colors.red,
                   fontWeightDelta: 11,
                 ),
@@ -61,8 +61,8 @@ class SetPassword extends StatelessWidget {
           colorFill: ColorStyle.primaryWhite,
           colorBoder: ColorStyle.secondryBlack,
           textStyle:
-              TextStyles.textStyles_12.apply(color: ColorStyle.secondryBlack),
-          hintTextStyle: TextStyles.textStyles_12.apply(color: ColorStyle.grey),
+              TextStylesPoppins.textStyles_12.apply(color: ColorStyle.secondryBlack),
+          hintTextStyle: TextStylesPoppins.textStyles_12.apply(color: ColorStyle.grey),
           radiusBorder: 30,
         ),
       ],
@@ -78,7 +78,7 @@ class SetPassword extends StatelessWidget {
         ),
         Text(
           title,
-          style: TextStyles.textStyles_16.apply(
+          style: TextStylesPoppins.textStyles_16.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 1,
           ),
@@ -88,7 +88,7 @@ class SetPassword extends StatelessWidget {
         ),
         Text(
           desc,
-          style: TextStyles.textStyles_12.apply(
+          style: TextStylesPoppins.textStyles_12.apply(
             color: ColorStyle.secondryBlack,
             fontWeightDelta: 1,
           ),
@@ -109,7 +109,7 @@ class SetPassword extends StatelessWidget {
           ),
           Text(
             'New Password Details',
-            style: TextStyles.textStyles_20.apply(
+            style: TextStylesPoppins.textStyles_20.apply(
               color: ColorStyle.primaryWhite,
               fontWeightDelta: 1,
             ),
@@ -140,7 +140,7 @@ class SetPassword extends StatelessWidget {
                     Expanded(
                       child: Text(
                         'Set your new password to login and access your AdvanceCapitalPay Account. Please ensure that you keep your password safe and to yourself at all times.',
-                        style: TextStyles.textStyles_12.apply(
+                        style: TextStylesPoppins.textStyles_12.apply(
                           color: ColorStyle.darkestBlue,
                           fontWeightDelta: 1,
                         ),
@@ -160,7 +160,7 @@ class SetPassword extends StatelessWidget {
                 ),
                 Text(
                   'Please enter the same password as above',
-                  style: TextStyles.textStyles_10
+                  style: TextStylesPoppins.textStyles_10
                       .apply(color: Colors.red, fontWeightDelta: 1),
                 ),
                 SizedBox(
@@ -168,7 +168,7 @@ class SetPassword extends StatelessWidget {
                 ),
                 Text(
                   'Password Strength',
-                  style: TextStyles.textStyles_16.apply(
+                  style: TextStylesPoppins.textStyles_16.apply(
                     color: ColorStyle.secondryBlack,
                     fontWeightDelta: 1,
                   ),
@@ -212,7 +212,7 @@ class SetPassword extends StatelessWidget {
                           Expanded(
                             child: Text(
                               controller.arrPasswordStrngh[index],
-                              style: TextStyles.textStyles_14.apply(
+                              style: TextStylesPoppins.textStyles_14.apply(
                                 color: ColorStyle.secondryBlack,
                                 fontWeightDelta: 0,
                               ),
@@ -229,7 +229,7 @@ class SetPassword extends StatelessWidget {
                     Expanded(
                         child: ElevatedButtonCustom(
                       colorBG: ColorStyle.primaryWhite,
-                      textStyle: TextStyles.textStyles_14
+                      textStyle: TextStylesPoppins.textStyles_14
                           .apply(color: ColorStyle.blueSKY, fontWeightDelta: 1),
                       colorBorder: ColorStyle.blueSKY,
                       text: 'Cancel',
@@ -244,7 +244,7 @@ class SetPassword extends StatelessWidget {
                       colorBG: ColorStyle.blueSKY,
                       text: 'Set New Password',
                       radiusBorder: 30,
-                      textStyle: TextStyles.textStyles_14.apply(
+                      textStyle: TextStylesPoppins.textStyles_14.apply(
                           color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                       onTap: () {
                         controller.arrSelectOptionIcons[3] = true;

@@ -21,14 +21,14 @@ class SearchBarCustom extends StatelessWidget {
           ),
           Expanded(
               child: TextField(
-            style: TextStyles.textStyles_16.apply(
+            style: TextStylesPoppins.textStyles_16.apply(
               color: ColorStyle.secondryBlack,
               fontWeightDelta: 0,
             ),
             decoration: InputDecoration(
               contentPadding: EdgeInsets.only(bottom: 10),
               hintText: "Search",
-              hintStyle: TextStyles.textStyles_16.apply(
+              hintStyle: TextStylesPoppins.textStyles_16.apply(
                 color: ColorStyle.grey,
                 fontWeightDelta: 0,
               ),

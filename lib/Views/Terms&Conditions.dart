@@ -19,7 +19,7 @@ class TermsAndConditions extends StatelessWidget {
             appBar:     AppBarStyleCustomBenifi(
               title: Text(
                 'Terms & Conditions',
-                style: TextStyles.textStyles_20.apply(
+                style: TextStylesPoppins.textStyles_20.apply(
                     color: ColorStyle.primaryWhite,
                     fontWeightDelta: 2
                 ),
@@ -103,7 +103,7 @@ class TermsAndConditions extends StatelessWidget {
                               '  5.2 When we make changes to this agreement?'
                               ' 6. How do I get in contact with you?'
                               '  6.1 How can I make a complaint?',
-                          style: TextStyles.textStyles_12.apply(
+                          style: TextStylesPoppins.textStyles_12.apply(
                               color: ColorStyle.ligthBlue,
                               fontWeightDelta: 2
                           ),
@@ -133,7 +133,7 @@ class TermsAndConditions extends StatelessWidget {
                                   'rmation and frequently asked questions through our Help Centre, its important to know that any information '
                                   'within the Help Centre doesnt form part of our agreement this you.',
 
-                          style: TextStyles.textStyles_12.apply(
+                          style: TextStylesPoppins.textStyles_12.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 2
                           ),
@@ -144,7 +144,7 @@ class TermsAndConditions extends StatelessWidget {
                           ' 1. Documentation which applies to you: This agreement and'
     ' additional documentation outlined below, all apply to the use of any of our services by you.,',
 
-                          style: TextStyles.textStyles_12.apply(
+                          style: TextStylesPoppins.textStyles_12.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 2
                           ),
@@ -155,7 +155,7 @@ class TermsAndConditions extends StatelessWidget {
 
                           ' (I) Advance Capitals Cookie Policy which outlines details of the "Cookies" on our website. (II) Advance Capitals Customer Agreement which outlines terms and conditions for services we provide you with (III) Advance Capitals Electronic Disclosures and consent which outlines terms and conditions when facial verification and eye retina scans are taken of you. (IV) Advance Capitals Privacy Policy which outlines the terms of how we collect and process personal data about you, provided to us or obtained by us. Using Advance Capitals services you consent to such processing and will always provide us with accurate information and data. You also agree to inform Advance Capital, or where applicable its affiliates, of any changes to information or data provided within at least 14 business days to Complaince@AdvanceCapitalpay.com (V) Advance Capitals Acceptable Use policy which outlines acceptable uses, prohibited activities and users of our services. (VI) Advance Capitals GDPR policy which outlines our obligations and practices for meeting compliance requirements for data regulations. (VIII) Advance Capitals Terms and Conditions which outlines the legal agreement between us and you for the use of any of our services. (IX) Advance Capitals Global Human Rights Policy (X) Advance Capitals Modern Slavery Act Statement',
 
-                          style: TextStyles.textStyles_12.apply(
+                          style: TextStylesPoppins.textStyles_12.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 2
                           ),
@@ -165,7 +165,7 @@ class TermsAndConditions extends StatelessWidget {
 
 
                            '2. Why this agreement is important',
-                          style: TextStyles.textStyles_12.apply(
+                          style: TextStylesPoppins.textStyles_12.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 2
                           ),
@@ -175,7 +175,7 @@ class TermsAndConditions extends StatelessWidget {
 
 
                           'Advance Capital means: (I) The Advance Capital SPC Fund; or (II) Advance Capital Limited, registered with the Cayman Islands Monetary Authority (CIMA) registration number: 1922966 The Advance Capital SPC Fund, is an SPC fund with Segregated Portfolios registered and governed by the laws of the Cayman Islands with its registered offices at Floor 4, Willow House, Cricket Square, Grand Cayman, KY1-9010, Cayman Islands AdvanceCapitalPay, trading as Advance Capital Limited is registered and governed by the laws of the Cayman Islands with the registration number 378870 with its registered address at Floor 4, Willow House, Cricket Square, Grand Cayman, KY1-9010, Cayman Islands. This document outlines our terms and conditions for your AdvanceCapitalPay Personal Account (your account), your AdvanceCapitalPay Card and related services. These terms and conditions, your on-boarding application along with our Privacy Policy, Limits and Fees page and any other terms and conditions that apply to our services, form a legal binding agreement "agreement", or the "terms" between;',
-                          style: TextStyles.textStyles_12.apply(
+                          style: TextStylesPoppins.textStyles_12.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 2
                           ),
@@ -190,7 +190,7 @@ class TermsAndConditions extends StatelessWidget {
 '   It is important for you to know and understand how your account works, you can contact us any time with any questions which you have including the rights to request a copy of these terms and conditions through the AdvanceCapitalPay app. You may find useful information and frequently asked questions through our Help Centre, its important to know that any information within the Help Centre doesnt form part of our agreement this you.'
 '   2.1 Communications with you We will communicate with you in regards to any notifications or other information relating to your AdvanceCapitalPay account by, SMS, E-mail or through your AdvanceCapitalPay app. We advise that the number and e-mail in which you provide is accurate, updated and accessible at all times in the event that we dont and/or cant contact you through your AdvanceCapitalPay Account. We also ask and require you to make, inform us, or where applicable our affiliates, of any changes to information or data within at least fourteen (14) business days which your details can be updated through your AdvanceCapitalPay app or emailing Complaince@AdvanceCapitalpay.com. We advise you to always keep your device updated with the latest software updates for your device and the latest version of the AdvanceCapitalPay app as and when available in order to help keep your account secure. As per our legal and regulatory conformities which we strictly adhere to, we may from time to time request additional information and documentation about you and/or in relation to the use of any of our services, we ask that this information is provided back to us as soon as possible from being requested in order to not cause any problems and/or further problems with',
 
-                          style: TextStyles.textStyles_12.apply(
+                          style: TextStylesPoppins.textStyles_12.apply(
                               color: ColorStyle.secondryBlack,
                               fontWeightDelta: 2
                           ),

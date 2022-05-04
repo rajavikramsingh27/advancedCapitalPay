@@ -1,5 +1,5 @@
 import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
-import 'package:advanced_capital_pay/Components/RedioButtonCustom.dart';
+import 'package:advanced_capital_pay/Components/RadioButtonCustom.dart';
 import 'package:flutter/material.dart';
 
 import '../Components/AppBarStyle.dart';
@@ -33,7 +33,7 @@ class TransferBetween extends StatelessWidget {
                 ),
                 onPressed: () {},
               ),
-              trailingButton: IconButton(
+              trailingButton: [IconButton(
                 icon: Image.asset(
                   ImageStyle.chat,
                   height: 30,
@@ -41,7 +41,7 @@ class TransferBetween extends StatelessWidget {
                 onPressed: () {
                   filter();
                 },
-              ),
+              )],
             ),
             backgroundColor: Colors.transparent,
             body:SingleChildScrollView(
@@ -52,7 +52,7 @@ class TransferBetween extends StatelessWidget {
                   Text(
                     'Transfer Details',
                     // controller.listApplyLeave[index],
-                    style: TextStyles
+                    style: TextStylesPoppins
                         .textStyles_14
                         .apply(
                         fontWeightDelta: 2,
@@ -76,7 +76,7 @@ class TransferBetween extends StatelessWidget {
                               Text(
                                 'Account*',
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_14
                                     .apply(
                                     fontWeightDelta: 2,
@@ -106,7 +106,7 @@ class TransferBetween extends StatelessWidget {
                               Text(
                                 'Standing Order',
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_12
                                     .apply(
                                     fontWeightDelta: 3,
@@ -116,14 +116,14 @@ class TransferBetween extends StatelessWidget {
                               SizedBox(
                                 height: 8,
                               ),
-                             RedioButtonCustom(),
+                             RadioButtonCustom(),
                               SizedBox(
                                 height: 26,
                               ),
                               Text(
                                 'Transfer Date and Frequency*',
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_12
                                     .apply(
                                     fontWeightDelta: 3,
@@ -151,7 +151,7 @@ class TransferBetween extends StatelessWidget {
                               Text(
                                 'This transfer can be today or scheduled at a later date',
                                 // controller.listApplyLeave[index],
-                                style: TextStyles
+                                style: TextStylesPoppins
                                     .textStyles_10
                                     .apply(
                                     fontWeightDelta: 1,
@@ -161,16 +161,26 @@ class TransferBetween extends StatelessWidget {
                               SizedBox(
                                 height: 24,
                               ),
-                              ButtonContinueCancel(
-
-                              ),
+                              // ButtonContinueCancel(
+                              //   textFirst: 'Cancel afadfsdf',
+                              //   colorBGFirst: Colors.transparent,
+                              //   colorBorderFirst: ColorStyle.hex('#016ECF'),
+                              //   textStyleFirst: TextStyles.textStyles_14.apply(
+                              //       fontWeightDelta: 1,
+                              //       color: ColorStyle.hex('#016ECF'),
+                              //   ),
+                              //
+                              //   textSecond: 'Continue',
+                              //   colorBGSecond: ColorStyle.hex('#016ECF'),
+                              //   colorBorderSecond: Colors.transparent,
+                              //   textStyleSecond: TextStyles.textStyles_14.apply(
+                              //     fontWeightDelta: 1,
+                              //     color: ColorStyle.hex('#016ECF'),
+                              //   ),
+                              // ),
                               SizedBox(
                                 height: 20,
                               ),
-
-
-
-
 
                             ],
                           ),

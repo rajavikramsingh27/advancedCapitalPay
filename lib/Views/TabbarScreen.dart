@@ -8,6 +8,9 @@ import '../Controllers/TabbarScreenController.dart';
 import '../Views/MainDashboard.dart';
 import '../Views/MoreScreen.dart';
 import '../Views/YourCard.dart';
+import '../Views/AdvanceCapitalPayHelpCenter.dart';
+import '../Views/CryptoDashboard.dart';
+
 
 class TabbarScreen extends StatelessWidget {
   final controller = Get.put(TabbarScreenController());
@@ -17,7 +20,7 @@ class TabbarScreen extends StatelessWidget {
   textLabel(String text, int index) {
     return Text(
       text,
-      style: TextStyles.textStyles_10.apply(
+      style: TextStylesPoppins.textStyles_10.apply(
         color: (controller.selectedIndex.value == index)
             ? Colors.blueAccent
             : ColorStyle.primaryWhite,
@@ -48,7 +51,7 @@ class TabbarScreen extends StatelessWidget {
                             bottom: 65,
                             left: 0,
                             right: 0,
-                            child: MainDashboard()),
+                child: CryptoDashboard()),
                       if (controller.selectedIndex.value == 2)
                         Positioned(
                             top: 0,
@@ -69,7 +72,7 @@ class TabbarScreen extends StatelessWidget {
                             bottom: 65,
                             left: 0,
                             right: 0,
-                            child: MainDashboard()),
+                            child: AdvanceCapitalPayHelpCenter()),
                       Positioned(
                           bottom: 0,
                           child: SafeArea(

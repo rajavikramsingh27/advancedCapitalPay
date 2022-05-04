@@ -11,7 +11,7 @@ import '../../Styles/EffectStyle.dart';
 import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../SignUp/EffectStyleSignUp.dart';
-import '../SignUp/ComponentsSignUp.dart';
+import '../../Components/ComponentsSignUp.dart';
 
 class PersonalApplication4 extends StatelessWidget {
   const PersonalApplication4({Key? key}) : super(key: key);
@@ -55,7 +55,7 @@ class PersonalApplication4 extends StatelessWidget {
                           Container(
                               child: Text(
                                 'ACFVC8JTJ',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 1,
                                 ),
@@ -81,7 +81,7 @@ class PersonalApplication4 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Complete the section below to inform our team about your Account Opening Intentions. ',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -91,7 +91,7 @@ class PersonalApplication4 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Which country will sending to',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -116,7 +116,7 @@ class PersonalApplication4 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Which currencies will you plan on exchanging to',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -141,7 +141,7 @@ class PersonalApplication4 extends StatelessWidget {
                                 ),
                                 Text(
                                   'What are the reasons for your exchanges',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -156,7 +156,7 @@ class PersonalApplication4 extends StatelessWidget {
                                     border: OutlineInputBorder(),
                                     hintText:
                                         'Please provide a detailed explanation At to what the reasons for your exchanges Will be.',
-                                    labelStyle: TextStyles.textStyles_14.apply(
+                                    labelStyle: TextStylesPoppins.textStyles_14.apply(
                                       color: Colors.grey,
                                       fontWeightDelta: 1,
                                     ),
@@ -167,7 +167,7 @@ class PersonalApplication4 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Frequency of Payments',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -192,7 +192,7 @@ class PersonalApplication4 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Which countries do you personally hold Bank/FX accounts in',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -217,7 +217,7 @@ class PersonalApplication4 extends StatelessWidget {
                                 ),
                                 Text(
                                   'What are the approximate amounts which will Be exchanged',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -237,7 +237,7 @@ class PersonalApplication4 extends StatelessWidget {
                                           Text(
                                             'AFA',
                                             style:
-                                                TextStyles.textStyles_20.apply(
+                                                TextStylesPoppins.textStyles_20.apply(
                                               color: ColorStyle.secondryBlack,
                                               // fontWeightDelta: 1,
                                             ),
@@ -269,7 +269,7 @@ class PersonalApplication4 extends StatelessWidget {
                                           ),
                                           hintText: '100, 000, 00',
                                           labelStyle:
-                                              TextStyles.textStyles_12.apply(
+                                              TextStylesPoppins.textStyles_12.apply(
                                             color: Colors.grey,
                                             fontWeightDelta: 1,
                                           ),
@@ -287,7 +287,7 @@ class PersonalApplication4 extends StatelessWidget {
                                     border: OutlineInputBorder(),
                                     hintText:
                                         'State the name(s) Of the Bank/Fx you pers',
-                                    labelStyle: TextStyles.textStyles_12.apply(
+                                    labelStyle: TextStylesPoppins.textStyles_12.apply(
                                       color: Colors.grey,
                                       fontWeightDelta: 1,
                                     ),

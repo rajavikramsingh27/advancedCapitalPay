@@ -9,7 +9,7 @@ import '../Components/BackgroundImage.dart';
 import '../Components/AppBarStyle.dart';
 import 'package:get/utils.dart';
 import '../Styles/ColorStyle.dart';
-import '../Views/MessagePage.dart';
+import '../Views/InboxMessage.dart';
 import '../Views/AppSettings.dart';
 import '../Views/SavingGoal2.dart';
 
@@ -28,9 +28,9 @@ class SavingGoal extends StatelessWidget {
             appBar: AppBarStyleLeadingTitleTrailing(
               backgroundColor: ColorStyle.darkestBlue,
               leadingImage: ImageStyle.ellipse2,
-              nameStyle: TextStyles.textStyles_14
+              nameStyle: TextStylesPoppins.textStyles_14
                   .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 2),
-              descriptionStyle: TextStyles.textStyles_12
+              descriptionStyle: TextStylesPoppins.textStyles_12
                   .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
               nameUser: 'MR HARRISON SMITH',
               descriptionUser: 'Plus Personal Customer',
@@ -43,7 +43,7 @@ class SavingGoal extends StatelessWidget {
                     height: 26,
                   ),
                   onPressed: () {
-                    Get.to(MessagePage());
+                    Get.to(InboxMessage());
                   },
                 ),
                 IconButton(
@@ -100,7 +100,7 @@ class SavingGoal extends StatelessWidget {
                                 alignment: Alignment.center,
                                 child: Text(
                                   'Total saving',
-                                  style: TextStyles.textStyles_20.apply(
+                                  style: TextStylesPoppins.textStyles_20.apply(
                                       color: ColorStyle.grey,
                                       fontWeightDelta: 2),
                                 ),
@@ -112,7 +112,7 @@ class SavingGoal extends StatelessWidget {
                                 alignment: Alignment.center,
                                 child: Text(
                                   'S 8,187.89',
-                                  style: TextStyles.textStyles_46.apply(
+                                  style: TextStylesPoppins.textStyles_46.apply(
                                       color: ColorStyle.secondryBlack,
                                       fontWeightDelta: 2),
                                 ),
@@ -166,14 +166,14 @@ class SavingGoal extends StatelessWidget {
                                                 Row(
                                                   children: [
                                                     Text('You are doing',
-                                                        style: TextStyles
+                                                        style: TextStylesPoppins
                                                             .textStyles_12
                                                             .apply(
                                                           color: ColorStyle
                                                               .primaryWhite,
                                                         )),
                                                     Text(' great',
-                                                        style: TextStyles
+                                                        style: TextStylesPoppins
                                                             .textStyles_12
                                                             .apply(
                                                             color: ColorStyle
@@ -181,7 +181,7 @@ class SavingGoal extends StatelessWidget {
                                                             fontWeightDelta:
                                                             3)),
                                                     Text(' this month',
-                                                        style: TextStyles
+                                                        style: TextStylesPoppins
                                                             .textStyles_12
                                                             .apply(
                                                           color: ColorStyle
@@ -193,7 +193,7 @@ class SavingGoal extends StatelessWidget {
                                                   children: [
                                                     Text(
                                                       'with',
-                                                      style: TextStyles
+                                                      style: TextStylesPoppins
                                                           .textStyles_14
                                                           .apply(
                                                         color: ColorStyle
@@ -202,7 +202,7 @@ class SavingGoal extends StatelessWidget {
                                                     ),
                                                     Text(
                                                       ' S 730.4 ',
-                                                      style: TextStyles
+                                                      style: TextStylesPoppins
                                                           .textStyles_14
                                                           .apply(
                                                           color: ColorStyle
@@ -212,7 +212,7 @@ class SavingGoal extends StatelessWidget {
                                                     ),
                                                     Text(
                                                       ' saved',
-                                                      style: TextStyles
+                                                      style: TextStylesPoppins
                                                           .textStyles_14
                                                           .apply(
                                                         color: ColorStyle
@@ -251,7 +251,7 @@ class SavingGoal extends StatelessWidget {
                                   children: [
                                     Text(
                                       'Saving Goals',
-                                      style: TextStyles.textStyles_24.apply(
+                                      style: TextStylesPoppins.textStyles_24.apply(
                                           color: ColorStyle.secondryBlack,
                                           fontWeightDelta: 3),
                                     ),
@@ -313,14 +313,14 @@ class SavingGoal extends StatelessWidget {
                                                   children: [
                                                     Text(
                                                       'Maldives',
-                                                      style: TextStyles.textStyles_14.apply(
+                                                      style: TextStylesPoppins.textStyles_14.apply(
                                                         color: ColorStyle.primaryWhite,
                                                         fontWeightDelta: 1,
                                                       ),
                                                     ),
                                                     Text(
                                                       '168 days left',
-                                                      style: TextStyles.textStyles_12.apply(
+                                                      style: TextStylesPoppins.textStyles_12.apply(
                                                         color: ColorStyle.primaryWhite.withOpacity(0.8),
                                                         fontWeightDelta: 0,
                                                       ),
@@ -337,7 +337,7 @@ class SavingGoal extends StatelessWidget {
                                                   children: [
                                                     Text(
                                                       '\$8,187.89',
-                                                      style: TextStyles.textStyles_20.apply(
+                                                      style: TextStylesPoppins.textStyles_20.apply(
                                                         color: ColorStyle.primaryWhite,
                                                         fontWeightDelta: 2,
                                                       ),
@@ -357,7 +357,7 @@ class SavingGoal extends StatelessWidget {
                                                     SizedBox(height: 4,),
                                                     Text(
                                                       'from \$ 10,916.00',
-                                                      style: TextStyles.textStyles_12.apply(
+                                                      style: TextStylesPoppins.textStyles_12.apply(
                                                         color: ColorStyle.primaryWhite,
                                                         fontWeightDelta: 0,
                                                       ),

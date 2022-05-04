@@ -14,7 +14,7 @@ import '../../Styles/EffectStyle.dart';
 import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../SignUp/EffectStyleSignUp.dart';
-import '../SignUp/ComponentsSignUp.dart';
+import '../../Components/ComponentsSignUp.dart';
 
 class PersonalApplication7 extends StatelessWidget {
   const PersonalApplication7({Key? key}) : super(key: key);
@@ -59,7 +59,7 @@ class PersonalApplication7 extends StatelessWidget {
                           Container(
                               child: Text(
                                 'ACFVC8JTJ',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 1,
                                 ),
@@ -85,7 +85,7 @@ class PersonalApplication7 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Clients are required to provide us with detailed information where funds and wealth has come from',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -95,7 +95,7 @@ class PersonalApplication7 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Please select multiple options below if applicable which best describes where you funds and wealth come from.',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 2,
                                   ),
@@ -133,7 +133,7 @@ class PersonalApplication7 extends StatelessWidget {
                                                   controller
                                                           .chooseOriginofWealth[
                                                       index],
-                                                  style: TextStyles
+                                                  style: TextStylesPoppins
                                                       .textStyles_12
                                                       .apply(
                                                     color: ColorStyle
@@ -156,7 +156,7 @@ class PersonalApplication7 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Origin of Funds/Wealth Explanation :',
-                                  style: TextStyles.textStyles_16.apply(
+                                  style: TextStylesPoppins.textStyles_16.apply(
                                     color: ColorStyle.secondryBlack,
                                   ),
                                 ),
@@ -179,7 +179,7 @@ class PersonalApplication7 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Upload Bank Statement',
-                                  style: TextStyles.textStyles_16.apply(
+                                  style: TextStylesPoppins.textStyles_16.apply(
                                     color: ColorStyle.secondryBlack,
                                   ),
                                 ),
@@ -218,7 +218,7 @@ class PersonalApplication7 extends StatelessWidget {
                                         ),
                                         Text(
                                           'Select Files',
-                                          style: TextStyles.textStyles_16.apply(
+                                          style: TextStylesPoppins.textStyles_16.apply(
                                             color: ColorStyle.darkestBlueSignUp,
                                           ),
                                         ),
@@ -243,7 +243,7 @@ class PersonalApplication7 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Uploade Documents',
-                                  style: TextStyles.textStyles_16.apply(
+                                  style: TextStylesPoppins.textStyles_16.apply(
                                     color: ColorStyle.secondryBlack,
                                   ),
                                 ),
@@ -264,7 +264,7 @@ class PersonalApplication7 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Additional Documentation',
-                                  style: TextStyles.textStyles_16.apply(
+                                  style: TextStylesPoppins.textStyles_16.apply(
                                     color: ColorStyle.secondryBlack,
                                   ),
                                 ),
@@ -303,7 +303,7 @@ class PersonalApplication7 extends StatelessWidget {
                                         ),
                                         Text(
                                           'Select Files',
-                                          style: TextStyles.textStyles_16.apply(
+                                          style: TextStylesPoppins.textStyles_16.apply(
                                             color: ColorStyle.darkestBlueSignUp,
                                           ),
                                         ),
@@ -328,7 +328,7 @@ class PersonalApplication7 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Uploade Documents',
-                                  style: TextStyles.textStyles_16.apply(
+                                  style: TextStylesPoppins.textStyles_16.apply(
                                     color: ColorStyle.secondryBlack,
                                   ),
                                 ),
@@ -348,7 +348,7 @@ class PersonalApplication7 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Advance Capital SOF/SOW Accepted Guidelines',
-                                  style: TextStyles.textStyles_16.apply(
+                                  style: TextStylesPoppins.textStyles_16.apply(
                                     color: ColorStyle.secondryBlack,
                                   ),
                                 ),

@@ -51,13 +51,13 @@ class NewBeneficiary extends StatelessWidget {
               Get.back();
             },
           ),
-          trailingButton: IconButton(
+          trailingButton: [IconButton(
             icon: Image.asset(
               ImageStyle.chat,
               height: 30,
             ),
             onPressed: () {},
-          ),
+          )],
         ),
         backgroundColor: ColorStyle.primaryWhite,
         body: GetBuilder(
@@ -92,7 +92,7 @@ class NewBeneficiary extends StatelessWidget {
                                   children: [
                                     Text(
                                       "20",
-                                      style: TextStyles.textStyles_32.apply(
+                                      style: TextStylesPoppins.textStyles_32.apply(
                                           color: ColorStyle.primaryWhite,
                                           fontWeightDelta: 1),
                                     ),
@@ -106,14 +106,14 @@ class NewBeneficiary extends StatelessWidget {
                                         Text(
                                           "November",
                                           // controller.listApplyLeave[index],
-                                          style: TextStyles.textStyles_10.apply(
+                                          style: TextStylesPoppins.textStyles_10.apply(
                                               color: ColorStyle.primaryWhite,
                                               fontWeightDelta: 1),
                                         ),
                                         Text(
                                           "Departing",
                                           // controller.listApplyLeave[index],
-                                          style: TextStyles.textStyles_10.apply(
+                                          style: TextStylesPoppins.textStyles_10.apply(
                                               color: ColorStyle.primaryWhite,
                                               fontWeightDelta: 1),
                                         ),
@@ -125,7 +125,7 @@ class NewBeneficiary extends StatelessWidget {
                                   children: [
                                     Text(
                                       "15",
-                                      style: TextStyles.textStyles_32.apply(
+                                      style: TextStylesPoppins.textStyles_32.apply(
                                           color: ColorStyle.primaryWhite,
                                           fontWeightDelta: 1),
                                     ),
@@ -139,14 +139,14 @@ class NewBeneficiary extends StatelessWidget {
                                         Text(
                                           "December",
                                           // controller.listApplyLeave[index],
-                                          style: TextStyles.textStyles_10.apply(
+                                          style: TextStylesPoppins.textStyles_10.apply(
                                               color: ColorStyle.primaryWhite,
                                               fontWeightDelta: 1),
                                         ),
                                         Text(
                                           "Arriving",
                                           // controller.listApplyLeave[index],
-                                          style: TextStyles.textStyles_10.apply(
+                                          style: TextStylesPoppins.textStyles_10.apply(
                                               color: ColorStyle.primaryWhite,
                                               fontWeightDelta: 1),
                                         ),
@@ -167,7 +167,7 @@ class NewBeneficiary extends StatelessWidget {
                         Text(
                           'Seychelles',
                           // controller.listApplyLeave[index],
-                          style: TextStyles.textStyles_14.apply(
+                          style: TextStylesPoppins.textStyles_14.apply(
                               fontWeightDelta: 2,
                               color: ColorStyle.secondryBlack),
                         ),
@@ -177,7 +177,7 @@ class NewBeneficiary extends StatelessWidget {
                         Text(
                           'When will you be away?',
                           // controller.listApplyLeave[index],
-                          style: TextStyles.textStyles_12
+                          style: TextStylesPoppins.textStyles_12
                               .apply(color: ColorStyle.secondryBlack),
                         ),
                         SizedBox(
@@ -186,7 +186,7 @@ class NewBeneficiary extends StatelessWidget {
                         Text(
                           'Departure Date',
                           // controller.listApplyLeave[index],
-                          style: TextStyles.textStyles_12.apply(
+                          style: TextStylesPoppins.textStyles_12.apply(
                               fontWeightDelta: 1,
                               color: ColorStyle.secondryBlack),
                         ),
@@ -206,7 +206,7 @@ class NewBeneficiary extends StatelessWidget {
                               Text(
                                 controller.departureDate.value,
                                 // controller.listApplyLeave[index],
-                                style: TextStyles.textStyles_14
+                                style: TextStylesPoppins.textStyles_14
                                     .apply(color: ColorStyle.secondryBlack),
                               ),
                             ],
@@ -221,7 +221,7 @@ class NewBeneficiary extends StatelessWidget {
                         Text(
                           'Return Date',
                           // controller.listApplyLeave[index],
-                          style: TextStyles.textStyles_12.apply(
+                          style: TextStylesPoppins.textStyles_12.apply(
                               fontWeightDelta: 1,
                               color: ColorStyle.secondryBlack),
                         ),
@@ -241,7 +241,7 @@ class NewBeneficiary extends StatelessWidget {
                               Text(
                                 controller.returnDate.value,
                                 // controller.listApplyLeave[index],
-                                style: TextStyles.textStyles_14
+                                style: TextStylesPoppins.textStyles_14
                                     .apply(color: ColorStyle.secondryBlack),
                               ),
                             ],
@@ -259,7 +259,7 @@ class NewBeneficiary extends StatelessWidget {
                             Expanded(
                                 child: ElevatedButtonCustom(
                                   text: 'Cancel',
-                                  textStyle: TextStyles.textStyles_14
+                                  textStyle: TextStylesPoppins.textStyles_14
                                       .apply(color: ColorStyle.blueSKY),
                                   colorBG: ColorStyle.primaryWhite,
                                   colorBorder: ColorStyle.blueSKY,
@@ -272,7 +272,7 @@ class NewBeneficiary extends StatelessWidget {
                             Expanded(
                                 child: ElevatedButtonCustom(
                                   text: 'Continue',
-                                  textStyle: TextStyles.textStyles_14
+                                  textStyle: TextStylesPoppins.textStyles_14
                                       .apply(color: ColorStyle.primaryWhite),
                                   colorBG: ColorStyle.darkestBlueSignUp,
                                   colorBorder: ColorStyle.darkestBlueSignUp,

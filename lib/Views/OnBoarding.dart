@@ -133,7 +133,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           'Transfer without borders to over 70+ Countries across the world',
                                           textAlign: TextAlign.center,
                                           maxLines: 3,
-                                          style: TextStyles.textStyles_24.apply(
+                                          style: TextStylesPoppins.textStyles_24.apply(
                                               color: ColorStyle.primaryWhite,
                                               fontWeightDelta: 2),
                                         ),
@@ -144,7 +144,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           'Sign up for a free AdvanceCapitalPay Personal or Business account in minutes',
                                           textAlign: TextAlign.center,
                                           maxLines: 2,
-                                          style: TextStyles.textStyles_14.apply(
+                                          style: TextStylesPoppins.textStyles_14.apply(
                                             color: ColorStyle.primaryWhite,
                                             // fontWeightDelta: 2
                                           ),
@@ -179,7 +179,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                     'Up to 10x Cheaper than most banks with leading market rates',
                                     textAlign: TextAlign.center,
                                     maxLines: 2,
-                                    style: TextStyles.textStyles_14.apply(
+                                    style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.primaryWhite,
                                       // fontWeightDelta: 2
                                     ),
@@ -189,7 +189,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                   child: AutoSizeText('Multi-Currency Accounts',
                                       textAlign: TextAlign.center,
                                       maxLines: 1,
-                                      style: TextStyles.textStyles_24.apply(
+                                      style: TextStylesPoppins.textStyles_24.apply(
                                           color: ColorStyle.primaryWhite,
                                           fontWeightDelta: 1)),
                                 ),
@@ -212,7 +212,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                     'Securely buy, convert and send cryptocurrencies such as Bitcoin, Etherum and USDT',
                                     textAlign: TextAlign.center,
                                     maxLines: 3,
-                                    style: TextStyles.textStyles_14.apply(
+                                    style: TextStylesPoppins.textStyles_14.apply(
                                       color: ColorStyle.primaryWhite,
                                       // fontWeightDelta: 2
                                     ),
@@ -231,7 +231,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                             'Access to Cryptocurrencies',
                                             textAlign: TextAlign.center,
                                             maxLines: 1,
-                                            style: TextStyles.textStyles_24
+                                            style: TextStylesPoppins.textStyles_24
                                                 .apply(
                                                     color:
                                                         ColorStyle.primaryWhite,
@@ -249,7 +249,7 @@ class _OnBoardingState extends State<OnBoarding> {
                               text: 'GET STARTED NOW',
                               colorBG: ColorStyle.blueSKY,
                               width: 210,
-                              textStyle: TextStyles.textStyles_16
+                              textStyle: TextStylesPoppins.textStyles_16
                                   .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                               onTap: () {
                                 Get.to(SignIn());
@@ -263,7 +263,7 @@ class _OnBoardingState extends State<OnBoarding> {
                               children: [
                                 Text(
                                   'I already have an account',
-                                  style: TextStyles.textStyles_12
+                                  style: TextStylesPoppins.textStyles_12
                                       .apply(color: ColorStyle.primaryWhite),
                                 ),
                                 Icon(

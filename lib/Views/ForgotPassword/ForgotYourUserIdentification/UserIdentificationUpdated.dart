@@ -26,7 +26,7 @@ class UserIdentificationUpdated extends StatelessWidget {
           ),
           Text(
             title,
-            style: TextStyles.textStyles_16.apply(
+            style: TextStylesPoppins.textStyles_16.apply(
               color: ColorStyle.secondryBlack,
               fontWeightDelta: 1,
             ),
@@ -37,7 +37,7 @@ class UserIdentificationUpdated extends StatelessWidget {
           TextFieldCustom(
             colorBoder: ColorStyle.secondryBlack,
             hintText: hintText,
-            textStyle: TextStyles.textStyles_14,
+            textStyle: TextStylesPoppins.textStyles_14,
             radiusBorder: 30,
           ),
         ],
@@ -48,7 +48,7 @@ class UserIdentificationUpdated extends StatelessWidget {
       return Text(
         'User Identification Successfully Updated',
         textAlign: TextAlign.center,
-        style: TextStyles.textStyles_20.apply(
+        style: TextStylesPoppins.textStyles_20.apply(
           color: ColorStyle.secondryBlack,
           fontWeightDelta: 2,
         ),
@@ -61,7 +61,7 @@ class UserIdentificationUpdated extends StatelessWidget {
         colorBG: ColorStyle.blueSKY,
         text: 'Login Screen',
         radiusBorder: 30,
-        textStyle: TextStyles.textStyles_14
+        textStyle: TextStylesPoppins.textStyles_14
             .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
         onTap: () {
           controller.isIdentifiy.value = true;
@@ -72,7 +72,7 @@ class UserIdentificationUpdated extends StatelessWidget {
     txtDescription() {
       return Text(
         'Your password has been updated successfully. You can now login using your new password. If you encounter any problems please feel free to speak with one of our Customer Support Representatives.',
-        style: TextStyles.textStyles_12
+        style: TextStylesPoppins.textStyles_12
             .apply(color: ColorStyle.secondryBlack, fontWeightDelta: 1),
       );
     }
@@ -99,7 +99,7 @@ class UserIdentificationUpdated extends StatelessWidget {
           Expanded(
             child: Text(
               'Dear Customer, you have successfully completed the User Identification Recovery and your User ID has been generated below.',
-              style: TextStyles.textStyles_12.apply(
+              style: TextStylesPoppins.textStyles_12.apply(
                 color: ColorStyle.darkestBlue,
                 fontWeightDelta: 1,
               ),
@@ -127,7 +127,7 @@ class UserIdentificationUpdated extends StatelessWidget {
                       Text(
                         'User Identification Details',
                         // textAlign: TextAlign.center,
-                        style: TextStyles.textStyles_20.apply(
+                        style: TextStylesPoppins.textStyles_20.apply(
                           color: ColorStyle.primaryWhite,
                           fontWeightDelta: 1,
                         ),
@@ -172,7 +172,7 @@ class UserIdentificationUpdated extends StatelessWidget {
                             if (controller.isIdentifiy.value)
                             Text(
                               'HarrisonSmith1948@gmail.com',
-                              style: TextStyles.textStyles_16.apply(
+                              style: TextStylesPoppins.textStyles_16.apply(
                                 color: ColorStyle.secondryBlack,
                                 fontWeightDelta: 2,
                               ),

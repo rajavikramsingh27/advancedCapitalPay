@@ -9,7 +9,7 @@ import '../../Styles/ColorStyle.dart';
 import '../../Styles/EffectStyle.dart';
 import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
-import '../SignUp/ComponentsSignUp.dart';
+import '../../Components/ComponentsSignUp.dart';
 import '../SignUp/EffectStyleSignUp.dart';
 
 class BusinessApplication1 extends StatelessWidget {
@@ -54,7 +54,7 @@ class BusinessApplication1 extends StatelessWidget {
                           Container(
                               child: Text(
                                 'ACFVC8JTJ',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.primaryWhite,
                                   fontWeightDelta: 1,
                                 ),
@@ -74,7 +74,7 @@ class BusinessApplication1 extends StatelessWidget {
                               children: [
                                 Text(
                                   'Business Profile',
-                                  style: TextStyles.textStyles_20.apply(
+                                  style: TextStylesPoppins.textStyles_20.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -84,7 +84,7 @@ class BusinessApplication1 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Enter the data requires in sections below to complete your Business Profile.',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -94,7 +94,7 @@ class BusinessApplication1 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Legal Company name',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -108,7 +108,7 @@ class BusinessApplication1 extends StatelessWidget {
                                     border: OutlineInputBorder(),
                                     labelText:
                                         'The name provided must exactly match t',
-                                    labelStyle: TextStyles.textStyles_14.apply(
+                                    labelStyle: TextStylesPoppins.textStyles_14.apply(
                                       color: Colors.grey,
                                       fontWeightDelta: 1,
                                     ),
@@ -119,7 +119,7 @@ class BusinessApplication1 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Which currencies will you plan on exchanging to',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -143,7 +143,7 @@ class BusinessApplication1 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Year of Incorporation',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -157,7 +157,7 @@ class BusinessApplication1 extends StatelessWidget {
                                     border: OutlineInputBorder(),
                                     labelText:
                                         'Please enter year of incorporation',
-                                    labelStyle: TextStyles.textStyles_14.apply(
+                                    labelStyle: TextStylesPoppins.textStyles_14.apply(
                                       color: Colors.grey,
                                       fontWeightDelta: 1,
                                     ),
@@ -168,7 +168,7 @@ class BusinessApplication1 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Legal Status',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -189,7 +189,7 @@ class BusinessApplication1 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Company Registration Number',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -203,7 +203,7 @@ class BusinessApplication1 extends StatelessWidget {
                                     border: OutlineInputBorder(),
                                     labelText:
                                         'Please enter your company registration n',
-                                    labelStyle: TextStyles.textStyles_14.apply(
+                                    labelStyle: TextStylesPoppins.textStyles_14.apply(
                                       color: Colors.grey,
                                       fontWeightDelta: 1,
                                     ),
@@ -214,7 +214,7 @@ class BusinessApplication1 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Nature of Business',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -228,7 +228,7 @@ class BusinessApplication1 extends StatelessWidget {
                                     border: OutlineInputBorder(),
                                     labelText:
                                         'Provide a detailed explanation of the Nature of your business',
-                                    labelStyle: TextStyles.textStyles_14.apply(
+                                    labelStyle: TextStylesPoppins.textStyles_14.apply(
                                       color: Colors.grey,
                                       fontWeightDelta: 1,
                                     ),
@@ -239,7 +239,7 @@ class BusinessApplication1 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Business Telephone Number',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -263,7 +263,7 @@ class BusinessApplication1 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Additionam Telephone Number ( if Applcable)',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -292,7 +292,7 @@ class BusinessApplication1 extends StatelessWidget {
                                           labelText:
                                               'please enter your personal email',
                                           labelStyle:
-                                              TextStyles.textStyles_14.apply(
+                                              TextStylesPoppins.textStyles_14.apply(
                                             color: Colors.grey,
                                             fontWeightDelta: 1,
                                           ),
@@ -328,7 +328,7 @@ class BusinessApplication1 extends StatelessWidget {
                                           labelText:
                                               'please enter your personal email',
                                           labelStyle:
-                                              TextStyles.textStyles_14.apply(
+                                              TextStylesPoppins.textStyles_14.apply(
                                             color: Colors.grey,
                                             fontWeightDelta: 1,
                                           ),
@@ -356,7 +356,7 @@ class BusinessApplication1 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Regulatory body (Non-Compulstory)',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -370,7 +370,7 @@ class BusinessApplication1 extends StatelessWidget {
                                     border: OutlineInputBorder(),
                                     labelText:
                                         'if application, provide details of your compa',
-                                    labelStyle: TextStyles.textStyles_14.apply(
+                                    labelStyle: TextStylesPoppins.textStyles_14.apply(
                                       color: Colors.grey,
                                       fontWeightDelta: 1,
                                     ),
@@ -381,7 +381,7 @@ class BusinessApplication1 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Registration Number with Regulatory (Non-Compulstory)',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -395,7 +395,7 @@ class BusinessApplication1 extends StatelessWidget {
                                     border: OutlineInputBorder(),
                                     labelText:
                                         'if application, provide details of your compa',
-                                    labelStyle: TextStyles.textStyles_14.apply(
+                                    labelStyle: TextStylesPoppins.textStyles_14.apply(
                                       color: Colors.grey,
                                       fontWeightDelta: 1,
                                     ),
@@ -406,7 +406,7 @@ class BusinessApplication1 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Business E-Mail Address',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -424,7 +424,7 @@ class BusinessApplication1 extends StatelessWidget {
                                           labelText:
                                               'please enter your phone E-mail address',
                                           labelStyle:
-                                              TextStyles.textStyles_14.apply(
+                                              TextStylesPoppins.textStyles_14.apply(
                                             color: Colors.grey,
                                             fontWeightDelta: 1,
                                           ),
@@ -460,7 +460,7 @@ class BusinessApplication1 extends StatelessWidget {
                                     ),
                                     Text(
                                       'Add an additional Business Email Address',
-                                      style: TextStyles.textStyles_12.apply(
+                                      style: TextStylesPoppins.textStyles_12.apply(
                                         color: ColorStyle.darkestBlueSignUp,
                                         fontWeightDelta: 1,
                                       ),
@@ -472,7 +472,7 @@ class BusinessApplication1 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Business E-Mail Address',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -490,7 +490,7 @@ class BusinessApplication1 extends StatelessWidget {
                                           labelText:
                                               'please enter your phone E-mail address',
                                           labelStyle:
-                                              TextStyles.textStyles_14.apply(
+                                              TextStylesPoppins.textStyles_14.apply(
                                             color: Colors.grey,
                                             fontWeightDelta: 1,
                                           ),
@@ -526,7 +526,7 @@ class BusinessApplication1 extends StatelessWidget {
                                     ),
                                     Text(
                                       'Add an additional Fax Number',
-                                      style: TextStyles.textStyles_12.apply(
+                                      style: TextStylesPoppins.textStyles_12.apply(
                                         color: ColorStyle.darkestBlueSignUp,
                                         fontWeightDelta: 1,
                                       ),
@@ -538,7 +538,7 @@ class BusinessApplication1 extends StatelessWidget {
                                 ),
                                 Text(
                                   'Website Address Starting with http://',
-                                  style: TextStyles.textStyles_14.apply(
+                                  style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
                                     fontWeightDelta: 1,
                                   ),
@@ -556,7 +556,7 @@ class BusinessApplication1 extends StatelessWidget {
                                           labelText:
                                               'Enter business website in the format of htt',
                                           labelStyle:
-                                              TextStyles.textStyles_14.apply(
+                                              TextStylesPoppins.textStyles_14.apply(
                                             color: Colors.grey,
                                             fontWeightDelta: 1,
                                           ),

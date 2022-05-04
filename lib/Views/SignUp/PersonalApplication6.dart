@@ -37,7 +37,7 @@ class PersonalApplication6 {
                     ),
                     Text(
                       'Company director or Shareholder',
-                      style: TextStyles.textStyles_16.apply(
+                      style: TextStylesPoppins.textStyles_16.apply(
                         color: ColorStyle.secondryBlack,
                         fontWeightDelta: 1,
                       ),
@@ -61,7 +61,7 @@ class PersonalApplication6 {
                         ),
                         Text(
                           'Company director',
-                          style: TextStyles.textStyles_12.apply(
+                          style: TextStylesPoppins.textStyles_12.apply(
                             color: ColorStyle.secondryBlack,
                             fontWeightDelta: 1,
                           ),
@@ -86,7 +86,7 @@ class PersonalApplication6 {
                         ),
                         Text(
                           'Shareholder (10% or more)',
-                          style: TextStyles.textStyles_12.apply(
+                          style: TextStylesPoppins.textStyles_12.apply(
                             color: ColorStyle.secondryBlack,
                             fontWeightDelta: 1,
                           ),
@@ -116,7 +116,7 @@ class PersonalApplication6 {
                         ),
                         Text(
                           'Authorized Signature',
-                          style: TextStyles.textStyles_12.apply(
+                          style: TextStylesPoppins.textStyles_12.apply(
                             color: ColorStyle.secondryBlack,
                             fontWeightDelta: 1,
                           ),
@@ -128,7 +128,7 @@ class PersonalApplication6 {
                     ),
                     Text(
                       'Your Name',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.secondryBlack,
                         fontWeightDelta: 1,
                       ),
@@ -150,7 +150,7 @@ class PersonalApplication6 {
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Test',
-                        labelStyle: TextStyles.textStyles_14.apply(
+                        labelStyle: TextStylesPoppins.textStyles_14.apply(
                           color: Colors.grey,
                           fontWeightDelta: 1,
                         ),
@@ -164,7 +164,7 @@ class PersonalApplication6 {
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Test',
-                        labelStyle: TextStyles.textStyles_14.apply(
+                        labelStyle: TextStylesPoppins.textStyles_14.apply(
                           color: Colors.grey,
                           fontWeightDelta: 1,
                         ),
@@ -178,7 +178,7 @@ class PersonalApplication6 {
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Test',
-                        labelStyle: TextStyles.textStyles_14.apply(
+                        labelStyle: TextStylesPoppins.textStyles_14.apply(
                           color: Colors.grey,
                           fontWeightDelta: 1,
                         ),
@@ -189,7 +189,7 @@ class PersonalApplication6 {
                     ),
                     Text(
                       'Country of Birth',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.secondryBlack,
                         fontWeightDelta: 1,
                       ),
@@ -308,7 +308,7 @@ class PersonalApplication6 {
                     ),
                     Text(
                       'Nationality',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.secondryBlack,
                         fontWeightDelta: 1,
                       ),
@@ -322,7 +322,7 @@ class PersonalApplication6 {
                     ),
                     Text(
                       'Email Address',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.secondryBlack,
                         fontWeightDelta: 1,
                       ),
@@ -335,7 +335,7 @@ class PersonalApplication6 {
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: '1223@test.com',
-                        labelStyle: TextStyles.textStyles_14.apply(
+                        labelStyle: TextStylesPoppins.textStyles_14.apply(
                           color: Colors.grey,
                           fontWeightDelta: 1,
                         ),
@@ -346,7 +346,7 @@ class PersonalApplication6 {
                     ),
                     Text(
                       'Company Role',
-                      style: TextStyles.textStyles_14.apply(
+                      style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.secondryBlack,
                         fontWeightDelta: 1,
                       ),
@@ -359,7 +359,7 @@ class PersonalApplication6 {
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Test',
-                        labelStyle: TextStyles.textStyles_14.apply(
+                        labelStyle: TextStylesPoppins.textStyles_14.apply(
                           color: Colors.grey,
                           fontWeightDelta: 1,
                         ),
@@ -380,7 +380,7 @@ class PersonalApplication6 {
                           disabledBorder: InputBorder.none,
 
                           // hintText:  'Test',
-                          labelStyle: TextStyles.textStyles_14.apply(
+                          labelStyle: TextStylesPoppins.textStyles_14.apply(
                             color: Colors.grey,
                             fontWeightDelta: 1,
                           ),
@@ -400,7 +400,7 @@ class PersonalApplication6 {
                             colorBG: ColorStyle.hex('#353A40'),
                             radiusBorder: 0,
                             colorBorder: ColorStyle.secondryBlack,
-                            textStyle: TextStyles.textStyles_16.apply(
+                            textStyle: TextStylesPoppins.textStyles_16.apply(
                                 color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                             onTap: () {
                               Get.back();
@@ -429,7 +429,7 @@ class PersonalApplication6 {
                             colorBG: ColorStyle.darkestBlueSignUp,
                             radiusBorder: 0,
                             colorBorder: ColorStyle.secondryBlack,
-                            textStyle: TextStyles.textStyles_16.apply(
+                            textStyle: TextStylesPoppins.textStyles_16.apply(
                                 color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                             onTap: () {
                               Get.back();

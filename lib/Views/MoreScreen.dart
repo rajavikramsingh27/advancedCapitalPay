@@ -10,7 +10,7 @@ class MoreScreen {
   static moreScreen() {
     final controller = Get.put(MoreScreenController());
 
-    return Get.dialog(
+    return Get.bottomSheet(
       Material(
           color: Colors.transparent,
           child: Container(
@@ -28,13 +28,13 @@ class MoreScreen {
                     return Obx(() => Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        IconButton(
-                          icon: Icon(Icons.cancel, size: 36, color: Colors.red,),
-                          onPressed: () {
-                            Get.back();
-                          },
-                        ),
-                        SizedBox(height: 40,),
+                        // IconButton(
+                        //   icon: Icon(Icons.cancel, size: 36, color: Colors.red,),
+                        //   onPressed: () {
+                        //     Get.back();
+                        //   },
+                        // ),
+                        // SizedBox(height: 40,),
                         ListView.separated(
                             shrinkWrap: true,
                             itemCount: controller.arrMoreTitle.length,
@@ -69,7 +69,7 @@ class MoreScreen {
                                         ),
                                         Text(
                                           controller.arrMoreTitle[index],
-                                          style: TextStyles.textStyles_14.apply(
+                                          style: TextStylesPoppins.textStyles_14.apply(
                                               color: ColorStyle.hex('#0066FF'),
                                               fontWeightDelta: 0),
                                         ),
@@ -86,7 +86,9 @@ class MoreScreen {
               ),
           )
       ),
-      barrierDismissible: false,
+      // isScrollControlled: true,
+      isDismissible: true,
+      // enableDrag: true,
     );
   }
 }

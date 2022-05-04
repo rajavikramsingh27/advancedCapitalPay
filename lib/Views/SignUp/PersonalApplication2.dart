@@ -10,7 +10,7 @@ import '../../Styles/EffectStyle.dart';
 import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../SignUp/EffectStyleSignUp.dart';
-import '../SignUp/ComponentsSignUp.dart';
+import '../../Components/ComponentsSignUp.dart';
 import '../../Components/CountryPicker.dart';
 
 
@@ -56,7 +56,7 @@ class PersonalApplication2 extends StatelessWidget {
                         Container(
                           child: Text(
                             'ACFVC8JTJ',
-                            style: TextStyles.textStyles_14.apply(
+                            style: TextStylesPoppins.textStyles_14.apply(
                               color: ColorStyle.primaryWhite,
                               fontWeightDelta: 1,
                             ),
@@ -89,7 +89,7 @@ class PersonalApplication2 extends StatelessWidget {
                                     'process simply click the Live Help Button '
                                     'where one of our Customer Support Representatives '
                                     'will be happy to assist you with any queries',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -99,7 +99,7 @@ class PersonalApplication2 extends StatelessWidget {
                               ),
                               Text(
                                 'Residential Address',
-                                style: TextStyles.textStyles_24.apply(
+                                style: TextStylesPoppins.textStyles_24.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -111,7 +111,7 @@ class PersonalApplication2 extends StatelessWidget {
 
                               Text(
                                 'Country',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -127,7 +127,7 @@ class PersonalApplication2 extends StatelessWidget {
                               ),
                               Text(
                                 'Address Line 1',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -140,7 +140,7 @@ class PersonalApplication2 extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   // labelText: 'Last Name',
-                                  labelStyle: TextStyles.textStyles_14.apply(
+                                  labelStyle: TextStylesPoppins.textStyles_14.apply(
                                     color: Colors.grey,
                                     fontWeightDelta: 1,
                                   ),
@@ -151,7 +151,7 @@ class PersonalApplication2 extends StatelessWidget {
                               ),
                               Text(
                                 'Address Line 2',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -164,7 +164,7 @@ class PersonalApplication2 extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   // labelText: 'Last Name',
-                                  labelStyle: TextStyles.textStyles_14.apply(
+                                  labelStyle: TextStylesPoppins.textStyles_14.apply(
                                     color: Colors.grey,
                                     fontWeightDelta: 1,
                                   ),
@@ -175,7 +175,7 @@ class PersonalApplication2 extends StatelessWidget {
                               ),
                               Text(
                                 'City',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -188,7 +188,7 @@ class PersonalApplication2 extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   // labelText: 'Last Name',
-                                  labelStyle: TextStyles.textStyles_14.apply(
+                                  labelStyle: TextStylesPoppins.textStyles_14.apply(
                                     color: Colors.grey,
                                     fontWeightDelta: 1,
                                   ),
@@ -199,7 +199,7 @@ class PersonalApplication2 extends StatelessWidget {
                               ),
                               Text(
                                 'Country / State / Provine (Optional)',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -212,7 +212,7 @@ class PersonalApplication2 extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   // labelText: 'Last Name',
-                                  labelStyle: TextStyles.textStyles_14.apply(
+                                  labelStyle: TextStylesPoppins.textStyles_14.apply(
                                     color: Colors.grey,
                                     fontWeightDelta: 1,
                                   ),
@@ -223,7 +223,7 @@ class PersonalApplication2 extends StatelessWidget {
                               ),
                               Text(
                                 'Post Zip Code',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -236,7 +236,7 @@ class PersonalApplication2 extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   // labelText: 'Last Name',
-                                  labelStyle: TextStyles.textStyles_14.apply(
+                                  labelStyle: TextStylesPoppins.textStyles_14.apply(
                                     color: Colors.grey,
                                     fontWeightDelta: 1,
                                   ),
@@ -261,7 +261,7 @@ class PersonalApplication2 extends StatelessWidget {
                                  SizedBox(width: 10,),
                                  Expanded(child: Text(
                                    'My Correspondence Address is name as my residetinal address',
-                                   style: TextStyles.textStyles_14.apply(
+                                   style: TextStylesPoppins.textStyles_14.apply(
                                      color: ColorStyle.secondryBlack,
                                      fontWeightDelta: 1,
                                    ),
@@ -273,7 +273,7 @@ class PersonalApplication2 extends StatelessWidget {
                               ),
                               Text(
                                 'Correspondence Address',
-                                style: TextStyles.textStyles_20.apply(
+                                style: TextStylesPoppins.textStyles_20.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -287,7 +287,7 @@ class PersonalApplication2 extends StatelessWidget {
                               ),
                               Text(
                                 'Address Line 1',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -300,7 +300,7 @@ class PersonalApplication2 extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   // labelText: 'Last Name',
-                                  labelStyle: TextStyles.textStyles_14.apply(
+                                  labelStyle: TextStylesPoppins.textStyles_14.apply(
                                     color: Colors.grey,
                                     fontWeightDelta: 1,
                                   ),
@@ -311,7 +311,7 @@ class PersonalApplication2 extends StatelessWidget {
                               ),
                               Text(
                                 'Address Line 2',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -324,7 +324,7 @@ class PersonalApplication2 extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   // labelText: 'Last Name',
-                                  labelStyle: TextStyles.textStyles_14.apply(
+                                  labelStyle: TextStylesPoppins.textStyles_14.apply(
                                     color: Colors.grey,
                                     fontWeightDelta: 1,
                                   ),
@@ -335,7 +335,7 @@ class PersonalApplication2 extends StatelessWidget {
                               ),
                               Text(
                                 'City',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -348,7 +348,7 @@ class PersonalApplication2 extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   // labelText: 'Last Name',
-                                  labelStyle: TextStyles.textStyles_14.apply(
+                                  labelStyle: TextStylesPoppins.textStyles_14.apply(
                                     color: Colors.grey,
                                     fontWeightDelta: 1,
                                   ),
@@ -359,7 +359,7 @@ class PersonalApplication2 extends StatelessWidget {
                               ),
                               Text(
                                 'Country / State / Provine (Optional)',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -372,7 +372,7 @@ class PersonalApplication2 extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   // labelText: 'Last Name',
-                                  labelStyle: TextStyles.textStyles_14.apply(
+                                  labelStyle: TextStylesPoppins.textStyles_14.apply(
                                     color: Colors.grey,
                                     fontWeightDelta: 1,
                                   ),
@@ -383,7 +383,7 @@ class PersonalApplication2 extends StatelessWidget {
                               ),
                               Text(
                                 'Post Zip Code',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),
@@ -396,7 +396,7 @@ class PersonalApplication2 extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   // labelText: 'Last Name',
-                                  labelStyle: TextStyles.textStyles_14.apply(
+                                  labelStyle: TextStylesPoppins.textStyles_14.apply(
                                     color: Colors.grey,
                                     fontWeightDelta: 1,
                                   ),
@@ -407,7 +407,7 @@ class PersonalApplication2 extends StatelessWidget {
                               ),
                               Text(
                                 'Country',
-                                style: TextStyles.textStyles_14.apply(
+                                style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.secondryBlack,
                                   fontWeightDelta: 1,
                                 ),

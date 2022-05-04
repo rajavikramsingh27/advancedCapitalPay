@@ -43,9 +43,9 @@ class NotificationSettingsDetails extends StatelessWidget {
                   leadingImage: ImageStyle.ellipse2,
                   nameUser: 'HARRISON SMITH',
                   descriptionUser: 'Your Personal Settings',
-                  nameStyle: TextStyles.textStyles_18.apply(
+                  nameStyle: TextStylesPoppins.textStyles_18.apply(
                       color: ColorStyle.primaryWhite, fontWeightDelta: 1),
-                  descriptionStyle: TextStyles.textStyles_12
+                  descriptionStyle: TextStylesPoppins.textStyles_12
                       .apply(color: ColorStyle.primaryWhite),
                   trailingAction: [
                     IconButton(
@@ -86,7 +86,7 @@ class NotificationSettingsDetails extends StatelessWidget {
                 ),
                 Text(
                   titleNotifications!,
-                  style: TextStyles.textStyles_16.apply(
+                  style: TextStylesPoppins.textStyles_16.apply(
                       color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                 ),
                 SizedBox(
