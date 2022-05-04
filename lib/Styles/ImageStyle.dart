@@ -267,11 +267,24 @@ class ImageStyle {
       "$baseImage/bgTransactionListCripto.png";
   static const String cryptoBG1 = "$baseImage/cryptoBG1.png";
   static const String bgGradientCryto = "$baseImage/bgGradientCryto.png";
+
   static const String crypto123 = "$baseImage/crypto123.png";
   static const String myFullPortfolio = "$baseImage/myFullPortfolio.png";
   static const String group_2222 = "$baseImage/Group 2222.png";
   static const String graphCrypto = "$baseImage/graphCrypto.png";
   static const String qrCode = "$baseImage/qrCode.png";
+
+  static const String emojionelagforuoutlyingislands = "$baseImage/emojione_flag-for-us-outlying-islands.png";
+  static const String Icon = "$baseImage/Icon.png";
+  static const String Vector78 = "$baseImage/Vector78.png";
+  static const String copy = "$baseImage/copy.png";
+  static const String Vector4 = "$baseImage/Vector-4.png";
+  static const String biqrcodescan = "$baseImage/bi_qr-code-scan.png";
+  static const String Vector6 = "$baseImage/Vector-6.png";
+  static const String Path122 = "$baseImage/Path122.png";
+  static const String Group221 = "$baseImage/Group221.png";
+  static const String tiardschulzb8dA3eY5VrYunsplash = "$baseImage/tiard-schulz-b8dA3eY5VrY-unsplash.png";
+  static const String Path3425 = "$baseImage/Path3425.png";
 
   static const String eth = "$baseImage/eth.png";
   static const String shared = "$baseImage/shared.png";

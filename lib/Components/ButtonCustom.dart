@@ -1,3 +1,4 @@
+import 'package:advanced_capital_pay/Views/CryptoDashboard.dart';
 import 'package:flutter/material.dart';
 import '../Styles/TextStyles.dart';
 import '../Styles/ImageStyle.dart';
@@ -141,7 +142,206 @@ class GradientButtonWithArrow extends StatelessWidget {
         onTap: onTap);
   }
 }
+class GradientButtonWithSendBitcoins  extends StatelessWidget {
+  final double? width;
+  final double? height;
+  final String? imageName;
+  final String? text;
+  final Function()? onTap;
+  final IconData? icon;
 
+  const GradientButtonWithSendBitcoins(
+      {Key? key,
+        this.width = 200,
+        this.height = 50,
+        this.imageName = ImageStyle.gradientSignIn,
+        this.text = "GradientButtonSkyColor",
+        this.onTap,
+        this.icon})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+        child: Container(
+          width: width,
+          height: height,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+                color: ColorStyle.hex('#AED1EB').withOpacity(0.8),
+            borderRadius: BorderRadius.circular(10)
+          ),
+          child:    Text(
+            text!,
+            style: TextStylesPoppins.textStyles_16.apply(
+              color: ColorStyle.primaryWhite,
+              fontWeightDelta: 1
+            ),
+          ),
+        ),
+        onTap: onTap);
+  }
+}
+class GradientButtonWithSendBitcoin  extends StatelessWidget {
+  final double? width;
+  final double? height;
+  final String? imageName;
+  final String? text;
+  final Function()? onTap;
+  final IconData? icon;
+
+  const GradientButtonWithSendBitcoin(
+      {Key? key,
+        this.width = 200,
+        this.height = 50,
+        this.imageName = ImageStyle.gradientSignIn,
+        this.text = "GradientButtonSkyColor",
+        this.onTap,
+        this.icon})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+        child: Container(
+          width: width,
+          height: height,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: ColorStyle.hex('#EFDE64').withOpacity(0.8),
+              borderRadius: BorderRadius.circular(10)
+          ),
+          child:    Text(
+            text!,
+            style: TextStylesPoppins.textStyles_16.apply(
+                color: ColorStyle.secondryBlack,
+                fontWeightDelta: 1
+            ),
+          ),
+        ),
+        onTap: onTap);
+  }
+}
+class GradientButtonWithSendBitcoinn  extends StatelessWidget {
+  final double? width;
+  final double? height;
+  final String? imageName;
+  final String? text;
+  final Function()? onTap;
+  final IconData? icon;
+
+  const GradientButtonWithSendBitcoinn(
+      {Key? key,
+        this.width = 200,
+        this.height = 50,
+        this.imageName = ImageStyle.gradientSignIn,
+        this.text = "GradientButtonSkyColor",
+        this.onTap,
+        this.icon})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+        child: Container(
+          width: width,
+          height: height,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: ColorStyle.hex('#EFDE64').withOpacity(0.2),
+              borderRadius: BorderRadius.circular(10)
+          ),
+          child:    Text(
+            text!,
+            style: TextStylesPoppins.textStyles_16.apply(
+                color: ColorStyle.secondryBlack,
+                fontWeightDelta: 1
+            ),
+          ),
+        ),
+        onTap: onTap);
+  }
+}
+class GradientButtonWithSendsBitcoinn  extends StatelessWidget {
+  final double? width;
+  final double? height;
+  final String? imageName;
+  final String? text;
+  final Function()? onTap;
+  final IconData? icon;
+
+  const GradientButtonWithSendsBitcoinn(
+      {Key? key,
+        this.width = 200,
+        this.height = 50,
+        this.imageName = ImageStyle.gradientSignIn,
+        this.text = "GradientButtonSkyColor",
+        this.onTap,
+        this.icon})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+        child: Container(
+          width: width,
+          height: height,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: ColorStyle.hex('#EFDE64').withOpacity(0.6),
+              borderRadius: BorderRadius.circular(10)
+          ),
+          child:    Text(
+            text!,
+            style: TextStylesPoppins.textStyles_14.apply(
+                color: ColorStyle.secondryBlack,
+                fontWeightDelta: 1
+            ),
+          ),
+        ),
+        onTap: onTap);
+  }
+}
+class OrdersButtonIsClickedButton  extends StatelessWidget {
+  final double? width;
+  final double? height;
+  final String? imageName;
+  final String? text;
+  final Function()? onTap;
+  final IconData? icon;
+
+  const OrdersButtonIsClickedButton(
+      {Key? key,
+        this.width = 355,
+        this.height = 50,
+        this.imageName = ImageStyle.gradientSignIn,
+        this.text = "GradientButtonSkyColor",
+        this.onTap,
+        this.icon})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+        child: Container(
+          width: width,
+          height: height,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: ColorStyle.green.withOpacity(.3),
+              borderRadius: BorderRadius.circular(40)
+          ),
+          child:    Text(
+            text!,
+            style: TextStylesPoppins.textStyles_14.apply(
+                color: ColorStyle.primaryWhite,
+                fontWeightDelta: 1
+            ),
+          ),
+        ),
+        onTap: onTap);
+  }
+}
 class GradientButtonWith extends StatelessWidget {
   final double? width;
   final double? height;
@@ -204,7 +404,6 @@ class GradientButtonWith extends StatelessWidget {
     );
   }
 }
-
 class GradientButtonWithBank extends StatelessWidget {
   final double? width;
   final double? height;
@@ -277,7 +476,6 @@ class GradientButtonWithBank extends StatelessWidget {
     );
   }
 }
-
 class GradientButtonWithBanks extends StatelessWidget {
   final double? width;
   final double? height;
@@ -350,7 +548,6 @@ class GradientButtonWithBanks extends StatelessWidget {
     );
   }
 }
-
 class GradientButtonWithMassage extends StatelessWidget {
   final double? width;
   final double? height;
@@ -423,7 +620,6 @@ class GradientButtonWithMassage extends StatelessWidget {
     );
   }
 }
-
 class GradientButtonWithContinue extends StatelessWidget {
   final double? width;
   final double? height;
@@ -461,7 +657,6 @@ class GradientButtonWithContinue extends StatelessWidget {
         onTap: onTap);
   }
 }
-
 class ButtonContinueCancel extends StatelessWidget {
   final String? textFirst;
   final Color? colorBGFirst;

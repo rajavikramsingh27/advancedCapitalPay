@@ -122,756 +122,756 @@ class CryptoDashboard extends StatelessWidget {
                 },
                 builder: (authController) {
                   return Obx(() => SingleChildScrollView(
-                        // padding: EdgeInsets.only(left: 24,right: 24),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                    // padding: EdgeInsets.only(left: 24,right: 24),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SizedBox(
-                              height: 20,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "TOTAL CRYPTO BALANCE",
-                                  style: TextStylesSFCompactDisplay
-                                      .textStyles_12
-                                      .apply(
-                                          color: ColorStyle.whiteDuskyCrypto,
-                                          fontWeightDelta: 1),
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Icon(
-                                  Icons.remove_red_eye_outlined,
+                            Text(
+                              "TOTAL CRYPTO BALANCE",
+                              style: TextStylesSFCompactDisplay
+                                  .textStyles_12
+                                  .apply(
                                   color: ColorStyle.whiteDuskyCrypto,
-                                  size: 16,
-                                )
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "\$ ",
-                                  style: TextStylesSFCompactDisplay
-                                      .textStyles_26
-                                      .apply(
-                                    color: ColorStyle.whiteDuskyCrypto,
-                                  ),
-                                ),
-                                Text(
-                                  "21,048.13",
-                                  style: TextStylesSFCompactDisplay
-                                      .textStyles_32
-                                      .apply(
-                                    color: ColorStyle.primaryWhite,
-                                    // fontWeightDelta: 1
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 6,
-                                ),
-                                Text(
-                                  "USD",
-                                  style: TextStylesSFCompactDisplay
-                                      .textStyles_20
-                                      .apply(
-                                    color: ColorStyle.whiteDuskyCrypto,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "+7.47%",
-                                  style: TextStylesSFCompactDisplay
-                                      .textStyles_13
-                                      .apply(
-                                    color: ColorStyle.greenDuskyCrypto,
-                                  ),
-                                ),
-                                Text(
-                                  "|",
-                                  style: TextStylesSFCompactDisplay
-                                      .textStyles_15
-                                      .apply(
-                                          color: ColorStyle.grey,
-                                          fontWeightDelta: 0),
-                                ),
-                                Text(
-                                  "+\$2,414.62",
-                                  style: TextStylesSFCompactDisplay
-                                      .textStyles_12
-                                      .apply(
-                                    color: ColorStyle.greenDuskyCrypto,
-                                  ),
-                                ),
-                              ],
+                                  fontWeightDelta: 1),
                             ),
                             SizedBox(
-                              height: 20,
+                              width: 10,
                             ),
-                            Container(
-                              padding: EdgeInsets.only(left: 24, right: 24),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  iconTitle(ImageStyle.chartss, 'Send'),
-                                  iconTitle(ImageStyle.charttts, 'Receive'),
-                                  iconTitle(ImageStyle.chartdd, 'Trade', () {
-                                    Get.to(CryptoTrade());
-                                  }),
-                                  iconTitle(ImageStyle.chart, 'Wallets'),
-                                ],
+                            Icon(
+                              Icons.remove_red_eye_outlined,
+                              color: ColorStyle.whiteDuskyCrypto,
+                              size: 16,
+                            )
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "\$ ",
+                              style: TextStylesSFCompactDisplay
+                                  .textStyles_26
+                                  .apply(
+                                color: ColorStyle.whiteDuskyCrypto,
                               ),
                             ),
-
-                            SizedBox(
-                              height: 20,
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(left: 24, right: 24),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  iconTitle(ImageStyle.charts, 'Orders'),
-                                  iconTitle(ImageStyle.chartErn, 'Earn'),
-                                  iconTitle(ImageStyle.markets, 'Markets', () {
-                                    Get.to(CryptoMarket());
-                                  }),
-                                  iconTitle(ImageStyle.NFT, 'NTF'),
-                                ],
+                            Text(
+                              "21,048.13",
+                              style: TextStylesSFCompactDisplay
+                                  .textStyles_32
+                                  .apply(
+                                color: ColorStyle.primaryWhite,
+                                // fontWeightDelta: 1
                               ),
                             ),
-
                             SizedBox(
-                              height: 16,
+                              width: 6,
                             ),
-                            Container(
-                              padding: EdgeInsets.only(left: 24, right: 24),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    color: ColorStyle.whiteDuskyCrypto,
-                                    borderRadius: BorderRadius.circular((40))),
-                                height: 0.3,
-
-                                // alignment: Alignment.center,
+                            Text(
+                              "USD",
+                              style: TextStylesSFCompactDisplay
+                                  .textStyles_20
+                                  .apply(
+                                color: ColorStyle.whiteDuskyCrypto,
                               ),
                             ),
-
-                            SizedBox(
-                              height: 16,
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "+7.47%",
+                              style: TextStylesSFCompactDisplay
+                                  .textStyles_13
+                                  .apply(
+                                color: ColorStyle.greenDuskyCrypto,
+                              ),
                             ),
-                            Container(
-                              padding: EdgeInsets.only(left: 24, right: 24),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    "MY PORTFOLIO",
-                                    style: TextStylesSFCompactDisplay
-                                        .textStyles_15
-                                        .apply(
-                                      color: ColorStyle.primaryWhite,
-                                      // fontWeightDelta: 1
+                            Text(
+                              "|",
+                              style: TextStylesSFCompactDisplay
+                                  .textStyles_15
+                                  .apply(
+                                  color: ColorStyle.grey,
+                                  fontWeightDelta: 0),
+                            ),
+                            Text(
+                              "+\$2,414.62",
+                              style: TextStylesSFCompactDisplay
+                                  .textStyles_12
+                                  .apply(
+                                color: ColorStyle.greenDuskyCrypto,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 24, right: 24),
+                          child: Row(
+                            mainAxisAlignment:
+                            MainAxisAlignment.spaceBetween,
+                            children: [
+                              iconTitle(ImageStyle.chartss, 'Send'),
+                              iconTitle(ImageStyle.charttts, 'Receive'),
+                              iconTitle(ImageStyle.chartdd, 'Trade', () {
+                                Get.to(CryptoTrade());
+                              }),
+                              iconTitle(ImageStyle.chart, 'Wallets'),
+                            ],
+                          ),
+                        ),
+
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 24, right: 24),
+                          child: Row(
+                            mainAxisAlignment:
+                            MainAxisAlignment.spaceBetween,
+                            children: [
+                              iconTitle(ImageStyle.charts, 'Orders'),
+                              iconTitle(ImageStyle.chartErn, 'Earn'),
+                              iconTitle(ImageStyle.markets, 'Markets', () {
+                                Get.to(CryptoMarket());
+                              }),
+                              iconTitle(ImageStyle.NFT, 'NTF'),
+                            ],
+                          ),
+                        ),
+
+                        SizedBox(
+                          height: 16,
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 24, right: 24),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: ColorStyle.whiteDuskyCrypto,
+                                borderRadius: BorderRadius.circular((40))),
+                            height: 0.3,
+
+                            // alignment: Alignment.center,
+                          ),
+                        ),
+
+                        SizedBox(
+                          height: 16,
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 24, right: 24),
+                          child: Row(
+                            mainAxisAlignment:
+                            MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "MY PORTFOLIO",
+                                style: TextStylesSFCompactDisplay
+                                    .textStyles_15
+                                    .apply(
+                                  color: ColorStyle.primaryWhite,
+                                  // fontWeightDelta: 1
+                                ),
+                              ),
+                              InkWell(
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      "See All",
+                                      style: TextStylesSFCompactDisplay
+                                          .textStyles_12
+                                          .apply(
+                                          color: ColorStyle.blueSKY,
+                                          fontWeightDelta: 1),
                                     ),
-                                  ),
-                                  InkWell(
-                                    child: Column(
-                                      children: [
-                                        Text(
-                                          "See All",
-                                          style: TextStylesSFCompactDisplay
-                                              .textStyles_12
-                                              .apply(
-                                                  color: ColorStyle.blueSKY,
-                                                  fontWeightDelta: 1),
-                                        ),
-                                        Container(
-                                          decoration: BoxDecoration(
-                                              color: ColorStyle.blueSKY,
-                                              borderRadius:
-                                                  BorderRadius.circular((40))),
-                                          height: 1,
-                                          width: 54,
-
-                                          // alignment: Alignment.center,
-                                        ),
-                                      ],
-                                    ),
-                                    onTap: () {},
-                                  )
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            ListView.separated(
-                                padding: EffectStyle.padding(24, 24, 0, 0),
-                                shrinkWrap: true,
-                                physics: NeverScrollableScrollPhysics(),
-                                itemCount: controller.images.length,
-                                separatorBuilder: (context, index) {
-                                  return SizedBox(
-                                    height: 10,
-                                  );
-                                },
-                                itemBuilder: (BuildContext context, int index) {
-                                  return InkWell(
-                                    child: Container(
+                                    Container(
                                       decoration: BoxDecoration(
-                                        color: ColorStyle.blueLight
-                                            .withOpacity(.1),
-                                        borderRadius: BorderRadius.circular(4),
-                                      ),
-                                      padding: EdgeInsets.only(
-                                          left: 16,
-                                          right: 16,
-                                          top: 6,
-                                          bottom: 6),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                          color: ColorStyle.blueSKY,
+                                          borderRadius:
+                                          BorderRadius.circular((40))),
+                                      height: 1,
+                                      width: 54,
+
+                                      // alignment: Alignment.center,
+                                    ),
+                                  ],
+                                ),
+                                onTap: () {},
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        ListView.separated(
+                            padding: EffectStyle.padding(24, 24, 0, 0),
+                            shrinkWrap: true,
+                            physics: NeverScrollableScrollPhysics(),
+                            itemCount: controller.images.length,
+                            separatorBuilder: (context, index) {
+                              return SizedBox(
+                                height: 10,
+                              );
+                            },
+                            itemBuilder: (BuildContext context, int index) {
+                              return InkWell(
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: ColorStyle.blueLight
+                                        .withOpacity(.1),
+                                    borderRadius: BorderRadius.circular(4),
+                                  ),
+                                  padding: EdgeInsets.only(
+                                      left: 16,
+                                      right: 16,
+                                      top: 6,
+                                      bottom: 6),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.center,
+                                    children: [
+                                      Row(
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.center,
+                                        CrossAxisAlignment.center,
                                         children: [
-                                          Row(
+                                          Image.asset(
+                                            controller.images[index],
+                                            height: 38,
+                                          ),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Column(
                                             crossAxisAlignment:
-                                                CrossAxisAlignment.center,
+                                            CrossAxisAlignment.start,
                                             children: [
-                                              Image.asset(
-                                                controller.images[index],
-                                                height: 38,
+                                              Text(
+                                                controller
+                                                    .chooseSaving[index],
+                                                style: TextStylesSFCompactDisplay
+                                                    .textStyles_14
+                                                    .apply(
+                                                    color: ColorStyle
+                                                        .primaryWhite,
+                                                    fontWeightDelta: 1),
                                               ),
-                                              SizedBox(
-                                                width: 10,
+                                              Text(
+                                                // 'Spare change',
+                                                controller
+                                                    .chooseSaving1[index],
+                                                style: TextStylesSFCompactDisplay
+                                                    .textStyles_14
+                                                    .apply(
+                                                    color: ColorStyle
+                                                        .primaryWhite,
+                                                    fontWeightDelta: 1),
                                               ),
-                                              Column(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    controller
-                                                        .chooseSaving[index],
-                                                    style: TextStylesSFCompactDisplay
-                                                        .textStyles_14
-                                                        .apply(
-                                                            color: ColorStyle
-                                                                .primaryWhite,
-                                                            fontWeightDelta: 1),
-                                                  ),
-                                                  Text(
-                                                    // 'Spare change',
-                                                    controller
-                                                        .chooseSaving1[index],
-                                                    style: TextStylesSFCompactDisplay
-                                                        .textStyles_14
-                                                        .apply(
-                                                            color: ColorStyle
-                                                                .primaryWhite,
-                                                            fontWeightDelta: 1),
-                                                  ),
-                                                  Text(
-                                                    // 'Spare change',
-                                                    controller
-                                                        .chooseSaving2[index],
-                                                    style:
-                                                        TextStylesSFCompactDisplay
-                                                            .textStyles_12
-                                                            .apply(
-                                                            color: controller.chooseSaving2[index].contains('+') ? Colors.green : Colors.red,
-                                                            fontWeightDelta:
-                                                                    1),
-                                                  ),
-                                                ],
+                                              Text(
+                                                // 'Spare change',
+                                                controller
+                                                    .chooseSaving2[index],
+                                                style:
+                                                TextStylesSFCompactDisplay
+                                                    .textStyles_12
+                                                    .apply(
+                                                    color: controller.chooseSaving2[index].contains('+') ? Colors.green : Colors.red,
+                                                    fontWeightDelta:
+                                                    1),
                                               ),
                                             ],
                                           ),
-                                          Expanded(
-                                              child: Container(
+                                        ],
+                                      ),
+                                      Expanded(
+                                          child: Container(
                                             child: Image.asset(
                                               ImageStyle.light2,
                                               // height: 38,
                                             ),
                                             padding:
-                                                EffectStyle.padding(8, 8, 0, 0),
+                                            EffectStyle.padding(8, 8, 0, 0),
                                           )),
-                                          Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.end,
-                                            children: [
-                                              Text(
-                                                controller.chooseSaving3[index],
-                                                style:
-                                                    TextStylesSFCompactDisplay
-                                                        .textStyles_14
-                                                        .apply(
-                                                            color: ColorStyle
-                                                                .primaryWhite,
-                                                            fontWeightDelta: 1),
-                                              ),
-                                              Text(
-                                                controller.chooseSaving4[index],
-                                                style:
-                                                    TextStylesSFCompactDisplay
-                                                        .textStyles_10
-                                                        .apply(
-                                                            color: ColorStyle
-                                                                .primaryWhite,
-                                                            fontWeightDelta: 0),
-                                              ),
-                                            ],
-                                          )
+                                      Column(
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment.end,
+                                        children: [
+                                          Text(
+                                            controller.chooseSaving3[index],
+                                            style:
+                                            TextStylesSFCompactDisplay
+                                                .textStyles_14
+                                                .apply(
+                                                color: ColorStyle
+                                                    .primaryWhite,
+                                                fontWeightDelta: 1),
+                                          ),
+                                          Text(
+                                            controller.chooseSaving4[index],
+                                            style:
+                                            TextStylesSFCompactDisplay
+                                                .textStyles_10
+                                                .apply(
+                                                color: ColorStyle
+                                                    .primaryWhite,
+                                                fontWeightDelta: 0),
+                                          ),
                                         ],
-                                      ),
-                                    ),
-                                    onTap: () {
-                                      Get.to(CryptoTransactionList());
-                                    },
-                                  );
-                                }),
-
-                            SizedBox(
-                              height: 16,
-                            ),
-                            InkWell(
-                              child: Column(
-                                children: [
-                                  Text(
-                                    "Show My Full Portfolio",
-                                    style: TextStylesSFCompactDisplay
-                                        .textStyles_12
-                                        .apply(
-                                            color: ColorStyle.blueSKY,
-                                            fontWeightDelta: 1),
+                                      )
+                                    ],
                                   ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                        color: ColorStyle.blueSKY,
-                                        borderRadius:
-                                            BorderRadius.circular((40))),
-                                    height: 1,
-                                    width: 150,
+                                ),
+                                onTap: () {
+                                  Get.to(CryptoTransactionList());
+                                },
+                              );
+                            }),
 
-                                    // alignment: Alignment.center,
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  )
-                                ],
+                        SizedBox(
+                          height: 16,
+                        ),
+                        InkWell(
+                          child: Column(
+                            children: [
+                              Text(
+                                "Show My Full Portfolio",
+                                style: TextStylesSFCompactDisplay
+                                    .textStyles_12
+                                    .apply(
+                                    color: ColorStyle.blueSKY,
+                                    fontWeightDelta: 1),
                               ),
-                              onTap: () {
-                                Get.to(CryptoPortfolio());
-                              },
-                            ),
-                            // SizedBox(height: 8,),
-                            Container(
-                              padding: EdgeInsets.only(left: 24, right: 24),
-                              child: Container(
+                              Container(
                                 decoration: BoxDecoration(
-                                    color: ColorStyle.whiteDuskyCrypto,
-                                    borderRadius: BorderRadius.circular((40))),
-                                height: 0.3,
-                                // width: 130,
+                                    color: ColorStyle.blueSKY,
+                                    borderRadius:
+                                    BorderRadius.circular((40))),
+                                height: 1,
+                                width: 150,
 
                                 // alignment: Alignment.center,
                               ),
-                            ),
+                              SizedBox(
+                                height: 20,
+                              )
+                            ],
+                          ),
+                          onTap: () {
+                            Get.to(CryptoPortfolio());
+                          },
+                        ),
+                        // SizedBox(height: 8,),
+                        Container(
+                          padding: EdgeInsets.only(left: 24, right: 24),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: ColorStyle.whiteDuskyCrypto,
+                                borderRadius: BorderRadius.circular((40))),
+                            height: 0.3,
+                            // width: 130,
 
-                            SizedBox(
-                              height: 16,
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(left: 24, right: 24),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    "MY FAVORITES",
-                                    style: TextStylesSFCompactDisplay
-                                        .textStyles_15
-                                        .apply(
-                                      color: ColorStyle.primaryWhite,
-                                      // fontWeightDelta: 1
+                            // alignment: Alignment.center,
+                          ),
+                        ),
+
+                        SizedBox(
+                          height: 16,
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 24, right: 24),
+                          child: Row(
+                            mainAxisAlignment:
+                            MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "MY FAVORITES",
+                                style: TextStylesSFCompactDisplay
+                                    .textStyles_15
+                                    .apply(
+                                  color: ColorStyle.primaryWhite,
+                                  // fontWeightDelta: 1
+                                ),
+                              ),
+                              InkWell(
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      "See All",
+                                      style: TextStylesSFCompactDisplay
+                                          .textStyles_12
+                                          .apply(
+                                          color: ColorStyle.blueSKY,
+                                          fontWeightDelta: 1),
                                     ),
-                                  ),
-                                  InkWell(
-                                    child: Column(
-                                      children: [
-                                        Text(
-                                          "See All",
-                                          style: TextStylesSFCompactDisplay
-                                              .textStyles_12
-                                              .apply(
-                                                  color: ColorStyle.blueSKY,
-                                                  fontWeightDelta: 1),
-                                        ),
-                                        Container(
-                                          decoration: BoxDecoration(
-                                              color: ColorStyle.blueSKY,
-                                              borderRadius:
-                                                  BorderRadius.circular((40))),
-                                          height: 1,
-                                          width: 54,
+                                    Container(
+                                      decoration: BoxDecoration(
+                                          color: ColorStyle.blueSKY,
+                                          borderRadius:
+                                          BorderRadius.circular((40))),
+                                      height: 1,
+                                      width: 54,
 
-                                          // alignment: Alignment.center,
+                                      // alignment: Alignment.center,
+                                    ),
+                                  ],
+                                ),
+                                onTap: () {},
+                              )
+                            ],
+                          ),
+                        ),
+
+                        SizedBox(
+                          height: 16,
+                        ),
+                        ListView.separated(
+                            padding: EdgeInsets.only(left: 24, right: 24),
+                            shrinkWrap: true,
+                            physics: NeverScrollableScrollPhysics(),
+                            itemCount: controller.images1.length,
+                            separatorBuilder: (context, index) {
+                              return SizedBox(
+                                height: 10,
+                              );
+                            },
+                            itemBuilder: (BuildContext context, int index) {
+                              return Container(
+                                padding:
+                                EdgeInsets.only(left: 10, right: 10),
+                                height: 90,
+                                child: Row(
+                                  mainAxisAlignment:
+                                  MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment:
+                                  CrossAxisAlignment.center,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Image.asset(
+                                          controller.images1[index],
+                                          height: 38,
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Column(
+                                          crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                          children: [
+                                            SizedBox(
+                                              height: 20,
+                                            ),
+                                            Text(
+                                              // 'KFC',
+                                              controller
+                                                  .chooseSaving5[index],
+                                              style:
+                                              TextStylesSFCompactDisplay
+                                                  .textStyles_14
+                                                  .apply(
+                                                  color: ColorStyle
+                                                      .primaryWhite,
+                                                  fontWeightDelta:
+                                                  1),
+                                            ),
+                                            SizedBox(
+                                              height: 2,
+                                            ),
+                                            Text(
+                                              // 'Spare change',
+                                              controller
+                                                  .chooseSaving6[index],
+                                              style:
+                                              TextStylesSFCompactDisplay
+                                                  .textStyles_14
+                                                  .apply(
+                                                  color: ColorStyle
+                                                      .primaryWhite,
+                                                  fontWeightDelta:
+                                                  2),
+                                            ),
+                                          ],
                                         ),
                                       ],
                                     ),
-                                    onTap: () {},
-                                  )
-                                ],
-                              ),
-                            ),
-
-                            SizedBox(
-                              height: 16,
-                            ),
-                            ListView.separated(
-                                padding: EdgeInsets.only(left: 24, right: 24),
-                                shrinkWrap: true,
-                                physics: NeverScrollableScrollPhysics(),
-                                itemCount: controller.images1.length,
-                                separatorBuilder: (context, index) {
-                                  return SizedBox(
-                                    height: 10,
-                                  );
-                                },
-                                itemBuilder: (BuildContext context, int index) {
-                                  return Container(
-                                    padding:
-                                        EdgeInsets.only(left: 10, right: 10),
-                                    height: 90,
-                                    child: Row(
+                                    Expanded(
+                                        child: Container(
+                                          child: Image.asset(
+                                            ImageStyle.light2,
+                                            // height: 38,
+                                          ),
+                                          padding:
+                                          EffectStyle.padding(6, 6, 0, 0),
+                                        )),
+                                    Column(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
+                                      MainAxisAlignment.center,
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.center,
+                                      CrossAxisAlignment.center,
                                       children: [
-                                        Row(
-                                          children: [
-                                            Image.asset(
-                                              controller.images1[index],
-                                              height: 38,
-                                            ),
-                                            SizedBox(
-                                              width: 10,
-                                            ),
-                                            Column(
+                                        Text(
+                                          controller.chooseSaving7[index],
+                                          style: TextStylesPoppins
+                                              .textStyles_14
+                                              .apply(
+                                              color: ColorStyle
+                                                  .primaryWhite,
+                                              fontWeightDelta: 2),
+                                        ),
+                                        SizedBox(
+                                          height: 2,
+                                        ),
+                                        Text(
+                                          controller.chooseSaving8[index],
+                                          style: TextStylesPoppins
+                                              .textStyles_12
+                                              .apply(
+                                            color: controller.chooseSaving8[index].contains('+') ? Colors.green : Colors.red,
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                                decoration: BoxDecoration(
+                                  color: ColorStyle.blueSKY.withOpacity(.1),
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                              );
+                            }),
+
+                        Container(
+                          padding: EdgeInsets.only(
+                              left: 24, right: 24, top: 16, bottom: 16),
+                          child: Row(
+                            children: [
+                              Text(
+                                "TOP GAINERS",
+                                style: TextStylesSFCompactDisplay
+                                    .textStyles_16
+                                    .apply(
+                                  color: ColorStyle.primaryWhite,
+                                  // fontWeightDelta: 1
+                                ),
+                              ),
+                              SizedBox(
+                                width: 6,
+                              ),
+                              Image.asset(
+                                ImageStyle.fire,
+                                height: 14,
+                              )
+                            ],
+                          ),
+                        ),
+                        ListView.separated(
+                            padding: EdgeInsets.only(left: 24, right: 24),
+                            shrinkWrap: true,
+                            itemCount: controller.images2.length,
+                            physics: NeverScrollableScrollPhysics(),
+                            separatorBuilder: (context, index) {
+                              return SizedBox(
+                                height: 10,
+                              );
+                            },
+                            itemBuilder: (BuildContext context, int index) {
+                              return Container(
+                                padding:
+                                EdgeInsets.only(left: 16, right: 16),
+                                height: 90,
+                                decoration: BoxDecoration(
+                                  color: ColorStyle.blueSKY.withOpacity(.1),
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                child: Row(
+                                  // mainAxisAlignment:
+                                  // MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Expanded(
+                                      child: Row(
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                        children: [
+                                          Image.asset(
+                                            controller.images2[index],
+                                            height: 38,
+                                          ),
+                                          SizedBox(
+                                            width: 6,
+                                          ),
+                                          Expanded(
+                                            child: Column(
                                               crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                              CrossAxisAlignment.start,
+                                              mainAxisAlignment:
+                                              MainAxisAlignment.center,
                                               children: [
-                                                SizedBox(
-                                                  height: 20,
-                                                ),
                                                 Text(
                                                   // 'KFC',
                                                   controller
-                                                      .chooseSaving5[index],
-                                                  style:
-                                                      TextStylesSFCompactDisplay
-                                                          .textStyles_14
-                                                          .apply(
-                                                              color: ColorStyle
-                                                                  .primaryWhite,
-                                                              fontWeightDelta:
-                                                                  1),
+                                                      .chooseSaving9[index],
+                                                  style: TextStylesSFCompactDisplay
+                                                      .textStyles_14
+                                                      .apply(
+                                                      color: ColorStyle
+                                                          .primaryWhite,
+                                                      fontWeightDelta:
+                                                      2),
                                                 ),
                                                 SizedBox(
                                                   height: 2,
                                                 ),
                                                 Text(
                                                   // 'Spare change',
-                                                  controller
-                                                      .chooseSaving6[index],
+                                                  controller.chooseSaving10[
+                                                  index],
                                                   style:
-                                                      TextStylesSFCompactDisplay
-                                                          .textStyles_14
-                                                          .apply(
-                                                              color: ColorStyle
-                                                                  .primaryWhite,
-                                                              fontWeightDelta:
-                                                                  2),
+                                                  TextStylesSFCompactDisplay
+                                                      .textStyles_14
+                                                      .apply(
+                                                    color: ColorStyle
+                                                        .whiteDuskyCrypto,
+                                                    // fontWeightDelta: 1
+                                                  ),
                                                 ),
                                               ],
                                             ),
-                                          ],
-                                        ),
-                                        Expanded(
-                                            child: Container(
-                                          child: Image.asset(
-                                            ImageStyle.light2,
-                                            // height: 38,
-                                          ),
-                                          padding:
-                                              EffectStyle.padding(6, 6, 0, 0),
-                                        )),
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children: [
-                                            Text(
-                                              controller.chooseSaving7[index],
-                                              style: TextStylesPoppins
-                                                  .textStyles_14
-                                                  .apply(
-                                                      color: ColorStyle
-                                                          .primaryWhite,
-                                                      fontWeightDelta: 2),
-                                            ),
-                                            SizedBox(
-                                              height: 2,
-                                            ),
-                                            Text(
-                                              controller.chooseSaving8[index],
-                                              style: TextStylesPoppins
-                                                  .textStyles_12
-                                                  .apply(
-                                                color: controller.chooseSaving8[index].contains('+') ? Colors.green : Colors.red,
-                                              ),
-                                            ),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                    decoration: BoxDecoration(
-                                      color: ColorStyle.blueSKY.withOpacity(.1),
-                                      borderRadius: BorderRadius.circular(4),
-                                    ),
-                                  );
-                                }),
-
-                            Container(
-                              padding: EdgeInsets.only(
-                                  left: 24, right: 24, top: 16, bottom: 16),
-                              child: Row(
-                                children: [
-                                  Text(
-                                    "TOP GAINERS",
-                                    style: TextStylesSFCompactDisplay
-                                        .textStyles_16
-                                        .apply(
-                                      color: ColorStyle.primaryWhite,
-                                      // fontWeightDelta: 1
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 6,
-                                  ),
-                                  Image.asset(
-                                    ImageStyle.fire,
-                                    height: 14,
-                                  )
-                                ],
-                              ),
-                            ),
-                            ListView.separated(
-                                padding: EdgeInsets.only(left: 24, right: 24),
-                                shrinkWrap: true,
-                                itemCount: controller.images2.length,
-                                physics: NeverScrollableScrollPhysics(),
-                                separatorBuilder: (context, index) {
-                                  return SizedBox(
-                                    height: 10,
-                                  );
-                                },
-                                itemBuilder: (BuildContext context, int index) {
-                                  return Container(
-                                    padding:
-                                        EdgeInsets.only(left: 16, right: 16),
-                                    height: 90,
-                                    decoration: BoxDecoration(
-                                      color: ColorStyle.blueSKY.withOpacity(.1),
-                                      borderRadius: BorderRadius.circular(4),
-                                    ),
-                                    child: Row(
-                                      // mainAxisAlignment:
-                                      // MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Expanded(
-                                          child: Row(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              Image.asset(
-                                                controller.images2[index],
-                                                height: 38,
-                                              ),
-                                              SizedBox(
-                                                width: 6,
-                                              ),
-                                              Expanded(
-                                                child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  children: [
-                                                    Text(
-                                                      // 'KFC',
-                                                      controller
-                                                          .chooseSaving9[index],
-                                                      style: TextStylesSFCompactDisplay
-                                                          .textStyles_14
-                                                          .apply(
-                                                              color: ColorStyle
-                                                                  .primaryWhite,
-                                                              fontWeightDelta:
-                                                                  2),
-                                                    ),
-                                                    SizedBox(
-                                                      height: 2,
-                                                    ),
-                                                    Text(
-                                                      // 'Spare change',
-                                                      controller.chooseSaving10[
-                                                          index],
-                                                      style:
-                                                          TextStylesSFCompactDisplay
-                                                              .textStyles_14
-                                                              .apply(
-                                                        color: ColorStyle
-                                                            .whiteDuskyCrypto,
-                                                        // fontWeightDelta: 1
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              )
-                                            ],
-                                          ),
-                                        ),
-                                        Text(
-                                          // 'Spare change',
-                                          controller.chooseSaving11[index],
-                                          style: TextStylesSFCompactDisplay
-                                              .textStyles_14
-                                              .apply(
-                                            color: ColorStyle.primaryWhite,
-                                            // fontWeightDelta: 1
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 16,
-                                        ),
-                                        Text(
-                                          // 'Spare change',
-                                          controller.chooseSaving12[index],
-                                          style: TextStylesSFCompactDisplay
-                                              .textStyles_14
-                                              .apply(
-                                                  color: ColorStyle.green,
-                                                  fontWeightDelta: 1),
-                                          maxLines: 1,
-                                        ),
-                                        SizedBox(
-                                          width: 16,
-                                        ),
-                                        Image.asset(
-                                          ImageStyle.bell,
-                                          color: ColorStyle.primaryWhite,
-                                          height: 24,
-                                        )
-                                      ],
-                                    ),
-                                  );
-                                }),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            Container(
-                              height: 0.3,
-                              margin: EdgeInsets.only(left: 24, right: 24),
-                              decoration: BoxDecoration(
-                                color: ColorStyle.whiteDuskyCrypto,
-                              ),
-                            ),
-
-                            SizedBox(
-                              height: 16,
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(left: 24, right: 24),
-                              child: Row(
-                                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    "CRYPTO NEWS",
-                                    style: TextStylesSFCompactDisplay
-                                        .textStyles_16
-                                        .apply(
-                                      color: ColorStyle.primaryWhite,
-                                      // fontWeightDelta: 1
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  InkWell(
-                                    child: Container(
-                                      alignment: Alignment.center,
-                                      width: 44,
-                                      child: Text(
-                                        "NEW",
-                                        style: TextStylesSFCompactDisplay
-                                            .textStyles_12
-                                            .apply(
-                                          color: ColorStyle.primaryWhite,
-                                          // fontWeightDelta: 1
-                                        ),
+                                          )
+                                        ],
                                       ),
-                                      decoration: BoxDecoration(
-                                          color: ColorStyle.ligthBlue,
-                                          borderRadius:
-                                              BorderRadius.circular(4)),
                                     ),
-                                    onTap: () {},
-                                  )
-                                ],
-                              ),
-                            ),
-
-                            SizedBox(
-                              height: 20,
-                            ),
-
-                            Container(
-                              height: 452,
-                              child: ListView.separated(
-                                  padding: EdgeInsets.only(
-                                    left: 24,
-                                    right: 24,
-                                  ),
-                                  shrinkWrap: true,
-                                  itemCount: 5,
-                                  scrollDirection: Axis.horizontal,
-                                  separatorBuilder: (context, index) {
-                                    return SizedBox(
+                                    Text(
+                                      // 'Spare change',
+                                      controller.chooseSaving11[index],
+                                      style: TextStylesSFCompactDisplay
+                                          .textStyles_14
+                                          .apply(
+                                        color: ColorStyle.primaryWhite,
+                                        // fontWeightDelta: 1
+                                      ),
+                                    ),
+                                    SizedBox(
                                       width: 16,
-                                    );
-                                  },
-                                  itemBuilder:
-                                      (BuildContext context, int index) {
-                                    return CryptoNewsCell();
-                                  }),
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                          ],
+                                    ),
+                                    Text(
+                                      // 'Spare change',
+                                      controller.chooseSaving12[index],
+                                      style: TextStylesSFCompactDisplay
+                                          .textStyles_14
+                                          .apply(
+                                          color: ColorStyle.green,
+                                          fontWeightDelta: 1),
+                                      maxLines: 1,
+                                    ),
+                                    SizedBox(
+                                      width: 16,
+                                    ),
+                                    Image.asset(
+                                      ImageStyle.bell,
+                                      color: ColorStyle.primaryWhite,
+                                      height: 24,
+                                    )
+                                  ],
+                                ),
+                              );
+                            }),
+                        SizedBox(
+                          height: 16,
                         ),
-                      ));
+                        Container(
+                          height: 0.3,
+                          margin: EdgeInsets.only(left: 24, right: 24),
+                          decoration: BoxDecoration(
+                            color: ColorStyle.whiteDuskyCrypto,
+                          ),
+                        ),
+
+                        SizedBox(
+                          height: 16,
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 24, right: 24),
+                          child: Row(
+                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "CRYPTO NEWS",
+                                style: TextStylesSFCompactDisplay
+                                    .textStyles_16
+                                    .apply(
+                                  color: ColorStyle.primaryWhite,
+                                  // fontWeightDelta: 1
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              InkWell(
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  width: 44,
+                                  child: Text(
+                                    "NEW",
+                                    style: TextStylesSFCompactDisplay
+                                        .textStyles_12
+                                        .apply(
+                                      color: ColorStyle.primaryWhite,
+                                      // fontWeightDelta: 1
+                                    ),
+                                  ),
+                                  decoration: BoxDecoration(
+                                      color: ColorStyle.ligthBlue,
+                                      borderRadius:
+                                      BorderRadius.circular(4)),
+                                ),
+                                onTap: () {},
+                              )
+                            ],
+                          ),
+                        ),
+
+                        SizedBox(
+                          height: 20,
+                        ),
+
+                        Container(
+                          height: 452,
+                          child: ListView.separated(
+                              padding: EdgeInsets.only(
+                                left: 24,
+                                right: 24,
+                              ),
+                              shrinkWrap: true,
+                              itemCount: 5,
+                              scrollDirection: Axis.horizontal,
+                              separatorBuilder: (context, index) {
+                                return SizedBox(
+                                  width: 16,
+                                );
+                              },
+                              itemBuilder:
+                                  (BuildContext context, int index) {
+                                return CryptoNewsCell();
+                              }),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                      ],
+                    ),
+                  ));
                 }))
       ],
     );
