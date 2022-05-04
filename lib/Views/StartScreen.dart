@@ -1,22 +1,31 @@
-import 'package:advanced_capital_pay/Views/SignUp/EffectStyleSignUp.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-import '../Components/AppBarStyle.dart';
-import '../Components/BackgroundImage.dart';
-import '../Components/ButtonCustom.dart';
-import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
+import '../Views/OnBoarding.dart';
+import '../Components/BackgroundImage.dart';
 
-class ApplyPay extends StatelessWidget {
-  const ApplyPay({Key? key}) : super(key: key);
+
+class StartScreen extends StatelessWidget {
+  const StartScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        BackgroundImageBeneficiary(),
-        Scaffold(
-            appBar:     AppBarStyleCustomBenifi(
-              title: Text(
-                'Apply P',)))]);}}
+    Future.delayed(Duration(seconds: 2), () {
+      Get.to(OnBoarding());
+    });
+
+    return Scaffold(
+      body: Stack(
+        children: [
+          BackgroundImage(),
+          Center(
+              child: Image.asset(
+                ImageStyle.appIcon,
+                height: 120,
+              ))
+        ],
+      ),
+    );
+  }
+}

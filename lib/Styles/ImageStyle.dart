@@ -302,4 +302,20 @@ class ImageStyle {
   static const String exchangeGreen = "$baseImage/exchangeGreen.png";
   static const String bg207 = "$baseImage/bg207.png";
   static const String bg15410 = "$baseImage/bg15410.png";
+
+  static const String cryptoHome = "$baseImage/cryptoHome.png";
+  static const String cryptoStar = "$baseImage/cryptoStar.png";
+  static const String cryptoFilter = "$baseImage/cryptoFilter.png";
+  static const String cryptoSignOut = "$baseImage/cryptoSignOut.png";
+  static const String cryptoExchage = "$baseImage/cryptoExchage.png";
+  static const String downCrypto = "$baseImage/downCrypto.png";
+  static const String bgTradeCount = "$baseImage/bgTradeCount.png";
+  static const String graph = "$baseImage/graph.png";
+  static const String bgToBuy = "$baseImage/bgToBuy.png";
+  static const String bgToSell = "$baseImage/bgToSell.png";
+  static const String bgBuyBTC = "$baseImage/bgBuyBTC.png";
+  static const String bgOrdComm = "$baseImage/bgOrdComm.png";
+  static const String bgCancelCryptoOrder = "$baseImage/bgCancelCryptoOrder.png";
+  static const String bgRectangle125 = "$baseImage/bgRectangle125.png";
+  static const String bgRectangle1255 = "$baseImage/bgRectangle1255.png";
 }

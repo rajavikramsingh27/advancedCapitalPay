@@ -17,7 +17,7 @@ import '../Views/ApplePay.dart';
 import '../Views/CryptoTrade.dart';
 
 import 'Views/NotEnoughBalances.dart';
-import 'Views/OrdersButtonIsClicked.dart';
+import 'Views/CryptoOrders.dart';
 import 'Views/SendBitcoins.dart';
 import 'Views/SendBitcoins1.dart';
 import 'Views/TransactionDetails1.dart';
@@ -44,9 +44,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-        // home: SplashScreen(),
+        home: SplashScreen(),
       // home: CryptoTrade(),
-      // home: OrdersButtonIsClicked(),
+      // home: CryptoOrders(),
 
       // home: Exchange(),
       // home: TabbarScreen(),
