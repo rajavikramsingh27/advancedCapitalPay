@@ -1,4 +1,6 @@
 
+import 'package:advanced_capital_pay/Views/CryptoScanOrTake.dart';
+import 'package:advanced_capital_pay/Views/CryptoSetAmount.dart';
 import 'package:advanced_capital_pay/Views/CryptoTransactionList.dart';
 import 'package:advanced_capital_pay/Views/YourCard.dart';
 
@@ -35,7 +37,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
 
-      home: SplashScreen(),
+      home: CryptoScanOrTake(),
       // home: Exchange(),
       // home: TabbarScreen(),
       // home: ApplePay(),

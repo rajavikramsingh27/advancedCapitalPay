@@ -267,5 +267,19 @@ class ImageStyle {
       "$baseImage/bgTransactionListCripto.png";
   static const String cryptoBG1 = "$baseImage/cryptoBG1.png";
   static const String bgGradientCryto = "$baseImage/bgGradientCryto.png";
+  static const String aaaaa = "$baseImage/aaaaa.png";
+  static const String Qrcodephoto = "$baseImage/Qrcodephoto.png";
+  static const String share2 = "$baseImage/share2.png";
+  static const String label = "$baseImage/label.png";
+  static const String IconPrint = "$baseImage/IconPrint.png";
+  static const String  LinesBackground= "$baseImage/LinesBackground.png";
+  static const String  OverlayBackground= "$baseImage/OverlayBackground.png";
+  static const String  QRcodescan= "$baseImage/QRcodescan.png";
+  static const String  antdesigncameraoutlined= "$baseImage/antdesigncameraoutlined.png";
+
+
+
+
+
 
 }
