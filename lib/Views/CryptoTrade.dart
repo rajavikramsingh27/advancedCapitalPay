@@ -481,6 +481,33 @@ class CryptoTrade extends StatelessWidget {
                     ],
                   ),
                 ),
+                SizedBox(height: 16,),
+                InkWell(
+                  child: Container(
+                    padding: EffectStyle.padding(10, 10, 0, 0),
+                    child: Stack(
+                      children: [
+                        Image.asset(ImageStyle.bg15410, height: 50, width: MediaQuery.of(context).size.width, fit: BoxFit.fill,),
+                        Positioned(
+                          top: 6,
+                          // bottom: 0,
+                          left: 0,
+                          right: 0,
+                          child: Text(
+                          'Exchange Now',
+                          textAlign: TextAlign.center,
+                          style: TextStylesSFCompactDisplay.textStyles_20.apply(
+                            color: ColorStyle.primaryWhite,
+                            fontWeightDelta: 1,
+                          ),
+                        ),)
+                      ],
+                    ),
+                  ),
+                  onTap: () {
+
+                  },
+                ),
               ],
             ),
           ),

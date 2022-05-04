@@ -11,7 +11,7 @@ import '../Views/TabbarScreen.dart';
 import '../Views/CurrencyExchange.dart';
 import '../Views/TransferSummary.dart';
 import '../Views/ApplePay.dart';
-
+import '../Views/CryptoTrade.dart';
 
 
 void main() {
@@ -35,7 +35,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
 
-      home: SplashScreen(),
+      // home: SplashScreen(),
+      home: CryptoTrade(),
       // home: Exchange(),
       // home: TabbarScreen(),
       // home: ApplePay(),
