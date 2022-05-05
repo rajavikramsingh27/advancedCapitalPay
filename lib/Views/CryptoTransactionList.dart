@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../Components/AppBarStyle.dart';
+import '../Controllers/CryptoDialogBottomSheet.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/EffectStyle.dart';
 import '../Styles/ImageStyle.dart';
@@ -16,7 +17,10 @@ import '../../../Styles/ColorStyle.dart';
 import '../../../Styles/EffectStyle.dart';
 import '../../../Styles/ImageStyle.dart';
 import '../../../Styles/TextStyles.dart';
-import '../Views/CryptoRecieve.dart';
+// import '../Views/CryptoRecieve.dart';
+import '../Views/CryptoRecieveAmount.dart';
+import 'CryptoScanOrTake.dart';
+import 'CryptoTransactionDetails.dart';
 
 class CryptoTransactionList extends StatelessWidget {
   CryptoTransactionList({Key? key}) : super(key: key);
@@ -218,7 +222,8 @@ class CryptoTransactionList extends StatelessWidget {
                                     child: iconTitleSendRecieveTrade(
                                         'Send', ImageStyle.Iconsend),
                                       onTap: () {
-                                      // Get.to(CryptoRecieve());
+                                        // Get.to(CryptoScanOrTake());
+                                        CryptoDialogBottomSheet.bottomsheetGet(CryptoScanOrTake());
                                       },
                                   ),
                                 ),
@@ -230,7 +235,7 @@ class CryptoTransactionList extends StatelessWidget {
                                     child: iconTitleSendRecieveTrade(
                                         'Receive', ImageStyle.Iconrecievemoney),
                                     onTap: () {
-                                      Get.to(CryptoRecieve());
+                                      Get.to(CryptoRecieveAmount());
                                     },
                                   ),
                                 ),
@@ -605,131 +610,136 @@ class CryptoTransactionList extends StatelessWidget {
                                       },
                                       itemBuilder:
                                           (BuildContext context, int index) {
-                                        return Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              'Friday, 21st December 2021',
-                                              style: TextStylesSFCompactDisplay
-                                                  .textStyles_10
-                                                  .apply(
-                                                color: ColorStyle.primaryWhite,
-                                                // fontWeightDelta: 2,
+                                        return InkWell(
+                                          child: Column(
+                                            crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'Friday, 21st December 2021',
+                                                style: TextStylesSFCompactDisplay
+                                                    .textStyles_10
+                                                    .apply(
+                                                  color: ColorStyle.primaryWhite,
+                                                  // fontWeightDelta: 2,
+                                                ),
                                               ),
-                                            ),
-                                            SizedBox(
-                                              height: 12,
-                                            ),
-                                            Row(
-                                              children: [
-                                                Container(
-                                                  decoration: BoxDecoration(
-                                                    color: ColorStyle.hex(
-                                                        '#0090FA'),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            16),
+                                              SizedBox(
+                                                height: 12,
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Container(
+                                                    decoration: BoxDecoration(
+                                                      color: ColorStyle.hex(
+                                                          '#0090FA'),
+                                                      borderRadius:
+                                                      BorderRadius.circular(
+                                                          16),
+                                                    ),
+                                                    padding: EdgeInsets.all(10),
+                                                    child: Image.asset(
+                                                      ImageStyle.Iconrecievemoney,
+                                                      color:
+                                                      ColorStyle.primaryWhite,
+                                                      height: 40,
+                                                      width: 40,
+                                                      // fit: BoxFit.cover,
+                                                    ),
                                                   ),
-                                                  padding: EdgeInsets.all(10),
-                                                  child: Image.asset(
-                                                    ImageStyle.Iconrecievemoney,
-                                                    color:
-                                                        ColorStyle.primaryWhite,
-                                                    height: 40,
-                                                    width: 40,
-                                                    // fit: BoxFit.cover,
+                                                  SizedBox(
+                                                    width: 10,
                                                   ),
-                                                ),
-                                                SizedBox(
-                                                  width: 10,
-                                                ),
-                                                Expanded(
-                                                    child: Container(
-                                                  child: Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Row(
-                                                        children: [
-                                                          Text(
-                                                            'Received',
-                                                            style:
-                                                                TextStylesSFCompactDisplay
-                                                                    .textStyles_13
-                                                                    .apply(
-                                                              color: ColorStyle
-                                                                  .primaryWhite,
-                                                              fontWeightDelta:
-                                                                  2,
+                                                  Expanded(
+                                                      child: Container(
+                                                        child: Column(
+                                                          crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                          children: [
+                                                            Row(
+                                                              children: [
+                                                                Text(
+                                                                  'Received',
+                                                                  style:
+                                                                  TextStylesSFCompactDisplay
+                                                                      .textStyles_13
+                                                                      .apply(
+                                                                    color: ColorStyle
+                                                                        .primaryWhite,
+                                                                    fontWeightDelta:
+                                                                    2,
+                                                                  ),
+                                                                ),
+                                                                Text(
+                                                                  '+0.392 BTC',
+                                                                  style:
+                                                                  TextStylesSFCompactDisplay
+                                                                      .textStyles_12
+                                                                      .apply(
+                                                                    color: ColorStyle
+                                                                        .primaryWhite,
+                                                                    fontWeightDelta:
+                                                                    2,
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                              mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .spaceBetween,
                                                             ),
-                                                          ),
-                                                          Text(
-                                                            '+0.392 BTC',
-                                                            style:
-                                                                TextStylesSFCompactDisplay
-                                                                    .textStyles_12
-                                                                    .apply(
-                                                              color: ColorStyle
-                                                                  .primaryWhite,
-                                                              fontWeightDelta:
-                                                                  2,
+                                                            SizedBox(height: 4),
+                                                            Text(
+                                                              'Bc1qpphsvm6v9qpn4h3mfnfus0qnnd64035uz3ue',
+                                                              style:
+                                                              TextStylesSFCompactDisplay
+                                                                  .textStyles_10
+                                                                  .apply(
+                                                                color: ColorStyle
+                                                                    .yellowCrypto,
+                                                                // fontWeightDelta: 2,
+                                                              ),
                                                             ),
-                                                          ),
-                                                        ],
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                      ),
-                                                      SizedBox(height: 4),
-                                                      Text(
-                                                        'Bc1qpphsvm6v9qpn4h3mfnfus0qnnd64035uz3ue',
-                                                        style:
-                                                            TextStylesSFCompactDisplay
-                                                                .textStyles_10
-                                                                .apply(
-                                                          color: ColorStyle
-                                                              .yellowCrypto,
-                                                          // fontWeightDelta: 2,
+                                                            SizedBox(height: 4),
+                                                            Row(
+                                                              mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .spaceBetween,
+                                                              children: [
+                                                                Text(
+                                                                  '12th Feb, 18:40',
+                                                                  style:
+                                                                  TextStylesSFCompactDisplay
+                                                                      .textStyles_10
+                                                                      .apply(
+                                                                    color: ColorStyle
+                                                                        .whiteDuskyCrypto,
+                                                                    // fontWeightDelta: 2,
+                                                                  ),
+                                                                ),
+                                                                Text(
+                                                                  '+ \$2,3535.565',
+                                                                  style:
+                                                                  TextStylesSFCompactDisplay
+                                                                      .textStyles_11
+                                                                      .apply(
+                                                                    color: ColorStyle
+                                                                        .whiteDuskyCrypto,
+                                                                    // fontWeightDelta: 2,
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ],
                                                         ),
-                                                      ),
-                                                      SizedBox(height: 4),
-                                                      Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                        children: [
-                                                          Text(
-                                                            '12th Feb, 18:40',
-                                                            style:
-                                                                TextStylesSFCompactDisplay
-                                                                    .textStyles_10
-                                                                    .apply(
-                                                              color: ColorStyle
-                                                                  .whiteDuskyCrypto,
-                                                              // fontWeightDelta: 2,
-                                                            ),
-                                                          ),
-                                                          Text(
-                                                            '+ \$2,3535.565',
-                                                            style:
-                                                                TextStylesSFCompactDisplay
-                                                                    .textStyles_11
-                                                                    .apply(
-                                                              color: ColorStyle
-                                                                  .whiteDuskyCrypto,
-                                                              // fontWeightDelta: 2,
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ],
-                                                  ),
-                                                )),
-                                              ],
-                                            ),
-                                          ],
+                                                      )),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                          onTap: () {
+                                            CryptoDialogBottomSheet.bottomsheetGet(CryptoTransactionDetails());
+                                          },
                                         );
                                       }),
                                 ],

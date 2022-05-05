@@ -1,27 +1,21 @@
 
-import 'package:advanced_capital_pay/Views/AddContactDavid.dart';
-import 'package:advanced_capital_pay/Views/CryptoTransactionList.dart';
-import 'package:advanced_capital_pay/Views/TransactionSuccesfuls.dart';
-import 'package:advanced_capital_pay/Views/YourCard.dart';
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
-import '../Views/SplashScreen.dart';
-import '../Views/TabbarScreen.dart';
-import '../Views/CurrencyExchange.dart';
-import '../Views/TransferSummary.dart';
-import '../Views/ApplePay.dart';
+import '../Views/NotEnoughBalances.dart';
 
-import '../Views/CryptoTrade.dart';
+import '../Views/CryptoScanOrTake.dart';
+import '../Views/CryptoRequestAmount.dart';
+import '../Views/CryptoRecieveAmount.dart';
+import '../Views/CryptoTransactionList.dart';
+import '../Views/SendBitcoins1.dart';
+import '../Views/CryptoTransactionDetails.dart';
+import '../Views/TransactionSummarys.dart';
+import '../Views/TransactionSuccesfuls.dart';
 
-import 'Views/NotEnoughBalances.dart';
-import 'Views/OrdersButtonIsClicked.dart';
-import 'Views/SendBitcoins.dart';
-import 'Views/SendBitcoins1.dart';
-import 'Views/TransactionDetails1.dart';
-import 'Views/TransactionSummarys.dart';
 
 
 void main() {
@@ -46,11 +40,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
         // home: SplashScreen(),
       // home: CryptoTrade(),
-      // home: OrdersButtonIsClicked(),
-
+      // home: CryptoOrders(),
+      home: CryptoTransactionList(),
       // home: Exchange(),
       // home: TabbarScreen(),
-      // home: ApplePay(),
+      // home: CryptoRequestAmount(),
       // home: Material(
       //   color: ColorStyle.darkestBlueSignUp,
       //   child: SearchByBankSwift(),

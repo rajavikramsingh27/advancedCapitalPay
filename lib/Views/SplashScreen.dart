@@ -13,7 +13,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     Future.delayed(Duration(seconds: 2), () {
-      // Get.to(StartScreen());
+      Get.to(StartScreen());
     });
 
     return Scaffold(

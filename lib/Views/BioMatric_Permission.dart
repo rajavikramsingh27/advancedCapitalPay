@@ -100,7 +100,7 @@ class BioMatric_Permission extends StatelessWidget {
                         //     )
                         // ),
                         SizedBox(
-                          height: 300,
+                          height: 400,
                         ),
                         Text(
                           controller.isFaceID.value

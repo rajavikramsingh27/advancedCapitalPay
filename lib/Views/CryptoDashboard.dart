@@ -15,6 +15,10 @@ import '../Views/CryptoPortfolio.dart';
 import '../Views/CryptoMarket.dart';
 import 'CryptoNewsCell.dart';
 import '../Views/CryptoTrade.dart';
+import '../Views/CryptoOrders.dart';
+import '../Views/CryptoRecieve.dart';
+import 'package:advanced_capital_pay/Views/CryptoRecieveAmount.dart';
+
 
 
 class CryptoDashboard extends StatelessWidget {
@@ -221,8 +225,12 @@ class CryptoDashboard extends StatelessWidget {
                             mainAxisAlignment:
                             MainAxisAlignment.spaceBetween,
                             children: [
-                              iconTitle(ImageStyle.chartss, 'Send'),
-                              iconTitle(ImageStyle.charttts, 'Receive'),
+                              iconTitle(ImageStyle.chartss, 'Send', () {
+                                Get.to(CryptoRecieveAmount());
+                              }),
+                              iconTitle(ImageStyle.charttts, 'Receive', () {
+                                Get.to(CryptoRecieve());
+                              }),
                               iconTitle(ImageStyle.chartdd, 'Trade', () {
                                 Get.to(CryptoTrade());
                               }),
@@ -240,7 +248,9 @@ class CryptoDashboard extends StatelessWidget {
                             mainAxisAlignment:
                             MainAxisAlignment.spaceBetween,
                             children: [
-                              iconTitle(ImageStyle.charts, 'Orders'),
+                              iconTitle(ImageStyle.charts, 'Orders', () {
+                                Get.to(CryptoOrders());
+                              }),
                               iconTitle(ImageStyle.chartErn, 'Earn'),
                               iconTitle(ImageStyle.markets, 'Markets', () {
                                 Get.to(CryptoMarket());
