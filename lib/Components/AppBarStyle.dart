@@ -120,6 +120,7 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
   final Color? colorTitle;
   final Color? backgroundColor;
+  final int? maxLinesTitle;
 
   AppBarStyleTitle({
     Key? key,
@@ -130,6 +131,7 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
     this.title,
     this.colorTitle = Colors.white,
     this.backgroundColor = Colors.transparent,
+    this.maxLinesTitle = 1,
   }) : super(key: key);
 
   double heightAppBar = 50;
@@ -148,9 +150,9 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: true,
       title: AutoSizeText(
         title!,
-        maxLines: 1,
+        textAlign: TextAlign.center,
+        maxLines: maxLinesTitle,
         style: styleTitle,
-
         // TextStylesPoppins.textStyles_16.apply(color: colorTitle, fontWeightDelta: 1, fontSizeDelta: 2),
       ),
       actions: trailingButton

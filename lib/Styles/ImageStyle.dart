@@ -191,8 +191,7 @@ class ImageStyle {
   static const String Romanion = "$baseImage/Romanion.png";
   static const String bg_back = "$baseImage/bg_back.png";
   static const String Iconawesomecopy = "$baseImage/Iconawesomecopy.png";
-  static const String bgGradient =
-      "$baseImage/bgGradient.png";
+  static const String bgGradient = "$baseImage/bgGradient.png";
   static const String bg_tride = "$baseImage/bg_tride.png";
   static const String Path1145 = "$baseImage/Path1145.png";
   static const String Rectangle1604 = "$baseImage/Rectangle1604.png";
@@ -267,6 +266,16 @@ class ImageStyle {
       "$baseImage/bgTransactionListCripto.png";
   static const String cryptoBG1 = "$baseImage/cryptoBG1.png";
   static const String bgGradientCryto = "$baseImage/bgGradientCryto.png";
+  static const String aaaaa = "$baseImage/aaaaa.png";
+  static const String Qrcodephoto = "$baseImage/Qrcodephoto.png";
+  static const String share2 = "$baseImage/share2.png";
+  static const String label = "$baseImage/label.png";
+  static const String IconPrint = "$baseImage/IconPrint.png";
+  static const String LinesBackground = "$baseImage/LinesBackground.png";
+  static const String OverlayBackground = "$baseImage/OverlayBackground.png";
+  static const String QRcodescan = "$baseImage/QRcodescan.png";
+  static const String antdesigncameraoutlined =
+      "$baseImage/antdesigncameraoutlined.png";
 
   static const String crypto123 = "$baseImage/crypto123.png";
   static const String myFullPortfolio = "$baseImage/myFullPortfolio.png";
@@ -274,7 +283,8 @@ class ImageStyle {
   static const String graphCrypto = "$baseImage/graphCrypto.png";
   static const String qrCode = "$baseImage/qrCode.png";
 
-  static const String emojionelagforuoutlyingislands = "$baseImage/emojione_flag-for-us-outlying-islands.png";
+  static const String emojionelagforuoutlyingislands =
+      "$baseImage/emojione_flag-for-us-outlying-islands.png";
   static const String Icon = "$baseImage/Icon.png";
   static const String Vector78 = "$baseImage/Vector78.png";
   static const String copy = "$baseImage/copy.png";
@@ -283,7 +293,8 @@ class ImageStyle {
   static const String Vector6 = "$baseImage/Vector-6.png";
   static const String Path122 = "$baseImage/Path122.png";
   static const String Group221 = "$baseImage/Group221.png";
-  static const String tiardschulzb8dA3eY5VrYunsplash = "$baseImage/tiard-schulz-b8dA3eY5VrY-unsplash.png";
+  static const String tiardschulzb8dA3eY5VrYunsplash =
+      "$baseImage/tiard-schulz-b8dA3eY5VrY-unsplash.png";
   static const String Path3425 = "$baseImage/Path3425.png";
 
   static const String eth = "$baseImage/eth.png";
@@ -315,7 +326,11 @@ class ImageStyle {
   static const String bgToSell = "$baseImage/bgToSell.png";
   static const String bgBuyBTC = "$baseImage/bgBuyBTC.png";
   static const String bgOrdComm = "$baseImage/bgOrdComm.png";
-  static const String bgCancelCryptoOrder = "$baseImage/bgCancelCryptoOrder.png";
+  static const String bgCancelCryptoOrder =
+      "$baseImage/bgCancelCryptoOrder.png";
   static const String bgRectangle125 = "$baseImage/bgRectangle125.png";
   static const String bgRectangle1255 = "$baseImage/bgRectangle1255.png";
+  static const String bgRectangle228 = "$baseImage/bgRectangle228.png";
+  static const String bgRectangle2281 = "$baseImage/bgRectangle2281.png";
+  static const String bgRectangle2282 = "$baseImage/bgRectangle2282.png";
 }

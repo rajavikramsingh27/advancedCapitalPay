@@ -17,6 +17,7 @@ import 'CryptoNewsCell.dart';
 import '../Views/CryptoTrade.dart';
 import '../Views/CryptoOrders.dart';
 import '../Views/CryptoRecieve.dart';
+import 'package:advanced_capital_pay/Views/CryptoRecieveAmount.dart';
 
 
 
@@ -224,7 +225,9 @@ class CryptoDashboard extends StatelessWidget {
                             mainAxisAlignment:
                             MainAxisAlignment.spaceBetween,
                             children: [
-                              iconTitle(ImageStyle.chartss, 'Send'),
+                              iconTitle(ImageStyle.chartss, 'Send', () {
+                                Get.to(CryptoRecieveAmount());
+                              }),
                               iconTitle(ImageStyle.charttts, 'Receive', () {
                                 Get.to(CryptoRecieve());
                               }),
