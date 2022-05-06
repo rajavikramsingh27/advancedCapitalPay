@@ -1,5 +1,6 @@
-import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
-import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import '../Components/ButtonCustom.dart';
+import '../Components/CountryFlag.dart';
+import '../Styles/ColorStyle.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,7 @@ import '../Components/BackgroundImage.dart';
 import '../Components/AppBarStyle.dart';
 import '../Components/TextFieldCustom.dart';
 import 'ForgotPassword/ForgotPassword.dart';
-import 'SignUp/PersonalApplication1.dart';
+import 'SignUp/SignUpPersonalApplication1.dart';
 
 
 class SignIn extends StatelessWidget {
@@ -24,6 +25,7 @@ class SignIn extends StatelessWidget {
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBarStyle(
+            leadingButton: CountryFlag.iconFlag(),
             trailingButton: IconButton(
               icon: Image.asset(
                 ImageStyle.chat,
@@ -211,7 +213,7 @@ class SignIn extends StatelessWidget {
                     ],
                   ),
                   onTap: () {
-                    Get.to(PersonalApplication1());
+                    Get.to(SignUpPersonalApplication1());
                   },
                 ),
               ],

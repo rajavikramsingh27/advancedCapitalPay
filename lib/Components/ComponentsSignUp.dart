@@ -6,7 +6,7 @@ import 'ButtonCustom.dart';
 
 
 class ComponentsSignUp {
-  static topProgress(int progress) {
+  static topProgress([String progress='-1']) {
     return Column(
       children: [
         Row(
@@ -19,7 +19,7 @@ class ComponentsSignUp {
               ),
             ),
             Text(
-              (progress*10).toString()+'%',
+              progress+'%',
               style: TextStylesPoppins.textStyles_14.apply(
                 color: ColorStyle.darkestBlueSignUp,
                 fontWeightDelta: 1,
@@ -40,7 +40,7 @@ class ComponentsSignUp {
         LinearProgressIndicator(
           backgroundColor: ColorStyle.grey,
           valueColor: AlwaysStoppedAnimation<Color>(ColorStyle.darkestBlueSignUp),
-          value: progress/10,
+          value: int.parse(progress)/10,
         ),
       ],
     );
@@ -65,7 +65,7 @@ class ComponentsSignUp {
                     TextSpan(text: 'Please follow the instructions provided throughout the application to apply to on-board as an AdvanceCapitalClient. If you have previously started an application.',
                       style: TextStylesPoppins.textStyles_14.apply(
                         color: ColorStyle.secondryBlack,
-                        fontWeightDelta: 1,
+                        // fontWeightDelta: 1,
                       ),
                     ),
                     TextSpan(
@@ -156,14 +156,29 @@ class ComponentsSignUp {
     );
   }
 
-  static title(String text) {
-    return Text(
-      text,
-      style: TextStylesPoppins.textStyles_20.apply(
-        color: ColorStyle.secondryBlack,
-        fontWeightDelta: 1,
+  static title(String title, [bool isStar = false]) {
+    return Text.rich(
+      TextSpan(
+        children: [
+          TextSpan(
+            text: title,
+            style: TextStylesPoppins.textStyles_14.apply(
+              color: ColorStyle.secondryBlack,
+              fontWeightDelta: 1,
+            ),
+          ),
+          if (isStar)
+            TextSpan(
+              text: '*',
+              style: TextStylesPoppins.textStyles_14.apply(
+                color: Colors.red,
+                fontWeightDelta: 1,
+              ),
+            ),
+        ],
       ),
     );
+
   }
 }
 

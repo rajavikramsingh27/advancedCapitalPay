@@ -130,19 +130,18 @@ class _CountryPickerState extends State<CountryPicker> {
 class CountryPickerPhoneCode extends StatefulWidget {
   double radius;
   Color colorBorder;
-  IconData? iconArrow;
+  Widget? icon;
   EdgeInsets padding;
-  Color colorIcon;
   TextStyle textStyle;
+  Color? colorBG;
 
   CountryPickerPhoneCode({Key? key,
     this.radius = 4,
     this.colorBorder = Colors.grey,
-    this.iconArrow,
-  // this.iconArrow = Icons.arrow_drop_down_outlined,
+    this.icon,
     this.padding = const EdgeInsets.only(left: 10, right: 10, top: 14, bottom: 14),
-    this.colorIcon = Colors.grey,
-    this.textStyle = const TextStyle()
+    this.textStyle = const TextStyle(),
+    this.colorBG,
   }) : super(key: key);
 
   String flagEmoji = '🇬🇧';
@@ -162,6 +161,7 @@ class _CountryPickerPhoneCodeState extends State<CountryPickerPhoneCode> {
       child: Container(
         padding: widget.padding,
         decoration: BoxDecoration(
+            color: widget.colorBG,
             borderRadius: EffectStyle.radiusCustom(widget.radius),
             border: Border.all(
               color: widget.colorBorder,
@@ -182,7 +182,7 @@ class _CountryPickerPhoneCodeState extends State<CountryPickerPhoneCode> {
                   ),
                   // Icon(Icons.flag, size: 26,),
                   SizedBox(
-                    width: 4,
+                    width: 6,
                   ),
                   Text(
                     "+"+widget.phoneCode,
@@ -192,9 +192,9 @@ class _CountryPickerPhoneCodeState extends State<CountryPickerPhoneCode> {
                       fontWeightDelta: 2,
                     ) : widget.textStyle,
                   ),
-                  // SizedBox(
-                  //   width: 4,
-                  // ),
+                  SizedBox(
+                    width: 2,
+                  ),
                   Expanded(
                     child: Text(
                       widget.countryCode,
@@ -208,21 +208,15 @@ class _CountryPickerPhoneCodeState extends State<CountryPickerPhoneCode> {
                 ],
               ),
             ),
-            if (widget.iconArrow != null)
-              Icon(
-              widget.iconArrow,
-              size: 26,
-              color: widget.colorIcon,
-            ),
+            if (widget.icon != null)
+              widget.icon!
           ],
         ),
       ),
       onTap: () {
         showCountryPicker(
           context: context,
-          //Optional.  Can be used to exclude(remove) one ore more country from the countries list (optional).
           exclude: <String>['KN', 'MF'],
-          //Optional. Shows phone code before the country name.
           showPhoneCode: true,
           showWorldWide: false,
           onSelect: (Country country) {

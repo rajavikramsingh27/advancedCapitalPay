@@ -15,7 +15,7 @@ import '../Components/BackgroundImage.dart';
 import '../Components/AppBarStyle.dart';
 import '../Components/TextFieldCustom.dart';
 import 'ForgotPassword/ForgotPassword.dart';
-import 'SignUp/PersonalApplication1.dart';
+import 'SignUp/SignUpPersonalApplication1.dart';
 
 class SavingGoal2 extends StatelessWidget {
   const SavingGoal2({Key? key}) : super(key: key);

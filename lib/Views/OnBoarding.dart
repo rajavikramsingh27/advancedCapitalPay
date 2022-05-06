@@ -11,7 +11,8 @@ import '../Styles/ColorStyle.dart';
 import '../Styles/TextStyles.dart';
 import '../Views/SignIn.dart';
 import '../Components/BioMatricAuth.dart';
-
+import '../Components/CountryFlag.dart';
+import '../Views/SignUp/SignUpPersonalApplication1.dart';
 
 class OnBoarding extends StatefulWidget {
   const OnBoarding({Key? key}) : super(key: key);
@@ -25,6 +26,7 @@ class _OnBoardingState extends State<OnBoarding> {
   int indexPage = 0;
 
   int totalPages = 4;
+
 
   @override
   void initState() {
@@ -85,9 +87,19 @@ class _OnBoardingState extends State<OnBoarding> {
                       children: [
                         Container(
                           margin: EdgeInsets.only(top: 10),
-                          child: Image.asset(
-                            ImageStyle.logo_white,
-                            height: 52,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              if (index == 0)
+                                SizedBox(width: 60,),
+                              if (index != 0)
+                                CountryFlag.iconFlag(),
+                              Image.asset(
+                                ImageStyle.logo_white,
+                                height: 52,
+                              ),
+                              SizedBox(width: 60,),
+                            ],
                           ),
                         ),
                         if (index == 0)
@@ -252,26 +264,31 @@ class _OnBoardingState extends State<OnBoarding> {
                               textStyle: TextStylesPoppins.textStyles_16
                                   .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                               onTap: () {
-                                Get.to(SignIn());
+                                Get.to(SignUpPersonalApplication1());
                               },
                             ),
                             SizedBox(
                               height: 16,
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'I already have an account',
-                                  style: TextStylesPoppins.textStyles_12
-                                      .apply(color: ColorStyle.primaryWhite),
-                                ),
-                                Icon(
-                                  Icons.navigate_next,
-                                  color: ColorStyle.primaryWhite,
-                                  size: 30,
-                                )
-                              ],
+                            InkWell(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'I already have an account',
+                                    style: TextStylesPoppins.textStyles_12
+                                        .apply(color: ColorStyle.primaryWhite),
+                                  ),
+                                  Icon(
+                                    Icons.navigate_next,
+                                    color: ColorStyle.primaryWhite,
+                                    size: 30,
+                                  )
+                                ],
+                              ),
+                              onTap: () {
+                                Get.to(SignIn());
+                              },
                             ),
                             SizedBox(
                               height: 130,

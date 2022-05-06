@@ -14,7 +14,7 @@ import '../Components/BackgroundImage.dart';
 import '../Components/AppBarStyle.dart';
 import '../Components/TextFieldCustom.dart';
 import 'ForgotPassword/ForgotPassword.dart';
-import 'SignUp/PersonalApplication1.dart';
+import 'SignUp/SignUpPersonalApplication1.dart';
 import '../Views/NewBeneficiarySummary.dart';
 import '../Views/TransferBetweenAccount.dart';
 import '../Views/StandingOrders.dart';

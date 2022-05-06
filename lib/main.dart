@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
-import '../Views/NotEnoughBalances.dart';
+import '../Views/SignIn.dart';
 
 import '../Views/CryptoScanOrTake.dart';
 import '../Views/CryptoRequestAmount.dart';
 import '../Views/CryptoRecieveAmount.dart';
-import '../Views/CryptoTransactionList.dart';
+import '../Views/SplashScreen.dart';
 import '../Views/SendBitcoins1.dart';
 import '../Views/CryptoTransactionDetails.dart';
 import '../Views/TransactionSummarys.dart';
@@ -40,8 +40,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
         // home: SplashScreen(),
       // home: CryptoTrade(),
-      // home: CryptoOrders(),
-      home: CryptoTransactionList(),
+      // home: SignIn(),
+      home: SplashScreen(),
       // home: Exchange(),
       // home: TabbarScreen(),
       // home: CryptoRequestAmount(),

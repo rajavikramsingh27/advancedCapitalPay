@@ -180,7 +180,16 @@ class ImageStyle {
       "$baseImage/cardDailyAccountBalance.png";
 
   static const String English = "$baseImage/English.png";
+  static const String arabic = "$baseImage/arabic.png";
+  static const String espanol = "$baseImage/espanol.png";
+
+  static const String france = "$baseImage/france.png";
+  static const String netherland = "$baseImage/netherland.png";
   static const String Deutsch = "$baseImage/Deutsch.png";
+
+  static const String italino = "$baseImage/italino.png";
+  static const String china = "$baseImage/china.png";
+
   static const String Turkce = "$baseImage/Turkce.png";
   static const String Easti = "$baseImage/Easti.png";
   static const String Esponol = "$baseImage/Esponol.png";
@@ -333,4 +342,6 @@ class ImageStyle {
   static const String bgRectangle228 = "$baseImage/bgRectangle228.png";
   static const String bgRectangle2281 = "$baseImage/bgRectangle2281.png";
   static const String bgRectangle2282 = "$baseImage/bgRectangle2282.png";
+  static const String flagCountry = "$baseImage/flagCountry.png";
+  static const String bgPolygon4 = "$baseImage/bgPolygon4.png";
 }
