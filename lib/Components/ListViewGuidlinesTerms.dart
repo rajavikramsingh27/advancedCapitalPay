@@ -16,7 +16,9 @@ class ListViewGuidlinesTerms extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        if (title!.isNotEmpty)
         SizedBox(height: 16,),
+        if (title!.isNotEmpty)
         Text(
           title!,
           textAlign: TextAlign.left,

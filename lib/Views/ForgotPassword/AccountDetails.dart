@@ -123,7 +123,6 @@ class AccountDetails extends StatelessWidget {
                   colorBorder: ColorStyle.secondryBlack,
                   iconWidget: Icon(Icons.keyboard_arrow_down, color: ColorStyle.secondryBlack,),
                   radiusBorder: 30,
-                  height: 60,
                   padding: EdgeInsets.only(
                     left: 16, right: 16
                   ),

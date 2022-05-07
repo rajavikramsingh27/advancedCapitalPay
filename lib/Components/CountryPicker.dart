@@ -166,47 +166,39 @@ class _CountryPickerPhoneCodeState extends State<CountryPickerPhoneCode> {
             border: Border.all(
               color: widget.colorBorder,
               width: 1,
-            )),
+            ),
+        ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Expanded(
-              child: Row(
-                children: [
-                  Text(
-                    widget.flagEmoji,
-                    style: TextStylesPoppins.textStyles_14.apply(
-                      color: ColorStyle.secondryBlack,
-                      fontWeightDelta: 0,
-                    ),
-                  ),
-                  // Icon(Icons.flag, size: 26,),
-                  SizedBox(
-                    width: 6,
-                  ),
-                  Text(
-                    "+"+widget.phoneCode,
-                    style: (widget.phoneCode == '44')
-                    ? TextStylesPoppins.textStyles_14.apply(
-                      color: ColorStyle.grey,
-                      fontWeightDelta: 2,
-                    ) : widget.textStyle,
-                  ),
-                  SizedBox(
-                    width: 2,
-                  ),
-                  Expanded(
-                    child: Text(
-                      widget.countryCode,
-                      style: (widget.phoneCode == '44')
-                          ? TextStylesPoppins.textStyles_14.apply(
-                        color: ColorStyle.grey,
-                        fontWeightDelta: 2,
-                      ) : widget.textStyle,
-                    ),
-                  ),
-                ],
+            Text(
+              widget.flagEmoji,
+              style: TextStylesPoppins.textStyles_14.apply(
+                color: ColorStyle.secondryBlack,
+                fontWeightDelta: 0,
               ),
+            ),
+            SizedBox(
+              width: 6,
+            ),
+            Text(
+              "+"+widget.phoneCode,
+              style: (widget.phoneCode == '44')
+                  ? TextStylesPoppins.textStyles_14.apply(
+                color: ColorStyle.grey,
+                fontWeightDelta: 2,
+              ) : widget.textStyle,
+            ),
+            SizedBox(
+              width: 2,
+            ),
+            Text(
+              widget.countryCode,
+              style: (widget.phoneCode == '44')
+                  ? TextStylesPoppins.textStyles_14.apply(
+                color: ColorStyle.grey,
+                fontWeightDelta: 2,
+              ) : widget.textStyle,
             ),
             if (widget.icon != null)
               widget.icon!
@@ -257,7 +249,6 @@ class _CountryPickerPhoneCodeState extends State<CountryPickerPhoneCode> {
     );
   }
 }
-
 
 class CountryPickerCountryCode extends StatefulWidget {
   double radius;
@@ -313,22 +304,25 @@ class _CountryPickerCountryCodeState extends State<CountryPickerCountryCode> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Expanded(child: Text(
-              widget.flagEmoji,
-              style: TextStyle(
-                  fontSize: widget.fontSizeFlagEmoji
-              ),
-            )),
-            Expanded(
-              child: Text(
-                widget.countryCode,
-                textAlign: TextAlign.center,
-                style: (widget.countryCode == 'United Kingdom')
-                    ? TextStylesPoppins.textStyles_14.apply(
-                  color: ColorStyle.grey,
-                  fontWeightDelta: 2,
-                ) : widget.textStyle,
-              ),
+            Row(
+              children: [
+                Text(
+                  widget.flagEmoji,
+                  style: TextStyle(
+                      fontSize: widget.fontSizeFlagEmoji
+                  ),
+                ),
+                SizedBox(width: 6,),
+                Text(
+                  widget.countryCode,
+                  textAlign: TextAlign.center,
+                  style: (widget.countryCode == 'United Kingdom')
+                      ? TextStylesPoppins.textStyles_14.apply(
+                    color: ColorStyle.grey,
+                    fontWeightDelta: 2,
+                  ) : widget.textStyle,
+                ),
+              ],
             ),
             widget.icon!
           ],

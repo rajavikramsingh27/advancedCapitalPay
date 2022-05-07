@@ -110,7 +110,6 @@ class TermsAndConditions extends StatelessWidget {
                         ),
                         SizedBox(height:  20),
                         Text(
-
                               ' Advance Capital Limited, Trading as Advance Capital Pay '
                               " ('Advance','Capital', 'Capitals', 'we', 'our' or 'us') "
     ' Composed of multiple legal entities, including but not limited to, Advance Capital Limited '

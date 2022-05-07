@@ -17,7 +17,9 @@ import '../../Controllers/SignUp/SignUpAuthorizedSignaturesController.dart';
 
 
 class SignUpPersonalAuthorizedSignatures extends StatelessWidget {
-  SignUpPersonalAuthorizedSignatures({Key? key}) : super(key: key);
+  final String? confirmMeDetails;
+
+  SignUpPersonalAuthorizedSignatures({Key? key, this.confirmMeDetails}) : super(key: key);
   final controller = Get.put(SignUpAuthorizedSignaturesController());
 
   @override
@@ -83,8 +85,12 @@ class SignUpPersonalAuthorizedSignatures extends StatelessWidget {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    ComponentsSignUp.title(
-                                      'Account authorized signatures',
+                                    Text(
+                                  'Account authorized signatures',
+                                      style: TextStylesPoppins.textStyles_20.apply(
+                                        color: ColorStyle.secondryBlack,
+                                        fontWeightDelta: 0,
+                                      ),
                                     ),
                                     SizedBox(
                                       height: 12,
@@ -121,6 +127,17 @@ class SignUpPersonalAuthorizedSignatures extends StatelessWidget {
                                                 style: TextStylesPoppins.textStyles_20.apply(
                                                   color: ColorStyle.secondryBlack,
                                                   // fontWeightDelta: 1,
+                                                ),
+                                              ),
+
+                                              if (confirmMeDetails != null)
+                                                SizedBox(height: 6,),
+                                              if (confirmMeDetails != null)
+                                                Text(
+                                                confirmMeDetails!,
+                                                style: TextStylesPoppins.textStyles_14.apply(
+                                                  color: ColorStyle.secondryBlack,
+                                                  fontWeightDelta: 0,
                                                 ),
                                               ),
                                             ],

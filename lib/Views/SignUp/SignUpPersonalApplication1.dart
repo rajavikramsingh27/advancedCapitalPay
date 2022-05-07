@@ -12,7 +12,7 @@ import '../../Components/DropdownButtonCustom.dart';
 import '../SignUp/EffectStyleSignUp.dart';
 import '../../Components/ComponentsSignUp.dart';
 import '../../Components/CountryPicker.dart';
-import 'SignUpPersonalApplication2.dart';
+import 'SignUpCorrespondenceAddress.dart';
 import '../../Components/TitleStar.dart';
 import '../../Controllers/SignUp/SignUpPersonalApplication1Controller.dart';
 
@@ -577,7 +577,7 @@ class SignUpPersonalApplication1 extends StatelessWidget {
                                     ComponentsSignUp.backContinue('Back to site', () {
 
                                     }, 'Continue', () {
-                                      Get.to(SignUpPersonalApplication2());
+                                      Get.to(SignUpCorrespondenceAddress(addressType: 'Personal',));
                                     })
                                   ],
                                 ),

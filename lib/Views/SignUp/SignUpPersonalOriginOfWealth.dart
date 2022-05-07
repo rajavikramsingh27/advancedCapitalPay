@@ -1,7 +1,7 @@
 import 'package:advanced_capital_pay/Components/ListViewGuidlinesTerms.dart';
 
 import '../../Components/TitleStar.dart';
-import '../SignUp/SignUpPersonalApplication8.dart';
+import '../SignUp/SignUpPersonalDocumentUpload.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -16,6 +16,9 @@ import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../SignUp/EffectStyleSignUp.dart';
 import '../../Components/ComponentsSignUp.dart';
+import '../SignUp/SelectFiles.dart';
+
+
 
 class SignUpPersonalOriginOfWealth extends StatelessWidget {
   SignUpPersonalOriginOfWealth({Key? key}) : super(key: key);
@@ -206,57 +209,9 @@ class SignUpPersonalOriginOfWealth extends StatelessWidget {
                                     SizedBox(
                                       height: 6,
                                     ),
-                                    Container(
-                                      alignment: Alignment.topCenter,
-                                      padding: EffectStyle.padding(20, 20, 14, 0),
-                                      child: Container(
-                                        height: 50,
-                                        child: Row(
-                                          mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                          children: [
-                                            Container(
-                                              child: Icon(
-                                                Icons.add,
-                                                size: 18,
-                                                color: ColorStyle.darkestBlueSignUp,
-                                              ),
-                                              height: 25,
-                                              width: 25,
-                                              decoration: BoxDecoration(
-                                                borderRadius:
-                                                BorderRadius.circular(20),
-                                                border: Border.all(
-                                                  width: 1.8,
-                                                  color:
-                                                  ColorStyle.darkestBlueSignUp,
-                                                ),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              width: 10,
-                                            ),
-                                            Text(
-                                              'Select Files',
-                                              style: TextStylesPoppins.textStyles_16.apply(
-                                                color: ColorStyle.darkestBlueSignUp,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        decoration: EffectStyleSignUp.decoration(
-                                            ColorStyle.primaryWhite, 4),
-                                        // decoration: BoxDecoration(
-                                        //     color: ColorStyle.primaryWhite,
-                                        //     border: Border.all(
-                                        //       width: 1.8,
-                                        //       color: ColorStyle.blueSKY,
-                                        //     ),
-                                        //     borderRadius: BorderRadius.circular(4)),
-                                      ),
-                                      height: 150,
-                                      decoration: EffectStyleSignUp.decoration(
-                                          ColorStyle.hex('#F2FCFE'), 4),
+                                    SelectFiles(
+                                        colorBG: Colors.transparent,
+                                        colorBorder: ColorStyle.darkestBlueSignUp
                                     ),
                                     SizedBox(
                                       height: 22,
@@ -289,57 +244,9 @@ class SignUpPersonalOriginOfWealth extends StatelessWidget {
                                     SizedBox(
                                       height: 6,
                                     ),
-                                    Container(
-                                      alignment: Alignment.topCenter,
-                                      padding: EffectStyle.padding(20, 20, 14, 0),
-                                      child: Container(
-                                        height: 50,
-                                        child: Row(
-                                          mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                          children: [
-                                            Container(
-                                              child: Icon(
-                                                Icons.add,
-                                                size: 18,
-                                                color: ColorStyle.darkestBlueSignUp,
-                                              ),
-                                              height: 25,
-                                              width: 25,
-                                              decoration: BoxDecoration(
-                                                borderRadius:
-                                                BorderRadius.circular(20),
-                                                border: Border.all(
-                                                  width: 1.8,
-                                                  color:
-                                                  ColorStyle.darkestBlueSignUp,
-                                                ),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              width: 10,
-                                            ),
-                                            Text(
-                                              'Select Files',
-                                              style: TextStylesPoppins.textStyles_16.apply(
-                                                color: ColorStyle.darkestBlueSignUp,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        decoration: EffectStyleSignUp.decoration(
-                                            ColorStyle.primaryWhite, 4),
-                                        // decoration: BoxDecoration(
-                                        //     color: ColorStyle.primaryWhite,
-                                        //     border: Border.all(
-                                        //       width: 1.8,
-                                        //       color: ColorStyle.blueSKY,
-                                        //     ),
-                                        //     borderRadius: BorderRadius.circular(4)),
-                                      ),
-                                      height: 150,
-                                      decoration: EffectStyleSignUp.decoration(
-                                          ColorStyle.hex('#F2FCFE'), 4),
+                                    SelectFiles(
+                                        colorBG: Colors.transparent,
+                                        colorBorder: ColorStyle.darkestBlueSignUp
                                     ),
                                     SizedBox(
                                       height: 22,
@@ -481,7 +388,7 @@ class SignUpPersonalOriginOfWealth extends StatelessWidget {
 
                                     ComponentsSignUp.backContinue(
                                         'Back', () {}, 'Submit', () {
-                                      Get.to(SignUpPersonalApplication8());
+                                      Get.to(SignUpPersonalDocumentUpload());
                                     })
                                   ],
                                 ),

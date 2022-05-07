@@ -1,3 +1,6 @@
+import 'package:advanced_capital_pay/Components/CountryPicker.dart';
+
+import '../../Components/TextFieldCustom.dart';
 import '../SignUp/SignUpBusinessApplication2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,7 +13,10 @@ import '../../Styles/EffectStyle.dart';
 import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../../Components/ComponentsSignUp.dart';
+import '../../Components/TitleStar.dart';
 import '../SignUp/EffectStyleSignUp.dart';
+import '../../Views/SignUp/SignUpCorrespondenceAddress.dart';
+
 
 class SignUpBusinessApplication1 extends StatelessWidget {
   const SignUpBusinessApplication1({Key? key}) : super(key: key);
@@ -41,7 +47,7 @@ class SignUpBusinessApplication1 extends StatelessWidget {
                   SizedBox(
                     height: 12,
                   ),
-                  ComponentsSignUp.topProgress('0'),
+                  ComponentsSignUp.topProgress('39'),
                   SizedBox(
                     height: 16,
                   ),
@@ -76,108 +82,105 @@ class SignUpBusinessApplication1 extends StatelessWidget {
                                   'Business Profile',
                                   style: TextStylesPoppins.textStyles_20.apply(
                                     color: ColorStyle.secondryBlack,
-                                    fontWeightDelta: 1,
+                                    // fontWeightDelta: 1,
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 12,
+                                  height: 6,
                                 ),
                                 Text(
                                   'Enter the data requires in sections below to complete your Business Profile.',
                                   style: TextStylesPoppins.textStyles_14.apply(
                                     color: ColorStyle.secondryBlack,
+                                    // fontWeightDelta: 1,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 30,
+                                ),
+                                TitleStar.titleStar(
+                                    'Legal Company name',
+                                    true,
+                                  14, FontWeight.w500
+                                ),
+                                SizedBox(
+                                  height: 6,
+                                ),
+                                TextFieldCustomOutline(
+                                  padding: EffectStyle.padding(10, 10, 10, 10),
+                                  hintText: 'The name provided must exactly match',
+                                  textStyle: TextStylesPoppins.textStyles_14.apply(
+                                    color: Colors.black,
                                     fontWeightDelta: 1,
                                   ),
+                                  colorFill: ColorStyle.primaryWhite,
+                                  colorBoder: Colors.black12,
+                                  radiusBorder: 2,
+                                ),
+
+
+
+
+
+
+                                SizedBox(
+                                  height: 16,
+                                ),
+                                TitleStar.titleStar(
+                                    'Which currencies will you plan on exchanging to',
+                                    true,
+                                    14, FontWeight.w500
                                 ),
                                 SizedBox(
-                                  height: 28,
+                                  height: 6,
                                 ),
-                                Text(
-                                  'Legal Company name',
-                                  style: TextStylesPoppins.textStyles_14.apply(
-                                    color: ColorStyle.secondryBlack,
+                                CountryPicker(
+                                  colorBG: ColorStyle.primaryWhite,
+                                  colorBorder: Colors.black12,
+                                  icon: Icon(Icons.arrow_drop_down, color: ColorStyle.grey, size: 26,),
+                                ),
+                                SizedBox(
+                                  height: 16,
+                                ),
+                                TitleStar.titleStar(
+                                    'Year of Incorporation',
+                                    true,
+                                    14, FontWeight.w500
+                                ),
+                                SizedBox(
+                                  height: 6,
+                                ),
+                                TextFieldCustomOutline(
+                                  padding: EffectStyle.padding(10, 10, 10, 10),
+                                  hintText: 'Middle Name (Optional)',
+                                  textStyle: TextStylesPoppins.textStyles_14.apply(
+                                    color: Colors.black,
                                     fontWeightDelta: 1,
                                   ),
+                                  colorFill: ColorStyle.primaryWhite,
+                                  colorBoder: Colors.black12,
+                                  radiusBorder: 2,
                                 ),
                                 SizedBox(
-                                  height: 12,
+                                  height: 16,
                                 ),
-                                TextField(
-                                  // obscureText: true,
-                                  decoration: InputDecoration(
-                                    border: OutlineInputBorder(),
-                                    labelText:
-                                        'The name provided must exactly match t',
-                                    labelStyle: TextStylesPoppins.textStyles_14.apply(
-                                      color: Colors.grey,
-                                      fontWeightDelta: 1,
-                                    ),
-                                  ),
+                                TitleStar.titleStar(
+                                    'Legal Status',
+                                    true,
+                                    14, FontWeight.w500
                                 ),
                                 SizedBox(
-                                  height: 12,
-                                ),
-                                Text(
-                                  'Which currencies will you plan on exchanging to',
-                                  style: TextStylesPoppins.textStyles_14.apply(
-                                    color: ColorStyle.secondryBlack,
-                                    fontWeightDelta: 1,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 8,
+                                  height: 6,
                                 ),
                                 DropdownButtonCustom(
-                                  colorBorder: Colors.grey,
-                                  onChanged: (text) {},
-                                  listValue: [
-                                    'Country',
-                                    'India',
-                                    'Amarica',
-                                    'Dubey'
-                                  ],
-                                  selectedValue: "Country",
-                                ),
-                                SizedBox(
-                                  height: 12,
-                                ),
-                                Text(
-                                  'Year of Incorporation',
-                                  style: TextStylesPoppins.textStyles_14.apply(
-                                    color: ColorStyle.secondryBlack,
+                                  padding: EffectStyle.padding(10, 10, 10, 10),
+                                  colorBorder: Colors.black12,
+                                  radiusBorder: 2,
+                                  textStyle: TextStylesPoppins.textStyles_14.apply(
+                                    color: Colors.black,
                                     fontWeightDelta: 1,
                                   ),
-                                ),
-                                SizedBox(
-                                  height: 8,
-                                ),
-                                TextField(
-                                  // obscureText: true,
-                                  decoration: InputDecoration(
-                                    border: OutlineInputBorder(),
-                                    labelText:
-                                        'Please enter year of incorporation',
-                                    labelStyle: TextStylesPoppins.textStyles_14.apply(
-                                      color: Colors.grey,
-                                      fontWeightDelta: 1,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 12,
-                                ),
-                                Text(
-                                  'Legal Status',
-                                  style: TextStylesPoppins.textStyles_14.apply(
-                                    color: ColorStyle.secondryBlack,
-                                    fontWeightDelta: 1,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 8,
-                                ),
-                                DropdownButtonCustom(
-                                  colorBorder: Colors.grey,
+                                  iconWidget: Icon(Icons.arrow_drop_down, color: ColorStyle.grey, size: 26,),
                                   onChanged: (text) {},
                                   listValue: [
                                     'Limited',
@@ -185,122 +188,152 @@ class SignUpBusinessApplication1 extends StatelessWidget {
                                   selectedValue: "Limited",
                                 ),
                                 SizedBox(
-                                  height: 12,
+                                  height: 16,
                                 ),
-                                Text(
-                                  'Company Registration Number',
-                                  style: TextStylesPoppins.textStyles_14.apply(
-                                    color: ColorStyle.secondryBlack,
+                                TitleStar.titleStar(
+                                    'Company Registration Number',
+                                    true,
+                                    14, FontWeight.w500
+                                ),
+                                SizedBox(
+                                  height: 6,
+                                ),
+                                TextFieldCustomOutline(
+                                  padding: EffectStyle.padding(10, 10, 10, 10),
+                                  hintText: 'Please enter your company registration',
+                                  textStyle: TextStylesPoppins.textStyles_14.apply(
+                                    color: Colors.black,
                                     fontWeightDelta: 1,
                                   ),
+                                  colorFill: ColorStyle.primaryWhite,
+                                  colorBoder: Colors.black12,
+                                  radiusBorder: 2,
                                 ),
                                 SizedBox(
-                                  height: 8,
+                                  height: 16,
                                 ),
-                                TextField(
-                                  // obscureText: true,
-                                  decoration: InputDecoration(
-                                    border: OutlineInputBorder(),
-                                    labelText:
-                                        'Please enter your company registration n',
-                                    labelStyle: TextStylesPoppins.textStyles_14.apply(
-                                      color: Colors.grey,
-                                      fontWeightDelta: 1,
-                                    ),
-                                  ),
+                                TitleStar.titleStar(
+                                    'Nature of Business',
+                                    true,
+                                    14, FontWeight.w500
                                 ),
                                 SizedBox(
-                                  height: 12,
+                                  height: 6,
                                 ),
-                                Text(
-                                  'Nature of Business',
-                                  style: TextStylesPoppins.textStyles_14.apply(
-                                    color: ColorStyle.secondryBlack,
+                                TextFieldCustomOutline(
+                                  maxLines: 2,
+                                  padding: EffectStyle.padding(10, 10, 10, 10),
+                                  hintText: 'Provide a detailed explanation of the Nature of your business',
+                                  textStyle: TextStylesPoppins.textStyles_14.apply(
+                                    color: Colors.black,
                                     fontWeightDelta: 1,
                                   ),
+                                  colorFill: ColorStyle.primaryWhite,
+                                  colorBoder: Colors.black12,
+                                  radiusBorder: 2,
                                 ),
                                 SizedBox(
-                                  height: 8,
+                                  height: 16,
                                 ),
-                                TextField(
-                                  // obscureText: true,
-                                  decoration: InputDecoration(
-                                    border: OutlineInputBorder(),
-                                    labelText:
-                                        'Provide a detailed explanation of the Nature of your business',
-                                    labelStyle: TextStylesPoppins.textStyles_14.apply(
-                                      color: Colors.grey,
-                                      fontWeightDelta: 1,
-                                    ),
+                                TitleStar.titleStar(
+                                    'Business Telephone Number',
+                                    true,
+                                    14, FontWeight.w500
+                                ),
+                                SizedBox(
+                                  height: 6,
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: ColorStyle.primaryWhite,
+                                    border: Border.all(
+                                      color: Colors.black12,
+                                      width: 1
+                                    )
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      CountryPickerPhoneCode(
+                                        colorBG: ColorStyle.primaryWhite,
+                                        colorBorder: Colors.transparent,
+                                        icon: Icon(Icons.arrow_drop_down, color: ColorStyle.grey, size: 26,),
+                                        padding: EffectStyle.padding(10, 0, 0, 0),
+                                      ),
+                                      Expanded(child: TextFieldCustomOutline(
+                                        padding: EffectStyle.padding(0, 10, 10, 10),
+                                        hintText: '',
+                                        textStyle: TextStylesPoppins.textStyles_14.apply(
+                                          color: Colors.black,
+                                          fontWeightDelta: 1,
+                                        ),
+                                        colorFill: ColorStyle.primaryWhite,
+                                        colorBoder: Colors.transparent,
+                                        radiusBorder: 2,
+                                      ),)
+                                    ],
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 12,
+                                  height: 16,
                                 ),
-                                Text(
-                                  'Business Telephone Number',
-                                  style: TextStylesPoppins.textStyles_14.apply(
-                                    color: ColorStyle.secondryBlack,
-                                    fontWeightDelta: 1,
+                                TitleStar.titleStar(
+                                    'Additional Telephone Number ( if Applcable)',
+                                    false,
+                                    14, FontWeight.w500
+                                ),
+                                SizedBox(
+                                  height: 6,
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                      color: ColorStyle.primaryWhite,
+                                      border: Border.all(
+                                          color: Colors.black12,
+                                          width: 1
+                                      )
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      CountryPickerPhoneCode(
+                                        colorBG: ColorStyle.primaryWhite,
+                                        colorBorder: Colors.transparent,
+                                        icon: Icon(Icons.arrow_drop_down, color: ColorStyle.grey, size: 26,),
+                                        padding: EffectStyle.padding(10, 0, 0, 0),
+                                      ),
+                                      Expanded(child: TextFieldCustomOutline(
+                                        padding: EffectStyle.padding(0, 10, 10, 10),
+                                        hintText: '',
+                                        textStyle: TextStylesPoppins.textStyles_14.apply(
+                                          color: Colors.black,
+                                          fontWeightDelta: 1,
+                                        ),
+                                        colorFill: ColorStyle.primaryWhite,
+                                        colorBoder: Colors.transparent,
+                                        radiusBorder: 2,
+                                      ),)
+                                    ],
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 8,
-                                ),
-                                DropdownButtonCustom(
-                                  colorBorder: Colors.grey,
-                                  onChanged: (text) {},
-                                  listValue: [
-                                    '+355 Albania',
-                                  ],
-                                  selectedValue: "+355 Albania",
-                                ),
-                                SizedBox(
-                                  height: 12,
-                                ),
-                                SizedBox(
-                                  height: 12,
-                                ),
-                                Text(
-                                  'Additionam Telephone Number ( if Applcable)',
-                                  style: TextStylesPoppins.textStyles_14.apply(
-                                    color: ColorStyle.secondryBlack,
-                                    fontWeightDelta: 1,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                DropdownButtonCustom(
-                                  colorBorder: Colors.grey,
-                                  onChanged: (text) {},
-                                  listValue: [
-                                    '+355 Albania',
-                                  ],
-                                  selectedValue: "+355 Albania",
-                                ),
-                                SizedBox(
-                                  height: 12,
+                                  height: 16,
                                 ),
                                 Row(
                                   children: [
                                     Expanded(
-                                      child: TextField(
-                                        // obscureText: true,
-                                        decoration: InputDecoration(
-                                          border: OutlineInputBorder(),
-                                          labelText:
-                                              'please enter your personal email',
-                                          labelStyle:
-                                              TextStylesPoppins.textStyles_14.apply(
-                                            color: Colors.grey,
-                                            fontWeightDelta: 1,
-                                          ),
+                                      child: TextFieldCustomOutline(
+                                        padding: EffectStyle.padding(10, 10, 10, 10),
+                                        hintText: 'please enter your personal email',
+                                        textStyle: TextStylesPoppins.textStyles_14.apply(
+                                          color: Colors.black,
+                                          fontWeightDelta: 1,
                                         ),
+                                        colorFill: ColorStyle.primaryWhite,
+                                        colorBoder: Colors.black12,
+                                        radiusBorder: 2,
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 12,
+                                      width: 10,
                                     ),
                                     Container(
                                       height: 25,
@@ -316,27 +349,25 @@ class SignUpBusinessApplication1 extends StatelessWidget {
                                   ],
                                 ),
                                 SizedBox(
-                                  height: 12,
+                                  height: 6,
                                 ),
                                 Row(
                                   children: [
                                     Expanded(
-                                      child: TextField(
-                                        // obscureText: true,
-                                        decoration: InputDecoration(
-                                          border: OutlineInputBorder(),
-                                          labelText:
-                                              'please enter your personal email',
-                                          labelStyle:
-                                              TextStylesPoppins.textStyles_14.apply(
-                                            color: Colors.grey,
-                                            fontWeightDelta: 1,
-                                          ),
+                                      child: TextFieldCustomOutline(
+                                        padding: EffectStyle.padding(10, 10, 10, 10),
+                                        hintText: 'please enter your personal email',
+                                        textStyle: TextStylesPoppins.textStyles_14.apply(
+                                          color: Colors.black,
+                                          fontWeightDelta: 1,
                                         ),
+                                        colorFill: ColorStyle.primaryWhite,
+                                        colorBoder: Colors.black12,
+                                        radiusBorder: 2,
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 12,
+                                      width: 10,
                                     ),
                                     Container(
                                       height: 25,
@@ -352,7 +383,7 @@ class SignUpBusinessApplication1 extends StatelessWidget {
                                   ],
                                 ),
                                 SizedBox(
-                                  height: 12,
+                                  height: 16,
                                 ),
                                 Text(
                                   'Regulatory body (Non-Compulstory)',
@@ -362,77 +393,69 @@ class SignUpBusinessApplication1 extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 8,
+                                  height: 6,
                                 ),
-                                TextField(
-                                  // obscureText: true,
-                                  decoration: InputDecoration(
-                                    border: OutlineInputBorder(),
-                                    labelText:
-                                        'if application, provide details of your compa',
-                                    labelStyle: TextStylesPoppins.textStyles_14.apply(
-                                      color: Colors.grey,
-                                      fontWeightDelta: 1,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 8,
-                                ),
-                                Text(
-                                  'Registration Number with Regulatory (Non-Compulstory)',
-                                  style: TextStylesPoppins.textStyles_14.apply(
-                                    color: ColorStyle.secondryBlack,
+                                TextFieldCustomOutline(
+                                  padding: EffectStyle.padding(10, 10, 10, 10),
+                                  hintText: 'if application, provide details of your company',
+                                  textStyle: TextStylesPoppins.textStyles_14.apply(
+                                    color: Colors.black,
                                     fontWeightDelta: 1,
                                   ),
+                                  colorFill: ColorStyle.primaryWhite,
+                                  colorBoder: Colors.black12,
+                                  radiusBorder: 2,
                                 ),
                                 SizedBox(
-                                  height: 8,
+                                  height: 16,
                                 ),
-                                TextField(
-                                  // obscureText: true,
-                                  decoration: InputDecoration(
-                                    border: OutlineInputBorder(),
-                                    labelText:
-                                        'if application, provide details of your compa',
-                                    labelStyle: TextStylesPoppins.textStyles_14.apply(
-                                      color: Colors.grey,
-                                      fontWeightDelta: 1,
-                                    ),
-                                  ),
+                                TitleStar.titleStar(
+                                    'Registration Number with Regulatory (Non-Compulstory)',
+                                    false,
+                                    14, FontWeight.w500
                                 ),
                                 SizedBox(
-                                  height: 22,
+                                  height: 6,
                                 ),
-                                Text(
-                                  'Business E-Mail Address',
-                                  style: TextStylesPoppins.textStyles_14.apply(
-                                    color: ColorStyle.secondryBlack,
+                                TextFieldCustomOutline(
+                                  padding: EffectStyle.padding(10, 10, 10, 10),
+                                  hintText: 'If applicable, provide details of your company',
+                                  textStyle: TextStylesPoppins.textStyles_14.apply(
+                                    color: Colors.black,
                                     fontWeightDelta: 1,
                                   ),
+                                  colorFill: ColorStyle.primaryWhite,
+                                  colorBoder: Colors.black12,
+                                  radiusBorder: 2,
                                 ),
                                 SizedBox(
-                                  height: 8,
+                                  height: 16,
+                                ),
+                                TitleStar.titleStar(
+                                    'Business E-Mail Address',
+                                    false,
+                                    14, FontWeight.w500
+                                ),
+                                SizedBox(
+                                  height: 6,
                                 ),
                                 Row(
                                   children: [
                                     Expanded(
-                                      child: TextField(
-                                        // obscureText: true,
-                                        decoration: InputDecoration(
-                                          border: OutlineInputBorder(),
-                                          labelText:
-                                              'please enter your phone E-mail address',
-                                          labelStyle:
-                                              TextStylesPoppins.textStyles_14.apply(
-                                            color: Colors.grey,
-                                            fontWeightDelta: 1,
-                                          ),
+                                      child: TextFieldCustomOutline(
+                                        padding: EffectStyle.padding(10, 10, 10, 10),
+                                        hintText: 'please enter your phone E-mail address',
+                                        textStyle: TextStylesPoppins.textStyles_14.apply(
+                                          color: Colors.black,
+                                          fontWeightDelta: 1,
                                         ),
+                                        colorFill: ColorStyle.primaryWhite,
+                                        colorBoder: Colors.black12,
+                                        radiusBorder: 2,
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 12,
+                                      width: 10,
                                     ),
                                     Container(
                                       height: 25,
@@ -448,19 +471,16 @@ class SignUpBusinessApplication1 extends StatelessWidget {
                                   ],
                                 ),
                                 SizedBox(
-                                  height: 12,
+                                  height: 10,
                                 ),
                                 Row(
                                   children: [
                                     Icon(Icons.add,
                                         // size: 18,
                                         color: ColorStyle.darkestBlueSignUp),
-                                    SizedBox(
-                                      width: 12,
-                                    ),
                                     Text(
                                       'Add an additional Business Email Address',
-                                      style: TextStylesPoppins.textStyles_12.apply(
+                                      style: TextStylesPoppins.textStyles_13.apply(
                                         color: ColorStyle.darkestBlueSignUp,
                                         fontWeightDelta: 1,
                                       ),
@@ -468,37 +488,33 @@ class SignUpBusinessApplication1 extends StatelessWidget {
                                   ],
                                 ),
                                 SizedBox(
-                                  height: 22,
+                                  height: 16,
                                 ),
-                                Text(
-                                  'Business E-Mail Address',
-                                  style: TextStylesPoppins.textStyles_14.apply(
-                                    color: ColorStyle.secondryBlack,
-                                    fontWeightDelta: 1,
-                                  ),
+                                TitleStar.titleStar(
+                                    'Business E-mail Address',
+                                    true,
+                                    14, FontWeight.w500
                                 ),
                                 SizedBox(
-                                  height: 8,
+                                  height: 6,
                                 ),
                                 Row(
                                   children: [
                                     Expanded(
-                                      child: TextField(
-                                        // obscureText: true,
-                                        decoration: InputDecoration(
-                                          border: OutlineInputBorder(),
-                                          labelText:
-                                              'please enter your phone E-mail address',
-                                          labelStyle:
-                                              TextStylesPoppins.textStyles_14.apply(
-                                            color: Colors.grey,
-                                            fontWeightDelta: 1,
-                                          ),
+                                      child: TextFieldCustomOutline(
+                                        padding: EffectStyle.padding(10, 10, 10, 10),
+                                        hintText: 'Please enter your phone E-mail address',
+                                        textStyle: TextStylesPoppins.textStyles_14.apply(
+                                          color: Colors.black,
+                                          fontWeightDelta: 1,
                                         ),
+                                        colorFill: ColorStyle.primaryWhite,
+                                        colorBoder: Colors.black12,
+                                        radiusBorder: 2,
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 12,
+                                      width: 10,
                                     ),
                                     Container(
                                       height: 25,
@@ -514,16 +530,13 @@ class SignUpBusinessApplication1 extends StatelessWidget {
                                   ],
                                 ),
                                 SizedBox(
-                                  height: 12,
+                                  height: 10,
                                 ),
                                 Row(
                                   children: [
                                     Icon(Icons.add,
                                         // size: 18,
                                         color: ColorStyle.darkestBlueSignUp),
-                                    SizedBox(
-                                      width: 12,
-                                    ),
                                     Text(
                                       'Add an additional Fax Number',
                                       style: TextStylesPoppins.textStyles_12.apply(
@@ -534,37 +547,33 @@ class SignUpBusinessApplication1 extends StatelessWidget {
                                   ],
                                 ),
                                 SizedBox(
-                                  height: 22,
+                                  height: 16,
                                 ),
-                                Text(
-                                  'Website Address Starting with http://',
-                                  style: TextStylesPoppins.textStyles_14.apply(
-                                    color: ColorStyle.secondryBlack,
-                                    fontWeightDelta: 1,
-                                  ),
+                                TitleStar.titleStar(
+                                    'Website Address Starting with http://',
+                                    false,
+                                    14, FontWeight.w500
                                 ),
                                 SizedBox(
-                                  height: 8,
+                                  height: 6,
                                 ),
                                 Row(
                                   children: [
                                     Expanded(
-                                      child: TextField(
-                                        // obscureText: true,
-                                        decoration: InputDecoration(
-                                          border: OutlineInputBorder(),
-                                          labelText:
-                                              'Enter business website in the format of htt',
-                                          labelStyle:
-                                              TextStylesPoppins.textStyles_14.apply(
-                                            color: Colors.grey,
-                                            fontWeightDelta: 1,
-                                          ),
+                                      child: TextFieldCustomOutline(
+                                        padding: EffectStyle.padding(10, 10, 10, 10),
+                                        hintText: 'Enter business website in the format of http://',
+                                        textStyle: TextStylesPoppins.textStyles_14.apply(
+                                          color: Colors.black,
+                                          fontWeightDelta: 1,
                                         ),
+                                        colorFill: ColorStyle.primaryWhite,
+                                        colorBoder: Colors.black12,
+                                        radiusBorder: 2,
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 12,
+                                      width: 10,
                                     ),
                                     Container(
                                       height: 25,
@@ -581,7 +590,7 @@ class SignUpBusinessApplication1 extends StatelessWidget {
                                 ),
                                 ComponentsSignUp.backContinue(
                                     'Back to site', () {}, 'Continue', () {
-                                  Get.to(SignUpBusinessApplication2());
+                                  Get.to(SignUpCorrespondenceAddress(addressType: 'Busniess',));
                                 })
                               ],
                             ),

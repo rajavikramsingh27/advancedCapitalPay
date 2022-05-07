@@ -339,7 +339,6 @@ class NewBeneficiarySummary extends StatelessWidget {
                             fontWeightDelta: 2,
                           ),
                           radiusBorder: 30,
-                          height: 60,
                           padding: EdgeInsets.only(left: 16, right: 16),
                           listValue: [
                             '00117384934',

@@ -12,8 +12,7 @@ import '../SignUp/EffectStyleSignUp.dart';
 import '../../Components/ComponentsSignUp.dart';
 import '../SignUp/SignUpBusinessApplication1.dart';
 import '../../Controllers/SignUp/SignUpAccountTypeController.dart';
-
-
+import '../../Utils/Constants.dart';
 
 class SignUpAccountType extends StatelessWidget {
   SignUpAccountType({Key? key}) : super(key: key);
@@ -32,37 +31,36 @@ class SignUpAccountType extends StatelessWidget {
             SizedBox(
               width: 10,
             ),
-            Expanded(child: Text(
-              'Details required through On-Boarding Application Process',
-              style: TextStylesPoppins.textStyles_12
-                  .apply(
-                color:
-                ColorStyle.secondryBlack,
-                // fontWeightDelta: 1,
+            Expanded(
+              child: Text(
+                'Details required through On-Boarding Application Process',
+                style: TextStylesPoppins.textStyles_12.apply(
+                  color: ColorStyle.secondryBlack,
+                  // fontWeightDelta: 1,
+                ),
               ),
-            ),)
+            )
           ],
         ),
         SizedBox(
           height: 4,
         ),
         Row(
-          crossAxisAlignment:
-          CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ComponentsSignUp.check(),
             SizedBox(
               width: 10,
             ),
-            Expanded(child: Text(
-              'Original KYC Documentation required with Offical English Versions (Certified Translations)',
-              style: TextStylesPoppins.textStyles_12
-                  .apply(
-                color:
-                ColorStyle.secondryBlack,
-                // fontWeightDelta: 1,
+            Expanded(
+              child: Text(
+                'Original KYC Documentation required with Offical English Versions (Certified Translations)',
+                style: TextStylesPoppins.textStyles_12.apply(
+                  color: ColorStyle.secondryBlack,
+                  // fontWeightDelta: 1,
+                ),
               ),
-            ),),
+            ),
           ],
         ),
         SizedBox(
@@ -76,8 +74,7 @@ class SignUpAccountType extends StatelessWidget {
             ),
             Text(
               'Facial Verification',
-              style:
-              TextStylesPoppins.textStyles_12.apply(
+              style: TextStylesPoppins.textStyles_12.apply(
                 color: ColorStyle.secondryBlack,
                 // fontWeightDelta: 1,
               ),
@@ -95,8 +92,7 @@ class SignUpAccountType extends StatelessWidget {
             ),
             Text(
               'Detailed Source of Wealth',
-              style:
-              TextStylesPoppins.textStyles_12.apply(
+              style: TextStylesPoppins.textStyles_12.apply(
                 color: ColorStyle.secondryBlack,
                 // fontWeightDelta: 1,
               ),
@@ -114,8 +110,7 @@ class SignUpAccountType extends StatelessWidget {
             ),
             Text(
               'Source of Funds',
-              style:
-              TextStylesPoppins.textStyles_12.apply(
+              style: TextStylesPoppins.textStyles_12.apply(
                 color: ColorStyle.secondryBlack,
                 // fontWeightDelta: 1,
               ),
@@ -133,8 +128,7 @@ class SignUpAccountType extends StatelessWidget {
             ),
             Text(
               'Purpose of Account Opening',
-              style:
-              TextStylesPoppins.textStyles_12.apply(
+              style: TextStylesPoppins.textStyles_12.apply(
                 color: ColorStyle.secondryBlack,
                 // fontWeightDelta: 1,
               ),
@@ -152,8 +146,7 @@ class SignUpAccountType extends StatelessWidget {
             ),
             Text(
               'English Signature',
-              style:
-              TextStylesPoppins.textStyles_12.apply(
+              style: TextStylesPoppins.textStyles_12.apply(
                 color: ColorStyle.secondryBlack,
                 // fontWeightDelta: 1,
               ),
@@ -171,8 +164,7 @@ class SignUpAccountType extends StatelessWidget {
             ),
             Text(
               'Additional Details',
-              style:
-              TextStylesPoppins.textStyles_12.apply(
+              style: TextStylesPoppins.textStyles_12.apply(
                 color: ColorStyle.secondryBlack,
                 // fontWeightDelta: 1,
               ),
@@ -199,7 +191,6 @@ class SignUpAccountType extends StatelessWidget {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -219,231 +210,249 @@ class SignUpAccountType extends StatelessWidget {
                 controller.reset();
               },
               builder: (auth) {
-                return Obx(()=>SingleChildScrollView(
-                  padding: EffectStyle.padding(16, 16, 0, 16),
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        ImageStyle.application,
-                        width: MediaQuery.of(context).size.width,
-                        // fit: BoxFit.fill,
-                        // height: heightAppBar,
-                      ),
-                      SizedBox(
-                        height: 12,
-                      ),
-                      ComponentsSignUp.topProgress('18'),
-                      SizedBox(
-                        height: 16,
-                      ),
-                      Container(
-                        // padding: EdgeInsets.only(left: 20, right: 20),
-                          alignment: Alignment.centerLeft,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Container(
-                                  child: Text(
-                                    'ACFVC8JTJ',
-                                    style: TextStylesPoppins.textStyles_14.apply(
-                                      color: ColorStyle.primaryWhite,
-                                      fontWeightDelta: 1,
-                                    ),
+                return Obx(() => SingleChildScrollView(
+                      padding: EffectStyle.padding(16, 16, 0, 16),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            ImageStyle.application,
+                            width: MediaQuery.of(context).size.width,
+                            // fit: BoxFit.fill,
+                            // height: heightAppBar,
+                          ),
+                          SizedBox(
+                            height: 12,
+                          ),
+                          ComponentsSignUp.topProgress('18'),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Container(
+                              // padding: EdgeInsets.only(left: 20, right: 20),
+                              alignment: Alignment.centerLeft,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Container(
+                                      child: Text(
+                                        'ACFVC8JTJ',
+                                        style: TextStylesPoppins.textStyles_14
+                                            .apply(
+                                          color: ColorStyle.primaryWhite,
+                                          fontWeightDelta: 1,
+                                        ),
+                                      ),
+                                      alignment: Alignment.center,
+                                      width: 102,
+                                      height: 43,
+                                      decoration: EffectStyleSignUp.decoration(
+                                          ColorStyle.darkestBlueSignUp)),
+                                  SizedBox(
+                                    height: 12,
                                   ),
-                                  alignment: Alignment.center,
-                                  width: 102,
-                                  height: 43,
-                                  decoration: EffectStyleSignUp.decoration(
-                                      ColorStyle.darkestBlueSignUp)),
-                              SizedBox(
-                                height: 12,
-                              ),
-                              Container(
-                                padding: EffectStyle.padding(16, 16, 0, 0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    ComponentsSignUp.title(
-                                      'What type of account would you Like to apply for?',
-                                    ),
-                                    SizedBox(
-                                      height: 12,
-                                    ),
-                                    Text(
-                                      'Please select from below which best describes  the application you wish to apply for. ',
-                                      style: TextStylesPoppins.textStyles_14.apply(
-                                        color: ColorStyle.secondryBlack,
-                                        // fontWeightDelta: 0,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 28,
-                                    ),
-                                    InkWell(
-                                      child: Container(
-                                        padding: EffectStyle.padding(16, 16, 0, 16),
-                                        child: Column(
-                                          children: [
-                                            SizedBox(
-                                              height: 40,
-                                            ),
-                                            Container(
-                                              alignment: Alignment.center,
-                                              child: Image.asset(
-                                                ImageStyle.vector,
-                                                height: 60,
-                                                color: ColorStyle.secondryBlack,
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 20,
-                                            ),
-                                            Text(
-                                              'Private Individual',
-                                              style: TextStylesPoppins.textStyles_20.apply(
-                                                color: ColorStyle.secondryBlack,
-                                                fontWeightDelta: 1,
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 4,
-                                            ),
-                                            Text(
-                                              'I am private individual',
-                                              style: TextStylesPoppins.textStyles_14.apply(
-                                                color: ColorStyle.secondryBlack,
-                                                // fontWeightDelta: 1,
-                                              ),
-                                            ),
-                                            if (controller.isPrivate.value)
-                                              planDetails(),
-
-
-
-
-
-
-
-
-
-                                          ],
+                                  Container(
+                                    padding: EffectStyle.padding(16, 16, 0, 0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        ComponentsSignUp.title(
+                                          'What type of account would you Like to apply for?',
                                         ),
-                                        decoration: EffectStyleSignUp.decoration(
-                                            ColorStyle.hex('#F2FCFE'), 8),
-                                      ),
-                                      onTap: () {
-                                        controller.isPrivate.value = true;
-                                      }
-                                    ),
-                                    SizedBox(
-                                      height: 12,
-                                    ),
-                                    InkWell(
-                                      child: Container(
-                                        padding: EffectStyle.padding(16, 16, 0, 16),
-                                        child: Column(
-                                          children: [
-                                            SizedBox(
-                                              height: 40,
-                                            ),
-                                            Container(
-                                              alignment: Alignment.center,
-                                              child: Image.asset(
-                                                ImageStyle.vector,
-                                                height: 60,
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 20,
-                                            ),
-                                            Text(
-                                              'Business',
-                                              style: TextStylesPoppins.textStyles_20.apply(
-                                                color: ColorStyle.secondryBlack,
-                                                fontWeightDelta: 1,
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 4,
-                                            ),
-                                            Text(
-                                              'I am a business(Limited, Pte, Ltd, LLC, AG Trust, Corporated, Partnership, sole Trader or other)',
-                                              style: TextStylesPoppins.textStyles_14.apply(
-                                                color: ColorStyle.secondryBlack,
-                                                // fontWeightDelta: 1,
-                                              ),
-                                            ),
-
-                                            if (!controller.isPrivate.value)
-                                              planDetails(),
-                                          ],
+                                        SizedBox(
+                                          height: 12,
                                         ),
-                                        decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(8),
-                                            border: Border.all(
-                                                width: 1, color: Colors.grey,
-                                            )
+                                        Text(
+                                          'Please select from below which best describes  the application you wish to apply for. ',
+                                          style: TextStylesPoppins.textStyles_14
+                                              .apply(
+                                            color: ColorStyle.secondryBlack,
+                                            // fontWeightDelta: 0,
+                                          ),
                                         ),
-                                      ),
-                                      onTap: () {
-                                        controller.isPrivate.value = false;
-                                        // Get.to(SignUpBusinessApplication1());
-                                      },
-                                    ),
-                                    SizedBox(
-                                      height: 12,
-                                    ),
-                                    Container(
-                                      padding: EffectStyle.padding(16, 16, 0, 0),
-                                      child: Column(
-                                        children: [
-                                          SizedBox(
-                                            height: 20,
-                                          ),
-                                          Text(
-                                            'Advance Capital Resrticted Country List',
-                                            style: TextStylesPoppins.textStyles_20.apply(
-                                              color: ColorStyle.secondryBlack,
-                                              fontWeightDelta: 1,
+                                        SizedBox(
+                                          height: 28,
+                                        ),
+                                        InkWell(
+                                            child: Container(
+                                              padding: EffectStyle.padding(
+                                                  16, 16, 0, 16),
+                                              child: Column(
+                                                children: [
+                                                  SizedBox(
+                                                    height: 40,
+                                                  ),
+                                                  Container(
+                                                    alignment: Alignment.center,
+                                                    child: Image.asset(
+                                                      ImageStyle.vector,
+                                                      height: 60,
+                                                      color: ColorStyle
+                                                          .secondryBlack,
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 20,
+                                                  ),
+                                                  Text(
+                                                    'Private Individual',
+                                                    style: TextStylesPoppins
+                                                        .textStyles_20
+                                                        .apply(
+                                                      color: ColorStyle
+                                                          .secondryBlack,
+                                                      fontWeightDelta: 1,
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 4,
+                                                  ),
+                                                  Text(
+                                                    'I am private individual',
+                                                    style: TextStylesPoppins
+                                                        .textStyles_14
+                                                        .apply(
+                                                      color: ColorStyle
+                                                          .secondryBlack,
+                                                      // fontWeightDelta: 1,
+                                                    ),
+                                                  ),
+                                                  if (isPrivate.value)
+                                                    planDetails(),
+                                                ],
+                                              ),
+                                              decoration:
+                                                  EffectStyleSignUp.decoration(
+                                                      ColorStyle.hex('#F2FCFE'),
+                                                      8),
                                             ),
+                                            onTap: () {
+                                              isPrivate.value = true;
+                                            }),
+                                        SizedBox(
+                                          height: 12,
+                                        ),
+                                        InkWell(
+                                          child: Container(
+                                            padding: EffectStyle.padding(
+                                                16, 16, 0, 16),
+                                            child: Column(
+                                              children: [
+                                                SizedBox(
+                                                  height: 40,
+                                                ),
+                                                Container(
+                                                  alignment: Alignment.center,
+                                                  child: Image.asset(
+                                                    ImageStyle.vector,
+                                                    height: 60,
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: 20,
+                                                ),
+                                                Text(
+                                                  'Business',
+                                                  style: TextStylesPoppins
+                                                      .textStyles_20
+                                                      .apply(
+                                                    color: ColorStyle
+                                                        .secondryBlack,
+                                                    fontWeightDelta: 1,
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: 4,
+                                                ),
+                                                Text(
+                                                  'I am a business(Limited, Pte, Ltd, LLC, AG Trust, Corporated, Partnership, sole Trader or other)',
+                                                  style: TextStylesPoppins
+                                                      .textStyles_14
+                                                      .apply(
+                                                    color: ColorStyle
+                                                        .secondryBlack,
+                                                    // fontWeightDelta: 1,
+                                                  ),
+                                                ),
+                                                if (!isPrivate.value)
+                                                  planDetails(),
+                                              ],
+                                            ),
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                                border: Border.all(
+                                                  width: 1,
+                                                  color: Colors.grey,
+                                                )),
                                           ),
-                                          SizedBox(
-                                            height: 18,
-                                          ),
-                                          Text(
-                                            'Advance Capital follows and adheres to strict guidelines outlined by the FAFF which provides '
+                                          onTap: () {
+                                            isPrivate.value = false;
+                                          },
+                                        ),
+                                        SizedBox(
+                                          height: 12,
+                                        ),
+                                        Container(
+                                          padding:
+                                              EffectStyle.padding(16, 16, 0, 0),
+                                          child: Column(
+                                            children: [
+                                              SizedBox(
+                                                height: 20,
+                                              ),
+                                              Text(
+                                                'Advance Capital Resrticted Country List',
+                                                style: TextStylesPoppins
+                                                    .textStyles_20
+                                                    .apply(
+                                                  color:
+                                                      ColorStyle.secondryBlack,
+                                                  fontWeightDelta: 1,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 18,
+                                              ),
+                                              Text(
+                                                'Advance Capital follows and adheres to strict guidelines outlined by the FAFF which provides '
                                                 ' restrictions for selected countries. Please be aware restricted countries outlined by the FATF'
                                                 ' guidlince we are unable to open an account for or to allow transaction to occure.',
-                                            style: TextStylesPoppins.textStyles_14.apply(
-                                              color: ColorStyle.secondryBlack,
-                                              // fontWeightDelta: 1,
-                                            ),
+                                                style: TextStylesPoppins
+                                                    .textStyles_14
+                                                    .apply(
+                                                  color:
+                                                      ColorStyle.secondryBlack,
+                                                  // fontWeightDelta: 1,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 14,
+                                              ),
+                                            ],
                                           ),
-                                          SizedBox(
-                                            height: 14,
-                                          ),
-                                        ],
-                                      ),
+                                        ),
+                                        ComponentsSignUp.backContinue(
+                                            'Back to site', () {}, 'Continue',
+                                            () {
+                                          if (isPrivate.value) {
+                                            Get.to(
+                                                SignUpPersonalAccountIntentions());
+                                          } else {
+                                            Get.to(
+                                                SignUpBusinessApplication1());
+                                          }
+                                        })
+                                      ],
                                     ),
-                                    ComponentsSignUp.backContinue('Back to site', () {
-
-                                    }, 'Continue', () {
-                                      if (controller.isPrivate.value) {
-                                        Get.to(SignUpPersonalAccountIntentions());
-                                      } else {
-                                        // Get.to(SignUpPersonalApplication4());
-                                      }
-                                    })
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                          decoration: EffectStyleSignUp.decoration()),
-                      ComponentsSignUp.bottomUI(),
-                    ],
-                  ),
-                ));
+                              decoration: EffectStyleSignUp.decoration()),
+                          ComponentsSignUp.bottomUI(),
+                        ],
+                      ),
+                    ));
               },
             )),
       ],

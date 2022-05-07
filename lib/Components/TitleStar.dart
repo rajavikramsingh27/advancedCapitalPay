@@ -4,16 +4,17 @@ import '../Styles/ColorStyle.dart';
 import '../Styles/TextStyles.dart';
 
 class TitleStar {
-  static titleStar(String title, bool isStar) {
+  static titleStar(String title, bool isStar, [double fontSize = 14, FontWeight fontWeight = FontWeight.normal]) {
     return Text.rich(
       TextSpan(
         children: [
           TextSpan(
             text: title,
-            style: TextStylesPoppins.textStyles_14.apply(
-              color: ColorStyle.secondryBlack,
-              fontWeightDelta: 1,
-            ),
+            style: TextStyle(
+              fontSize: fontSize,
+              fontFamily: TextStylesPoppins.kFontFamily,
+              fontWeight: fontWeight
+            )
           ),
           if (isStar)
             TextSpan(
@@ -28,6 +29,8 @@ class TitleStar {
     );
   }
 }
+
+
 
 /*
 

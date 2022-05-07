@@ -10,7 +10,7 @@ import '../../Components/TitleStar.dart';
 import '../../Styles/ColorStyle.dart';
 import '../../Styles/EffectStyle.dart';
 import '../../Styles/TextStyles.dart';
-import 'SignUpPersonalOriginOfWealth.dart';
+import '../../Utils/Constants.dart';
 
 class SignUpPersonalEditSignature {
   static personalApplication6() {
@@ -18,9 +18,7 @@ class SignUpPersonalEditSignature {
         color: Colors.transparent,
         child: Container(
           padding: EffectStyle.padding(20, 20, 20, 20),
-          decoration: BoxDecoration(
-            borderRadius: EffectStyle.radiusCustom(14)
-          ),
+          decoration: BoxDecoration(borderRadius: EffectStyle.radiusCustom(14)),
           child: Scaffold(
               appBar: AppBarStyleTitle(
                 title: 'Edit Signature Mr. Test Test',
@@ -31,9 +29,12 @@ class SignUpPersonalEditSignature {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(height: 1, decoration: BoxDecoration(
-                      color: ColorStyle.grey,
-                    ),),
+                    Container(
+                      height: 1,
+                      decoration: BoxDecoration(
+                        color: ColorStyle.grey,
+                      ),
+                    ),
                     SizedBox(
                       height: 10,
                     ),
@@ -44,7 +45,6 @@ class SignUpPersonalEditSignature {
                         fontWeightDelta: 1,
                       ),
                     ),
-
                     SizedBox(
                       height: 18,
                     ),
@@ -128,14 +128,7 @@ class SignUpPersonalEditSignature {
                     SizedBox(
                       height: 40,
                     ),
-
-
-
-
-                  TitleStar.titleStar(
-                      'Your Name',
-                      true
-                  ),
+                    TitleStar.titleStar('Your Name', true),
                     SizedBox(
                       height: 6,
                     ),
@@ -147,7 +140,11 @@ class SignUpPersonalEditSignature {
                         color: Colors.black,
                         // fontWeightDelta: 1,
                       ),
-                      iconWidget: Icon(Icons.arrow_drop_down, color: ColorStyle.grey, size: 26,),
+                      iconWidget: Icon(
+                        Icons.arrow_drop_down,
+                        color: ColorStyle.grey,
+                        size: 26,
+                      ),
                       onChanged: (text) {},
                       listValue: ['Mr.', 'Miss', 'Mrs'],
                       selectedValue: "Mr.",
@@ -194,16 +191,10 @@ class SignUpPersonalEditSignature {
                       colorBoder: Colors.black12,
                       radiusBorder: 2,
                     ),
-
-
-
                     SizedBox(
                       height: 16,
                     ),
-                    TitleStar.titleStar(
-                        'Country of Birth',
-                        true
-                    ),
+                    TitleStar.titleStar('Country of Birth', true),
                     SizedBox(
                       height: 6,
                     ),
@@ -215,7 +206,11 @@ class SignUpPersonalEditSignature {
                         color: Colors.black,
                         fontWeightDelta: 1,
                       ),
-                      iconWidget: Icon(Icons.arrow_drop_down, color: ColorStyle.grey, size: 26,),
+                      iconWidget: Icon(
+                        Icons.arrow_drop_down,
+                        color: ColorStyle.grey,
+                        size: 26,
+                      ),
                       onChanged: (text) {},
                       listValue: [
                         'Date',
@@ -264,7 +259,11 @@ class SignUpPersonalEditSignature {
                         color: Colors.black,
                         fontWeightDelta: 1,
                       ),
-                      iconWidget: Icon(Icons.arrow_drop_down, color: ColorStyle.grey, size: 26,),
+                      iconWidget: Icon(
+                        Icons.arrow_drop_down,
+                        color: ColorStyle.grey,
+                        size: 26,
+                      ),
                       onChanged: (text) {},
                       listValue: [
                         'Month',
@@ -294,7 +293,11 @@ class SignUpPersonalEditSignature {
                         color: Colors.black,
                         fontWeightDelta: 1,
                       ),
-                      iconWidget: Icon(Icons.arrow_drop_down, color: ColorStyle.grey, size: 26,),
+                      iconWidget: Icon(
+                        Icons.arrow_drop_down,
+                        color: ColorStyle.grey,
+                        size: 26,
+                      ),
                       onChanged: (text) {},
                       listValue: [
                         'Year',
@@ -337,26 +340,23 @@ class SignUpPersonalEditSignature {
                     SizedBox(
                       height: 28,
                     ),
-                    TitleStar.titleStar(
-                        'Nationality',
-                        true
-                    ),
-
+                    TitleStar.titleStar('Nationality', true),
                     SizedBox(
                       height: 6,
                     ),
                     CountryPicker(
                       colorBG: ColorStyle.primaryWhite,
                       colorBorder: Colors.black12,
-                      icon: Icon(Icons.arrow_drop_down, color: ColorStyle.grey, size: 26,),
+                      icon: Icon(
+                        Icons.arrow_drop_down,
+                        color: ColorStyle.grey,
+                        size: 26,
+                      ),
                     ),
                     SizedBox(
                       height: 16,
                     ),
-                    TitleStar.titleStar(
-                        'Email Address',
-                        true
-                    ),
+                    TitleStar.titleStar('Email Address', true),
                     SizedBox(
                       height: 6,
                     ),
@@ -374,10 +374,7 @@ class SignUpPersonalEditSignature {
                     SizedBox(
                       height: 16,
                     ),
-                    TitleStar.titleStar(
-                        'Company Role',
-                        true
-                    ),
+                    TitleStar.titleStar('Company Role', true),
                     SizedBox(
                       height: 6,
                     ),
@@ -393,21 +390,189 @@ class SignUpPersonalEditSignature {
                       colorBoder: Colors.black12,
                       radiusBorder: 2,
                     ),
-
                     SizedBox(
                       height: 16,
                     ),
-
-
-
-
-
-
-
-
-
-
-
+                    if (!isPrivate.value)
+                      Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                        TitleStar.titleStar('eSignature Confirmation', true),
+                        SizedBox(
+                          height: 6,
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(
+                              Icons.check_circle,
+                              size: 26,
+                              color: ColorStyle.darkestBlueSignUp,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            Expanded(
+                              child: Text(
+                                'I will receive the authorised signature section by email and have the signatory sign it later',
+                                style: TextStylesPoppins.textStyles_12.apply(
+                                  color: ColorStyle.secondryBlack,
+                                  fontWeightDelta: 1,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        TitleStar.titleStar('Signature date', true),
+                        SizedBox(
+                          height: 6,
+                        ),
+                        DropdownButtonCustom(
+                          padding: EffectStyle.padding(10, 10, 10, 10),
+                          colorBorder: Colors.black12,
+                          radiusBorder: 2,
+                          textStyle: TextStylesPoppins.textStyles_14.apply(
+                            color: Colors.black,
+                            fontWeightDelta: 1,
+                          ),
+                          iconWidget: Icon(
+                            Icons.arrow_drop_down,
+                            color: ColorStyle.grey,
+                            size: 26,
+                          ),
+                          onChanged: (text) {},
+                          listValue: [
+                            'Date',
+                            '01',
+                            '02',
+                            '03',
+                            '04',
+                            '05',
+                            '06',
+                            '07',
+                            '08',
+                            '09',
+                            '10',
+                            '11',
+                            '12',
+                            '13',
+                            '14',
+                            '15',
+                            '16',
+                            '17',
+                            '18',
+                            '19',
+                            '20',
+                            '21',
+                            '22',
+                            '23',
+                            '24',
+                            '25',
+                            '26',
+                            '27',
+                            '28',
+                            '29',
+                            '30',
+                            '31',
+                          ],
+                          selectedValue: "Date",
+                        ),
+                        SizedBox(
+                          height: 6,
+                        ),
+                        DropdownButtonCustom(
+                          padding: EffectStyle.padding(10, 10, 10, 10),
+                          colorBorder: Colors.black12,
+                          radiusBorder: 2,
+                          textStyle: TextStylesPoppins.textStyles_14.apply(
+                            color: Colors.black,
+                            fontWeightDelta: 1,
+                          ),
+                          iconWidget: Icon(
+                            Icons.arrow_drop_down,
+                            color: ColorStyle.grey,
+                            size: 26,
+                          ),
+                          onChanged: (text) {},
+                          listValue: [
+                            'Month',
+                            'January',
+                            'Fabruary',
+                            'March',
+                            'April',
+                            'May',
+                            'June',
+                            'July',
+                            'August',
+                            'September',
+                            'October',
+                            'November',
+                            'December',
+                          ],
+                          selectedValue: "Month",
+                        ),
+                        SizedBox(
+                          height: 6,
+                        ),
+                        DropdownButtonCustom(
+                          padding: EffectStyle.padding(10, 10, 10, 10),
+                          colorBorder: Colors.black12,
+                          radiusBorder: 2,
+                          textStyle: TextStylesPoppins.textStyles_14.apply(
+                            color: Colors.black,
+                            fontWeightDelta: 1,
+                          ),
+                          iconWidget: Icon(
+                            Icons.arrow_drop_down,
+                            color: ColorStyle.grey,
+                            size: 26,
+                          ),
+                          onChanged: (text) {},
+                          listValue: [
+                            'Year',
+                            '1991',
+                            '1992',
+                            '1993',
+                            '1994',
+                            '1995',
+                            '1996',
+                            '1997',
+                            '1998',
+                            '1999',
+                            '2000',
+                            '2001',
+                            '2002',
+                            '2003',
+                            '2004',
+                            '2005',
+                            '2006',
+                            '2007',
+                            '2008',
+                            '2009',
+                            '2010',
+                            '2011',
+                            '2012',
+                            '2013',
+                            '2014',
+                            '2015',
+                            '2016',
+                            '2017',
+                            '2018',
+                            '2019',
+                            '2020',
+                            '2021',
+                            '2022',
+                            '2023'
+                          ],
+                          selectedValue: "Year",
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                      ]),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -418,7 +583,8 @@ class SignUpPersonalEditSignature {
                           radiusBorder: 0,
                           colorBorder: ColorStyle.secondryBlack,
                           textStyle: TextStylesPoppins.textStyles_16.apply(
-                              color: ColorStyle.primaryWhite, fontWeightDelta: 1),
+                              color: ColorStyle.primaryWhite,
+                              fontWeightDelta: 1),
                           onTap: () {
                             Get.back();
                           },
@@ -437,7 +603,6 @@ class SignUpPersonalEditSignature {
                         Container(
                           width: 10,
                         ),
-
                         ElevatedButtonCustom(
                           width: 140,
                           text: 'Save',
@@ -445,7 +610,8 @@ class SignUpPersonalEditSignature {
                           radiusBorder: 0,
                           colorBorder: ColorStyle.secondryBlack,
                           textStyle: TextStylesPoppins.textStyles_16.apply(
-                              color: ColorStyle.primaryWhite, fontWeightDelta: 1),
+                              color: ColorStyle.primaryWhite,
+                              fontWeightDelta: 1),
                           onTap: () {
                             Get.back();
                           },

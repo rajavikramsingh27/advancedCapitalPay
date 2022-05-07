@@ -1,21 +1,18 @@
-
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:flutter/material.dart';
-import 'dart:async';
-import '../Components/AppBarStyle.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
-import '../Styles/EffectStyle.dart';
 import 'package:get/get.dart';
-
-import '../Components/ButtonCustom.dart';
-import '../Controllers/NewBeneficiaryController.dart';
 import 'package:intl/intl.dart';
+import 'package:image_picker/image_picker.dart';
 
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'dart:io';
+
+import '../Styles/TextStyles.dart';
 
 
 class PickerCustom {
-   static datePicker(String dateFormat) async {
+  static datePicker(String dateFormat) async {
     DateTime selectedDate = DateTime.now();
 
     final DateTime? picked = await showDatePicker(
@@ -28,5 +25,113 @@ class PickerCustom {
       final DateFormat format = DateFormat(dateFormat);
       return format.format(picked);
     }
+  }
+
+  static imagePicker(Function(File) onSelected) {
+    Get.bottomSheet(
+      InkWell(
+        child: Material(
+          color: Colors.transparent,
+          child: Container(
+            margin: EdgeInsets.only(
+                left: 30, right: 30
+            ),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                )
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                ListTile(
+                  leading: new Icon(Icons.camera_alt),
+                  title: Text(
+                    'From Camera',
+                    style: TextStylesPoppins.textStyles_16.apply(
+                      color: ColorStyle.secondryBlack,
+                    ),
+                  ),
+                  onTap: () async {
+                    Get.back();
+
+                    final ImagePicker _picker = ImagePicker();
+                    final imageFile = await _picker.pickImage(
+                        source: ImageSource.camera,
+                        // maxHeight:  200 ,
+                        maxWidth: 500
+                    );
+
+                    onSelected(File(imageFile!.path));
+                  },
+                ),
+                ListTile(
+                  leading: new Icon(Icons.photo),
+                  title: Text(
+                    'From Photo',
+                    style: TextStylesPoppins.textStyles_16.apply(
+                  color: ColorStyle.secondryBlack,
+                  ),
+                  ),
+                  onTap: () async {
+                    Get.back();
+
+                    final ImagePicker _picker = ImagePicker();
+                    final imageFile = await _picker.pickImage(
+                        source: ImageSource.gallery,
+                        // maxHeight:  200 ,
+                        maxWidth: 500
+                    );
+
+                    onSelected(File(imageFile!.path));
+
+                    // Image.file(File(imageFile.path));
+                    // File(imageFile.path);
+                  },
+                ),
+                Container(
+                  margin: EdgeInsets.only(
+                      top: 16, bottom: 16
+                  ),
+                  height: 1,
+                  color: Colors.red,
+                ),
+                InkWell(
+                  child: Container(
+                    margin: EdgeInsets.only(
+                        left: 20, right: 20
+                    ),
+                    height: 44,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(25)
+                    ),
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Cancel',
+                      style: TextStylesPoppins.textStyles_16.apply(
+                        color: ColorStyle.primaryWhite,
+                      ),
+                    ),
+                  ),
+                  onTap: () {
+                    Get.back();
+                  },
+                ),
+                SizedBox(
+                  height: 16,
+                )
+              ],
+            ),
+          ),
+        ),
+        onTap: () {
+          Get.back();
+        },
+      )
+    );
   }
 }

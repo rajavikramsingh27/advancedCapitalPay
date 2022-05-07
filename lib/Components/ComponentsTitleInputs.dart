@@ -313,7 +313,6 @@ class _TitleDropDownState extends State<TitleDropDown> {
             fontWeightDelta: 2,
           ),
           radiusBorder: 30,
-          height: 60,
           padding: EdgeInsets.only(left: 16, right: 16),
           listValue: [
             'Employed',

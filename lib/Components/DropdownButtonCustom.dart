@@ -12,7 +12,7 @@ class DropdownButtonCustom extends StatelessWidget {
   final Color? colorBorder;
   final EdgeInsets? padding;
   final double? radiusBorder;
-  final double? height;
+  // final double? height;
   final Widget? iconWidget;
   final Text? hint;
   final TextStyle? textStyle;
@@ -25,7 +25,7 @@ class DropdownButtonCustom extends StatelessWidget {
     this.colorBorder = Colors.red,
     this.padding = EdgeInsets.zero,
     this.radiusBorder = 4,
-    this.height = 30,
+    // this.height = 30,
     this.iconWidget = const Icon(Icons.keyboard_arrow_down, color: Colors.black,),
     this.hint = const Text(""),
     this.textStyle = const TextStyle()
@@ -60,6 +60,7 @@ class DropdownButtonCustom extends StatelessWidget {
               value: value,
               child: Text(
                   value,
+                  maxLines: 1,
                   textAlign: TextAlign.left,
                   style: textStyle!.apply(
                     color: (selectedValue! == listValue![0]) ? ColorStyle.grey : ColorStyle.secondryBlack
@@ -71,6 +72,7 @@ class DropdownButtonCustom extends StatelessWidget {
     );
   }
 }
+
 
 
 class DropdownButtonTextField extends StatelessWidget {

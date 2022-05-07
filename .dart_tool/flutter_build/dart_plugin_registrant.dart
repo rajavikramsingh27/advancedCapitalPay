@@ -7,6 +7,7 @@
 
 import 'dart:io'; // flutter_ignore: dart_io_import.
 import 'package:local_auth_android/local_auth_android.dart';
+import 'package:image_picker_ios/image_picker_ios.dart';
 import 'package:local_auth_ios/local_auth_ios.dart';
 
 @pragma('vm:entry-point')
@@ -26,6 +27,16 @@ class _PluginRegistrant {
       }
 
     } else if (Platform.isIOS) {
+      try {
+        ImagePickerIOS.registerWith();
+      } catch (err) {
+        print(
+          '`image_picker_ios` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+        rethrow;
+      }
+
       try {
         LocalAuthIOS.registerWith();
       } catch (err) {
