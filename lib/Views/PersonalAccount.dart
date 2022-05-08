@@ -33,7 +33,7 @@ import '../Components/InfoIconDescription.dart';
 import '../Views/BankDetails.dart';
 import '../Views/SearchByBankDetails.dart';
 import '../Views/SearchByBankSwift.dart';
-
+import '../../../Components/ButtonChat.dart';
 class PersonalAccount extends StatelessWidget {
   PersonalAccount({Key? key}) : super(key: key);
 
@@ -624,13 +624,7 @@ class PersonalAccount extends StatelessWidget {
                       Get.back();
                     },
                   ),
-                  trailingButton: [IconButton(
-                    icon: Image.asset(
-                      ImageStyle.chat,
-                      height: 30,
-                    ),
-                    onPressed: () {},
-                  )],
+                  trailingButton: [ButtonChat(),],
                 ),
                 body: SingleChildScrollView(
                   padding: EffectStyle.padding(0, 0, 0, 20),

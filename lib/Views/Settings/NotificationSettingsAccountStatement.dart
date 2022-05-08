@@ -1,4 +1,5 @@
 
+import 'package:advanced_capital_pay/Views/SignIn.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,7 +10,7 @@ import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../../Views/Settings/TitleSwitch.dart';
 import '../../Views/Settings/ButtonsWithDescriptionBottomUI.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 class NotificationSettingsAccountStatement extends StatelessWidget {
   final String? titleNotifications;
@@ -55,21 +56,15 @@ class NotificationSettingsAccountStatement extends StatelessWidget {
                   descriptionStyle: TextStylesPoppins.textStyles_12
                       .apply(color: ColorStyle.primaryWhite),
                   trailingAction: [
-                    IconButton(
-                      icon: Image.asset(
-                        ImageStyle.chat,
-                        height: 26,
-                      ),
-                      onPressed: () {
-                        // Get.to(MessagePage());
-                      },
-                    ),
+                    ButtonChat(),
                     IconButton(
                       icon: Image.asset(
                         ImageStyle.user_logout,
                         height: 26,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.offAll(SignIn());
+                      },
                     ),
                     SizedBox(
                       width: 6,

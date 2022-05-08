@@ -17,7 +17,7 @@ import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
 import '../../Views/Profile/PersonalProfile.dart';
 import '../../Views/Profile/BusinessProfile.dart';
 import '../../Views/OTPVerification.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 
 class EditProfile extends StatelessWidget {
@@ -66,15 +66,7 @@ class EditProfile extends StatelessWidget {
                           descriptionStyle: TextStylesPoppins.textStyles_12
                               .apply(color: ColorStyle.primaryWhite),
                           trailingAction: [
-                            IconButton(
-                              icon: Image.asset(
-                                ImageStyle.chat,
-                                height: 26,
-                              ),
-                              onPressed: () {
-                                // Get.to(MessagePage());
-                              },
-                            ),
+                            ButtonChat(),
                             IconButton(
                               icon: Image.asset(
                                 ImageStyle.user_logout,

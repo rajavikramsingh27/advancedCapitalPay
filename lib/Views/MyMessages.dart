@@ -10,6 +10,7 @@ import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
 import 'SignUp/EffectStyleSignUp.dart';
+import '../../../Components/ButtonChat.dart';
 
 class MyMessages extends StatelessWidget {
   const MyMessages({Key? key}) : super(key: key);
@@ -35,13 +36,7 @@ class MyMessages extends StatelessWidget {
                   Get.back();
                 },
               ),
-              trailingButton: IconButton(
-                icon: Image.asset(
-                  ImageStyle.chat,
-                  height: 30,
-                ),
-                onPressed: () {},
-              ),
+              trailingButton: ButtonChat(),
             ),
             backgroundColor: Colors.transparent,
             body: SingleChildScrollView(
@@ -70,7 +65,8 @@ class MyMessages extends StatelessWidget {
                             SizedBox(
                               width: 10,
                             ),
-                            Expanded(child: Column(
+                            Expanded(
+                                child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
@@ -85,7 +81,6 @@ class MyMessages extends StatelessWidget {
                                     color: ColorStyle.blueSKY,
                                   ),
                                 ),
-
                               ],
                             ))
                           ],
@@ -102,7 +97,8 @@ class MyMessages extends StatelessWidget {
                             SizedBox(
                               width: 10,
                             ),
-                            Expanded(child: Column(
+                            Expanded(
+                                child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
@@ -132,13 +128,16 @@ class MyMessages extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            Expanded(child: Column(
+                            Expanded(
+                                child: Column(
                               children: [
                                 Text(
                                   "AdvanceCapitalPay Response:",
+                                  // textAlign: TextAlign.end,
                                   style: TextStylesPoppins.textStyles_14.apply(
-                                      color: ColorStyle.secondryBlack,
-                                      fontWeightDelta: 2),
+                                    color: ColorStyle.secondryBlack,
+                                    fontWeightDelta: 1,
+                                  ),
                                 ),
                                 Text(
                                   "Hi Harrison, please confirm your ID card number before we procced.",
@@ -148,6 +147,7 @@ class MyMessages extends StatelessWidget {
                                       fontWeightDelta: 1),
                                 ),
                               ],
+                                  crossAxisAlignment: CrossAxisAlignment.end,
                             )),
                             SizedBox(
                               width: 10,
@@ -219,26 +219,22 @@ class MyMessages extends StatelessWidget {
                         ButtonContinueCancel(
                           radiusBorder: 40,
                           height: 44,
-                          textFirst:'Cancel',
-                          colorBGFirst:Colors.transparent,
-                          colorBorderFirst:ColorStyle.hex('#016ECF'),
+                          textFirst: 'Cancel',
+                          colorBGFirst: Colors.transparent,
+                          colorBorderFirst: ColorStyle.hex('#016ECF'),
                           textStyleFirst: TextStylesPoppins.textStyles_12.apply(
                             fontWeightDelta: 1,
                             color: ColorStyle.hex('#016ECF'),
                           ),
-                          onTapFirst: () {
-
-                          },
-                          textSecond:'Submit Message',
+                          onTapFirst: () {},
+                          textSecond: 'Submit Message',
                           colorBGSecond: ColorStyle.hex('#016ECF'),
                           colorBorderSecond: Colors.transparent,
-                          textStyleSecond: TextStylesPoppins.textStyles_12.apply(
-                              fontWeightDelta: 1,
-                              color: ColorStyle.primaryWhite
-                          ),
-                          onTapSecond: () {
-
-                          },
+                          textStyleSecond: TextStylesPoppins.textStyles_12
+                              .apply(
+                                  fontWeightDelta: 1,
+                                  color: ColorStyle.primaryWhite),
+                          onTapSecond: () {},
                         ),
                         SizedBox(
                           height: 30,

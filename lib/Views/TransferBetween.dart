@@ -8,7 +8,7 @@ import '../Components/PopUp.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 class TransferBetween extends StatelessWidget {
   const TransferBetween({Key? key}) : super(key: key);
@@ -33,15 +33,7 @@ class TransferBetween extends StatelessWidget {
                 ),
                 onPressed: () {},
               ),
-              trailingButton: [IconButton(
-                icon: Image.asset(
-                  ImageStyle.chat,
-                  height: 30,
-                ),
-                onPressed: () {
-                  filter();
-                },
-              )],
+              trailingButton: [ButtonChat(),],
             ),
             backgroundColor: Colors.transparent,
             body:SingleChildScrollView(

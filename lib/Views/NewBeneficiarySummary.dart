@@ -30,7 +30,7 @@ import '../Views/TransferDetails.dart';
 import '../Views/TransferSummary.dart';
 import '../Views/OTPVerification.dart';
 import '../Components/InfoIconDescription.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 class NewBeneficiarySummary extends StatelessWidget {
   NewBeneficiarySummary({Key? key}) : super(key: key);
@@ -597,13 +597,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                       Get.back();
                     },
                   ),
-                  trailingButton: [IconButton(
-                    icon: Image.asset(
-                      ImageStyle.chat,
-                      height: 30,
-                    ),
-                    onPressed: () {},
-                  )],
+                  trailingButton: [ButtonChat(),],
                 ),
                 body: SingleChildScrollView(
                   padding: EffectStyle.padding(0, 0, 0, 20),

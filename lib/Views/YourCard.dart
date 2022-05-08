@@ -15,6 +15,8 @@ import '../Views/InboxMessage.dart';
 import '../Views/AppSettings.dart';
 import '../Views/FindATMLocator//FindATMLocator.dart';
 import '../Views/TravelNotice.dart';
+import '../../../Components/ButtonChat.dart';
+
 
 class YourCard extends StatelessWidget {
   YourCard({Key? key}) : super(key: key);
@@ -115,15 +117,7 @@ class YourCard extends StatelessWidget {
             descriptionStyle:
                 TextStylesPoppins.textStyles_12.apply(fontWeightDelta: 0),
             trailingAction: [
-              IconButton(
-                icon: Image.asset(
-                  ImageStyle.chat,
-                  height: 26,
-                ),
-                onPressed: () {
-                  Get.to(InboxMessage());
-                },
-              ),
+              ButtonChat(),
               IconButton(
                 icon: Image.asset(
                   ImageStyle.settings,

@@ -24,7 +24,7 @@ import '../../Styles/TextStyles.dart';
 import '../Views/Settings/BalanceSheetCellComponenets.dart';
 import '../Views/OTPVerification.dart';
 import '../Views/StandingOrderDetails.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 class NewStandingOrder extends StatelessWidget {
   NewStandingOrder({Key? key}) : super(key: key);
@@ -111,15 +111,7 @@ class NewStandingOrder extends StatelessWidget {
                       descriptionStyle: TextStylesPoppins.textStyles_12
                           .apply(color: ColorStyle.primaryWhite),
                       trailingAction: [
-                        IconButton(
-                          icon: Image.asset(
-                            ImageStyle.chat,
-                            height: 26,
-                          ),
-                          onPressed: () {
-                            // Get.to(MessagePage());
-                          },
-                        ),
+                        ButtonChat(),
                         IconButton(
                           icon: Image.asset(
                             ImageStyle.user_logout,

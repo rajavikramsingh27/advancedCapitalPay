@@ -9,7 +9,7 @@ import '../../Styles/EffectStyle.dart';
 import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../../Views/Settings/DailyAccountBalance.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 class DailyAccountBalance extends StatelessWidget {
   const DailyAccountBalance({Key? key}) : super(key: key);
@@ -75,15 +75,7 @@ class DailyAccountBalance extends StatelessWidget {
                   descriptionStyle: TextStylesPoppins.textStyles_12
                       .apply(color: ColorStyle.primaryWhite),
                   trailingAction: [
-                    IconButton(
-                      icon: Image.asset(
-                        ImageStyle.chat,
-                        height: 26,
-                      ),
-                      onPressed: () {
-                        // Get.to(MessagePage());
-                      },
-                    ),
+                    ButtonChat(),
                     IconButton(
                       icon: Image.asset(
                         ImageStyle.user_logout,

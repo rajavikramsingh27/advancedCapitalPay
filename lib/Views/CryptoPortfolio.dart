@@ -1,4 +1,5 @@
 
+import 'package:advanced_capital_pay/Components/ChatWithUs.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -166,7 +167,9 @@ class CryptoPortfolio extends StatelessWidget {
                             ImageStyle.chat,
                             height: 26,
                           ),
-                          onTap: () {},
+                          onTap: () {
+                            ChatWithUs.chatWithUs();
+                          },
                         ),
                         SizedBox(
                           width: 10,

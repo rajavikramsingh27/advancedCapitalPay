@@ -10,6 +10,8 @@ import '../../Controllers/PreferredLanguageController.dart';
 import '../../Styles/ColorStyle.dart';
 import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
+import '../../../Components/ButtonChat.dart';
+
 
 class PreferredLanguage extends StatelessWidget {
   const PreferredLanguage({Key? key}) : super(key: key);
@@ -48,15 +50,7 @@ class PreferredLanguage extends StatelessWidget {
                       descriptionStyle: TextStylesPoppins.textStyles_12
                           .apply(color: ColorStyle.primaryWhite),
                       trailingAction: [
-                        IconButton(
-                          icon: Image.asset(
-                            ImageStyle.chat,
-                            height: 26,
-                          ),
-                          onPressed: () {
-                            // Get.to(MessagePage());
-                          },
-                        ),
+                        ButtonChat(),
                         IconButton(
                           icon: Image.asset(
                             ImageStyle.user_logout,

@@ -11,7 +11,7 @@ import 'package:get/get.dart';
 import '../Components/SwitchButtonCustom.dart';
 import '../Controllers/TravelDetailsController.dart';
 import '../Components/PopUp.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 class TravelDetails extends StatelessWidget {
   TravelDetails({Key? key}) : super(key: key);
@@ -33,13 +33,7 @@ class TravelDetails extends StatelessWidget {
               Get.back();
             },
           ),
-          trailingButton: [IconButton(
-            icon: Image.asset(
-              ImageStyle.chat,
-              height: 30,
-            ),
-            onPressed: () {},
-          )],
+          trailingButton: [ButtonChat(),],
         ),
         backgroundColor: ColorStyle.primaryWhite,
         body: GetBuilder(

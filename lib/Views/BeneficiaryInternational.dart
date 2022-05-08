@@ -19,7 +19,7 @@ import '../Views/NewBeneficiarySummary.dart';
 import '../Views/TransferBetweenAccount.dart';
 import '../Views/StandingOrders.dart';
 import '../Views/PersonalAccount.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 class BeneficiaryInternational extends StatelessWidget {
   const BeneficiaryInternational({Key? key}) : super(key: key);
@@ -216,13 +216,7 @@ class BeneficiaryInternational extends StatelessWidget {
                                         Get.back();
                                       },
                                     ),
-                                    trailingButton: IconButton(
-                                      icon: Image.asset(
-                                        ImageStyle.chat,
-                                        height: 30,
-                                      ),
-                                      onPressed: () {},
-                                    ),
+                                    trailingButton: ButtonChat(),
                                   ),
                                   Row(
                                     mainAxisAlignment:

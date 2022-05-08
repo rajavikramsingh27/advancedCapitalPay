@@ -12,7 +12,7 @@ import '../Controllers/OTPScreenController.dart';
 import '../Views/BioMatric_Permission.dart';
 import '../Components/ButtonCustom.dart';
 import '../Views/VerifyQuestion.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 class OTPScreen extends StatelessWidget {
   OTPScreen({Key? key}) : super(key: key);
@@ -32,15 +32,11 @@ class OTPScreen extends StatelessWidget {
                 ImageStyle.user_logout,
                 height: 30,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Get.back();
+              },
             ),
-            trailingButton: IconButton(
-              icon: Image.asset(
-                ImageStyle.chat,
-                height: 30,
-              ),
-              onPressed: () {},
-            ),
+            trailingButton: ButtonChat(),
           ),
           body: SingleChildScrollView(
             padding: EdgeInsets.only(

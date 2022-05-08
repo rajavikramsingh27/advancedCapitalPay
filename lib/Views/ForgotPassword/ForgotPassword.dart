@@ -13,7 +13,7 @@ import 'ForgotYourPasswordRecovery/AccountDetailsRecovery.dart';
 import '../ForgotPassword/ForgotYourUserIdentification/ForgotYourUserIdentification.dart';
 import '../../Controllers/AccountDetailsRecoveryController.dart';
 import 'package:get/get.dart';
-
+import '../../../Components/ButtonChat.dart';
 class ForgotPassword extends StatelessWidget {
   ForgotPassword({Key? key}) : super(key: key);
 
@@ -82,13 +82,7 @@ class ForgotPassword extends StatelessWidget {
                 Get.back();
               },
             ),
-            trailingButton: IconButton(
-              icon: Image.asset(
-                ImageStyle.chat,
-                height: 30,
-              ),
-              onPressed: () {},
-            ),
+            trailingButton: ButtonChat(),
           ),
           body: SingleChildScrollView(
             padding: EdgeInsets.only(
@@ -150,7 +144,9 @@ class ForgotPassword extends StatelessWidget {
                       Center(
                         child: GradientButton(
                           text: 'Login Now',
-                          onTap: () {},
+                          onTap: () {
+                            Get.back();
+                          },
                         ),
                       ),
                     ],

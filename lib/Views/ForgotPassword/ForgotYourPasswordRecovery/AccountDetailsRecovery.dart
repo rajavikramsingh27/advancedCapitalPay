@@ -11,7 +11,7 @@ import '../../../Controllers/AccountDetailsRecoveryController.dart';
 import '../UserIdentification.dart';
 import '../ForgotYourPasswordRecovery/SetPassword.dart';
 import '../ForgotYourPasswordRecovery/PasswordUpdated.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 
 class AccountDetailsRecovery extends StatelessWidget {
@@ -61,13 +61,7 @@ class AccountDetailsRecovery extends StatelessWidget {
                 Get.back();
               },
             ),
-            trailingButton: [IconButton(
-              icon: Image.asset(
-                ImageStyle.chat,
-                height: 30,
-              ),
-              onPressed: () {},
-            )],
+            trailingButton: [ButtonChat(),],
           ),
           body: GetBuilder(
             init: AccountDetailsRecoveryController(),

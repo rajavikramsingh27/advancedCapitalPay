@@ -1,4 +1,5 @@
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Views/SignIn.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,7 +15,7 @@ import '../Views/BioMatric_Permission.dart';
 import '../Controllers/VerifyQuestionController.dart';
 import '../Components/TextFieldCustom.dart';
 import '../Components/DropdownButtonCustom.dart';
-
+import '../../../Components/ButtonChat.dart';
 class VerifyQuestion extends StatelessWidget {
   VerifyQuestion({Key? key}) : super(key: key);
 
@@ -127,15 +128,11 @@ class VerifyQuestion extends StatelessWidget {
                 ImageStyle.user_logout,
                 height: 30,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Get.offAll(SignIn());
+              },
             ),
-            trailingButton: IconButton(
-              icon: Image.asset(
-                ImageStyle.chat,
-                height: 30,
-              ),
-              onPressed: () {},
-            ),
+            trailingButton: ButtonChat(),
           ),
           body: GetBuilder(
             init: VerifyQuestionController(),

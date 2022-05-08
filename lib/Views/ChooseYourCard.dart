@@ -17,7 +17,7 @@ import '../Views/VerifyQuestion.dart';
 import '../Styles/ColorStyle.dart';
 import '../Views/SignIn.dart';
 import '../Views/TabbarScreen.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 
 class ChooseYourCard extends StatelessWidget {
@@ -44,15 +44,11 @@ class ChooseYourCard extends StatelessWidget {
                           ImageStyle.user_logout,
                           height: 30,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.offAll(SignIn());
+                        },
                       ),
-                      trailingButton: IconButton(
-                        icon: Image.asset(
-                          ImageStyle.chat,
-                          height: 30,
-                        ),
-                        onPressed: () {},
-                      ),
+                      trailingButton: ButtonChat(),
                     ),
                     body: SingleChildScrollView(
                       padding: EdgeInsets.only(

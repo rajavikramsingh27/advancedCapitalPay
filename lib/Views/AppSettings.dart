@@ -1,3 +1,4 @@
+import 'package:advanced_capital_pay/Views/InboxMessage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,6 +19,8 @@ import '../Views/Profile/EditProfile.dart';
 import '../Views/ApplePay.dart';
 import '../Views/ApplePay.dart';
 
+import '../../../Components/ButtonChat.dart';
+import '../../../Components/ButtonChat.dart';
 
 class AppSettings extends StatelessWidget {
   const AppSettings({Key? key}) : super(key: key);
@@ -59,15 +62,7 @@ class AppSettings extends StatelessWidget {
                   descriptionStyle: TextStylesPoppins.textStyles_12
                       .apply(color: ColorStyle.primaryWhite),
                   trailingAction: [
-                    IconButton(
-                      icon: Image.asset(
-                        ImageStyle.chat,
-                        height: 26,
-                      ),
-                      onPressed: () {
-                        // Get.to(MessagePage());
-                      },
-                    ),
+                    ButtonChat(),
                     IconButton(
                       icon: Image.asset(
                         ImageStyle.user_logout,
@@ -112,13 +107,14 @@ class AppSettings extends StatelessWidget {
                     '',
                     'AED 319485739302',
                     'Virtual Debit ***777',
-
                     '',
                   ],
 
                   onTapIndex: (index) {
                     if (index == 0) {
                       Get.to(EditProfile());
+                    } else if (index == 2) {
+                      Get.to(InboxMessage());
                     } else if (index == 3) {
                       Get.to(NotificationSettings());
                     } else if (index == 4) {

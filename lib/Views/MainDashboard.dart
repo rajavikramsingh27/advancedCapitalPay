@@ -18,7 +18,7 @@ import '../Views/AccountDetails.dart';
 import '../Views/Exchange.dart';
 import '../Views/BeneficiaryInternational.dart';
 import '../Components/ChatWithUs.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 class MainDashboard extends StatelessWidget {
   MainDashboard({Key? key}) : super(key: key);
@@ -100,21 +100,15 @@ class MainDashboard extends StatelessWidget {
             descriptionStyle: TextStylesPoppins.textStyles_12
                 .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
             trailingAction: [
+              ButtonChat(),
               IconButton(
                 icon: Image.asset(
-                  ImageStyle.chat,
+                  ImageStyle.settings,
                   height: 26,
                 ),
                 onPressed: () {
-                  ChatWithUs.chatWithUs();
+                  Get.to(AppSettings());
                 },
-              ),
-              IconButton(
-                icon: Image.asset(
-                  ImageStyle.user_logout,
-                  height: 26,
-                ),
-                onPressed: () {},
               ),
               SizedBox(
                 width: 6,

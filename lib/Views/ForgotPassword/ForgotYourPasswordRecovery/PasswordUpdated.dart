@@ -2,6 +2,7 @@ import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
 import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Views/SignIn.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -61,7 +62,7 @@ class PasswordUpdated extends StatelessWidget {
                   textStyle: TextStylesPoppins.textStyles_14.apply(
                       color: ColorStyle.primaryWhite, fontWeightDelta: 1),
                   onTap: () {
-
+                    Get.offAll(SignIn());
                   },
                 )
               ],

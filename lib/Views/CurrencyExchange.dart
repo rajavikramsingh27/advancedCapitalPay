@@ -13,7 +13,7 @@ import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
 import '../Views/SummaryTransferTop.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 
 class CurrencyExchange extends StatelessWidget {
@@ -43,13 +43,7 @@ class CurrencyExchange extends StatelessWidget {
                   Get.back();
                 },
               ),
-              trailingButton: IconButton(
-                icon: Image.asset(
-                  ImageStyle.chat,
-                  height: 30,
-                ),
-                onPressed: () {},
-              ),
+              trailingButton: ButtonChat(),
             ),
             body: SingleChildScrollView(
               padding: EdgeInsets.only(left: 20, right: 20),

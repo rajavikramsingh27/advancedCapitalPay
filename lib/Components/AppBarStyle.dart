@@ -145,7 +145,7 @@ class AppBarStyleTitle extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       toolbarHeight: heightAppBar,
       backgroundColor: backgroundColor,
-      leadingWidth: (leadingButton == null) ? 0 : 120,
+      leadingWidth: (leadingButton == null) ? 0 : 46,
       leading: (leadingButton == null) ? Container() : leadingButton,
       centerTitle: true,
       title: AutoSizeText(

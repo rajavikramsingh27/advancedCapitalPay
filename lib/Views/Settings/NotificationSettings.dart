@@ -14,7 +14,7 @@ import '../../Components/SearchBarCustom.dart';
 import '../../Components/ListViewIconTitleSubtitle.dart';
 import '../../Controllers/NotificationSettingsController.dart';
 import '../../Views/Settings/DailyAccountBalance.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 class NotificationSettings extends StatelessWidget {
   const NotificationSettings({Key? key}) : super(key: key);
@@ -46,15 +46,7 @@ class NotificationSettings extends StatelessWidget {
                   descriptionStyle: TextStylesPoppins.textStyles_12
                       .apply(color: ColorStyle.primaryWhite),
                   trailingAction: [
-                    IconButton(
-                      icon: Image.asset(
-                        ImageStyle.chat,
-                        height: 26,
-                      ),
-                      onPressed: () {
-                        // Get.to(MessagePage());
-                      },
-                    ),
+                    ButtonChat(),
                     IconButton(
                       icon: Image.asset(
                         ImageStyle.user_logout,

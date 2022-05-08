@@ -1,3 +1,4 @@
+import 'package:advanced_capital_pay/Components/ChatWithUs.dart';
 import 'package:advanced_capital_pay/Controllers/CryptoDashboardController.dart';
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:flutter/cupertino.dart';
@@ -109,7 +110,9 @@ class CryptoDashboard extends StatelessWidget {
                       ImageStyle.chat,
                       height: 26,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      ChatWithUs.chatWithUs();
+                    },
                   ),
                   SizedBox(
                     width: 6,

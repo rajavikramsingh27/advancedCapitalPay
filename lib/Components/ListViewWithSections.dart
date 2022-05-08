@@ -12,8 +12,9 @@ class ListViewWithSections extends StatelessWidget {
   final String? title;
   final List? arrList;
   final Widget? widget;
+  final Function(int)? onTap;
 
-  const ListViewWithSections({Key? key, this.title = 'Title', this.arrList, this.widget}) : super(key: key);
+  const ListViewWithSections({Key? key, this.title = 'Title', this.arrList, this.widget, this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +49,12 @@ class ListViewWithSections extends StatelessWidget {
               );
             },
             itemBuilder: (context, index) {
-              return widget!;
+              return InkWell(
+                child: widget!,
+                onTap: () {
+                  onTap!(index);
+                },
+              );
             },
           ),
           SizedBox(height: 10,),

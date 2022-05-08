@@ -12,7 +12,7 @@ import '../Styles/ColorStyle.dart';
 import '../Views/InboxMessage.dart';
 import '../Views/AppSettings.dart';
 import '../Views/SavingGoal2.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 
 class SavingGoal extends StatelessWidget {
@@ -37,15 +37,7 @@ class SavingGoal extends StatelessWidget {
               timeLastLogin:
               'Last Successful login: ' + '02 Feb 2021' + '  ' + '13:53:41',
               trailingAction: [
-                IconButton(
-                  icon: Image.asset(
-                    ImageStyle.chat,
-                    height: 26,
-                  ),
-                  onPressed: () {
-                    Get.to(InboxMessage());
-                  },
-                ),
+                ButtonChat(),
                 IconButton(
                   icon: Image.asset(
                     ImageStyle.settings,

@@ -10,7 +10,7 @@ import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
 import 'Settings/BalanceSheetCellComponenets.dart';
 import '../Views/Settings/YourFavoriteAccount.dart';
-
+import '../../../Components/ButtonChat.dart';
 class AccountDetails extends StatelessWidget {
   const AccountDetails({Key? key}) : super(key: key);
 
@@ -54,15 +54,7 @@ class AccountDetails extends StatelessWidget {
                               descriptionStyle: TextStylesPoppins.textStyles_12
                                   .apply(color: ColorStyle.primaryWhite),
                               trailingAction: [
-                                IconButton(
-                                  icon: Image.asset(
-                                    ImageStyle.chat,
-                                    height: 26,
-                                  ),
-                                  onPressed: () {
-                                    // Get.to(MessagePage());
-                                  },
-                                ),
+                                ButtonChat(),
                                 IconButton(
                                   icon: Image.asset(
                                     ImageStyle.user_logout,

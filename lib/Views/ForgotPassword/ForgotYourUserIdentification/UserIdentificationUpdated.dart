@@ -9,6 +9,7 @@ import '../../../Styles/EffectStyle.dart';
 import '../../../Styles/ImageStyle.dart';
 import '../../../Styles/TextStyles.dart';
 import '../../../Components/TextFieldCustom.dart';
+import '../../SignIn.dart';
 
 class UserIdentificationUpdated extends StatelessWidget {
   UserIdentificationUpdated({Key? key}) : super(key: key);
@@ -65,6 +66,7 @@ class UserIdentificationUpdated extends StatelessWidget {
             .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
         onTap: () {
           controller.isIdentifiy.value = true;
+          Get.offAll(SignIn());
         },
       );
     }

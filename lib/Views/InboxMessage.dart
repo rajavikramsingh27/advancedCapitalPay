@@ -1,3 +1,4 @@
+import 'package:advanced_capital_pay/Views/MyMessages.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,7 +12,7 @@ import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
 import '../Components/SearchBarCustom.dart';
 import '../Components/ListViewWithSections.dart';
-
+import '../../../Components/ButtonChat.dart';
 class InboxMessage extends StatelessWidget {
   const InboxMessage({Key? key}) : super(key: key);
 
@@ -57,15 +58,7 @@ class InboxMessage extends StatelessWidget {
                         nameUser: 'HARRISON SMITH',
                         descriptionUser: 'Your Personal Settings',
                         trailingAction: [
-                          IconButton(
-                            icon: Image.asset(
-                              ImageStyle.chat,
-                              height: 26,
-                            ),
-                            onPressed: () {
-                              Get.to(InboxMessage());
-                            },
-                          ),
+                          ButtonChat(),
                           IconButton(
                             icon: Image.asset(
                               ImageStyle.user_logout,
@@ -288,6 +281,9 @@ class InboxMessage extends StatelessWidget {
                             ListViewWithSections(
                               title: 'Important Messages - March 2022',
                               arrList: ['',],
+                              onTap: (index) {
+                                Get.to(MyMessages());
+                              },
                               widget: (controller.listType.value == 1) ? Container(
                                 padding: EdgeInsets.only(
                                   left: 12,
@@ -425,6 +421,9 @@ class InboxMessage extends StatelessWidget {
                             ListViewWithSections(
                               title: 'Important Messages - March 2022',
                               arrList: ['','',],
+                              onTap: (index) {
+                                Get.to(MyMessages());
+                              },
                               widget: (controller.listType.value == 1) ? Container(
                                 padding: EdgeInsets.only(
                                   left: 12,
@@ -562,6 +561,9 @@ class InboxMessage extends StatelessWidget {
                             ListViewWithSections(
                               title: 'Important Messages - March 2022',
                               arrList: ['','','',],
+                              onTap: (index) {
+                                Get.to(MyMessages());
+                              },
                               widget: (controller.listType.value == 1) ? Container(
                                 padding: EdgeInsets.only(
                                   left: 12,

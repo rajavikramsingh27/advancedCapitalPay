@@ -9,7 +9,7 @@ import '../Components/ButtonCustom.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
-
+import '../../../Components/ButtonChat.dart';
 class ApplePay extends StatelessWidget {
   const ApplePay({Key? key}) : super(key: key);
 
@@ -34,13 +34,7 @@ class ApplePay extends StatelessWidget {
                   Get.back();
                 },
               ),
-              trailingButton: IconButton(
-                icon: Image.asset(
-                  ImageStyle.chat,
-                  height: 30,
-                ),
-                onPressed: () {},
-              ),
+              trailingButton: ButtonChat(),
             ),
             backgroundColor: Colors.transparent,
             body: Container(

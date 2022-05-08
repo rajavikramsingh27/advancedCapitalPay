@@ -19,11 +19,11 @@ class AccountDetailsRecoveryController extends GetxController {
     arrSelectOption.clear();
     arrSelectOptionIcons.clear();
 
-    Future.delayed(Duration(milliseconds: 200), () {
+    // Future.delayed(Duration(milliseconds: 300), () {
       for (int i = 0; i < 4; i++) {
         arrSelectOption.add((i == 0) ? true : false);
         arrSelectOptionIcons.add((i == 0) ? true : false);
       }
-    });
+    // });
   }
 }

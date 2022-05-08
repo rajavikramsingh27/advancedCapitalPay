@@ -1,4 +1,6 @@
+import '../Components/ButtonChat.dart';
 import '../Components/ButtonCustom.dart';
+import '../Components/ChatWithUs.dart';
 import '../Components/CountryFlag.dart';
 import '../Styles/ColorStyle.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -26,13 +28,7 @@ class SignIn extends StatelessWidget {
           backgroundColor: Colors.transparent,
           appBar: AppBarStyle(
             leadingButton: CountryFlag.iconFlag(),
-            trailingButton: IconButton(
-              icon: Image.asset(
-                ImageStyle.chat,
-                height: 30,
-              ),
-              onPressed: () {},
-            ),
+            trailingButton: ButtonChat(),
           ),
           body: SingleChildScrollView(
             padding: EdgeInsets.only(

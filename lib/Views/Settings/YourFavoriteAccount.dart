@@ -8,6 +8,7 @@ import '../../Styles/EffectStyle.dart';
 import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../../Views/Settings/BalanceSheetCellComponenets.dart';
+import '../../../Components/ButtonChat.dart';
 
 class YourFavoriteAccount extends StatelessWidget {
   final String? title;
@@ -81,15 +82,7 @@ class YourFavoriteAccount extends StatelessWidget {
                   descriptionStyle: TextStylesPoppins.textStyles_12
                       .apply(color: ColorStyle.primaryWhite),
                   trailingAction: [
-                    IconButton(
-                      icon: Image.asset(
-                        ImageStyle.chat,
-                        height: 26,
-                      ),
-                      onPressed: () {
-                        // Get.to(MessagePage());
-                      },
-                    ),
+                    ButtonChat(),
                     IconButton(
                       icon: Image.asset(
                         ImageStyle.user_logout,

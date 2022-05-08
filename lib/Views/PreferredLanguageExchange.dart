@@ -6,6 +6,8 @@ import '../Controllers/PreferredLanguageSelection1Controller.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
+import '../../../Components/ButtonChat.dart';
+
 
 class PreferredLanguageExchange extends StatelessWidget {
   const PreferredLanguageExchange({Key? key}) : super(key: key);
@@ -22,13 +24,7 @@ class PreferredLanguageExchange extends StatelessWidget {
               leadingButton: BackButton(
                 onPressed: () {},
               ),
-              trailingButton: IconButton(
-                icon: Image.asset(
-                  ImageStyle.chat,
-                  height: 30,
-                ),
-                onPressed: () {},
-              ),
+              trailingButton: ButtonChat(),
             ),
             backgroundColor: Colors.transparent,
             body: GetBuilder<PreferredLanguageSelection1Controller>(

@@ -11,7 +11,7 @@ import 'package:get/get.dart';
 import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
 import '../Controllers/TravelNoticeController.dart';
 import '../Views/TravelDestination.dart';
-
+import '../../../Components/ButtonChat.dart';
 class TravelNotice extends StatelessWidget {
   TravelNotice({Key? key}) : super(key: key);
 
@@ -192,13 +192,7 @@ class TravelNotice extends StatelessWidget {
               Get.back();
             },
           ),
-          trailingButton: [IconButton(
-            icon: Image.asset(
-              ImageStyle.chat,
-              height: 30,
-            ),
-            onPressed: () {},
-          )],
+          trailingButton: [ButtonChat(),],
         ),
         backgroundColor: Colors.white,
         body:SingleChildScrollView(

@@ -10,6 +10,8 @@ import '../Components/TextFieldCustom.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
+import '../../../Components/ButtonChat.dart';
+
 class BeneficiaryBankDetails extends StatelessWidget {
   const BeneficiaryBankDetails({Key? key}) : super(key: key);
 
@@ -27,19 +29,12 @@ class BeneficiaryBankDetails extends StatelessWidget {
                     fontWeightDelta: 2
                 ),
               ),
-
-
               leadingButton: BackButton(
+                onPressed: () {
 
-                onPressed: () {},
+                },
               ),
-              trailingButton: IconButton(
-                icon: Image.asset(
-                  ImageStyle.chat,
-                  height: 30,
-                ),
-                onPressed: () {},
-              ),
+              trailingButton: ButtonChat(),
 
             ),
             backgroundColor: Colors.transparent,

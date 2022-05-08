@@ -9,7 +9,7 @@ import '../Styles/TextStyles.dart';
 import 'package:get/get.dart';
 import '../Views/NewBeneficiary.dart';
 import 'package:get/get.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 class TravelDestination extends StatelessWidget {
   const TravelDestination({Key? key}) : super(key: key);
@@ -29,13 +29,7 @@ class TravelDestination extends StatelessWidget {
               Get.back();
             },
           ),
-          trailingButton: [IconButton(
-            icon: Image.asset(
-              ImageStyle.chat,
-              height: 30,
-            ),
-            onPressed: () {},
-          )],
+          trailingButton: [ButtonChat(),],
         ),
         backgroundColor: ColorStyle.primaryWhite,
         body: SingleChildScrollView(

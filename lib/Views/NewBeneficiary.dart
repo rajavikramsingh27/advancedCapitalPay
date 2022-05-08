@@ -12,7 +12,7 @@ import '../Components/PickerCustom.dart';
 import '../Controllers/NewBeneficiaryController.dart';
 import 'package:intl/intl.dart';
 import '../Views/TravelDetails.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 
 class NewBeneficiary extends StatelessWidget {
@@ -51,13 +51,7 @@ class NewBeneficiary extends StatelessWidget {
               Get.back();
             },
           ),
-          trailingButton: [IconButton(
-            icon: Image.asset(
-              ImageStyle.chat,
-              height: 30,
-            ),
-            onPressed: () {},
-          )],
+          trailingButton: [ButtonChat(),],
         ),
         backgroundColor: ColorStyle.primaryWhite,
         body: GetBuilder(

@@ -13,7 +13,7 @@ import '../Views/InboxMessage.dart';
 import '../Views/AppSettings.dart';
 import '../Components/SearchBarCustom.dart';
 import '../Components/GoogleMapCustom.dart';
-
+import '../../../Components/ButtonChat.dart';
 class TransactionDetails extends StatelessWidget {
   TransactionDetails({Key? key}) : super(key: key);
 
@@ -39,15 +39,7 @@ class TransactionDetails extends StatelessWidget {
         descriptionStyle: TextStylesPoppins.textStyles_12
             .apply(color: ColorStyle.primaryWhite, fontWeightDelta: 1),
         trailingAction: [
-          IconButton(
-            icon: Image.asset(
-              ImageStyle.chat,
-              height: 26,
-            ),
-            onPressed: () {
-              Get.to(InboxMessage());
-            },
-          ),
+          ButtonChat(),
           IconButton(
             icon: Image.asset(
               ImageStyle.settings,

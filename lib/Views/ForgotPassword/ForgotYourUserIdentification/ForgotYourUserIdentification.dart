@@ -11,7 +11,7 @@ import '../AccountDetails.dart';
 import '../../../Controllers/AccountDetailsRecoveryController.dart';
 import '../UserIdentification.dart';
 import '../ForgotYourUserIdentification/UserIdentificationUpdated.dart';
-
+import '../../../Components/ButtonChat.dart';
 
 class ForgotYourUserIdentification extends StatelessWidget {
   ForgotYourUserIdentification({Key? key}) : super(key: key);
@@ -60,13 +60,7 @@ class ForgotYourUserIdentification extends StatelessWidget {
                 Get.back();
               },
             ),
-            trailingButton: [IconButton(
-              icon: Image.asset(
-                ImageStyle.chat,
-                height: 30,
-              ),
-              onPressed: () {},
-            )],
+            trailingButton: [ButtonChat(),],
           ),
           body: GetBuilder(
             init: AccountDetailsRecoveryController(),

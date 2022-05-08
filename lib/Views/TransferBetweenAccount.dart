@@ -22,7 +22,7 @@ import '../../Components/AppBarStyle.dart';
 import '../../Styles/ColorStyle.dart';
 import '../../Styles/TextStyles.dart';
 import 'AccountSelection.dart';
-
+import '../../../Components/ButtonChat.dart';
 class TransferBetweenAccount extends StatelessWidget {
   TransferBetweenAccount({Key? key}) : super(key: key);
 
@@ -133,15 +133,7 @@ class TransferBetweenAccount extends StatelessWidget {
                     Get.back();
                   },
                 ),
-                trailingButton: [IconButton(
-                  icon: Image.asset(
-                    ImageStyle.chat,
-                    height: 30,
-                  ),
-                  onPressed: () {
-                    filter();
-                  },
-                )],
+                trailingButton: [ButtonChat(),],
               ),
               body: SingleChildScrollView(
                   padding: EffectStyle.padding(0, 0, 0, 20),

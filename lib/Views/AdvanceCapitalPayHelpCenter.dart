@@ -12,7 +12,7 @@ import '../Styles/TextStyles.dart';
 import 'SignUp/EffectStyleSignUp.dart';
 import '../Components/InfoIconDescription.dart';
 import '../Components/ComponentsTitleInputs.dart';
-
+import '../../../Components/ButtonChat.dart';
 class AdvanceCapitalPayHelpCenter extends StatelessWidget {
   const AdvanceCapitalPayHelpCenter({Key? key}) : super(key: key);
 
@@ -40,13 +40,7 @@ class AdvanceCapitalPayHelpCenter extends StatelessWidget {
                   Get.back();
                 },
               ),
-              trailingButton: IconButton(
-                icon: Image.asset(
-                  ImageStyle.chat,
-                  height: 30,
-                ),
-                onPressed: () {},
-              ),
+              trailingButton: ButtonChat(),
             ),
             backgroundColor: Colors.transparent,
             body: SingleChildScrollView(

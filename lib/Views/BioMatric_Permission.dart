@@ -14,7 +14,8 @@ import '../Components/BioMatricAuth.dart';
 import '../Controllers/BioMatric_VerificationController.dart';
 import '../Views/BioMatric_Verification.dart';
 import '../Views/ChooseYourCard.dart';
-
+import '../../../Components/ButtonChat.dart';
+import 'SignIn.dart';
 
 class BioMatric_Permission extends StatelessWidget {
   BioMatric_Permission({Key? key}) : super(key: key);
@@ -48,15 +49,11 @@ class BioMatric_Permission extends StatelessWidget {
                         ImageStyle.user_logout,
                         height: 30,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.offAll(SignIn());
+                      },
                     ),
-                    trailingButton: IconButton(
-                      icon: Image.asset(
-                        ImageStyle.chat,
-                        height: 30,
-                      ),
-                      onPressed: () {},
-                    ),
+                    trailingButton: ButtonChat(),
                   ),
                   body: SingleChildScrollView(
                     padding: EdgeInsets.only(
