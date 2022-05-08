@@ -1,6 +1,10 @@
 
 
 
+import 'package:advanced_capital_pay/Views/SignUp/PersonalApplication2.dart';
+import 'package:advanced_capital_pay/Views/SignUp/PersonalApplication8.dart';
+import 'package:advanced_capital_pay/Views/SignUp/PersonalApplication9.dart';
+import 'package:advanced_capital_pay/Views/TransactionSuccesfuls.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
@@ -14,7 +18,14 @@ import '../Views/CryptoTransactionList.dart';
 import '../Views/SendBitcoins1.dart';
 import '../Views/CryptoTransactionDetails.dart';
 import '../Views/TransactionSummarys.dart';
-import '../Views/TransactionSuccesfuls.dart';
+import '../Views/CryptoScanOrTake.dart';
+import 'Views/OnBoarding.dart';
+import 'Views/PersonalFacialVerification.dart';
+import 'Views/PreferredLanguageExchange.dart';
+import 'Views/PrivatePopUp.dart';
+import 'Views/ReturningCustomerAlreadyUsedApp.dart';
+import 'Views/SendBitcoins.dart';
+import 'Views/StartScreen.dart';
 
 
 
@@ -41,7 +52,7 @@ class MyApp extends StatelessWidget {
         // home: SplashScreen(),
       // home: CryptoTrade(),
       // home: CryptoOrders(),
-      home: CryptoTransactionList(),
+      home:  ReturningCustomerAlreadyUsedApp(),
       // home: Exchange(),
       // home: TabbarScreen(),
       // home: CryptoRequestAmount(),
