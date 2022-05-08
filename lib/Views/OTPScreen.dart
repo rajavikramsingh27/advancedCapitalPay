@@ -8,10 +8,10 @@ import '../Styles/TextStyles.dart';
 import '../Components/BackgroundImage.dart';
 import '../Components/AppBarStyle.dart';
 import '../Components/TextFieldCustom.dart';
-import '../Controllers/OTPScreenController.dart';
+import '../Controllers/SignUp/OTPScreenController.dart';
 import '../Views/BioMatric_Permission.dart';
 import '../Components/ButtonCustom.dart';
-import '../Views/VerifyQuestion.dart';
+import 'SignUp/SignUpVerifyQuestion.dart';
 import '../../../Components/ButtonChat.dart';
 
 class OTPScreen extends StatelessWidget {
@@ -235,7 +235,7 @@ class OTPScreen extends StatelessWidget {
                         ),
                       ),
                       onTap: () {
-                        Get.to(VerifyQuestion());
+                        Get.to(SignUpVerifyQuestion());
                       },
                     ),
                   ],

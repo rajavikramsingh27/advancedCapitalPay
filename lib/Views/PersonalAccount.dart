@@ -21,7 +21,7 @@ import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
 import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
 import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:advanced_capital_pay/Styles/TextStyles.dart';
-import '../Controllers/PersonalAccountController.dart';
+import '../Controllers/SignUp/PersonalAccountController.dart';
 import '../Components/FourOptionSeries.dart';
 import '../Components/InfoIconDescription.dart';
 import '../Components/ComponentsTitleInputs.dart';

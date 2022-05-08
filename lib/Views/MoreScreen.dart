@@ -7,7 +7,7 @@ import '../Styles/ColorStyle.dart';
 import '../Styles/EffectStyle.dart';
 import '../Styles/TextStyles.dart';
 import '../Styles/ImageStyle.dart';
-import '../Views/YourCard.dart';
+import '../Views/CardSetting.dart';
 
 
 class MoreScreen {
@@ -88,7 +88,7 @@ class MoreScreen {
                                   } else if (index == 2) {
                                     // ChatWithUs.chatWithUs();
                                   } else if (index == 3) {
-                                    Get.to(YourCard());
+                                    Get.to(CardSetting());
                                   } else if (index == 4) {
                                     ChatWithUs.chatWithUs();
                                   }

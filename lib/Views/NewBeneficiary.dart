@@ -11,7 +11,7 @@ import '../Components/ButtonCustom.dart';
 import '../Components/PickerCustom.dart';
 import '../Controllers/NewBeneficiaryController.dart';
 import 'package:intl/intl.dart';
-import '../Views/TravelDetails.dart';
+import 'Travel/TravelDetails.dart';
 import '../../../Components/ButtonChat.dart';
 
 

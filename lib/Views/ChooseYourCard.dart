@@ -13,7 +13,7 @@ import '../Components/TextFieldCustom.dart';
 import '../Controllers/ChooseYourCardController.dart';
 import '../Views/BioMatric_Permission.dart';
 import '../Components/ButtonCustom.dart';
-import '../Views/VerifyQuestion.dart';
+import 'SignUp/SignUpVerifyQuestion.dart';
 import '../Styles/ColorStyle.dart';
 import '../Views/SignIn.dart';
 import '../Views/TabbarScreen.dart';

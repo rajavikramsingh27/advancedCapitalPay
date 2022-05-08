@@ -344,4 +344,16 @@ class ImageStyle {
   static const String bgRectangle2282 = "$baseImage/bgRectangle2282.png";
   static const String flagCountry = "$baseImage/flagCountry.png";
   static const String bgPolygon4 = "$baseImage/bgPolygon4.png";
+  static const String Layercopy = "$baseImage/Layercopy.png";
+  static const String commentcopy = "$baseImage/commentcopy.png";
+  static const String signup1 = "$baseImage/signup1.png";
+  static const String signup2 = "$baseImage/signup2.png";
+  static const String signup3 = "$baseImage/signup3.png";
+  static const String signup4 = "$baseImage/signup4.png";
+  static const String signup5 = "$baseImage/signup5.png";
+
+  static const String lock2 = "$baseImage/lock2.png";
+  static const String Group1947 = "$baseImage/Group1947.png";
+  static const String TopNav = "$baseImage/TopNav.png";
+
 }

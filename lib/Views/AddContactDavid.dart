@@ -6,7 +6,7 @@ import '../Styles/ColorStyle.dart';
 import '../Styles/EffectStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
-import 'CryptoDashboard.dart';
+import 'CryptoScreens/CryptoDashboard.dart';
 
 
 class AddContactDavid extends StatelessWidget {

@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
-import '../Views/WhileOverseas.dart';
+import '../Views/Travel/TravelOverseas.dart';
 
 
 class TravelPopUp {
@@ -101,7 +101,7 @@ class TravelPopUp {
                             fontWeightDelta: 1),
                         onTap: () {
                           Get.back();
-                          Get.to(WhileOverseas());
+                          Get.to(TravelOverseas());
                         },
                       ),
                       SizedBox(

@@ -172,21 +172,133 @@ class SignUpAccountType extends StatelessWidget {
           ],
         ),
         SizedBox(
-          height: 18,
+          height: 16,
         ),
-        DropdownButtonCustom(
-          iconWidget: Image.asset(
-            ImageStyle.dropDown,
-            height: 16,
+        Container(
+          padding: EdgeInsets.only(
+              left: 4,
+              top: 10,
+              bottom: 10
           ),
-          colorBorder: Colors.grey,
-          onChanged: (text) {},
-          listValue: [
-            'LITE',
-            'Free accounf',
-          ],
-          selectedValue: "LITE",
-        ),
+          decoration: BoxDecoration(
+            color: ColorStyle.primaryWhite,
+            borderRadius: BorderRadius.circular(2),
+            border: Border.all(
+              color: ColorStyle.grey,
+              width: 0.6
+            )
+          ),
+          child: Column(
+            children: [
+              InkWell(
+                child: Row(
+                  children: [
+                    Expanded(child: Row(
+                      children: [
+                        Image.asset(
+                          controller.arrPlanIcons[controller.indexPlan.value],
+                          height: 54,
+                        ),
+                        SizedBox(
+                          width: 16,
+                        ),
+                        Expanded(child: Column(
+                          crossAxisAlignment:
+                          CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              controller.arrPlanTitle[controller.indexPlan.value],
+                              style: TextStylesPoppins.textStyles_16
+                                  .apply(
+                                  color: ColorStyle.secondryBlack,
+                                  fontWeightDelta: 1
+                              ),
+                            ),
+                            SizedBox(
+                              height: 6,
+                            ),
+                            Text(
+                              controller.arrPlanPrice[controller.indexPlan.value],
+                              style: TextStylesPoppins.textStyles_14
+                                  .apply(
+                                color: ColorStyle.secondryBlack,
+                                // fontWeightDelta: 2
+                              ),
+                            ),
+                          ],
+                        ))
+                      ],
+                    )),
+                    Icon(Icons.arrow_drop_down, color: ColorStyle.grey, size: 30,)
+                  ],
+                ),
+                onTap: () {
+                  controller.isDropDown.value = !controller.isDropDown.value;
+                },
+              ),
+              if (controller.isDropDown.value)
+              Container(
+                height: 0.6,
+                margin: EffectStyle.padding(0, 0, 8, 0),
+                color: ColorStyle.grey,
+              ),
+              if (controller.isDropDown.value)
+              SizedBox(height: 8,),
+              if (controller.isDropDown.value)
+              ListView.separated(
+                  shrinkWrap: true,
+                  itemCount: controller.arrPlanIcons.length,
+                  physics: NeverScrollableScrollPhysics(),
+                  separatorBuilder: (context, index) {
+                    return SizedBox(height: 16,);
+                  },
+                  itemBuilder: (BuildContext context, int index) {
+                    return InkWell(
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            controller.arrPlanIcons[index],
+                            height: 54,
+                          ),
+                          SizedBox(
+                            width: 16,
+                          ),
+                          Expanded(child: Column(
+                            crossAxisAlignment:
+                            CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                controller.arrPlanTitle[index],
+                                style: TextStylesPoppins.textStyles_16
+                                    .apply(
+                                    color: ColorStyle.secondryBlack,
+                                    fontWeightDelta: 1
+                                ),
+                              ),
+                              SizedBox(
+                                height: 6,
+                              ),
+                              Text(
+                                controller.arrPlanPrice[index],
+                                style: TextStylesPoppins.textStyles_14
+                                    .apply(
+                                  color: ColorStyle.secondryBlack,
+                                  // fontWeightDelta: 2
+                                ),
+                              ),
+                            ],
+                          ))
+                        ],
+                      ),
+                      onTap: () {
+                        controller.indexPlan.value = index;
+                        controller.isDropDown.value = false;
+                      },
+                    );
+                  }),
+            ],
+          ),
+        )
       ],
     );
   }

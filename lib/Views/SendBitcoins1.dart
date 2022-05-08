@@ -1,4 +1,4 @@
-import 'package:advanced_capital_pay/Views/CryptoDashboard.dart';
+import 'package:advanced_capital_pay/Views/CryptoScreens/CryptoDashboard.dart';
 import 'package:flutter/material.dart';
 
 import '../Components/BackgroundImage.dart';

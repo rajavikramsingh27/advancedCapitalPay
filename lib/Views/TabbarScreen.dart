@@ -7,9 +7,9 @@ import '../Styles/TextStyles.dart';
 import '../Controllers/TabbarScreenController.dart';
 import '../Views/MainDashboard.dart';
 import '../Views/MoreScreen.dart';
-import '../Views/YourCard.dart';
+import '../Views/CardSetting.dart';
 import '../Views/AdvanceCapitalPayHelpCenter.dart';
-import '../Views/CryptoDashboard.dart';
+import 'CryptoScreens/CryptoDashboard.dart';
 
 
 class TabbarScreen extends StatelessWidget {
@@ -65,7 +65,7 @@ class TabbarScreen extends StatelessWidget {
                             bottom: 65,
                             left: 0,
                             right: 0,
-                            child: YourCard()),
+                            child: CardSetting()),
                       if (controller.selectedIndex.value == 4)
                         Positioned(
                             top: 0,
