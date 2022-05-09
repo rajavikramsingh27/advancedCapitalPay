@@ -61,7 +61,7 @@ class CryptoScanOrTake extends StatelessWidget {
                       style: TextStylesSFCompactDisplay.textStyles_16
                           .apply(
                         color: ColorStyle.primaryWhite,
-                        fontWeightDelta: 2,
+                        fontWeightDelta: 1,
                       ),
                     ),
                     SizedBox(

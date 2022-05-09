@@ -1,7 +1,10 @@
 
+import 'package:advanced_capital_pay/Views/CryptoPrinting.dart';
 import 'package:advanced_capital_pay/Views/CryptoScanOrTake.dart';
 import 'package:advanced_capital_pay/Views/CryptoSetAmount.dart';
 import 'package:advanced_capital_pay/Views/CryptoTransactionList.dart';
+import 'package:advanced_capital_pay/Views/CustomerHelpCenter.dart';
+import 'package:advanced_capital_pay/Views/SignUpBusinessApplication.dart';
 import 'package:advanced_capital_pay/Views/YourCard.dart';
 
 import 'package:flutter/material.dart';
@@ -37,7 +40,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
 
-      home: CryptoScanOrTake(),
+      home: CustomerHelpCenter(),
       // home: Exchange(),
       // home: TabbarScreen(),
       // home: ApplePay(),

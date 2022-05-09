@@ -208,14 +208,28 @@ class CryptoSetAmount extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        '1.28573702',
-                        style: TextStylesSFCompactDisplay.textStyles_16
-                            .apply(
-                          color: ColorStyle.yellow,
-                          // fontWeightDelta: 2,
+                      Expanded(
+                        child: TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: '1.28573702',
+                          hintStyle: TextStylesSFCompactDisplay.textStyles_16.apply(
+                            color: ColorStyle.yellow
+                          )
+                          //       .apply(
+                          //     color: ColorStyle.yellow,
+                          //     // fontWeightDelta: 2,
+
                         ),
-                      ),
+                      ),),
+
+                      // Text(
+                      //   style: TextStylesSFCompactDisplay.textStyles_16
+                      //       .apply(
+                      //     color: ColorStyle.yellow,
+                      //     // fontWeightDelta: 2,
+                      //   ),
+                      // ),
                       Text(
                         'ETH',
                         style: TextStylesSFCompactDisplay.textStyles_16

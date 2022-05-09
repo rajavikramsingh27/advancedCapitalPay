@@ -604,8 +604,8 @@ class MainDashboard extends StatelessWidget {
                                               Get.to(TransactionDetails());
                                             },
                                           );
-                                        } else if (controller.listType.value ==
-                                            2) {
+                                        }
+                                        else if (controller.listType.value == 2) {
                                           return Container(
                                             padding: EdgeInsets.only(
                                                 left: 12, right: 12),
@@ -675,8 +675,8 @@ class MainDashboard extends StatelessWidget {
                                                 color:
                                                 ColorStyle.hex('#F5F4F4')),
                                           );
-                                        } else if (controller.listType.value ==
-                                            3) {
+                                        }
+                                        else if (controller.listType.value == 3) {
                                           return Container(
                                             padding: EdgeInsets.only(
                                                 left: 12,
@@ -759,7 +759,8 @@ class MainDashboard extends StatelessWidget {
                                                 color:
                                                 ColorStyle.hex('#F5F4F4')),
                                           );
-                                        } else {
+                                        }
+                                        else {
                                           return Container(
                                             color: Colors.red,
                                             height: 100,

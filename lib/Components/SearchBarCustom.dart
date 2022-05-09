@@ -44,3 +44,47 @@ class SearchBarCustom extends StatelessWidget {
     );
   }
 }
+
+
+class SearchCustomBarHelpCenter extends StatelessWidget {
+  const SearchCustomBarHelpCenter({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      height: 34,
+      // margin: EdgeInsets.only(left: 16, right: 16),
+      padding: EdgeInsets.only(left: 6, right: 6),
+      child: Row(
+        children: [
+          Icon(
+            Icons.search,
+            color: ColorStyle.hex('#9E9D9D'),
+            size: 25,
+          ),
+          Expanded(
+              child: TextField(
+                style: TextStylesPoppins.textStyles_16.apply(
+                  color: ColorStyle.secondryBlack,
+                  fontWeightDelta: 0,
+                ),
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.only(bottom: 10),
+                  hintText: "What can we help you with?",
+                  hintStyle: TextStylesPoppins.textStyles_16.apply(
+                    color: ColorStyle.hex('#BABABA'),
+                    fontWeightDelta: 0,
+                  ),
+                  enabledBorder: InputBorder.none,
+                  focusedBorder: InputBorder.none,
+                ),
+                onChanged: (value) {},
+              ))
+        ],
+      ),
+      decoration: BoxDecoration(
+          color: ColorStyle.hex('#E3E3E3'), borderRadius: BorderRadius.circular(4)),
+    );
+  }
+}

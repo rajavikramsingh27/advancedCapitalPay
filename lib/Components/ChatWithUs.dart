@@ -82,7 +82,8 @@ class ChatWithUs  {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Expanded(child: Row(
+                            Expanded(
+                              child: Row(
                               children: [
                                 Container(
                                   child: Icon(Icons.person, color: Colors.white, size: 30),
