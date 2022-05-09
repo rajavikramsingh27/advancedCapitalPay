@@ -1,3 +1,4 @@
+import 'package:advanced_capital_pay/Views/InboxMessage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -167,7 +168,7 @@ class AdvanceCapitalPayHelpCenter extends StatelessWidget {
                               color: ColorStyle.primaryWhite
                           ),
                           onTapSecond: () {
-
+                            Get.to(InboxMessage());
                           },
                         ),
                         SizedBox(

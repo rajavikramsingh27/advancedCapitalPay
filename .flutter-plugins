@@ -8,3 +8,6 @@ image_picker_ios=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/image
 local_auth=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/local_auth-2.0.0/
 local_auth_android=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/local_auth_android-1.0.0/
 local_auth_ios=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/local_auth_ios-1.0.1/
+webview_flutter=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/webview_flutter-3.0.2/
+webview_flutter_android=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/webview_flutter_android-2.8.6/
+webview_flutter_wkwebview=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/webview_flutter_wkwebview-2.7.3/

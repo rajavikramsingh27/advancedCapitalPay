@@ -49,6 +49,7 @@ dependencies:
   notification_center: ^0.0.2
   dotted_border: ^2.0.0+2
   image_picker: ^0.8.5
+  webview_flutter: ^3.0.2
 
 
 dev_dependencies:
