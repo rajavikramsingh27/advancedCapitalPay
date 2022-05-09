@@ -356,4 +356,13 @@ class ImageStyle {
   static const String Group1947 = "$baseImage/Group1947.png";
   static const String TopNav = "$baseImage/TopNav.png";
 
+  static const String  Backgrundimage= "$baseImage/Backgrundimage.png";
+  static const String  Group2185= "$baseImage/Group2185.png";
+  static const String  Group22222= "$baseImage/Group22222.png";
+  static const String  Group2223= "$baseImage/Group2223.png";
+  static const String  Group2224= "$baseImage/Group2224.png";
+  static const String  lockk= "$baseImage/lockk.png";
+  static const String  locko= "$baseImage/locko.png";
+  static const String  lockt= "$baseImage/lockt.png";
+  static const String  lockf= "$baseImage/lockf.png";
 }

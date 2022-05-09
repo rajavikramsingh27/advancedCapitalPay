@@ -8,7 +8,7 @@ import '../Controllers/TabbarScreenController.dart';
 import '../Views/MainDashboard.dart';
 import '../Views/MoreScreen.dart';
 import '../Views/CardSetting.dart';
-import '../Views/AdvanceCapitalPayHelpCenter.dart';
+import '../Views/CustomerHelpCenter.dart';
 import 'CryptoScreens/CryptoDashboard.dart';
 
 
@@ -43,6 +43,16 @@ class TabbarScreen extends StatelessWidget {
           builder: (authController) {
             return Obx(() => Scaffold(
                   backgroundColor: Colors.white,
+                  floatingActionButton: InkWell(
+                    child: Image.asset(
+                      ImageStyle.middle_Image,
+                      height: 64,
+                    ),
+                    onTap: () {
+                      controller.selectedIndex.value = 2;
+                    },
+                  ),
+                  floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
                   body: Stack(
                     children: [
                       if (controller.selectedIndex.value == 0)
@@ -72,7 +82,7 @@ class TabbarScreen extends StatelessWidget {
                             bottom: 65,
                             left: 0,
                             right: 0,
-                            child: AdvanceCapitalPayHelpCenter()),
+                            child: CustomerHelpCenter()),
                       Positioned(
                           bottom: 0,
                           child: SafeArea(
@@ -165,23 +175,23 @@ class TabbarScreen extends StatelessWidget {
                               ),
                             ),
                           )),
-                      Positioned(
-                          bottom: 20,
-                          left: MediaQuery.of(context).size.width / 2 - 32,
-                          child: Material(
-                            color: Colors.transparent,
-                            child: Center(
-                              child: InkWell(
-                                child: Image.asset(
-                                  ImageStyle.middle_Image,
-                                  height: 64,
-                                ),
-                                onTap: () {
-                                  controller.selectedIndex.value = 2;
-                                },
-                              ),
-                            ),
-                          )),
+                      // Positioned(
+                      //     bottom: 20,
+                      //     left: MediaQuery.of(context).size.width / 2 - 32,
+                      //     child: Material(
+                      //       color: Colors.transparent,
+                      //       child: Center(
+                      //         child: InkWell(
+                      //           child: Image.asset(
+                      //             ImageStyle.middle_Image,
+                      //             height: 64,
+                      //           ),
+                      //           onTap: () {
+                      //             controller.selectedIndex.value = 2;
+                      //           },
+                      //         ),
+                      //       ),
+                      //     )),
                     ],
                   ),
                 ));
