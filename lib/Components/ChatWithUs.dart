@@ -18,7 +18,7 @@ class ChatWithUs  {
     final controller = Get.put(ChatWithUsController());
 
     return Get.bottomSheet(
-        GetBuilder(
+        GetBuilder<ChatWithUsController>(
             init: ChatWithUsController(),
             initState: (state) {
               controller.reset();

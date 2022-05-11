@@ -48,7 +48,7 @@ class EditProfile extends StatelessWidget {
             ),
           ),
           backgroundColor: Colors.transparent,
-          body: GetBuilder(
+          body: GetBuilder<ProfileController>(
             init: ProfileController(),
             initState: (state) {},
             builder: (authController) {

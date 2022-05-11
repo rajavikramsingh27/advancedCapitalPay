@@ -12,7 +12,7 @@ import '../../Styles/ImageStyle.dart';
 import '../../Styles/TextStyles.dart';
 import '../../Controllers/Crypto/CryptoRecieveAmountController.dart';
 import 'package:advanced_capital_pay/Views/CryptoScreens/CryptoScanOrTake.dart';
-import 'package:advanced_capital_pay/Views/BioMatric_Permission.dart';
+import 'package:advanced_capital_pay/Views/SignUp/BioMatric_Permission.dart';
 import '../../Components/TextFieldCustom.dart';
 
 
@@ -162,7 +162,7 @@ class CryptoRequestAmount extends StatelessWidget {
             ],
           ),
           backgroundColor: ColorStyle.darkestBlue.withOpacity(0.3),
-          body: GetBuilder(
+          body: GetBuilder<CryptoRecieveAmountController>(
             init: CryptoRecieveAmountController(),
             initState: (state) {
 

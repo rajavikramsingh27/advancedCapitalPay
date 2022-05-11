@@ -23,7 +23,7 @@ class MoreScreen {
               decoration: BoxDecoration(borderRadius: EffectStyle.radiusCustom(14)),
               child: Scaffold(
                 backgroundColor: Colors.transparent,
-                body: GetBuilder(
+                body: GetBuilder<MoreScreenController>(
                   init: MoreScreenController(),
                   initState: (state) {
                     controller.reset();

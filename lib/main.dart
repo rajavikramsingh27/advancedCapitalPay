@@ -7,7 +7,8 @@ import '../Views/SplashScreen.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+  SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
   ));
   SystemChrome.setPreferredOrientations([
@@ -25,7 +26,6 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
-      // home: WebViewCustom(),
     );
   }
 }

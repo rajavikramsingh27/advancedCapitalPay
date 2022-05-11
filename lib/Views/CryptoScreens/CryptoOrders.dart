@@ -62,7 +62,7 @@ class CryptoOrders extends StatelessWidget {
         ),
         Scaffold(
             backgroundColor: ColorStyle.darkestBlue.withOpacity(0.3),
-            body: GetBuilder(
+            body: GetBuilder<CryptoOrdersController>(
                 init: CryptoOrdersController(),
                 initState: (state) {
                   controller.reset();

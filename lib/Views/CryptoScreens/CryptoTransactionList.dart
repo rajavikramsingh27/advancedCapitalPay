@@ -57,7 +57,7 @@ class CryptoTransactionList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder(
+    return GetBuilder<TransferBetweenAccountController>(
         init: TransferBetweenAccountController(),
         initState: (state) {
           controller.reset();

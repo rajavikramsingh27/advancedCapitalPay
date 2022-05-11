@@ -137,7 +137,7 @@ class CryptoMarket extends StatelessWidget {
                 ),
               ],
             ),
-            body: GetBuilder(
+            body: GetBuilder<CryptoMarketController>(
               init: CryptoMarketController(),
               initState: (state) {
                 controller.reset();

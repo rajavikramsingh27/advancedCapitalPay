@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
 import '../Utils/Global.dart';
-import '../Views/BioMatric_Verification.dart';
 
 
 class BioMatricAuth {
