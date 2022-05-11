@@ -63,7 +63,7 @@ class AccountDetailsRecovery extends StatelessWidget {
             ),
             trailingButton: [ButtonChat(),],
           ),
-          body: GetBuilder(
+          body: GetBuilder<AccountDetailsRecoveryController>(
             init: AccountDetailsRecoveryController(),
             initState: (state) {
               controller.reset();

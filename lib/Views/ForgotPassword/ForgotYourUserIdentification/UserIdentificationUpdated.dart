@@ -114,7 +114,7 @@ class UserIdentificationUpdated extends StatelessWidget {
       );
     }
 
-    return GetBuilder(
+    return GetBuilder<AccountDetailsRecoveryController>(
         init: AccountDetailsRecoveryController(),
         initState: (state) {
 

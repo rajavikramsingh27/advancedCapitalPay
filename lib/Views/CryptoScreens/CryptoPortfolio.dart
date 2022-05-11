@@ -119,7 +119,7 @@ class CryptoPortfolio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder(
+    return GetBuilder<CryptoPortfolioController>(
         init: CryptoPortfolioController(),
         initState: (state) {
           controller.reset();

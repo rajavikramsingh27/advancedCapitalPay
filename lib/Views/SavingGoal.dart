@@ -10,7 +10,7 @@ import '../Components/AppBarStyle.dart';
 import 'package:get/utils.dart';
 import '../Styles/ColorStyle.dart';
 import '../Views/InboxMessage.dart';
-import '../Views/AppSettings.dart';
+import 'Settings/AppSettings.dart';
 import '../Views/SavingGoal2.dart';
 import '../../../Components/ButtonChat.dart';
 

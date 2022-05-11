@@ -5,7 +5,7 @@ import '../Styles/ColorStyle.dart';
 import '../Styles/ImageStyle.dart';
 import '../Styles/TextStyles.dart';
 import '../Controllers/TabbarScreenController.dart';
-import '../Views/MainDashboard.dart';
+import 'Dashboard/MainDashboard.dart';
 import '../Views/MoreScreen.dart';
 import '../Views/CardSetting.dart';
 import '../Views/CustomerHelpCenter.dart';
@@ -35,7 +35,7 @@ class TabbarScreen extends StatelessWidget {
         onWillPop: () async {
           return true;
         },
-        child: GetBuilder(
+        child: GetBuilder<TabbarScreenController>(
           init: TabbarScreenController(),
           initState: (state) {
             controller.reset();

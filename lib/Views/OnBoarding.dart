@@ -33,9 +33,9 @@ class _OnBoardingState extends State<OnBoarding> {
     // TODO: implement initState
     super.initState();
 
-    Future.delayed(Duration(milliseconds: 600), () {
-      BioMatricAuth.authenticateWithBiometrics();
-    });
+    // Future.delayed(Duration(milliseconds: 600), () {
+    //   BioMatricAuth.authenticateWithBiometrics();
+    // });
   }
 
   @override

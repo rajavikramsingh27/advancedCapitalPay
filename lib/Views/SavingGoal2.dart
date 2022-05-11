@@ -25,7 +25,7 @@ class SavingGoal2 extends StatelessWidget {
     final controller = Get.put(SavingGoal2Controller());
     return Scaffold(
       backgroundColor: ColorStyle.primaryWhite,
-      body: GetBuilder(
+      body: GetBuilder<SavingGoal2Controller>(
           init: SavingGoal2Controller(),
           initState: (state) {
             controller.reset();

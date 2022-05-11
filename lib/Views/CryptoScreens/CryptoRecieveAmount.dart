@@ -101,7 +101,7 @@ class CryptoRecieveAmount extends StatelessWidget {
             ],
           ),
           backgroundColor: ColorStyle.darkestBlue.withOpacity(0.3),
-          body: GetBuilder(
+          body: GetBuilder<CryptoRecieveAmountController>(
             init: CryptoRecieveAmountController(),
             initState: (state) {
               controller.reset();
