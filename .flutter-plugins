@@ -1,13 +1,13 @@
 # This is a generated file; do not edit or check into version control.
-flutter_plugin_android_lifecycle=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\flutter_plugin_android_lifecycle-2.0.5\\
-google_maps_flutter=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\google_maps_flutter-2.1.4\\
-image_picker=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\image_picker-0.8.5\\
-image_picker_android=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\image_picker_android-0.8.4+11\\
-image_picker_for_web=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\image_picker_for_web-2.1.6\\
-image_picker_ios=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\image_picker_ios-0.8.5\\
-local_auth=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\local_auth-2.0.0\\
-local_auth_android=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\local_auth_android-1.0.0\\
-local_auth_ios=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\local_auth_ios-1.0.1\\
-webview_flutter=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\webview_flutter-3.0.2\\
-webview_flutter_android=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\webview_flutter_android-2.8.6\\
-webview_flutter_wkwebview=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\webview_flutter_wkwebview-2.7.3\\
+flutter_plugin_android_lifecycle=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.5/
+google_maps_flutter=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter-2.1.4/
+image_picker=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.8.5/
+image_picker_android=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_android-0.8.4+11/
+image_picker_for_web=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_for_web-2.1.6/
+image_picker_ios=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_ios-0.8.5/
+local_auth=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/local_auth-2.0.0/
+local_auth_android=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/local_auth_android-1.0.0/
+local_auth_ios=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/local_auth_ios-1.0.1/
+webview_flutter=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/webview_flutter-3.0.2/
+webview_flutter_android=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/webview_flutter_android-2.8.6/
+webview_flutter_wkwebview=/Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/webview_flutter_wkwebview-2.7.3/
