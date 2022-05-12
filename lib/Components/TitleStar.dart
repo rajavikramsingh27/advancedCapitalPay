@@ -1,7 +1,5 @@
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:flutter/material.dart';
-
-import '../Styles/ColorStyle.dart';
-import '../Styles/TextStyles.dart';
 
 class TitleStar {
   static titleStar(String title, bool isStar, [double fontSize = 14, FontWeight fontWeight = FontWeight.normal]) {

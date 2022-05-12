@@ -1,10 +1,9 @@
 import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
 
 class AppBarStyle extends StatelessWidget implements PreferredSizeWidget {
   final Function()? onTap;

@@ -1,7 +1,7 @@
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../Styles/ImageStyle.dart';
 
 
 class CryptoDashboardController extends GetxController {

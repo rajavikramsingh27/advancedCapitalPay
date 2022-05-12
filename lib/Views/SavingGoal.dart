@@ -2,17 +2,17 @@ import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../Controllers/SavingGoalController.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
-import '../Components/BackgroundImage.dart';
-import '../Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Controllers/SavingGoalController.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
 import 'package:get/utils.dart';
-import '../Styles/ColorStyle.dart';
-import '../Views/InboxMessage.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+// import '../Views/InboxMessage.dart';
 import 'Settings/AppSettings.dart';
-import '../Views/SavingGoal2.dart';
-import '../../../Components/ButtonChat.dart';
+import 'package:advanced_capital_pay/Views/SavingGoal2.dart';
+import 'package:advanced_capital_pay/Components/ButtonChat.dart';
 
 
 class SavingGoal extends StatelessWidget {

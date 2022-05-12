@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
 import 'ChatWithUs.dart';
 
 class ButtonChat extends StatelessWidget {

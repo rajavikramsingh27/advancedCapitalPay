@@ -1,8 +1,8 @@
 import 'dart:io';
+import 'package:advanced_capital_pay/Utils/Global.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
-import '../Utils/Global.dart';
 
 
 class BioMatricAuth {

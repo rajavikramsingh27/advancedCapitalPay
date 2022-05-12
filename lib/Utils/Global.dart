@@ -1,7 +1,7 @@
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../Styles/TextStyles.dart';
 
 showLoaderGetX() {
   Get.dialog(

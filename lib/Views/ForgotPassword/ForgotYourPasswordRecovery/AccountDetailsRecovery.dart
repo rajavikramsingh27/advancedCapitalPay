@@ -1,17 +1,17 @@
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Views/Dashboard/AccountDetails.dart';
+import 'package:advanced_capital_pay/Views/ForgotPassword/ForgotYourPasswordRecovery/PasswordUpdated.dart';
+import 'package:advanced_capital_pay/Views/ForgotPassword/ForgotYourPasswordRecovery/SetPassword.dart';
+import 'package:advanced_capital_pay/Views/ForgotPassword/UserIdentification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
 import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:dotted_line/dotted_line.dart';
-import '../AccountDetails.dart';
-import '../../../Controllers/AccountDetailsRecoveryController.dart';
-import '../UserIdentification.dart';
-import '../ForgotYourPasswordRecovery/SetPassword.dart';
-import '../ForgotYourPasswordRecovery/PasswordUpdated.dart';
-import '../../../Components/ButtonChat.dart';
+import 'package:advanced_capital_pay/Controllers/AccountDetailsRecoveryController.dart';
+import 'package:advanced_capital_pay/Components/ButtonChat.dart';
 
 
 class AccountDetailsRecovery extends StatelessWidget {

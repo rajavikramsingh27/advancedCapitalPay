@@ -6,9 +6,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../Styles/TextStyles.dart';
-import '../../../Components/TextFieldCustom.dart';
-import '../../../Controllers/AccountDetailsRecoveryController.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Components/TextFieldCustom.dart';
+import 'package:advanced_capital_pay/Controllers/AccountDetailsRecoveryController.dart';
 
 class SetPassword extends StatelessWidget {
   SetPassword({Key? key}) : super(key: key);

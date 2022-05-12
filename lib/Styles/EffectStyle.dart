@@ -1,5 +1,5 @@
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:flutter/material.dart';
-import '../Styles/ColorStyle.dart';
 
 
 

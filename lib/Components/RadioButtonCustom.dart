@@ -2,10 +2,6 @@ import 'package:advanced_capital_pay/Components/DropdownButtonCustom.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../Styles/ColorStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
-
 
 class RadioButtonCustom extends StatefulWidget {
   final String? firstText;

@@ -1,17 +1,18 @@
 
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Views/Dashboard/AccountDetails.dart';
+import 'package:advanced_capital_pay/Views/ForgotPassword/ForgotYourUserIdentification/UserIdentificationUpdated.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
 import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:dotted_line/dotted_line.dart';
-import '../AccountDetails.dart';
-import '../../../Controllers/AccountDetailsRecoveryController.dart';
+import 'package:advanced_capital_pay/Controllers/AccountDetailsRecoveryController.dart';
+import 'package:advanced_capital_pay/Components/ButtonChat.dart';
+
 import '../UserIdentification.dart';
-import '../ForgotYourUserIdentification/UserIdentificationUpdated.dart';
-import '../../../Components/ButtonChat.dart';
 
 class ForgotYourUserIdentification extends StatelessWidget {
   ForgotYourUserIdentification({Key? key}) : super(key: key);

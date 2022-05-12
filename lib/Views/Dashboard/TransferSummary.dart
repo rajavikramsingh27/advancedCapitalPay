@@ -1,18 +1,10 @@
 
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Views/Dashboard/SummaryTransferTop.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../Components/AppBarStyle.dart';
-import '../Components/BackgroundImage.dart';
-import '../Components/ButtonCustom.dart';
-import '../Components/CountryPicker.dart';
-import '../Components/DropdownButtonCustom.dart';
-import '../Components/NewTransfers.dart';
-import '../Components/TextFieldCustom.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
-import '../Views/SummaryTransferTop.dart';
 
 
 class TransferSummary extends StatelessWidget {

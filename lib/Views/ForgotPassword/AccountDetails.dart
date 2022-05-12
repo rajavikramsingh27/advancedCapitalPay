@@ -6,10 +6,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../Styles/TextStyles.dart';
-import '../../Components/TextFieldCustom.dart';
-import '../../Controllers/AccountDetailsRecoveryController.dart';
-import '../../Components/DropdownButtonCustom.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Components/TextFieldCustom.dart';
+import 'package:advanced_capital_pay/Controllers/AccountDetailsRecoveryController.dart';
+import 'package:advanced_capital_pay/Components/DropdownButtonCustom.dart';
 
 class AccountDetails extends StatelessWidget {
   AccountDetails({Key? key}) : super(key: key);

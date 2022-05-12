@@ -1,12 +1,11 @@
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:advanced_capital_pay/Views/CryptoScreens/CryptoDashboard.dart';
 import 'package:flutter/material.dart';
-
-import '../../Components/BackgroundImage.dart';
-import '../../Components/ButtonCustom.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/EffectStyle.dart';
-import '../../Styles/ImageStyle.dart';
-import '../../Styles/TextStyles.dart';
 
 class SendBitcoins1 extends StatelessWidget {
   const SendBitcoins1({Key? key}) : super(key: key);

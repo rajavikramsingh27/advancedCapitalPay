@@ -1,19 +1,19 @@
-import 'package:advanced_capital_pay/Views/InboxMessage.dart';
+// import 'package:advanced_capital_pay/Views/InboxMessage.dart';
+import 'package:advanced_capital_pay/Views/Messages/InboxMessage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import '../Components/AppBarStyle.dart';
-import '../Components/BackgroundImage.dart';
-import '../Components/ButtonCustom.dart';
-import '../Components/TextFieldCustom.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/EffectStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
-import 'SignUp/EffectStyleSignUp.dart';
-import '../Components/InfoIconDescription.dart';
-import '../Components/ComponentsTitleInputs.dart';
-import '../../../Components/ButtonChat.dart';
+
+import 'package:advanced_capital_pay/Components/ButtonChat.dart';
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Components/ComponentsTitleInputs.dart';
+import 'package:advanced_capital_pay/Components/InfoIconDescription.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 class AdvanceCapitalPayHelpCenter extends StatelessWidget {
   const AdvanceCapitalPayHelpCenter({Key? key}) : super(key: key);
 

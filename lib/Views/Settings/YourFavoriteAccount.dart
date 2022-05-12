@@ -2,13 +2,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../Components/AppBarStyle.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/EffectStyle.dart';
-import '../../Styles/ImageStyle.dart';
-import '../../Styles/TextStyles.dart';
-import '../../Views/Settings/BalanceSheetCellComponenets.dart';
-import '../../../Components/ButtonChat.dart';
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Views/Settings/BalanceSheetCellComponenets.dart';
+import 'package:advanced_capital_pay/Components/ButtonChat.dart';
 
 class YourFavoriteAccount extends StatelessWidget {
   final String? title;

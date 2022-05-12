@@ -1,24 +1,16 @@
 
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:get/get.dart';
 
-import '../../Components/AppBarStyle.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/EffectStyle.dart';
-import '../../Styles/ImageStyle.dart';
-import '../../Styles/TextStyles.dart';
-import '../../Components/BackgroundImage.dart';
-import '../../Controllers/Crypto/CryptoMarketController.dart';
-
 
 import 'package:get/utils.dart';
 import 'dart:ui';
-import '../../../../Styles/ColorStyle.dart';
-import '../../../../Styles/EffectStyle.dart';
-import '../../../../Styles/ImageStyle.dart';
-import '../../../../Styles/TextStyles.dart';
 
 
 class CryptoNewsCell extends StatelessWidget {

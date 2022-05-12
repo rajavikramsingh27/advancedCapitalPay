@@ -1,16 +1,15 @@
+import 'package:advanced_capital_pay/Views/Settings/BalanceSheetCellComponenets.dart';
+import 'package:advanced_capital_pay/Views/Settings/YourFavoriteAccount.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../Components/AppBarStyle.dart';
-import '../Components/BackgroundImage.dart';
-import '../Controllers/AccountDetails.dart';
-import '../Controllers/CurrentAccountController.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
-import 'Settings/BalanceSheetCellComponenets.dart';
-import '../Views/Settings/YourFavoriteAccount.dart';
-import '../../../Components/ButtonChat.dart';
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Controllers/AccountDetails.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Components/ButtonChat.dart';
 class AccountDetails extends StatelessWidget {
   const AccountDetails({Key? key}) : super(key: key);
 

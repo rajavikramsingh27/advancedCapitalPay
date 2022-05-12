@@ -1,3 +1,13 @@
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Components/TextFieldCustom.dart';
+import 'package:advanced_capital_pay/Controllers/SignUp/PasswordForLoginSecondTimeController.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Views/ForgotPassword/ForgotPassword.dart';
+
 import '../../Views/Auth/SignIn.dart';
 import 'package:advanced_capital_pay/Views/TabbarScreen.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -5,17 +15,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-
-import '../../Components/AppBarStyle.dart';
-import '../../Components/BackgroundImage.dart';
-import '../../Components/ButtonCustom.dart';
-import '../../Components/TextFieldCustom.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/ImageStyle.dart';
-import '../../Styles/TextStyles.dart';
-import '../ForgotPassword/ForgotPassword.dart';
-
-import '../../Controllers/SignUp/PasswordForLoginSecondTimeController.dart';
 
 class PasswordForLoginSecondTime extends StatelessWidget {
   PasswordForLoginSecondTime({Key? key}) : super(key: key);

@@ -1,21 +1,21 @@
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Components/ButtonChat.dart';
+import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Components/TextFieldCustom.dart';
+import 'package:advanced_capital_pay/Controllers/SignUp/SignUpVerifyQuestionController.dart';
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
-import 'package:advanced_capital_pay/Views/SignIn.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Views/Auth/SignIn.dart';
+// import 'package:advanced_capital_pay/Views/SignIn.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
-import '../../Styles/ImageStyle.dart';
-import '../../Styles/TextStyles.dart';
-import '../../Components/BackgroundImage.dart';
-import '../../Components/AppBarStyle.dart';
-import '../../Components/ButtonCustom.dart';
 import 'BioMatric_Permission.dart';
-import '../../Controllers/SignUp/SignUpVerifyQuestionController.dart';
-import '../../Components/TextFieldCustom.dart';
-import '../../Components/DropdownButtonCustom.dart';
-import '../../../../Components/ButtonChat.dart';
 class SignUpVerifyQuestion extends StatelessWidget {
   SignUpVerifyQuestion({Key? key}) : super(key: key);
 

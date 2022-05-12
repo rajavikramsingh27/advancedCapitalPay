@@ -1,11 +1,11 @@
 import 'dart:io';
+import 'package:advanced_capital_pay/Components/PickerCustom.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Views/Auth/EffectStyleSignUp.dart';
 import 'package:flutter/material.dart';
 
-import '../../Components/PickerCustom.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/EffectStyle.dart';
-import '../../Styles/TextStyles.dart';
-import '../../Views/Auth/EffectStyleSignUp.dart';
 
 class SelectFiles extends StatefulWidget {
   Color? colorBG;

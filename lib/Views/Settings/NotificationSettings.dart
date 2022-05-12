@@ -3,18 +3,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../Components/AppBarStyle.dart';
-import '../../Components/ButtonCustom.dart';
-import '../../Controllers/MessagePageController.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/EffectStyle.dart';
-import '../../Styles/ImageStyle.dart';
-import '../../Styles/TextStyles.dart';
-import '../../Components/SearchBarCustom.dart';
-import '../../Components/ListViewIconTitleSubtitle.dart';
-import '../../Controllers/NotificationSettingsController.dart';
-import '../../Views/Settings/DailyAccountBalance.dart';
-import '../../../Components/ButtonChat.dart';
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Components/SearchBarCustom.dart';
+import 'package:advanced_capital_pay/Components/ListViewIconTitleSubtitle.dart';
+import 'package:advanced_capital_pay/Controllers/NotificationSettingsController.dart';
+import 'package:advanced_capital_pay/Views/Settings/DailyAccountBalance.dart';
+import 'package:advanced_capital_pay/Components/ButtonChat.dart';
 
 class NotificationSettings extends StatelessWidget {
   const NotificationSettings({Key? key}) : super(key: key);

@@ -1,8 +1,7 @@
 import 'dart:ui';
 
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:flutter/material.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/TextStyles.dart';
 
 class InfoIconDescription extends StatelessWidget {
   final String? title;

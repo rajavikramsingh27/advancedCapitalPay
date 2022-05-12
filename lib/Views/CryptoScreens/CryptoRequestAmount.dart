@@ -1,19 +1,19 @@
 
 
 
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Controllers/Crypto/CryptoRecieveAmountController.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../Components/AppBarStyle.dart';
-import '../../Components/BackgroundImage.dart';
-import '../../Components/ButtonCustom.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/EffectStyle.dart';
-import '../../Styles/ImageStyle.dart';
-import '../../Styles/TextStyles.dart';
-import '../../Controllers/Crypto/CryptoRecieveAmountController.dart';
 import 'package:advanced_capital_pay/Views/CryptoScreens/CryptoScanOrTake.dart';
-import 'package:advanced_capital_pay/Views/SignUp/BioMatric_Permission.dart';
-import '../../Components/TextFieldCustom.dart';
+// import 'package:advanced_capital_pay/Views/SignUp/BioMatric_Permission.dart';
+
 
 
 class CryptoRequestAmount extends StatelessWidget {

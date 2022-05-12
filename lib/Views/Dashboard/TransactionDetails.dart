@@ -1,19 +1,15 @@
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/ButtonChat.dart';
 import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:advanced_capital_pay/Controllers/MainDashboardController.dart';
 import 'package:get/utils.dart';
-import '../Components/AppBarStyle.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/EffectStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
-import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
-import '../Views/InboxMessage.dart';
-import 'Settings/AppSettings.dart';
-import '../Components/SearchBarCustom.dart';
-import '../Components/GoogleMapCustom.dart';
-import '../../../Components/ButtonChat.dart';
+
 class TransactionDetails extends StatelessWidget {
   TransactionDetails({Key? key}) : super(key: key);
 
@@ -46,7 +42,7 @@ class TransactionDetails extends StatelessWidget {
               height: 26,
             ),
             onPressed: () {
-              Get.to(AppSettings());
+              // Get.to(AppSettings());
             },
           ),
           SizedBox(
@@ -67,7 +63,7 @@ class TransactionDetails extends StatelessWidget {
                     children: [
                       ClipRRect(
                         borderRadius: borderTwoSide(),
-                        child: GoogleMapCustom(),
+                        // child: GoogleMapCustom(),
                       ),
                       Positioned(
                           left: 16,
