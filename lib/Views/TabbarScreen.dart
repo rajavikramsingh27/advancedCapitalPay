@@ -1,15 +1,17 @@
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
-import '../Controllers/TabbarScreenController.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Controllers/TabbarScreenController.dart';
+import 'Card/CardSetting.dart';
 import 'Dashboard/MainDashboard.dart';
-import '../Views/MoreScreen.dart';
-import '../Views/CardSetting.dart';
-import '../Views/CustomerHelpCenter.dart';
+import 'package:advanced_capital_pay/Views/MoreScreen.dart';
+// import '../Views/CardSetting.dart';
+// import '../Views/CustomerHelpCenter.dart';
 import 'CryptoScreens/CryptoDashboard.dart';
+import 'Help/CustomerHelpCenter.dart';
 
 
 class TabbarScreen extends StatelessWidget {

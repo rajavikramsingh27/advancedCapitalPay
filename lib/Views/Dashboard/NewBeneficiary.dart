@@ -1,18 +1,24 @@
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Components/PickerCustom.dart';
+import 'package:advanced_capital_pay/Controllers/NewBeneficiaryController.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-import '../Components/AppBarStyle.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
-import '../Styles/EffectStyle.dart';
+
+
 import 'package:get/get.dart';
 
-import '../Components/ButtonCustom.dart';
-import '../Components/PickerCustom.dart';
-import '../Controllers/NewBeneficiaryController.dart';
+// import '../Components/ButtonCustom.dart';
+// import '../Components/PickerCustom.dart';
+// import '../Controllers/NewBeneficiaryController.dart';
 import 'package:intl/intl.dart';
-import 'Travel/TravelDetails.dart';
+// import 'Travel/TravelDetails.dart';
 import '../../../Components/ButtonChat.dart';
+import '../../Styles/EffectStyle.dart';
+import '../../Styles/ImageStyle.dart';
+import '../../Styles/TextStyles.dart';
+import '../Card/TravelDetails.dart';
 
 
 class NewBeneficiary extends StatelessWidget {

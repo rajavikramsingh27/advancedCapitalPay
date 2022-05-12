@@ -1,25 +1,21 @@
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import '../Components/ButtonCustom.dart';
-import '../Controllers/BeneficiaryInternationalController.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/SizeStyle.dart';
-import '../Styles/TextStyles.dart';
-import '../Views/OTPScreen.dart';
-import '../Components/BackgroundImage.dart';
-import '../Components/AppBarStyle.dart';
-import '../Components/TextFieldCustom.dart';
-import 'ForgotPassword/ForgotPassword.dart';
-import 'Auth/SignUpPersonalApplication1.dart';
-import '../Views/NewBeneficiarySummary.dart';
-import '../Views/TransferBetweenAccount.dart';
-import '../Views/StandingOrders.dart';
-import '../Views/PersonalAccount.dart';
-import '../../../Components/ButtonChat.dart';
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Controllers/BeneficiaryInternationalController.dart';
+
+import 'package:advanced_capital_pay/Components/ButtonChat.dart';
+import 'NewBeneficiarySummary.dart';
+import 'PersonalAccount.dart';
+import 'StandingOrders.dart';
+import 'TransferBetweenAccount.dart';
 
 class BeneficiaryInternational extends StatelessWidget {
   const BeneficiaryInternational({Key? key}) : super(key: key);

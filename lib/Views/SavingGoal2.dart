@@ -5,17 +5,11 @@ import 'package:advanced_capital_pay/Components/ComponentsSignUp.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import '../Controllers/SavingGoal2Controller.dart';
-import '../Controllers/SavingGoalController.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
-import '../Views/OTPScreen.dart';
-import '../Components/BackgroundImage.dart';
-import '../Components/AppBarStyle.dart';
-import '../Components/TextFieldCustom.dart';
-import 'ForgotPassword/ForgotPassword.dart';
-import 'SignUp/SignUpPersonalApplication1.dart';
+import 'package:advanced_capital_pay/Controllers/SavingGoal2Controller.dart';
+import 'package:advanced_capital_pay/Controllers/SavingGoalController.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 
 class SavingGoal2 extends StatelessWidget {
   const SavingGoal2({Key? key}) : super(key: key);

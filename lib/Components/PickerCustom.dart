@@ -1,4 +1,5 @@
 import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -8,7 +9,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 
-import '../Styles/TextStyles.dart';
 
 
 class PickerCustom {

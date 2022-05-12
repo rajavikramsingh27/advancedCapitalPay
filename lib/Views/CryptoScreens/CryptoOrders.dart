@@ -1,3 +1,9 @@
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Controllers/Crypto/CryptoOrdersController.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:advanced_capital_pay/Views/CryptoScreens/CryptoDashboard.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/cupertino.dart';
@@ -5,15 +11,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-import '../../Components/BackgroundImage.dart';
-import '../../Components/ButtonCustom.dart';
-import '../../Components/ComponentsTitleInputs.dart';
-import '../../Components/NewTransfers.dart';
-import '../../Controllers/Crypto/CryptoOrdersController.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/EffectStyle.dart';
-import '../../Styles/ImageStyle.dart';
-import '../../Styles/TextStyles.dart';
 import 'package:get/utils.dart';
 import 'dart:ui';
 

@@ -1,9 +1,6 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
 
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:advanced_capital_pay/Styles/ImageStyle.dart';

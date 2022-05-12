@@ -1,21 +1,19 @@
 import 'package:advanced_capital_pay/Components/ChatWithUs.dart';
-import 'package:advanced_capital_pay/Views/AdvanceCapitalPayHelpCenter.dart';
-import 'package:advanced_capital_pay/Views/InboxMessage.dart';
-import 'package:advanced_capital_pay/Views/MyMessages.dart';
+import 'package:advanced_capital_pay/Views/Help/AdvanceCapitalPayHelpCenter.dart';
+
 import 'package:advanced_capital_pay/Views/WebViewCustom.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../Components/AppBarStyle.dart';
-import '../Components/BackgroundImage.dart';
-import '../Components/ButtonCustom.dart';
-import '../Components/InfoIconDescription.dart';
-import '../Components/SearchBarCustom.dart';
-import '../Controllers/CustomerHelpCenterController.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/EffectStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Components/InfoIconDescription.dart';
+import 'package:advanced_capital_pay/Components/SearchBarCustom.dart';
+import 'package:advanced_capital_pay/Controllers/CustomerHelpCenterController.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 
 class CustomerHelpCenter extends StatelessWidget {
   CustomerHelpCenter({Key? key}) : super(key: key);

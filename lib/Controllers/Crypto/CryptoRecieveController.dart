@@ -1,6 +1,6 @@
 
 import 'package:get/get.dart';
-import '../../Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
 
 class CryptoRecieveController extends GetxController {
   RxList<String> images = <String>[

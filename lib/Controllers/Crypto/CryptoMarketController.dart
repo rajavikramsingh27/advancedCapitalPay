@@ -1,6 +1,6 @@
 
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
 import 'package:get/get.dart';
-import '../../Styles/ImageStyle.dart';
 
 
 class CryptoMarketController extends GetxController {

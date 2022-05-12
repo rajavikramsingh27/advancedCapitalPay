@@ -1,19 +1,18 @@
-import '../../Components/ButtonChat.dart';
-import '../../../Components/ButtonCustom.dart';
-import '../../../Components/ChatWithUs.dart';
-import '../../../Components/CountryFlag.dart';
-import '../../../Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Components/ButtonChat.dart';
+import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Components/CountryFlag.dart';
+import 'package:advanced_capital_pay/Components/TextFieldCustom.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Views/Auth/OTPScreen.dart';
+import 'package:advanced_capital_pay/Views/Auth/SignUpPersonalApplication1.dart';
+import 'package:advanced_capital_pay/Views/ForgotPassword/ForgotPassword.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import '../../../Styles/ImageStyle.dart';
-import '../../../Styles/TextStyles.dart';
-import '../../../Views/OTPScreen.dart';
-import '../../../Components/BackgroundImage.dart';
-import '../../../Components/AppBarStyle.dart';
-import '../../../Components/TextFieldCustom.dart';
-import '../ForgotPassword/ForgotPassword.dart';
-import '../Auth/SignUpPersonalApplication1.dart';
+import 'package:get/get.dart';
 
 
 class SignIn extends StatelessWidget {

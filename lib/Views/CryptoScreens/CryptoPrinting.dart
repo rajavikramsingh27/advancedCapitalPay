@@ -1,13 +1,11 @@
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../Components/AppBarStyle.dart';
-import '../../Components/BackgroundImage.dart';
-import '../../Components/ButtonCustom.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/EffectStyle.dart';
-import '../../Styles/ImageStyle.dart';
-import '../../Styles/TextStyles.dart';
 
 
 class CryptoPrinting extends StatelessWidget {

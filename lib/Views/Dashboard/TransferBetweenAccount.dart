@@ -1,28 +1,26 @@
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/ButtonChat.dart';
+import 'package:advanced_capital_pay/Components/ComponentsTitleInputs.dart';
+import 'package:advanced_capital_pay/Components/FourOptionSeries.dart';
+import 'package:advanced_capital_pay/Components/RadioButtonCustom.dart';
+import 'package:advanced_capital_pay/Controllers/TransferBetweenAccountController.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
-import 'package:advanced_capital_pay/Views/StandingOrderDetails.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+// import 'package:advanced_capital_pay/Views/StandingOrderDetails.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:notification_center/notification_center.dart';
-import '../Components/AppBarStyle.dart';
-import '../Components/ButtonCustom.dart';
-import '../Components/FourOptionSeries.dart';
-import '../Components/PopUp.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
 import 'package:get/get.dart';
-import '../Controllers/TransferBetweenAccountController.dart';
+import 'package:notification_center/notification_center.dart';
 
 import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
-import '../Components/ComponentsTitleInputs.dart';
-import '../Components/RadioButtonCustom.dart';
+
 import 'package:get/utils.dart';
-import '../Styles/EffectStyle.dart';
-import '../../Components/AppBarStyle.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/TextStyles.dart';
+
 import 'AccountSelection.dart';
-import '../../../Components/ButtonChat.dart';
+
+import 'StandingOrderDetails.dart';
 class TransferBetweenAccount extends StatelessWidget {
   TransferBetweenAccount({Key? key}) : super(key: key);
 

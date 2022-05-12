@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
 import 'package:flutter/cupertino.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/EffectStyle.dart';
-import '../../Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 
 class ButtonsWithDescriptionBottomUI extends StatelessWidget {
   final String? description;

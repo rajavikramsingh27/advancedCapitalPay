@@ -1,6 +1,6 @@
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:flutter/material.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/EffectStyle.dart';
 
 class EffectStyleSignUp {
   static decoration([Color bg = Colors.transparent, double radiusBorder = 0]) {

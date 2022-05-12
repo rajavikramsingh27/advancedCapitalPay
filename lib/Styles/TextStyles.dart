@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import '../Utils/Constants.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/SizeStyle.dart';
 
 class TextStylesPoppins {
   static String kFontFamily = "Poppins";

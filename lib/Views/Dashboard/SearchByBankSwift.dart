@@ -1,11 +1,17 @@
 
 import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
 import 'package:flutter/material.dart';
-import '../Components/ButtonCustom.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/EffectStyle.dart';
-import '../Styles/TextStyles.dart';
-import '../Components/ComponentsTitleInputs.dart';
+
+import '../../Components/ButtonCustom.dart';
+import '../../Components/ComponentsTitleInputs.dart';
+import '../../Styles/ColorStyle.dart';
+import '../../Styles/EffectStyle.dart';
+import '../../Styles/TextStyles.dart';
+// import '../Components/ButtonCustom.dart';
+// import '../Styles/ColorStyle.dart';
+// import '../Styles/EffectStyle.dart';
+// import '../Styles/TextStyles.dart';
+// import '../Components/ComponentsTitleInputs.dart';
 
 class SearchByBankSwift extends StatelessWidget {
   final Function()? onTapCancel;

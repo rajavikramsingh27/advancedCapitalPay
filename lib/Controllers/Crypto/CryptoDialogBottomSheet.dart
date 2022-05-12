@@ -1,8 +1,8 @@
 
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/cupertino.dart';
-import '../../Styles/ColorStyle.dart';
 import 'dart:ui';
 
 

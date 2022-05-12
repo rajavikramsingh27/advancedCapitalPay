@@ -3,7 +3,7 @@ import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
 import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 

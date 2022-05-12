@@ -1,22 +1,19 @@
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/ButtonChat.dart';
+import 'package:advanced_capital_pay/Controllers/CardSettingController.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Views/Card/FindATMLocator.dart';
+import 'package:advanced_capital_pay/Views/Card/TravelNotice.dart';
+import 'package:advanced_capital_pay/Views/Settings/AppSettings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/utils.dart';
 import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
 import 'package:get/get.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:flutter/cupertino.dart';
-
-import '../Controllers/CardSettingController.dart';
-import '../Components/AppBarStyle.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/EffectStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
-import '../Views/InboxMessage.dart';
-import 'Settings/AppSettings.dart';
-import '../Views/FindATMLocator//FindATMLocator.dart';
-import 'Travel/TravelNotice.dart';
-import '../../../Components/ButtonChat.dart';
-
 
 class CardSetting extends StatelessWidget {
   CardSetting({Key? key}) : super(key: key);

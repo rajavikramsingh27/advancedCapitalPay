@@ -1,8 +1,9 @@
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:advanced_capital_pay/Views/CryptoScreens/CryptoDashboard.dart';
 import 'package:flutter/material.dart';
-import '../Styles/TextStyles.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/ColorStyle.dart';
+
 
 class ElevatedButtonCustom extends StatelessWidget {
   final Function()? onTap;

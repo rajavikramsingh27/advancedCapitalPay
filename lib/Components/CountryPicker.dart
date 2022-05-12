@@ -1,7 +1,8 @@
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:flutter/material.dart';
 import 'package:advanced_capital_pay/Styles/TextStyles.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/EffectStyle.dart';
+
 import 'package:country_picker/country_picker.dart';
 
 class CountryPicker extends StatefulWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
 
 class BackgroundImage extends StatelessWidget {
   final String? imageName;

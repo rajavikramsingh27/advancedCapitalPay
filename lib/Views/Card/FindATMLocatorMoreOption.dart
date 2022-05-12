@@ -1,13 +1,12 @@
+import 'package:advanced_capital_pay/Controllers/FindATMLocatorController.dart';
 import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../Controllers/FindATMLocatorController.dart';
-import '../../../Styles/ColorStyle.dart';
-import '../../../Styles/EffectStyle.dart';
-import '../../../Styles/ImageStyle.dart';
-import '../../../Styles/TextStyles.dart';
+
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';

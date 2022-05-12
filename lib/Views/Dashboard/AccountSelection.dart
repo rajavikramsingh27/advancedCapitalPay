@@ -2,14 +2,13 @@ import 'package:advanced_capital_pay/Components/InfoIconDescription.dart';
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../Components/AppBarStyle.dart';
-import '../Components/ButtonCustom.dart';
-import '../Components/PayingFromAccount.dart';
-import '../Components/PopUp.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
+
 import 'package:get/get.dart';
+
+import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Components/PayingFromAccount.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 
 class AccountSelection extends StatelessWidget {
   final Function()? onTapContinue;

@@ -1,18 +1,20 @@
 
+import 'package:advanced_capital_pay/Views/Auth/SignIn.dart';
+import 'package:advanced_capital_pay/Views/Auth/SignUpPersonalApplication1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:get/get.dart';
 
-import '../Styles/ImageStyle.dart';
-import '../Components/BackgroundImage.dart';
-import '../Components/ButtonCustom.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/TextStyles.dart';
-import '../Views/SignIn.dart';
-import '../Components/BioMatricAuth.dart';
-import '../Components/CountryFlag.dart';
-import '../Views/SignUp/SignUpPersonalApplication1.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+// import '../Views/SignIn.dart';
+import 'package:advanced_capital_pay/Components/BioMatricAuth.dart';
+import 'package:advanced_capital_pay/Components/CountryFlag.dart';
+// import '../Views/SignUp/SignUpPersonalApplication1.dart';
 
 class OnBoarding extends StatefulWidget {
   const OnBoarding({Key? key}) : super(key: key);

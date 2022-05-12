@@ -1,19 +1,19 @@
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Components/ButtonChat.dart';
 import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Components/ComponentsTitleInputs.dart';
 import 'package:advanced_capital_pay/Components/EditIconTitle.dart';
+import 'package:advanced_capital_pay/Components/FourOptionSeries.dart';
 import 'package:advanced_capital_pay/Components/InfoIconDescription.dart';
+import 'package:advanced_capital_pay/Components/PayingFromAccount.dart';
+import 'package:advanced_capital_pay/Controllers/SignUp/PersonalAccountController.dart';
+import 'package:advanced_capital_pay/Views/Auth/OTPVerification.dart';
+import 'package:advanced_capital_pay/Views/Dashboard/BankDetails.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:notification_center/notification_center.dart';
 
-import '../Components/AppBarStyle.dart';
-import '../Components/BackgroundImage.dart';
-import '../Components/DropdownButtonCustom.dart';
-import '../Components/NewTransfers.dart';
-import '../Components/PayingFromAccount.dart';
-import '../Components/TextFieldCustom.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/ImageStyle.dart';
-import '../Styles/TextStyles.dart';
 
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
@@ -21,19 +21,9 @@ import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
 import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
 import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:advanced_capital_pay/Styles/TextStyles.dart';
-import '../Controllers/SignUp/PersonalAccountController.dart';
-import '../Components/FourOptionSeries.dart';
-import '../Components/InfoIconDescription.dart';
-import '../Components/ComponentsTitleInputs.dart';
-import 'package:notification_center/notification_center.dart';
-import '../Views/TransferDetails.dart';
-import '../Views/TransferSummary.dart';
-import '../Views/OTPVerification.dart';
-import '../Components/InfoIconDescription.dart';
-import '../Views/BankDetails.dart';
-import '../Views/SearchByBankDetails.dart';
-import '../Views/SearchByBankSwift.dart';
-import '../../../Components/ButtonChat.dart';
+
+import 'SearchByBankDetails.dart';
+import 'SearchByBankSwift.dart';
 class PersonalAccount extends StatelessWidget {
   PersonalAccount({Key? key}) : super(key: key);
 

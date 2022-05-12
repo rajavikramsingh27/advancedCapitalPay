@@ -1,20 +1,20 @@
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/ComponentsSignUp.dart';
+import 'package:advanced_capital_pay/Components/CountryPicker.dart';
+import 'package:advanced_capital_pay/Components/DropdownButtonCustom.dart';
 import 'package:advanced_capital_pay/Components/TextFieldCustom.dart';
+import 'package:advanced_capital_pay/Components/TitleStar.dart';
+import 'package:advanced_capital_pay/Controllers/SignUp/SignUpPersonalApplication1Controller.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
 import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Views/Auth/EffectStyleSignUp.dart';
+import 'package:advanced_capital_pay/Views/Auth/SignUpCorrespondenceAddress.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../Components/AppBarStyle.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/ImageStyle.dart';
-import '../../Styles/EffectStyle.dart';
-import '../../Components/DropdownButtonCustom.dart';
-import '../SignUp/EffectStyleSignUp.dart';
-import '../../Components/ComponentsSignUp.dart';
-import '../../Components/CountryPicker.dart';
-import 'SignUpCorrespondenceAddress.dart';
-import '../../Components/TitleStar.dart';
-import '../../Controllers/SignUp/SignUpPersonalApplication1Controller.dart';
 
 
 

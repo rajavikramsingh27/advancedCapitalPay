@@ -1,18 +1,18 @@
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/ComponentsSignUp.dart';
+import 'package:advanced_capital_pay/Controllers/SignUp/SignUpAccountTypeController.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Utils/Constants.dart';
+import 'package:advanced_capital_pay/Views/Auth/EffectStyleSignUp.dart';
+import 'package:advanced_capital_pay/Views/Auth/SignUpBusinessApplication1.dart';
+
 import '../Auth/SignUpPersonalAccountIntentions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../Components/AppBarStyle.dart';
-import '../../Components/DropdownButtonCustom.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/EffectStyle.dart';
-import '../../Styles/ImageStyle.dart';
-import '../../Styles/TextStyles.dart';
-import '../Auth/EffectStyleSignUp.dart';
-import '../../Components/ComponentsSignUp.dart';
-import '../../Views/Auth/SignUpBusinessApplication1.dart';
-import '../../Controllers/SignUp/SignUpAccountTypeController.dart';
-import '../../Utils/Constants.dart';
 
 class SignUpAccountType extends StatelessWidget {
   SignUpAccountType({Key? key}) : super(key: key);

@@ -1,6 +1,7 @@
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:flutter/material.dart';
-import '../Styles/ColorStyle.dart';
-import '../Styles/TextStyles.dart';
+
 
 class SearchBarCustom extends StatelessWidget {
   final EdgeInsets? margin;

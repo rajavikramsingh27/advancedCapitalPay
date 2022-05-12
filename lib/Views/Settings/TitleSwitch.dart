@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/TextStyles.dart';
-import '../../Components/SwitchButtonCustom.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Components/SwitchButtonCustom.dart';
 
 class TitleSwitch extends StatefulWidget {
   final String title;

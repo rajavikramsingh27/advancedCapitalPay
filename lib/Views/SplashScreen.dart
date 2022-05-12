@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../Styles/ImageStyle.dart';
-import '../Views/StartScreen.dart';
-import '../Components/BackgroundImage.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Views/StartScreen.dart';
+import 'package:advanced_capital_pay/Components/BackgroundImage.dart';
 
 
 class SplashScreen extends StatelessWidget {

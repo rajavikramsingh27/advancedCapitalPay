@@ -1,24 +1,22 @@
+import 'package:advanced_capital_pay/Components/AppBarStyle.dart';
+import 'package:advanced_capital_pay/Components/ButtonChat.dart';
 import 'package:advanced_capital_pay/Components/ButtonCustom.dart';
+import 'package:advanced_capital_pay/Components/SearchBarCustom.dart';
+import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
+import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
+import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
+import 'package:advanced_capital_pay/Styles/TextStyles.dart';
+import 'package:advanced_capital_pay/Views/Dashboard/BeneficiaryInternational.dart';
+import 'package:advanced_capital_pay/Views/Dashboard/TransactionDetails.dart';
+import 'package:advanced_capital_pay/Views/ForgotPassword/AccountDetails.dart';
+import 'package:advanced_capital_pay/Views/SavingGoal.dart';
+import 'package:advanced_capital_pay/Views/Settings/AppSettings.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
 import 'package:get/get.dart';
 import 'package:advanced_capital_pay/Controllers/MainDashboardController.dart';
 import 'package:get/utils.dart';
-import '../../Components/AppBarStyle.dart';
-import '../../Styles/ColorStyle.dart';
-import '../../Styles/EffectStyle.dart';
-import '../../Styles/ImageStyle.dart';
-import '../../Styles/TextStyles.dart';
-import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
-import '../InboxMessage.dart';
-import '../Settings/AppSettings.dart';
-import '../../Components/SearchBarCustom.dart';
-import '../TransactionDetails.dart';
-import '../SavingGoal.dart';
-import '../AccountDetails.dart';
-import '../Exchange.dart';
-import '../BeneficiaryInternational.dart';
-import '../../Components/ChatWithUs.dart';
-import '../../../../Components/ButtonChat.dart';
+import 'Exchange.dart';
 
 class MainDashboard extends StatelessWidget {
   MainDashboard({Key? key}) : super(key: key);
