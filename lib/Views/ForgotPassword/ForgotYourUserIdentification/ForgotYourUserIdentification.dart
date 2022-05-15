@@ -1,7 +1,7 @@
 
 import 'package:advanced_capital_pay/Styles/EffectStyle.dart';
 import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
-import 'package:advanced_capital_pay/Views/Dashboard/AccountDetails.dart';
+import 'package:advanced_capital_pay/Views/ForgotPassword/AccountDetails.dart';
 import 'package:advanced_capital_pay/Views/ForgotPassword/ForgotYourUserIdentification/UserIdentificationUpdated.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
