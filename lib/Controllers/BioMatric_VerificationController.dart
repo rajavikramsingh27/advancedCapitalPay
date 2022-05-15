@@ -5,7 +5,7 @@ import 'dart:async';
 import '../Components/BioMatricAuth.dart';
 
 class BioMatric_VerificationController extends GetxController {
-  RxInt verifyStep = 3.obs;
+  RxInt verifyStep = 0.obs;
 
   RxBool isFaceID = true.obs;
 
@@ -14,7 +14,8 @@ class BioMatric_VerificationController extends GetxController {
   reset() {
     isFaceID.value = true;
 
-    // verifyStep.value = 0;
+    verifyStep.value = 0;
+
     // Future.delayed(Duration(milliseconds: 600), () {
     //   verifyStep.value = 1;
     //   Future.delayed(Duration(milliseconds: 600), () {

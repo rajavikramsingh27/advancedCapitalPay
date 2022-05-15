@@ -7,8 +7,7 @@ class AccountDetailsRecoveryController extends GetxController {
     'Password is case sensitive',
     'Avoid using the same password for multiple sites.',
   ].obs;
-
-
+  
   RxList<bool> arrSelectOption = [false].obs;
   RxList<bool> arrSelectOptionIcons = [false].obs;
 

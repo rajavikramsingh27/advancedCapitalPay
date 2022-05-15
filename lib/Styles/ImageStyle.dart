@@ -223,6 +223,7 @@ class ImageStyle {
 
   static const String bg_FaceID_1 = "$baseImage/bg_FaceID_1.jpg";
   static const String bg_TouchID_1 = "$baseImage/bg_TouchID_1.jpg";
+  static const String bg_TouchID_2 = "$baseImage/bg_TouchID_2.png";
   static const String transactionShadow = "$baseImage/transactionShadow.png";
   static const String cardSavingGoals = "$baseImage/cardSavingGoals.png";
   static const String markerPerson = "$baseImage/markerPerson.png";

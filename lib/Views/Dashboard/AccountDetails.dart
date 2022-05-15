@@ -10,6 +10,9 @@ import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
 import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'package:advanced_capital_pay/Components/ButtonChat.dart';
+import 'package:advanced_capital_pay/Views/ForgotPassword/AccountDetails.dart';
+
+
 class AccountDetails extends StatelessWidget {
   const AccountDetails({Key? key}) : super(key: key);
 

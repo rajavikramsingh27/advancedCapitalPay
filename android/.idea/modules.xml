@@ -3,6 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/450758910/android.flutter_plugin_android_lifecycle.iml" filepath="$PROJECT_DIR$/.idea/modules/450758910/android.flutter_plugin_android_lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-456646327/android.google_maps_flutter.iml" filepath="$PROJECT_DIR$/.idea/modules/-456646327/android.google_maps_flutter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1984660023/android.image_picker_android.iml" filepath="$PROJECT_DIR$/.idea/modules/1984660023/android.image_picker_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/524895059/android.local_auth_android.iml" filepath="$PROJECT_DIR$/.idea/modules/524895059/android.local_auth_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1406816094/android.webview_flutter_android.iml" filepath="$PROJECT_DIR$/.idea/modules/1406816094/android.webview_flutter_android.iml" />
     </modules>
   </component>
 </project>

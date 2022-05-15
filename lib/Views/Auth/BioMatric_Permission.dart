@@ -12,6 +12,8 @@ import 'package:get/get.dart';
 import 'package:advanced_capital_pay/Styles/ColorStyle.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
+import '../Card/ChooseYourCard.dart';
+
 class BioMatric_Permission extends StatelessWidget {
   BioMatric_Permission({Key? key}) : super(key: key);
 
@@ -33,8 +35,8 @@ class BioMatric_Permission extends StatelessWidget {
                   //     : ImageStyle.bg_TouchID,
 
                   imageName: controller.isFaceID.value
-                      ? ImageStyle.bg_FaceID_1
-                      : ImageStyle.bg_TouchID_1,
+                      ? ImageStyle.bg_FaceID
+                      : ImageStyle.bg_TouchID_2,
                 ),
                 Scaffold(
                   backgroundColor: Colors.transparent,
@@ -54,45 +56,46 @@ class BioMatric_Permission extends StatelessWidget {
                     padding: EdgeInsets.only(
                       left: 30,
                       right: 30,
-                      top: 30,
+                      top: controller.isFaceID.value ? 0 : 0,
                       bottom: 30,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Container(
-                        //     alignment: Alignment.center,
-                        //     width: MediaQuery.of(context).size.width,
-                        //     child: Stack(
-                        //       children: [
-                        //         Center(
-                        //           child: Image.asset(
-                        //             controller.isFaceID.value ?
-                        //             ImageStyle.thumb_square_icon : ImageStyle.thumb_circle_icon,
-                        //             width: 230,
-                        //             height: 230,
-                        //             fit: BoxFit.cover,
-                        //           ),
-                        //         ),
-                        //         Center(
-                        //           child: Container(
-                        //             width: 230,
-                        //             height: 230,
-                        //             alignment: Alignment.center,
-                        //             child: Image.asset(
-                        //               controller.isFaceID.value ?
-                        //               ImageStyle.face_scan : ImageStyle.touchScan,
-                        //               width: controller.isFaceID.value ? 120 : 100,
-                        //               height: controller.isFaceID.value ? 120 : 100,
-                        //               fit: BoxFit.fill,
-                        //             ),
-                        //           ),
-                        //         ),
-                        //       ],
-                        //     )
-                        // ),
+                        Stack(
+                          children: [
+                            // Center(
+                            //   child: Image.asset(
+                            //     controller.isFaceID.value ?
+                            //     ImageStyle.thumb_square_icon : ImageStyle.thumb_circle_icon,
+                            //     width: 230,
+                            //     height: 230,
+                            //     fit: BoxFit.cover,
+                            //   ),
+                            // ),
+                            // Center(
+                            //   child:
+                            Container(
+                              width: 230,
+                              height: 230,
+                              margin: EdgeInsets.only(
+                                  top: controller.isFaceID.value ? 14 : 14,
+                                  left: controller.isFaceID.value ? 46 : 46
+                              ),
+                              alignment: Alignment.center,
+                              child: Image.asset(
+                                controller.isFaceID.value ?
+                                ImageStyle.face_scan : ImageStyle.touchScan,
+                                width: controller.isFaceID.value ? 126 : 120,
+                                height: controller.isFaceID.value ? 110 : 120,
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                            // ),
+                          ],
+                        ),
                         SizedBox(
-                          height: 400,
+                          height: 20,
                         ),
                         Text(
                           controller.isFaceID.value
@@ -155,14 +158,12 @@ class BioMatric_Permission extends StatelessWidget {
                                 child: GradientButton(
                               text: 'Yes Please',
                               onTap: () {
-                                if (!controller.isFaceID.value) {
-                                  // Get.to(BioMatric_Verification());
-                                  // Get.to(ChooseYourCard());
-                                }
-                                controller.isFaceID.value =
-                                    !controller.isFaceID.value;
+                                controller.isFaceID.value = !controller.isFaceID.value;
+                                controller.verifyStep.value+=1;
 
-                                // BioMatricAuth.authenticateWithBiometrics();
+                                if (controller.verifyStep.value>1) {
+                                  Get.to(ChooseYourCard());
+                                }
                               },
                             )),
                           ],
