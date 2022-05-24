@@ -12,8 +12,8 @@ import 'package:advanced_capital_pay/Styles/ImageStyle.dart';
 import 'package:advanced_capital_pay/Styles/TextStyles.dart';
 import 'ForgotYourPasswordRecovery/AccountDetailsRecovery.dart';
 import 'package:advanced_capital_pay/Controllers/AccountDetailsRecoveryController.dart';
-import 'package:get/get.dart';
 import 'package:advanced_capital_pay/Components/ButtonChat.dart';
+
 class ForgotPassword extends StatelessWidget {
   ForgotPassword({Key? key}) : super(key: key);
 
@@ -124,13 +124,15 @@ class ForgotPassword extends StatelessWidget {
                       boxWhite(ImageStyle.forgot_identification,
                           'Forgot Your User Identification', () {
                         controller.isUserIdentification.value = false;
-                            Get.to(ForgotYourUserIdentification());
+                        Get.to(() => ForgotYourUserIdentification());
+                            // Get.to(ForgotYourUserIdentification());
                           }),
                       SizedBox(height: 16),
                       boxWhite(ImageStyle.forgot_password,
                           'Forgot Your Password', () {
                             controller.isUserIdentification.value = true;
-                            Get.to(AccountDetailsRecovery());
+                            Get.to(() => AccountDetailsRecovery());
+                            // Get.to(AccountDetailsRecovery());
                           }),
                       SizedBox(height: 100),
                       AutoSizeText(

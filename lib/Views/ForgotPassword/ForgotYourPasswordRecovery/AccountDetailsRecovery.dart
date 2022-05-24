@@ -20,68 +20,68 @@ class AccountDetailsRecovery extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          child: Column(
-            children: [
-              // Expanded(child: Image.asset(ImageStyle.bg_recoveryPassword,fit: BoxFit.fill,)),
-              Expanded(
-                  child: Container(
-                decoration: BoxDecoration(
-                    color: ColorStyle.darkestBlue,
-                    image: DecorationImage(
-                        fit: BoxFit.cover,
-                        colorFilter: ColorFilter.mode(
-                          Colors.black.withOpacity(0.4),
-                          BlendMode.dstATop,
-                        ),
-                        image: AssetImage(ImageStyle.bg_recoveryPassword))),
-              )),
-              Expanded(
-                  child: Container(
-                color: ColorStyle.darkestBlue,
-              )),
-            ],
-          ),
-        ),
-        Scaffold(
-          backgroundColor: Colors.transparent,
-          appBar: AppBarStyleTitle(
-            title: 'Account Details Recover',
-            leadingButton: IconButton(
-              icon: Image.asset(
-                ImageStyle.back_circle,
-                height: 30,
+    return GetBuilder(
+      init: AccountDetailsRecoveryController(),
+      initState: (state) {
+
+      },
+      builder: (auth) {
+        return Obx(()=>Stack(
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              child: Column(
+                children: [
+                  // Expanded(child: Image.asset(ImageStyle.bg_recoveryPassword,fit: BoxFit.fill,)),
+                  Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: ColorStyle.darkestBlue,
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                colorFilter: ColorFilter.mode(
+                                  Colors.black.withOpacity(0.4),
+                                  BlendMode.dstATop,
+                                ),
+                                image: AssetImage(ImageStyle.bg_recoveryPassword))),
+                      )),
+                  Expanded(
+                      child: Container(
+                        color: ColorStyle.darkestBlue,
+                      )),
+                ],
               ),
-              onPressed: () {
-                Get.back();
-              },
             ),
-            trailingButton: [
-              ButtonChat(),
-            ],
-          ),
-          body: GetBuilder<AccountDetailsRecoveryController>(
-            init: AccountDetailsRecoveryController(),
-            initState: (state) {
-              controller.reset();
-            },
-            builder: (authController) {
-              return Obx(() => Column(
-                    children: [
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        color: ColorStyle.hex("#082561"),
-                        padding: EffectStyle.padding(26, 26, 10, 10),
-                        // height: 111,
-                        // alignment: Alignment.center,
-                        child: Stack(
-                          children: [
-                            Expanded(
-                                child: Container(
+            Scaffold(
+              backgroundColor: Colors.transparent,
+              appBar: AppBarStyleTitle(
+                title: 'Account Details Recover',
+                leadingButton: IconButton(
+                  icon: Image.asset(
+                    ImageStyle.back_circle,
+                    height: 30,
+                  ),
+                  onPressed: () {
+                    Get.back();
+                  },
+                ),
+                trailingButton: [
+                  ButtonChat(),
+                ],
+              ),
+              body: Column(
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    color: ColorStyle.hex("#082561"),
+                    padding: EffectStyle.padding(26, 26, 10, 10),
+                    // height: 111,
+                    // alignment: Alignment.center,
+                    child: Stack(
+                      children: [
+                        Expanded(
+                            child: Container(
                               height: 50,
                               alignment: Alignment.center,
                               child: DottedLine(
@@ -98,11 +98,11 @@ class AccountDetailsRecovery extends StatelessWidget {
                                 dashGapRadius: 0.0,
                               ),
                             )),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                    child: Column(
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                                child: Column(
                                   children: [
                                     Image.asset(
                                       (controller.arrSelectOptionIcons[0])
@@ -116,15 +116,15 @@ class AccountDetailsRecovery extends StatelessWidget {
                                     Text(
                                       'Enter Details',
                                       style:
-                                          TextStylesPoppins.textStyles_10.apply(
+                                      TextStylesPoppins.textStyles_10.apply(
                                         color: ColorStyle.primaryWhite,
                                         fontWeightDelta: 1,
                                       ),
                                     ),
                                   ],
                                 )),
-                                Container(
-                                    child: Column(
+                            Container(
+                                child: Column(
                                   children: [
                                     Image.asset(
                                       (controller.arrSelectOptionIcons[1])
@@ -138,15 +138,15 @@ class AccountDetailsRecovery extends StatelessWidget {
                                     Text(
                                       'Enter User ID',
                                       style:
-                                          TextStylesPoppins.textStyles_10.apply(
+                                      TextStylesPoppins.textStyles_10.apply(
                                         color: ColorStyle.primaryWhite,
                                         fontWeightDelta: 1,
                                       ),
                                     ),
                                   ],
                                 )),
-                                Container(
-                                    child: Column(
+                            Container(
+                                child: Column(
                                   children: [
                                     Image.asset(
                                       (controller.arrSelectOptionIcons[2])
@@ -160,15 +160,15 @@ class AccountDetailsRecovery extends StatelessWidget {
                                     Text(
                                       'Set Password',
                                       style:
-                                          TextStylesPoppins.textStyles_10.apply(
+                                      TextStylesPoppins.textStyles_10.apply(
                                         color: ColorStyle.primaryWhite,
                                         fontWeightDelta: 1,
                                       ),
                                     ),
                                   ],
                                 )),
-                                Container(
-                                    child: Column(
+                            Container(
+                                child: Column(
                                   children: [
                                     Image.asset(
                                       (controller.arrSelectOptionIcons[3])
@@ -191,39 +191,39 @@ class AccountDetailsRecovery extends StatelessWidget {
                                     ),
                                   ],
                                 )),
-                              ],
-                            ),
                           ],
                         ),
+                      ],
+                    ),
+                  ),
+                  if (controller.arrSelectOption[0])
+                    Expanded(
+                      child: SingleChildScrollView(
+                        padding: EffectStyle.padding(0, 0, 0, 16),
+                        child: AccountDetails(),
                       ),
-                      if (controller.arrSelectOption[0])
-                        Expanded(
-                          child: SingleChildScrollView(
-                            padding: EffectStyle.padding(0, 0, 0, 16),
-                            child: AccountDetails(),
-                          ),
-                        ),
-                      if (controller.arrSelectOption[1])
-                        Expanded(
-                          child: SingleChildScrollView(
-                            padding: EffectStyle.padding(0, 0, 0, 16),
-                            child: UserIdentification(),
-                          ),
-                        ),
-                      if (controller.arrSelectOption[2])
-                        Expanded(
-                            child: SingleChildScrollView(
+                    ),
+                  if (controller.arrSelectOption[1])
+                    Expanded(
+                      child: SingleChildScrollView(
+                        padding: EffectStyle.padding(0, 0, 0, 16),
+                        child: UserIdentification(),
+                      ),
+                    ),
+                  if (controller.arrSelectOption[2])
+                    Expanded(
+                        child: SingleChildScrollView(
                           padding: EffectStyle.padding(0, 0, 0, 16),
                           child: SetPassword(),
                         )),
-                      if (controller.arrSelectOption[3])
-                        Expanded(child: PasswordUpdated()),
-                    ],
-                  ));
-            },
-          ),
-        ),
-      ],
+                  if (controller.arrSelectOption[3])
+                    Expanded(child: PasswordUpdated()),
+                ],
+              ),
+            ),
+          ],
+        ));
+      },
     );
   }
 }
