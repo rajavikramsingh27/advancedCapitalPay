@@ -116,7 +116,6 @@ class TravelPopUp {
 
 filter() {
 
-
   return Get.dialog(
       Material(
           color: Colors.transparent,

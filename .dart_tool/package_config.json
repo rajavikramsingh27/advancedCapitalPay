@@ -153,9 +153,9 @@
     },
     {
       "name": "get",
-      "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/get-4.6.1",
+      "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/get-4.6.5",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.15"
     },
     {
       "name": "google_maps_flutter",
@@ -440,7 +440,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-05-15T12:00:20.267367Z",
+  "generated": "2022-05-24T13:42:43.469862Z",
   "generator": "pub",
   "generatorVersion": "2.17.0-182.1.beta"
 }
