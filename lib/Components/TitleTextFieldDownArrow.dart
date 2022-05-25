@@ -13,7 +13,8 @@ class TitleTextFieldDownArrow extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        Text
+          (
           'Account',
           style: TextStylesPoppins.textStyles_14.apply(
             color: ColorStyle.secondryBlack,
