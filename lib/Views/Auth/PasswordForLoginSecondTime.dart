@@ -23,43 +23,43 @@ class PasswordForLoginSecondTime extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        BackgroundImage(),
-        Scaffold(
-          backgroundColor: Colors.transparent,
-          appBar: AppBarStyle(
-            leadingButton: IconButton(
-              icon: Image.asset(
-                ImageStyle.back_circle,
-                height: 30,
+    return GetBuilder(
+      init: PasswordForLoginSecondTimeController(),
+      initState: (state) {
+
+      },
+      builder: (auth) {
+        return Stack(
+          children: [
+            BackgroundImage(),
+            Scaffold(
+              backgroundColor: Colors.transparent,
+              appBar: AppBarStyle(
+                leadingButton: IconButton(
+                  icon: Image.asset(
+                    ImageStyle.back_circle,
+                    height: 30,
+                  ),
+                  onPressed: () {
+                    Get.back();
+                  },
+                ),
+                trailingButton: IconButton(
+                  icon: Image.asset(
+                    ImageStyle.chat,
+                    height: 30,
+                  ),
+                  onPressed: () {},
+                ),
               ),
-              onPressed: () {
-                Get.back();
-              },
-            ),
-            trailingButton: IconButton(
-              icon: Image.asset(
-                ImageStyle.chat,
-                height: 30,
-              ),
-              onPressed: () {},
-            ),
-          ),
-          body: SingleChildScrollView(
-            padding: EdgeInsets.only(
-              left: 26,
-              right: 30,
-              top: 40,
-              bottom: 16,
-            ),
-            child: GetBuilder<PasswordForLoginSecondTimeController>(
-              init: PasswordForLoginSecondTimeController(),
-              initState: (state) {
-                controller.reset();
-              },
-              builder: (auth) {
-                return Obx(()=>Column(
+              body: SingleChildScrollView(
+                padding: EdgeInsets.only(
+                  left: 26,
+                  right: 30,
+                  top: 40,
+                  bottom: 16,
+                ),
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
@@ -86,42 +86,42 @@ class PasswordForLoginSecondTime extends StatelessWidget {
                     ),
 
                     if (controller.isBioMatric.value )
-                    SizedBox(height: 40),
+                      SizedBox(height: 40),
                     if (controller.isBioMatric.value )
-                    Container(
-                      alignment: Alignment.center,
-                      child: Container(
-                        child: Image.asset(
-                          ImageStyle.lock,
-                          height: 170,
-                        ),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          // color: ColorStyle.hex('#FFFFFF').withOpacity(0.4),
-                          color: ColorStyle.hex('#FFFFFF').withOpacity(0.4),
-                          border: Border.all(
-                            width: 0.2,
-                            color: ColorStyle.blueSKY,
+                      Container(
+                        alignment: Alignment.center,
+                        child: Container(
+                          child: Image.asset(
+                            ImageStyle.lock,
+                            height: 170,
                           ),
-                          boxShadow: [],
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            // color: ColorStyle.hex('#FFFFFF').withOpacity(0.4),
+                            color: ColorStyle.hex('#FFFFFF').withOpacity(0.4),
+                            border: Border.all(
+                              width: 0.2,
+                              color: ColorStyle.blueSKY,
+                            ),
+                            boxShadow: [],
+                          ),
                         ),
                       ),
-                    ),
                     SizedBox(height: 40),
                     if (controller.isBioMatric.value)
-                    InkWell(
-                      child: Container(
-                        alignment: Alignment.center,
-                        child: Text(
-                          'Enter your password instead',
-                          style: TextStylesSFCompactDisplay.textStyles_16.apply(
-                              color: ColorStyle.primaryWhite, fontWeightDelta: 0),
+                      InkWell(
+                        child: Container(
+                          alignment: Alignment.center,
+                          child: Text(
+                            'Enter your password instead',
+                            style: TextStylesSFCompactDisplay.textStyles_16.apply(
+                                color: ColorStyle.primaryWhite, fontWeightDelta: 0),
+                          ),
                         ),
+                        onTap: () {
+                          controller.isBioMatric.value = false;
+                        },
                       ),
-                      onTap: () {
-                        controller.isBioMatric.value = false;
-                      },
-                    ),
                     SizedBox(height: 16),
                     TextFieldPasswordCustom(
                       prefix: Container(
@@ -206,12 +206,15 @@ class PasswordForLoginSecondTime extends StatelessWidget {
                     ),
                     SizedBox(height: 16),
                   ],
-                ));
-              },
-            ),
-          ),
-        )
-      ],
+                ),
+              ),
+            )
+          ],
+        );
+      },
     );
+
+
+
   }
 }

@@ -22,24 +22,24 @@ class SignUpPersonalAuthorizedSignatures extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset(
-          ImageStyle.bg_1,
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          fit: BoxFit.cover,
-        ),
-        Scaffold(
-            appBar: AppBarStyleStatusBar(),
-            backgroundColor: Colors.transparent,
-            body: GetBuilder<SignUpAuthorizedSignaturesController>(
-              init: SignUpAuthorizedSignaturesController(),
-              initState: (state) {
+    return GetBuilder(
+      init: SignUpAuthorizedSignaturesController(),
+      initState: (state) {
 
-              },
-              builder: (auth) {
-                return Obx(()=>SingleChildScrollView(
+      },
+      builder: (auth) {
+        return   Stack(
+          children: [
+            Image.asset(
+              ImageStyle.bg_1,
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              fit: BoxFit.cover,
+            ),
+            Scaffold(
+                appBar: AppBarStyleStatusBar(),
+                backgroundColor: Colors.transparent,
+                body: SingleChildScrollView(
                   padding: EffectStyle.padding(16, 16, 0, 16),
                   child: Column(
                     children: [
@@ -84,7 +84,7 @@ class SignUpPersonalAuthorizedSignatures extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                  'Account authorized signatures',
+                                      'Account authorized signatures',
                                       style: TextStylesPoppins.textStyles_20.apply(
                                         color: ColorStyle.secondryBlack,
                                         fontWeightDelta: 0,
@@ -132,12 +132,12 @@ class SignUpPersonalAuthorizedSignatures extends StatelessWidget {
                                                 SizedBox(height: 6,),
                                               if (confirmMeDetails != null)
                                                 Text(
-                                                confirmMeDetails!,
-                                                style: TextStylesPoppins.textStyles_14.apply(
-                                                  color: ColorStyle.secondryBlack,
-                                                  fontWeightDelta: 0,
+                                                  confirmMeDetails!,
+                                                  style: TextStylesPoppins.textStyles_14.apply(
+                                                    color: ColorStyle.secondryBlack,
+                                                    fontWeightDelta: 0,
+                                                  ),
                                                 ),
-                                              ),
                                             ],
                                           ),
                                           decoration: EffectStyleSignUp.decoration(
@@ -301,10 +301,12 @@ class SignUpPersonalAuthorizedSignatures extends StatelessWidget {
                       ComponentsSignUp.bottomUI(),
                     ],
                   ),
-                ));
-              },
-            )),
-      ],
+                )),
+          ],
+        );
+      },
     );
+
+
   }
 }
