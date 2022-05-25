@@ -34,176 +34,170 @@ class FindATMLocatorMoreOption {
           //     SizedBox(width: 20,),
           //   ],
           // ),
-          body: GetBuilder<FindATMLocatorController>(
-            init: FindATMLocatorController(),
-            initState: (state) {},
-            builder: (authController) {
-              return Obx(() => Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Container(
-                        width: MediaQuery.of(Get.context!).size.width,
-                        padding: EffectStyle.padding(20, 20, 20, 20),
-                        decoration: BoxDecoration(
-                            borderRadius: EffectStyle.radiusCustom(20),
-                            color: ColorStyle.primaryWhite),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Set Radius',
-                              style: TextStylesPoppins.textStyles_20.apply(
-                                color: ColorStyle.secondryBlack,
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                width: MediaQuery.of(Get.context!).size.width,
+                padding: EffectStyle.padding(20, 20, 20, 20),
+                decoration: BoxDecoration(
+                    borderRadius: EffectStyle.radiusCustom(20),
+                    color: ColorStyle.primaryWhite),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Set Radius',
+                      style: TextStylesPoppins.textStyles_20.apply(
+                        color: ColorStyle.secondryBlack,
+                        fontWeightDelta: 1,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                          icon: Image.asset(
+                            ImageStyle.minusRadius,
+                            height: 50,
+                          ),
+                          onPressed: () {},
+                        ),
+                        Text(
+                          '850m',
+                          style: TextStylesPoppins.textStyles_20.apply(
+                            color: ColorStyle.hex('#1478FF'),
+                            fontWeightDelta: 1,
+                          ),
+                        ),
+                        IconButton(
+                          icon: Image.asset(
+                            ImageStyle.plusRadius,
+                            height: 50,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+
+                    SfSlider(
+                      min: 0.toInt(),
+                      max: 100.toInt(),
+                      value: controller.rangeValue.value,
+                      // interval: 20,
+                      // showTicks: true,
+                      // showLabels: true,
+                      enableTooltip: true,
+                      minorTicksPerInterval: 1,
+                      activeColor: ColorStyle.hex('#1478FF'),
+                      inactiveColor: ColorStyle.hex('#707070'),
+                      onChanged: (dynamic value) {
+                        controller.rangeValue.value = value;
+                      },
+                    ),
+                    Container(
+                      height: 40,
+                      child: ListView.separated(
+                        itemCount: 6,
+                        scrollDirection: Axis.horizontal,
+                        separatorBuilder: (context, index) {
+                          return SizedBox(
+                            width: 16,
+                          );
+                        },
+                        itemBuilder: (context, index) {
+                          return Container(
+                            // width: 200,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: ColorStyle.hex('#CBE1FF'),
+                              borderRadius:
+                              EffectStyle.radiusCustom(8),
+                            ),
+                            padding: EffectStyle.padding(20, 20, 6, 6),
+                            child: Text(
+                              '100m',
+                              style: TextStylesPoppins.textStyles_16.apply(
+                                color: ColorStyle.grey,
                                 fontWeightDelta: 1,
                               ),
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                IconButton(
-                                  icon: Image.asset(
-                                    ImageStyle.minusRadius,
-                                    height: 50,
-                                  ),
-                                  onPressed: () {},
+                          );
+                        },
+                      ),
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                            child: InkWell(
+                              child: Container(
+                                height: 54,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color: ColorStyle.primaryWhite,
+                                  borderRadius:
+                                  EffectStyle.radiusCustom(10),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      // spreadRadius: 6,
+                                      blurRadius: 6,
+                                      offset: Offset(0, 0),
+                                    ),
+                                  ],
                                 ),
-                                Text(
-                                  '850m',
-                                  style: TextStylesPoppins.textStyles_20.apply(
-                                    color: ColorStyle.hex('#1478FF'),
+                                child: Text(
+                                  'Cancel',
+                                  style: TextStylesPoppins.textStyles_16.apply(
+                                    color: ColorStyle.grey,
                                     fontWeightDelta: 1,
                                   ),
                                 ),
-                                IconButton(
-                                  icon: Image.asset(
-                                    ImageStyle.plusRadius,
-                                    height: 50,
-                                  ),
-                                  onPressed: () {},
-                                ),
-                              ],
-                            ),
-
-                            SfSlider(
-                              min: 0.toInt(),
-                              max: 100.toInt(),
-                              value: controller.rangeValue.value,
-                              // interval: 20,
-                              // showTicks: true,
-                              // showLabels: true,
-                              enableTooltip: true,
-                              minorTicksPerInterval: 1,
-                              activeColor: ColorStyle.hex('#1478FF'),
-                              inactiveColor: ColorStyle.hex('#707070'),
-                              onChanged: (dynamic value) {
-                                controller.rangeValue.value = value;
-                              },
-                            ),
-                            Container(
-                              height: 40,
-                              child: ListView.separated(
-                                itemCount: 6,
-                                scrollDirection: Axis.horizontal,
-                                separatorBuilder: (context, index) {
-                                  return SizedBox(
-                                    width: 16,
-                                  );
-                                },
-                                itemBuilder: (context, index) {
-                                  return Container(
-                                    // width: 200,
-                                    alignment: Alignment.center,
-                                    decoration: BoxDecoration(
-                                      color: ColorStyle.hex('#CBE1FF'),
-                                      borderRadius:
-                                          EffectStyle.radiusCustom(8),
-                                    ),
-                                    padding: EffectStyle.padding(20, 20, 6, 6),
-                                    child: Text(
-                                      '100m',
-                                      style: TextStylesPoppins.textStyles_16.apply(
-                                        color: ColorStyle.grey,
-                                        fontWeightDelta: 1,
-                                      ),
-                                    ),
-                                  );
-                                },
                               ),
-                            ),
-                            SizedBox(
-                              height: 40,
-                            ),
-                            Row(
-                              children: [
-                                Expanded(
-                                    child: InkWell(
-                                  child: Container(
-                                    height: 54,
-                                    alignment: Alignment.center,
-                                    decoration: BoxDecoration(
-                                      color: ColorStyle.primaryWhite,
-                                      borderRadius:
-                                          EffectStyle.radiusCustom(10),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: Colors.grey.withOpacity(0.5),
-                                          // spreadRadius: 6,
-                                          blurRadius: 6,
-                                          offset: Offset(0, 0),
-                                        ),
-                                      ],
-                                    ),
-                                    child: Text(
-                                      'Cancel',
-                                      style: TextStylesPoppins.textStyles_16.apply(
-                                        color: ColorStyle.grey,
-                                        fontWeightDelta: 1,
-                                      ),
-                                    ),
-                                  ),
-                                  onTap: () {
-                                    Get.back();
-                                  },
-                                )),
-                                SizedBox(
-                                  width: 30,
-                                ),
-                                Expanded(
-                                    child: InkWell(
-                                  child: Container(
-                                    height: 54,
-                                    alignment: Alignment.center,
-                                    decoration: BoxDecoration(
-                                      color: ColorStyle.hex('#1478FF'),
-                                      borderRadius:
-                                          EffectStyle.radiusCustom(10),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: Colors.grey.withOpacity(0.5),
-                                          // spreadRadius: 6,
-                                          blurRadius: 6,
-                                          offset: Offset(0, 0),
-                                        ),
-                                      ],
-                                    ),
-                                    child: Text(
-                                      'Accept',
-                                      style: TextStylesPoppins.textStyles_16.apply(
-                                        color: ColorStyle.primaryWhite,
-                                        fontWeightDelta: 1,
-                                      ),
-                                    ),
-                                  ),
-                                  onTap: () {},
-                                )),
-                              ],
-                            )
-                          ],
+                              onTap: () {
+                                Get.back();
+                              },
+                            )),
+                        SizedBox(
+                          width: 30,
                         ),
-                      ),
-                    ],
-                  ));
-            },
+                        Expanded(
+                            child: InkWell(
+                              child: Container(
+                                height: 54,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color: ColorStyle.hex('#1478FF'),
+                                  borderRadius:
+                                  EffectStyle.radiusCustom(10),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      // spreadRadius: 6,
+                                      blurRadius: 6,
+                                      offset: Offset(0, 0),
+                                    ),
+                                  ],
+                                ),
+                                child: Text(
+                                  'Accept',
+                                  style: TextStylesPoppins.textStyles_16.apply(
+                                    color: ColorStyle.primaryWhite,
+                                    fontWeightDelta: 1,
+                                  ),
+                                ),
+                              ),
+                              onTap: () {},
+                            )),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
           ),
         )));
   }

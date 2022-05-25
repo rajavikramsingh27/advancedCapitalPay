@@ -115,141 +115,145 @@ class SignUpVerifyQuestion extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        BackgroundImage(
-          imageName: ImageStyle.bg,
-        ),
-        Scaffold(
-          backgroundColor: Colors.transparent,
-          appBar: AppBarStyle(
-            leadingButton: IconButton(
-              icon: Image.asset(
-                ImageStyle.user_logout,
-                height: 30,
-              ),
-              onPressed: () {
-                Get.offAll(SignIn());
-              },
+    return GetBuilder(
+      init: SignUpVerifyQuestionController(),
+      initState: (state) {
+
+      },
+      builder: (auth) {
+        return  Stack(
+          children: [
+            BackgroundImage(
+              imageName: ImageStyle.bg,
             ),
-            trailingButton: ButtonChat(),
-          ),
-          body: GetBuilder<SignUpVerifyQuestionController>(
-            init: SignUpVerifyQuestionController(),
-            initState: (state) {},
-            builder: (authController) {
-              return Obx(() => SingleChildScrollView(
-                    padding: EdgeInsets.only(
-                      left: 30,
-                      right: 30,
-                      // top: 80,
-                      top: 0,
-                      bottom: 30,
+            Scaffold(
+              backgroundColor: Colors.transparent,
+              appBar: AppBarStyle(
+                leadingButton: IconButton(
+                  icon: Image.asset(
+                    ImageStyle.user_logout,
+                    height: 30,
+                  ),
+                  onPressed: () {
+                    Get.offAll(SignIn());
+                  },
+                ),
+                trailingButton: ButtonChat(),
+              ),
+              body: SingleChildScrollView(
+                padding: EdgeInsets.only(
+                  left: 30,
+                  right: 30,
+                  // top: 80,
+                  top: 0,
+                  bottom: 30,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Verify your Security Questions',
+                      textAlign: TextAlign.left,
+                      style: TextStylesPoppins.textStyles_20.apply(
+                        color: ColorStyle.primaryWhite,
+                        fontWeightDelta: 2,
+                      ),
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    SizedBox(
+                      height: 16,
+                    ),
+                    Text(
+                      "Instead of receiving your One Time Password (OTP) You can enter the passwords to your security questions.",
+                      textAlign: TextAlign.left,
+                      style: TextStylesPoppins.textStyles_14.apply(
+                        color: ColorStyle.primaryWhite,
+                        fontWeightDelta: 0,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          'Verify your Security Questions',
-                          textAlign: TextAlign.left,
-                          style: TextStylesPoppins.textStyles_20.apply(
-                            color: ColorStyle.primaryWhite,
-                            fontWeightDelta: 2,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 16,
-                        ),
-                        Text(
-                          "Instead of receiving your One Time Password (OTP) You can enter the passwords to your security questions.",
-                          textAlign: TextAlign.left,
-                          style: TextStylesPoppins.textStyles_14.apply(
-                            color: ColorStyle.primaryWhite,
-                            fontWeightDelta: 0,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 40,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            InkWell(
-                              child: Row(
-                                children: [
-                                  Text(
-                                    'Use SMS Verification',
-                                    style: TextStylesPoppins.textStyles_14.apply(
-                                      color: ColorStyle.blueSKY,
-                                      fontWeightDelta: 1,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              onTap: () {
-                                Get.back();
-                              },
-                            ),
-                            InkWell(
-                              child: Text(
-                                'Contact Us',
+                        InkWell(
+                          child: Row(
+                            children: [
+                              Text(
+                                'Use SMS Verification',
                                 style: TextStylesPoppins.textStyles_14.apply(
                                   color: ColorStyle.blueSKY,
                                   fontWeightDelta: 1,
                                 ),
                               ),
-                              onTap: () {},
+                            ],
+                          ),
+                          onTap: () {
+                            Get.back();
+                          },
+                        ),
+                        InkWell(
+                          child: Text(
+                            'Contact Us',
+                            style: TextStylesPoppins.textStyles_14.apply(
+                              color: ColorStyle.blueSKY,
+                              fontWeightDelta: 1,
                             ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 22,
-                        ),
-                        securityQuestionsBox(
-                          'Security question 1',
-                          controller.selectedValueOne.value,
-                          (newValue) {
-                            controller.selectedValueOne.value = newValue!;
-                          },
-                        ),
-                        SizedBox(
-                          height: 12,
-                        ),
-                        securityQuestionsBox(
-                          'Security question 2',
-                          controller.selectedValueTwo.value,
-                          (newValue) {
-                            controller.selectedValueTwo.value = newValue!;
-                          },
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        AutoSizeText(
-                          'Forgot your security question ?',
-                          style: TextStylesPoppins.autoSizeText.apply(
-                            color: ColorStyle.blueSKY,
-                            decoration: TextDecoration.underline,
                           ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Center(
-                          child: GradientButton(
-                            text: 'Sign in',
-                            onTap: () {
-                              Get.to(BioMatric_Permission());
-                            },
-                          ),
+                          onTap: () {},
                         ),
                       ],
                     ),
-                  ));
-            },
-          ),
-        )
-      ],
+                    SizedBox(
+                      height: 22,
+                    ),
+                    securityQuestionsBox(
+                      'Security question 1',
+                      controller.selectedValueOne.value,
+                          (newValue) {
+                        controller.selectedValueOne.value = newValue!;
+                      },
+                    ),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    securityQuestionsBox(
+                      'Security question 2',
+                      controller.selectedValueTwo.value,
+                          (newValue) {
+                        controller.selectedValueTwo.value = newValue!;
+                      },
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    AutoSizeText(
+                      'Forgot your security question ?',
+                      style: TextStylesPoppins.autoSizeText.apply(
+                        color: ColorStyle.blueSKY,
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Center(
+                      child: GradientButton(
+                        text: 'Sign in',
+                        onTap: () {
+                          Get.to(BioMatric_Permission());
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ],
+        );
+      },
     );
+
+
   }
 }

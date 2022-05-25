@@ -21,29 +21,29 @@ class TravelDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBarStyleTitle(
-          title: 'Travel Details',
-          backgroundColor: ColorStyle.darkestBlue,
-          leadingButton: IconButton(
-            icon: Image.asset(
-              ImageStyle.back_circle,
-              height: 30,
-            ),
-            onPressed: () {
-              Get.back();
-            },
-          ),
-          trailingButton: [ButtonChat(),],
-        ),
-        backgroundColor: ColorStyle.primaryWhite,
-        body: GetBuilder<TravelDetailsController>(
-          init: TravelDetailsController(),
-          initState: (state) {
+    return GetBuilder(
+      init: TravelDetailsController(),
+      initState: (state) {
 
-          },
-          builder: (authController) {
-            return Obx(()=>SingleChildScrollView(
+      },
+      builder: (auth) {
+        return Scaffold(
+            appBar: AppBarStyleTitle(
+              title: 'Travel Details',
+              backgroundColor: ColorStyle.darkestBlue,
+              leadingButton: IconButton(
+                icon: Image.asset(
+                  ImageStyle.back_circle,
+                  height: 30,
+                ),
+                onPressed: () {
+                  Get.back();
+                },
+              ),
+              trailingButton: [ButtonChat(),],
+            ),
+            backgroundColor: ColorStyle.primaryWhite,
+            body: SingleChildScrollView(
               child: Column(
                 children: [
                   Stack(
@@ -340,7 +340,9 @@ class TravelDetails extends StatelessWidget {
                 ],
               ),
             ));
-          },
-        ));
+      },
+    );
+
+
   }
 }

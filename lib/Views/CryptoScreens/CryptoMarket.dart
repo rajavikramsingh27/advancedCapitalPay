@@ -21,320 +21,320 @@ class CryptoMarket extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        BackgroundImage(
-          imageName: ImageStyle.bg206,
-        ),
-        Scaffold(
-            // backgroundColor: ColorStyle.darkestBlue.withOpacity(0.3),
-            //   backgroundColor: ColorStyle.primaryWhite,
-            backgroundColor: Colors.transparent,
-            appBar: AppBarStyleTitle(
-              title: '',
-              styleTitle: TextStylesSFCompactDisplay.textStyles_20.apply(
-                color: ColorStyle.primaryWhite,
-                fontWeightDelta: 2,
-              ),
-              leadingButton: IconButton(
-                icon: Image.asset(
-                  ImageStyle.back_circle,
-                  height: 30,
-                ),
-                onPressed: () {
-                  Get.back();
-                },
-              ),
-              trailingButton: [
-                Row(
-                  children: [
-                    InkWell(
-                      child: Container(
-                        height: 30,
-                        padding: EffectStyle.padding(10, 10, 0, 0),
-                        decoration: BoxDecoration(
-                          color: ColorStyle.hex('#3B86D1'),
-                          borderRadius: EffectStyle.radiusCustom(30),
-                        ),
-                        child: Row(
-                          children: [
-                            Image.asset(
-                              ImageStyle.settings_sliders,
-                              height: 20,
-                              width: 20,
+    return GetBuilder(
+      init: CryptoMarketController(),
+      initState: (state) {
+
+      },
+      builder: (auth) {
+        return Stack(
+          children: [
+            BackgroundImage(
+              imageName: ImageStyle.bg206,
+            ),
+            Scaffold(
+              // backgroundColor: ColorStyle.darkestBlue.withOpacity(0.3),
+              //   backgroundColor: ColorStyle.primaryWhite,
+                backgroundColor: Colors.transparent,
+                appBar: AppBarStyleTitle(
+                  title: '',
+                  styleTitle: TextStylesSFCompactDisplay.textStyles_20.apply(
+                    color: ColorStyle.primaryWhite,
+                    fontWeightDelta: 2,
+                  ),
+                  leadingButton: IconButton(
+                    icon: Image.asset(
+                      ImageStyle.back_circle,
+                      height: 30,
+                    ),
+                    onPressed: () {
+                      Get.back();
+                    },
+                  ),
+                  trailingButton: [
+                    Row(
+                      children: [
+                        InkWell(
+                          child: Container(
+                            height: 30,
+                            padding: EffectStyle.padding(10, 10, 0, 0),
+                            decoration: BoxDecoration(
+                              color: ColorStyle.hex('#3B86D1'),
+                              borderRadius: EffectStyle.radiusCustom(30),
                             ),
-                            SizedBox(
-                              width: 4,
-                            ),
-                            Text(
-                              'Filters',
-                              style: TextStylesSFCompactDisplay.textStyles_12
-                                  .apply(
+                            child: Row(
+                              children: [
+                                Image.asset(
+                                  ImageStyle.settings_sliders,
+                                  height: 20,
+                                  width: 20,
+                                ),
+                                SizedBox(
+                                  width: 4,
+                                ),
+                                Text(
+                                  'Filters',
+                                  style: TextStylesSFCompactDisplay.textStyles_12
+                                      .apply(
                                       color: ColorStyle.primaryWhite,
                                       fontWeightDelta: 1),
+                                ),
+                              ],
                             ),
-                          ],
+                          ),
+                          onTap: () {},
                         ),
-                      ),
-                      onTap: () {},
+                        SizedBox(
+                          width: 6,
+                        ),
+                        InkWell(
+                          child: Container(
+                            height: 30,
+                            padding: EffectStyle.padding(0, 0, 0, 0),
+                            decoration: BoxDecoration(
+                              color: ColorStyle.hex('#3B86D1'),
+                              borderRadius: EffectStyle.radiusCustom(30),
+                            ),
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 30,
+                                  width: 30,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                      color: ColorStyle.hex('#3B86D1'),
+                                      borderRadius: EffectStyle.radiusCustom(50),
+                                      border: Border.all(
+                                          color: ColorStyle.primaryWhite,
+                                          width: 1.5)),
+                                  child: Text(
+                                    '\$',
+                                    textAlign: TextAlign.center,
+                                    style: TextStylesSFCompactDisplay.textStyles_16
+                                        .apply(
+                                      color: ColorStyle.primaryWhite,
+                                      fontWeightDelta: 1,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 4,
+                                ),
+                                Text(
+                                  'USD',
+                                  style: TextStylesSFCompactDisplay.textStyles_12
+                                      .apply(
+                                      color: ColorStyle.primaryWhite,
+                                      fontWeightDelta: 1),
+                                ),
+                                Icon(
+                                  Icons.arrow_drop_down,
+                                  size: 30,
+                                )
+                              ],
+                            ),
+                          ),
+                          onTap: () {},
+                        ),
+                      ],
                     ),
                     SizedBox(
-                      width: 6,
-                    ),
-                    InkWell(
-                      child: Container(
-                        height: 30,
-                        padding: EffectStyle.padding(0, 0, 0, 0),
-                        decoration: BoxDecoration(
-                          color: ColorStyle.hex('#3B86D1'),
-                          borderRadius: EffectStyle.radiusCustom(30),
-                        ),
-                        child: Row(
-                          children: [
-                            Container(
-                              height: 30,
-                              width: 30,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                  color: ColorStyle.hex('#3B86D1'),
-                                  borderRadius: EffectStyle.radiusCustom(50),
-                                  border: Border.all(
-                                      color: ColorStyle.primaryWhite,
-                                      width: 1.5)),
-                              child: Text(
-                                '\$',
-                                textAlign: TextAlign.center,
-                                style: TextStylesSFCompactDisplay.textStyles_16
-                                    .apply(
-                                  color: ColorStyle.primaryWhite,
-                                  fontWeightDelta: 1,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 4,
-                            ),
-                            Text(
-                              'USD',
-                              style: TextStylesSFCompactDisplay.textStyles_12
-                                  .apply(
-                                      color: ColorStyle.primaryWhite,
-                                      fontWeightDelta: 1),
-                            ),
-                            Icon(
-                              Icons.arrow_drop_down,
-                              size: 30,
-                            )
-                          ],
-                        ),
-                      ),
-                      onTap: () {},
+                      width: 16,
                     ),
                   ],
                 ),
-                SizedBox(
-                  width: 16,
-                ),
-              ],
-            ),
-            body: GetBuilder<CryptoMarketController>(
-              init: CryptoMarketController(),
-              initState: (state) {
-                controller.reset();
-              },
-              builder: (authController) {
-                return Obx(() => Column(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 16, right: 16),
-                          padding: EdgeInsets.only(left: 6, right: 6),
-                          child: Row(
-                            children: [
-                              InkWell(
-                                child: Container(
-                                  child: Text(
-                                    'Coins',
-                                    style: TextStylesSFCompactDisplay
-                                        .textStyles_20
-                                        .apply(
-                                      color: controller.isCoins.value
-                                          ? ColorStyle.primaryWhite
-                                          : ColorStyle.primaryWhite
-                                              .withOpacity(0.7),
-                                      fontWeightDelta: 2,
-                                    ),
-                                  ),
-                                  decoration: BoxDecoration(
-                                      border: Border(
-                                          bottom: BorderSide(
-                                              color: controller.isCoins.value
-                                                  ? ColorStyle.hex('#24DCE3')
-                                                  : Colors.transparent,
-                                              width: 2))),
+                body: Column(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(left: 16, right: 16),
+                      padding: EdgeInsets.only(left: 6, right: 6),
+                      child: Row(
+                        children: [
+                          InkWell(
+                            child: Container(
+                              child: Text(
+                                'Coins',
+                                style: TextStylesSFCompactDisplay
+                                    .textStyles_20
+                                    .apply(
+                                  color: controller.isCoins.value
+                                      ? ColorStyle.primaryWhite
+                                      : ColorStyle.primaryWhite
+                                      .withOpacity(0.7),
+                                  fontWeightDelta: 2,
                                 ),
-                                onTap: () {
-                                  controller.isCoins.value = true;
-                                },
                               ),
-                              SizedBox(
-                                width: 30,
-                              ),
-                              InkWell(
-                                child: Container(
-                                  child: Text(
-                                    'NFT',
-                                    style: TextStylesSFCompactDisplay
-                                        .textStyles_20
-                                        .apply(
-                                      color: !controller.isCoins.value
-                                          ? ColorStyle.primaryWhite
-                                          : ColorStyle.primaryWhite
-                                              .withOpacity(0.7),
-                                      fontWeightDelta: 2,
-                                    ),
-                                  ),
-                                  decoration: BoxDecoration(
-                                      border: Border(
-                                          bottom: BorderSide(
-                                              color: !controller.isCoins.value
-                                                  ? ColorStyle.hex('#24DCE3')
-                                                  : Colors.transparent,
-                                              width: 2))),
-                                ),
-                                onTap: () {
-                                  controller.isCoins.value = false;
-                                },
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Stack(
-                          children: [
-                            Image.asset(
-                              ImageStyle.bg204,
-                              height: 100,
-                              width: MediaQuery.of(context).size.width - 32,
-                              fit: BoxFit.fill,
-                            ),
-                            Container(
-                              height: 100,
-                              width: MediaQuery.of(context).size.width - 32,
-                              alignment: Alignment.center,
-                              padding: EffectStyle.padding(16, 16, 0, 0),
                               decoration: BoxDecoration(
-                                color: ColorStyle.darkestBlue.withOpacity(0.6),
-                                borderRadius: EffectStyle.radiusCustom(10),
+                                  border: Border(
+                                      bottom: BorderSide(
+                                          color: controller.isCoins.value
+                                              ? ColorStyle.hex('#24DCE3')
+                                              : Colors.transparent,
+                                          width: 2))),
+                            ),
+                            onTap: () {
+                              controller.isCoins.value = true;
+                            },
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          InkWell(
+                            child: Container(
+                              child: Text(
+                                'NFT',
+                                style: TextStylesSFCompactDisplay
+                                    .textStyles_20
+                                    .apply(
+                                  color: !controller.isCoins.value
+                                      ? ColorStyle.primaryWhite
+                                      : ColorStyle.primaryWhite
+                                      .withOpacity(0.7),
+                                  fontWeightDelta: 2,
+                                ),
                               ),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                              decoration: BoxDecoration(
+                                  border: Border(
+                                      bottom: BorderSide(
+                                          color: !controller.isCoins.value
+                                              ? ColorStyle.hex('#24DCE3')
+                                              : Colors.transparent,
+                                          width: 2))),
+                            ),
+                            onTap: () {
+                              controller.isCoins.value = false;
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Stack(
+                      children: [
+                        Image.asset(
+                          ImageStyle.bg204,
+                          height: 100,
+                          width: MediaQuery.of(context).size.width - 32,
+                          fit: BoxFit.fill,
+                        ),
+                        Container(
+                          height: 100,
+                          width: MediaQuery.of(context).size.width - 32,
+                          alignment: Alignment.center,
+                          padding: EffectStyle.padding(16, 16, 0, 0),
+                          decoration: BoxDecoration(
+                            color: ColorStyle.darkestBlue.withOpacity(0.6),
+                            borderRadius: EffectStyle.radiusCustom(10),
+                          ),
+                          child: Row(
+                            mainAxisAlignment:
+                            MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        'Market Cap',
-                                        style: TextStylesSFCompactDisplay
-                                            .textStyles_11
-                                            .apply(
-                                          color: ColorStyle.hex('#D1CCCC'),
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        '\$ 255,61B',
-                                        style: TextStylesSFCompactDisplay
-                                            .textStyles_15
-                                            .apply(
-                                          color: ColorStyle.primaryWhite,
-                                          fontWeightDelta: 0,
-                                        ),
-                                      ),
-                                      Text(
-                                        '+3.61%',
-                                        style: TextStylesSFCompactDisplay
-                                            .textStyles_13
-                                            .apply(
-                                          color: ColorStyle.green,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                    ],
+                                  Text(
+                                    'Market Cap',
+                                    style: TextStylesSFCompactDisplay
+                                        .textStyles_11
+                                        .apply(
+                                      color: ColorStyle.hex('#D1CCCC'),
+                                      fontWeightDelta: 1,
+                                    ),
                                   ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        '24th Volume',
-                                        style: TextStylesSFCompactDisplay
-                                            .textStyles_11
-                                            .apply(
-                                          color: ColorStyle.hex('#D1CCCC'),
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        '\$ 94,34B',
-                                        style: TextStylesSFCompactDisplay
-                                            .textStyles_15
-                                            .apply(
-                                          color: ColorStyle.primaryWhite,
-                                          fontWeightDelta: 0,
-                                        ),
-                                      ),
-                                      Text(
-                                        '+0.77%',
-                                        style: TextStylesSFCompactDisplay
-                                            .textStyles_13
-                                            .apply(
-                                          color: ColorStyle.green,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                    ],
+                                  Text(
+                                    '\$ 255,61B',
+                                    style: TextStylesSFCompactDisplay
+                                        .textStyles_15
+                                        .apply(
+                                      color: ColorStyle.primaryWhite,
+                                      fontWeightDelta: 0,
+                                    ),
                                   ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        'BTC dominace',
-                                        style: TextStylesSFCompactDisplay
-                                            .textStyles_11
-                                            .apply(
-                                          color: ColorStyle.hex('#D1CCCC'),
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                      Text(
-                                        '\$ 432,34B',
-                                        style: TextStylesSFCompactDisplay
-                                            .textStyles_15
-                                            .apply(
-                                          color: ColorStyle.primaryWhite,
-                                          fontWeightDelta: 0,
-                                        ),
-                                      ),
-                                      Text(
-                                        '64.75%',
-                                        style: TextStylesSFCompactDisplay
-                                            .textStyles_13
-                                            .apply(
-                                          color: ColorStyle.yellowCrypto,
-                                          fontWeightDelta: 1,
-                                        ),
-                                      ),
-                                    ],
+                                  Text(
+                                    '+3.61%',
+                                    style: TextStylesSFCompactDisplay
+                                        .textStyles_13
+                                        .apply(
+                                      color: ColorStyle.green,
+                                      fontWeightDelta: 1,
+                                    ),
                                   ),
                                 ],
                               ),
-                            )
-                          ],
-                        ),
-                        Expanded(
-                            child: SingleChildScrollView(
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    '24th Volume',
+                                    style: TextStylesSFCompactDisplay
+                                        .textStyles_11
+                                        .apply(
+                                      color: ColorStyle.hex('#D1CCCC'),
+                                      fontWeightDelta: 1,
+                                    ),
+                                  ),
+                                  Text(
+                                    '\$ 94,34B',
+                                    style: TextStylesSFCompactDisplay
+                                        .textStyles_15
+                                        .apply(
+                                      color: ColorStyle.primaryWhite,
+                                      fontWeightDelta: 0,
+                                    ),
+                                  ),
+                                  Text(
+                                    '+0.77%',
+                                    style: TextStylesSFCompactDisplay
+                                        .textStyles_13
+                                        .apply(
+                                      color: ColorStyle.green,
+                                      fontWeightDelta: 1,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'BTC dominace',
+                                    style: TextStylesSFCompactDisplay
+                                        .textStyles_11
+                                        .apply(
+                                      color: ColorStyle.hex('#D1CCCC'),
+                                      fontWeightDelta: 1,
+                                    ),
+                                  ),
+                                  Text(
+                                    '\$ 432,34B',
+                                    style: TextStylesSFCompactDisplay
+                                        .textStyles_15
+                                        .apply(
+                                      color: ColorStyle.primaryWhite,
+                                      fontWeightDelta: 0,
+                                    ),
+                                  ),
+                                  Text(
+                                    '64.75%',
+                                    style: TextStylesSFCompactDisplay
+                                        .textStyles_13
+                                        .apply(
+                                      color: ColorStyle.yellowCrypto,
+                                      fontWeightDelta: 1,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    Expanded(
+                        child: SingleChildScrollView(
                           padding: EffectStyle.padding(0, 0, 16, 0),
                           child: Column(
                             children: [
@@ -356,26 +356,26 @@ class CryptoMarket extends StatelessWidget {
                                     ),
                                     Expanded(
                                         child: TextField(
-                                      style:
+                                          style:
                                           TextStylesPoppins.textStyles_16.apply(
-                                        color: ColorStyle.primaryWhite,
-                                        fontWeightDelta: 0,
-                                      ),
-                                      decoration: InputDecoration(
-                                        contentPadding:
+                                            color: ColorStyle.primaryWhite,
+                                            fontWeightDelta: 0,
+                                          ),
+                                          decoration: InputDecoration(
+                                            contentPadding:
                                             EdgeInsets.only(bottom: 5),
-                                        hintText: "Search for assets……..",
-                                        hintStyle: TextStylesSFCompactDisplay
-                                            .textStyles_15
-                                            .apply(
-                                          color: ColorStyle.grey,
-                                          fontWeightDelta: 0,
-                                        ),
-                                        enabledBorder: InputBorder.none,
-                                        focusedBorder: InputBorder.none,
-                                      ),
-                                      onChanged: (value) {},
-                                    ))
+                                            hintText: "Search for assets……..",
+                                            hintStyle: TextStylesSFCompactDisplay
+                                                .textStyles_15
+                                                .apply(
+                                              color: ColorStyle.grey,
+                                              fontWeightDelta: 0,
+                                            ),
+                                            enabledBorder: InputBorder.none,
+                                            focusedBorder: InputBorder.none,
+                                          ),
+                                          onChanged: (value) {},
+                                        ))
                                   ],
                                 ),
                               ),
@@ -390,192 +390,192 @@ class CryptoMarket extends StatelessWidget {
                                   children: [
                                     Expanded(
                                         child: InkWell(
-                                      child: Container(
-                                        height: double.infinity,
-                                        alignment: Alignment.center,
-                                        decoration: (controller.index.value ==
+                                          child: Container(
+                                            height: double.infinity,
+                                            alignment: Alignment.center,
+                                            decoration: (controller.index.value ==
                                                 0)
-                                            ? BoxDecoration(
-                                                color:
-                                                    ColorStyle.hex('#0090FA'),
-                                                borderRadius:
-                                                    EffectStyle.radiusCustom(
-                                                        10),
-                                              )
-                                            : BoxDecoration(
-                                                color:
-                                                    ColorStyle.hex('#273564'),
-                                                borderRadius:
-                                                    EffectStyle.radiusCustom(
-                                                        10),
+                                                ? BoxDecoration(
+                                              color:
+                                              ColorStyle.hex('#0090FA'),
+                                              borderRadius:
+                                              EffectStyle.radiusCustom(
+                                                  10),
+                                            )
+                                                : BoxDecoration(
+                                              color:
+                                              ColorStyle.hex('#273564'),
+                                              borderRadius:
+                                              EffectStyle.radiusCustom(
+                                                  10),
+                                            ),
+                                            child: Text(
+                                              'Top 100',
+                                              style: TextStylesSFCompactDisplay
+                                                  .textStyles_11
+                                                  .apply(
+                                                color: ColorStyle.primaryWhite,
+                                                fontWeightDelta: 1,
                                               ),
-                                        child: Text(
-                                          'Top 100',
-                                          style: TextStylesSFCompactDisplay
-                                              .textStyles_11
-                                              .apply(
-                                            color: ColorStyle.primaryWhite,
-                                            fontWeightDelta: 1,
+                                            ),
                                           ),
-                                        ),
-                                      ),
-                                      onTap: () {
-                                        controller.index.value = 0;
-                                      },
-                                    )),
+                                          onTap: () {
+                                            controller.index.value = 0;
+                                          },
+                                        )),
                                     SizedBox(
                                       width: 4,
                                     ),
                                     Expanded(
                                         child: InkWell(
-                                      child: Container(
-                                        height: double.infinity,
-                                        alignment: Alignment.center,
-                                        decoration: (controller.index.value ==
+                                          child: Container(
+                                            height: double.infinity,
+                                            alignment: Alignment.center,
+                                            decoration: (controller.index.value ==
                                                 1)
-                                            ? BoxDecoration(
-                                                color:
-                                                    ColorStyle.hex('#0090FA'),
-                                                borderRadius:
-                                                    EffectStyle.radiusCustom(
-                                                        10),
-                                              )
-                                            : BoxDecoration(
-                                                color:
-                                                    ColorStyle.hex('#273564'),
-                                                borderRadius:
-                                                    EffectStyle.radiusCustom(
-                                                        10),
+                                                ? BoxDecoration(
+                                              color:
+                                              ColorStyle.hex('#0090FA'),
+                                              borderRadius:
+                                              EffectStyle.radiusCustom(
+                                                  10),
+                                            )
+                                                : BoxDecoration(
+                                              color:
+                                              ColorStyle.hex('#273564'),
+                                              borderRadius:
+                                              EffectStyle.radiusCustom(
+                                                  10),
+                                            ),
+                                            child: Text(
+                                              '% (24H)',
+                                              style: TextStylesSFCompactDisplay
+                                                  .textStyles_11
+                                                  .apply(
+                                                color: ColorStyle.primaryWhite,
+                                                fontWeightDelta: 1,
                                               ),
-                                        child: Text(
-                                          '% (24H)',
-                                          style: TextStylesSFCompactDisplay
-                                              .textStyles_11
-                                              .apply(
-                                            color: ColorStyle.primaryWhite,
-                                            fontWeightDelta: 1,
+                                            ),
                                           ),
-                                        ),
-                                      ),
-                                      onTap: () {
-                                        controller.index.value = 1;
-                                      },
-                                    )),
+                                          onTap: () {
+                                            controller.index.value = 1;
+                                          },
+                                        )),
                                     SizedBox(
                                       width: 4,
                                     ),
                                     Expanded(
                                         child: InkWell(
-                                      child: Container(
-                                        height: double.infinity,
-                                        alignment: Alignment.center,
-                                        decoration: (controller.index.value ==
+                                          child: Container(
+                                            height: double.infinity,
+                                            alignment: Alignment.center,
+                                            decoration: (controller.index.value ==
                                                 2)
-                                            ? BoxDecoration(
-                                                color:
-                                                    ColorStyle.hex('#0090FA'),
-                                                borderRadius:
-                                                    EffectStyle.radiusCustom(
-                                                        10),
-                                              )
-                                            : BoxDecoration(
-                                                color:
-                                                    ColorStyle.hex('#273564'),
-                                                borderRadius:
-                                                    EffectStyle.radiusCustom(
-                                                        10),
+                                                ? BoxDecoration(
+                                              color:
+                                              ColorStyle.hex('#0090FA'),
+                                              borderRadius:
+                                              EffectStyle.radiusCustom(
+                                                  10),
+                                            )
+                                                : BoxDecoration(
+                                              color:
+                                              ColorStyle.hex('#273564'),
+                                              borderRadius:
+                                              EffectStyle.radiusCustom(
+                                                  10),
+                                            ),
+                                            child: Text(
+                                              'Trending',
+                                              style: TextStylesSFCompactDisplay
+                                                  .textStyles_11
+                                                  .apply(
+                                                color: ColorStyle.primaryWhite,
+                                                fontWeightDelta: 1,
                                               ),
-                                        child: Text(
-                                          'Trending',
-                                          style: TextStylesSFCompactDisplay
-                                              .textStyles_11
-                                              .apply(
-                                            color: ColorStyle.primaryWhite,
-                                            fontWeightDelta: 1,
+                                            ),
                                           ),
-                                        ),
-                                      ),
-                                      onTap: () {
-                                        controller.index.value = 2;
-                                      },
-                                    )),
+                                          onTap: () {
+                                            controller.index.value = 2;
+                                          },
+                                        )),
                                     SizedBox(
                                       width: 4,
                                     ),
                                     Expanded(
                                         child: InkWell(
-                                      child: Container(
-                                        height: double.infinity,
-                                        alignment: Alignment.center,
-                                        decoration: (controller.index.value ==
+                                          child: Container(
+                                            height: double.infinity,
+                                            alignment: Alignment.center,
+                                            decoration: (controller.index.value ==
                                                 3)
-                                            ? BoxDecoration(
-                                                color:
-                                                    ColorStyle.hex('#0090FA'),
-                                                borderRadius:
-                                                    EffectStyle.radiusCustom(
-                                                        10),
-                                              )
-                                            : BoxDecoration(
-                                                color:
-                                                    ColorStyle.hex('#273564'),
-                                                borderRadius:
-                                                    EffectStyle.radiusCustom(
-                                                        10),
+                                                ? BoxDecoration(
+                                              color:
+                                              ColorStyle.hex('#0090FA'),
+                                              borderRadius:
+                                              EffectStyle.radiusCustom(
+                                                  10),
+                                            )
+                                                : BoxDecoration(
+                                              color:
+                                              ColorStyle.hex('#273564'),
+                                              borderRadius:
+                                              EffectStyle.radiusCustom(
+                                                  10),
+                                            ),
+                                            child: Text(
+                                              'Recently Added',
+                                              textAlign: TextAlign.center,
+                                              style: TextStylesSFCompactDisplay
+                                                  .textStyles_11
+                                                  .apply(
+                                                color: ColorStyle.primaryWhite,
+                                                fontWeightDelta: 1,
                                               ),
-                                        child: Text(
-                                          'Recently Added',
-                                          textAlign: TextAlign.center,
-                                          style: TextStylesSFCompactDisplay
-                                              .textStyles_11
-                                              .apply(
-                                            color: ColorStyle.primaryWhite,
-                                            fontWeightDelta: 1,
+                                            ),
                                           ),
-                                        ),
-                                      ),
-                                      onTap: () {
-                                        controller.index.value = 3;
-                                      },
-                                    )),
+                                          onTap: () {
+                                            controller.index.value = 3;
+                                          },
+                                        )),
                                     SizedBox(
                                       width: 4,
                                     ),
                                     Expanded(
                                         child: InkWell(
-                                      child: Container(
-                                        height: double.infinity,
-                                        alignment: Alignment.center,
-                                        decoration: (controller.index.value ==
+                                          child: Container(
+                                            height: double.infinity,
+                                            alignment: Alignment.center,
+                                            decoration: (controller.index.value ==
                                                 4)
-                                            ? BoxDecoration(
-                                                color:
-                                                    ColorStyle.hex('#0090FA'),
-                                                borderRadius:
-                                                    EffectStyle.radiusCustom(
-                                                        10),
-                                              )
-                                            : BoxDecoration(
-                                                color:
-                                                    ColorStyle.hex('#273564'),
-                                                borderRadius:
-                                                    EffectStyle.radiusCustom(
-                                                        10),
+                                                ? BoxDecoration(
+                                              color:
+                                              ColorStyle.hex('#0090FA'),
+                                              borderRadius:
+                                              EffectStyle.radiusCustom(
+                                                  10),
+                                            )
+                                                : BoxDecoration(
+                                              color:
+                                              ColorStyle.hex('#273564'),
+                                              borderRadius:
+                                              EffectStyle.radiusCustom(
+                                                  10),
+                                            ),
+                                            child: Text(
+                                              'News',
+                                              style: TextStylesSFCompactDisplay
+                                                  .textStyles_11
+                                                  .apply(
+                                                color: ColorStyle.primaryWhite,
+                                                fontWeightDelta: 1,
                                               ),
-                                        child: Text(
-                                          'News',
-                                          style: TextStylesSFCompactDisplay
-                                              .textStyles_11
-                                              .apply(
-                                            color: ColorStyle.primaryWhite,
-                                            fontWeightDelta: 1,
+                                            ),
                                           ),
-                                        ),
-                                      ),
-                                      onTap: () {
-                                        controller.index.value = 4;
-                                      },
-                                    )),
+                                          onTap: () {
+                                            controller.index.value = 4;
+                                          },
+                                        )),
                                   ],
                                 ),
                               ),
@@ -599,7 +599,7 @@ class CryptoMarket extends StatelessWidget {
                                         children: [
                                           ClipRRect(
                                             borderRadius:
-                                                BorderRadius.circular(10),
+                                            BorderRadius.circular(10),
                                             child: BackdropFilter(
                                               filter: ImageFilter.blur(
                                                 sigmaX: 1.0,
@@ -612,9 +612,9 @@ class CryptoMarket extends StatelessWidget {
                                                 height: 82,
                                                 decoration: BoxDecoration(
                                                   color:
-                                                      ColorStyle.hex('#273564'),
+                                                  ColorStyle.hex('#273564'),
                                                   borderRadius:
-                                                      BorderRadius.circular(10),
+                                                  BorderRadius.circular(10),
                                                 ),
                                                 // color: Colors.red,
                                               ),
@@ -624,7 +624,7 @@ class CryptoMarket extends StatelessWidget {
                                             decoration: BoxDecoration(
                                               // color: ColorStyle.secondryBlack.withOpacity(0.6),
                                               borderRadius:
-                                                  BorderRadius.circular(10),
+                                              BorderRadius.circular(10),
                                             ),
                                             padding: EdgeInsets.only(
                                                 left: 12,
@@ -633,14 +633,14 @@ class CryptoMarket extends StatelessWidget {
                                                 bottom: 16),
                                             child: Row(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
+                                              MainAxisAlignment
+                                                  .spaceBetween,
                                               crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
+                                              CrossAxisAlignment.center,
                                               children: [
                                                 Row(
                                                   crossAxisAlignment:
-                                                      CrossAxisAlignment.center,
+                                                  CrossAxisAlignment.center,
                                                   children: [
                                                     Image.asset(
                                                       controller.images[index],
@@ -651,53 +651,53 @@ class CryptoMarket extends StatelessWidget {
                                                     ),
                                                     Column(
                                                       crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
+                                                      CrossAxisAlignment
+                                                          .start,
                                                       children: [
                                                         Row(
                                                           children: [
                                                             Text(
                                                               controller
-                                                                      .chooseSaving[
-                                                                  index],
+                                                                  .chooseSaving[
+                                                              index],
                                                               style: TextStylesSFCompactDisplay
                                                                   .textStyles_11
                                                                   .apply(
-                                                                      color: ColorStyle
-                                                                          .primaryWhite,
-                                                                      fontWeightDelta:
-                                                                          1),
+                                                                  color: ColorStyle
+                                                                      .primaryWhite,
+                                                                  fontWeightDelta:
+                                                                  1),
                                                             ),
                                                             SizedBox(
                                                               width: 3,
                                                             ),
                                                             Text(
                                                               controller
-                                                                      .arrTypeCrypto[
-                                                                  index],
+                                                                  .arrTypeCrypto[
+                                                              index],
                                                               style: TextStylesSFCompactDisplay
                                                                   .textStyles_10
                                                                   .apply(
-                                                                      color: ColorStyle.hex(
-                                                                          controller.arrTypeCryptoColor[
-                                                                              index]),
-                                                                      fontWeightDelta:
-                                                                          1),
+                                                                  color: ColorStyle.hex(
+                                                                      controller.arrTypeCryptoColor[
+                                                                      index]),
+                                                                  fontWeightDelta:
+                                                                  1),
                                                             ),
                                                           ],
                                                         ),
                                                         Text(
                                                           // 'Spare change',
                                                           controller
-                                                                  .chooseSaving1[
-                                                              index],
+                                                              .chooseSaving1[
+                                                          index],
                                                           style: TextStylesSFCompactDisplay
                                                               .textStyles_16
                                                               .apply(
-                                                                  color: ColorStyle
-                                                                      .primaryWhite,
-                                                                  fontWeightDelta:
-                                                                      2),
+                                                              color: ColorStyle
+                                                                  .primaryWhite,
+                                                              fontWeightDelta:
+                                                              2),
                                                         ),
                                                       ],
                                                     ),
@@ -707,50 +707,50 @@ class CryptoMarket extends StatelessWidget {
                                                   children: [
                                                     Column(
                                                       crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .end,
+                                                      CrossAxisAlignment
+                                                          .end,
                                                       children: [
                                                         Text(
                                                           controller
-                                                                  .chooseSaving3[
-                                                              index],
+                                                              .chooseSaving3[
+                                                          index],
                                                           style: TextStylesSFCompactDisplay
                                                               .textStyles_12
                                                               .apply(
-                                                                  color: ColorStyle
-                                                                      .primaryWhite,
-                                                                  fontWeightDelta:
-                                                                      2),
+                                                              color: ColorStyle
+                                                                  .primaryWhite,
+                                                              fontWeightDelta:
+                                                              2),
                                                         ),
                                                         Container(
                                                           alignment:
-                                                              Alignment.center,
+                                                          Alignment.center,
                                                           padding: EffectStyle
                                                               .padding(
-                                                                  6, 6, 4, 4),
+                                                              6, 6, 4, 4),
                                                           decoration: BoxDecoration(
                                                               color: controller
-                                                                      .chooseSaving2[
-                                                                          index]
-                                                                      .contains(
-                                                                          '+')
+                                                                  .chooseSaving2[
+                                                              index]
+                                                                  .contains(
+                                                                  '+')
                                                                   ? Colors.green
                                                                   : Colors.red,
                                                               borderRadius:
-                                                                  EffectStyle
-                                                                      .radiusCustom(
-                                                                          2)),
+                                                              EffectStyle
+                                                                  .radiusCustom(
+                                                                  2)),
                                                           child: Text(
                                                             controller
-                                                                    .chooseSaving2[
-                                                                index],
+                                                                .chooseSaving2[
+                                                            index],
                                                             style: TextStylesSFCompactDisplay
                                                                 .textStyles_11
                                                                 .apply(
-                                                                    color: ColorStyle
-                                                                        .primaryWhite,
-                                                                    fontWeightDelta:
-                                                                        2),
+                                                                color: ColorStyle
+                                                                    .primaryWhite,
+                                                                fontWeightDelta:
+                                                                2),
                                                           ),
                                                         ),
                                                       ],
@@ -772,7 +772,7 @@ class CryptoMarket extends StatelessWidget {
                                 ListView.separated(
                                     physics: NeverScrollableScrollPhysics(),
                                     padding:
-                                        EffectStyle.padding(16, 16, 16, 16),
+                                    EffectStyle.padding(16, 16, 16, 16),
                                     shrinkWrap: true,
                                     itemCount: 5,
                                     separatorBuilder: (context, index) {
@@ -786,12 +786,14 @@ class CryptoMarket extends StatelessWidget {
                             ],
                           ),
                         )),
-                      ],
-                    ));
-              },
-            ))
-      ],
+                  ],
+                ))
+          ],
+        );
+      },
     );
+
+
     ;
   }
 }

@@ -89,124 +89,134 @@ class UserIdentification extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EffectStyle.padding(30, 30, 0, 0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(
-            height: 16,
-          ),
-          Text(
-            'User Identification',
-            style: TextStylesPoppins.textStyles_20.apply(
-              color: ColorStyle.primaryWhite,
-              fontWeightDelta: 1,
-            ),
-          ),
-          SizedBox(
-            height: 16,
-          ),
-          Container(
-            padding: EffectStyle.padding(16, 16, 30, 16),
-            decoration: BoxDecoration(
-              color: ColorStyle.primaryWhite,
-              borderRadius: EffectStyle.radiusCustom(10),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
+    return GetBuilder(
+      init: AccountDetailsRecoveryController(),
+      initState: (state) {
+
+      },
+      builder: (auth) {
+        return Container(
+          padding: EffectStyle.padding(30, 30, 0, 0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 16,
+              ),
+              Text(
+                'User Identification',
+                style: TextStylesPoppins.textStyles_20.apply(
+                  color: ColorStyle.primaryWhite,
+                  fontWeightDelta: 1,
+                ),
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              Container(
+                padding: EffectStyle.padding(16, 16, 30, 16),
+                decoration: BoxDecoration(
+                  color: ColorStyle.primaryWhite,
+                  borderRadius: EffectStyle.radiusCustom(10),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Image.asset(
-                      ImageStyle.icon_material_error,
-                      width: 30,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Expanded(
-                      child: Text(
-                        controller.isUserIdentification.value
-                            ? 'Please enter the One time passcode (OTP) which has been sent to your registered number in order to continue. '
-                            : 'Please provide your User Identification/E-Mail Address associated with your account to proceed.',
-                        style: TextStylesPoppins.textStyles_12.apply(
-                          color: ColorStyle.darkestBlue,
-                          fontWeightDelta: 1,
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                          ImageStyle.icon_material_error,
+                          width: 30,
                         ),
-                      ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Text(
+                            controller.isUserIdentification.value
+                                ? 'Please enter the One time passcode (OTP) which has been sent to your registered number in order to continue. '
+                                : 'Please provide your User Identification/E-Mail Address associated with your account to proceed.',
+                            style: TextStylesPoppins.textStyles_12.apply(
+                              color: ColorStyle.darkestBlue,
+                              fontWeightDelta: 1,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                      ],
                     ),
+                    if (controller.isUserIdentification.value)
+                      textFieldsAccount('User ID/E-Mail Address', true),
                     SizedBox(
-                      width: 10,
+                      height: 30,
+                    ),
+                    Container(
+                      // margin: EdgeInsets.only(left: 16, right: 16),
+                      padding: EffectStyle.padding(16, 16, 16, 16),
+                      decoration: BoxDecoration(
+                        color: ColorStyle.primaryWhite,
+                        borderRadius: EffectStyle.radiusCustom(10),
+                      ),
+                      child: Column(
+                        children: [
+                          OTPVerification(),
+                          SizedBox(
+                            height: 36,
+                          ),
+                          Row(
+                            children: [
+                              Expanded(
+                                  child: ElevatedButtonCustom(
+                                    colorBG: ColorStyle.primaryWhite,
+                                    textStyle: TextStylesPoppins.textStyles_14
+                                        .apply(color: ColorStyle.blueSKY, fontWeightDelta: 1),
+                                    colorBorder: ColorStyle.blueSKY,
+                                    text: 'Cancel',
+                                    radiusBorder: 30,
+                                    onTap: () {},
+                                  )),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Expanded(
+                                  child: ElevatedButtonCustom(
+                                    colorBG: ColorStyle.blueSKY,
+                                    text: 'Generate OTP Code',
+                                    radiusBorder: 30,
+                                    textStyle: TextStylesPoppins.textStyles_14.apply(
+                                        color: ColorStyle.primaryWhite, fontWeightDelta: 1),
+                                    onTap: () {
+                                      controller.arrSelectOptionIcons[2] = true;
+
+                                      for (int i = 0;
+                                      i < controller.arrSelectOption.length;
+                                      i++) {
+                                        if (i == 2) {
+                                          controller.arrSelectOption[2] = true;
+                                        } else {
+                                          controller.arrSelectOption[i] = false;
+                                        }
+                                      }
+                                    },
+                                  )),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
-                if (controller.isUserIdentification.value)
-                textFieldsAccount('User ID/E-Mail Address', true),
-                SizedBox(
-                  height: 30,
-                ),
-                Container(
-                  // margin: EdgeInsets.only(left: 16, right: 16),
-                  padding: EffectStyle.padding(16, 16, 16, 16),
-                  decoration: BoxDecoration(
-                    color: ColorStyle.primaryWhite,
-                    borderRadius: EffectStyle.radiusCustom(10),
-                  ),
-                  child: Column(
-                    children: [
-                      OTPVerification(),
-                      SizedBox(
-                        height: 36,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                              child: ElevatedButtonCustom(
-                                colorBG: ColorStyle.primaryWhite,
-                                textStyle: TextStylesPoppins.textStyles_14
-                                    .apply(color: ColorStyle.blueSKY, fontWeightDelta: 1),
-                                colorBorder: ColorStyle.blueSKY,
-                                text: 'Cancel',
-                                radiusBorder: 30,
-                                onTap: () {},
-                              )),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Expanded(
-                              child: ElevatedButtonCustom(
-                                colorBG: ColorStyle.blueSKY,
-                                text: 'Generate OTP Code',
-                                radiusBorder: 30,
-                                textStyle: TextStylesPoppins.textStyles_14.apply(
-                                    color: ColorStyle.primaryWhite, fontWeightDelta: 1),
-                                onTap: () {
-                                  controller.arrSelectOptionIcons[2] = true;
-
-                                  for (int i = 0;
-                                  i < controller.arrSelectOption.length;
-                                  i++) {
-                                    if (i == 2) {
-                                      controller.arrSelectOption[2] = true;
-                                    } else {
-                                      controller.arrSelectOption[i] = false;
-                                    }
-                                  }
-                                },
-                              )),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
+              )
+            ],
+          ),
+        );
+      },
     );
+
+
   }
 }

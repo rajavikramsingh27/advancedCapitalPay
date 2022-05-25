@@ -115,86 +115,88 @@ class UserIdentificationUpdated extends StatelessWidget {
       );
     }
 
-    return GetBuilder<AccountDetailsRecoveryController>(
-        init: AccountDetailsRecoveryController(),
-        initState: (state) {
+    return  GetBuilder(
+      init: AccountDetailsRecoveryController(),
+      initState: (state) {
 
-        },
-        builder: (authController) {
-          return Obx(() => Container(
-                child: SingleChildScrollView(
-                  padding: EffectStyle.padding(30, 30, 30, 30),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'User Identification Details',
-                        // textAlign: TextAlign.center,
-                        style: TextStylesPoppins.textStyles_20.apply(
-                          color: ColorStyle.primaryWhite,
-                          fontWeightDelta: 1,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                        padding: EffectStyle.padding(16, 16, 16, 16),
-                        decoration: BoxDecoration(
-                          color: ColorStyle.primaryWhite,
-                          borderRadius: EffectStyle.radiusCustom(10),
-                        ),
-                        child: Column(
-                          children: [
-                            if (controller.isIdentifiy.value)
-                              txtTitle(),
-                            if (controller.isIdentifiy.value)
-                            SizedBox(
-                              height: 16,
-                            ),
-                            if (!controller.isIdentifiy.value)
-                            warningText(),
-                            if (!controller.isIdentifiy.value)
-                            textFieldsAccount(
-                                'User Identification',
-                                'HarrisonSmith1948@gmail.com',
-                            ),
-                            if (!controller.isIdentifiy.value)
-                            SizedBox(
-                              height: 30,
-                            ),
-                            imgSetPasswordSuccessfully(),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            if (controller.isIdentifiy.value)
-                              warningText(),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            if (controller.isIdentifiy.value)
-                            Text(
-                              'HarrisonSmith1948@gmail.com',
-                              style: TextStylesPoppins.textStyles_16.apply(
-                                color: ColorStyle.secondryBlack,
-                                fontWeightDelta: 2,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            txtDescription(),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            btnLoginScreen()
-                          ],
-                        ),
-                      )
-                    ],
+      },
+      builder: (auth) {
+        return Container(
+          child: SingleChildScrollView(
+            padding: EffectStyle.padding(30, 30, 30, 30),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'User Identification Details',
+                  // textAlign: TextAlign.center,
+                  style: TextStylesPoppins.textStyles_20.apply(
+                    color: ColorStyle.primaryWhite,
+                    fontWeightDelta: 1,
                   ),
                 ),
-              ));
-        });
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  padding: EffectStyle.padding(16, 16, 16, 16),
+                  decoration: BoxDecoration(
+                    color: ColorStyle.primaryWhite,
+                    borderRadius: EffectStyle.radiusCustom(10),
+                  ),
+                  child: Column(
+                    children: [
+                      if (controller.isIdentifiy.value)
+                        txtTitle(),
+                      if (controller.isIdentifiy.value)
+                        SizedBox(
+                          height: 16,
+                        ),
+                      if (!controller.isIdentifiy.value)
+                        warningText(),
+                      if (!controller.isIdentifiy.value)
+                        textFieldsAccount(
+                          'User Identification',
+                          'HarrisonSmith1948@gmail.com',
+                        ),
+                      if (!controller.isIdentifiy.value)
+                        SizedBox(
+                          height: 30,
+                        ),
+                      imgSetPasswordSuccessfully(),
+                      SizedBox(
+                        height: 16,
+                      ),
+                      if (controller.isIdentifiy.value)
+                        warningText(),
+                      SizedBox(
+                        height: 16,
+                      ),
+                      if (controller.isIdentifiy.value)
+                        Text(
+                          'HarrisonSmith1948@gmail.com',
+                          style: TextStylesPoppins.textStyles_16.apply(
+                            color: ColorStyle.secondryBlack,
+                            fontWeightDelta: 2,
+                          ),
+                        ),
+                      SizedBox(
+                        height: 16,
+                      ),
+                      txtDescription(),
+                      SizedBox(
+                        height: 16,
+                      ),
+                      btnLoginScreen()
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        );
+      },
+    );
+
   }
 }

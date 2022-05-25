@@ -97,263 +97,264 @@ class CardSetting extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset(
-          ImageStyle.tiard,
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          fit: BoxFit.cover,
-        ),
-        Scaffold(
-          appBar: AppBarStyleLeadingTitleTrailing(
-            leadingWidth: 0,
-            nameUser: 'Your Cards',
-            descriptionUser: 'Plus Personal Customer',
-            nameStyle: TextStylesPoppins.textStyles_20.apply(fontWeightDelta: 2),
-            descriptionStyle:
+    return GetBuilder(
+      init: CardSettingController(),
+      initState: (state) {
+
+      },
+      builder: (auth) {
+        return Stack(
+          children: [
+            Image.asset(
+              ImageStyle.tiard,
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              fit: BoxFit.cover,
+            ),
+            Scaffold(
+              appBar: AppBarStyleLeadingTitleTrailing(
+                leadingWidth: 0,
+                nameUser: 'Your Cards',
+                descriptionUser: 'Plus Personal Customer',
+                nameStyle: TextStylesPoppins.textStyles_20.apply(fontWeightDelta: 2),
+                descriptionStyle:
                 TextStylesPoppins.textStyles_12.apply(fontWeightDelta: 0),
-            trailingAction: [
-              ButtonChat(),
-              IconButton(
-                icon: Image.asset(
-                  ImageStyle.settings,
-                  height: 26,
-                ),
-                onPressed: () {
-                  Get.to(AppSettings());
-                },
+                trailingAction: [
+                  ButtonChat(),
+                  IconButton(
+                    icon: Image.asset(
+                      ImageStyle.settings,
+                      height: 26,
+                    ),
+                    onPressed: () {
+                      Get.to(AppSettings());
+                    },
+                  ),
+                  SizedBox(
+                    width: 6,
+                  ),
+                ],
               ),
-              SizedBox(
-                width: 6,
-              ),
-            ],
-          ),
-          backgroundColor: Colors.transparent,
-          body: GetBuilder<CardSettingController>(
-            init: CardSettingController(),
-            initState: (state) {
-              // controller.reset();
-            },
-            builder: (authController) {
-              return Obx(
-                () => SingleChildScrollView(
-                    // padding: EffectStyle.padding(16, 16, 0, 0),
-                    child: Column(
-                  children: [
-                    swiperView(),
-                    SizedBox(
-                      height: 16,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(
-                          width: 16,
-                        ),
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: ColorStyle.hex('#274174'),
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            padding: EdgeInsets.only(top: 10, bottom: 10),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset(ImageStyle.notice,
-                                    color: ColorStyle.primaryWhite, height: 20
-                                    // fit: BoxFit.cover,
-                                    ),
-                                SizedBox(
-                                  height: 6,
-                                ),
-                                Text(
-                                  'Reorder',
-                                  style: TextStylesPoppins.textStyles_10.apply(
-                                    color: ColorStyle.primaryWhite,
-                                    fontWeightDelta: 1,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: ColorStyle.hex('#274174'),
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            padding: EdgeInsets.only(top: 10, bottom: 10),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset(ImageStyle.rotateright,
-                                    color: ColorStyle.primaryWhite, height: 20
-                                    // fit: BoxFit.cover,
-                                    ),
-                                SizedBox(
-                                  height: 6,
-                                ),
-                                Text(
-                                  'Change PIN',
-                                  style: TextStylesPoppins.textStyles_10.apply(
-                                    color: ColorStyle.primaryWhite,
-                                    fontWeightDelta: 1,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: ColorStyle.hex('#274174'),
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            padding: EdgeInsets.only(top: 10, bottom: 10),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset(ImageStyle.unlock,
-                                    color: ColorStyle.primaryWhite, height: 25
-                                    // fit: BoxFit.cover,
-                                    ),
-                                SizedBox(
-                                  height: 6,
-                                ),
-                                Text(
-                                  'Lock Card',
-                                  style: TextStylesPoppins.textStyles_10.apply(
-                                    color: ColorStyle.primaryWhite,
-                                    fontWeightDelta: 1,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 16,
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 16,
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(
-                        left: 16,
-                        right: 16,
-                        top: 16,
-                        bottom: 16,
+              backgroundColor: Colors.transparent,
+              body: SingleChildScrollView(
+                // padding: EffectStyle.padding(16, 16, 0, 0),
+                  child: Column(
+                    children: [
+                      swiperView(),
+                      SizedBox(
+                        height: 16,
                       ),
-                      color: ColorStyle.primaryWhite,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            'Card Settings',
-                            style: TextStylesPoppins.textStyles_16.apply(
-                              color: ColorStyle.secondryBlack,
-                              fontWeightDelta: 2,
+                          SizedBox(
+                            width: 16,
+                          ),
+                          Expanded(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: ColorStyle.hex('#274174'),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              padding: EdgeInsets.only(top: 10, bottom: 10),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(ImageStyle.notice,
+                                      color: ColorStyle.primaryWhite, height: 20
+                                    // fit: BoxFit.cover,
+                                  ),
+                                  SizedBox(
+                                    height: 6,
+                                  ),
+                                  Text(
+                                    'Reorder',
+                                    style: TextStylesPoppins.textStyles_10.apply(
+                                      color: ColorStyle.primaryWhite,
+                                      fontWeightDelta: 1,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                           SizedBox(
-                            height: 16,
+                            width: 20,
                           ),
-                          ListView.separated(
-                            physics: NeverScrollableScrollPhysics(),
-                            itemCount: controller.arrCardSettingsTitle.length,
-                            shrinkWrap: true,
-                            padding: EdgeInsets.zero,
-                            separatorBuilder: (context, index) {
-                              return SizedBox(
-                                height: 6,
-                              );
-                            },
-                            itemBuilder: (context, index) {
-                              return InkWell(
-                                child: Container(
-                                  padding: EdgeInsets.only(
-                                    left: 16,
-                                    right: 16,
-                                    top: 16,
-                                    bottom: 16,
+                          Expanded(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: ColorStyle.hex('#274174'),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              padding: EdgeInsets.only(top: 10, bottom: 10),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(ImageStyle.rotateright,
+                                      color: ColorStyle.primaryWhite, height: 20
+                                    // fit: BoxFit.cover,
                                   ),
-                                  decoration: BoxDecoration(
-                                    color: ColorStyle.hex('#EDEDED'),
-                                    borderRadius: EffectStyle.radiusCustom(6),
+                                  SizedBox(
+                                    height: 6,
                                   ),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Expanded(
-                                        child: Row(
-                                          children: [
-                                            Image.asset(
-                                              controller
-                                                  .arrCardSettingsIcons[index],
-                                              height: 26,
-                                              color: ColorStyle.secondryBlack,
-                                            ),
-                                            SizedBox(
-                                              width: 6,
-                                            ),
-                                            Expanded(
-                                              child: Text(
-                                                controller
-                                                    .arrCardSettingsTitle[index],
-                                                style: TextStylesPoppins.textStyles_14
-                                                    .apply(
-                                                  color: ColorStyle.secondryBlack,
-                                                  fontWeightDelta: 1,
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      if (controller.arrButtonSwitchType[index])
-                                        switchButton(index),
-                                      if (!controller.arrButtonSwitchType[index])
-                                        Icon(
-                                          Icons.arrow_forward_ios_rounded,
-                                          color: ColorStyle.secondryBlack,
-                                          size: 16,
-                                        ),
-                                    ],
+                                  Text(
+                                    'Change PIN',
+                                    style: TextStylesPoppins.textStyles_10.apply(
+                                      color: ColorStyle.primaryWhite,
+                                      fontWeightDelta: 1,
+                                    ),
                                   ),
-                                ),
-                                onTap: () {
-                                  if (index == 3) {
-                                    Get.to(FindATMLocator());
-                                  } else if (index == 4) {
-                                    Get.to(TravelNotice());
-                                  }
-                                },
-                              );
-                            },
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Expanded(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: ColorStyle.hex('#274174'),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              padding: EdgeInsets.only(top: 10, bottom: 10),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(ImageStyle.unlock,
+                                      color: ColorStyle.primaryWhite, height: 25
+                                    // fit: BoxFit.cover,
+                                  ),
+                                  SizedBox(
+                                    height: 6,
+                                  ),
+                                  Text(
+                                    'Lock Card',
+                                    style: TextStylesPoppins.textStyles_10.apply(
+                                      color: ColorStyle.primaryWhite,
+                                      fontWeightDelta: 1,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 16,
                           ),
                         ],
                       ),
-                    ),
-                  ],
-                )),
-              );
-            },
-          ),
-        ),
-      ],
+                      SizedBox(
+                        height: 16,
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(
+                          left: 16,
+                          right: 16,
+                          top: 16,
+                          bottom: 16,
+                        ),
+                        color: ColorStyle.primaryWhite,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Card Settings',
+                              style: TextStylesPoppins.textStyles_16.apply(
+                                color: ColorStyle.secondryBlack,
+                                fontWeightDelta: 2,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 16,
+                            ),
+                            ListView.separated(
+                              physics: NeverScrollableScrollPhysics(),
+                              itemCount: controller.arrCardSettingsTitle.length,
+                              shrinkWrap: true,
+                              padding: EdgeInsets.zero,
+                              separatorBuilder: (context, index) {
+                                return SizedBox(
+                                  height: 6,
+                                );
+                              },
+                              itemBuilder: (context, index) {
+                                return InkWell(
+                                  child: Container(
+                                    padding: EdgeInsets.only(
+                                      left: 16,
+                                      right: 16,
+                                      top: 16,
+                                      bottom: 16,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: ColorStyle.hex('#EDEDED'),
+                                      borderRadius: EffectStyle.radiusCustom(6),
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Expanded(
+                                          child: Row(
+                                            children: [
+                                              Image.asset(
+                                                controller
+                                                    .arrCardSettingsIcons[index],
+                                                height: 26,
+                                                color: ColorStyle.secondryBlack,
+                                              ),
+                                              SizedBox(
+                                                width: 6,
+                                              ),
+                                              Expanded(
+                                                child: Text(
+                                                  controller
+                                                      .arrCardSettingsTitle[index],
+                                                  style: TextStylesPoppins.textStyles_14
+                                                      .apply(
+                                                    color: ColorStyle.secondryBlack,
+                                                    fontWeightDelta: 1,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        if (controller.arrButtonSwitchType[index])
+                                          switchButton(index),
+                                        if (!controller.arrButtonSwitchType[index])
+                                          Icon(
+                                            Icons.arrow_forward_ios_rounded,
+                                            color: ColorStyle.secondryBlack,
+                                            size: 16,
+                                          ),
+                                      ],
+                                    ),
+                                  ),
+                                  onTap: () {
+                                    if (index == 3) {
+                                      Get.to(FindATMLocator());
+                                    } else if (index == 4) {
+                                      Get.to(TravelNotice());
+                                    }
+                                  },
+                                );
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  )),
+            ),
+          ],
+        );
+      },
     );
+
+
+
   }
 }

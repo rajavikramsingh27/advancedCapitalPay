@@ -24,82 +24,74 @@ class MoreScreen {
               decoration: BoxDecoration(borderRadius: EffectStyle.radiusCustom(14)),
               child: Scaffold(
                 backgroundColor: Colors.transparent,
-                body: GetBuilder<MoreScreenController>(
-                  init: MoreScreenController(),
-                  initState: (state) {
-                    controller.reset();
-                  },
-                  builder: (authController) {
-                    return Obx(() => Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        ListView.separated(
-                            shrinkWrap: true,
-                            itemCount: controller.arrMoreTitle.length,
-                            padding: EdgeInsets.only(bottom: 100),
-                            separatorBuilder: (context, index) {
-                              return SizedBox(
-                                height: 10,
-                              );
-                            },
-                            itemBuilder: (context, index) {
-                              return InkWell(
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      width: 216,
-                                      padding: EffectStyle.padding(16, 16, 6, 6),
-                                      decoration: BoxDecoration(
-                                          color: ColorStyle.primaryWhite,
-                                          borderRadius: EffectStyle.radiusCustom(30),
-                                          border: Border.all(
-                                            color: ColorStyle.hex('#0066FF'),
-                                            width: 1,
-                                          )),
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            child: controller.arrMoreIcons[index],
-                                            height: 20,
-                                          ),
-                                          SizedBox(
-                                            width: 6,
-                                          ),
-                                          Text(
-                                            controller.arrMoreTitle[index],
-                                            style: TextStylesPoppins.textStyles_14.apply(
-                                                color: ColorStyle.hex('#0066FF'),
-                                                fontWeightDelta: 0),
-                                          ),
-                                        ],
+                body: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    ListView.separated(
+                        shrinkWrap: true,
+                        itemCount: controller.arrMoreTitle.length,
+                        padding: EdgeInsets.only(bottom: 100),
+                        separatorBuilder: (context, index) {
+                          return SizedBox(
+                            height: 10,
+                          );
+                        },
+                        itemBuilder: (context, index) {
+                          return InkWell(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 216,
+                                  padding: EffectStyle.padding(16, 16, 6, 6),
+                                  decoration: BoxDecoration(
+                                      color: ColorStyle.primaryWhite,
+                                      borderRadius: EffectStyle.radiusCustom(30),
+                                      border: Border.all(
+                                        color: ColorStyle.hex('#0066FF'),
+                                        width: 1,
+                                      )),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        child: controller.arrMoreIcons[index],
+                                        height: 20,
                                       ),
-                                    ),
-                                  ],
+                                      SizedBox(
+                                        width: 6,
+                                      ),
+                                      Text(
+                                        controller.arrMoreTitle[index],
+                                        style: TextStylesPoppins.textStyles_14.apply(
+                                            color: ColorStyle.hex('#0066FF'),
+                                            fontWeightDelta: 0),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                                onTap: () {
-                                  Get.back();
+                              ],
+                            ),
+                            onTap: () {
+                              Get.back();
 
 
-                                  if (index == 0) {
+                              if (index == 0) {
 
-                                  } else if (index == 1) {
-                                    // ChatWithUs.chatWithUs();
-                                    // Get.to(PayingFromAccount());
-                                  } else if (index == 2) {
-                                    // ChatWithUs.chatWithUs();
-                                  } else if (index == 3) {
-                                    Get.to(CardSetting());
-                                  } else if (index == 4) {
-                                    ChatWithUs.chatWithUs();
-                                  }
-                                },
-                              );
-                            })
-                      ],
-                    ));
-                  },
-                ),
+                              } else if (index == 1) {
+                                // ChatWithUs.chatWithUs();
+                                // Get.to(PayingFromAccount());
+                              } else if (index == 2) {
+                                // ChatWithUs.chatWithUs();
+                              } else if (index == 3) {
+                                Get.to(CardSetting());
+                              } else if (index == 4) {
+                                ChatWithUs.chatWithUs();
+                              }
+                            },
+                          );
+                        })
+                  ],
+                )
               ),
             ),
             onTap: () {

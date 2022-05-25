@@ -25,24 +25,24 @@ class SignUpPersonalApplication1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset(
-          ImageStyle.bg_1,
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          fit: BoxFit.cover,
-        ),
-        Scaffold(
-            appBar: AppBarStyleStatusBar(),
-            backgroundColor: Colors.transparent,
-            body: GetBuilder<SignUpPersonalApplication1Controller>(
-              init: SignUpPersonalApplication1Controller(),
-              initState: (state) {
+    return GetBuilder(
+      init: SignUpPersonalApplication1Controller(),
+      initState: (state) {
 
-              },
-              builder: (authController) {
-                return Obx(()=>SingleChildScrollView(
+      },
+      builder: (auth) {
+        return  Stack(
+          children: [
+            Image.asset(
+              ImageStyle.bg_1,
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              fit: BoxFit.cover,
+            ),
+            Scaffold(
+                appBar: AppBarStyleStatusBar(),
+                backgroundColor: Colors.transparent,
+                body:SingleChildScrollView(
                   padding: EffectStyle.padding(16, 16, 0, 16),
                   child: Column(
                     children: [
@@ -369,37 +369,37 @@ class SignUpPersonalApplication1 extends StatelessWidget {
                                       height: 6,
                                     ),
                                     if (controller.isPhoneAddtional.value)
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: TextFieldCustomOutline(
-                                            padding: EffectStyle.padding(10, 10, 10, 10),
-                                            hintText: 'please enter your phone number without country code',
-                                            textStyle: TextStylesPoppins.textStyles_14.apply(
-                                              color: Colors.black,
-                                              fontWeightDelta: 1,
+                                      Row(
+                                        children: [
+                                          Expanded(
+                                            child: TextFieldCustomOutline(
+                                              padding: EffectStyle.padding(10, 10, 10, 10),
+                                              hintText: 'please enter your phone number without country code',
+                                              textStyle: TextStylesPoppins.textStyles_14.apply(
+                                                color: Colors.black,
+                                                fontWeightDelta: 1,
+                                              ),
+                                              colorFill: ColorStyle.primaryWhite,
+                                              colorBoder: Colors.black12,
+                                              radiusBorder: 2,
                                             ),
-                                            colorFill: ColorStyle.primaryWhite,
-                                            colorBoder: Colors.black12,
-                                            radiusBorder: 2,
-                                          ),
 
-                                        ),
-                                        SizedBox(
-                                          width: 12,
-                                        ),
-                                        Container(
-                                          height: 25,
-                                          width: 25,
-                                          child: Icon(Icons.question_mark,
-                                              size: 18, color: Colors.grey),
-                                          decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(20),
-                                              border: Border.all(
-                                                  width: 1, color: Colors.grey)),
-                                        )
-                                      ],
-                                    ),
+                                          ),
+                                          SizedBox(
+                                            width: 12,
+                                          ),
+                                          Container(
+                                            height: 25,
+                                            width: 25,
+                                            child: Icon(Icons.question_mark,
+                                                size: 18, color: Colors.grey),
+                                            decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.circular(20),
+                                                border: Border.all(
+                                                    width: 1, color: Colors.grey)),
+                                          )
+                                        ],
+                                      ),
                                     SizedBox(
                                       height: 6,
                                     ),
@@ -490,27 +490,27 @@ class SignUpPersonalApplication1 extends StatelessWidget {
                                       height: 6,
                                     ),
                                     if (controller.isEmailAddtional.value)
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: TextFieldCustomOutline(
-                                            padding: EffectStyle.padding(10, 10, 10, 10),
-                                            hintText: 'Please enter your personal email',
-                                            textStyle: TextStylesPoppins.textStyles_14.apply(
-                                              color: Colors.black,
-                                              fontWeightDelta: 1,
+                                      Row(
+                                        children: [
+                                          Expanded(
+                                            child: TextFieldCustomOutline(
+                                              padding: EffectStyle.padding(10, 10, 10, 10),
+                                              hintText: 'Please enter your personal email',
+                                              textStyle: TextStylesPoppins.textStyles_14.apply(
+                                                color: Colors.black,
+                                                fontWeightDelta: 1,
+                                              ),
+                                              colorFill: ColorStyle.primaryWhite,
+                                              colorBoder: Colors.black12,
+                                              radiusBorder: 2,
                                             ),
-                                            colorFill: ColorStyle.primaryWhite,
-                                            colorBoder: Colors.black12,
-                                            radiusBorder: 2,
                                           ),
-                                        ),
-                                        SizedBox(
-                                          width: 12+25,
-                                        ),
+                                          SizedBox(
+                                            width: 12+25,
+                                          ),
 
-                                      ],
-                                    ),
+                                        ],
+                                      ),
                                     SizedBox(
                                       height: 16,
                                     ),
@@ -589,10 +589,12 @@ class SignUpPersonalApplication1 extends StatelessWidget {
                       ComponentsSignUp.bottomUI(),
                     ],
                   ),
-                ));
-              },
-            )),
-      ],
+                )),
+          ],
+        );
+      },
     );
+
+
   }
 }

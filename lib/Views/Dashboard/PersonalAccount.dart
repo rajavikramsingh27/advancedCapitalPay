@@ -591,16 +591,16 @@ class PersonalAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        BackgroundImageBeneficiary(),
-        GetBuilder<PersonalAccountController>(
-          init: PersonalAccountController(),
-          initState: (state) {
-            controller.reset();
-          },
-          builder: (authController) {
-            return Obx(() => Scaffold(
+    return GetBuilder(
+      init: PersonalAccountController(),
+      initState: (state) {
+
+      },
+      builder: (auth) {
+        return    Stack(
+          children: [
+            BackgroundImageBeneficiary(),
+            Scaffold(
                 backgroundColor: Colors.transparent,
                 appBar: AppBarStyleTitle(
                   title: 'New Beneficiary',
@@ -715,29 +715,29 @@ class PersonalAccount extends StatelessWidget {
                               InfoIconDescription(
                                 padding: EffectStyle.padding(0, 0, 16, 0),
                                 description:
-                                    'By continuing with the transfer you acknowledge and confirm the applicable terms and conditions including waiting time for newly added beneficiary which may apply.',
+                                'By continuing with the transfer you acknowledge and confirm the applicable terms and conditions including waiting time for newly added beneficiary which may apply.',
                                 descriptionStyle: TextStylesPoppins.textStyles_12
                                     .apply(
-                                        fontWeightDelta: 1,
-                                        color: ColorStyle.secondryBlack),
+                                    fontWeightDelta: 1,
+                                    color: ColorStyle.secondryBlack),
                               ),
                               InfoIconDescription(
                                 padding: EffectStyle.padding(0, 0, 16, 0),
                                 description:
-                                    'Please note that international transfer will be processed on international business days (Monday-Friday)',
+                                'Please note that international transfer will be processed on international business days (Monday-Friday)',
                                 descriptionStyle: TextStylesPoppins.textStyles_12
                                     .apply(
-                                        fontWeightDelta: 1,
-                                        color: ColorStyle.secondryBlack),
+                                    fontWeightDelta: 1,
+                                    color: ColorStyle.secondryBlack),
                               ),
                               InfoIconDescription(
                                 padding: EffectStyle.padding(0, 0, 16, 0),
                                 description:
-                                    'Transfers which fall on a holiday, may be processed on the next working business day.',
+                                'Transfers which fall on a holiday, may be processed on the next working business day.',
                                 descriptionStyle: TextStylesPoppins.textStyles_12
                                     .apply(
-                                        fontWeightDelta: 1,
-                                        color: ColorStyle.secondryBlack),
+                                    fontWeightDelta: 1,
+                                    color: ColorStyle.secondryBlack),
                               ),
                               SizedBox(height: 20),
                               ButtonContinueCancel(
@@ -763,10 +763,12 @@ class PersonalAccount extends StatelessWidget {
                         ),
                     ],
                   ),
-                )));
-          },
-        )
-      ],
+                ))
+          ],
+        );
+      },
     );
+
+
   }
 }

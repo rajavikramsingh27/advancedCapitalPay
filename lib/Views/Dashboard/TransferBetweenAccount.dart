@@ -112,81 +112,84 @@ class TransferBetweenAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<TransferBetweenAccountController>(
-        init: TransferBetweenAccountController(),
-        initState: (state) {
-          controller.reset();
-        },
-        builder: (authController) {
-          return Obx(() => Scaffold(
-              backgroundColor: ColorStyle.darkestBlue,
-              appBar: AppBarStyleTitle(
-                title: 'Account Transfer Summary',
-                leadingButton: IconButton(
-                  icon: Image.asset(
-                    ImageStyle.back_circle,
-                    height: 30,
-                  ),
-                  onPressed: () {
-                    Get.back();
-                  },
-                ),
-                trailingButton: [ButtonChat(),],
-              ),
-              body: SingleChildScrollView(
-                  padding: EffectStyle.padding(0, 0, 0, 20),
-                  child: Column(
-                    children: [
-                      FourOptionSeries(
-                        arrIconsActivate: [
-                          ImageStyle.browserBlue,
-                          ImageStyle.transferBank_Blue,
-                          ImageStyle.login_blue
-                        ],
-                        arrIconsInActivate: [
-                          ImageStyle.browserBlue,
-                          ImageStyle.transferBank,
-                          ImageStyle.login
-                        ],
-                        arrTitles: [
-                          'From Account',
-                          'Transfer Details',
-                          'Summary'
-                        ],
-                      ),
-                      if (controller.index.value == 0)
-                        AccountSelection(
-                          onTapContinue: () {
-                            controller.index.value = controller.index.value + 1;
+    return GetBuilder(
+      init: TransferBetweenAccountController(),
+      initState: (state) {
 
-                            NotificationCenter().notify('updateAccount',
-                                data: controller.index.value);
-                          },
-                        ),
-                      if (controller.index.value != 0)
-                        Container(
-                          padding: EffectStyle.padding(16, 0, 16, 16),
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            'TransferDetails',
-                            // textAlign: TextAlign.left,
-                            style: TextStylesPoppins.textStyles_16.apply(
-                              fontWeightDelta: 2,
-                              color: ColorStyle.primaryWhite,
-                            ),
+      },
+      builder: (auth) {
+        return Scaffold(
+            backgroundColor: ColorStyle.darkestBlue,
+            appBar: AppBarStyleTitle(
+              title: 'Account Transfer Summary',
+              leadingButton: IconButton(
+                icon: Image.asset(
+                  ImageStyle.back_circle,
+                  height: 30,
+                ),
+                onPressed: () {
+                  Get.back();
+                },
+              ),
+              trailingButton: [ButtonChat(),],
+            ),
+            body: SingleChildScrollView(
+                padding: EffectStyle.padding(0, 0, 0, 20),
+                child: Column(
+                  children: [
+                    FourOptionSeries(
+                      arrIconsActivate: [
+                        ImageStyle.browserBlue,
+                        ImageStyle.transferBank_Blue,
+                        ImageStyle.login_blue
+                      ],
+                      arrIconsInActivate: [
+                        ImageStyle.browserBlue,
+                        ImageStyle.transferBank,
+                        ImageStyle.login
+                      ],
+                      arrTitles: [
+                        'From Account',
+                        'Transfer Details',
+                        'Summary'
+                      ],
+                    ),
+                    if (controller.index.value == 0)
+                      AccountSelection(
+                        onTapContinue: () {
+                          controller.index.value = controller.index.value + 1;
+
+                          NotificationCenter().notify('updateAccount',
+                              data: controller.index.value);
+                        },
+                      ),
+                    if (controller.index.value != 0)
+                      Container(
+                        padding: EffectStyle.padding(16, 0, 16, 16),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'TransferDetails',
+                          // textAlign: TextAlign.left,
+                          style: TextStylesPoppins.textStyles_16.apply(
+                            fontWeightDelta: 2,
+                            color: ColorStyle.primaryWhite,
                           ),
                         ),
-                      if (controller.index.value == 1)
-                        transferDetailsFirst(),
-                      if (controller.index.value == 2)
-                        StandingOrderDetails(
-                          textSecond: 'Complete Transfer',
-                          onTapEditOrder: () {
+                      ),
+                    if (controller.index.value == 1)
+                      transferDetailsFirst(),
+                    if (controller.index.value == 2)
+                      StandingOrderDetails(
+                        textSecond: 'Complete Transfer',
+                        onTapEditOrder: () {
 
-                          },
-                        )
-                    ],
-                  ))));
-        });
+                        },
+                      )
+                  ],
+                )));
+      },
+    );
+
+
   }
 }

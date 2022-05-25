@@ -118,167 +118,167 @@ class CryptoPortfolio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<CryptoPortfolioController>(
-        init: CryptoPortfolioController(),
-        initState: (state) {
-          controller.reset();
-        },
-        builder: (authController) {
-          return Stack(
-            children: [
-              // Positioned(
-              //     top: 0,
-              //     bottom: 0,
-              //     left: 0,
-              //     right: 0,
-              //     child: Image.asset(ImageStyle.bgGradient, fit: BoxFit.fill,)),
-              BackgroundImage(
-                imageName: ImageStyle.bgGradient,
-              ),
-              Scaffold(
-                appBar: AppBarStyleTitle(
-                  title: '',
-                  styleTitle:
-                  TextStylesSFCompactDisplay.textStyles_20.apply(
-                    color: ColorStyle.primaryWhite,
-                    fontWeightDelta: 2,
+    return GetBuilder(
+      init: CryptoPortfolioController(),
+      initState: (state) {
+
+      },
+      builder: (auth) {
+        return Stack(
+          children: [
+            // Positioned(
+            //     top: 0,
+            //     bottom: 0,
+            //     left: 0,
+            //     right: 0,
+            //     child: Image.asset(ImageStyle.bgGradient, fit: BoxFit.fill,)),
+            BackgroundImage(
+              imageName: ImageStyle.bgGradient,
+            ),
+            Scaffold(
+              appBar: AppBarStyleTitle(
+                title: '',
+                styleTitle:
+                TextStylesSFCompactDisplay.textStyles_20.apply(
+                  color: ColorStyle.primaryWhite,
+                  fontWeightDelta: 2,
+                ),
+                leadingButton: IconButton(
+                  icon: Image.asset(
+                    ImageStyle.back_circle,
+                    height: 30,
                   ),
-                  leadingButton: IconButton(
-                    icon: Image.asset(
-                      ImageStyle.back_circle,
-                      height: 30,
-                    ),
-                    onPressed: () {
-                      Get.back();
-                    },
-                  ),
-                  trailingButton: [
-                    Row(
-                      children: [
-                        InkWell(
-                          child: Image.asset(ImageStyle.bell, color: ColorStyle.primaryWhite, height: 30,),
-                          onTap: () {},
+                  onPressed: () {
+                    Get.back();
+                  },
+                ),
+                trailingButton: [
+                  Row(
+                    children: [
+                      InkWell(
+                        child: Image.asset(ImageStyle.bell, color: ColorStyle.primaryWhite, height: 30,),
+                        onTap: () {},
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      InkWell(
+                        child: Image.asset(
+                          ImageStyle.chat,
+                          height: 26,
                         ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        InkWell(
-                          child: Image.asset(
-                            ImageStyle.chat,
-                            height: 26,
+                        onTap: () {
+                          ChatWithUs.chatWithUs();
+                        },
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      InkWell(
+                        child: Container(
+                          height: 30,
+                          padding: EffectStyle.padding(0, 0, 0, 0),
+                          decoration: BoxDecoration(
+                            color: ColorStyle.hex('#3B86D1'),
+                            borderRadius: EffectStyle.radiusCustom(30),
                           ),
-                          onTap: () {
-                            ChatWithUs.chatWithUs();
-                          },
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        InkWell(
-                          child: Container(
-                            height: 30,
-                            padding: EffectStyle.padding(0, 0, 0, 0),
-                            decoration: BoxDecoration(
-                              color: ColorStyle.hex('#3B86D1'),
-                              borderRadius: EffectStyle.radiusCustom(30),
-                            ),
-                            child: Row(
-                              children: [
-                                Container(
-                                  height: 30,
-                                  width: 30,
-                                  alignment: Alignment.center,
-                                  decoration: BoxDecoration(
-                                      color: ColorStyle.hex('#3B86D1'),
-                                      borderRadius:
-                                      EffectStyle.radiusCustom(50),
-                                      border: Border.all(
-                                          color: ColorStyle.primaryWhite,
-                                          width: 1.5)),
-                                  child: Text(
-                                    '\$',
-                                    textAlign: TextAlign.center,
-                                    style: TextStylesSFCompactDisplay
-                                        .textStyles_16
-                                        .apply(
-                                      color: ColorStyle.primaryWhite,
-                                      fontWeightDelta: 1,
-                                    ),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 30,
+                                width: 30,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                    color: ColorStyle.hex('#3B86D1'),
+                                    borderRadius:
+                                    EffectStyle.radiusCustom(50),
+                                    border: Border.all(
+                                        color: ColorStyle.primaryWhite,
+                                        width: 1.5)),
+                                child: Text(
+                                  '\$',
+                                  textAlign: TextAlign.center,
+                                  style: TextStylesSFCompactDisplay
+                                      .textStyles_16
+                                      .apply(
+                                    color: ColorStyle.primaryWhite,
+                                    fontWeightDelta: 1,
                                   ),
                                 ),
-                                SizedBox(
-                                  width: 4,
-                                ),
-                                Text(
-                                  'USD',
-                                  style: TextStylesSFCompactDisplay
-                                      .textStyles_12
-                                      .apply(
-                                      color: ColorStyle.primaryWhite,
-                                      fontWeightDelta: 1),
-                                ),
-                                Icon(
-                                  Icons.arrow_drop_down,
-                                  size: 30,
-                                )
-                              ],
-                            ),
+                              ),
+                              SizedBox(
+                                width: 4,
+                              ),
+                              Text(
+                                'USD',
+                                style: TextStylesSFCompactDisplay
+                                    .textStyles_12
+                                    .apply(
+                                    color: ColorStyle.primaryWhite,
+                                    fontWeightDelta: 1),
+                              ),
+                              Icon(
+                                Icons.arrow_drop_down,
+                                size: 30,
+                              )
+                            ],
                           ),
-                          onTap: () {},
+                        ),
+                        onTap: () {},
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 16,
+                  ),
+                ],
+              ),
+              backgroundColor: ColorStyle.darkestBlue.withOpacity(0.3),
+              body: Column(
+                children: [
+                  swiperView(),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Container(
+                    padding: EffectStyle.padding(16, 16, 0, 0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: iconTitleSendRecieveTrade(
+                              'Send', ImageStyle.Iconsend),
+                        ),
+                        SizedBox(
+                          width: 16,
+                        ),
+                        Expanded(
+                          child: iconTitleSendRecieveTrade(
+                              'Receive', ImageStyle.Iconrecievemoney),
+                        ),
+                        SizedBox(
+                          width: 16,
+                        ),
+                        Expanded(
+                          child: iconTitleSendRecieveTrade(
+                              'Trade', ImageStyle.Icontrade),
                         ),
                       ],
                     ),
-                    SizedBox(
-                      width: 16,
-                    ),
-                  ],
-                ),
-                backgroundColor: ColorStyle.darkestBlue.withOpacity(0.3),
-                body: Column(
-                  children: [
-                    swiperView(),
-                    SizedBox(
-                      height: 16,
-                    ),
-                    Container(
-                      padding: EffectStyle.padding(16, 16, 0, 0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Expanded(
-                            child: iconTitleSendRecieveTrade(
-                                'Send', ImageStyle.Iconsend),
-                          ),
-                          SizedBox(
-                            width: 16,
-                          ),
-                          Expanded(
-                            child: iconTitleSendRecieveTrade(
-                                'Receive', ImageStyle.Iconrecievemoney),
-                          ),
-                          SizedBox(
-                            width: 16,
-                          ),
-                          Expanded(
-                            child: iconTitleSendRecieveTrade(
-                                'Trade', ImageStyle.Icontrade),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 16,
-                    ),
-                    Expanded(
-                      child: Container(
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Expanded(
+                    child: Container(
                       height: double.infinity,
                       padding: EffectStyle.padding(16, 16, 16, 16),
                       decoration: BoxDecoration(
-                        color: ColorStyle.hex('#001240'),
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(30),
-                          topRight: Radius.circular(30),
-                        )
+                          color: ColorStyle.hex('#001240'),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30),
+                            topRight: Radius.circular(30),
+                          )
                       ),
                       child: SingleChildScrollView(
                         child: Column(
@@ -450,12 +450,16 @@ class CryptoPortfolio extends StatelessWidget {
                         ),
                       ),
                     ),
-                    )
-                  ],
-                ),
+                  )
+                ],
               ),
-            ],
-          );
-        });
+            ),
+          ],
+        );
+      },
+    );
+
+
+
   }
 }

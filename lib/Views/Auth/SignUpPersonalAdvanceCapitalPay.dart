@@ -22,24 +22,24 @@ class SignUpPersonalAdvanceCapitalPay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset(
-          ImageStyle.bg_1,
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          fit: BoxFit.cover,
-        ),
-        Scaffold(
-            appBar: AppBarStyleStatusBar(),
-            backgroundColor: Colors.transparent,
-            body: GetBuilder<SignUpPersonalAdvanceCapitalPayController>(
-              init: SignUpPersonalAdvanceCapitalPayController(),
-              initState: (state) {
-                controller.reset();
-              },
-              builder: (auth) {
-                return Obx(()=>SingleChildScrollView(
+    return GetBuilder(
+      init: SignUpPersonalAdvanceCapitalPayController(),
+      initState: (state) {
+
+      },
+      builder: (auth) {
+        return Stack(
+          children: [
+            Image.asset(
+              ImageStyle.bg_1,
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              fit: BoxFit.cover,
+            ),
+            Scaffold(
+                appBar: AppBarStyleStatusBar(),
+                backgroundColor: Colors.transparent,
+                body: SingleChildScrollView(
                   padding: EffectStyle.padding(16, 16, 0, 16),
                   child: Column(
                     children: [
@@ -173,10 +173,12 @@ class SignUpPersonalAdvanceCapitalPay extends StatelessWidget {
                       ComponentsSignUp.bottomUI(),
                     ],
                   ),
-                ));
-              },
-            )),
-      ],
+                )),
+          ],
+        );
+      },
     );
+
+
   }
 }

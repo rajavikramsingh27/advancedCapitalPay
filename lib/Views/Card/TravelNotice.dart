@@ -180,251 +180,260 @@ class TravelNotice extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBarStyleTitle(
-          title: 'Travel Notice',
-          backgroundColor: ColorStyle.darkestBlue,
-          leadingButton: IconButton(
-            icon: Image.asset(
-              ImageStyle.back_circle,
-              height: 30,
-            ),
-            onPressed: () {
-              Get.back();
-            },
-          ),
-          trailingButton: [ButtonChat(),],
-        ),
-        backgroundColor: Colors.white,
-        body:SingleChildScrollView(
-          child:  Column(
-            children: [
-              Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.asset(
-                      ImageStyle.Group2221,
-                      // height: 30,
-                      // width: 30,
-                    ),
-                    Text(
-                      'Why Notify Us Of Your Travel?',
-                      // controller.listApplyLeave[index],
-                      style: TextStylesPoppins
-                          .textStyles_14
-                          .apply(
-                          color: ColorStyle
-                              .secondryBlack),
-                    ),
-                    SizedBox(
-                      height: 6,
-                    ),
-                    Text(
-                      'So we can increase security around your account.',
-                      // controller.listApplyLeave[index],
-                      style: TextStylesPoppins
-                          .textStyles_12
-                          .apply(
-                          color: ColorStyle
-                              .blueSKY),
-                    ),
-                    SizedBox(
-                      height: 4,
-                    ),
-                    Text(
-                      'Letting us know your travel plans allows you '
-                          'to use your cards and accounts with confidence'
-                          ' when overseas.',
-                      // controller.listApplyLeave[index],
-                      style: TextStylesPoppins
-                          .textStyles_12
-                          .apply(
-                          color: ColorStyle
-                              .secondryBlack),
-                    ),
-                    SizedBox(
-                      height: 6,
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(left: 16,right: 16),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              Image.asset(
-                                ImageStyle.creditcard,
-                                height: 30,
-                                width: 30,
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                'Avoids any delays for your account',
-                                // controller.listApplyLeave[index],
-                                style: TextStylesPoppins
-                                    .textStyles_10
-                                    .apply(
-                                    color: ColorStyle
-                                        .secondryBlack),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Image.asset(
-                                ImageStyle.creditcard,
-                                height: 30,
-                                width: 30,
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                'Continue to use cards as usual while overseas',
-                                // controller.listApplyLeave[index],
-                                style: TextStylesPoppins
-                                    .textStyles_10
-                                    .apply(
-                                    color: ColorStyle
-                                        .secondryBlack),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height:5,
-                          ),
-                          Row(
-                            children: [
-                              Image.asset(
-                                ImageStyle.creditcard,
-                                height: 30,
-                                width: 30,
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Container(
-                                child:   Text(
-                                  'Increased security around your account whilst you\'re away',
-                                  // controller.listApplyLeave[index],
-                                  style: TextStylesPoppins
-                                      .textStyles_10
-                                      .apply(
-                                      color: ColorStyle
-                                          .secondryBlack),
-                                ),
-                                width: 250,
-                              ),
+    return GetBuilder(
+      init: TravelNoticeController(),
+      initState: (state) {
 
-                            ],
-                          ),
-                          SizedBox(
-                            height:10,
-                          ),
-                          Row(
-                            children: [
-                              Image.asset(
-                                ImageStyle.creditcard,
-                                height: 30,
-                                width: 30,
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Container(
-                                child: Text(
-                                  'Quickly add, modify or delete any of your travel notices'
-                                      'to keep us informed! We appreciate it to keep you and'
-                                      'safe as possible!',
-                                  // controller.listApplyLeave[index],
-                                  style: TextStylesPoppins
-                                      .textStyles_10
-                                      .apply(
-                                      color: ColorStyle
-                                          .secondryBlack),
-                                ),
-                                width: 250,
-                              ),
-
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 16,
-                    ),
-                    Container(
-                      alignment: Alignment.center,
-                      width: MediaQuery.of(context).size.width,
-                      child: ElevatedButtonCustom(
-                        text: 'Add a Trip',
-                        colorBG: ColorStyle.darkestBlueSignUp,
-                        radiusBorder: 40,
-                        width: 140,
-                        textStyle: TextStylesPoppins.textStyles_14.apply(
-                            color: ColorStyle
-                                .primaryWhite,
-                        fontWeightDelta: 1),
-                        onTap: () {
-                          Get.to(TravelDestination());
-                        },
-                      ),
-                    ),
-                    SizedBox(
-                      height: 16,
-                    ),
-                    Container(
-                      padding: EffectStyle.padding(20, 20, 0, 20),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: ElevatedButtonCustom(
-                              text: 'Upcoming Trips',
-                              colorBG: ColorStyle.hex('#0E4AF2'),
-                              textStyle: TextStylesPoppins
-                                  .textStyles_14
-                                  .apply(
-                                  color: ColorStyle
-                                      .primaryWhite),
-                              onTap: () {
-
-                              },
-                            ),
-                          ),
-                          SizedBox(
-                            width: 6,
-                          ),
-                          Expanded(
-                            child: ElevatedButtonCustom(
-                              text: 'Past Trips',
-                              colorBG: ColorStyle.hex('#0535B1').withOpacity(0.6),
-                              textStyle: TextStylesPoppins
-                                  .textStyles_14
-                                  .apply(
-                                  color: ColorStyle
-                                      .primaryWhite),
-                              onTap: () {
-
-                              },
-                            ),
-
-                          ),
-                        ],
-                      ),
-                    ),
-                    swiperView(),
-                  ],
+      },
+      builder: (auth) {
+        return  Scaffold(
+            appBar: AppBarStyleTitle(
+              title: 'Travel Notice',
+              backgroundColor: ColorStyle.darkestBlue,
+              leadingButton: IconButton(
+                icon: Image.asset(
+                  ImageStyle.back_circle,
+                  height: 30,
                 ),
+                onPressed: () {
+                  Get.back();
+                },
               ),
+              trailingButton: [ButtonChat(),],
+            ),
+            backgroundColor: Colors.white,
+            body:SingleChildScrollView(
+              child:  Column(
+                children: [
+                  Container(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                          ImageStyle.Group2221,
+                          // height: 30,
+                          // width: 30,
+                        ),
+                        Text(
+                          'Why Notify Us Of Your Travel?',
+                          // controller.listApplyLeave[index],
+                          style: TextStylesPoppins
+                              .textStyles_14
+                              .apply(
+                              color: ColorStyle
+                                  .secondryBlack),
+                        ),
+                        SizedBox(
+                          height: 6,
+                        ),
+                        Text(
+                          'So we can increase security around your account.',
+                          // controller.listApplyLeave[index],
+                          style: TextStylesPoppins
+                              .textStyles_12
+                              .apply(
+                              color: ColorStyle
+                                  .blueSKY),
+                        ),
+                        SizedBox(
+                          height: 4,
+                        ),
+                        Text(
+                          'Letting us know your travel plans allows you '
+                              'to use your cards and accounts with confidence'
+                              ' when overseas.',
+                          // controller.listApplyLeave[index],
+                          style: TextStylesPoppins
+                              .textStyles_12
+                              .apply(
+                              color: ColorStyle
+                                  .secondryBlack),
+                        ),
+                        SizedBox(
+                          height: 6,
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 16,right: 16),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    ImageStyle.creditcard,
+                                    height: 30,
+                                    width: 30,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    'Avoids any delays for your account',
+                                    // controller.listApplyLeave[index],
+                                    style: TextStylesPoppins
+                                        .textStyles_10
+                                        .apply(
+                                        color: ColorStyle
+                                            .secondryBlack),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    ImageStyle.creditcard,
+                                    height: 30,
+                                    width: 30,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    'Continue to use cards as usual while overseas',
+                                    // controller.listApplyLeave[index],
+                                    style: TextStylesPoppins
+                                        .textStyles_10
+                                        .apply(
+                                        color: ColorStyle
+                                            .secondryBlack),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height:5,
+                              ),
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    ImageStyle.creditcard,
+                                    height: 30,
+                                    width: 30,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Container(
+                                    child:   Text(
+                                      'Increased security around your account whilst you\'re away',
+                                      // controller.listApplyLeave[index],
+                                      style: TextStylesPoppins
+                                          .textStyles_10
+                                          .apply(
+                                          color: ColorStyle
+                                              .secondryBlack),
+                                    ),
+                                    width: 250,
+                                  ),
 
-            ],
-          ),
-        )
+                                ],
+                              ),
+                              SizedBox(
+                                height:10,
+                              ),
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    ImageStyle.creditcard,
+                                    height: 30,
+                                    width: 30,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Container(
+                                    child: Text(
+                                      'Quickly add, modify or delete any of your travel notices'
+                                          'to keep us informed! We appreciate it to keep you and'
+                                          'safe as possible!',
+                                      // controller.listApplyLeave[index],
+                                      style: TextStylesPoppins
+                                          .textStyles_10
+                                          .apply(
+                                          color: ColorStyle
+                                              .secondryBlack),
+                                    ),
+                                    width: 250,
+                                  ),
+
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          width: MediaQuery.of(context).size.width,
+                          child: ElevatedButtonCustom(
+                            text: 'Add a Trip',
+                            colorBG: ColorStyle.darkestBlueSignUp,
+                            radiusBorder: 40,
+                            width: 140,
+                            textStyle: TextStylesPoppins.textStyles_14.apply(
+                                color: ColorStyle
+                                    .primaryWhite,
+                                fontWeightDelta: 1),
+                            onTap: () {
+                              Get.to(TravelDestination());
+                            },
+                          ),
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        Container(
+                          padding: EffectStyle.padding(20, 20, 0, 20),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: ElevatedButtonCustom(
+                                  text: 'Upcoming Trips',
+                                  colorBG: ColorStyle.hex('#0E4AF2'),
+                                  textStyle: TextStylesPoppins
+                                      .textStyles_14
+                                      .apply(
+                                      color: ColorStyle
+                                          .primaryWhite),
+                                  onTap: () {
+
+                                  },
+                                ),
+                              ),
+                              SizedBox(
+                                width: 6,
+                              ),
+                              Expanded(
+                                child: ElevatedButtonCustom(
+                                  text: 'Past Trips',
+                                  colorBG: ColorStyle.hex('#0535B1').withOpacity(0.6),
+                                  textStyle: TextStylesPoppins
+                                      .textStyles_14
+                                      .apply(
+                                      color: ColorStyle
+                                          .primaryWhite),
+                                  onTap: () {
+
+                                  },
+                                ),
+
+                              ),
+                            ],
+                          ),
+                        ),
+                        swiperView(),
+                      ],
+                    ),
+                  ),
+
+                ],
+              ),
+            )
+        );
+      },
     );
+
     // height: 590
   }
 }

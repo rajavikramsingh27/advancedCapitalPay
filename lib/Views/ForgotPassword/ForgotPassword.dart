@@ -67,96 +67,106 @@ class ForgotPassword extends StatelessWidget {
           onPressed: onPressed);
     }
 
-    return Stack(
-      children: [
-        BackgroundImage(),
-        Scaffold(
-          backgroundColor: Colors.transparent,
-          appBar: AppBarStyle(
-            leadingButton: IconButton(
-              icon: Image.asset(
-                ImageStyle.back_circle,
-                height: 30,
+    return GetBuilder(
+      init: AccountDetailsRecoveryController(),
+      initState: (state) {
+
+      },
+      builder: (auth) {
+        return Stack(
+          children: [
+            BackgroundImage(),
+            Scaffold(
+              backgroundColor: Colors.transparent,
+              appBar: AppBarStyle(
+                leadingButton: IconButton(
+                  icon: Image.asset(
+                    ImageStyle.back_circle,
+                    height: 30,
+                  ),
+                  onPressed: () {
+                    Get.back();
+                  },
+                ),
+                trailingButton: ButtonChat(),
               ),
-              onPressed: () {
-                Get.back();
-              },
-            ),
-            trailingButton: ButtonChat(),
-          ),
-          body: SingleChildScrollView(
-            padding: EdgeInsets.only(
-              // left: 30,
-              // right: 30,
-              top: 30,
-              bottom: 30,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  color: ColorStyle.darkestBlue,
-                  height: 70,
-                  width: MediaQuery.of(context).size.width,
-                  alignment: Alignment.centerLeft,
-                  padding: EffectStyle.padding(30, 0, 0, 0),
-                  child: Text(
-                    'Account Recovery Details',
-                    style: TextStylesPoppins.textStyles_20.apply(
-                      color: ColorStyle.primaryWhite,
-                      fontWeightDelta: 1,
+              body: SingleChildScrollView(
+                padding: EdgeInsets.only(
+                  // left: 30,
+                  // right: 30,
+                  top: 30,
+                  bottom: 30,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      color: ColorStyle.darkestBlue,
+                      height: 70,
+                      width: MediaQuery.of(context).size.width,
+                      alignment: Alignment.centerLeft,
+                      padding: EffectStyle.padding(30, 0, 0, 0),
+                      child: Text(
+                        'Account Recovery Details',
+                        style: TextStylesPoppins.textStyles_20.apply(
+                          color: ColorStyle.primaryWhite,
+                          fontWeightDelta: 1,
+                        ),
+                      ),
                     ),
-                  ),
+                    SizedBox(height: 16),
+                    Container(
+                      padding: EffectStyle.padding(30, 30, 0, 0),
+                      child: Column(
+                        children: [
+                          AutoSizeText(
+                            'Select from one of the options below to recovery',
+                            maxLines: 2,
+                            style: TextStylesPoppins.autoSizeText.apply(
+                              color: ColorStyle.primaryWhite,
+                            ),
+                          ),
+                          SizedBox(height: 16),
+                          boxWhite(ImageStyle.forgot_identification,
+                              'Forgot Your User Identification', () {
+                                controller.isUserIdentification.value = false;
+                                Get.to(ForgotYourUserIdentification());
+                              }),
+                          SizedBox(height: 16),
+                          boxWhite(ImageStyle.forgot_password,
+                              'Forgot Your Password', () {
+                                controller.isUserIdentification.value = true;
+                                Get.to(AccountDetailsRecovery());
+                              }),
+                          SizedBox(height: 100),
+                          AutoSizeText(
+                            'If you have already completed your registration. Please click on Login Now below.',
+                            maxLines: 2,
+                            style: TextStylesPoppins.autoSizeText.apply(
+                              color: ColorStyle.primaryWhite,
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          Center(
+                            child: GradientButton(
+                              text: 'Login Now',
+                              onTap: () {
+                                Get.back();
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-                SizedBox(height: 16),
-                Container(
-                  padding: EffectStyle.padding(30, 30, 0, 0),
-                  child: Column(
-                    children: [
-                      AutoSizeText(
-                        'Select from one of the options below to recovery',
-                        maxLines: 2,
-                        style: TextStylesPoppins.autoSizeText.apply(
-                          color: ColorStyle.primaryWhite,
-                        ),
-                      ),
-                      SizedBox(height: 16),
-                      boxWhite(ImageStyle.forgot_identification,
-                          'Forgot Your User Identification', () {
-                        controller.isUserIdentification.value = false;
-                            Get.to(ForgotYourUserIdentification());
-                          }),
-                      SizedBox(height: 16),
-                      boxWhite(ImageStyle.forgot_password,
-                          'Forgot Your Password', () {
-                            controller.isUserIdentification.value = true;
-                            Get.to(AccountDetailsRecovery());
-                          }),
-                      SizedBox(height: 100),
-                      AutoSizeText(
-                        'If you have already completed your registration. Please click on Login Now below.',
-                        maxLines: 2,
-                        style: TextStylesPoppins.autoSizeText.apply(
-                          color: ColorStyle.primaryWhite,
-                        ),
-                      ),
-                      SizedBox(height: 20),
-                      Center(
-                        child: GradientButton(
-                          text: 'Login Now',
-                          onTap: () {
-                            Get.back();
-                          },
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        )
-      ],
+              ),
+            )
+          ],
+        );
+      },
     );
+
+
   }
 }

@@ -44,29 +44,29 @@ class NewBeneficiary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBarStyleTitle(
-          title: 'New Beneficiary',
-          backgroundColor: ColorStyle.darkestBlue,
-          leadingButton: IconButton(
-            icon: Image.asset(
-              ImageStyle.back_circle,
-              height: 30,
-            ),
-            onPressed: () {
-              Get.back();
-            },
-          ),
-          trailingButton: [ButtonChat(),],
-        ),
-        backgroundColor: ColorStyle.primaryWhite,
-        body: GetBuilder<NewBeneficiaryController>(
-          init: NewBeneficiaryController(),
-          initState: (state) {
+    return GetBuilder(
+      init: NewBeneficiaryController(),
+      initState: (state) {
 
-          },
-          builder: (authController) {
-            return Obx(()=>SingleChildScrollView(
+      },
+      builder: (auth) {
+        return  Scaffold(
+            appBar: AppBarStyleTitle(
+              title: 'New Beneficiary',
+              backgroundColor: ColorStyle.darkestBlue,
+              leadingButton: IconButton(
+                icon: Image.asset(
+                  ImageStyle.back_circle,
+                  height: 30,
+                ),
+                onPressed: () {
+                  Get.back();
+                },
+              ),
+              trailingButton: [ButtonChat(),],
+            ),
+            backgroundColor: ColorStyle.primaryWhite,
+            body: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -296,9 +296,11 @@ class NewBeneficiary extends StatelessWidget {
                   ),
                 ],
               ),
-            ));
-          },
-        )
+            )
+        );
+      },
     );
+
+
   }
 }

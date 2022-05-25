@@ -10,6 +10,7 @@ class ButtonsWithDescriptionBottomUI extends StatelessWidget {
   final String? description;
   const ButtonsWithDescriptionBottomUI({Key? key,
     this.description = 'Description ...',
+
     this.textFirst = 'First',
     this.textSecond = 'Second',
     this.onTapFirst,
