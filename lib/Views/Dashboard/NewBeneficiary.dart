@@ -47,10 +47,10 @@ class NewBeneficiary extends StatelessWidget {
     return GetBuilder(
       init: NewBeneficiaryController(),
       initState: (state) {
-
+         controller.reset();
       },
       builder: (auth) {
-        return  Scaffold(
+        return  Obx(() => Scaffold(
             appBar: AppBarStyleTitle(
               title: 'New Beneficiary',
               backgroundColor: ColorStyle.darkestBlue,
@@ -297,7 +297,7 @@ class NewBeneficiary extends StatelessWidget {
                 ],
               ),
             )
-        );
+        ));
       },
     );
 

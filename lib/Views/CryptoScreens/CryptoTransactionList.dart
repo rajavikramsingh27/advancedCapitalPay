@@ -61,10 +61,10 @@ class CryptoTransactionList extends StatelessWidget {
     return GetBuilder(
       init: TransferBetweenAccountController(),
       initState: (state) {
-
+                   controller.reset();
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() => Stack(
           children: [
             Positioned(
                 top: 0,
@@ -747,7 +747,7 @@ class CryptoTransactionList extends StatelessWidget {
                   )),
             ),
           ],
-        );
+        ));
       },
     );
 

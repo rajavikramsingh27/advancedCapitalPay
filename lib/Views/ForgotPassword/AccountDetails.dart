@@ -60,10 +60,10 @@ class AccountDetails extends StatelessWidget {
     return GetBuilder(
       init: AccountDetailsRecoveryController(),
       initState: (state) {
-
+         controller.reset();
       },
       builder: (auth) {
-        return Container(
+        return Obx(() =>Container(
           padding: EffectStyle.padding(30, 30, 0, 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -218,7 +218,7 @@ class AccountDetails extends StatelessWidget {
               )
             ],
           ),
-        );
+        ));
       },
     );
 

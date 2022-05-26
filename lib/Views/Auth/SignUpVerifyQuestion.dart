@@ -118,10 +118,10 @@ class SignUpVerifyQuestion extends StatelessWidget {
     return GetBuilder(
       init: SignUpVerifyQuestionController(),
       initState: (state) {
-
+          controller.reset();
       },
       builder: (auth) {
-        return  Stack(
+        return Obx(() => Stack(
           children: [
             BackgroundImage(
               imageName: ImageStyle.bg,
@@ -250,7 +250,7 @@ class SignUpVerifyQuestion extends StatelessWidget {
               ),
             )
           ],
-        );
+        ));
       },
     );
 

@@ -24,10 +24,10 @@ class FindATMLocator extends StatelessWidget {
     return GetBuilder(
       init: FindATMLocatorController(),
       initState: (state) {
-
+       controller.reset();
       },
       builder: (auth) {
-        return  Stack(
+        return  Obx(() => Stack(
           children: [
             Image.asset(
               ImageStyle.tiard,
@@ -274,7 +274,7 @@ class FindATMLocator extends StatelessWidget {
                 )
             ),
           ],
-        );
+        ));
       },
     );
 

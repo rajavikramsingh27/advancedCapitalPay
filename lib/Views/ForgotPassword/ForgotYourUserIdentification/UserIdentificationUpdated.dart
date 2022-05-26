@@ -118,10 +118,10 @@ class UserIdentificationUpdated extends StatelessWidget {
     return  GetBuilder(
       init: AccountDetailsRecoveryController(),
       initState: (state) {
-
+         controller.reset();
       },
       builder: (auth) {
-        return Container(
+        return Obx(() => Container(
           child: SingleChildScrollView(
             padding: EffectStyle.padding(30, 30, 30, 30),
             child: Column(
@@ -194,7 +194,7 @@ class UserIdentificationUpdated extends StatelessWidget {
               ],
             ),
           ),
-        );
+        ));
       },
     );
 

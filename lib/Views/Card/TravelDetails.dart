@@ -27,7 +27,7 @@ class TravelDetails extends StatelessWidget {
 
       },
       builder: (auth) {
-        return Scaffold(
+        return Obx(() => Scaffold(
             appBar: AppBarStyleTitle(
               title: 'Travel Details',
               backgroundColor: ColorStyle.darkestBlue,
@@ -339,7 +339,7 @@ class TravelDetails extends StatelessWidget {
                   ),
                 ],
               ),
-            ));
+            )));
       },
     );
 

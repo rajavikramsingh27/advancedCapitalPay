@@ -26,10 +26,10 @@ class SignUpPersonalDocumentUpload extends StatelessWidget {
     return GetBuilder(
       init: SignUpPersonalDocumentUploadController(),
       initState: (state) {
-
+       controller.reset();
       },
       builder: (auth) {
-        return  Stack(
+        return  Obx(() => Stack(
           children: [
             Image.asset(
               ImageStyle.bg_1,
@@ -187,7 +187,7 @@ class SignUpPersonalDocumentUpload extends StatelessWidget {
                 )
             ),
           ],
-        );
+        ));
       },
     );
 

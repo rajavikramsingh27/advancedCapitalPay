@@ -80,10 +80,10 @@ class SignUpPersonalLoginInformation extends StatelessWidget {
     return GetBuilder(
       init: SignUpPersonalApplication1Controller(),
       initState: (state) {
-
+controller.reset();
       },
       builder: (auth) {
-        return   Stack(
+        return  Obx(() =>  Stack(
           children: [
             Image.asset(
               ImageStyle.bg_1,
@@ -428,7 +428,7 @@ class SignUpPersonalLoginInformation extends StatelessWidget {
                   ),
                 )),
           ],
-        );
+        ));
       },
     );
 

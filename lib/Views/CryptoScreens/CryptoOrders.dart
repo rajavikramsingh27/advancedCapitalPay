@@ -49,10 +49,10 @@ class CryptoOrders extends StatelessWidget {
     return GetBuilder(
       init: CryptoOrdersController(),
       initState: (state) {
-
+         controller.reset();
       },
       builder: (auth) {
-        return  Stack(
+        return  Obx(() => Stack(
           children: [
             Positioned(
                 top: 0,
@@ -1300,7 +1300,7 @@ class CryptoOrders extends StatelessWidget {
                   ),
                 )),
           ],
-        );
+        ));
       },
     );
 

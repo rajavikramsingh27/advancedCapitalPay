@@ -21,7 +21,7 @@ class PreferredLanguageExchange extends StatelessWidget {
 
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() => Stack(
           children: [
             BackgroundImageBeneficiary(),
             Scaffold(
@@ -415,7 +415,7 @@ class PreferredLanguageExchange extends StatelessWidget {
                   ),
                 ))
           ],
-        );
+        ));
       },
     );
 

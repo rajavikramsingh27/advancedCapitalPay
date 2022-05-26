@@ -100,10 +100,10 @@ class CardSetting extends StatelessWidget {
     return GetBuilder(
       init: CardSettingController(),
       initState: (state) {
-
+           controller.reset();
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() => Stack(
           children: [
             Image.asset(
               ImageStyle.tiard,
@@ -350,7 +350,7 @@ class CardSetting extends StatelessWidget {
                   )),
             ),
           ],
-        );
+        ));
       },
     );
 

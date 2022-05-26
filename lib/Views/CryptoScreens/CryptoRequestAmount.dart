@@ -63,10 +63,10 @@ class CryptoRequestAmount extends StatelessWidget {
     return GetBuilder(
       init: CryptoRecieveAmountController(),
       initState: (state) {
-
+            controller.reset();
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() => Stack(
           children: [
             Positioned(
                 top: 0,
@@ -433,7 +433,7 @@ class CryptoRequestAmount extends StatelessWidget {
                     ))
             ),
           ],
-        );
+        ));
       },
     );
 

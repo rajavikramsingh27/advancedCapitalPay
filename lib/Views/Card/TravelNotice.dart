@@ -186,7 +186,7 @@ class TravelNotice extends StatelessWidget {
 
       },
       builder: (auth) {
-        return  Scaffold(
+        return  Obx(() => Scaffold(
             appBar: AppBarStyleTitle(
               title: 'Travel Notice',
               backgroundColor: ColorStyle.darkestBlue,
@@ -430,7 +430,7 @@ class TravelNotice extends StatelessWidget {
                 ],
               ),
             )
-        );
+        ));
       },
     );
 

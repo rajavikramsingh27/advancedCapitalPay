@@ -25,7 +25,7 @@ class TravelOverseas extends StatelessWidget {
 
       },
       builder: (auth) {
-        return  Scaffold(
+        return  Obx(() => Scaffold(
             appBar: AppBarStyleTitle(
               backgroundColor: ColorStyle.darkestBlue,
               title: 'While Overseas',
@@ -434,7 +434,7 @@ class TravelOverseas extends StatelessWidget {
                   ),
                 ],
               ),
-            ));
+            )));
       },
     );
 

@@ -82,10 +82,10 @@ class MainDashboard extends StatelessWidget {
     return GetBuilder(
       init: MainDashboardController(),
       initState: (state) {
-
+         controller.reset();
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() => Stack(
           children: [
             Image.asset(
               ImageStyle.tiard,
@@ -772,7 +772,7 @@ class MainDashboard extends StatelessWidget {
               ),
             ),
           ],
-        );
+        ));
       },
     );
 

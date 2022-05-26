@@ -22,10 +22,10 @@ class BioMatric_Verification extends StatelessWidget {
     return  GetBuilder(
       init: BioMatric_VerificationController(),
       initState: (state) {
-
+         controller.reset();
       },
       builder: (auth) {
-        return  Stack(
+        return  Obx(() => Stack(
           children: [
             BackgroundImage(
               imageName: ImageStyle.bg_BioMatric,
@@ -131,7 +131,7 @@ class BioMatric_Verification extends StatelessWidget {
                   ),
                 ))
           ],
-        );
+        ));
       },
     );
 
