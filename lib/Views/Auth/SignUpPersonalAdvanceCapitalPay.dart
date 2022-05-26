@@ -25,10 +25,11 @@ class SignUpPersonalAdvanceCapitalPay extends StatelessWidget {
     return GetBuilder(
       init: SignUpPersonalAdvanceCapitalPayController(),
       initState: (state) {
+        controller.reset();
 
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() => Stack(
           children: [
             Image.asset(
               ImageStyle.bg_1,
@@ -175,7 +176,7 @@ class SignUpPersonalAdvanceCapitalPay extends StatelessWidget {
                   ),
                 )),
           ],
-        );
+        ));
       },
     );
 

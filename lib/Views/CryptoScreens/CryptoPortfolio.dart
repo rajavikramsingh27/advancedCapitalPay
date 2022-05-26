@@ -121,10 +121,10 @@ class CryptoPortfolio extends StatelessWidget {
     return GetBuilder(
       init: CryptoPortfolioController(),
       initState: (state) {
-
+            controller.reset();
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() => Stack(
           children: [
             // Positioned(
             //     top: 0,
@@ -455,7 +455,7 @@ class CryptoPortfolio extends StatelessWidget {
               ),
             ),
           ],
-        );
+        ));
       },
     );
 

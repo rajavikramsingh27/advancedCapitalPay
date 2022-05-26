@@ -26,10 +26,10 @@ class PasswordForLoginSecondTime extends StatelessWidget {
     return GetBuilder(
       init: PasswordForLoginSecondTimeController(),
       initState: (state) {
-
+   controller.reset();
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() => Stack(
           children: [
             BackgroundImage(),
             Scaffold(
@@ -210,7 +210,7 @@ class PasswordForLoginSecondTime extends StatelessWidget {
               ),
             )
           ],
-        );
+        ));
       },
     );
 

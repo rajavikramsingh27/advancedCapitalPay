@@ -24,10 +24,10 @@ class PreferredLanguage extends StatelessWidget {
     return GetBuilder(
       init: PreferredLanguageController(),
       initState: (state) {
-
+           controller.reset();
       },
       builder: (auth) {
-        return Scaffold(
+        return Obx(() => Scaffold(
             backgroundColor: ColorStyle.darkestBlue,
             appBar: AppBarStyle(
               leadingButton: IconButton(
@@ -138,7 +138,7 @@ class PreferredLanguage extends StatelessWidget {
                       }),
                 ],
               ),
-            ));
+            )));
       },
     );
 

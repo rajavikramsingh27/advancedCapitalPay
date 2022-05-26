@@ -20,10 +20,10 @@ class SavingGoal2 extends StatelessWidget {
     return GetBuilder(
       init: SavingGoal2Controller(),
       initState: (state) {
-
+            controller.reset();
       },
       builder: (auth) {
-        return Scaffold(
+        return Obx(() => Scaffold(
             backgroundColor: ColorStyle.primaryWhite,
             body:  SingleChildScrollView(
               child:  Column(
@@ -420,7 +420,7 @@ class SavingGoal2 extends StatelessWidget {
             )
 
 
-        );
+        ));
       },
     );
 

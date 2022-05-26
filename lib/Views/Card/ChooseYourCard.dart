@@ -26,7 +26,9 @@ class ChooseYourCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<ChooseYourCardController>(
         init: ChooseYourCardController(),
-        initState: (state) {},
+        initState: (state) {
+          controller.reset();
+        },
         builder: (authController) {
           return Obx(() => Stack(
                 children: [

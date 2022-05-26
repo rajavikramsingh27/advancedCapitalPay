@@ -594,10 +594,10 @@ class PersonalAccount extends StatelessWidget {
     return GetBuilder(
       init: PersonalAccountController(),
       initState: (state) {
-
+           controller.reset();
       },
       builder: (auth) {
-        return    Stack(
+        return    Obx(() => Stack(
           children: [
             BackgroundImageBeneficiary(),
             Scaffold(
@@ -765,7 +765,7 @@ class PersonalAccount extends StatelessWidget {
                   ),
                 ))
           ],
-        );
+        ));
       },
     );
 

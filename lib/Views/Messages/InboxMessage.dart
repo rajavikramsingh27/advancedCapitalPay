@@ -24,10 +24,10 @@ class InboxMessage extends StatelessWidget {
     return  GetBuilder(
       init: MessagePageController(),
       initState: (state) {
-
+   controller.reset();
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() =>Stack(
           children: [
             Image.asset(
               ImageStyle.tiard,
@@ -706,7 +706,7 @@ class InboxMessage extends StatelessWidget {
               ),
             ),
           ],
-        );
+        ));
       },
     );
 

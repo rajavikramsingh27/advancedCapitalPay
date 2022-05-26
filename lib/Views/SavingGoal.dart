@@ -24,10 +24,10 @@ class SavingGoal extends StatelessWidget {
     return GetBuilder(
       init: SavingGoalController(),
       initState: (state) {
-
+              controller.reset();
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() =>Stack(
           children: [
             Scaffold(
               backgroundColor: ColorStyle.primaryWhite,
@@ -368,7 +368,7 @@ class SavingGoal extends StatelessWidget {
                 ],
               ),),
           ],
-        );
+        ));
       },
     );
 

@@ -25,7 +25,7 @@ class AccountDetails extends StatelessWidget {
 
       },
       builder: (auth) {
-        return   Stack(
+        return   Obx(() =>Stack(
           children: [
             BackgroundImage(),
             Scaffold(
@@ -210,7 +210,7 @@ class AccountDetails extends StatelessWidget {
                   ),
                 ))
           ],
-        );
+        ));
       },
     );
 

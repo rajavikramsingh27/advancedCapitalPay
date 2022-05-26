@@ -24,10 +24,10 @@ class CryptoMarket extends StatelessWidget {
     return GetBuilder(
       init: CryptoMarketController(),
       initState: (state) {
-
+           controller.reset();
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() => Stack(
           children: [
             BackgroundImage(
               imageName: ImageStyle.bg206,
@@ -789,7 +789,7 @@ class CryptoMarket extends StatelessWidget {
                   ],
                 ))
           ],
-        );
+        ));
       },
     );
 

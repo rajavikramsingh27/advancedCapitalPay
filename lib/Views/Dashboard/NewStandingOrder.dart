@@ -70,10 +70,10 @@ class NewStandingOrder extends StatelessWidget {
     return  GetBuilder(
       init: StandingOrdersController(),
       initState: (state) {
-
+         controller.reset();
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() => Stack(
           children: [
             Image.asset(
               ImageStyle.tiard,
@@ -304,7 +304,7 @@ class NewStandingOrder extends StatelessWidget {
                 )
             ),
           ],
-        );
+        ));
       },
     );
 

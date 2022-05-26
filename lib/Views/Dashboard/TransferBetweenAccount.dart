@@ -115,10 +115,10 @@ class TransferBetweenAccount extends StatelessWidget {
     return GetBuilder(
       init: TransferBetweenAccountController(),
       initState: (state) {
-
+              controller.reset();
       },
       builder: (auth) {
-        return Scaffold(
+        return Obx(()=> Scaffold(
             backgroundColor: ColorStyle.darkestBlue,
             appBar: AppBarStyleTitle(
               title: 'Account Transfer Summary',
@@ -186,7 +186,7 @@ class TransferBetweenAccount extends StatelessWidget {
                         },
                       )
                   ],
-                )));
+                ))));
       },
     );
 

@@ -31,10 +31,10 @@ class EditProfile extends StatelessWidget {
     return GetBuilder(
       init: ProfileController(),
       initState: (state) {
-
+    controller.reset();
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() => Stack(
           children: [
             Image.asset(
               ImageStyle.tiard,
@@ -259,7 +259,7 @@ class EditProfile extends StatelessWidget {
                 )
             ),
           ],
-        );
+        ));
       },
     );
 

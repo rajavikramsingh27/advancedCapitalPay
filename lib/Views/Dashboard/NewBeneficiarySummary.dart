@@ -570,10 +570,10 @@ class NewBeneficiarySummary extends StatelessWidget {
     return GetBuilder(
       init: NewBeneficiaryController(),
       initState: (state) {
-
+             controller.reset();
       },
       builder: (auth) {
-        return  Stack(
+        return  Obx(() => Stack(
           children: [
             BackgroundImageBeneficiary(),
             Scaffold(
@@ -734,7 +734,7 @@ class NewBeneficiarySummary extends StatelessWidget {
                   ),
                 ))
           ],
-        );
+        ));
       },
     );
 

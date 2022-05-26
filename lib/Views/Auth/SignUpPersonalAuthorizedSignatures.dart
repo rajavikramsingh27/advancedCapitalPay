@@ -25,10 +25,10 @@ class SignUpPersonalAuthorizedSignatures extends StatelessWidget {
     return GetBuilder(
       init: SignUpAuthorizedSignaturesController(),
       initState: (state) {
-
+      controller.reset();
       },
       builder: (auth) {
-        return   Stack(
+        return   Obx(() => Stack(
           children: [
             Image.asset(
               ImageStyle.bg_1,
@@ -303,7 +303,7 @@ class SignUpPersonalAuthorizedSignatures extends StatelessWidget {
                   ),
                 )),
           ],
-        );
+        ));
       },
     );
 

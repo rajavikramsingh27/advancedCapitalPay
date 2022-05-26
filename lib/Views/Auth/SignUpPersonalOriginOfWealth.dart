@@ -27,10 +27,10 @@ class SignUpPersonalOriginOfWealth extends StatelessWidget {
     return GetBuilder(
       init: SignUpPersonalOriginOfWealthController(),
       initState: (state) {
-
+    controller.reset();
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() => Stack(
           children: [
             Image.asset(
               ImageStyle.bg_1,
@@ -399,7 +399,7 @@ class SignUpPersonalOriginOfWealth extends StatelessWidget {
                   ),
                 )),
           ],
-        );
+        ));
       },
     );
 

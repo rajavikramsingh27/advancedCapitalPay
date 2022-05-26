@@ -24,10 +24,10 @@ class ForgotYourUserIdentification extends StatelessWidget {
     return GetBuilder(
       init: AccountDetailsRecoveryController(),
       initState: (state) {
-
+         controller.reset();
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() => Stack(
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
@@ -197,7 +197,7 @@ class ForgotYourUserIdentification extends StatelessWidget {
                 )
             ),
           ],
-        );
+        ));
       },
     );
 

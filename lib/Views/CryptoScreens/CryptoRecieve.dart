@@ -28,7 +28,7 @@ class CryptoRecieve extends StatelessWidget {
 
       },
       builder: (auth) {
-        return  Stack(
+        return  Obx(() => Stack(
           children: [
             BackgroundImage(
               imageName: ImageStyle.cryptoBG1,
@@ -261,7 +261,7 @@ class CryptoRecieve extends StatelessWidget {
               ),
             ),
           ],
-        );
+        ));
       },
     );
 

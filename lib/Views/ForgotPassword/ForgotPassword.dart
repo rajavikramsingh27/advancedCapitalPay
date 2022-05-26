@@ -70,10 +70,10 @@ class ForgotPassword extends StatelessWidget {
     return GetBuilder(
       init: AccountDetailsRecoveryController(),
       initState: (state) {
-
+                 controller.reset();
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() => Stack(
           children: [
             BackgroundImage(),
             Scaffold(
@@ -163,7 +163,7 @@ class ForgotPassword extends StatelessWidget {
               ),
             )
           ],
-        );
+        ));
       },
     );
 

@@ -107,7 +107,7 @@ titleListView(String icon, String title, List<String> listContent, Function(int)
 
       },
       builder: (auth) {
-        return Stack(
+        return Obx(() => Stack(
           children: [
             BackgroundImageBeneficiary(),
             Scaffold(
@@ -440,7 +440,7 @@ titleListView(String icon, String title, List<String> listContent, Function(int)
                 )
             )
           ],
-        );
+        ));
       },
     );
 

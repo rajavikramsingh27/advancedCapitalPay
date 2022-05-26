@@ -23,10 +23,10 @@ class OTPScreen extends StatelessWidget {
     return  GetBuilder(
       init: OTPScreenController(),
       initState: (state) {
-
+         controller.reset();
       },
       builder: (auth) {
-        return  Stack(
+        return  Obx(() => Stack(
           children: [
             BackgroundImage(),
             Scaffold(
@@ -260,7 +260,7 @@ class OTPScreen extends StatelessWidget {
               ),
             )
           ],
-        );
+        ));
       },
     );
 
