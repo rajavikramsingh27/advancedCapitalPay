@@ -37,7 +37,7 @@ class TabbarScreen extends StatelessWidget {
         onWillPop: () async {
           return true;
         },
-        child: Scaffold(
+        child: Obx(()=>Scaffold(
           backgroundColor: Colors.white,
           floatingActionButton: InkWell(
             child: Image.asset(
@@ -190,6 +190,6 @@ class TabbarScreen extends StatelessWidget {
               //     )),
             ],
           ),
-        ));
+        )));
   }
 }

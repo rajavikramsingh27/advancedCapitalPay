@@ -109,6 +109,7 @@ class SignIn extends StatelessWidget {
                     ],
                   ),
                   onTap: () {
+                    print('object object object object');
                     Get.to(ForgotPassword());
                   },
                 ),

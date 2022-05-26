@@ -190,8 +190,8 @@ titleListView(String icon, String title, List<String> listContent, Function(int)
                             ),
                           ),
                           Container(
-                            padding: EdgeInsets.only(left: 19,right: 19),
-                            height: 235,
+                            padding: EdgeInsets.only(left: 19,right: 19, top: 16, bottom: 16),
+                            // height: 235,
                             color: ColorStyle.hex('#E1F3FF'),
                             child: Column(
                               children: [
